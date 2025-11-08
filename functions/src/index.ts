@@ -3,7 +3,28 @@ import * as admin from "firebase-admin";
 // Initialize Firebase Admin
 admin.initializeApp();
 
-// Export Energy System Functions (NEW - Cost Optimized)
+// Export User Management & Authentication Functions (NEW)
+export {
+  onUserCreated,
+  onUserDeleted,
+  completeUserProfile,
+  getUserProfile,
+  updateUserProfile,
+  updateUserSettings,
+  deleteUserAccount,
+  setUserRole,
+  linkSocialProvider,
+  unlinkSocialProvider,
+  checkUsernameAvailability,
+  updateLastActive,
+  sendEmailVerification,
+  verifyEmailCode,
+  sendPasswordResetEmail,
+  suspendUser,
+  unsuspendUser,
+} from "./userManagement";
+
+// Export Energy System Functions (Cost Optimized)
 export {
   getEnergyStatus,
   consumeEnergy,
@@ -22,7 +43,7 @@ export {
   getQuestionSource,
 } from "./quizManagement";
 
-// Export Content Management Functions (NEW)
+// Export Content Management Functions
 export {
   insertBook,
   insertSection,
