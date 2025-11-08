@@ -252,10 +252,10 @@ class UserRepository {
     }
   }
 
-  /// Update daily login streak
+  /// Update daily login streak (uses updateLastActive backend function)
   Future<Map<String, dynamic>> updateDailyLogin() async {
     try {
-      final callable = _functions.httpsCallable('updateDailyLogin');
+      final callable = _functions.httpsCallable('updateLastActive');
       final result = await callable.call({});
       return Map<String, dynamic>.from(result.data);
     } catch (e) {

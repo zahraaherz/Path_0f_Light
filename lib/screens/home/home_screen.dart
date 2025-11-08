@@ -11,6 +11,7 @@ import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
+import '../library/library_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -324,9 +325,8 @@ class HomePage extends ConsumerWidget {
                   description: 'Browse books',
                   color: AppTheme.islamicGreen,
                   onTap: () {
-                    // TODO: Navigate to books screen
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Library feature coming soon!')),
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const LibraryScreen()),
                     );
                   },
                 ),
