@@ -64,6 +64,12 @@ dependencies:
   # Google Fonts for Islamic typography
   google_fonts: ^6.1.0
 
+  # Prayer Times & Islamic Calendar
+  adhan: ^2.0.0
+  hijri: ^3.0.0
+  geolocator: ^11.0.0
+  permission_handler: ^11.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

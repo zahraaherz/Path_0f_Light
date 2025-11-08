@@ -12,6 +12,7 @@ import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
 import '../settings/settings_screen.dart';
+import '../dashboard/dashboard_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -26,6 +27,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    DashboardScreen(),
     LeaderboardScreen(),
     AchievementsScreen(),
     ProfileScreen(),
@@ -102,6 +104,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             icon: Icon(Icons.home_outlined),
             selectedIcon: Icon(Icons.home, color: AppTheme.primaryTeal),
             label: 'Home',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.mosque_outlined),
+            selectedIcon: Icon(Icons.mosque, color: AppTheme.primaryTeal),
+            label: 'Dashboard',
           ),
           NavigationDestination(
             icon: Icon(Icons.leaderboard_outlined),
