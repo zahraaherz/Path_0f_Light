@@ -3,16 +3,17 @@ import * as admin from "firebase-admin";
 // Initialize Firebase Admin
 admin.initializeApp();
 
-// Export Battery System Functions
+// Export Energy System Functions (NEW - Cost Optimized)
 export {
-  scheduledHeartRefill,
-  dailyBatteryReset,
-  getBatteryStatus,
-  consumeHeart,
-  restoreHearts,
-} from "./batterySystem";
+  getEnergyStatus,
+  consumeEnergy,
+  rewardQuizCompletion,
+  rewardAdWatch,
+  updateSubscription,
+  checkSubscriptionStatus,
+} from "./energySystem";
 
-// Export Quiz Management Functions
+// Export Quiz Management Functions (UPDATED for Energy System)
 export {
   getQuizQuestions,
   submitQuizAnswer,
@@ -20,3 +21,17 @@ export {
   endQuizSession,
   getQuestionSource,
 } from "./quizManagement";
+
+// Export Content Management Functions (NEW)
+export {
+  insertBook,
+  insertSection,
+  insertParagraph,
+  bulkInsertParagraphs,
+  insertQuestion,
+  bulkInsertQuestions,
+  verifyContent,
+  publishBook,
+  searchBooks,
+  getBookDetails,
+} from "./contentManagement";

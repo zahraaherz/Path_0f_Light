@@ -1,5 +1,6 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import {ENERGY_CONFIG} from "./energySystem";
 
 const db = admin.firestore();
 
@@ -73,6 +74,7 @@ interface QuizProgress {
 /**
  * HTTP function to get random questions for quiz session
  * Supports filtering by category, difficulty, and language
+ * Checks energy availability before starting
  */
 export const getQuizQuestions = functions.https.onCall(
   async (data, context) => {
@@ -92,20 +94,26 @@ export const getQuizQuestions = functions.https.onCall(
     } = data;
 
     try {
-      // Verify user has hearts available
+      // Verify user has enough energy
       const userDoc = await db.collection("users").doc(userId).get();
       const userData = userDoc.data();
+      const currentEnergy = userData?.energy?.currentEnergy || 0;
 
-      if (!userData?.battery?.currentHearts ||
-          userData.battery.currentHearts <= 0) {
+      // Calculate total energy needed for the quiz
+      const totalEnergyNeeded = count * ENERGY_CONFIG.ENERGY_PER_QUESTION;
+
+      if (currentEnergy < totalEnergyNeeded) {
         throw new functions.https.HttpsError(
           "failed-precondition",
-          "No hearts available. Please wait for refill."
+          `Insufficient energy. Need ${totalEnergyNeeded}, have ${currentEnergy}`
         );
       }
 
       // Build query for questions
       let questionsQuery = db.collection("questions") as any;
+
+      // Only get verified questions
+      questionsQuery = questionsQuery.where("verified", "==", true);
 
       if (category) {
         questionsQuery = questionsQuery.where("category", "==", category);
@@ -133,7 +141,8 @@ export const getQuizQuestions = functions.https.onCall(
         .doc("current")
         .get();
 
-      const answeredQuestions = userProgressDoc.data()?.answeredQuestions || [];
+      const answeredQuestions =
+        userProgressDoc.data()?.answeredQuestions || [];
 
       // Filter out already answered questions and randomly select
       const availableQuestions = questionsSnapshot.docs
@@ -174,16 +183,22 @@ export const getQuizQuestions = functions.https.onCall(
           sessionId,
           startTime: admin.firestore.Timestamp.now(),
           questions: shuffled.map((q) => q.id),
+          questionsCompleted: 0,
+          totalQuestions: formattedQuestions.length,
           category,
           difficulty,
           language,
           status: "active",
+          energyConsumed: 0,
+          energyNeeded: totalEnergyNeeded,
         });
 
       return {
         sessionId,
         questions: formattedQuestions,
         totalQuestions: formattedQuestions.length,
+        energyPerQuestion: ENERGY_CONFIG.ENERGY_PER_QUESTION,
+        totalEnergyNeeded,
       };
     } catch (error) {
       console.error("Error in getQuizQuestions:", error);
@@ -197,7 +212,8 @@ export const getQuizQuestions = functions.https.onCall(
 
 /**
  * HTTP function to submit and validate a quiz answer
- * Updates user progress, points, streaks, and battery
+ * Updates user progress, points, streaks
+ * Consumes energy per question answered
  */
 export const submitQuizAnswer = functions.https.onCall(
   async (data, context) => {
@@ -242,6 +258,26 @@ export const submitQuizAnswer = functions.https.onCall(
         const userDoc = await transaction.get(userRef);
         const userData = userDoc.data();
         const currentProgress = userData?.quizProgress || {};
+        const currentEnergy = userData?.energy?.currentEnergy || 0;
+
+        // Check if user has enough energy
+        if (currentEnergy < ENERGY_CONFIG.ENERGY_PER_QUESTION) {
+          throw new functions.https.HttpsError(
+            "failed-precondition",
+            "Insufficient energy to answer question"
+          );
+        }
+
+        // Consume energy
+        transaction.update(userRef, {
+          "energy.currentEnergy":
+            currentEnergy - ENERGY_CONFIG.ENERGY_PER_QUESTION,
+          "energy.lastUpdateTime": admin.firestore.Timestamp.now(),
+          "energy.totalEnergyUsed":
+            admin.firestore.FieldValue.increment(
+              ENERGY_CONFIG.ENERGY_PER_QUESTION
+            ),
+        });
 
         // Calculate points and streak
         let pointsEarned = 0;
@@ -255,29 +291,13 @@ export const submitQuizAnswer = functions.https.onCall(
 
           // Apply streak bonus (up to max multiplier)
           const streakMultiplier = Math.min(
-            1 + (newStreak * 0.1),
+            1 + newStreak * 0.1,
             QUIZ_CONFIG.MAX_STREAK_BONUS
           );
           pointsEarned = Math.floor(basePoints * streakMultiplier);
         } else {
-          // Reset streak on wrong answer and consume heart
+          // Reset streak on wrong answer
           newStreak = 0;
-
-          // Deduct heart
-          if (!userData?.battery?.currentHearts ||
-              userData.battery.currentHearts <= 0) {
-            throw new functions.https.HttpsError(
-              "failed-precondition",
-              "No hearts available"
-            );
-          }
-
-          transaction.update(userRef, {
-            "battery.currentHearts":
-              admin.firestore.FieldValue.increment(-1),
-            "battery.totalHeartsUsed":
-              admin.firestore.FieldValue.increment(1),
-          });
         }
 
         // Update user progress
@@ -302,8 +322,7 @@ export const submitQuizAnswer = functions.https.onCall(
           ),
           "quizProgress.totalPoints":
             admin.firestore.FieldValue.increment(pointsEarned),
-          [`${categoryKey}.answered`]:
-            admin.firestore.FieldValue.increment(1),
+          [`${categoryKey}.answered`]: admin.firestore.FieldValue.increment(1),
           [`${categoryKey}.correct`]:
             admin.firestore.FieldValue.increment(isCorrect ? 1 : 0),
           [`${categoryKey}.points`]:
@@ -314,22 +333,25 @@ export const submitQuizAnswer = functions.https.onCall(
             admin.firestore.FieldValue.increment(isCorrect ? 1 : 0),
         });
 
-        // Record answer in session
-        transaction.update(
-          userRef.collection("quizSessions").doc(sessionId),
-          {
-            answers: admin.firestore.FieldValue.arrayUnion({
-              questionId,
-              userAnswer: answer,
-              isCorrect,
-              pointsEarned,
-              timestamp: admin.firestore.Timestamp.now(),
-            }),
-          }
-        );
+        // Update session
+        const sessionRef = userRef.collection("quizSessions").doc(sessionId);
+        transaction.update(sessionRef, {
+          answers: admin.firestore.FieldValue.arrayUnion({
+            questionId,
+            userAnswer: answer,
+            isCorrect,
+            pointsEarned,
+            timestamp: admin.firestore.Timestamp.now(),
+          }),
+          questionsCompleted: admin.firestore.FieldValue.increment(1),
+          energyConsumed:
+            admin.firestore.FieldValue.increment(
+              ENERGY_CONFIG.ENERGY_PER_QUESTION
+            ),
+        });
 
         // Add to answered questions list
-        transaction.update(
+        transaction.set(
           userRef.collection("quizProgress").doc("current"),
           {
             answeredQuestions:
@@ -348,6 +370,8 @@ export const submitQuizAnswer = functions.https.onCall(
               questionData.explanation_en,
           pointsEarned,
           currentStreak: newStreak,
+          energyConsumed: ENERGY_CONFIG.ENERGY_PER_QUESTION,
+          energyRemaining: currentEnergy - ENERGY_CONFIG.ENERGY_PER_QUESTION,
           source: {
             bookId: questionData.source.book_id,
             paragraphId: questionData.source.paragraph_id,
@@ -357,9 +381,6 @@ export const submitQuizAnswer = functions.https.onCall(
                 questionData.source.exact_quote_ar :
                 questionData.source.exact_quote_ar, // Fallback to Arabic
           },
-          heartsRemaining: isCorrect ?
-            userData.battery.currentHearts :
-            userData.battery.currentHearts - 1,
         };
       });
 
@@ -447,6 +468,7 @@ export const getQuizProgress = functions.https.onCall(
 
 /**
  * HTTP function to end a quiz session and get summary
+ * Awards completion bonus energy
  */
 export const endQuizSession = functions.https.onCall(async (data, context) => {
   if (!context.auth) {
@@ -486,9 +508,7 @@ export const endQuizSession = functions.https.onCall(async (data, context) => {
     const answers = sessionData?.answers || [];
 
     // Calculate session summary
-    const correctCount = answers.filter(
-      (a: any) => a.isCorrect
-    ).length;
+    const correctCount = answers.filter((a: any) => a.isCorrect).length;
     const totalPoints = answers.reduce(
       (sum: number, a: any) => sum + (a.pointsEarned || 0),
       0
@@ -496,15 +516,19 @@ export const endQuizSession = functions.https.onCall(async (data, context) => {
 
     const summary = {
       sessionId,
-      totalQuestions: answers.length,
+      totalQuestions: sessionData?.totalQuestions || answers.length,
+      questionsCompleted: answers.length,
       correctAnswers: correctCount,
       wrongAnswers: answers.length - correctCount,
       totalPoints,
-      accuracy: answers.length > 0 ?
-        ((correctCount / answers.length) * 100).toFixed(2) :
-        0,
-      duration: admin.firestore.Timestamp.now().toMillis() -
+      accuracy:
+        answers.length > 0 ?
+          ((correctCount / answers.length) * 100).toFixed(2) :
+          0,
+      duration:
+        admin.firestore.Timestamp.now().toMillis() -
         sessionData.startTime.toMillis(),
+      energyConsumed: sessionData?.energyConsumed || 0,
     };
 
     // Update session status
@@ -584,21 +608,21 @@ export const getQuestionSource = functions.https.onCall(
       return {
         book: {
           id: source.book_id,
-          title: language === "ar" ?
-            bookData?.title_ar :
-            bookData?.title_en,
-          author: language === "ar" ?
-            bookData?.author_ar :
-            bookData?.author_en,
+          title:
+            language === "ar" ? bookData?.title_ar : bookData?.title_en,
+          author:
+            language === "ar" ? bookData?.author_ar : bookData?.author_en,
         },
         paragraph: {
-          content: language === "ar" ?
-            paragraphData?.content.text_ar :
-            paragraphData?.content.text_en,
+          content:
+            language === "ar" ?
+              paragraphData?.content.text_ar :
+              paragraphData?.content.text_en,
           pageNumber: source.page_number,
-          sectionTitle: language === "ar" ?
-            paragraphData?.section_title_ar :
-            paragraphData?.section_title_en || "",
+          sectionTitle:
+            language === "ar" ?
+              paragraphData?.section_title_ar :
+              paragraphData?.section_title_en || "",
         },
         exactQuote: source.exact_quote_ar,
       };
