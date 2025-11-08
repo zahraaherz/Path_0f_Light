@@ -11,6 +11,8 @@ import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
+import '../settings/settings_screen.dart';
+import '../dashboard/dashboard_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -25,6 +27,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    DashboardScreen(),
     LeaderboardScreen(),
     AchievementsScreen(),
     ProfileScreen(),
@@ -103,6 +106,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             label: 'Home',
           ),
           NavigationDestination(
+            icon: Icon(Icons.mosque_outlined),
+            selectedIcon: Icon(Icons.mosque, color: AppTheme.primaryTeal),
+            label: 'Dashboard',
+          ),
+          NavigationDestination(
             icon: Icon(Icons.leaderboard_outlined),
             selectedIcon: Icon(Icons.leaderboard, color: AppTheme.primaryTeal),
             label: 'Leaderboard',
@@ -138,10 +146,18 @@ class HomePage extends ConsumerWidget {
             expandedHeight: 200,
             floating: false,
             pinned: true,
-            actions: const [
-              Padding(
+            actions: [
+              const Padding(
                 padding: EdgeInsets.only(right: 8.0),
                 child: EnergyDisplay(showLabel: false),
+              ),
+              IconButton(
+                icon: const Icon(Icons.settings),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                  );
+                },
               ),
             ],
             flexibleSpace: FlexibleSpaceBar(
