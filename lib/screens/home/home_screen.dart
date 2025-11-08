@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
+import '../../providers/energy_providers.dart';
+import '../../widgets/energy_display.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
@@ -77,6 +79,12 @@ class HomePage extends ConsumerWidget {
             expandedHeight: 200,
             floating: false,
             pinned: true,
+            actions: const [
+              Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: EnergyDisplay(showLabel: false),
+              ),
+            ],
             flexibleSpace: FlexibleSpaceBar(
               title: const Text(
                 'Path of Light',
@@ -155,50 +163,63 @@ class HomePage extends ConsumerWidget {
             ),
           ),
 
-          // Quick Stats
+          // Quick Stats with Energy Bar
           SliverToBoxAdapter(
-            child: userProfileAsync.when(
-              data: (profile) {
-                if (profile == null) {
-                  return const SizedBox.shrink();
-                }
-
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: _QuickStatCard(
-                          icon: Icons.bolt,
-                          label: 'Energy',
-                          value: '${profile.energy.currentEnergy}',
-                          color: AppTheme.goldAccent,
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _QuickStatCard(
-                          icon: Icons.stars,
-                          label: 'Points',
-                          value: '${profile.quizProgress.totalPoints}',
-                          color: AppTheme.primaryTeal,
-                        ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: _QuickStatCard(
-                          icon: Icons.local_fire_department,
-                          label: 'Streak',
-                          value: '${profile.quizProgress.currentStreak}',
-                          color: AppTheme.error,
-                        ),
-                      ),
-                    ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  // Energy Bar
+                  const Card(
+                    elevation: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(16),
+                      child: EnergyBar(height: 32, showValue: true),
+                    ),
                   ),
-                );
-              },
-              loading: () => const SizedBox.shrink(),
-              error: (_, __) => const SizedBox.shrink(),
+                  const SizedBox(height: 16),
+
+                  // Stats Row
+                  userProfileAsync.when(
+                    data: (profile) {
+                      if (profile == null) return const SizedBox.shrink();
+
+                      return Row(
+                        children: [
+                          Expanded(
+                            child: _QuickStatCard(
+                              icon: Icons.stars,
+                              label: 'Points',
+                              value: '${profile.quizProgress.totalPoints}',
+                              color: AppTheme.primaryTeal,
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _QuickStatCard(
+                              icon: Icons.local_fire_department,
+                              label: 'Streak',
+                              value: '${profile.quizProgress.currentStreak}',
+                              color: AppTheme.error,
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: _QuickStatCard(
+                              icon: Icons.quiz,
+                              label: 'Questions',
+                              value: '${profile.quizProgress.totalQuestionsAnswered}',
+                              color: AppTheme.info,
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                    loading: () => const SizedBox.shrink(),
+                    error: (_, __) => const SizedBox.shrink(),
+                  ),
+                ],
+              ),
             ),
           ),
 
