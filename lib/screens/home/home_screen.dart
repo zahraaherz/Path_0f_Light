@@ -3,7 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/energy_providers.dart';
+import '../../providers/streak_providers.dart';
 import '../../widgets/energy_display.dart';
+import '../../widgets/streak_display.dart';
+import '../../widgets/streak_celebration_dialog.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
@@ -18,6 +21,7 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   int _selectedIndex = 0;
+  bool _hasShownCelebration = false;
 
   final List<Widget> _pages = const [
     HomePage(),
@@ -25,6 +29,60 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     AchievementsScreen(),
     ProfileScreen(),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    // Trigger daily login tracking on app launch
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _checkDailyLogin();
+    });
+  }
+
+  void _checkDailyLogin() {
+    final dailyLoginAsync = ref.read(dailyLoginTrackingProvider);
+    dailyLoginAsync.whenData((result) {
+      if (result != null && !_hasShownCelebration && mounted) {
+        _hasShownCelebration = true;
+
+        // Show celebration if streak increased or is a milestone
+        if (result.streakIncreased || result.isNewStreak) {
+          // Check if it's a milestone
+          final milestones = [3, 7, 14, 30, 60, 100];
+          final isMilestone = milestones.contains(result.loginStreak);
+
+          if (isMilestone) {
+            // Show full celebration dialog for milestones
+            Future.delayed(const Duration(milliseconds: 500), () {
+              if (mounted) {
+                StreakCelebrationDialog.show(
+                  context,
+                  StreakCelebration(
+                    type: StreakType.login,
+                    streak: result.loginStreak,
+                    isMilestone: true,
+                    message: 'Alhamdulillah! You reached a ${result.loginStreak}-day login streak!',
+                    timestamp: DateTime.now(),
+                  ),
+                );
+              }
+            });
+          } else if (result.loginStreak >= 3) {
+            // Show simple notification for regular streaks (3+)
+            Future.delayed(const Duration(milliseconds: 500), () {
+              if (mounted) {
+                StreakNotification.show(
+                  context,
+                  type: StreakType.login,
+                  streak: result.loginStreak,
+                );
+              }
+            });
+          }
+        }
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -177,6 +235,20 @@ class HomePage extends ConsumerWidget {
                       padding: EdgeInsets.all(16),
                       child: EnergyBar(height: 32, showValue: true),
                     ),
+                  ),
+                  const SizedBox(height: 16),
+
+                  // Streak Cards
+                  Row(
+                    children: const [
+                      Expanded(
+                        child: StreakCard(type: StreakType.login),
+                      ),
+                      SizedBox(width: 12),
+                      Expanded(
+                        child: StreakCard(type: StreakType.quiz),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 16),
 
