@@ -1,10 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'config/theme/app_theme.dart';
 import 'providers/auth_providers.dart';
+import 'providers/language_providers.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/home/home_screen.dart';
+
+// This will be generated after running: flutter gen-l10n
+// Run this command after flutter pub get: flutter gen-l10n
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,14 +37,38 @@ class PathOfLightApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(localeProvider);
+    final textDirection = ref.watch(textDirectionProvider);
+
     return MaterialApp(
       title: 'Path of Light',
       debugShowCheckedModeBanner: false,
+
+      // Localization
+      locale: locale,
+      supportedLocales: const [
+        Locale('en'), // English
+        Locale('ar'), // Arabic
+      ],
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
 
       // Islamic Theme
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
+
+      // RTL Support
+      builder: (context, child) {
+        return Directionality(
+          textDirection: textDirection,
+          child: child ?? const SizedBox.shrink(),
+        );
+      },
 
       // Auth Router
       home: const AuthRouter(),

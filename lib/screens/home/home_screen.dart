@@ -11,6 +11,7 @@ import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
+import '../settings/settings_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -138,10 +139,18 @@ class HomePage extends ConsumerWidget {
             expandedHeight: 200,
             floating: false,
             pinned: true,
-            actions: const [
-              Padding(
+            actions: [
+              const Padding(
                 padding: EdgeInsets.only(right: 8.0),
                 child: EnergyDisplay(showLabel: false),
+              ),
+              IconButton(
+                icon: const Icon(Icons.settings),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                  );
+                },
               ),
             ],
             flexibleSpace: FlexibleSpaceBar(
