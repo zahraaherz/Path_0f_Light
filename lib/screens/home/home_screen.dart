@@ -7,6 +7,7 @@ import '../../widgets/energy_display.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
+import '../quiz/quiz_start_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -240,9 +241,8 @@ class HomePage extends ConsumerWidget {
                   description: 'Test your knowledge',
                   color: AppTheme.primaryTeal,
                   onTap: () {
-                    // TODO: Navigate to quiz screen
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Quiz feature coming soon!')),
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const QuizStartScreen()),
                     );
                   },
                 ),
