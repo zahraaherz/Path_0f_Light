@@ -22,11 +22,14 @@ class QuizRepository {
 
   /// Get random quiz questions
   /// Checks energy availability before starting
+  /// Can filter by category, difficulty, Masoom ID, and topics
   Future<QuizSession> getQuizQuestions({
     String? category,
     String? difficulty,
     String language = 'en',
     int count = 10,
+    String? masoomId, // Filter questions by Masoom (e.g., 'imam-ali', 'prophet-muhammad')
+    List<String>? topics, // Filter by topics (e.g., ['fiqh', 'quran'])
   }) async {
     try {
       final callable = _functions.httpsCallable('getQuizQuestions');
@@ -35,6 +38,8 @@ class QuizRepository {
         if (difficulty != null) 'difficulty': difficulty,
         'language': language,
         'count': count,
+        if (masoomId != null) 'masoomId': masoomId,
+        if (topics != null && topics.isNotEmpty) 'topics': topics,
       });
 
       return QuizSession.fromJson(Map<String, dynamic>.from(result.data));

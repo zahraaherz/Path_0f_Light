@@ -26,8 +26,11 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
     final quizState = ref.watch(quizSessionProvider);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Start Quiz'),
+        backgroundColor: Colors.white,
+        elevation: 0,
         centerTitle: true,
         actions: const [
           Padding(
@@ -37,43 +40,54 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Header Card
-            Card(
-              elevation: 4,
-              child: Container(
-                padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  gradient: LinearGradient(
-                    colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+            // Islamic Header
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: AppTheme.islamicGreen.withOpacity(0.05),
+                border: Border.all(
+                  color: AppTheme.islamicGreen.withOpacity(0.3),
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.quiz,
+                    size: 48,
+                    color: AppTheme.primaryTeal,
                   ),
-                ),
-                child: Column(
-                  children: [
-                    const Icon(Icons.quiz, size: 64, color: Colors.white),
-                    const SizedBox(height: 16),
-                    Text(
-                      'Test Your Knowledge',
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '10 questions • Earn points • Build streaks',
-                      style: const TextStyle(color: Colors.white70),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
+                  const SizedBox(height: 16),
+                  Text(
+                    'اِختَبِر مَعرِفَتَك',
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          color: AppTheme.islamicGreen,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Test Your Knowledge',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    '10 questions • Earn points • Build streaks',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
 
@@ -85,42 +99,50 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                 final energyNeeded = 10 * status.energyPerQuestion;
                 final hasEnough = status.currentEnergy >= energyNeeded;
 
-                return Card(
-                  color: hasEnough
-                      ? AppTheme.success.withOpacity(0.1)
-                      : AppTheme.error.withOpacity(0.1),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      children: [
-                        Icon(
-                          hasEnough ? Icons.check_circle : Icons.warning_amber,
-                          color: hasEnough ? AppTheme.success : AppTheme.error,
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                hasEnough
-                                    ? 'Ready to Start!'
-                                    : 'Insufficient Energy',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: hasEnough ? AppTheme.success : AppTheme.error,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                'Need: $energyNeeded • Have: ${status.currentEnergy}',
-                                style: const TextStyle(fontSize: 12),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                return Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: hasEnough
+                        ? AppTheme.success.withOpacity(0.05)
+                        : AppTheme.error.withOpacity(0.05),
+                    border: Border.all(
+                      color: hasEnough
+                          ? AppTheme.success.withOpacity(0.3)
+                          : AppTheme.error.withOpacity(0.3),
+                      width: 1,
                     ),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        hasEnough ? Icons.check_circle_outline : Icons.warning_amber_outlined,
+                        color: hasEnough ? AppTheme.success : AppTheme.error,
+                        size: 24,
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              hasEnough ? 'Ready to Start' : 'Insufficient Energy',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: hasEnough ? AppTheme.success : AppTheme.error,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Need: $energyNeeded • Have: ${status.currentEnergy}',
+                              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                    color: AppTheme.textSecondary,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 );
               },
@@ -128,13 +150,20 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               error: (_, __) => const SizedBox.shrink(),
             ),
 
-            const SizedBox(height: 24),
+            const SizedBox(height: 32),
 
             // Category Selection
             Text(
-              'Select Category (Optional)',
+              'Select Category',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
+                  ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              'Optional - Leave unselected for mixed categories',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppTheme.textSecondary,
                   ),
             ),
             const SizedBox(height: 12),
@@ -165,9 +194,16 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
 
             // Difficulty Selection
             Text(
-              'Select Difficulty (Optional)',
+              'Select Difficulty',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
+                  ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              'Optional - Leave unselected for mixed difficulty',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppTheme.textSecondary,
                   ),
             ),
             const SizedBox(height: 12),
@@ -206,6 +242,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                   child: _LanguageCard(
                     language: 'en',
                     label: 'English',
+                    arabicLabel: 'إنجليزي',
                     icon: Icons.language,
                     selected: selectedLanguage == 'en',
                     onTap: () => setState(() => selectedLanguage = 'en'),
@@ -216,6 +253,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                   child: _LanguageCard(
                     language: 'ar',
                     label: 'العربية',
+                    arabicLabel: 'Arabic',
                     icon: Icons.translate,
                     selected: selectedLanguage == 'ar',
                     onTap: () => setState(() => selectedLanguage = 'ar'),
@@ -228,7 +266,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
 
             // Start Quiz Button
             SizedBox(
-              height: 56,
+              height: 52,
               child: ElevatedButton.icon(
                 onPressed: quizState.isLoading ? null : _startQuiz,
                 icon: quizState.isLoading
@@ -243,29 +281,43 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     : const Icon(Icons.play_arrow),
                 label: Text(
                   quizState.isLoading ? 'Loading...' : 'Start Quiz',
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppTheme.primaryTeal,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
               ),
             ),
 
             if (quizState.error != null) ...[
               const SizedBox(height: 16),
-              Card(
-                color: AppTheme.error.withOpacity(0.1),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.error_outline, color: AppTheme.error),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          quizState.error!,
-                          style: const TextStyle(color: AppTheme.error),
-                        ),
-                      ),
-                    ],
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: AppTheme.error.withOpacity(0.05),
+                  border: Border.all(
+                    color: AppTheme.error.withOpacity(0.3),
+                    width: 1,
                   ),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.error_outline, color: AppTheme.error, size: 20),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        quizState.error!,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: AppTheme.error,
+                            ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -306,12 +358,41 @@ class _CategoryChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilterChip(
-      label: Text(label),
-      selected: selected,
-      onSelected: (_) => onTap(),
-      selectedColor: AppTheme.primaryTeal.withOpacity(0.2),
-      checkmarkColor: AppTheme.primaryTeal,
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: selected ? AppTheme.primaryTeal.withOpacity(0.1) : Colors.transparent,
+          border: Border.all(
+            color: selected ? AppTheme.primaryTeal : Colors.grey.shade300,
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (selected)
+              const Padding(
+                padding: EdgeInsets.only(right: 6),
+                child: Icon(
+                  Icons.check_circle,
+                  size: 16,
+                  color: AppTheme.primaryTeal,
+                ),
+              ),
+            Text(
+              label,
+              style: TextStyle(
+                color: selected ? AppTheme.primaryTeal : AppTheme.textPrimary,
+                fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -331,24 +412,52 @@ class _DifficultyChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilterChip(
-      label: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(label),
-          if (points != null) ...[
-            const SizedBox(width: 4),
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: selected ? AppTheme.goldAccent.withOpacity(0.1) : Colors.transparent,
+          border: Border.all(
+            color: selected ? AppTheme.goldAccent : Colors.grey.shade300,
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (selected)
+              const Padding(
+                padding: EdgeInsets.only(right: 6),
+                child: Icon(
+                  Icons.check_circle,
+                  size: 16,
+                  color: AppTheme.goldAccent,
+                ),
+              ),
             Text(
-              '($points pts)',
-              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+              label,
+              style: TextStyle(
+                color: selected ? AppTheme.goldAccent : AppTheme.textPrimary,
+                fontWeight: selected ? FontWeight.bold : FontWeight.normal,
+              ),
             ),
+            if (points != null) ...[
+              const SizedBox(width: 4),
+              Text(
+                '($points pts)',
+                style: TextStyle(
+                  fontSize: 11,
+                  color: selected ? AppTheme.goldAccent : AppTheme.textSecondary,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ],
-        ],
+        ),
       ),
-      selected: selected,
-      onSelected: (_) => onTap(),
-      selectedColor: AppTheme.goldAccent.withOpacity(0.2),
-      checkmarkColor: AppTheme.goldAccent,
     );
   }
 }
@@ -356,6 +465,7 @@ class _DifficultyChip extends StatelessWidget {
 class _LanguageCard extends StatelessWidget {
   final String language;
   final String label;
+  final String arabicLabel;
   final IconData icon;
   final bool selected;
   final VoidCallback onTap;
@@ -363,6 +473,7 @@ class _LanguageCard extends StatelessWidget {
   const _LanguageCard({
     required this.language,
     required this.label,
+    required this.arabicLabel,
     required this.icon,
     required this.selected,
     required this.onTap,
@@ -370,37 +481,43 @@ class _LanguageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: selected ? AppTheme.primaryTeal.withOpacity(0.1) : null,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: selected ? AppTheme.primaryTeal : Colors.transparent,
-              width: 2,
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: selected ? AppTheme.primaryTeal.withOpacity(0.05) : Colors.transparent,
+          border: Border.all(
+            color: selected ? AppTheme.primaryTeal : Colors.grey.shade300,
+            width: selected ? 2 : 1,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          children: [
+            Icon(
+              icon,
+              color: selected ? AppTheme.primaryTeal : AppTheme.textSecondary,
+              size: 32,
             ),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Column(
-            children: [
-              Icon(
-                icon,
+            const SizedBox(height: 8),
+            Text(
+              label,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: selected ? AppTheme.primaryTeal : AppTheme.textPrimary,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              arabicLabel,
+              style: TextStyle(
+                fontSize: 12,
                 color: selected ? AppTheme.primaryTeal : AppTheme.textSecondary,
-                size: 32,
               ),
-              const SizedBox(height: 8),
-              Text(
-                label,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: selected ? AppTheme.primaryTeal : AppTheme.textPrimary,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

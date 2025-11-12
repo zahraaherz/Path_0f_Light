@@ -80,11 +80,14 @@ class QuizSessionNotifier extends StateNotifier<QuizSessionState> {
       : super(const QuizSessionState());
 
   /// Start a new quiz session
+  /// Can filter by category, difficulty, Masoom ID, and topics
   Future<bool> startQuiz({
     String? category,
     String? difficulty,
     String language = 'en',
     int count = 10,
+    String? masoomId, // Filter by Masoom (e.g., 'imam-ali')
+    List<String>? topics, // Filter by topics (e.g., ['fiqh', 'quran'])
   }) async {
     state = state.copyWith(isLoading: true, error: null);
 
@@ -94,6 +97,8 @@ class QuizSessionNotifier extends StateNotifier<QuizSessionState> {
         difficulty: difficulty,
         language: language,
         count: count,
+        masoomId: masoomId,
+        topics: topics,
       );
 
       state = QuizSessionState(

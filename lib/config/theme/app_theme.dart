@@ -10,14 +10,14 @@ class AppTheme {
   static const Color primaryTealDark = Color(0xFF0F766E); // Teal-700
 
   // Gold/Amber - For accents and highlights
-  static const Color goldAccent = Color(0xFFF59E0B); // Amber-500
-  static const Color goldLight = Color(0xFFFBBF24); // Amber-400
-  static const Color goldDark = Color(0xFFD97706); // Amber-600
+  static const Color goldAccent = Color(0xFFC9A961); // Softer gold
+  static const Color goldLight = Color(0xFFE5D5A8); // Light gold
+  static const Color goldDark = Color(0xFFB8963E); // Dark gold
 
-  // Green - Represents growth and paradise
-  static const Color islamicGreen = Color(0xFF059669); // Emerald-600
-  static const Color islamicGreenLight = Color(0xFF10B981); // Emerald-500
-  static const Color islamicGreenDark = Color(0xFF047857); // Emerald-700
+  // Green - Soft, eye-relaxing sage green inspired by Islamic gardens
+  static const Color islamicGreen = Color(0xFF7C9C8E); // Soft sage green
+  static const Color islamicGreenLight = Color(0xFF9DB8AA); // Light sage
+  static const Color islamicGreenDark = Color(0xFF5F8070); // Dark sage
 
   // Neutral colors
   static const Color backgroundLight = Color(0xFFFAFAFA);

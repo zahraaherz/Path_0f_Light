@@ -52,6 +52,9 @@ class QuizQuestion with _$QuizQuestion {
     required String question,
     required Map<String, String> options, // A, B, C, D
     required int points,
+    @Default([]) List<String> masoomTags, // IDs of Masoomeen this question relates to
+    @Default([]) List<String> topicTags, // Topics: 'fiqh', 'quran', 'hadith', 'history', etc.
+    String? bookSource, // Book ID where this question comes from
   }) = _QuizQuestion;
 
   factory QuizQuestion.fromJson(Map<String, dynamic> json) =>
