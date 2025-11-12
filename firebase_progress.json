@@ -1,9 +1,8 @@
 {
   "metadata": {
-    "generated_at": "2025-11-12T20:18:44.181Z",
+    "generated_at": "2025-11-12T20:18:44.174Z",
+    "processed_books": 20,
     "total_books": 20,
-    "total_sections": 20,
-    "total_paragraphs": 1,
     "success_count": 1,
     "needs_ocr_count": 19,
     "error_count": 0
