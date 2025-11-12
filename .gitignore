@@ -50,3 +50,6 @@ ios/Runner/GoogleService-Info.plist
 # Node modules for PDF extraction scripts
 node_modules/
 package-lock.json
+
+# Temporary OCR processing files
+temp_images/
