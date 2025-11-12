@@ -1,0 +1,433 @@
+================================================================================
+PATH OF LIGHT - EXECUTIVE SUMMARY
+================================================================================
+
+PROJECT TYPE: Cross-Platform Islamic Educational App
+- Frontend: Flutter (6 platforms: Android, iOS, Web, Windows, macOS, Linux)
+- Backend: Firebase Cloud Functions (TypeScript/Node.js)
+- Database: Firestore
+- Status: Backend complete, Frontend skeleton ready for implementation
+
+================================================================================
+BACKEND FIREBASE FUNCTIONS - 38+ TOTAL FUNCTIONS
+================================================================================
+
+1. USER MANAGEMENT (17 functions)
+   - 2 Automatic Triggers (onUserCreated, onUserDeleted)
+   - 6 User Profile Functions
+   - 3 Email/Password Functions
+   - 2 Social Auth Functions (Google, Apple, Facebook)
+   - 3 Admin-Only Functions
+   
+   Key Features:
+   - Multi-provider authentication (email, social, phone)
+   - User roles: user, scholar, moderator, admin
+   - Privacy controls (profile visibility, leaderboard, friend requests)
+   - Login streak tracking
+   - Complete profile structure with settings
+
+2. ENERGY SYSTEM (6 functions) - Cost-Optimized Architecture
+   - getEnergyStatus - Calculate energy with natural refill
+   - consumeEnergy - Use energy for questions
+   - rewardQuizCompletion - Award bonus energy
+   - rewardAdWatch - Award energy for watching ads
+   - updateSubscription - Activate plans
+   - checkSubscriptionStatus - Validate subscriptions
+   
+   Key Features:
+   - NO scheduled functions (calculated on-demand = lower costs)
+   - Energy: 100 free, 200 premium
+   - Refill: 5/hour (free), 10/hour (premium)
+   - Daily login bonus: 50 energy
+   - Ad rewards: 15 energy (5min cooldown, 10/day max)
+   - Subscription plans: monthly, yearly, lifetime
+
+3. QUIZ MANAGEMENT (5 functions)
+   - getQuizQuestions - Get randomized 10-question sessions
+   - submitQuizAnswer - Validate and process answers
+   - getQuizProgress - User statistics and progress
+   - endQuizSession - Complete session with bonuses
+   - getQuestionSource - Get book/paragraph references
+   
+   Key Features:
+   - Bilingual (Arabic/English)
+   - 4 difficulty levels: basic, intermediate, advanced, expert
+   - Points: 10, 15, 20, 25
+   - Streak bonus: 1.1× multiplier, max 2.0×
+   - Energy consumed: 10 per question
+   - Questions per session: 10
+
+4. CONTENT MANAGEMENT (10 functions)
+   - Insert/bulk insert books, sections, paragraphs, questions
+   - Verify and publish content
+   - Search and retrieve content
+   
+   Key Features:
+   - Hierarchical structure: Books → Sections → Paragraphs → Questions
+   - Content status tracking: draft → verified → published
+   - Bilingual support throughout
+   - Question entities: people, places, events, dates
+
+================================================================================
+USER DATA STRUCTURE (Complete & Initialized)
+================================================================================
+
+users/{userId} contains:
+├── profile (authentication & identity)
+├── energy (on-demand refill system)
+├── subscription (plans: free, monthly, yearly, lifetime)
+├── quizProgress (statistics & streaks)
+├── dailyStats (login tracking)
+├── adTracking (ad reward limits)
+└── settings (notifications, privacy, theme, language)
+
+All initialized automatically by onUserCreated trigger!
+
+================================================================================
+FRONTEND FLUTTER STRUCTURE
+================================================================================
+
+Current Status: SKELETON ONLY
+- main.dart: 126 lines (basic template)
+- Screen files: All created but EMPTY
+  - Auth: login_screen.dart, register_screen.dart
+  - Home: home_screen.dart, dashboard.dart, books_screen.dart,
+          challanges_screen.dart, collection_screen.dart, setting_screen.dart
+
+Dependencies: MINIMAL
+- flutter_core: 2.27.0 (only Firebase Core added)
+- Missing: cloud_functions, firebase_auth, riverpod, go_router, etc.
+
+State Management: NONE IMPLEMENTED
+- No state management library
+- No providers/controllers
+- Recommendation: Riverpod (best practice for Flutter)
+
+Theme: BASIC
+- Material 3 enabled
+- colorScheme with deepPurple seed
+- No light/dark theme switching
+- No localization (en/ar)
+
+================================================================================
+KEY IMPLEMENTATION REQUIREMENTS
+================================================================================
+
+CRITICAL TO-DO FOR FRONTEND:
+
+1. Update pubspec.yaml with required packages:
+   - cloud_functions: ^4.5.0 (call backend functions)
+   - firebase_auth: ^4.10.0 (authentication)
+   - firebase_firestore: ^4.13.0 (database)
+   - riverpod: ^2.4.0 (state management - RECOMMENDED)
+   - flutter_riverpod: ^2.4.0
+   - go_router: ^12.0.0 (navigation)
+   - intl: ^0.18.0 (i18n for en/ar)
+
+2. Create service layer to call Firebase Functions
+   - Wrap all 38 functions with error handling
+   - Create repository pattern for data access
+   - Handle FirebaseFunctionsException properly
+
+3. Implement state management with Riverpod:
+   - AuthProvider (current user)
+   - UserProfileProvider (user data)
+   - EnergyProvider (energy status)
+   - QuizProvider (quiz state)
+   - SettingsProvider (user preferences)
+   - ThemeProvider (theme switching)
+
+4. Build authentication flow:
+   - Login/Registration screens
+   - Email verification screen
+   - Profile completion screen (displayName, language, photo)
+   - Social login integration
+   - Password reset flow
+
+5. Implement core features:
+   - Home/Dashboard with energy display
+   - Quiz screen with 10-question sessions
+   - Energy consumption per question
+   - Quiz results and progress tracking
+   - Settings screen (theme, language, notifications)
+   - User profile screen
+
+6. Add theme system:
+   - Light/Dark theme switching
+   - Font size options (small, medium, large)
+   - Save to backend via updateUserSettings()
+
+7. Implement localization:
+   - Arabic (ar) and English (en)
+   - Sync with backend language preference
+   - Dropdown or button for language switching
+
+================================================================================
+AUTHENTICATION FLOW (2-STEP PROCESS)
+================================================================================
+
+Step 1: Firebase Auth Account Creation
+  → User enters email/password
+  → FirebaseAuth.createUserWithEmailAndPassword()
+  → onUserCreated() trigger runs AUTOMATICALLY
+     → Creates complete user document in Firestore
+     → Initializes energy (100), subscription (free), quiz progress, etc.
+
+Step 2: Profile Completion (Must be called explicitly)
+  → User enters displayName, selects language (en/ar), uploads photo
+  → Call completeUserProfile() cloud function
+  → Sets profileComplete flag to true
+  → User ready to use app
+
+IMPORTANT: Skipping step 2 will leave user with profileComplete=false!
+
+================================================================================
+ENERGY SYSTEM - HOW IT WORKS
+================================================================================
+
+On-Demand Calculation (NO scheduled functions = cheaper):
+
+1. User opens app → Call getEnergyStatus()
+2. Function calculates:
+   - Time since last update × refill rate
+   - Check if daily bonus available (once per day)
+   - Return current energy, max energy, flags
+
+3. User starts quiz
+   - Check: currentEnergy >= ENERGY_PER_QUESTION (10)
+   - If yes: proceed, otherwise show "Need energy" message
+
+4. User answers question
+   - Call consumeEnergy() 
+   - Energy deducted immediately
+   - If energy runs out mid-quiz, user cannot continue
+
+5. Quiz completed
+   - Call endQuizSession() or rewardQuizCompletion()
+   - Bonus energy awarded (20)
+   - Quiz progress updated
+
+6. Free user watches ad (optional)
+   - Call rewardAdWatch()
+   - Check cooldown (5min), daily limit (10)
+   - Award 15 energy if eligible
+
+7. Premium user
+   - Max energy: 200 (vs 100)
+   - Refill: 10/hour (vs 5/hour)
+   - No ads needed
+   - Can enable unlimited energy
+
+ENERGY COSTS:
+- Per question: 10
+- Completion bonus: 20
+- Daily login bonus: 50
+- Ad watch reward: 15
+
+================================================================================
+QUIZ SYSTEM - HOW IT WORKS
+================================================================================
+
+1. User requests quiz
+   → getEnergyStatus() to verify energy available
+   → getQuizQuestions() with optional filters:
+      - category: string (e.g., "history")
+      - difficulty: basic|intermediate|advanced|expert
+      - language: en|ar
+      - count: number (default 10)
+
+2. Questions returned:
+   → 10 random questions (filtered by criteria)
+   → Each has 4 options (A, B, C, D) with translations
+   → Points assigned based on difficulty
+   → Session ID created for tracking
+
+3. User answers each question
+   → submitQuizAnswer()
+   → Function validates answer
+   → Returns: isCorrect, correctAnswer, explanation, pointsEarned
+   → Progress updated
+   → Energy consumed (10 per question)
+
+4. Quiz completed
+   → endQuizSession() with finalScore
+   → Bonus energy awarded (20)
+   → Quiz progress updated:
+      - totalQuestionsAnswered++
+      - correctAnswers++ (if correct)
+      - totalPoints += pointsEarned
+      - currentStreak updated
+      - longestStreak updated if exceeded
+
+5. Streak system
+   → Broken if wrong answer? NO - just continues
+   → Built-in to quiz progress tracking
+   → Bonus multiplier: 1.1× per correct (max 2.0×)
+
+IMPORTANT: Energy consumed PER QUESTION, not just on wrong answers!
+
+================================================================================
+SECURITY & ROLE-BASED ACCESS
+================================================================================
+
+All functions require authentication via context.auth, except:
+- checkUsernameAvailability (public)
+- sendPasswordResetEmail (public)
+
+Admin-only functions check user role before execution:
+- setUserRole: Assign roles to other users
+- suspendUser: Disable user account
+- unsuspendUser: Re-enable user account
+
+Privacy controls respected:
+- If profileVisible=false, getUserProfile() returns error
+- If showInLeaderboard=false, user hidden from rankings
+- Different data returned for own profile vs public profile
+
+================================================================================
+FIRESTORE COLLECTIONS
+================================================================================
+
+users/
+├── {userId}/
+│   ├── profile, energy, subscription, quizProgress, dailyStats, etc.
+│   └── quizProgress/ (subcollection)
+│       └── current (answered questions list)
+│
+questions/
+├── {questionId} (each question document)
+│
+books/
+├── {bookId}
+│   ├── sections/ (subcollection)
+│   │   └── {sectionId}
+│   │       └── paragraphs/ (subcollection)
+│   │           └── {paragraphId}
+│
+analytics/
+├── {eventId} (user events logged)
+│
+subscriptions/ (optional, for purchase tracking)
+
+================================================================================
+DOCUMENTATION FILES CREATED
+================================================================================
+
+Created in /home/user/Path_0f_Light/:
+
+1. CODEBASE_ANALYSIS.md (16 KB)
+   - Comprehensive overview of entire system
+   - Backend functions detailed
+   - Frontend structure
+   - Data flows and architecture
+
+2. QUICK_REFERENCE.md (9.3 KB)
+   - Function table summaries
+   - Data structures
+   - Energy/quiz details
+   - Frontend TODO checklist
+   - Important notes
+
+3. FUNCTION_SIGNATURES.md (18 KB)
+   - Every function signature
+   - Parameters and types
+   - Dart code examples
+   - Response formats
+   - Error handling patterns
+
+4. Original Backend Documentation:
+   - /functions/AUTHENTICATION_GUIDE.md
+   - /functions/INTEGRATION_GUIDE.md
+   - /functions/NEW_README.md
+
+================================================================================
+NEXT STEPS FOR FRONTEND DEVELOPMENT
+================================================================================
+
+Phase 1: Foundation (1-2 days)
+- [ ] Update pubspec.yaml with packages
+- [ ] Initialize Firebase in main()
+- [ ] Set up Riverpod state management
+- [ ] Create basic app structure with go_router
+
+Phase 2: Authentication (2-3 days)
+- [ ] Login screen + email/password auth
+- [ ] Registration screen
+- [ ] Profile completion screen
+- [ ] Implement social login (Google, Apple)
+- [ ] Password reset flow
+
+Phase 3: Core Features (3-4 days)
+- [ ] Dashboard with energy display
+- [ ] Quiz screen with question display
+- [ ] Answer submission and validation
+- [ ] Quiz progress display
+- [ ] Energy consumption logic
+
+Phase 4: User Features (2-3 days)
+- [ ] Settings screen (theme, language, notifications)
+- [ ] User profile screen
+- [ ] Quiz statistics/progress
+- [ ] Books/collection screen
+
+Phase 5: Polish (1-2 days)
+- [ ] Dark theme switching
+- [ ] Localization (en/ar)
+- [ ] Error handling and user feedback
+- [ ] Loading states and animations
+
+Total Estimated Time: 10-15 days for complete frontend implementation
+
+================================================================================
+IMPORTANT NOTES
+================================================================================
+
+1. ENERGY IS CONSUMED PER QUESTION, not just on wrong answers
+2. Energy refill is calculated ON-DEMAND (no scheduled functions)
+3. Profile completion is REQUIRED after registration (2-step process)
+4. Quiz questions must be marked VERIFIED to appear
+5. Privacy settings affect returned data in getUserProfile()
+6. Multiple auth providers can be LINKED to same account
+7. Daily bonus given ONCE PER DAY (tracked by date)
+8. Ad cooldown is 5 MINUTES between rewards
+9. Subscription plans AUTO-RENEW except LIFETIME
+10. All user data initialized by onUserCreated() automatically
+
+================================================================================
+FIREBASE PROJECT INFO
+================================================================================
+
+Project ID: path-of-light-9226e
+Platforms: Android, iOS, Web, Windows, macOS, Linux
+Database: Firestore
+Authentication: Firebase Auth
+
+Deployment:
+- Backend: Deploy functions with: npm run deploy (in functions/)
+- Frontend: flutter build web/apk/ipa as needed
+
+================================================================================
+FILE LOCATIONS QUICK REFERENCE
+================================================================================
+
+Backend (TypeScript):
+- /home/user/Path_0f_Light/functions/src/userManagement.ts (1085 lines)
+- /home/user/Path_0f_Light/functions/src/energySystem.ts (705 lines)
+- /home/user/Path_0f_Light/functions/src/quizManagement.ts (637 lines)
+- /home/user/Path_0f_Light/functions/src/contentManagement.ts
+- /home/user/Path_0f_Light/functions/src/types.ts (305 lines)
+- /home/user/Path_0f_Light/functions/src/index.ts (58 lines)
+
+Frontend (Flutter/Dart):
+- /home/user/Path_0f_Light/lib/main.dart (needs implementation)
+- /home/user/Path_0f_Light/lib/screens/ (empty, ready for screens)
+- /home/user/Path_0f_Light/pubspec.yaml (needs dependency updates)
+
+Documentation:
+- /home/user/Path_0f_Light/CODEBASE_ANALYSIS.md
+- /home/user/Path_0f_Light/QUICK_REFERENCE.md
+- /home/user/Path_0f_Light/FUNCTION_SIGNATURES.md
+- /home/user/Path_0f_Light/functions/AUTHENTICATION_GUIDE.md
+- /home/user/Path_0f_Light/functions/INTEGRATION_GUIDE.md
+
+================================================================================
