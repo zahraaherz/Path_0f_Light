@@ -1,6 +1,21 @@
 # Questions Seed Data
 
+⚠️ **IMPORTANT**: Read `IMPORTANT_SOURCE_VERIFICATION.md` for critical information about question authenticity and source verification.
+
 This directory contains seed data for the quiz questions system in the Path of Light app.
+
+## 🔴 Source Verification Requirement
+
+**All questions MUST come from actual book content stored in Firestore.**
+
+Before adding questions:
+1. Export book data: `ts-node exportBooksData.ts`
+2. Generate templates: `ts-node generateQuestionsFromBooks.ts`
+3. Create questions from real paragraph content
+4. Get scholarly verification
+5. Upload: `ts-node uploadQuestions.ts`
+
+See the [Workflow for Creating Authentic Questions](#workflow-for-creating-authentic-questions) section below.
 
 ## Overview
 
@@ -163,6 +178,121 @@ All questions, options, and explanations are provided in both Arabic and English
 - Options: Each option has `text_ar` and `text_en`
 - Explanations: `explanation_ar` and `explanation_en`
 - Sources: Currently Arabic quotes (`exact_quote_ar`)
+
+## Workflow for Creating Authentic Questions
+
+### Step 1: Ensure Books are Processed
+
+Make sure the PDF books in `PathOfLightBooks/` directory have been:
+1. Uploaded to Firebase Storage under `islamic_books/`
+2. Automatically processed by the `processUploadedBook` Cloud Function
+3. Extracted into paragraphs in Firestore
+
+Check Firestore collections:
+- `books` - Should contain book metadata
+- `sections` - Should contain book sections
+- `paragraphs` - Should contain extracted paragraphs
+
+### Step 2: Export Book Data
+
+Export the processed book data from Firestore to JSON files:
+
+```bash
+cd functions/seedData
+ts-node exportBooksData.ts
+```
+
+This creates:
+- `exported_books.json` - All books with metadata
+- `exported_paragraphs.json` - Sample paragraphs (max 200)
+
+### Step 3: Generate Question Templates
+
+Generate templates from actual paragraph content:
+
+```bash
+ts-node generateQuestionsFromBooks.ts
+```
+
+This analyzes paragraphs and creates:
+- `question_templates.json` - Templates with detected facts and suggestions
+
+### Step 4: Create Questions Manually
+
+Open `question_templates.json` and for each template:
+
+1. Read the actual paragraph content
+2. Identify a clear fact or concept
+3. Create a question testing that knowledge
+4. Generate 4 options (1 correct, 3 plausible incorrect)
+5. Write explanations in Arabic and English
+6. Extract the exact quote supporting the answer
+
+Example workflow:
+```typescript
+// Template shows:
+{
+  "paragraph": {
+    "id": "alsera_001_para_0015",
+    "book_id": "alsera_alnabaweya",
+    "page_number": 15,
+    "content": {
+      "text_ar": "وُلد محمد بن عبد الله في مكة المكرمة في عام الفيل..."
+    }
+  },
+  "detectedFacts": ["People: محمد، عبد الله", "Places: مكة", "Events: عام الفيل"]
+}
+
+// You create:
+{
+  "id": "q_021",
+  "category": "prophet_muhammad",
+  "difficulty": "basic",
+  "level_evaluation": "easy",
+  "question_ar": "في أي عام وُلد النبي محمد (ص)؟",
+  "question_en": "In which year was Prophet Muhammad (pbuh) born?",
+  "options": {...},
+  "correct_answer": "A",
+  "source": {
+    "paragraph_id": "alsera_001_para_0015",
+    "book_id": "alsera_alnabaweya",
+    "exact_quote_ar": "وُلد محمد بن عبد الله في مكة المكرمة في عام الفيل",
+    "page_number": 15
+  },
+  ...
+}
+```
+
+### Step 5: Validate Questions
+
+Before uploading, validate each question:
+
+1. ✅ Paragraph ID exists in Firestore
+2. ✅ Exact quote matches paragraph content
+3. ✅ Page number is correct
+4. ✅ Arabic and English translations are accurate
+5. ✅ Correct answer is actually correct
+6. ✅ Wrong options are plausible but incorrect
+7. ✅ Difficulty level is appropriate
+
+### Step 6: Scholarly Review
+
+**CRITICAL**: Have questions reviewed by someone knowledgeable in:
+- Islamic history and theology
+- Arabic language
+- The specific subject matter
+
+Only set `verified: true` after review.
+
+### Step 7: Add to questions.json
+
+Add your new questions to `questions.json`, following the existing format.
+
+### Step 8: Upload to Firestore
+
+```bash
+ts-node uploadQuestions.ts
+```
 
 ## Uploading Questions to Firestore
 
