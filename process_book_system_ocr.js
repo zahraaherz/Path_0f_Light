@@ -1,19 +1,18 @@
 /**
- * Process a single book with OCR (Linux compatible)
- * Usage: node process_single_book_ocr_v2.js <book_id>
- * Example: node process_single_book_ocr_v2.js prophet_muhammad_vol1_002
+ * Process a single book with system Tesseract OCR
+ * Usage: node process_book_system_ocr.js <book_id>
+ * Example: node process_book_system_ocr.js sira_nabawiya_damoush_vol2_003
  */
 
 const fs = require('fs');
 const path = require('path');
-const { createWorker } = require('tesseract.js');
 const { execSync } = require('child_process');
 
 // Import book metadata
 const booksData = require('./firebase_books_import.json');
 
 // Get book ID from command line argument
-const bookId = process.argv[2] || 'prophet_muhammad_vol1_002';
+const bookId = process.argv[2] || 'sira_nabawiya_damoush_vol2_003';
 
 /**
  * Clean and normalize Arabic text
@@ -181,23 +180,28 @@ function createParagraphsFromText(text, sections, bookId) {
  */
 function pdfToImages(pdfPath, outputDir) {
   const prefix = path.join(outputDir, 'page');
-
-  // Use pdftoppm to convert PDF to PNG images
-  // -png: output format
-  // -r 300: resolution (DPI)
-  execSync(`pdftoppm -png -r 300 "${pdfPath}" "${prefix}"`, { stdio: 'inherit' });
-
-  // Get list of generated images
+  execSync(`pdftoppm -png -r 300 "${pdfPath}" "${prefix}"`);
   const files = fs.readdirSync(outputDir).filter(f => f.endsWith('.png'));
   return files.map(f => path.join(outputDir, f)).sort();
 }
 
 /**
- * Perform OCR on an image
+ * Perform OCR on an image using system tesseract
  */
-async function performOCR(imagePath, worker) {
-  const { data: { text } } = await worker.recognize(imagePath);
-  return text;
+function performOCR(imagePath) {
+  const outputBase = imagePath.replace('.png', '');
+  try {
+    execSync(`tesseract "${imagePath}" "${outputBase}" -l ara --psm 6 2>/dev/null`);
+    const txtFile = `${outputBase}.txt`;
+    if (fs.existsSync(txtFile)) {
+      const text = fs.readFileSync(txtFile, 'utf8');
+      fs.unlinkSync(txtFile); // Clean up txt file
+      return text;
+    }
+  } catch (error) {
+    console.error(`      Error on ${path.basename(imagePath)}: ${error.message}`);
+  }
+  return '';
 }
 
 /**
@@ -205,7 +209,7 @@ async function performOCR(imagePath, worker) {
  */
 async function processBookWithOCR() {
   console.log('\n' + '='.repeat(70));
-  console.log('  Single Book OCR Processing');
+  console.log('  Single Book OCR Processing (System Tesseract)');
   console.log('='.repeat(70));
 
   // Find the book
@@ -239,24 +243,12 @@ async function processBookWithOCR() {
     }
     fs.mkdirSync(tempDir, { recursive: true });
 
-    console.log('\n   📄 Converting PDF to images (this may take a few minutes)...');
+    console.log('\n   📄 Converting PDF to images...');
     const imageFiles = pdfToImages(pdfPath, tempDir);
     console.log(`   ✓ Generated ${imageFiles.length} images\n`);
 
-    // Initialize Tesseract worker for Arabic
-    console.log('   🔧 Initializing OCR engine (Arabic)...');
-    const worker = await createWorker('ara', 1, {
-      langPath: 'https://tessdata.projectnaptha.com/4.0.0',
-      logger: m => {
-        if (m.status === 'recognizing text') {
-          // Suppress per-page logging
-        }
-      }
-    });
-    console.log('   ✓ OCR engine ready\n');
-
     console.log('   🔍 Performing OCR on pages...');
-    console.log(`   Estimated time: ${Math.ceil(imageFiles.length / 2)} - ${Math.ceil(imageFiles.length)} minutes\n`);
+    console.log(`   Estimated time: ${Math.ceil(imageFiles.length * 0.3)} - ${Math.ceil(imageFiles.length * 0.6)} minutes\n`);
 
     let fullText = '';
     let processedPages = 0;
@@ -266,7 +258,7 @@ async function processBookWithOCR() {
       const pageNumber = processedPages + 1;
       process.stdout.write(`\r      Page ${pageNumber}/${imageFiles.length} (${((pageNumber/imageFiles.length)*100).toFixed(1)}%)`);
 
-      const pageText = await performOCR(imagePath, worker);
+      const pageText = performOCR(imagePath);
       fullText += pageText + '\n\n';
       processedPages++;
 
@@ -279,8 +271,6 @@ async function processBookWithOCR() {
     }
 
     console.log('\n');
-
-    await worker.terminate();
 
     // Clean up temp directory
     console.log('   🧹 Cleaning up temporary files...');
@@ -312,7 +302,7 @@ async function processBookWithOCR() {
       total_characters: fullText.length,
       total_words: fullText.split(/\s+/).length,
       processing_status: 'completed',
-      extraction_method: 'ocr',
+      extraction_method: 'ocr_system_tesseract',
       ocr_processing_time_minutes: parseFloat(totalTime),
     };
 
