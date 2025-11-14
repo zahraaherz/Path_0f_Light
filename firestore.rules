@@ -3,6 +3,8 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     // Helper functions
+    // Note: isAuthenticated() returns true for BOTH anonymous and regular users
+    // Anonymous users have a real UID and can use all features
     function isAuthenticated() {
       return request.auth != null;
     }

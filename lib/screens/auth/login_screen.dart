@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
+import '../../providers/guest_access_providers.dart';
 import 'register_screen.dart';
 import '../home/home_screen.dart';
 
@@ -67,6 +68,28 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
       );
+    }
+  }
+
+  Future<void> _handleGuestSignIn() async {
+    try {
+      final guestService = ref.read(guestAccessServiceProvider);
+      await guestService.signInAsGuest();
+
+      if (mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const HomeScreen()),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Failed to continue as guest: $e'),
+            backgroundColor: AppTheme.error,
+          ),
+        );
+      }
     }
   }
 
@@ -345,7 +368,32 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 32),
+                  const SizedBox(height: 24),
+
+                  // Guest Access Button
+                  OutlinedButton.icon(
+                    onPressed: authState.isLoading ? null : _handleGuestSignIn,
+                    icon: const Icon(Icons.person_outline),
+                    label: const Text('Continue as Guest'),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      side: BorderSide(
+                        color: AppTheme.primaryTeal.withOpacity(0.5),
+                        width: 1.5,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+
+                  // Guest Info Text
+                  Text(
+                    'Try the app without an account. Create one anytime to save your data permanently.',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 24),
 
                   // Sign Up Link
                   Row(
