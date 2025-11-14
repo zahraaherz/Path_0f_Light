@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'config/theme/app_theme.dart';
 import 'providers/auth_providers.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/home/home_screen.dart';
+import 'services/notification_service.dart';
 
 // Import firebase_options if it exists
 // Note: Run 'flutterfire configure' to generate this file
 // or copy from firebase_options.dart.example
 import 'firebase_options.dart' show DefaultFirebaseOptions;
+
+// Background message handler (must be top-level function)
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  debugPrint('Background message received: ${message.messageId}');
+  // Handle background message here if needed
+}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,6 +29,19 @@ void main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+
+    // Set up background message handler
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+    // Initialize notification service
+    // Note: This will request permissions and register FCM token
+    try {
+      final notificationService = NotificationService();
+      await notificationService.initialize();
+    } catch (e) {
+      debugPrint('Notification service initialization error: $e');
+      // Non-critical, app can continue without notifications
+    }
   } catch (e) {
     debugPrint('Firebase initialization error: $e');
     debugPrint('Please run "flutterfire configure" to set up Firebase');

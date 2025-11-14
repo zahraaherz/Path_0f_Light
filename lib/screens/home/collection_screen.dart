@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/collection/collection_item.dart';
 import '../../providers/collection_providers.dart';
+import '../../providers/guest_access_providers.dart';
 import '../../widgets/collection/collection_item_card.dart';
 import '../../widgets/collection/checklist_view_widget.dart';
 import '../../widgets/collection/add_to_collection_dialog.dart';
+import '../auth/register_screen.dart';
 
 /// My Collection Screen - User's Personal Library
 class CollectionScreen extends ConsumerStatefulWidget {
@@ -36,12 +38,20 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   Widget build(BuildContext context) {
     final viewMode = ref.watch(collectionViewModeProvider);
     final searchQuery = ref.watch(collectionSearchQueryProvider);
+    final isGuest = ref.watch(isGuestUserProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Collection'),
         elevation: 0,
         actions: [
+          // Show "Sign Up" button for guest users
+          if (isGuest)
+            TextButton.icon(
+              onPressed: () => _showUpgradeDialog(context),
+              icon: const Icon(Icons.person_add, color: Colors.white),
+              label: const Text('Sign Up', style: TextStyle(color: Colors.white)),
+            ),
           // View mode toggle
           IconButton(
             icon: Icon(
@@ -394,6 +404,116 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
             ),
             child: const Text('Delete'),
           ),
+        ],
+      ),
+    );
+  }
+
+  /// Show upgrade dialog for guest users
+  void _showUpgradeDialog(BuildContext context) async {
+    final guestService = ref.read(guestAccessServiceProvider);
+    final upgradeMessage = await guestService.getUpgradeMessage();
+    final stats = await guestService.getGuestStats();
+
+    if (!mounted) return;
+
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Row(
+          children: [
+            Icon(
+              Icons.upgrade,
+              color: Theme.of(context).colorScheme.primary,
+              size: 32,
+            ),
+            const SizedBox(width: 12),
+            const Text('Create Account'),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              upgradeMessage,
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+            ),
+            const SizedBox(height: 16),
+            if (stats.itemsCreated > 0) ...[
+              _buildStatRow(
+                context,
+                Icons.collections_bookmark,
+                '${stats.itemsCreated} items saved',
+              ),
+              const SizedBox(height: 8),
+            ],
+            if (stats.daysSinceCreation > 0) ...[
+              _buildStatRow(
+                context,
+                Icons.calendar_today,
+                '${stats.daysSinceCreation} days as guest',
+              ),
+              const SizedBox(height: 16),
+            ],
+            const Divider(),
+            const SizedBox(height: 16),
+            Text(
+              'Benefits of creating an account:',
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+            const SizedBox(height: 8),
+            _buildBenefitRow(context, 'Sync across all devices'),
+            _buildBenefitRow(context, 'Never lose your data'),
+            _buildBenefitRow(context, 'Access from web, phone, and tablet'),
+            _buildBenefitRow(context, 'Backup and restore'),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('Maybe Later'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const RegisterScreen(),
+                ),
+              );
+            },
+            child: const Text('Create Account'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStatRow(BuildContext context, IconData icon, String text) {
+    return Row(
+      children: [
+        Icon(icon, size: 20, color: Theme.of(context).colorScheme.secondary),
+        const SizedBox(width: 8),
+        Text(text, style: Theme.of(context).textTheme.bodyMedium),
+      ],
+    );
+  }
+
+  Widget _buildBenefitRow(BuildContext context, String text) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Row(
+        children: [
+          Icon(
+            Icons.check_circle,
+            size: 16,
+            color: Theme.of(context).colorScheme.primary,
+          ),
+          const SizedBox(width: 8),
+          Text(text, style: Theme.of(context).textTheme.bodySmall),
         ],
       ),
     );
