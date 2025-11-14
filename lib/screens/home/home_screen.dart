@@ -8,6 +8,12 @@ import '../../widgets/energy_display.dart';
 import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
 import '../../widgets/islamic_pattern_background.dart';
+import '../../widgets/home/islamic_date_widget.dart';
+import '../../widgets/home/prayer_times_widget.dart';
+import '../../widgets/home/islamic_events_widget.dart';
+import '../../widgets/home/dua_slider_widget.dart';
+import '../../widgets/home/spiritual_checklist_widget.dart';
+import '../../widgets/home/audio_library_widget.dart';
 import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
@@ -251,6 +257,18 @@ class HomePage extends ConsumerWidget {
               ),
             ),
 
+            const SliverToBoxAdapter(child: SizedBox(height: 8)),
+
+            // Islamic Date Display
+            const SliverToBoxAdapter(child: IslamicDateWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+            // Prayer Times
+            const SliverToBoxAdapter(child: PrayerTimesWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+
             // Dashboard Stats
             SliverToBoxAdapter(
               child: userProfileAsync.when(
@@ -306,6 +324,21 @@ class HomePage extends ConsumerWidget {
                 error: (_, __) => const SizedBox.shrink(),
               ),
             ),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Islamic Events
+            const SliverToBoxAdapter(child: IslamicEventsWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Daily Du'as Slider
+            const SliverToBoxAdapter(child: DuaSliderWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Spiritual Checklist
+            const SliverToBoxAdapter(child: SpiritualChecklistWidget()),
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
 
@@ -502,6 +535,11 @@ class HomePage extends ConsumerWidget {
                 ),
               ),
             ),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Audio Library
+            const SliverToBoxAdapter(child: AudioLibraryWidget()),
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
