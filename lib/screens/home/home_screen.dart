@@ -8,6 +8,13 @@ import '../../widgets/energy_display.dart';
 import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
 import '../../widgets/islamic_pattern_background.dart';
+import '../../widgets/home/islamic_date_widget.dart';
+import '../../widgets/home/prayer_times_widget.dart';
+import '../../widgets/home/islamic_events_widget.dart';
+import '../../widgets/home/dua_slider_widget.dart';
+import '../../widgets/home/spiritual_checklist_widget.dart';
+import '../../widgets/home/audio_library_widget.dart';
+import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
@@ -250,6 +257,18 @@ class HomePage extends ConsumerWidget {
               ),
             ),
 
+            const SliverToBoxAdapter(child: SizedBox(height: 8)),
+
+            // Islamic Date Display
+            const SliverToBoxAdapter(child: IslamicDateWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+            // Prayer Times
+            const SliverToBoxAdapter(child: PrayerTimesWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+
             // Dashboard Stats
             SliverToBoxAdapter(
               child: userProfileAsync.when(
@@ -305,6 +324,21 @@ class HomePage extends ConsumerWidget {
                 error: (_, __) => const SizedBox.shrink(),
               ),
             ),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Islamic Events
+            const SliverToBoxAdapter(child: IslamicEventsWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Daily Du'as Slider
+            const SliverToBoxAdapter(child: DuaSliderWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Spiritual Checklist
+            const SliverToBoxAdapter(child: SpiritualChecklistWidget()),
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
 
@@ -440,62 +474,72 @@ class HomePage extends ConsumerWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: AppTheme.goldAccent.withOpacity(0.3),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+                child: Builder(
+                  builder: (context) {
+                    final quote = MockData.getRandomQuote();
+                    return Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: AppTheme.goldAccent.withOpacity(0.3),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: AppTheme.goldAccent.withOpacity(0.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.auto_awesome,
-                              color: AppTheme.goldAccent,
-                              size: 20,
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: AppTheme.goldAccent.withOpacity(0.1),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.auto_awesome,
+                                  color: AppTheme.goldAccent,
+                                  size: 20,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Text(
+                                'Quote of the Day',
+                                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(width: 12),
+                          const SizedBox(height: 16),
                           Text(
-                            'Quote of the Day',
-                            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
+                            quote['quote']!,
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  fontStyle: FontStyle.italic,
+                                  height: 1.6,
+                                ),
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            '— ${quote['author']!}',
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  color: AppTheme.islamicGreen,
+                                  fontWeight: FontWeight.w600,
                                 ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
-                      Text(
-                        '"The seeking of knowledge is obligatory for every Muslim."',
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              fontStyle: FontStyle.italic,
-                              height: 1.6,
-                            ),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        '— Prophet Muhammad ﷺ',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: AppTheme.islamicGreen,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
-                  ),
+                    );
+                  },
                 ),
               ),
             ),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Audio Library
+            const SliverToBoxAdapter(child: AudioLibraryWidget()),
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
