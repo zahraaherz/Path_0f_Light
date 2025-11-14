@@ -1,0 +1,300 @@
+{
+  "questions": {
+    "q_001": {
+      "id": "q_001",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "question_type": "multiple_choice",
+      "question_ar": "في أي عام وُلد النبي محمد؟",
+      "question_en": "In which year was Prophet Muhammad born?",
+      "options": {
+        "A": {
+          "text_ar": "عام الفيل",
+          "text_en": "Year of the Elephant"
+        },
+        "B": {
+          "text_ar": "عام الحزن",
+          "text_en": "Year of Sorrow"
+        },
+        "C": {
+          "text_ar": "عام الفتح",
+          "text_en": "Year of Conquest"
+        },
+        "D": {
+          "text_ar": "عام الهجرة",
+          "text_en": "Year of Hijra"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_001",
+        "book_id": "book_001",
+        "book_title_ar": "السيرة النبوية",
+        "book_title_en": "The Life of Prophet Muhammad",
+        "exact_quote_ar": "وُلد محمد بن عبد الله بن عبد المطلب في مكة المكرمة في عام الفيل",
+        "page_number": 15
+      },
+      "explanation_ar": "وُلد النبي محمد صلى الله عليه وآله وسلم في عام الفيل، وهو العام الذي حاول فيه أبرهة الحبشي هدم الكعبة بالفيلة كما ذكر في القرآن الكريم",
+      "explanation_en": "Prophet Muhammad (peace be upon him and his family) was born in the Year of the Elephant, which was the year when Abraha al-Habashi attempted to destroy the Kaaba with elephants, as mentioned in the Holy Quran",
+      "points": 10,
+      "verified": true
+    },
+    "q_002": {
+      "id": "q_002",
+      "category": "imam_ali",
+      "difficulty": "intermediate",
+      "question_type": "multiple_choice",
+      "question_ar": "من هو أول من أسلم من الصبيان؟",
+      "question_en": "Who was the first child to embrace Islam?",
+      "options": {
+        "A": {
+          "text_ar": "الإمام الحسن",
+          "text_en": "Imam Hassan"
+        },
+        "B": {
+          "text_ar": "الإمام علي",
+          "text_en": "Imam Ali"
+        },
+        "C": {
+          "text_ar": "أسامة بن زيد",
+          "text_en": "Usama bin Zaid"
+        },
+        "D": {
+          "text_ar": "زيد بن حارثة",
+          "text_en": "Zaid bin Haritha"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_045",
+        "book_id": "book_002",
+        "book_title_ar": "فضائل الإمام علي",
+        "book_title_en": "The Virtues of Imam Ali",
+        "exact_quote_ar": "كان علي بن أبي طالب أول من أسلم من الصبيان وكان عمره عشر سنين",
+        "page_number": 23
+      },
+      "explanation_ar": "الإمام علي عليه السلام كان أول من أسلم من الصبيان، حيث كان عمره عشر سنوات عندما نزل الوحي على النبي محمد صلى الله عليه وآله",
+      "explanation_en": "Imam Ali (peace be upon him) was the first child to accept Islam. He was ten years old when the revelation came to Prophet Muhammad (peace be upon him and his family)",
+      "points": 15,
+      "verified": true
+    },
+    "q_003": {
+      "id": "q_003",
+      "category": "quran",
+      "difficulty": "basic",
+      "question_type": "true_false",
+      "question_ar": "القرآن الكريم نزل في ليلة القدر",
+      "question_en": "The Holy Quran was revealed on Laylat al-Qadr (Night of Power)",
+      "options": {
+        "A": {
+          "text_ar": "صح",
+          "text_en": "True"
+        },
+        "B": {
+          "text_ar": "خطأ",
+          "text_en": "False"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_078",
+        "book_id": "book_003",
+        "book_title_ar": "علوم القرآن",
+        "book_title_en": "Sciences of the Quran",
+        "exact_quote_ar": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ",
+        "page_number": 102
+      },
+      "explanation_ar": "نعم، القرآن الكريم نزل في ليلة القدر كما ذكر الله تعالى في سورة القدر: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ'",
+      "explanation_en": "Yes, the Holy Quran was revealed on Laylat al-Qadr as Allah states in Surah Al-Qadr: 'Indeed, We sent it down during the Night of Decree'",
+      "points": 10,
+      "verified": true
+    },
+    "q_004": {
+      "id": "q_004",
+      "category": "imam_hussain",
+      "difficulty": "advanced",
+      "question_type": "multiple_choice",
+      "question_ar": "في أي سنة هجرية وقعت واقعة كربلاء؟",
+      "question_en": "In which Hijri year did the Battle of Karbala occur?",
+      "options": {
+        "A": {
+          "text_ar": "٦٠ هـ",
+          "text_en": "60 AH"
+        },
+        "B": {
+          "text_ar": "٦١ هـ",
+          "text_en": "61 AH"
+        },
+        "C": {
+          "text_ar": "٦٢ هـ",
+          "text_en": "62 AH"
+        },
+        "D": {
+          "text_ar": "٦٣ هـ",
+          "text_en": "63 AH"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_156",
+        "book_id": "book_004",
+        "book_title_ar": "تاريخ كربلاء",
+        "book_title_en": "History of Karbala",
+        "exact_quote_ar": "وقعت واقعة كربلاء في يوم عاشوراء العاشر من محرم سنة واحد وستين للهجرة",
+        "page_number": 89
+      },
+      "explanation_ar": "وقعت معركة كربلاء في يوم عاشوراء، العاشر من محرم سنة ٦١ هجرية، حيث استشهد الإمام الحسين عليه السلام وأهل بيته وأصحابه",
+      "explanation_en": "The Battle of Karbala occurred on the day of Ashura, the 10th of Muharram in the year 61 AH, when Imam Hussain (peace be upon him), his family, and companions were martyred",
+      "points": 20,
+      "verified": true
+    },
+    "q_005": {
+      "id": "q_005",
+      "category": "fiqh",
+      "difficulty": "intermediate",
+      "question_type": "multiple_choice",
+      "question_ar": "كم عدد الصلوات الواجبة في اليوم والليلة؟",
+      "question_en": "How many obligatory prayers are there in a day and night?",
+      "options": {
+        "A": {
+          "text_ar": "ثلاث صلوات",
+          "text_en": "Three prayers"
+        },
+        "B": {
+          "text_ar": "أربع صلوات",
+          "text_en": "Four prayers"
+        },
+        "C": {
+          "text_ar": "خمس صلوات",
+          "text_en": "Five prayers"
+        },
+        "D": {
+          "text_ar": "ست صلوات",
+          "text_en": "Six prayers"
+        }
+      },
+      "correct_answer": "C",
+      "source": {
+        "paragraph_id": "para_203",
+        "book_id": "book_005",
+        "book_title_ar": "الفقه الميسر",
+        "book_title_en": "Easy Jurisprudence",
+        "exact_quote_ar": "الصلوات الواجبة خمس: الفجر والظهر والعصر والمغرب والعشاء",
+        "page_number": 45
+      },
+      "explanation_ar": "الصلوات الواجبة في اليوم والليلة خمس صلوات: الفجر (ركعتان)، الظهر (أربع ركعات)، العصر (أربع ركعات)، المغرب (ثلاث ركعات)، والعشاء (أربع ركعات)",
+      "explanation_en": "The obligatory prayers in a day and night are five: Fajr (2 units), Dhuhr (4 units), Asr (4 units), Maghrib (3 units), and Isha (4 units)",
+      "points": 15,
+      "verified": true
+    },
+    "q_006": {
+      "id": "q_006",
+      "category": "imam_mahdi",
+      "difficulty": "basic",
+      "question_type": "true_false",
+      "question_ar": "الإمام المهدي هو الإمام الثاني عشر من أئمة أهل البيت",
+      "question_en": "Imam Mahdi is the twelfth Imam of Ahlul Bayt",
+      "options": {
+        "A": {
+          "text_ar": "صح",
+          "text_en": "True"
+        },
+        "B": {
+          "text_ar": "خطأ",
+          "text_en": "False"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_299",
+        "book_id": "book_006",
+        "book_title_ar": "المعصومون الأربعة عشر",
+        "book_title_en": "The Fourteen Infallibles",
+        "exact_quote_ar": "الإمام المهدي المنتظر عجل الله تعالى فرجه الشريف هو الإمام الثاني عشر من أئمة أهل البيت عليهم السلام",
+        "page_number": 187
+      },
+      "explanation_ar": "نعم، الإمام محمد بن الحسن المهدي المنتظر عجل الله تعالى فرجه الشريف هو الإمام الثاني عشر والأخير من أئمة أهل البيت عليهم السلام",
+      "explanation_en": "Yes, Imam Muhammad ibn al-Hassan al-Mahdi (may Allah hasten his reappearance) is the twelfth and final Imam of Ahlul Bayt (peace be upon them)",
+      "points": 10,
+      "verified": true
+    },
+    "q_007": {
+      "id": "q_007",
+      "category": "history",
+      "difficulty": "expert",
+      "question_type": "multiple_choice",
+      "question_ar": "من هو الخليفة الذي أمر بجمع القرآن الكريم في مصحف واحد؟",
+      "question_en": "Which Caliph ordered the compilation of the Quran into one book?",
+      "options": {
+        "A": {
+          "text_ar": "أبو بكر",
+          "text_en": "Abu Bakr"
+        },
+        "B": {
+          "text_ar": "عمر بن الخطاب",
+          "text_en": "Umar ibn al-Khattab"
+        },
+        "C": {
+          "text_ar": "عثمان بن عفان",
+          "text_en": "Uthman ibn Affan"
+        },
+        "D": {
+          "text_ar": "علي بن أبي طالب",
+          "text_en": "Ali ibn Abi Talib"
+        }
+      },
+      "correct_answer": "C",
+      "source": {
+        "paragraph_id": "para_412",
+        "book_id": "book_007",
+        "book_title_ar": "تاريخ القرآن",
+        "book_title_en": "History of the Quran",
+        "exact_quote_ar": "أمر الخليفة عثمان بن عفان بجمع القرآن في مصحف واحد ونسخه وإرساله إلى الأمصار",
+        "page_number": 234
+      },
+      "explanation_ar": "الخليفة عثمان بن عفان هو من أمر بجمع القرآن في مصحف واحد ونسخه وتوزيعه على الأمصار الإسلامية، وذلك لتوحيد قراءة القرآن ومنع الاختلاف",
+      "explanation_en": "Caliph Uthman ibn Affan ordered the compilation of the Quran into one standardized book and distributed copies to Islamic cities to unify the recitation of the Quran and prevent differences",
+      "points": 25,
+      "verified": true
+    },
+    "q_008": {
+      "id": "q_008",
+      "category": "hadith",
+      "difficulty": "intermediate",
+      "question_type": "multiple_choice",
+      "question_ar": "من قال: 'إنما الأعمال بالنيات'؟",
+      "question_en": "Who said: 'Actions are judged by intentions'?",
+      "options": {
+        "A": {
+          "text_ar": "الإمام علي",
+          "text_en": "Imam Ali"
+        },
+        "B": {
+          "text_ar": "النبي محمد",
+          "text_en": "Prophet Muhammad"
+        },
+        "C": {
+          "text_ar": "الإمام جعفر الصادق",
+          "text_en": "Imam Jafar al-Sadiq"
+        },
+        "D": {
+          "text_ar": "الإمام الباقر",
+          "text_en": "Imam al-Baqir"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_567",
+        "book_id": "book_008",
+        "book_title_ar": "الأربعون حديثاً",
+        "book_title_en": "Forty Hadiths",
+        "exact_quote_ar": "قال رسول الله صلى الله عليه وآله: إنما الأعمال بالنيات وإنما لكل امرئ ما نوى",
+        "page_number": 12
+      },
+      "explanation_ar": "هذا الحديث الشريف قاله النبي محمد صلى الله عليه وآله وسلم، وهو من أهم الأحاديث في الإسلام ويبين أهمية النية في قبول الأعمال",
+      "explanation_en": "This noble hadith was said by Prophet Muhammad (peace be upon him and his family). It is one of the most important hadiths in Islam and shows the importance of intention in accepting deeds",
+      "points": 15,
+      "verified": true
+    }
+  }
+}
