@@ -67,9 +67,30 @@ dependencies:
 
   # Prayer Times & Islamic Calendar
   adhan: ^2.0.0
-  hijri: ^3.0.0
   geolocator: ^11.0.0
   permission_handler: ^11.2.0
+
+  # Text-to-Speech for book reading
+  flutter_tts: ^4.0.2
+
+  # Better text rendering
+  flutter_markdown: ^0.7.3
+
+  # File operations & download
+  path_provider: ^2.1.4
+  dio: ^5.7.0
+
+  # Sharing functionality
+  share_plus: ^10.0.2
+
+  # Pull to refresh
+  pull_to_refresh: ^2.0.0
+
+  # Better list performance
+  flutter_sticky_header: ^0.6.5
+
+  # Scroll to index for book navigation
+  scrollable_positioned_list: ^0.3.8
 
 dev_dependencies:
   flutter_test:
