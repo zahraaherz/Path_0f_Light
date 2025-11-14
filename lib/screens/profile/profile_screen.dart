@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/auth_controller.dart';
+import '../../data/mock_data.dart';
 import '../auth/login_screen.dart';
 
 class ProfileScreen extends ConsumerWidget {
@@ -25,11 +26,8 @@ class ProfileScreen extends ConsumerWidget {
       ),
       body: userProfileAsync.when(
         data: (profile) {
-          if (profile == null) {
-            return const Center(
-              child: Text('No profile data available'),
-            );
-          }
+          // Use mock profile if no real data is available
+          final displayProfile = profile ?? MockData.mockUserProfile;
 
           return SingleChildScrollView(
             child: Column(
@@ -56,9 +54,9 @@ class ProfileScreen extends ConsumerWidget {
                           border: Border.all(color: Colors.white, width: 3),
                         ),
                         child: ClipOval(
-                          child: profile.photoURL != null
+                          child: displayProfile.photoURL != null
                               ? CachedNetworkImage(
-                                  imageUrl: profile.photoURL!,
+                                  imageUrl: displayProfile.photoURL!,
                                   fit: BoxFit.cover,
                                   placeholder: (_, __) => const CircularProgressIndicator(),
                                   errorWidget: (_, __, ___) => const Icon(Icons.person, size: 50, color: Colors.white),
@@ -73,7 +71,7 @@ class ProfileScreen extends ConsumerWidget {
 
                       // Display Name
                       Text(
-                        profile.displayName ?? 'No Name',
+                        displayProfile.displayName ?? 'No Name',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -83,7 +81,7 @@ class ProfileScreen extends ConsumerWidget {
 
                       // Email
                       Text(
-                        profile.email ?? 'No Email',
+                        displayProfile.email ?? 'No Email',
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               color: Colors.white.withOpacity(0.9),
                             ),
@@ -98,7 +96,7 @@ class ProfileScreen extends ConsumerWidget {
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(
-                          profile.role.value.toUpperCase(),
+                          displayProfile.role.value.toUpperCase(),
                           style: Theme.of(context).textTheme.labelSmall?.copyWith(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -118,7 +116,7 @@ class ProfileScreen extends ConsumerWidget {
                         child: _StatCard(
                           icon: Icons.bolt,
                           label: 'Energy',
-                          value: '${profile.energy.currentEnergy}/${profile.energy.maxEnergy}',
+                          value: '${displayProfile.energy.currentEnergy}/${displayProfile.energy.maxEnergy}',
                           color: AppTheme.goldAccent,
                         ),
                       ),
@@ -127,7 +125,7 @@ class ProfileScreen extends ConsumerWidget {
                         child: _StatCard(
                           icon: Icons.stars,
                           label: 'Points',
-                          value: '${profile.quizProgress.totalPoints}',
+                          value: '${displayProfile.quizProgress.totalPoints}',
                           color: AppTheme.primaryTeal,
                         ),
                       ),
@@ -136,7 +134,7 @@ class ProfileScreen extends ConsumerWidget {
                         child: _StatCard(
                           icon: Icons.local_fire_department,
                           label: 'Streak',
-                          value: '${profile.dailyStats.loginStreak}',
+                          value: '${displayProfile.dailyStats.loginStreak}',
                           color: AppTheme.error,
                         ),
                       ),
@@ -149,17 +147,17 @@ class ProfileScreen extends ConsumerWidget {
                   title: 'Quiz Progress',
                   icon: Icons.quiz,
                   children: [
-                    _InfoRow('Total Questions', '${profile.quizProgress.totalQuestionsAnswered}'),
-                    _InfoRow('Correct Answers', '${profile.quizProgress.correctAnswers}'),
-                    _InfoRow('Wrong Answers', '${profile.quizProgress.wrongAnswers}'),
+                    _InfoRow('Total Questions', '${displayProfile.quizProgress.totalQuestionsAnswered}'),
+                    _InfoRow('Correct Answers', '${displayProfile.quizProgress.correctAnswers}'),
+                    _InfoRow('Wrong Answers', '${displayProfile.quizProgress.wrongAnswers}'),
                     _InfoRow(
                       'Accuracy',
-                      profile.quizProgress.totalQuestionsAnswered > 0
-                          ? '${((profile.quizProgress.correctAnswers / profile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
+                      displayProfile.quizProgress.totalQuestionsAnswered > 0
+                          ? '${((displayProfile.quizProgress.correctAnswers / displayProfile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
                           : '0%',
                     ),
-                    _InfoRow('Current Streak', '${profile.quizProgress.currentStreak}'),
-                    _InfoRow('Longest Streak', '${profile.quizProgress.longestStreak}'),
+                    _InfoRow('Current Streak', '${displayProfile.quizProgress.currentStreak}'),
+                    _InfoRow('Longest Streak', '${displayProfile.quizProgress.longestStreak}'),
                   ],
                 ),
 
@@ -168,13 +166,13 @@ class ProfileScreen extends ConsumerWidget {
                   title: 'Account Information',
                   icon: Icons.info_outline,
                   children: [
-                    _InfoRow('Language', profile.language.toUpperCase()),
-                    _InfoRow('Email Verified', profile.emailVerified ? 'Yes' : 'No'),
-                    _InfoRow('Phone Verified', profile.phoneVerified ? 'Yes' : 'No'),
-                    _InfoRow('Provider', profile.provider),
-                    _InfoRow('Account Status', profile.accountStatus.name.toUpperCase()),
-                    _InfoRow('Member Since', _formatDate(profile.createdAt)),
-                    _InfoRow('Last Active', _formatDate(profile.lastActive)),
+                    _InfoRow('Language', displayProfile.language.toUpperCase()),
+                    _InfoRow('Email Verified', displayProfile.emailVerified ? 'Yes' : 'No'),
+                    _InfoRow('Phone Verified', displayProfile.phoneVerified ? 'Yes' : 'No'),
+                    _InfoRow('Provider', displayProfile.provider),
+                    _InfoRow('Account Status', displayProfile.accountStatus.name.toUpperCase()),
+                    _InfoRow('Member Since', _formatDate(displayProfile.createdAt)),
+                    _InfoRow('Last Active', _formatDate(displayProfile.lastActive)),
                   ],
                 ),
 
@@ -183,10 +181,10 @@ class ProfileScreen extends ConsumerWidget {
                   title: 'Subscription',
                   icon: Icons.workspace_premium,
                   children: [
-                    _InfoRow('Plan', profile.subscription.plan.toUpperCase()),
-                    _InfoRow('Status', profile.subscription.active ? 'Active' : 'Inactive'),
-                    if (profile.subscription.expiryDate != null)
-                      _InfoRow('Expires', _formatDate(profile.subscription.expiryDate!)),
+                    _InfoRow('Plan', displayProfile.subscription.plan.toUpperCase()),
+                    _InfoRow('Status', displayProfile.subscription.active ? 'Active' : 'Inactive'),
+                    if (displayProfile.subscription.expiryDate != null)
+                      _InfoRow('Expires', _formatDate(displayProfile.subscription.expiryDate!)),
                   ],
                 ),
 
@@ -198,7 +196,7 @@ class ProfileScreen extends ConsumerWidget {
                     ListTile(
                       leading: const Icon(Icons.notifications, color: AppTheme.primaryTeal),
                       title: const Text('Notifications'),
-                      subtitle: Text(profile.settings.notifications.enabled ? 'Enabled' : 'Disabled'),
+                      subtitle: Text(displayProfile.settings.notifications.enabled ? 'Enabled' : 'Disabled'),
                       trailing: const Icon(Icons.chevron_right),
                       onTap: () {
                         // Navigate to notification settings
@@ -207,7 +205,7 @@ class ProfileScreen extends ConsumerWidget {
                     ListTile(
                       leading: const Icon(Icons.privacy_tip, color: AppTheme.primaryTeal),
                       title: const Text('Privacy'),
-                      subtitle: Text(profile.settings.privacy.profileVisible ? 'Public' : 'Private'),
+                      subtitle: Text(displayProfile.settings.privacy.profileVisible ? 'Public' : 'Private'),
                       trailing: const Icon(Icons.chevron_right),
                       onTap: () {
                         // Navigate to privacy settings
@@ -216,7 +214,7 @@ class ProfileScreen extends ConsumerWidget {
                     ListTile(
                       leading: const Icon(Icons.palette, color: AppTheme.primaryTeal),
                       title: const Text('Theme'),
-                      subtitle: Text(profile.settings.preferences.theme.toUpperCase()),
+                      subtitle: Text(displayProfile.settings.preferences.theme.toUpperCase()),
                       trailing: const Icon(Icons.chevron_right),
                       onTap: () {
                         // Navigate to theme settings
@@ -250,19 +248,144 @@ class ProfileScreen extends ConsumerWidget {
             ),
           );
         },
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.error_outline, size: 64, color: AppTheme.error),
-              const SizedBox(height: 16),
-              Text('Error loading profile', style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 8),
-              Text(error.toString(), style: Theme.of(context).textTheme.bodySmall),
-            ],
-          ),
-        ),
+        loading: () {
+          // Show mock profile while loading
+          final displayProfile = MockData.mockUserProfile;
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                // Profile Header
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    children: [
+                      // Profile Photo
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.white, width: 3),
+                        ),
+                        child: ClipOval(
+                          child: Container(
+                            color: Colors.white.withOpacity(0.2),
+                            child: const Icon(Icons.person, size: 50, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        displayProfile.displayName ?? 'Loading...',
+                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Center(child: Padding(
+                  padding: EdgeInsets.all(32.0),
+                  child: CircularProgressIndicator(),
+                )),
+              ],
+            ),
+          );
+        },
+        error: (error, stack) {
+          // Show mock profile on error
+          final displayProfile = MockData.mockUserProfile;
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                // Profile Header
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    children: [
+                      // Profile Photo
+                      Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.white, width: 3),
+                        ),
+                        child: ClipOval(
+                          child: Container(
+                            color: Colors.white.withOpacity(0.2),
+                            child: const Icon(Icons.person, size: 50, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        displayProfile.displayName ?? 'Preview Mode',
+                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        displayProfile.email ?? 'No Email',
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: Colors.white.withOpacity(0.9),
+                            ),
+                      ),
+                      const SizedBox(height: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: AppTheme.goldAccent,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Text(
+                          displayProfile.role.value.toUpperCase(),
+                          style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    children: [
+                      const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
+                      const SizedBox(height: 16),
+                      Text('Preview Mode - Mock Data',
+                          style: Theme.of(context).textTheme.titleMedium),
+                      const SizedBox(height: 8),
+                      Text('Sign in to view your actual profile',
+                          style: Theme.of(context).textTheme.bodySmall),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }

@@ -8,6 +8,7 @@ import '../../widgets/energy_display.dart';
 import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
 import '../../widgets/islamic_pattern_background.dart';
+import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../achievements/achievements_screen.dart';
@@ -440,59 +441,64 @@ class HomePage extends ConsumerWidget {
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: AppTheme.goldAccent.withOpacity(0.3),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+                child: Builder(
+                  builder: (context) {
+                    final quote = MockData.getRandomQuote();
+                    return Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: AppTheme.goldAccent.withOpacity(0.3),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: AppTheme.goldAccent.withOpacity(0.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.auto_awesome,
-                              color: AppTheme.goldAccent,
-                              size: 20,
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: AppTheme.goldAccent.withOpacity(0.1),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.auto_awesome,
+                                  color: AppTheme.goldAccent,
+                                  size: 20,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Text(
+                                'Quote of the Day',
+                                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(width: 12),
+                          const SizedBox(height: 16),
                           Text(
-                            'Quote of the Day',
-                            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
+                            quote['quote']!,
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  fontStyle: FontStyle.italic,
+                                  height: 1.6,
+                                ),
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            '— ${quote['author']!}',
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  color: AppTheme.islamicGreen,
+                                  fontWeight: FontWeight.w600,
                                 ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
-                      Text(
-                        '"The seeking of knowledge is obligatory for every Muslim."',
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              fontStyle: FontStyle.italic,
-                              height: 1.6,
-                            ),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        '— Prophet Muhammad ﷺ',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: AppTheme.islamicGreen,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
-                  ),
+                    );
+                  },
                 ),
               ),
             ),
