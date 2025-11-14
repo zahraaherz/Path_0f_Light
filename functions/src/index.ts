@@ -56,3 +56,19 @@ export {
   searchBooks,
   getBookDetails,
 } from "./contentManagement";
+
+// Export Reminder Management Functions
+export {
+  processReminders,
+  processPrayerReminders,
+  onReminderWrite,
+} from "./reminderManagement";
+
+// Export Notification Service Functions
+export {
+  registerFCMToken,
+  unregisterFCMToken,
+  sendTestNotification,
+  cleanupOldTokens,
+  onUserDeleted as onUserDeletedCleanupTokens,
+} from "./notificationService";

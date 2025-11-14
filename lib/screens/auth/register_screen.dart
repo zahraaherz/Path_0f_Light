@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
+import '../../providers/guest_access_providers.dart';
 import '../home/home_screen.dart';
 
 class RegisterScreen extends ConsumerStatefulWidget {
@@ -43,11 +45,39 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
       return;
     }
 
-    final success = await ref.read(authControllerProvider.notifier).registerWithEmailAndPassword(
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to email
+      try {
+        final guestService = ref.read(guestAccessServiceProvider);
+        await guestService.linkToEmailAccount(
           email: _emailController.text.trim(),
           password: _passwordController.text,
-          displayName: _nameController.text.trim(),
         );
+        success = true;
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular registration
+      success = await ref.read(authControllerProvider.notifier).registerWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text,
+        displayName: _nameController.text.trim(),
+      );
+    }
 
     if (success && mounted) {
       // Show success dialog
@@ -59,12 +89,13 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
             children: [
               Icon(Icons.check_circle, color: AppTheme.success, size: 32),
               const SizedBox(width: 12),
-              const Text('Account Created!'),
+              Text(isGuest ? 'Account Linked!' : 'Account Created!'),
             ],
           ),
-          content: const Text(
-            'Your account has been created successfully. '
-            'Please check your email to verify your account.',
+          content: Text(
+            isGuest
+              ? 'Your guest data has been linked to your new account. You can now sign in on any device!'
+              : 'Your account has been created successfully. Please check your email to verify your account.',
           ),
           actions: [
             ElevatedButton(
@@ -83,7 +114,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleGoogleSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Google
+      try {
+        final googleAuth = await ref.read(authControllerProvider.notifier).getGoogleCredential();
+        if (googleAuth != null) {
+          final guestService = ref.read(guestAccessServiceProvider);
+          await guestService.linkToGoogleAccount(googleAuth);
+          success = true;
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Google account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Google sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
@@ -92,7 +154,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleAppleSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithApple();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Apple
+      try {
+        final appleAuth = await ref.read(authControllerProvider.notifier).getAppleCredential();
+        if (appleAuth != null) {
+          final guestService = ref.read(guestAccessServiceProvider);
+          await guestService.linkToAppleAccount(appleAuth);
+          success = true;
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Apple account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Apple sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithApple();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
@@ -101,7 +194,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleFacebookSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Facebook
+      try {
+        final fbAuth = await ref.read(authControllerProvider.notifier).getFacebookCredential();
+        if (fbAuth != null) {
+          // Note: Facebook linking would need to be added to GuestAccessService
+          // For now, fall back to regular sign-in
+          success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Facebook account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Facebook sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
