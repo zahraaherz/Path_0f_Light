@@ -1,0 +1,143 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isOwnerOfResource() {
+      return isAuthenticated() && request.auth.uid == resource.data.user_id;
+    }
+
+    function isOwnerOfRequest() {
+      return isAuthenticated() && request.auth.uid == request.resource.data.user_id;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId);
+      allow update: if isOwner(userId);
+      allow delete: if isOwner(userId);
+    }
+
+    // Books collection (public read, admin write)
+    match /books/{bookId} {
+      allow read: if true;
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Sections collection (public read)
+    match /sections/{sectionId} {
+      allow read: if true;
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Paragraphs collection (public read)
+    match /paragraphs/{paragraphId} {
+      allow read: if true;
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Questions collection (public read)
+    match /questions/{questionId} {
+      allow read: if true;
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Bookmarks (user-specific)
+    match /bookmarks/{bookmarkId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Highlights (user-specific)
+    match /highlights/{highlightId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Reading progress (user-specific)
+    match /reading_progress/{progressId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // === COLLECTION FEATURE RULES ===
+
+    // Collection items (user's personal collection)
+    match /collection_items/{itemId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isAuthenticated() && isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Reminders (user-specific)
+    match /reminders/{reminderId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isAuthenticated() && isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Habit trackers (user-specific)
+    match /habit_trackers/{trackerId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isAuthenticated() && isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Checklist items (user-specific)
+    match /checklist_items/{itemId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isAuthenticated() && isOwnerOfRequest();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // FCM tokens (user-specific)
+    match /fcm_tokens/{tokenId} {
+      allow read: if isOwnerOfResource();
+      allow create: if isAuthenticated();
+      allow update: if isOwnerOfResource();
+      allow delete: if isOwnerOfResource();
+    }
+
+    // Quiz sessions (user-specific)
+    match /quiz_sessions/{sessionId} {
+      allow read: if isOwnerOfResource();
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Leaderboard (public read)
+    match /leaderboard/{entryId} {
+      allow read: if true;
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Achievements (user-specific)
+    match /achievements/{achievementId} {
+      allow read: if isOwnerOfResource();
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    // Default deny for any other collection
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
