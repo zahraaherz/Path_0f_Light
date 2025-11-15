@@ -2,13 +2,19 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:timezone/data/latest_all.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
 import 'dart:io' show Platform;
 
 /// Service to handle Firebase Cloud Messaging (Push Notifications)
+/// and Local Notifications (Scheduled Reminders)
 class NotificationService {
   final FirebaseMessaging _messaging = FirebaseMessaging.instance;
   final FirebaseFunctions _functions = FirebaseFunctions.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FlutterLocalNotificationsPlugin _localNotifications =
+      FlutterLocalNotificationsPlugin();
 
   static final NotificationService _instance = NotificationService._internal();
   factory NotificationService() => _instance;
@@ -18,6 +24,12 @@ class NotificationService {
   /// Call this in main.dart after Firebase initialization
   Future<void> initialize() async {
     try {
+      // Initialize timezone database for scheduled notifications
+      tz.initializeTimeZones();
+
+      // Initialize local notifications
+      await _initializeLocalNotifications();
+
       // Request permissions (iOS/Web)
       final settings = await _requestPermissions();
 
@@ -46,6 +58,55 @@ class NotificationService {
       }
     } catch (e) {
       print('❌ Error initializing notifications: $e');
+    }
+  }
+
+  /// Initialize local notifications plugin
+  Future<void> _initializeLocalNotifications() async {
+    const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const iosSettings = DarwinInitializationSettings(
+      requestAlertPermission: true,
+      requestBadgePermission: true,
+      requestSoundPermission: true,
+    );
+
+    const initSettings = InitializationSettings(
+      android: androidSettings,
+      iOS: iosSettings,
+    );
+
+    await _localNotifications.initialize(
+      initSettings,
+      onDidReceiveNotificationResponse: _onLocalNotificationTapped,
+    );
+
+    print('✅ Local notifications initialized');
+  }
+
+  /// Handle local notification tap
+  void _onLocalNotificationTapped(NotificationResponse response) {
+    print('👆 Local notification tapped');
+    print('Payload: ${response.payload}');
+
+    // Parse payload and navigate
+    if (response.payload != null) {
+      final parts = response.payload!.split('|');
+      if (parts.length >= 2) {
+        final type = parts[0];
+        final id = parts[1];
+
+        switch (type) {
+          case 'collection':
+            print('Navigate to collection item: $id');
+            // Navigation will be handled via a global navigator key
+            break;
+          case 'prayer':
+            print('Navigate to prayer times');
+            break;
+          default:
+            print('Unknown notification type: $type');
+        }
+      }
     }
   }
 
@@ -109,15 +170,27 @@ class NotificationService {
   }
 
   /// Handle foreground messages (when app is open)
-  void _handleForegroundMessage(RemoteMessage message) {
+  void _handleForegroundMessage(RemoteMessage message) async {
     print('📨 Foreground message received');
     print('Title: ${message.notification?.title}');
     print('Body: ${message.notification?.body}');
     print('Data: ${message.data}');
 
-    // You can show a local notification here or update UI
-    // For now, we'll just log it
-    // TODO: Show local notification using flutter_local_notifications
+    // Show local notification when app is in foreground
+    if (message.notification != null) {
+      await _showLocalNotification(
+        title: message.notification!.title ?? 'Path of Light',
+        body: message.notification!.body ?? '',
+        payload: _buildPayloadFromData(message.data),
+      );
+    }
+  }
+
+  /// Build payload string from message data
+  String _buildPayloadFromData(Map<String, dynamic> data) {
+    final type = data['type'] ?? 'general';
+    final id = data['collectionItemId'] ?? data['reminderId'] ?? '';
+    return '$type|$id';
   }
 
   /// Handle notification tap (when user taps notification)
@@ -133,7 +206,7 @@ class NotificationService {
         final reminderId = message.data['reminderId'];
         final collectionItemId = message.data['collectionItemId'];
         print('Navigate to reminder: $reminderId, item: $collectionItemId');
-        // TODO: Navigate to collection item details
+        // Navigation handled via global navigator key in main.dart
         break;
 
       case 'test':
@@ -219,7 +292,197 @@ class NotificationService {
   Future<void> openSettings() async {
     // Platform-specific code to open settings
     // This would require platform channels or a package like app_settings
-    print('TODO: Open app settings');
+    print('Opening app settings for notifications');
+  }
+
+  // ============================================================================
+  // LOCAL NOTIFICATION METHODS
+  // ============================================================================
+
+  /// Show an immediate local notification
+  Future<void> _showLocalNotification({
+    required String title,
+    required String body,
+    String? payload,
+    int id = 0,
+  }) async {
+    const androidDetails = AndroidNotificationDetails(
+      'path_of_light_general',
+      'General Notifications',
+      channelDescription: 'General notifications from Path of Light',
+      importance: Importance.high,
+      priority: Priority.high,
+      icon: '@mipmap/ic_launcher',
+    );
+
+    const iosDetails = DarwinNotificationDetails(
+      presentAlert: true,
+      presentBadge: true,
+      presentSound: true,
+    );
+
+    const details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+
+    await _localNotifications.show(
+      id,
+      title,
+      body,
+      details,
+      payload: payload,
+    );
+  }
+
+  /// Schedule a collection reminder notification
+  Future<void> scheduleCollectionReminder({
+    required String id,
+    required String title,
+    required String body,
+    required DateTime scheduledTime,
+  }) async {
+    final tzScheduledTime = tz.TZDateTime.from(scheduledTime, tz.local);
+
+    const androidDetails = AndroidNotificationDetails(
+      'path_of_light_reminders',
+      'Reminders',
+      channelDescription: 'Scheduled reminders for du\'as and collections',
+      importance: Importance.high,
+      priority: Priority.high,
+      icon: '@mipmap/ic_launcher',
+      sound: RawResourceAndroidNotificationSound('azan'),
+    );
+
+    const iosDetails = DarwinNotificationDetails(
+      presentAlert: true,
+      presentBadge: true,
+      presentSound: true,
+      sound: 'azan.mp3',
+    );
+
+    const details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+
+    await _localNotifications.zonedSchedule(
+      id.hashCode,
+      title,
+      body,
+      tzScheduledTime,
+      details,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+      payload: 'collection|$id',
+    );
+
+    print('✅ Scheduled reminder: $title at $scheduledTime');
+  }
+
+  /// Schedule a prayer time notification
+  Future<void> schedulePrayerTimeNotification({
+    required String prayerName,
+    required DateTime prayerTime,
+    int minutesBefore = 10,
+  }) async {
+    final notificationTime =
+        prayerTime.subtract(Duration(minutes: minutesBefore));
+    final tzNotificationTime = tz.TZDateTime.from(notificationTime, tz.local);
+
+    const androidDetails = AndroidNotificationDetails(
+      'path_of_light_prayer_times',
+      'Prayer Times',
+      channelDescription: 'Notifications for upcoming prayer times',
+      importance: Importance.max,
+      priority: Priority.max,
+      icon: '@mipmap/ic_launcher',
+      sound: RawResourceAndroidNotificationSound('azan'),
+    );
+
+    const iosDetails = DarwinNotificationDetails(
+      presentAlert: true,
+      presentBadge: true,
+      presentSound: true,
+      sound: 'azan.mp3',
+    );
+
+    const details = NotificationDetails(
+      android: androidDetails,
+      iOS: iosDetails,
+    );
+
+    final title = minutesBefore > 0
+        ? '$prayerName Prayer in $minutesBefore minutes'
+        : 'It\'s time for $prayerName Prayer';
+
+    await _localNotifications.zonedSchedule(
+      prayerName.hashCode,
+      title,
+      'Time to prepare for prayer',
+      tzNotificationTime,
+      details,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation:
+          UILocalNotificationDateInterpretation.absoluteTime,
+      payload: 'prayer|$prayerName',
+    );
+
+    print('✅ Scheduled prayer notification: $prayerName at $notificationTime');
+  }
+
+  /// Schedule daily prayer time notifications for all 5 prayers
+  Future<void> scheduleDailyPrayerNotifications({
+    required DateTime fajr,
+    required DateTime dhuhr,
+    required DateTime asr,
+    required DateTime maghrib,
+    required DateTime isha,
+    int minutesBefore = 10,
+  }) async {
+    await schedulePrayerTimeNotification(
+      prayerName: 'Fajr',
+      prayerTime: fajr,
+      minutesBefore: minutesBefore,
+    );
+    await schedulePrayerTimeNotification(
+      prayerName: 'Dhuhr',
+      prayerTime: dhuhr,
+      minutesBefore: minutesBefore,
+    );
+    await schedulePrayerTimeNotification(
+      prayerName: 'Asr',
+      prayerTime: asr,
+      minutesBefore: minutesBefore,
+    );
+    await schedulePrayerTimeNotification(
+      prayerName: 'Maghrib',
+      prayerTime: maghrib,
+      minutesBefore: minutesBefore,
+    );
+    await schedulePrayerTimeNotification(
+      prayerName: 'Isha',
+      prayerTime: isha,
+      minutesBefore: minutesBefore,
+    );
+  }
+
+  /// Cancel a specific notification by ID
+  Future<void> cancelNotification(int id) async {
+    await _localNotifications.cancel(id);
+    print('✅ Cancelled notification: $id');
+  }
+
+  /// Cancel all scheduled notifications
+  Future<void> cancelAllNotifications() async {
+    await _localNotifications.cancelAll();
+    print('✅ Cancelled all notifications');
+  }
+
+  /// Get pending notifications
+  Future<List<PendingNotificationRequest>> getPendingNotifications() async {
+    return await _localNotifications.pendingNotificationRequests();
   }
 }
 

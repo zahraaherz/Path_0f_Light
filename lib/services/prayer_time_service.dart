@@ -13,7 +13,7 @@ class PrayerTimeService {
   /// Get current prayer times for today
   Future<PrayerTimesModel> getTodayPrayerTimes() async {
     final coordinates = await _getCoordinates();
-    final method = await _getCalculationMethod();
+    final method = await getCalculationMethod();
     final locationName = await _getLocationName();
 
     return _calculatePrayerTimes(
@@ -28,7 +28,7 @@ class PrayerTimeService {
   /// Get prayer times for a specific date
   Future<PrayerTimesModel> getPrayerTimesForDate(DateTime date) async {
     final coordinates = await _getCoordinates();
-    final method = await _getCalculationMethod();
+    final method = await getCalculationMethod();
     final locationName = await _getLocationName();
 
     return _calculatePrayerTimes(

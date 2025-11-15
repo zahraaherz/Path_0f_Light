@@ -5,6 +5,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/quiz/quiz_models.dart';
 import '../../widgets/energy_display.dart';
 import '../../utils/responsive.dart';
+import '../library/book_reading_screen.dart';
 
 class EnhancedQuizScreen extends ConsumerStatefulWidget {
   final EnhancedQuestion question;
@@ -747,21 +748,15 @@ class _EnhancedQuizScreenState extends ConsumerState<EnhancedQuizScreen> {
   }
 
   void _redirectToBook(String bookId, String bookTitle) {
-    final r = context.responsive;
-
     // Navigate to book reading screen
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(
-          isArabic ? 'جاري فتح: $bookTitle' : 'Opening: $bookTitle',
-          style: TextStyle(fontSize: r.fontMedium),
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => BookReadingScreen(
+          bookId: bookId,
+          bookTitle: bookTitle,
         ),
-        backgroundColor: AppTheme.info,
-        behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusSmall)),
       ),
     );
-    // TODO: Navigate to book screen with bookId
   }
 
   Color _getDifficultyColor(String difficulty) {
