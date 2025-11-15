@@ -343,3 +343,141 @@ export const onUserDeleted = functions.firestore
       return null;
     }
   });
+
+/**
+ * Callable function for admins to send announcements to all users
+ * This is an example of FCM-ONLY notification (not local)
+ * Use cases: New features, maintenance, special Islamic events
+ */
+export const sendAdminAnnouncement = functions.https.onCall(
+  async (data, context) => {
+    // Verify admin authentication
+    if (!context.auth) {
+      throw new functions.https.HttpsError(
+        "unauthenticated",
+        "User must be authenticated"
+      );
+    }
+
+    // Check if user is admin
+    const userDoc = await db.collection("users").doc(context.auth.uid).get();
+    const userData = userDoc.data();
+
+    if (!userData || userData.role !== "admin") {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only admins can send announcements"
+      );
+    }
+
+    const {title, body, targetAudience, imageUrl} = data;
+
+    if (!title || !body) {
+      throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Title and body are required"
+      );
+    }
+
+    try {
+      let tokensSnapshot;
+
+      // Target specific audience or all users
+      if (targetAudience === "all") {
+        tokensSnapshot = await db.collection("fcm_tokens").get();
+      } else if (targetAudience === "premium") {
+        // Get tokens for premium users only
+        const premiumUsers = await db
+          .collection("users")
+          .where("subscription_status", "==", "active")
+          .get();
+        const premiumUserIds = premiumUsers.docs.map((doc) => doc.id);
+
+        tokensSnapshot = await db
+          .collection("fcm_tokens")
+          .where("userId", "in", premiumUserIds.slice(0, 10)) // Firestore 'in' limit
+          .get();
+      } else {
+        tokensSnapshot = await db.collection("fcm_tokens").get();
+      }
+
+      if (tokensSnapshot.empty) {
+        return {
+          success: true,
+          message: "No users to notify",
+          sentCount: 0,
+        };
+      }
+
+      const tokens: string[] = [];
+      tokensSnapshot.forEach((doc) => {
+        tokens.push(doc.data().token);
+      });
+
+      // Send in batches of 500 (FCM limit)
+      const batchSize = 500;
+      let totalSent = 0;
+
+      for (let i = 0; i < tokens.length; i += batchSize) {
+        const batch = tokens.slice(i, i + batchSize);
+
+        const message: admin.messaging.MulticastMessage = {
+          tokens: batch,
+          notification: {
+            title,
+            body,
+            imageUrl,
+          },
+          data: {
+            type: "announcement",
+            timestamp: Date.now().toString(),
+          },
+          android: {
+            priority: "high",
+            notification: {
+              sound: "default",
+              channelId: "announcements",
+              priority: "high",
+            },
+          },
+          apns: {
+            payload: {
+              aps: {
+                sound: "default",
+                badge: 1,
+              },
+            },
+          },
+        };
+
+        const response = await admin.messaging().sendEachForMulticast(message);
+        totalSent += response.successCount;
+
+        console.log(`Batch ${i / batchSize + 1}: Sent ${response.successCount} notifications`);
+      }
+
+      // Log announcement to Firestore
+      await db.collection("announcements").add({
+        title,
+        body,
+        imageUrl,
+        targetAudience,
+        sentBy: context.auth.uid,
+        sentCount: totalSent,
+        createdAt: admin.firestore.Timestamp.now(),
+      });
+
+      return {
+        success: true,
+        message: `Announcement sent successfully`,
+        sentCount: totalSent,
+      };
+    } catch (error) {
+      console.error("Error sending announcement:", error);
+      throw new functions.https.HttpsError(
+        "internal",
+        "Failed to send announcement"
+      );
+    }
+  }
+);

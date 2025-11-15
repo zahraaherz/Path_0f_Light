@@ -83,6 +83,7 @@ export {
   registerFCMToken,
   unregisterFCMToken,
   sendTestNotification,
+  sendAdminAnnouncement,
   cleanupOldTokens,
   onUserDeleted as onUserDeletedCleanupTokens,
 } from "./notificationService";
