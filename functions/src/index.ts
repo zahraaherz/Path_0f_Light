@@ -43,6 +43,20 @@ export {
   getQuestionSource,
 } from "./quizManagement";
 
+// Export Enhanced Quiz Functions (NEW - Multiple Question Types, Challenges)
+export {
+  getQuizQuestions as getEnhancedQuestions,
+  submitAnswer,
+  createQuizSession,
+  completeQuizSession,
+  findRandomMatch,
+  createChallenge,
+  acceptChallenge,
+  updateChallengeProgress,
+  completeChallenge,
+  saveBookToCollection,
+} from "./quizFunctions";
+
 // Export Content Management Functions
 export {
   insertBook,
