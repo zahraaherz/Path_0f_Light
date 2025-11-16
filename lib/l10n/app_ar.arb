@@ -1,11 +1,11 @@
 {
   "@@locale": "ar",
 
-  "_comment_app": "===== التطبيق عام =====",
+  "@_comment_app": "===== التطبيق عام =====",
   "appName": "طريق النور",
   "appTagline": "رحلة عبر المعرفة الإسلامية",
 
-  "_comment_auth": "===== المصادقة =====",
+  "@_comment_auth": "===== المصادقة =====",
   "login": "تسجيل الدخول",
   "register": "التسجيل",
   "logout": "تسجيل الخروج",
@@ -36,7 +36,7 @@
   "userNotFound": "المستخدم غير موجود",
   "authenticationFailed": "فشلت المصادقة",
 
-  "_comment_navigation": "===== التنقل =====",
+  "@_comment_navigation": "===== التنقل =====",
   "home": "الرئيسية",
   "quiz": "الاختبار",
   "collection": "المكتبة",
@@ -47,7 +47,7 @@
   "leaderboard": "لوحة المتصدرين",
   "achievements": "الإنجازات",
 
-  "_comment_quiz": "===== الاختبار =====",
+  "@_comment_quiz": "===== الاختبار =====",
   "startQuiz": "ابدأ الاختبار",
   "continueQuiz": "تابع الاختبار",
   "quizResults": "نتائج الاختبار",
@@ -58,7 +58,7 @@
   "advanced": "متقدم",
   "expert": "خبير",
   "question": "سؤال",
-  "of": "من",
+  "ofText": "من",
   "submit": "إرسال",
   "next": "التالي",
   "finish": "إنهاء",
@@ -81,7 +81,7 @@
   "loadingQuestions": "جاري تحميل الأسئلة...",
   "questionsLoaded": "تم تحميل {count} سؤال",
 
-  "_comment_categories": "===== فئات الاختبار =====",
+  "@_comment_categories": "===== فئات الاختبار =====",
   "prophet_muhammad": "النبي محمد (ص)",
   "imam_ali": "الإمام علي (ع)",
   "imam_hassan": "الإمام الحسن (ع)",
@@ -103,7 +103,7 @@
   "ethics": "الأخلاق والآداب",
   "theology": "العقيدة",
 
-  "_comment_energy": "===== نظام الطاقة =====",
+  "@_comment_energy": "===== نظام الطاقة =====",
   "energy": "الطاقة",
   "hearts": "القلوب",
   "heartsRemaining": "{count} قلوب متبقية",
@@ -117,7 +117,7 @@
   "energyRefilled": "تم إعادة ملء الطاقة!",
   "energyFull": "طاقتك ممتلئة",
 
-  "_comment_streak": "===== نظام السلسلة =====",
+  "@_comment_streak": "===== نظام السلسلة =====",
   "streak": "السلسلة",
   "dayStreak": "سلسلة {count} يوم",
   "loginStreak": "سلسلة تسجيل الدخول",
@@ -135,7 +135,7 @@
   "congratulations": "تهانينا!",
   "streakCelebration": "رائع! {count} أيام متتالية!",
 
-  "_comment_leaderboard": "===== لوحة المتصدرين =====",
+  "@_comment_leaderboard": "===== لوحة المتصدرين =====",
   "topLearners": "أفضل المتعلمين",
   "yourRank": "ترتيبك",
   "rank": "الترتيب",
@@ -151,7 +151,7 @@
   "challenge": "تحدي",
   "noLeaderboardData": "لا توجد بيانات لوحة المتصدرين",
 
-  "_comment_profile": "===== الملف الشخصي =====",
+  "@_comment_profile": "===== الملف الشخصي =====",
   "editProfile": "تعديل الملف الشخصي",
   "displayName": "الاسم المعروض",
   "bio": "نبذة",
@@ -175,7 +175,7 @@
   "changePhoto": "تغيير الصورة",
   "removePhoto": "إزالة الصورة",
 
-  "_comment_achievements": "===== الإنجازات =====",
+  "@_comment_achievements": "===== الإنجازات =====",
   "allAchievements": "جميع الإنجازات",
   "unlockedAchievements": "مفتوحة",
   "lockedAchievements": "مقفلة",
@@ -184,7 +184,7 @@
   "locked": "مقفل",
   "rewardPoints": "المكافأة: {points} نقطة",
 
-  "_comment_dashboard": "===== لوحة التحكم =====",
+  "@_comment_dashboard": "===== لوحة التحكم =====",
   "todaysPrayers": "صلوات اليوم",
   "fajr": "الفجر",
   "dhuhr": "الظهر",
@@ -210,7 +210,7 @@
   "audioLibrary": "مكتبة الصوتيات",
   "listenNow": "استمع الآن",
 
-  "_comment_collection": "===== مكتبة النصوص المقدسة =====",
+  "@_comment_collection": "===== مكتبة النصوص المقدسة =====",
   "library": "المكتبة",
   "books": "الكتب",
   "bookmarks": "العلامات المرجعية",
@@ -239,14 +239,14 @@
   "arabicFont": "خط عربي",
   "translationFont": "خط الترجمة",
 
-  "_comment_books": "===== عناوين الكتب =====",
+  "@_comment_books": "===== عناوين الكتب =====",
   "quranWithTafsir": "القرآن الكريم مع التفسير",
   "mafatihAlJinan": "مفاتيح الجنان",
   "nahjAlBalagha": "نهج البلاغة",
   "saheefaSajjadiya": "الصحيفة السجادية",
   "siratIbnHisham": "السيرة النبوية لابن هشام",
 
-  "_comment_settings": "===== الإعدادات =====",
+  "@_comment_settings": "===== الإعدادات =====",
   "generalSettings": "الإعدادات العامة",
   "language": "اللغة",
   "theme": "المظهر",
@@ -280,13 +280,13 @@
   "rateApp": "قيم التطبيق",
   "shareApp": "شارك التطبيق",
 
-  "_comment_common": "===== عام =====",
+  "@_comment_common": "===== عام =====",
   "yes": "نعم",
   "no": "لا",
   "ok": "موافق",
   "close": "إغلاق",
   "back": "رجوع",
-  "continue": "متابعة",
+  "continueAction": "متابعة",
   "skip": "تخطي",
   "done": "تم",
   "save": "حفظ",
@@ -312,7 +312,7 @@
   "tryAgain": "حاول مرة أخرى",
   "comingSoon": "قريباً",
 
-  "_comment_errors": "===== رسائل الخطأ =====",
+  "@_comment_errors": "===== رسائل الخطأ =====",
   "errorLoadingData": "خطأ في تحميل البيانات",
   "errorSavingData": "خطأ في حفظ البيانات",
   "errorDeletingData": "خطأ في حذف البيانات",
@@ -323,7 +323,7 @@
   "invalidInput": "إدخال غير صالح",
   "requiredField": "هذا الحقل مطلوب",
 
-  "_comment_success": "===== رسائل النجاح =====",
+  "@_comment_success": "===== رسائل النجاح =====",
   "dataSaved": "تم حفظ البيانات بنجاح",
   "dataDeleted": "تم حذف البيانات بنجاح",
   "profileUpdated": "تم تحديث الملف الشخصي بنجاح",
@@ -333,7 +333,7 @@
   "noteSaved": "تم حفظ الملاحظة بنجاح",
   "noteDeleted": "تم حذف الملاحظة بنجاح",
 
-  "_comment_islamic": "===== المصطلحات الإسلامية =====",
+  "@_comment_islamic": "===== المصطلحات الإسلامية =====",
   "bismillah": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
   "alhamdulillah": "الحمد لله",
   "subhanAllah": "سبحان الله",

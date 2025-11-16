@@ -71,11 +71,7 @@ class _CommentInputWidgetState extends ConsumerState<CommentInputWidget> {
           SnackBar(
             content: Text(
               result.message +
-                  (result.comment?.isPrivate == true
-                      ? ' (Private)'
-                      : result.energyEarned != null && result.energyEarned! > 0
-                          ? ' (+${result.energyEarned} energy)'
-                          : ''),
+                  (result.comment?.isPrivate == true ? ' (Private)' : ''),
             ),
             backgroundColor: Colors.green,
           ),

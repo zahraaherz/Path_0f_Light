@@ -162,7 +162,7 @@ class GuestAccessService {
 
       return GuestSessionStats(
         daysSinceCreation: daysSinceCreation,
-        itemsCreated: collectionSnapshot.count,
+        itemsCreated: collectionSnapshot.count ?? 0,
         firstSignIn: createdAt,
       );
     } catch (e) {

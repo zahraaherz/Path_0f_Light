@@ -66,7 +66,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
           ),
         ],
       ),
-      body: FutureBuilder<Book>(
+      body: FutureBuilder<Book?>(
         future: bookFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

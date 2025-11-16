@@ -194,6 +194,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
   }
 
   Widget _buildUserRankCard(int rank) {
+    final r = context.responsive;
     return Card(
       elevation: 4,
       color: AppTheme.primaryTeal.withOpacity(0.1),
@@ -245,6 +246,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
   }
 
   Widget _buildLeaderboardEntry(LeaderboardEntry entry, bool isCurrentUser) {
+    final r = context.responsive;
     final selectedType = ref.watch(selectedLeaderboardTypeProvider);
 
     // Determine the value to display based on leaderboard type

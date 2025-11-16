@@ -51,7 +51,7 @@ class _CommentsSheetState extends ConsumerState<CommentsSheet> {
 
   @override
   Widget build(BuildContext context) {
-    final authUser = ref.watch(authUserProvider);
+    final authUser = ref.watch(currentAuthUserProvider);
     final commentsAsync = ref.watch(commentsListProvider(widget.paragraphId));
     final isAuthenticated = authUser != null;
 

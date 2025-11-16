@@ -1,11 +1,11 @@
 {
   "@@locale": "en",
 
-  "_comment_app": "===== App General =====",
+  "@_comment_app": "===== App General =====",
   "appName": "Path of Light",
   "appTagline": "Journey Through Islamic Knowledge",
 
-  "_comment_auth": "===== Authentication =====",
+  "@_comment_auth": "===== Authentication =====",
   "login": "Login",
   "register": "Register",
   "logout": "Logout",
@@ -36,7 +36,7 @@
   "userNotFound": "User not found",
   "authenticationFailed": "Authentication failed",
 
-  "_comment_navigation": "===== Navigation =====",
+  "@_comment_navigation": "===== Navigation =====",
   "home": "Home",
   "quiz": "Quiz",
   "collection": "Collection",
@@ -47,7 +47,7 @@
   "leaderboard": "Leaderboard",
   "achievements": "Achievements",
 
-  "_comment_quiz": "===== Quiz =====",
+  "@_comment_quiz": "===== Quiz =====",
   "startQuiz": "Start Quiz",
   "continueQuiz": "Continue Quiz",
   "quizResults": "Quiz Results",
@@ -58,7 +58,7 @@
   "advanced": "Advanced",
   "expert": "Expert",
   "question": "Question",
-  "of": "of",
+  "ofText": "of",
   "submit": "Submit",
   "next": "Next",
   "finish": "Finish",
@@ -88,7 +88,7 @@
     }
   },
 
-  "_comment_categories": "===== Quiz Categories =====",
+  "@_comment_categories": "===== Quiz Categories =====",
   "prophet_muhammad": "Prophet Muhammad (PBUH)",
   "imam_ali": "Imam Ali (AS)",
   "imam_hassan": "Imam Hassan (AS)",
@@ -110,7 +110,7 @@
   "ethics": "Ethics & Morality",
   "theology": "Theology",
 
-  "_comment_energy": "===== Energy System =====",
+  "@_comment_energy": "===== Energy System =====",
   "energy": "Energy",
   "hearts": "Hearts",
   "heartsRemaining": "{count} hearts remaining",
@@ -131,7 +131,7 @@
   "energyRefilled": "Energy Refilled!",
   "energyFull": "Your energy is full",
 
-  "_comment_streak": "===== Streak System =====",
+  "@_comment_streak": "===== Streak System =====",
   "streak": "Streak",
   "dayStreak": "{count} Day Streak",
   "@dayStreak": {
@@ -163,7 +163,7 @@
     }
   },
 
-  "_comment_leaderboard": "===== Leaderboard =====",
+  "@_comment_leaderboard": "===== Leaderboard =====",
   "topLearners": "Top Learners",
   "yourRank": "Your Rank",
   "rank": "Rank",
@@ -179,7 +179,7 @@
   "challenge": "Challenge",
   "noLeaderboardData": "No leaderboard data available",
 
-  "_comment_profile": "===== Profile =====",
+  "@_comment_profile": "===== Profile =====",
   "editProfile": "Edit Profile",
   "displayName": "Display Name",
   "bio": "Bio",
@@ -203,7 +203,7 @@
   "changePhoto": "Change Photo",
   "removePhoto": "Remove Photo",
 
-  "_comment_achievements": "===== Achievements =====",
+  "@_comment_achievements": "===== Achievements =====",
   "allAchievements": "All Achievements",
   "unlockedAchievements": "Unlocked",
   "lockedAchievements": "Locked",
@@ -219,7 +219,7 @@
     }
   },
 
-  "_comment_dashboard": "===== Dashboard =====",
+  "@_comment_dashboard": "===== Dashboard =====",
   "todaysPrayers": "Today's Prayers",
   "fajr": "Fajr",
   "dhuhr": "Dhuhr",
@@ -245,7 +245,7 @@
   "audioLibrary": "Audio Library",
   "listenNow": "Listen Now",
 
-  "_comment_collection": "===== Sacred Text Library =====",
+  "@_comment_collection": "===== Sacred Text Library =====",
   "library": "Library",
   "books": "Books",
   "bookmarks": "Bookmarks",
@@ -274,14 +274,14 @@
   "arabicFont": "Arabic Font",
   "translationFont": "Translation Font",
 
-  "_comment_books": "===== Book Titles =====",
+  "@_comment_books": "===== Book Titles =====",
   "quranWithTafsir": "Quran with Tafsir",
   "mafatihAlJinan": "Mafatih al-Jinan",
   "nahjAlBalagha": "Nahj al-Balagha",
   "saheefaSajjadiya": "Sahifa Sajjadiya",
   "siratIbnHisham": "Sirat Ibn Hisham",
 
-  "_comment_settings": "===== Settings =====",
+  "@_comment_settings": "===== Settings =====",
   "generalSettings": "General Settings",
   "language": "Language",
   "theme": "Theme",
@@ -315,13 +315,13 @@
   "rateApp": "Rate App",
   "shareApp": "Share App",
 
-  "_comment_common": "===== Common =====",
+  "@_comment_common": "===== Common =====",
   "yes": "Yes",
   "no": "No",
   "ok": "OK",
   "close": "Close",
   "back": "Back",
-  "continue": "Continue",
+  "continueAction": "Continue",
   "skip": "Skip",
   "done": "Done",
   "save": "Save",
@@ -347,7 +347,7 @@
   "tryAgain": "Try Again",
   "comingSoon": "Coming Soon",
 
-  "_comment_errors": "===== Error Messages =====",
+  "@_comment_errors": "===== Error Messages =====",
   "errorLoadingData": "Error loading data",
   "errorSavingData": "Error saving data",
   "errorDeletingData": "Error deleting data",
@@ -358,7 +358,7 @@
   "invalidInput": "Invalid input",
   "requiredField": "This field is required",
 
-  "_comment_success": "===== Success Messages =====",
+  "@_comment_success": "===== Success Messages =====",
   "dataSaved": "Data saved successfully",
   "dataDeleted": "Data deleted successfully",
   "profileUpdated": "Profile updated successfully",
@@ -368,7 +368,7 @@
   "noteSaved": "Note saved successfully",
   "noteDeleted": "Note deleted successfully",
 
-  "_comment_islamic": "===== Islamic Terms =====",
+  "@_comment_islamic": "===== Islamic Terms =====",
   "bismillah": "Bismillah al-Rahman al-Rahim",
   "alhamdulillah": "Alhamdulillah",
   "subhanAllah": "Subhan Allah",

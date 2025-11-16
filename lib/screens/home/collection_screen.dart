@@ -131,6 +131,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Build items list
   Widget _buildItemsList(CollectionCategory? category) {
+    final r = context.responsive;
     final collectionItemsAsync = category == null
         ? ref.watch(userCollectionItemsProvider)
         : ref.watch(collectionItemsByCategoryProvider(category));
@@ -203,6 +204,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Build list view
   Widget _buildListView(List<CollectionItem> items) {
+    final r = context.responsive;
     return RefreshIndicator(
       onRefresh: () async {
         ref.invalidate(userCollectionItemsProvider);
@@ -225,6 +227,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Build grid view
   Widget _buildGridView(List<CollectionItem> items) {
+    final r = context.responsive;
     return RefreshIndicator(
       onRefresh: () async {
         ref.invalidate(userCollectionItemsProvider);
@@ -259,6 +262,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Build favorites view
   Widget _buildFavoritesView() {
+    final r = context.responsive;
     final favoritesAsync = ref.watch(favoriteCollectionItemsProvider);
     final viewMode = ref.watch(collectionViewModeProvider);
 
@@ -413,6 +417,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Show upgrade dialog for guest users
   void _showUpgradeDialog(BuildContext context) async {
+    final r = context.responsive;
     final guestService = ref.read(guestAccessServiceProvider);
     final upgradeMessage = await guestService.getUpgradeMessage();
     final stats = await guestService.getGuestStats();
@@ -495,6 +500,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   }
 
   Widget _buildStatRow(BuildContext context, IconData icon, String text) {
+    final r = context.responsive;
     return Row(
       children: [
         Icon(icon, size: 20, color: Theme.of(context).colorScheme.secondary),
@@ -505,6 +511,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   }
 
   Widget _buildBenefitRow(BuildContext context, String text) {
+    final r = context.responsive;
     return Padding(
       padding: const EdgeInsets.only(bottom: 4),
       child: Row(

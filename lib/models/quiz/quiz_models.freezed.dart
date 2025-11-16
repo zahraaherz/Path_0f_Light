@@ -639,6 +639,9 @@ mixin _$AnswerResult {
   int get energyConsumed => throw _privateConstructorUsedError;
   int get energyRemaining => throw _privateConstructorUsedError;
   AnswerSource get source => throw _privateConstructorUsedError;
+  String? get explanationAr => throw _privateConstructorUsedError;
+  String? get bookTitleAr => throw _privateConstructorUsedError;
+  String? get bookTitleEn => throw _privateConstructorUsedError;
 
   /// Serializes this AnswerResult to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -664,7 +667,10 @@ abstract class $AnswerResultCopyWith<$Res> {
       int currentStreak,
       int energyConsumed,
       int energyRemaining,
-      AnswerSource source});
+      AnswerSource source,
+      String? explanationAr,
+      String? bookTitleAr,
+      String? bookTitleEn});
 
   $AnswerSourceCopyWith<$Res> get source;
 }
@@ -692,6 +698,9 @@ class _$AnswerResultCopyWithImpl<$Res, $Val extends AnswerResult>
     Object? energyConsumed = null,
     Object? energyRemaining = null,
     Object? source = null,
+    Object? explanationAr = freezed,
+    Object? bookTitleAr = freezed,
+    Object? bookTitleEn = freezed,
   }) {
     return _then(_value.copyWith(
       isCorrect: null == isCorrect
@@ -726,6 +735,18 @@ class _$AnswerResultCopyWithImpl<$Res, $Val extends AnswerResult>
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as AnswerSource,
+      explanationAr: freezed == explanationAr
+          ? _value.explanationAr
+          : explanationAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleAr: freezed == bookTitleAr
+          ? _value.bookTitleAr
+          : bookTitleAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleEn: freezed == bookTitleEn
+          ? _value.bookTitleEn
+          : bookTitleEn // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 
@@ -756,7 +777,10 @@ abstract class _$$AnswerResultImplCopyWith<$Res>
       int currentStreak,
       int energyConsumed,
       int energyRemaining,
-      AnswerSource source});
+      AnswerSource source,
+      String? explanationAr,
+      String? bookTitleAr,
+      String? bookTitleEn});
 
   @override
   $AnswerSourceCopyWith<$Res> get source;
@@ -783,6 +807,9 @@ class __$$AnswerResultImplCopyWithImpl<$Res>
     Object? energyConsumed = null,
     Object? energyRemaining = null,
     Object? source = null,
+    Object? explanationAr = freezed,
+    Object? bookTitleAr = freezed,
+    Object? bookTitleEn = freezed,
   }) {
     return _then(_$AnswerResultImpl(
       isCorrect: null == isCorrect
@@ -817,6 +844,18 @@ class __$$AnswerResultImplCopyWithImpl<$Res>
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as AnswerSource,
+      explanationAr: freezed == explanationAr
+          ? _value.explanationAr
+          : explanationAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleAr: freezed == bookTitleAr
+          ? _value.bookTitleAr
+          : bookTitleAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleEn: freezed == bookTitleEn
+          ? _value.bookTitleEn
+          : bookTitleEn // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -832,7 +871,10 @@ class _$AnswerResultImpl implements _AnswerResult {
       required this.currentStreak,
       required this.energyConsumed,
       required this.energyRemaining,
-      required this.source});
+      required this.source,
+      this.explanationAr,
+      this.bookTitleAr,
+      this.bookTitleEn});
 
   factory _$AnswerResultImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnswerResultImplFromJson(json);
@@ -853,10 +895,16 @@ class _$AnswerResultImpl implements _AnswerResult {
   final int energyRemaining;
   @override
   final AnswerSource source;
+  @override
+  final String? explanationAr;
+  @override
+  final String? bookTitleAr;
+  @override
+  final String? bookTitleEn;
 
   @override
   String toString() {
-    return 'AnswerResult(isCorrect: $isCorrect, correctAnswer: $correctAnswer, explanation: $explanation, pointsEarned: $pointsEarned, currentStreak: $currentStreak, energyConsumed: $energyConsumed, energyRemaining: $energyRemaining, source: $source)';
+    return 'AnswerResult(isCorrect: $isCorrect, correctAnswer: $correctAnswer, explanation: $explanation, pointsEarned: $pointsEarned, currentStreak: $currentStreak, energyConsumed: $energyConsumed, energyRemaining: $energyRemaining, source: $source, explanationAr: $explanationAr, bookTitleAr: $bookTitleAr, bookTitleEn: $bookTitleEn)';
   }
 
   @override
@@ -878,7 +926,13 @@ class _$AnswerResultImpl implements _AnswerResult {
                 other.energyConsumed == energyConsumed) &&
             (identical(other.energyRemaining, energyRemaining) ||
                 other.energyRemaining == energyRemaining) &&
-            (identical(other.source, source) || other.source == source));
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.explanationAr, explanationAr) ||
+                other.explanationAr == explanationAr) &&
+            (identical(other.bookTitleAr, bookTitleAr) ||
+                other.bookTitleAr == bookTitleAr) &&
+            (identical(other.bookTitleEn, bookTitleEn) ||
+                other.bookTitleEn == bookTitleEn));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -892,7 +946,10 @@ class _$AnswerResultImpl implements _AnswerResult {
       currentStreak,
       energyConsumed,
       energyRemaining,
-      source);
+      source,
+      explanationAr,
+      bookTitleAr,
+      bookTitleEn);
 
   /// Create a copy of AnswerResult
   /// with the given fields replaced by the non-null parameter values.
@@ -919,7 +976,10 @@ abstract class _AnswerResult implements AnswerResult {
       required final int currentStreak,
       required final int energyConsumed,
       required final int energyRemaining,
-      required final AnswerSource source}) = _$AnswerResultImpl;
+      required final AnswerSource source,
+      final String? explanationAr,
+      final String? bookTitleAr,
+      final String? bookTitleEn}) = _$AnswerResultImpl;
 
   factory _AnswerResult.fromJson(Map<String, dynamic> json) =
       _$AnswerResultImpl.fromJson;
@@ -940,6 +1000,12 @@ abstract class _AnswerResult implements AnswerResult {
   int get energyRemaining;
   @override
   AnswerSource get source;
+  @override
+  String? get explanationAr;
+  @override
+  String? get bookTitleAr;
+  @override
+  String? get bookTitleEn;
 
   /// Create a copy of AnswerResult
   /// with the given fields replaced by the non-null parameter values.
@@ -959,6 +1025,8 @@ mixin _$AnswerSource {
   String get paragraphId => throw _privateConstructorUsedError;
   int get pageNumber => throw _privateConstructorUsedError;
   String get quote => throw _privateConstructorUsedError;
+  String? get exactQuoteAr => throw _privateConstructorUsedError;
+  String? get bookTitle => throw _privateConstructorUsedError;
 
   /// Serializes this AnswerSource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -976,7 +1044,13 @@ abstract class $AnswerSourceCopyWith<$Res> {
           AnswerSource value, $Res Function(AnswerSource) then) =
       _$AnswerSourceCopyWithImpl<$Res, AnswerSource>;
   @useResult
-  $Res call({String bookId, String paragraphId, int pageNumber, String quote});
+  $Res call(
+      {String bookId,
+      String paragraphId,
+      int pageNumber,
+      String quote,
+      String? exactQuoteAr,
+      String? bookTitle});
 }
 
 /// @nodoc
@@ -998,6 +1072,8 @@ class _$AnswerSourceCopyWithImpl<$Res, $Val extends AnswerSource>
     Object? paragraphId = null,
     Object? pageNumber = null,
     Object? quote = null,
+    Object? exactQuoteAr = freezed,
+    Object? bookTitle = freezed,
   }) {
     return _then(_value.copyWith(
       bookId: null == bookId
@@ -1016,6 +1092,14 @@ class _$AnswerSourceCopyWithImpl<$Res, $Val extends AnswerSource>
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as String,
+      exactQuoteAr: freezed == exactQuoteAr
+          ? _value.exactQuoteAr
+          : exactQuoteAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitle: freezed == bookTitle
+          ? _value.bookTitle
+          : bookTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -1028,7 +1112,13 @@ abstract class _$$AnswerSourceImplCopyWith<$Res>
       __$$AnswerSourceImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String bookId, String paragraphId, int pageNumber, String quote});
+  $Res call(
+      {String bookId,
+      String paragraphId,
+      int pageNumber,
+      String quote,
+      String? exactQuoteAr,
+      String? bookTitle});
 }
 
 /// @nodoc
@@ -1048,6 +1138,8 @@ class __$$AnswerSourceImplCopyWithImpl<$Res>
     Object? paragraphId = null,
     Object? pageNumber = null,
     Object? quote = null,
+    Object? exactQuoteAr = freezed,
+    Object? bookTitle = freezed,
   }) {
     return _then(_$AnswerSourceImpl(
       bookId: null == bookId
@@ -1066,6 +1158,14 @@ class __$$AnswerSourceImplCopyWithImpl<$Res>
           ? _value.quote
           : quote // ignore: cast_nullable_to_non_nullable
               as String,
+      exactQuoteAr: freezed == exactQuoteAr
+          ? _value.exactQuoteAr
+          : exactQuoteAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitle: freezed == bookTitle
+          ? _value.bookTitle
+          : bookTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1077,7 +1177,9 @@ class _$AnswerSourceImpl implements _AnswerSource {
       {required this.bookId,
       required this.paragraphId,
       required this.pageNumber,
-      required this.quote});
+      required this.quote,
+      this.exactQuoteAr,
+      this.bookTitle});
 
   factory _$AnswerSourceImpl.fromJson(Map<String, dynamic> json) =>
       _$$AnswerSourceImplFromJson(json);
@@ -1090,10 +1192,14 @@ class _$AnswerSourceImpl implements _AnswerSource {
   final int pageNumber;
   @override
   final String quote;
+  @override
+  final String? exactQuoteAr;
+  @override
+  final String? bookTitle;
 
   @override
   String toString() {
-    return 'AnswerSource(bookId: $bookId, paragraphId: $paragraphId, pageNumber: $pageNumber, quote: $quote)';
+    return 'AnswerSource(bookId: $bookId, paragraphId: $paragraphId, pageNumber: $pageNumber, quote: $quote, exactQuoteAr: $exactQuoteAr, bookTitle: $bookTitle)';
   }
 
   @override
@@ -1106,13 +1212,17 @@ class _$AnswerSourceImpl implements _AnswerSource {
                 other.paragraphId == paragraphId) &&
             (identical(other.pageNumber, pageNumber) ||
                 other.pageNumber == pageNumber) &&
-            (identical(other.quote, quote) || other.quote == quote));
+            (identical(other.quote, quote) || other.quote == quote) &&
+            (identical(other.exactQuoteAr, exactQuoteAr) ||
+                other.exactQuoteAr == exactQuoteAr) &&
+            (identical(other.bookTitle, bookTitle) ||
+                other.bookTitle == bookTitle));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, bookId, paragraphId, pageNumber, quote);
+  int get hashCode => Object.hash(runtimeType, bookId, paragraphId, pageNumber,
+      quote, exactQuoteAr, bookTitle);
 
   /// Create a copy of AnswerSource
   /// with the given fields replaced by the non-null parameter values.
@@ -1135,7 +1245,9 @@ abstract class _AnswerSource implements AnswerSource {
       {required final String bookId,
       required final String paragraphId,
       required final int pageNumber,
-      required final String quote}) = _$AnswerSourceImpl;
+      required final String quote,
+      final String? exactQuoteAr,
+      final String? bookTitle}) = _$AnswerSourceImpl;
 
   factory _AnswerSource.fromJson(Map<String, dynamic> json) =
       _$AnswerSourceImpl.fromJson;
@@ -1148,12 +1260,720 @@ abstract class _AnswerSource implements AnswerSource {
   int get pageNumber;
   @override
   String get quote;
+  @override
+  String? get exactQuoteAr;
+  @override
+  String? get bookTitle;
 
   /// Create a copy of AnswerSource
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AnswerSourceImplCopyWith<_$AnswerSourceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EnhancedQuestion _$EnhancedQuestionFromJson(Map<String, dynamic> json) {
+  return _EnhancedQuestion.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EnhancedQuestion {
+  String get id => throw _privateConstructorUsedError;
+  String get category => throw _privateConstructorUsedError;
+  String get difficulty => throw _privateConstructorUsedError;
+  String get questionAr => throw _privateConstructorUsedError;
+  String get questionEn => throw _privateConstructorUsedError;
+  Map<String, Map<String, String>> get options =>
+      throw _privateConstructorUsedError; // {"A": {"text_ar": "", "text_en": ""}}
+  String get correctAnswer => throw _privateConstructorUsedError;
+  QuestionSource get source => throw _privateConstructorUsedError;
+  String get explanationAr => throw _privateConstructorUsedError;
+  String get explanationEn => throw _privateConstructorUsedError;
+  int get points => throw _privateConstructorUsedError;
+  QuestionType get questionType => throw _privateConstructorUsedError;
+  bool get verified => throw _privateConstructorUsedError;
+
+  /// Serializes this EnhancedQuestion to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $EnhancedQuestionCopyWith<EnhancedQuestion> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EnhancedQuestionCopyWith<$Res> {
+  factory $EnhancedQuestionCopyWith(
+          EnhancedQuestion value, $Res Function(EnhancedQuestion) then) =
+      _$EnhancedQuestionCopyWithImpl<$Res, EnhancedQuestion>;
+  @useResult
+  $Res call(
+      {String id,
+      String category,
+      String difficulty,
+      String questionAr,
+      String questionEn,
+      Map<String, Map<String, String>> options,
+      String correctAnswer,
+      QuestionSource source,
+      String explanationAr,
+      String explanationEn,
+      int points,
+      QuestionType questionType,
+      bool verified});
+
+  $QuestionSourceCopyWith<$Res> get source;
+}
+
+/// @nodoc
+class _$EnhancedQuestionCopyWithImpl<$Res, $Val extends EnhancedQuestion>
+    implements $EnhancedQuestionCopyWith<$Res> {
+  _$EnhancedQuestionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? category = null,
+    Object? difficulty = null,
+    Object? questionAr = null,
+    Object? questionEn = null,
+    Object? options = null,
+    Object? correctAnswer = null,
+    Object? source = null,
+    Object? explanationAr = null,
+    Object? explanationEn = null,
+    Object? points = null,
+    Object? questionType = null,
+    Object? verified = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      difficulty: null == difficulty
+          ? _value.difficulty
+          : difficulty // ignore: cast_nullable_to_non_nullable
+              as String,
+      questionAr: null == questionAr
+          ? _value.questionAr
+          : questionAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      questionEn: null == questionEn
+          ? _value.questionEn
+          : questionEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      options: null == options
+          ? _value.options
+          : options // ignore: cast_nullable_to_non_nullable
+              as Map<String, Map<String, String>>,
+      correctAnswer: null == correctAnswer
+          ? _value.correctAnswer
+          : correctAnswer // ignore: cast_nullable_to_non_nullable
+              as String,
+      source: null == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as QuestionSource,
+      explanationAr: null == explanationAr
+          ? _value.explanationAr
+          : explanationAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      explanationEn: null == explanationEn
+          ? _value.explanationEn
+          : explanationEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      points: null == points
+          ? _value.points
+          : points // ignore: cast_nullable_to_non_nullable
+              as int,
+      questionType: null == questionType
+          ? _value.questionType
+          : questionType // ignore: cast_nullable_to_non_nullable
+              as QuestionType,
+      verified: null == verified
+          ? _value.verified
+          : verified // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $QuestionSourceCopyWith<$Res> get source {
+    return $QuestionSourceCopyWith<$Res>(_value.source, (value) {
+      return _then(_value.copyWith(source: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$EnhancedQuestionImplCopyWith<$Res>
+    implements $EnhancedQuestionCopyWith<$Res> {
+  factory _$$EnhancedQuestionImplCopyWith(_$EnhancedQuestionImpl value,
+          $Res Function(_$EnhancedQuestionImpl) then) =
+      __$$EnhancedQuestionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String category,
+      String difficulty,
+      String questionAr,
+      String questionEn,
+      Map<String, Map<String, String>> options,
+      String correctAnswer,
+      QuestionSource source,
+      String explanationAr,
+      String explanationEn,
+      int points,
+      QuestionType questionType,
+      bool verified});
+
+  @override
+  $QuestionSourceCopyWith<$Res> get source;
+}
+
+/// @nodoc
+class __$$EnhancedQuestionImplCopyWithImpl<$Res>
+    extends _$EnhancedQuestionCopyWithImpl<$Res, _$EnhancedQuestionImpl>
+    implements _$$EnhancedQuestionImplCopyWith<$Res> {
+  __$$EnhancedQuestionImplCopyWithImpl(_$EnhancedQuestionImpl _value,
+      $Res Function(_$EnhancedQuestionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? category = null,
+    Object? difficulty = null,
+    Object? questionAr = null,
+    Object? questionEn = null,
+    Object? options = null,
+    Object? correctAnswer = null,
+    Object? source = null,
+    Object? explanationAr = null,
+    Object? explanationEn = null,
+    Object? points = null,
+    Object? questionType = null,
+    Object? verified = null,
+  }) {
+    return _then(_$EnhancedQuestionImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      difficulty: null == difficulty
+          ? _value.difficulty
+          : difficulty // ignore: cast_nullable_to_non_nullable
+              as String,
+      questionAr: null == questionAr
+          ? _value.questionAr
+          : questionAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      questionEn: null == questionEn
+          ? _value.questionEn
+          : questionEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      options: null == options
+          ? _value._options
+          : options // ignore: cast_nullable_to_non_nullable
+              as Map<String, Map<String, String>>,
+      correctAnswer: null == correctAnswer
+          ? _value.correctAnswer
+          : correctAnswer // ignore: cast_nullable_to_non_nullable
+              as String,
+      source: null == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as QuestionSource,
+      explanationAr: null == explanationAr
+          ? _value.explanationAr
+          : explanationAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      explanationEn: null == explanationEn
+          ? _value.explanationEn
+          : explanationEn // ignore: cast_nullable_to_non_nullable
+              as String,
+      points: null == points
+          ? _value.points
+          : points // ignore: cast_nullable_to_non_nullable
+              as int,
+      questionType: null == questionType
+          ? _value.questionType
+          : questionType // ignore: cast_nullable_to_non_nullable
+              as QuestionType,
+      verified: null == verified
+          ? _value.verified
+          : verified // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EnhancedQuestionImpl implements _EnhancedQuestion {
+  const _$EnhancedQuestionImpl(
+      {required this.id,
+      required this.category,
+      required this.difficulty,
+      required this.questionAr,
+      required this.questionEn,
+      required final Map<String, Map<String, String>> options,
+      required this.correctAnswer,
+      required this.source,
+      required this.explanationAr,
+      required this.explanationEn,
+      required this.points,
+      this.questionType = QuestionType.multipleChoice,
+      this.verified = false})
+      : _options = options;
+
+  factory _$EnhancedQuestionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnhancedQuestionImplFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String category;
+  @override
+  final String difficulty;
+  @override
+  final String questionAr;
+  @override
+  final String questionEn;
+  final Map<String, Map<String, String>> _options;
+  @override
+  Map<String, Map<String, String>> get options {
+    if (_options is EqualUnmodifiableMapView) return _options;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_options);
+  }
+
+// {"A": {"text_ar": "", "text_en": ""}}
+  @override
+  final String correctAnswer;
+  @override
+  final QuestionSource source;
+  @override
+  final String explanationAr;
+  @override
+  final String explanationEn;
+  @override
+  final int points;
+  @override
+  @JsonKey()
+  final QuestionType questionType;
+  @override
+  @JsonKey()
+  final bool verified;
+
+  @override
+  String toString() {
+    return 'EnhancedQuestion(id: $id, category: $category, difficulty: $difficulty, questionAr: $questionAr, questionEn: $questionEn, options: $options, correctAnswer: $correctAnswer, source: $source, explanationAr: $explanationAr, explanationEn: $explanationEn, points: $points, questionType: $questionType, verified: $verified)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EnhancedQuestionImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.difficulty, difficulty) ||
+                other.difficulty == difficulty) &&
+            (identical(other.questionAr, questionAr) ||
+                other.questionAr == questionAr) &&
+            (identical(other.questionEn, questionEn) ||
+                other.questionEn == questionEn) &&
+            const DeepCollectionEquality().equals(other._options, _options) &&
+            (identical(other.correctAnswer, correctAnswer) ||
+                other.correctAnswer == correctAnswer) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.explanationAr, explanationAr) ||
+                other.explanationAr == explanationAr) &&
+            (identical(other.explanationEn, explanationEn) ||
+                other.explanationEn == explanationEn) &&
+            (identical(other.points, points) || other.points == points) &&
+            (identical(other.questionType, questionType) ||
+                other.questionType == questionType) &&
+            (identical(other.verified, verified) ||
+                other.verified == verified));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      category,
+      difficulty,
+      questionAr,
+      questionEn,
+      const DeepCollectionEquality().hash(_options),
+      correctAnswer,
+      source,
+      explanationAr,
+      explanationEn,
+      points,
+      questionType,
+      verified);
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EnhancedQuestionImplCopyWith<_$EnhancedQuestionImpl> get copyWith =>
+      __$$EnhancedQuestionImplCopyWithImpl<_$EnhancedQuestionImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EnhancedQuestionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EnhancedQuestion implements EnhancedQuestion {
+  const factory _EnhancedQuestion(
+      {required final String id,
+      required final String category,
+      required final String difficulty,
+      required final String questionAr,
+      required final String questionEn,
+      required final Map<String, Map<String, String>> options,
+      required final String correctAnswer,
+      required final QuestionSource source,
+      required final String explanationAr,
+      required final String explanationEn,
+      required final int points,
+      final QuestionType questionType,
+      final bool verified}) = _$EnhancedQuestionImpl;
+
+  factory _EnhancedQuestion.fromJson(Map<String, dynamic> json) =
+      _$EnhancedQuestionImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  String get category;
+  @override
+  String get difficulty;
+  @override
+  String get questionAr;
+  @override
+  String get questionEn;
+  @override
+  Map<String, Map<String, String>>
+      get options; // {"A": {"text_ar": "", "text_en": ""}}
+  @override
+  String get correctAnswer;
+  @override
+  QuestionSource get source;
+  @override
+  String get explanationAr;
+  @override
+  String get explanationEn;
+  @override
+  int get points;
+  @override
+  QuestionType get questionType;
+  @override
+  bool get verified;
+
+  /// Create a copy of EnhancedQuestion
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$EnhancedQuestionImplCopyWith<_$EnhancedQuestionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+QuestionSource _$QuestionSourceFromJson(Map<String, dynamic> json) {
+  return _QuestionSource.fromJson(json);
+}
+
+/// @nodoc
+mixin _$QuestionSource {
+  String get paragraphId => throw _privateConstructorUsedError;
+  String get bookId => throw _privateConstructorUsedError;
+  String get exactQuoteAr => throw _privateConstructorUsedError;
+  int get pageNumber => throw _privateConstructorUsedError;
+  String? get bookTitleAr => throw _privateConstructorUsedError;
+  String? get bookTitleEn => throw _privateConstructorUsedError;
+
+  /// Serializes this QuestionSource to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of QuestionSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $QuestionSourceCopyWith<QuestionSource> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $QuestionSourceCopyWith<$Res> {
+  factory $QuestionSourceCopyWith(
+          QuestionSource value, $Res Function(QuestionSource) then) =
+      _$QuestionSourceCopyWithImpl<$Res, QuestionSource>;
+  @useResult
+  $Res call(
+      {String paragraphId,
+      String bookId,
+      String exactQuoteAr,
+      int pageNumber,
+      String? bookTitleAr,
+      String? bookTitleEn});
+}
+
+/// @nodoc
+class _$QuestionSourceCopyWithImpl<$Res, $Val extends QuestionSource>
+    implements $QuestionSourceCopyWith<$Res> {
+  _$QuestionSourceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of QuestionSource
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? paragraphId = null,
+    Object? bookId = null,
+    Object? exactQuoteAr = null,
+    Object? pageNumber = null,
+    Object? bookTitleAr = freezed,
+    Object? bookTitleEn = freezed,
+  }) {
+    return _then(_value.copyWith(
+      paragraphId: null == paragraphId
+          ? _value.paragraphId
+          : paragraphId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bookId: null == bookId
+          ? _value.bookId
+          : bookId // ignore: cast_nullable_to_non_nullable
+              as String,
+      exactQuoteAr: null == exactQuoteAr
+          ? _value.exactQuoteAr
+          : exactQuoteAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      pageNumber: null == pageNumber
+          ? _value.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+      bookTitleAr: freezed == bookTitleAr
+          ? _value.bookTitleAr
+          : bookTitleAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleEn: freezed == bookTitleEn
+          ? _value.bookTitleEn
+          : bookTitleEn // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$QuestionSourceImplCopyWith<$Res>
+    implements $QuestionSourceCopyWith<$Res> {
+  factory _$$QuestionSourceImplCopyWith(_$QuestionSourceImpl value,
+          $Res Function(_$QuestionSourceImpl) then) =
+      __$$QuestionSourceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String paragraphId,
+      String bookId,
+      String exactQuoteAr,
+      int pageNumber,
+      String? bookTitleAr,
+      String? bookTitleEn});
+}
+
+/// @nodoc
+class __$$QuestionSourceImplCopyWithImpl<$Res>
+    extends _$QuestionSourceCopyWithImpl<$Res, _$QuestionSourceImpl>
+    implements _$$QuestionSourceImplCopyWith<$Res> {
+  __$$QuestionSourceImplCopyWithImpl(
+      _$QuestionSourceImpl _value, $Res Function(_$QuestionSourceImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of QuestionSource
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? paragraphId = null,
+    Object? bookId = null,
+    Object? exactQuoteAr = null,
+    Object? pageNumber = null,
+    Object? bookTitleAr = freezed,
+    Object? bookTitleEn = freezed,
+  }) {
+    return _then(_$QuestionSourceImpl(
+      paragraphId: null == paragraphId
+          ? _value.paragraphId
+          : paragraphId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bookId: null == bookId
+          ? _value.bookId
+          : bookId // ignore: cast_nullable_to_non_nullable
+              as String,
+      exactQuoteAr: null == exactQuoteAr
+          ? _value.exactQuoteAr
+          : exactQuoteAr // ignore: cast_nullable_to_non_nullable
+              as String,
+      pageNumber: null == pageNumber
+          ? _value.pageNumber
+          : pageNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+      bookTitleAr: freezed == bookTitleAr
+          ? _value.bookTitleAr
+          : bookTitleAr // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bookTitleEn: freezed == bookTitleEn
+          ? _value.bookTitleEn
+          : bookTitleEn // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$QuestionSourceImpl implements _QuestionSource {
+  const _$QuestionSourceImpl(
+      {required this.paragraphId,
+      required this.bookId,
+      required this.exactQuoteAr,
+      required this.pageNumber,
+      this.bookTitleAr,
+      this.bookTitleEn});
+
+  factory _$QuestionSourceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuestionSourceImplFromJson(json);
+
+  @override
+  final String paragraphId;
+  @override
+  final String bookId;
+  @override
+  final String exactQuoteAr;
+  @override
+  final int pageNumber;
+  @override
+  final String? bookTitleAr;
+  @override
+  final String? bookTitleEn;
+
+  @override
+  String toString() {
+    return 'QuestionSource(paragraphId: $paragraphId, bookId: $bookId, exactQuoteAr: $exactQuoteAr, pageNumber: $pageNumber, bookTitleAr: $bookTitleAr, bookTitleEn: $bookTitleEn)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$QuestionSourceImpl &&
+            (identical(other.paragraphId, paragraphId) ||
+                other.paragraphId == paragraphId) &&
+            (identical(other.bookId, bookId) || other.bookId == bookId) &&
+            (identical(other.exactQuoteAr, exactQuoteAr) ||
+                other.exactQuoteAr == exactQuoteAr) &&
+            (identical(other.pageNumber, pageNumber) ||
+                other.pageNumber == pageNumber) &&
+            (identical(other.bookTitleAr, bookTitleAr) ||
+                other.bookTitleAr == bookTitleAr) &&
+            (identical(other.bookTitleEn, bookTitleEn) ||
+                other.bookTitleEn == bookTitleEn));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, paragraphId, bookId,
+      exactQuoteAr, pageNumber, bookTitleAr, bookTitleEn);
+
+  /// Create a copy of QuestionSource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QuestionSourceImplCopyWith<_$QuestionSourceImpl> get copyWith =>
+      __$$QuestionSourceImplCopyWithImpl<_$QuestionSourceImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$QuestionSourceImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _QuestionSource implements QuestionSource {
+  const factory _QuestionSource(
+      {required final String paragraphId,
+      required final String bookId,
+      required final String exactQuoteAr,
+      required final int pageNumber,
+      final String? bookTitleAr,
+      final String? bookTitleEn}) = _$QuestionSourceImpl;
+
+  factory _QuestionSource.fromJson(Map<String, dynamic> json) =
+      _$QuestionSourceImpl.fromJson;
+
+  @override
+  String get paragraphId;
+  @override
+  String get bookId;
+  @override
+  String get exactQuoteAr;
+  @override
+  int get pageNumber;
+  @override
+  String? get bookTitleAr;
+  @override
+  String? get bookTitleEn;
+
+  /// Create a copy of QuestionSource
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$QuestionSourceImplCopyWith<_$QuestionSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
