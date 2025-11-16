@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_034",
+    "title_ar": "نظم درر السمطين في فضائل المصطفى و المرتضى و البتول و السبطين",
+    "title_en": "Arrangement of Pearls of the Two Strings on the Virtues of al-Mustafa, al-Murtada, al-Batul and the Two Grandsons",
+    "author_ar": "جمال الدين محمد بن محمد الزرندي الحنفي",
+    "author_en": "Jamal al-Din Muhammad ibn Muhammad al-Zarandi al-Hanafi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "نظم درر السمطين في فضائل المصطفى و المرتضى و البتول و السبطين - جمال الدين محمد بن محمد الزرندي الحنفي.pdf",
+    "storage_path": "bookss/نظم درر السمطين في فضائل المصطفى و المرتضى و البتول و السبطين - جمال الدين محمد بن محمد الزرندي الحنفي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب في فضائل النبي وآل بيته عليهم السلام",
+    "topics": [
+      "فضائل",
+      "النبي",
+      "أهل البيت"
+    ],
+    "category": "فضائل",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

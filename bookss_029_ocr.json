@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_029",
+    "title_ar": "كشف الغمّة في معرفة الأئمّة - ج2",
+    "title_en": "Revealing the Obscurity in Knowing the Imams - Vol 2",
+    "author_ar": "أبي الحسن علي بن عيسى بن أبي الفتح الأربلي",
+    "author_en": "Abi al-Hasan Ali ibn Isa ibn Abi al-Fath al-Arbali",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "كشف الغمّة في معرفة الأئمّة - ج2 - أبي الحسن علي بن عيسى بن أبي الفتح الأربلي.pdf",
+    "storage_path": "bookss/كشف الغمّة في معرفة الأئمّة - ج2 - أبي الحسن علي بن عيسى بن أبي الفتح الأربلي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "موسوعة في سير الأئمة عليهم السلام - الجزء الثاني",
+    "topics": [
+      "سيرة",
+      "الأئمة",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

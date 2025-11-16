@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_011",
+    "title_ar": "الإمام الفارس علي بن أبي طالب (ع) و معاركه",
+    "title_en": "Imam Ali ibn Abi Talib the Knight and His Battles",
+    "author_ar": "الدكتور طلعت نوري علي بيرقدار",
+    "author_en": "Dr. Tal'at Nuri Ali Bairaqdar",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الإمام الفارس علي بن أبي طالب (ع) و معاركه - الدكتور طلعت نوري علي بيرقدار.pdf",
+    "storage_path": "bookss/الإمام الفارس علي بن أبي طالب (ع) و معاركه - الدكتور طلعت نوري علي بيرقدار.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في معارك أمير المؤمنين علي عليه السلام",
+    "topics": [
+      "الإمام علي",
+      "معارك",
+      "تاريخ",
+      "أهل البيت"
+    ],
+    "category": "تاريخ",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

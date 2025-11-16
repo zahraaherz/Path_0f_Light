@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_017",
+    "title_ar": "الموسوعة الكبرى لأهل البيت (ع), الإمام علي بن أبي طالب (ع)",
+    "title_en": "The Grand Encyclopedia of Ahlul Bayt - Imam Ali ibn Abi Talib",
+    "author_ar": "الشيخ مهدي خليل جعفر",
+    "author_en": "Sheikh Mahdi Khalil Ja'far",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الموسوعة الكبرى لأهل البيت (ع), الإمام علي بن أبي طالب (ع) - الشيخ مهدي خليل جعفر.pdf",
+    "storage_path": "bookss/الموسوعة الكبرى لأهل البيت (ع), الإمام علي بن أبي طالب (ع) - الشيخ مهدي خليل جعفر.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "موسوعة شاملة عن أمير المؤمنين علي بن أبي طالب عليه السلام",
+    "topics": [
+      "الإمام علي",
+      "موسوعة",
+      "أهل البيت"
+    ],
+    "category": "موسوعة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

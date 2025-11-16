@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_015",
+    "title_ar": "الزهراء (ع) صوت كثر واتره و قلّ ناصره",
+    "title_en": "Al-Zahra (as) - A Voice with Many Adversaries and Few Supporters",
+    "author_ar": "السيد فاضل محمد حسين المعموري",
+    "author_en": "Sayyid Fadhil Muhammad Hussein al-Ma'muri",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الزهراء (ع) صوت كثر واتره و قلّ ناصره - السيد فاضل محمد حسين المعموري.pdf",
+    "storage_path": "bookss/الزهراء (ع) صوت كثر واتره و قلّ ناصره - السيد فاضل محمد حسين المعموري.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب عن فاطمة الزهراء عليها السلام",
+    "topics": [
+      "فاطمة الزهراء",
+      "أهل البيت",
+      "سيرة"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

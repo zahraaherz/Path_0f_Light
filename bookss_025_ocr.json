@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_025",
+    "title_ar": "في رحاب الإمام الرؤوف علي بن موسى الرضا (ع)",
+    "title_en": "In the Embrace of the Compassionate Imam Ali ibn Musa al-Ridha",
+    "author_ar": "مجمع البحوث الإسلامية",
+    "author_en": "Islamic Research Assembly",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "في رحاب الإمام الرؤوف علي بن موسى الرضا (ع) - مجمع البحوث الإسلامية.pdf",
+    "storage_path": "bookss/في رحاب الإمام الرؤوف علي بن موسى الرضا (ع) - مجمع البحوث الإسلامية.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسات في حياة الإمام الرضا عليه السلام",
+    "topics": [
+      "الإمام الرضا",
+      "سيرة",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_009",
+    "title_ar": "الإمام السـجّاد (ع) قدوة و أسوة",
+    "title_en": "Imam al-Sajjad (as) - Model and Example",
+    "author_ar": "السيد محمد تقي المدرّسي",
+    "author_en": "Sayyid Muhammad Taqi al-Modarresi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الإمام السـجّاد (ع) قدوة و أسوة - السيد محمد تقي المدرّسي.pdf",
+    "storage_path": "bookss/الإمام السـجّاد (ع) قدوة و أسوة - السيد محمد تقي المدرّسي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في سيرة الإمام زين العابدين عليه السلام",
+    "topics": [
+      "الإمام السجاد",
+      "سيرة",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

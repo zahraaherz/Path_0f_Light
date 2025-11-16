@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_007",
+    "title_ar": "الإمام الحسن (ع), القائد و التاريخ",
+    "title_en": "Imam al-Hassan (as), The Leader and History",
+    "author_ar": "فؤاد الأحمد",
+    "author_en": "Fuad al-Ahmad",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الإمام الحسن (ع), القائد و التاريخ - فؤاد الأحمد.pdf",
+    "storage_path": "bookss/الإمام الحسن (ع), القائد و التاريخ - فؤاد الأحمد.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في سيرة الإمام الحسن المجتبى عليه السلام",
+    "topics": [
+      "الإمام الحسن",
+      "تاريخ",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

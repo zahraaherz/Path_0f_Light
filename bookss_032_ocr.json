@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_032",
+    "title_ar": "معركة السماء في أرض كربلاء",
+    "title_en": "The Battle of Heaven on the Land of Karbala",
+    "author_ar": "الحسين أحمد السيد",
+    "author_en": "al-Husayn Ahmad al-Sayyid",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "معركة السماء في أرض كربلاء - الحسين أحمد السيد.pdf",
+    "storage_path": "bookss/معركة السماء في أرض كربلاء - الحسين أحمد السيد.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في واقعة الطف وكربلاء",
+    "topics": [
+      "كربلاء",
+      "الإمام الحسين",
+      "تاريخ"
+    ],
+    "category": "مقتل",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

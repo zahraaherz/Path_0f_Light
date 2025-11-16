@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_035",
+    "title_ar": "وفاة الإمام الرضا (ع)",
+    "title_en": "The Death of Imam al-Ridha",
+    "author_ar": "الشيخ أحمد بن الشيخ صالح إبن طعّان القديحي القطيفي",
+    "author_en": "Sheikh Ahmad ibn Sheikh Salih ibn Ta'an al-Qudayhi al-Qatifi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "وفاة الإمام الرضا (ع) - الشيخ أحمد بن الشيخ صالح إبن طعّان القديحي القطيفي (1).pdf",
+    "storage_path": "bookss/وفاة الإمام الرضا (ع) - الشيخ أحمد بن الشيخ صالح إبن طعّان القديحي القطيفي (1).pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب عن استشهاد الإمام الرضا عليه السلام",
+    "topics": [
+      "الإمام الرضا",
+      "استشهاد",
+      "تاريخ",
+      "أهل البيت"
+    ],
+    "category": "تاريخ",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

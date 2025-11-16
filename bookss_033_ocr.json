@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_033",
+    "title_ar": "نزهة الأبصار و محاسن الآثار",
+    "title_en": "The Delight of Sights and the Beauties of Traditions",
+    "author_ar": "أبي الحسن علي بن مهدي الطبري المامطيري",
+    "author_en": "Abi al-Hasan Ali ibn Mahdi al-Tabari al-Mamtiri",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "نزهة الأبصار و محاسن الآثار - أبي الحسن علي بن مهدي الطبري المامطيري.pdf",
+    "storage_path": "bookss/نزهة الأبصار و محاسن الآثار - أبي الحسن علي بن مهدي الطبري المامطيري.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب تاريخي في سير الأئمة عليهم السلام",
+    "topics": [
+      "سيرة",
+      "تاريخ",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

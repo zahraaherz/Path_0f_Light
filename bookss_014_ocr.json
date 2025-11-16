@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_014",
+    "title_ar": "الحقّ المبين في قضاء أمير المؤمنين علي بن أبي طالب (ع)",
+    "title_en": "The Clear Truth in the Judgments of Amir al-Mu'minin Ali ibn Abi Talib",
+    "author_ar": "الشيخ حسين علي الشفائي المازندراني",
+    "author_en": "Sheikh Hussein Ali al-Shafa'i al-Mazandarani",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الحقّ المبين في قضاء أمير المؤمنين علي بن أبي طالب (ع) - الشيخ حسين علي الشفائي المازندراني.pdf",
+    "storage_path": "bookss/الحقّ المبين في قضاء أمير المؤمنين علي بن أبي طالب (ع) - الشيخ حسين علي الشفائي المازندراني.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "مجموعة أقضية أمير المؤمنين عليه السلام",
+    "topics": [
+      "قضاء",
+      "الإمام علي",
+      "فقه",
+      "أهل البيت"
+    ],
+    "category": "فقه",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

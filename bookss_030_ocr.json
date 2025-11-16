@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_030",
+    "title_ar": "مأساة الحسين (ع) بين السائل و المجيب",
+    "title_en": "The Tragedy of Husayn Between the Questioner and the Answerer",
+    "author_ar": "الشيخ عبد الوهاب الكاشي",
+    "author_en": "Sheikh Abd al-Wahhab al-Kashi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "مأساة الحسين (ع) بين السائل و المجيب - الشيخ عبد الوهاب الكاشي.pdf",
+    "storage_path": "bookss/مأساة الحسين (ع) بين السائل و المجيب - الشيخ عبد الوهاب الكاشي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب في أسئلة وأجوبة حول واقعة كربلاء",
+    "topics": [
+      "كربلاء",
+      "الإمام الحسين",
+      "أسئلة وأجوبة"
+    ],
+    "category": "مقتل",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

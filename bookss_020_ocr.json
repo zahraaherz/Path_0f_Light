@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_020",
+    "title_ar": "شـرح نهج البلاغة لإبن أبي الحديد المعتزلي, رؤية إعتزالية عن الإمام علي (ع)",
+    "title_en": "Commentary on Nahj al-Balagha by Ibn Abi al-Hadid - A Mu'tazilite Vision of Imam Ali",
+    "author_ar": "جواد كاظم منشد النصر الله",
+    "author_en": "Jawad Kadhim Munshid al-Nasrallah",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "شـرح نهج البلاغة لإبن أبي الحديد المعتزلي, رؤية إعتزالية عن الإمام علي (ع) - جواد كاظم منشد النصر الله.pdf",
+    "storage_path": "bookss/شـرح نهج البلاغة لإبن أبي الحديد المعتزلي, رؤية إعتزالية عن الإمام علي (ع) - جواد كاظم منشد النصر الله.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في شرح نهج البلاغة لابن أبي الحديد المعتزلي",
+    "topics": [
+      "نهج البلاغة",
+      "الإمام علي",
+      "شروح"
+    ],
+    "category": "شروح",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

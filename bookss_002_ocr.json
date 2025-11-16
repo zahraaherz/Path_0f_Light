@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_002",
+    "title_ar": "أساليب الإصلاحات الإجتماعية عند الإمام السجّاد (ع)",
+    "title_en": "Social Reform Methods of Imam al-Sajjad (as)",
+    "author_ar": "السيد محسن الجلالي",
+    "author_en": "Sayyid Mohsen al-Jalali",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "أساليب الإصلاحات الإجتماعية عند الإمام السجّاد (ع) - السيد محسن الجلالي (1).pdf",
+    "storage_path": "bookss/أساليب الإصلاحات الإجتماعية عند الإمام السجّاد (ع) - السيد محسن الجلالي (1).pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في الأساليب الإصلاحية الاجتماعية للإمام السجاد عليه السلام",
+    "topics": [
+      "الإمام السجاد",
+      "إصلاح اجتماعي",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

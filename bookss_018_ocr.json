@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_018",
+    "title_ar": "تاريخ الإمام علي بن أبي طالب (ع) السياسي",
+    "title_en": "The Political History of Imam Ali ibn Abi Talib",
+    "author_ar": "عبدالله بن علي رستم",
+    "author_en": "Abdullah ibn Ali Rustam",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "تاريخ الإمام علي بن أبي طالب (ع) السياسي - عبدالله بن علي رستم.pdf",
+    "storage_path": "bookss/تاريخ الإمام علي بن أبي طالب (ع) السياسي - عبدالله بن علي رستم.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة تاريخية سياسية لحياة أمير المؤمنين عليه السلام",
+    "topics": [
+      "الإمام علي",
+      "تاريخ",
+      "سياسة",
+      "أهل البيت"
+    ],
+    "category": "تاريخ",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_003",
+    "title_ar": "أضواء على حياة الإمام علي (ع)",
+    "title_en": "Lights on the Life of Imam Ali (as)",
+    "author_ar": "السيد مرتضى الحسيني الشيرازي",
+    "author_en": "Sayyid Murtadha al-Husayni al-Shirazi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "أضواء على حياة الإمام علي (ع) - السيد مرتضى الحسيني الشيرازي.pdf",
+    "storage_path": "bookss/أضواء على حياة الإمام علي (ع) - السيد مرتضى الحسيني الشيرازي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسات في حياة أمير المؤمنين علي بن أبي طالب عليه السلام",
+    "topics": [
+      "الإمام علي",
+      "سيرة",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

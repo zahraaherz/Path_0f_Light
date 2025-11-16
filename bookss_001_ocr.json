@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_001",
+    "title_ar": "أحوال الإمام المنتظر (عج)",
+    "title_en": "The Conditions of Imam al-Mahdi (aj)",
+    "author_ar": "السيد نعمة الله الجزائري",
+    "author_en": "Sayyid Ni'matullah al-Jaza'iri",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "أحوال الإمام المنتظر (عج) - السيد نعمة الله الجزائري.pdf",
+    "storage_path": "bookss/أحوال الإمام المنتظر (عج) - السيد نعمة الله الجزائري.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب في أحوال الإمام المهدي المنتظر عليه السلام",
+    "topics": [
+      "الإمام المهدي",
+      "عقائد",
+      "أهل البيت"
+    ],
+    "category": "عقائد",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

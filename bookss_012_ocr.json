@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_012",
+    "title_ar": "الإيقاد في وفيات النبيّ و الزهراء و الأئمّة أجمعين (ع) و تفصيل وقعة الطّف",
+    "title_en": "Al-Iqad on the Deaths of the Prophet, al-Zahra and All Imams and Details of Karbala",
+    "author_ar": "السيد محمد علي الشاه عبد العظيمي",
+    "author_en": "Sayyid Muhammad Ali al-Shah Abd al-Azimi",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "الإيقاد في وفيات النبيّ و الزهراء و الأئمّة أجمعين (ع) و تفصيل وقعة الطّف - السيد محمد علي الشاه عبد العظيمي.pdf",
+    "storage_path": "bookss/الإيقاد في وفيات النبيّ و الزهراء و الأئمّة أجمعين (ع) و تفصيل وقعة الطّف - السيد محمد علي الشاه عبد العظيمي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب تاريخي في وفيات المعصومين عليهم السلام",
+    "topics": [
+      "وفيات",
+      "كربلاء",
+      "أهل البيت",
+      "تاريخ"
+    ],
+    "category": "تاريخ",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

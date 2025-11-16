@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_019",
+    "title_ar": "خديجة الكبرى (ع) أمّ المؤمنين الأولى",
+    "title_en": "Khadija al-Kubra - The First Mother of Believers",
+    "author_ar": "ماجد جياد الخزاعي",
+    "author_en": "Majid Jayad al-Khaza'i",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "خديجة الكبرى (ع) أمّ المؤمنين الأولى - ماجد جياد الخزاعي.pdf",
+    "storage_path": "bookss/خديجة الكبرى (ع) أمّ المؤمنين الأولى - ماجد جياد الخزاعي.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "دراسة في حياة السيدة خديجة الكبرى عليها السلام",
+    "topics": [
+      "خديجة",
+      "السيرة النبوية",
+      "أهل البيت"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

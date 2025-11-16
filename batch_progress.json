@@ -1,0 +1,146 @@
+{
+  "processed": 35,
+  "total": 35,
+  "results": [
+    {
+      "book_id": "bookss_016",
+      "status": "skipped"
+    },
+    {
+      "book_id": "bookss_024",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_003",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_009",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_035",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_014",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_022",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_018",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_031",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_004",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_023",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_030",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_011",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_025",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_006",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_002",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_027",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_017",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_034",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_008",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_010",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_015",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_013",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_020",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_019",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_021",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_033",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_007",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_032",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_012",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_029",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_005",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_028",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_026",
+      "status": "success"
+    },
+    {
+      "book_id": "bookss_001",
+      "status": "success"
+    }
+  ]
+}

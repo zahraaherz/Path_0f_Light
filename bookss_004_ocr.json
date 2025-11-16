@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_004",
+    "title_ar": "أمّ النبيّ (ص), سمو المعنى في سمو الذات",
+    "title_en": "The Mother of the Prophet (s), Sublimity of Meaning in Sublimity of Essence",
+    "author_ar": "حسين علي المصطفى",
+    "author_en": "Hussein Ali al-Mustafa",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "أمّ النبيّ (ص), سمو المعنى في سمو الذات - حسين علي المصطفى.pdf",
+    "storage_path": "bookss/أمّ النبيّ (ص), سمو المعنى في سمو الذات - حسين علي المصطفى.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "كتاب عن أم النبي محمد صلى الله عليه وآله",
+    "topics": [
+      "السيرة النبوية",
+      "أم النبي",
+      "سيرة"
+    ],
+    "category": "سيرة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

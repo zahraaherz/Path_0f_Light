@@ -1,0 +1,32 @@
+{
+  "book": {
+    "id": "bookss_027",
+    "title_ar": "قضاء أمير المؤمنين عليّ بن أبي طالب (ع)",
+    "title_en": "The Judgments of Amir al-Mu'minin Ali ibn Abi Talib",
+    "author_ar": "الشيخ محمد تقي التستري",
+    "author_en": "Sheikh Muhammad Taqi al-Tustari",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "قضاء أمير المؤمنين عليّ بن أبي طالب (ع) - الشيخ محمد تقي التستري.pdf",
+    "storage_path": "bookss/قضاء أمير المؤمنين عليّ بن أبي طالب (ع) - الشيخ محمد تقي التستري.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "مجموعة من أقضية أمير المؤمنين علي عليه السلام",
+    "topics": [
+      "قضاء",
+      "الإمام علي",
+      "فقه",
+      "أهل البيت"
+    ],
+    "category": "فقه",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}

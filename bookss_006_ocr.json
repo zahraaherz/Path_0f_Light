@@ -1,0 +1,31 @@
+{
+  "book": {
+    "id": "bookss_006",
+    "title_ar": "إسبوع الإمام (ع) (مجموعة محاضرات)",
+    "title_en": "The Imam's Week (Collection of Lectures)",
+    "author_ar": "المجمع الثقافي الديني",
+    "author_en": "Religious Cultural Assembly",
+    "total_sections": 0,
+    "total_paragraphs": 0,
+    "language": "ar",
+    "pdf_url": "",
+    "original_filename": "إسبوع الإمام (ع) (مجموعة محاضرات) - المجمع الثقافي الديني.pdf",
+    "storage_path": "bookss/إسبوع الإمام (ع) (مجموعة محاضرات) - المجمع الثقافي الديني.pdf",
+    "version": "1.0",
+    "content_status": "draft",
+    "description": "مجموعة محاضرات حول الأئمة عليهم السلام",
+    "topics": [
+      "أهل البيت",
+      "محاضرات",
+      "ثقافة إسلامية"
+    ],
+    "category": "ثقافة",
+    "processing_status": "completed",
+    "total_pages": 0,
+    "total_characters": 0,
+    "total_words": 0,
+    "extraction_method": "ocr_space_api"
+  },
+  "sections": [],
+  "paragraphs": []
+}
