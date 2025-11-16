@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/quiz/quiz_models.dart';
@@ -21,6 +22,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final categoriesAsync = ref.watch(quizCategoriesProvider);
     final energyStatus = ref.watch(energyStatusProvider);
     final quizState = ref.watch(quizSessionProvider);
@@ -40,20 +42,20 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // Islamic Header
             Container(
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(r.paddingLarge),
               decoration: BoxDecoration(
                 color: AppTheme.islamicGreen.withOpacity(0.05),
                 border: Border.all(
                   color: AppTheme.islamicGreen.withOpacity(0.3),
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Column(
                 children: [
@@ -62,7 +64,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     size: 48,
                     color: AppTheme.primaryTeal,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
                   Text(
                     'اِختَبِر مَعرِفَتَك',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -71,7 +73,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     'Test Your Knowledge',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -79,7 +81,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     '10 questions • Earn points • Build streaks',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -91,7 +93,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Energy Check
             energyStatus.when(
@@ -100,7 +102,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                 final hasEnough = status.currentEnergy >= energyNeeded;
 
                 return Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: EdgeInsets.all(r.paddingMedium),
                   decoration: BoxDecoration(
                     color: hasEnough
                         ? AppTheme.success.withOpacity(0.05)
@@ -111,7 +113,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                           : AppTheme.error.withOpacity(0.3),
                       width: 1,
                     ),
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(r.radiusMedium),
                   ),
                   child: Row(
                     children: [
@@ -120,7 +122,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                         color: hasEnough ? AppTheme.success : AppTheme.error,
                         size: 24,
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: r.spaceSmall),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -150,7 +152,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               error: (_, __) => const SizedBox.shrink(),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: r.spaceLarge),
 
             // Category Selection
             Text(
@@ -166,7 +168,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     color: AppTheme.textSecondary,
                   ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.spaceSmall),
             categoriesAsync.when(
               data: (categories) {
                 return Wrap(
@@ -190,7 +192,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               error: (_, __) => const Text('Failed to load categories'),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Difficulty Selection
             Text(
@@ -206,7 +208,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     color: AppTheme.textSecondary,
                   ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.spaceSmall),
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -226,7 +228,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               ],
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Language Selection
             Text(
@@ -235,7 +237,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     fontWeight: FontWeight.bold,
                   ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.spaceSmall),
             Row(
               children: [
                 Expanded(
@@ -248,7 +250,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                     onTap: () => setState(() => selectedLanguage = 'en'),
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: r.spaceSmall),
                 Expanded(
                   child: _LanguageCard(
                     language: 'ar',
@@ -262,7 +264,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
               ],
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: r.spaceLarge),
 
             // Start Quiz Button
             SizedBox(
@@ -287,28 +289,28 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                   backgroundColor: AppTheme.primaryTeal,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(r.radiusMedium),
                   ),
                 ),
               ),
             ),
 
             if (quizState.error != null) ...[
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: EdgeInsets.all(r.paddingSmall),
                 decoration: BoxDecoration(
                   color: AppTheme.error.withOpacity(0.05),
                   border: Border.all(
                     color: AppTheme.error.withOpacity(0.3),
                     width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(r.radiusMedium),
                 ),
                 child: Row(
                   children: [
                     const Icon(Icons.error_outline, color: AppTheme.error, size: 20),
-                    const SizedBox(width: 12),
+                    SizedBox(width: r.spaceSmall),
                     Expanded(
                       child: Text(
                         quizState.error!,
@@ -358,6 +360,7 @@ class _CategoryChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(20),
@@ -412,6 +415,7 @@ class _DifficultyChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(20),
@@ -481,18 +485,19 @@ class _LanguageCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(r.radiusMedium),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         decoration: BoxDecoration(
           color: selected ? AppTheme.primaryTeal.withOpacity(0.05) : Colors.transparent,
           border: Border.all(
             color: selected ? AppTheme.primaryTeal : Colors.grey.shade300,
             width: selected ? 2 : 1,
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Column(
           children: [
@@ -501,7 +506,7 @@ class _LanguageCard extends StatelessWidget {
               color: selected ? AppTheme.primaryTeal : AppTheme.textSecondary,
               size: 32,
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             Text(
               label,
               style: TextStyle(

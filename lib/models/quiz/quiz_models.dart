@@ -88,6 +88,9 @@ class AnswerResult with _$AnswerResult {
     required int energyConsumed,
     required int energyRemaining,
     required AnswerSource source,
+    String? explanationAr,
+    String? bookTitleAr,
+    String? bookTitleEn,
   }) = _AnswerResult;
 
   factory AnswerResult.fromJson(Map<String, dynamic> json) =>
@@ -102,10 +105,59 @@ class AnswerSource with _$AnswerSource {
     required String paragraphId,
     required int pageNumber,
     required String quote,
+    String? exactQuoteAr,
+    String? bookTitle,
   }) = _AnswerSource;
 
   factory AnswerSource.fromJson(Map<String, dynamic> json) =>
       _$AnswerSourceFromJson(json);
+}
+
+/// Question type enum
+enum QuestionType {
+  multipleChoice,
+  trueFalse,
+  fillInBlank,
+  matching,
+}
+
+/// Enhanced question model matching the JSON structure
+@freezed
+class EnhancedQuestion with _$EnhancedQuestion {
+  const factory EnhancedQuestion({
+    required String id,
+    required String category,
+    required String difficulty,
+    required String questionAr,
+    required String questionEn,
+    required Map<String, Map<String, String>> options, // {"A": {"text_ar": "", "text_en": ""}}
+    required String correctAnswer,
+    required QuestionSource source,
+    required String explanationAr,
+    required String explanationEn,
+    required int points,
+    @Default(QuestionType.multipleChoice) QuestionType questionType,
+    @Default(false) bool verified,
+  }) = _EnhancedQuestion;
+
+  factory EnhancedQuestion.fromJson(Map<String, dynamic> json) =>
+      _$EnhancedQuestionFromJson(json);
+}
+
+/// Question source information
+@freezed
+class QuestionSource with _$QuestionSource {
+  const factory QuestionSource({
+    required String paragraphId,
+    required String bookId,
+    required String exactQuoteAr,
+    required int pageNumber,
+    String? bookTitleAr,
+    String? bookTitleEn,
+  }) = _QuestionSource;
+
+  factory QuestionSource.fromJson(Map<String, dynamic> json) =>
+      _$QuestionSourceFromJson(json);
 }
 
 /// Quiz completion summary

@@ -43,6 +43,20 @@ export {
   getQuestionSource,
 } from "./quizManagement";
 
+// Export Enhanced Quiz Functions (NEW - Multiple Question Types, Challenges)
+export {
+  getQuizQuestions as getEnhancedQuestions,
+  submitAnswer,
+  createQuizSession,
+  completeQuizSession,
+  findRandomMatch,
+  createChallenge,
+  acceptChallenge,
+  updateChallengeProgress,
+  completeChallenge,
+  saveBookToCollection,
+} from "./quizFunctions";
+
 // Export Content Management Functions
 export {
   insertBook,
@@ -83,3 +97,19 @@ export {
   reportParagraph,
   addToCollection,
 } from "./bookReadingManagement";
+// Export Reminder Management Functions
+export {
+  processReminders,
+  processPrayerReminders,
+  onReminderWrite,
+} from "./reminderManagement";
+
+// Export Notification Service Functions
+export {
+  registerFCMToken,
+  unregisterFCMToken,
+  sendTestNotification,
+  sendAdminAnnouncement,
+  cleanupOldTokens,
+  onUserDeleted as onUserDeletedCleanupTokens,
+} from "./notificationService";

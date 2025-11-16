@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
+import '../../providers/guest_access_providers.dart';
 import '../home/home_screen.dart';
 
 class RegisterScreen extends ConsumerStatefulWidget {
@@ -43,11 +46,39 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
       return;
     }
 
-    final success = await ref.read(authControllerProvider.notifier).registerWithEmailAndPassword(
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to email
+      try {
+        final guestService = ref.read(guestAccessServiceProvider);
+        await guestService.linkToEmailAccount(
           email: _emailController.text.trim(),
           password: _passwordController.text,
-          displayName: _nameController.text.trim(),
         );
+        success = true;
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular registration
+      success = await ref.read(authControllerProvider.notifier).registerWithEmailAndPassword(
+        email: _emailController.text.trim(),
+        password: _passwordController.text,
+        displayName: _nameController.text.trim(),
+      );
+    }
 
     if (success && mounted) {
       // Show success dialog
@@ -58,13 +89,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
           title: Row(
             children: [
               Icon(Icons.check_circle, color: AppTheme.success, size: 32),
-              const SizedBox(width: 12),
-              const Text('Account Created!'),
+              SizedBox(width: r.spaceSmall),
+              Text(isGuest ? 'Account Linked!' : 'Account Created!'),
             ],
           ),
-          content: const Text(
-            'Your account has been created successfully. '
-            'Please check your email to verify your account.',
+          content: Text(
+            isGuest
+              ? 'Your guest data has been linked to your new account. You can now sign in on any device!'
+              : 'Your account has been created successfully. Please check your email to verify your account.',
           ),
           actions: [
             ElevatedButton(
@@ -83,7 +115,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleGoogleSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Google
+      try {
+        final googleAuth = await ref.read(authControllerProvider.notifier).getGoogleCredential();
+        if (googleAuth != null) {
+          final guestService = ref.read(guestAccessServiceProvider);
+          await guestService.linkToGoogleAccount(googleAuth);
+          success = true;
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Google account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Google sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
@@ -92,7 +155,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleAppleSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithApple();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Apple
+      try {
+        final appleAuth = await ref.read(authControllerProvider.notifier).getAppleCredential();
+        if (appleAuth != null) {
+          final guestService = ref.read(guestAccessServiceProvider);
+          await guestService.linkToAppleAccount(appleAuth);
+          success = true;
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Apple account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Apple sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithApple();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
@@ -101,7 +195,38 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleFacebookSignIn() async {
-    final success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+    // Check if current user is anonymous (guest)
+    final currentUser = FirebaseAuth.instance.currentUser;
+    final isGuest = currentUser != null && currentUser.isAnonymous;
+
+    bool success;
+    if (isGuest) {
+      // Link anonymous account to Facebook
+      try {
+        final fbAuth = await ref.read(authControllerProvider.notifier).getFacebookCredential();
+        if (fbAuth != null) {
+          // Note: Facebook linking would need to be added to GuestAccessService
+          // For now, fall back to regular sign-in
+          success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+        } else {
+          return;
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Failed to link Facebook account: $e'),
+              backgroundColor: AppTheme.error,
+            ),
+          );
+        }
+        return;
+      }
+    } else {
+      // Regular Facebook sign-in
+      success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
+    }
+
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => const HomeScreen()),
@@ -111,6 +236,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final authState = ref.watch(authControllerProvider);
 
     ref.listen<AuthState>(authControllerProvider, (previous, next) {
@@ -151,13 +277,13 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       child: Icon(Icons.person_add, size: 48, color: Colors.white),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
                   Text('Join Path of Light', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text('Create an account to start your learning journey',
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppTheme.textSecondary),
                       textAlign: TextAlign.center),
-                  const SizedBox(height: 32),
+                  SizedBox(height: r.spaceLarge),
                   TextFormField(
                     controller: _nameController,
                     decoration: const InputDecoration(labelText: 'Full Name', hintText: 'Enter your name', prefixIcon: Icon(Icons.person_outline)),
@@ -165,7 +291,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     textCapitalization: TextCapitalization.words,
                     validator: (v) => v == null || v.isEmpty ? 'Please enter your name' : v.length < 2 ? 'Name must be at least 2 characters' : null,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _emailController,
                     decoration: const InputDecoration(labelText: 'Email', hintText: 'your@email.com', prefixIcon: Icon(Icons.email_outlined)),
@@ -173,7 +299,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     textInputAction: TextInputAction.next,
                     validator: (v) => v == null || v.isEmpty ? 'Please enter your email' : !v.contains('@') || !v.contains('.') ? 'Please enter a valid email' : null,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _passwordController,
                     decoration: InputDecoration(
@@ -189,7 +315,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     textInputAction: TextInputAction.next,
                     validator: (v) => v == null || v.isEmpty ? 'Please enter a password' : v.length < 6 ? 'Password must be at least 6 characters' : null,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _confirmPasswordController,
                     decoration: InputDecoration(
@@ -206,7 +332,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     onFieldSubmitted: (_) => _handleRegister(),
                     validator: (v) => v == null || v.isEmpty ? 'Please confirm your password' : v != _passwordController.text ? 'Passwords do not match' : null,
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
                   Row(
                     children: [
                       Checkbox(value: _agreeToTerms, onChanged: (v) => setState(() => _agreeToTerms = v ?? false), activeColor: AppTheme.primaryTeal),
@@ -234,7 +360,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
                   SizedBox(
                     height: 50,
                     child: ElevatedButton(
@@ -244,15 +370,15 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                           : const Text('Create Account'),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
                   Row(
                     children: [
                       const Expanded(child: Divider()),
-                      Padding(padding: const EdgeInsets.symmetric(horizontal: 16), child: Text('OR SIGN UP WITH', style: Theme.of(context).textTheme.bodySmall)),
+                      Padding(padding: EdgeInsets.symmetric(horizontal: r.paddingMedium), child: Text('OR SIGN UP WITH', style: Theme.of(context).textTheme.bodySmall)),
                       const Expanded(child: Divider()),
                     ],
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -261,7 +387,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       _SocialSignInButton(onPressed: authState.isLoading ? null : _handleFacebookSignIn, icon: Icons.facebook, label: 'Facebook', color: const Color(0xFF1877F2)),
                     ],
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: r.spaceLarge),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -289,6 +415,7 @@ class _SocialSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Column(
       children: [
         Container(
@@ -296,7 +423,7 @@ class _SocialSignInButton extends StatelessWidget {
           height: 56,
           decoration: BoxDecoration(
             color: color.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(r.radiusMedium),
             border: Border.all(color: color.withOpacity(0.3), width: 1),
           ),
           child: IconButton(onPressed: onPressed, icon: Icon(icon, color: color, size: 28)),
