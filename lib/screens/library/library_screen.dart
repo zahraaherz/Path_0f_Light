@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../providers/library_providers.dart';
 import '../../providers/auth_providers.dart';
 import 'book_reader_screen.dart';
 import '../auth/login_screen.dart';
+import '../../utils/responsive.dart';
 
 class LibraryScreen extends ConsumerStatefulWidget {
   const LibraryScreen({Key? key}) : super(key: key);
@@ -28,6 +30,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final booksAsync = ref.watch(publishedBooksProvider);
     final authUser = ref.watch(currentAuthUserProvider);
 
@@ -53,7 +56,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
           // Login button if not authenticated
           if (authUser == null)
             IconButton(
-              icon: const Icon(Icons.login, color: Colors.white),
+              icon: Icon(Icons.login, color: Colors.white),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (_) => const LoginScreen()),
@@ -67,7 +70,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
         children: [
           // Search bar
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(r.paddingMedium),
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
@@ -85,16 +88,16 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                       )
                     : null,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(r.radiusMedium),
                   borderSide: BorderSide(color: AppTheme.primaryTeal.withOpacity(0.3)),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(r.radiusMedium),
                   borderSide: BorderSide(color: Colors.grey.shade300),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: const BorderSide(color: AppTheme.primaryTeal, width: 2),
+                  borderRadius: BorderRadius.circular(r.radiusMedium),
+                  borderSide: BorderSide(color: AppTheme.primaryTeal, width: 2),
                 ),
                 filled: true,
                 fillColor: Colors.grey[50],
@@ -127,10 +130,10 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                           _searchQuery.isEmpty
                               ? Icons.menu_book
                               : Icons.search_off,
-                          size: 64,
+                          size: r.iconLarge * 2,
                           color: AppTheme.textSecondary.withOpacity(0.5),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: r.spaceMedium),
                         Text(
                           _searchQuery.isEmpty
                               ? 'No books available'
@@ -160,15 +163,15 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
-                    const SizedBox(height: 16),
+                    Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: AppTheme.error),
+                    SizedBox(height: r.spaceMedium),
                     Text(
                       'Failed to load books',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: AppTheme.textSecondary,
                           ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: r.spaceSmall),
                     ElevatedButton(
                       onPressed: () {
                         ref.invalidate(publishedBooksProvider);
@@ -176,7 +179,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.primaryTeal,
                       ),
-                      child: const Text('Retry'),
+                      child: Text('Retry'),
                     ),
                   ],
                 ),
@@ -189,13 +192,14 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
   }
 
   Widget _buildGridView(List<Book> books) {
+    final r = context.responsive;
     return GridView.builder(
-      padding: const EdgeInsets.all(16),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      padding: EdgeInsets.all(r.paddingMedium),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 0.65,
-        crossAxisSpacing: 16,
-        mainAxisSpacing: 16,
+        crossAxisSpacing: r.spaceMedium,
+        mainAxisSpacing: r.spaceMedium,
       ),
       itemCount: books.length,
       itemBuilder: (context, index) {
@@ -304,7 +308,7 @@ class _BookGridCard extends ConsumerWidget {
                     ),
 
                     // Reading progress (if available)
-                    // TODO: Add reading progress indicator
+                    _buildProgressIndicator(ref),
                   ],
                 ),
               ),
@@ -315,20 +319,34 @@ class _BookGridCard extends ConsumerWidget {
     );
   }
 
+  Widget _buildProgressIndicator(WidgetRef ref) {
+    final progressAsync = ref.watch(readingProgressProvider(book.id));
+
+    return progressAsync.when(
+      data: (progress) {
+        if (progress == null || progress.progressPercentage == 0) {
+          return const SizedBox.shrink();
+        }
+        return LinearPercentIndicator(
+          padding: EdgeInsets.zero,
+          lineHeight: 4,
+          percent: progress.progressPercentage / 100,
+          backgroundColor: Colors.grey[300],
+          progressColor: AppTheme.primaryTeal,
+          barRadius: const Radius.circular(2),
+        );
+      },
+      loading: () => const SizedBox.shrink(),
+      error: (_, __) => const SizedBox.shrink(),
+    );
+  }
+
   void _openBook(BuildContext context, WidgetRef ref) async {
-    // TODO: Fetch book paragraphs from repository
-    // For now, show a placeholder
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(book.titleAr, textDirection: TextDirection.rtl),
-        content: const Text('Book reader will load here.\n\nYou need to fetch paragraphs from Firestore first.'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
-          ),
-        ],
+    // Navigate to BookReaderScreen
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => BookReaderScreen(book: book),
       ),
     );
   }
@@ -402,18 +420,11 @@ class _BookListCard extends ConsumerWidget {
         ),
         trailing: Icon(Icons.chevron_right, color: AppTheme.primaryTeal),
         onTap: () {
-          // TODO: Navigate to book reader
-          showDialog(
-            context: context,
-            builder: (context) => AlertDialog(
-              title: Text(book.titleAr, textDirection: TextDirection.rtl),
-              content: const Text('Book reader will load here.'),
-              actions: [
-                TextButton(
-                  onPressed: () => Navigator.pop(context),
-                  child: const Text('Close'),
-                ),
-              ],
+          // Navigate to book reader
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => BookReaderScreen(book: book),
             ),
           );
         },

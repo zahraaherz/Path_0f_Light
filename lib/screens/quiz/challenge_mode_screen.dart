@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/enhanced_quiz_providers.dart';
+import '../../utils/responsive.dart';
 
 class ChallengeModeScreen extends ConsumerStatefulWidget {
   const ChallengeModeScreen({super.key});
@@ -110,6 +111,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Scaffold(
       backgroundColor: AppTheme.backgroundLight,
       appBar: AppBar(
@@ -141,13 +143,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   Widget _buildRandomMatchTab() {
+    final r = context.responsive;
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(r.paddingLarge),
       child: Column(
         children: [
           // Random Match Card
           Container(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(r.paddingLarge),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -157,71 +160,71 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(r.radiusLarge),
               boxShadow: [
                 BoxShadow(
                   color: AppTheme.primaryTeal.withOpacity(0.3),
                   blurRadius: 15,
-                  offset: const Offset(0, 5),
+                  offset: Offset(0, 5),
                 ),
               ],
             ),
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.2),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.shuffle,
-                    size: 64,
+                    size: r.iconLarge * 2,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 20),
-                const Text(
+                SizedBox(height: r.spaceLarge),
+                Text(
                   'Random Match',
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: r.fontLarge * 1.4,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 12),
-                const Text(
+                SizedBox(height: r.spaceSmall),
+                Text(
                   'Challenge a random player with similar skill level',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: r.fontMedium,
                     color: Colors.white,
                     height: 1.4,
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
                 SizedBox(
                   width: double.infinity,
-                  height: 56,
+                  height: r.buttonHeight,
                   child: ElevatedButton(
                     onPressed: _findRandomMatch,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppTheme.goldAccent,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(r.radiusMedium),
                       ),
                       elevation: 8,
                     ),
-                    child: const Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.search, size: 24),
-                        SizedBox(width: 12),
+                        Icon(Icons.search, size: r.iconMedium),
+                        SizedBox(width: r.spaceSmall),
                         Text(
                           'Find Match',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: r.fontLarge,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -233,18 +236,18 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
             ),
           ),
 
-          const SizedBox(height: 32),
+          SizedBox(height: r.spaceXLarge),
 
           // Difficulty Selection
           _buildSectionTitle('Select Difficulty'),
-          const SizedBox(height: 16),
+          SizedBox(height: r.spaceMedium),
           _buildDifficultyOptions(),
 
-          const SizedBox(height: 32),
+          SizedBox(height: r.spaceXLarge),
 
           // Category Selection
           _buildSectionTitle('Select Category'),
-          const SizedBox(height: 16),
+          SizedBox(height: r.spaceMedium),
           _buildCategoryOptions(),
         ],
       ),
@@ -252,6 +255,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   Widget _buildFriendsTab() {
+    final r = context.responsive;
     final filteredFriends = _friends.where((friend) {
       if (searchQuery.isEmpty) return true;
       return friend['name'].toLowerCase().contains(searchQuery.toLowerCase()) ||
@@ -262,16 +266,16 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
       children: [
         // Search Bar
         Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: TextField(
             controller: _searchController,
             onChanged: (value) => setState(() => searchQuery = value),
             decoration: InputDecoration(
               hintText: 'Search friends...',
-              prefixIcon: const Icon(Icons.search),
+              prefixIcon: Icon(Icons.search),
               suffixIcon: searchQuery.isNotEmpty
                   ? IconButton(
-                      icon: const Icon(Icons.clear),
+                      icon: Icon(Icons.clear),
                       onPressed: () {
                         _searchController.clear();
                         setState(() => searchQuery = '');
@@ -281,10 +285,10 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
               filled: true,
               fillColor: Colors.white,
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
                 borderSide: BorderSide.none,
               ),
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              contentPadding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: r.paddingSmall),
             ),
           ),
         ),
@@ -298,14 +302,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                     children: [
                       Icon(
                         Icons.search_off,
-                        size: 64,
+                        size: r.iconLarge * 2,
                         color: Colors.grey.shade400,
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: r.spaceMedium),
                       Text(
                         'No friends found',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: r.fontLarge,
                           color: Colors.grey.shade600,
                         ),
                       ),
@@ -313,7 +317,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                   ),
                 )
               : ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                   itemCount: filteredFriends.length,
                   itemBuilder: (context, index) {
                     return _buildPlayerCard(filteredFriends[index]);
@@ -325,8 +329,9 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   Widget _buildTopPlayersTab() {
+    final r = context.responsive;
     return ListView.builder(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(r.paddingMedium),
       itemCount: _topPlayers.length,
       itemBuilder: (context, index) {
         final player = _topPlayers[index];
@@ -336,13 +341,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   Widget _buildPlayerCard(Map<String, dynamic> player, {bool showRank = false}) {
+    final r = context.responsive;
     final isOnline = player['status'] == 'online';
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: EdgeInsets.only(bottom: r.spaceSmall),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
         border: Border.all(
           color: isOnline ? AppTheme.success.withOpacity(0.3) : Colors.grey.shade200,
           width: 2,
@@ -351,22 +357,22 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
       child: InkWell(
         onTap: () => _challengePlayer(player),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: Row(
             children: [
               // Rank Badge (for top players)
               if (showRank) ...[
                 Container(
-                  width: 40,
-                  height: 40,
+                  width: r.iconLarge,
+                  height: r.iconLarge,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: _getRankGradient(player['rank']),
@@ -376,28 +382,28 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                   child: Center(
                     child: Text(
                       '#${player['rank']}',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        fontSize: 14,
+                        fontSize: r.fontSmall,
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(width: 12),
+                SizedBox(width: r.spaceSmall),
               ],
 
               // Avatar
               Stack(
                 children: [
                   CircleAvatar(
-                    radius: 30,
+                    radius: r.iconLarge * 0.75,
                     backgroundColor: AppTheme.primaryTeal,
                     child: Text(
                       player['avatar'],
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: r.fontLarge,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -406,8 +412,8 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                     bottom: 0,
                     right: 0,
                     child: Container(
-                      width: 16,
-                      height: 16,
+                      width: r.paddingMedium,
+                      height: r.paddingMedium,
                       decoration: BoxDecoration(
                         color: isOnline ? AppTheme.success : Colors.grey,
                         shape: BoxShape.circle,
@@ -418,7 +424,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                 ],
               ),
 
-              const SizedBox(width: 16),
+              SizedBox(width: r.spaceMedium),
 
               // Player Info
               Expanded(
@@ -427,30 +433,30 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                   children: [
                     Text(
                       player['name'],
-                      style: const TextStyle(
-                        fontSize: 16,
+                      style: TextStyle(
+                        fontSize: r.fontMedium,
                         fontWeight: FontWeight.bold,
                         color: AppTheme.textPrimary,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: r.spaceXSmall),
                     Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                          padding: EdgeInsets.symmetric(horizontal: r.paddingSmall, vertical: 2),
                           decoration: BoxDecoration(
                             color: AppTheme.goldAccent.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(r.radiusSmall),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              const Icon(Icons.star, size: 12, color: AppTheme.goldAccent),
-                              const SizedBox(width: 4),
+                              Icon(Icons.star, size: r.fontSmall, color: AppTheme.goldAccent),
+                              SizedBox(width: r.spaceXSmall),
                               Text(
                                 'Level ${player['level']}',
-                                style: const TextStyle(
-                                  fontSize: 12,
+                                style: TextStyle(
+                                  fontSize: r.fontSmall,
                                   fontWeight: FontWeight.w600,
                                   color: AppTheme.goldAccent,
                                 ),
@@ -458,11 +464,11 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                             ],
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        SizedBox(width: r.spaceSmall),
                         Text(
                           '${player['wins']} wins',
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: r.fontSmall,
                             color: Colors.grey.shade600,
                           ),
                         ),
@@ -474,19 +480,19 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
               // Score
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingSmall, vertical: r.paddingSmall),
                 decoration: BoxDecoration(
                   color: AppTheme.info.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(r.radiusSmall),
                 ),
                 child: Column(
                   children: [
-                    const Icon(Icons.emoji_events, color: AppTheme.info, size: 20),
-                    const SizedBox(height: 4),
+                    Icon(Icons.emoji_events, color: AppTheme.info, size: r.iconMedium),
+                    SizedBox(height: r.spaceXSmall),
                     Text(
                       '${player['score']}',
-                      style: const TextStyle(
-                        fontSize: 14,
+                      style: TextStyle(
+                        fontSize: r.fontSmall,
                         fontWeight: FontWeight.bold,
                         color: AppTheme.info,
                       ),
@@ -495,19 +501,19 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                 ),
               ),
 
-              const SizedBox(width: 8),
+              SizedBox(width: r.spaceSmall),
 
               // Challenge Button
               Container(
-                padding: const EdgeInsets.all(8),
+                padding: EdgeInsets.all(r.paddingSmall),
                 decoration: BoxDecoration(
                   color: isOnline ? AppTheme.primaryTeal : Colors.grey,
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.sports_martial_arts,
                   color: Colors.white,
-                  size: 20,
+                  size: r.iconMedium,
                 ),
               ),
             ],
@@ -518,12 +524,13 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   Widget _buildSectionTitle(String title) {
+    final r = context.responsive;
     return Align(
       alignment: Alignment.centerLeft,
       child: Text(
         title,
-        style: const TextStyle(
-          fontSize: 20,
+        style: TextStyle(
+          fontSize: r.fontLarge,
           fontWeight: FontWeight.bold,
           color: AppTheme.textPrimary,
         ),
@@ -580,25 +587,26 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
     required Color color,
     required IconData icon,
   }) {
+    final r = context.responsive;
     return InkWell(
       onTap: () {},
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(r.radiusMedium),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: r.paddingSmall),
         decoration: BoxDecoration(
           color: color.withOpacity(0.1),
           border: Border.all(color: color.withOpacity(0.3), width: 1.5),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 18, color: color),
-            const SizedBox(width: 8),
+            Icon(icon, size: r.fontLarge, color: color),
+            SizedBox(width: r.spaceSmall),
             Text(
               label,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: r.fontSmall,
                 fontWeight: FontWeight.w600,
                 color: color,
               ),
@@ -623,34 +631,35 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   void _findRandomMatch() {
+    final r = context.responsive;
     showDialog(
       context: context,
       barrierDismissible: false,
-      builder: (context) => const Center(
+      builder: (context) => Center(
         child: Card(
-          margin: EdgeInsets.all(32),
+          margin: EdgeInsets.all(r.paddingXLarge),
           child: Padding(
-            padding: EdgeInsets.all(24),
+            padding: EdgeInsets.all(r.paddingLarge),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primaryTeal),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: r.spaceLarge),
                 Text(
                   'Finding a match...',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: r.fontLarge,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   'Please wait while we match you with a player',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: r.fontSmall,
                     color: AppTheme.textSecondary,
                   ),
                 ),
@@ -669,13 +678,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   void _challengePlayer(Map<String, dynamic> player) {
+    final r = context.responsive;
     if (player['status'] != 'online') {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('${player['name']} is currently offline'),
           backgroundColor: AppTheme.error,
           behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusSmall)),
         ),
       );
       return;
@@ -685,13 +695,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   void _showMatchFoundDialog(Map<String, dynamic> player) {
+    final r = context.responsive;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusLarge)),
         contentPadding: EdgeInsets.zero,
         content: Container(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(r.paddingLarge),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -701,35 +712,35 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(r.radiusLarge),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(
+              Icon(
                 Icons.sports_martial_arts,
-                size: 64,
+                size: r.iconLarge * 2,
                 color: AppTheme.goldAccent,
               ),
-              const SizedBox(height: 16),
-              const Text(
+              SizedBox(height: r.spaceMedium),
+              Text(
                 'Match Found!',
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: r.fontLarge * 1.2,
                   fontWeight: FontWeight.bold,
                   color: AppTheme.textPrimary,
                 ),
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
               Text(
                 'You will challenge ${player['name']}',
                 textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: r.fontMedium,
                   color: AppTheme.textSecondary,
                 ),
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Row(
                 children: [
                   Expanded(
@@ -739,14 +750,14 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                         foregroundColor: AppTheme.textSecondary,
                         side: BorderSide(color: Colors.grey.shade300, width: 2),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(r.radiusMedium),
                         ),
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: r.paddingSmall),
                       ),
-                      child: const Text('Cancel'),
+                      child: Text('Cancel'),
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  SizedBox(width: r.spaceSmall),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
@@ -756,11 +767,11 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.primaryTeal,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(r.radiusMedium),
                         ),
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: r.paddingSmall),
                       ),
-                      child: const Text('Start'),
+                      child: Text('Start'),
                     ),
                   ),
                 ],
@@ -773,12 +784,13 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   }
 
   void _startChallenge(Map<String, dynamic> player) async {
+    final r = context.responsive;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Starting challenge with ${player['name']}...'),
         backgroundColor: AppTheme.success,
         behavior: SnackBarBehavior.floating,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusSmall)),
       ),
     );
 

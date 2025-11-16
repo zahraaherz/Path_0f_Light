@@ -13,6 +13,7 @@ import '../../widgets/reading/table_of_contents_sheet.dart';
 import '../../widgets/reading/bookmarks_list_sheet.dart';
 import '../../widgets/reading/search_in_book_sheet.dart';
 import '../auth/login_screen.dart';
+import '../../utils/responsive.dart';
 
 class BookReaderScreen extends ConsumerStatefulWidget {
   final Book book;
@@ -272,6 +273,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final preferences = ref.watch(readingPreferencesProvider);
     final progressPercentage = widget.paragraphs.isEmpty
         ? 0.0
@@ -340,7 +342,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
               itemScrollController: _scrollController,
               itemPositionsListener: _positionsListener,
               itemCount: widget.paragraphs.length,
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(r.paddingMedium),
               itemBuilder: (context, index) {
                 return ParagraphWidget(
                   paragraph: widget.paragraphs[index],
@@ -354,7 +356,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
 
           // Bottom bar with page info
           Container(
-            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+            padding: EdgeInsets.symmetric(vertical: r.paddingSmall, horizontal: r.paddingMedium),
             decoration: BoxDecoration(
               color: backgroundColor,
               boxShadow: [
@@ -370,13 +372,13 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
               children: [
                 Text(
                   'Page ${_currentParagraphIndex + 1} of ${widget.paragraphs.length}',
-                  style: TextStyle(color: textColor, fontSize: 14),
+                  style: TextStyle(color: textColor, fontSize: r.fontMedium),
                 ),
                 Text(
                   '${progressPercentage.toStringAsFixed(1)}%',
                   style: TextStyle(
                     color: textColor,
-                    fontSize: 14,
+                    fontSize: r.fontMedium,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -396,7 +398,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
             backgroundColor: _isAutoScrolling ? AppTheme.error : AppTheme.primaryTeal,
             child: Icon(_isAutoScrolling ? Icons.pause : Icons.play_arrow),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: r.paddingSmall),
 
           // Table of contents button
           FloatingActionButton(

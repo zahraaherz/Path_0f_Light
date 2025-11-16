@@ -7,6 +7,7 @@ import '../../widgets/dashboard/prayer_times_widget.dart';
 import '../../widgets/dashboard/islamic_calendar_widget.dart';
 import '../../widgets/dashboard/dua_carousel_widget.dart';
 import '../../widgets/dashboard/spiritual_checklist_widget.dart';
+import '../../utils/responsive.dart';
 
 /// Dashboard screen with Prayer times, Islamic calendar, Du'a, and spiritual goals
 class DashboardScreen extends ConsumerStatefulWidget {
@@ -65,6 +66,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
 
     return Scaffold(
@@ -83,7 +85,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               flexibleSpace: FlexibleSpaceBar(
                 title: Text(
                   l10n.dashboard,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     shadows: [
                       Shadow(
@@ -102,9 +104,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  child: const Icon(
+                  child: Icon(
                     Icons.mosque,
-                    size: 64,
+                    size: r.iconLarge * 2,
                     color: Colors.white24,
                   ),
                 ),
@@ -114,7 +116,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             // Islamic Calendar Card
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(r.paddingMedium),
                 child: IslamicCalendarWidget(),
               ),
             ),
@@ -122,34 +124,34 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             // Prayer Times Card
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: PrayerTimesWidget(),
               ),
             ),
 
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+            SliverToBoxAdapter(child: SizedBox(height: r.spaceMedium)),
 
             // Du'a of the Day
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: DuaCarouselWidget(),
               ),
             ),
 
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+            SliverToBoxAdapter(child: SizedBox(height: r.spaceMedium)),
 
             // Spiritual Checklist
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: SpiritualChecklistWidget(),
               ),
             ),
 
             // Quick Actions
             SliverPadding(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(r.paddingMedium),
               sliver: SliverToBoxAdapter(
                 child: Card(
                   elevation: 2,
@@ -157,7 +159,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(16),
+                        padding: EdgeInsets.all(r.paddingMedium),
                         child: Text(
                           'Quick Actions',
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -166,11 +168,11 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                               ),
                         ),
                       ),
-                      const Divider(height: 1),
+                      Divider(height: 1),
                       ListTile(
-                        leading: const Icon(Icons.library_books, color: AppTheme.primaryTeal),
-                        title: const Text('Quran & Tafsir'),
-                        trailing: const Icon(Icons.chevron_right),
+                        leading: Icon(Icons.library_books, color: AppTheme.primaryTeal),
+                        title: Text('Quran & Tafsir'),
+                        trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text(l10n.comingSoon)),
@@ -178,10 +180,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                         },
                       ),
                       ListTile(
-                        leading: const Icon(Icons.headphones, color: AppTheme.islamicGreen),
+                        leading: Icon(Icons.headphones, color: AppTheme.islamicGreen),
                         title: Text(l10n.audioLibrary),
-                        subtitle: const Text('Du\'a Kumayl, Ziyarat Ashura'),
-                        trailing: const Icon(Icons.chevron_right),
+                        subtitle: Text('Du\'a Kumayl, Ziyarat Ashura'),
+                        trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text(l10n.comingSoon)),
@@ -189,9 +191,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                         },
                       ),
                       ListTile(
-                        leading: const Icon(Icons.mosque, color: AppTheme.goldAccent),
-                        title: const Text('Nearby Mosques'),
-                        trailing: const Icon(Icons.chevron_right),
+                        leading: Icon(Icons.mosque, color: AppTheme.goldAccent),
+                        title: Text('Nearby Mosques'),
+                        trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text(l10n.comingSoon)),
@@ -204,7 +206,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               ),
             ),
 
-            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+            SliverToBoxAdapter(child: SizedBox(height: r.spaceXLarge)),
           ],
         ),
       ),

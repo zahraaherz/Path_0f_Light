@@ -6,6 +6,7 @@ import '../../models/friends/friend_models.dart';
 import '../../providers/friends_providers.dart';
 import '../../providers/auth_providers.dart';
 import '../auth/login_screen.dart';
+import '../../utils/responsive.dart';
 
 class FriendsScreen extends ConsumerStatefulWidget {
   const FriendsScreen({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final authUser = ref.watch(currentAuthUserProvider);
 
     // Require authentication for friends feature
@@ -52,16 +54,16 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
         ),
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(r.paddingLarge),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
                   Icons.people_outline,
-                  size: 80,
+                  size: r.iconLarge * 2.5,
                   color: AppTheme.textSecondary.withOpacity(0.5),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
                 Text(
                   'Sign in to connect with friends',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -69,7 +71,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                       ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   'Search for friends, send requests, and build your learning community',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -77,18 +79,18 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                       ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 32),
+                SizedBox(height: r.spaceXLarge),
                 ElevatedButton.icon(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => const LoginScreen()),
                     );
                   },
-                  icon: const Icon(Icons.login),
-                  label: const Text('Sign In'),
+                  icon: Icon(Icons.login),
+                  label: Text('Sign In'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.primaryTeal,
-                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                    padding: EdgeInsets.symmetric(horizontal: r.paddingXLarge, vertical: r.paddingMedium),
                   ),
                 ),
               ],
@@ -139,6 +141,7 @@ class _FriendsListTab extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final friendsAsync = ref.watch(friendsListProvider);
 
     return friendsAsync.when(
@@ -150,17 +153,17 @@ class _FriendsListTab extends ConsumerWidget {
               children: [
                 Icon(
                   Icons.people_outline,
-                  size: 64,
+                  size: r.iconLarge * 2,
                   color: AppTheme.textSecondary.withOpacity(0.5),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: r.spaceMedium),
                 Text(
                   'No friends yet',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppTheme.textSecondary,
                       ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   'Search for users to add as friends',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -177,7 +180,7 @@ class _FriendsListTab extends ConsumerWidget {
             ref.invalidate(friendsListProvider);
           },
           child: ListView.builder(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(r.paddingMedium),
             itemCount: friends.length,
             itemBuilder: (context, index) {
               return _FriendCard(friend: friends[index]);
@@ -192,19 +195,19 @@ class _FriendsListTab extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
-            const SizedBox(height: 16),
+            Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: AppTheme.error),
+            SizedBox(height: r.spaceMedium),
             Text(
               'Failed to load friends',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: AppTheme.textSecondary,
                   ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             ElevatedButton(
               onPressed: () => ref.invalidate(friendsListProvider),
               style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primaryTeal),
-              child: const Text('Retry'),
+              child: Text('Retry'),
             ),
           ],
         ),
@@ -219,6 +222,7 @@ class _PendingRequestsTab extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final requestsAsync = ref.watch(pendingRequestsProvider);
 
     return requestsAsync.when(
@@ -231,11 +235,11 @@ class _PendingRequestsTab extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.inbox, size: 64, color: Colors.grey[400]),
-                const SizedBox(height: 16),
+                Icon(Icons.inbox, size: r.iconLarge * 2, color: Colors.grey[400]),
+                SizedBox(height: r.spaceMedium),
                 Text(
                   'No pending requests',
-                  style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+                  style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
                 ),
               ],
             ),
@@ -247,26 +251,26 @@ class _PendingRequestsTab extends ConsumerWidget {
             ref.invalidate(pendingRequestsProvider);
           },
           child: ListView(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(r.paddingMedium),
             children: [
               if (received.isNotEmpty) ...[
-                const Text(
+                Text(
                   'Received Requests',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: r.fontLarge, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: r.spaceSmall),
                 ...received.map((friend) => _FriendRequestCard(
                       friend: friend,
                       isReceived: true,
                     )),
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
               ],
               if (sent.isNotEmpty) ...[
-                const Text(
+                Text(
                   'Sent Requests',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: r.fontLarge, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: r.spaceSmall),
                 ...sent.map((friend) => _FriendRequestCard(
                       friend: friend,
                       isReceived: false,
@@ -276,18 +280,18 @@ class _PendingRequestsTab extends ConsumerWidget {
           ),
         );
       },
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => Center(child: CircularProgressIndicator()),
       error: (error, stack) => Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.error_outline, size: 48, color: Colors.red),
-            const SizedBox(height: 16),
+            Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: Colors.red),
+            SizedBox(height: r.spaceMedium),
             Text('Failed to load requests', style: TextStyle(color: Colors.grey[600])),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             ElevatedButton(
               onPressed: () => ref.invalidate(pendingRequestsProvider),
-              child: const Text('Retry'),
+              child: Text('Retry'),
             ),
           ],
         ),
@@ -315,6 +319,7 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final searchQuery = ref.watch(friendSearchQueryProvider);
     final resultsAsync = ref.watch(friendSearchResultsProvider);
 
@@ -322,22 +327,22 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
       children: [
         // Search input
         Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
               hintText: 'Search by username or user code...',
-              prefixIcon: const Icon(Icons.search),
+              prefixIcon: Icon(Icons.search),
               suffixIcon: _searchController.text.isNotEmpty
                   ? IconButton(
-                      icon: const Icon(Icons.clear),
+                      icon: Icon(Icons.clear),
                       onPressed: () {
                         _searchController.clear();
                         ref.read(friendSearchQueryProvider.notifier).state = '';
                       },
                     )
                   : null,
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(r.radiusMedium)),
               filled: true,
               fillColor: Colors.grey[100],
             ),
@@ -354,16 +359,16 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.search, size: 64, color: Colors.grey[400]),
-                      const SizedBox(height: 16),
+                      Icon(Icons.search, size: r.iconLarge * 2, color: Colors.grey[400]),
+                      SizedBox(height: r.spaceMedium),
                       Text(
                         'Search for friends',
-                        style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+                        style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: r.spaceSmall),
                       Text(
                         'Enter a username or user code',
-                        style: TextStyle(fontSize: 14, color: Colors.grey[500]),
+                        style: TextStyle(fontSize: r.fontSmall, color: Colors.grey[500]),
                       ),
                     ],
                   ),
@@ -375,11 +380,11 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.search_off, size: 64, color: Colors.grey[400]),
-                            const SizedBox(height: 16),
+                            Icon(Icons.search_off, size: r.iconLarge * 2, color: Colors.grey[400]),
+                            SizedBox(height: r.spaceMedium),
                             Text(
                               'No users found',
-                              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+                              style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
                             ),
                           ],
                         ),
@@ -387,14 +392,14 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                     }
 
                     return ListView.builder(
-                      padding: const EdgeInsets.all(16),
+                      padding: EdgeInsets.all(r.paddingMedium),
                       itemCount: results.length,
                       itemBuilder: (context, index) {
                         return _UserSearchResultCard(user: results[index]);
                       },
                     );
                   },
-                  loading: () => const Center(child: CircularProgressIndicator()),
+                  loading: () => Center(child: CircularProgressIndicator()),
                   error: (error, stack) => Center(
                     child: Text(
                       'Search failed: ${error.toString()}',
@@ -417,11 +422,12 @@ class _FriendCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: EdgeInsets.only(bottom: r.spaceSmall),
       child: ListTile(
         leading: CircleAvatar(
-          radius: 28,
+          radius: r.iconLarge * 0.875,
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
@@ -429,10 +435,10 @@ class _FriendCard extends ConsumerWidget {
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: r.fontLarge,
                   ),
                 )
               : null,
@@ -447,15 +453,15 @@ class _FriendCard extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (friend.friendTotalPoints != null) ...[
-              const SizedBox(height: 4),
+              SizedBox(height: r.spaceXSmall),
               Row(
                 children: [
-                  const Icon(Icons.star, size: 14, color: Colors.amber),
-                  const SizedBox(width: 4),
+                  Icon(Icons.star, size: r.fontSmall, color: Colors.amber),
+                  SizedBox(width: r.spaceXSmall),
                   Text('${friend.friendTotalPoints} points'),
-                  const SizedBox(width: 12),
-                  const Icon(Icons.menu_book, size: 14, color: Colors.blue),
-                  const SizedBox(width: 4),
+                  SizedBox(width: r.spaceSmall),
+                  Icon(Icons.menu_book, size: r.fontSmall, color: Colors.blue),
+                  SizedBox(width: r.spaceXSmall),
                   Text('${friend.friendBooksRead ?? 0} books'),
                 ],
               ),
@@ -464,22 +470,22 @@ class _FriendCard extends ConsumerWidget {
         ),
         trailing: PopupMenuButton(
           itemBuilder: (context) => [
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'remove',
               child: Row(
                 children: [
                   Icon(Icons.person_remove, color: Colors.red),
-                  SizedBox(width: 8),
+                  SizedBox(width: r.spaceSmall),
                   Text('Remove Friend', style: TextStyle(color: Colors.red)),
                 ],
               ),
             ),
-            const PopupMenuItem(
+            PopupMenuItem(
               value: 'block',
               child: Row(
                 children: [
                   Icon(Icons.block, color: Colors.red),
-                  SizedBox(width: 8),
+                  SizedBox(width: r.spaceSmall),
                   Text('Block', style: TextStyle(color: Colors.red)),
                 ],
               ),
@@ -530,11 +536,12 @@ class _FriendRequestCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: EdgeInsets.only(bottom: r.spaceSmall),
       child: ListTile(
         leading: CircleAvatar(
-          radius: 28,
+          radius: r.iconLarge * 0.875,
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
@@ -542,10 +549,10 @@ class _FriendRequestCard extends ConsumerWidget {
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: r.fontLarge,
                   ),
                 )
               : null,
@@ -562,7 +569,7 @@ class _FriendRequestCard extends ConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.check, color: Colors.green),
+                    icon: Icon(Icons.check, color: Colors.green),
                     onPressed: () async {
                       final accept = ref.read(acceptFriendRequestProvider);
                       final result = await accept(friend.friendId);
@@ -579,7 +586,7 @@ class _FriendRequestCard extends ConsumerWidget {
                     },
                   ),
                   IconButton(
-                    icon: const Icon(Icons.close, color: Colors.red),
+                    icon: Icon(Icons.close, color: Colors.red),
                     onPressed: () async {
                       final reject = ref.read(rejectFriendRequestProvider);
                       final result = await reject(friend.friendId);
@@ -593,7 +600,7 @@ class _FriendRequestCard extends ConsumerWidget {
                   ),
                 ],
               )
-            : const Icon(Icons.schedule, color: Colors.orange),
+            : Icon(Icons.schedule, color: Colors.orange),
       ),
     );
   }
@@ -607,21 +614,22 @@ class _UserSearchResultCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     return Card(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: EdgeInsets.only(bottom: r.spaceSmall),
       child: ListTile(
         leading: CircleAvatar(
-          radius: 28,
+          radius: r.iconLarge * 0.875,
           backgroundImage:
               user.photoURL != null ? CachedNetworkImageProvider(user.photoURL!) : null,
           backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
           child: user.photoURL == null
               ? Text(
                   user.username[0].toUpperCase(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: r.fontLarge,
                   ),
                 )
               : null,
@@ -637,10 +645,10 @@ class _UserSearchResultCard extends ConsumerWidget {
           children: [
             Text('@${user.username}'),
             if (user.userCode != null) ...[
-              const SizedBox(height: 2),
+              SizedBox(height: 2),
               Text(
                 'Code: ${user.userCode}',
-                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                style: TextStyle(fontSize: r.fontSmall, color: Colors.grey[600]),
               ),
             ],
           ],
@@ -651,25 +659,26 @@ class _UserSearchResultCard extends ConsumerWidget {
   }
 
   Widget _buildActionButton(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     if (user.isBlocked) {
-      return const Chip(
-        label: Text('Blocked', style: TextStyle(fontSize: 12)),
+      return Chip(
+        label: Text('Blocked', style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.red,
         labelStyle: TextStyle(color: Colors.white),
       );
     }
 
     if (user.isFriend) {
-      return const Chip(
-        label: Text('Friends', style: TextStyle(fontSize: 12)),
+      return Chip(
+        label: Text('Friends', style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.green,
         labelStyle: TextStyle(color: Colors.white),
       );
     }
 
     if (user.hasPendingRequest) {
-      return const Chip(
-        label: Text('Pending', style: TextStyle(fontSize: 12)),
+      return Chip(
+        label: Text('Pending', style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.orange,
         labelStyle: TextStyle(color: Colors.white),
       );
@@ -689,7 +698,7 @@ class _UserSearchResultCard extends ConsumerWidget {
           );
         }
       },
-      child: const Text('Add'),
+      child: Text('Add'),
     );
   }
 }

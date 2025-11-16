@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'config/theme/app_theme.dart';
 import 'providers/auth_providers.dart';
 import 'providers/language_providers.dart';
+import 'providers/theme_providers.dart';
 import 'screens/home/home_screen.dart';
 import 'services/notification_service.dart';
 import 'l10n/app_localizations.dart';
@@ -63,13 +64,14 @@ class PathOfLightApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(localeProvider);
+    final themeMode = ref.watch(themeModeProvider);
 
     return MaterialApp(
       title: 'Path of Light',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: themeMode,
       locale: locale,
       localizationsDelegates: const [
         AppLocalizations.delegate,

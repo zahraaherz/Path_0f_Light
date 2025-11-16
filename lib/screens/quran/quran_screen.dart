@@ -100,10 +100,11 @@ class _QuranScreenState extends ConsumerState<QuranScreen>
             totalAyahs: _getTotalAyahs(surahNumber),
             revelationType: _getRevelationType(surahNumber),
             onTap: () {
-              // TODO: Navigate to Surah reading screen
+              // TODO: Create and navigate to Surah reading screen when implemented
+              // For now, show a coming soon message
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('${l10n.comingSoon}: Surah $surahNumber'),
+                  content: Text('${l10n.comingSoon}: Surah $surahNumber - Reading feature will be available soon'),
                   duration: const Duration(seconds: 2),
                 ),
               );
