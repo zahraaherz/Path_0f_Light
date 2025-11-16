@@ -3,8 +3,8 @@ import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/language_providers.dart';
-import '../../providers/auth_providers.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../providers/auth_controller.dart';
+import '../../l10n/app_localizations.dart' as app_l10n;
 
 /// Settings screen with language switcher, theme options, and more
 class SettingsScreen extends ConsumerStatefulWidget {
@@ -26,7 +26,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
     final currentLanguage = ref.watch(languageProvider);
     final theme = Theme.of(context);
 
@@ -233,7 +233,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
               const Divider(),
               ListTile(
-                leading: const Icon(Icons.star, color: AppTheme.warningYellow),
+                leading: Icon(Icons.star, color: AppTheme.warning),
                 title: Text(l10n.rateApp),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
@@ -267,6 +267,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Build settings card
   Widget _buildSettingsCard(BuildContext context, {required List<Widget> children}) {
+    final r = context.responsive;
     return Card(
       elevation: 2,
       shape: RoundedRectangleBorder(
@@ -280,7 +281,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show language selection dialog
   void _showLanguageDialog(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
     final currentLanguage = ref.read(languageProvider);
 
     showDialog(
@@ -317,7 +318,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show logout confirmation dialog
   void _showLogoutDialog(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
 
     showDialog(
       context: context,

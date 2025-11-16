@@ -85,14 +85,16 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
       showDialog(
         context: context,
         barrierDismissible: false,
-        builder: (context) => AlertDialog(
-          title: Row(
-            children: [
-              Icon(Icons.check_circle, color: AppTheme.success, size: 32),
-              SizedBox(width: r.spaceSmall),
-              Text(isGuest ? 'Account Linked!' : 'Account Created!'),
-            ],
-          ),
+        builder: (dialogContext) {
+          final r = dialogContext.responsive;
+          return AlertDialog(
+            title: Row(
+              children: [
+                Icon(Icons.check_circle, color: AppTheme.success, size: 32),
+                SizedBox(width: r.spaceSmall),
+                Text(isGuest ? 'Account Linked!' : 'Account Created!'),
+              ],
+            ),
           content: Text(
             isGuest
               ? 'Your guest data has been linked to your new account. You can now sign in on any device!'
@@ -101,7 +103,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
           actions: [
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(dialogContext).pop();
                 Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (_) => const HomeScreen()),
                 );
@@ -109,43 +111,15 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
               child: const Text('Continue'),
             ),
           ],
-        ),
+        );
+        },
       );
     }
   }
 
   Future<void> _handleGoogleSignIn() async {
-    // Check if current user is anonymous (guest)
-    final currentUser = FirebaseAuth.instance.currentUser;
-    final isGuest = currentUser != null && currentUser.isAnonymous;
-
-    bool success;
-    if (isGuest) {
-      // Link anonymous account to Google
-      try {
-        final googleAuth = await ref.read(authControllerProvider.notifier).getGoogleCredential();
-        if (googleAuth != null) {
-          final guestService = ref.read(guestAccessServiceProvider);
-          await guestService.linkToGoogleAccount(googleAuth);
-          success = true;
-        } else {
-          return;
-        }
-      } catch (e) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Failed to link Google account: $e'),
-              backgroundColor: AppTheme.error,
-            ),
-          );
-        }
-        return;
-      }
-    } else {
-      // Regular Google sign-in
-      success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
-    }
+    // Use the regular sign-in method which will handle guest account linking
+    final success = await ref.read(authControllerProvider.notifier).signInWithGoogle();
 
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
@@ -155,37 +129,8 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleAppleSignIn() async {
-    // Check if current user is anonymous (guest)
-    final currentUser = FirebaseAuth.instance.currentUser;
-    final isGuest = currentUser != null && currentUser.isAnonymous;
-
-    bool success;
-    if (isGuest) {
-      // Link anonymous account to Apple
-      try {
-        final appleAuth = await ref.read(authControllerProvider.notifier).getAppleCredential();
-        if (appleAuth != null) {
-          final guestService = ref.read(guestAccessServiceProvider);
-          await guestService.linkToAppleAccount(appleAuth);
-          success = true;
-        } else {
-          return;
-        }
-      } catch (e) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Failed to link Apple account: $e'),
-              backgroundColor: AppTheme.error,
-            ),
-          );
-        }
-        return;
-      }
-    } else {
-      // Regular Apple sign-in
-      success = await ref.read(authControllerProvider.notifier).signInWithApple();
-    }
+    // Use the regular sign-in method which will handle guest account linking
+    final success = await ref.read(authControllerProvider.notifier).signInWithApple();
 
     if (success && mounted) {
       Navigator.of(context).pushReplacement(
@@ -195,37 +140,8 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   }
 
   Future<void> _handleFacebookSignIn() async {
-    // Check if current user is anonymous (guest)
-    final currentUser = FirebaseAuth.instance.currentUser;
-    final isGuest = currentUser != null && currentUser.isAnonymous;
-
-    bool success;
-    if (isGuest) {
-      // Link anonymous account to Facebook
-      try {
-        final fbAuth = await ref.read(authControllerProvider.notifier).getFacebookCredential();
-        if (fbAuth != null) {
-          // Note: Facebook linking would need to be added to GuestAccessService
-          // For now, fall back to regular sign-in
-          success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
-        } else {
-          return;
-        }
-      } catch (e) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Failed to link Facebook account: $e'),
-              backgroundColor: AppTheme.error,
-            ),
-          );
-        }
-        return;
-      }
-    } else {
-      // Regular Facebook sign-in
-      success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
-    }
+    // Use the regular sign-in method which will handle guest account linking
+    final success = await ref.read(authControllerProvider.notifier).signInWithFacebook();
 
     if (success && mounted) {
       Navigator.of(context).pushReplacement(

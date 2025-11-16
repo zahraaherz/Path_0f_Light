@@ -311,7 +311,7 @@ class CollectionItemCard extends StatelessWidget {
   IconData _getTypeIcon() {
     switch (item.type) {
       case CollectionItemType.dua:
-        return Icons.hands_home_work;
+        return Icons.home_work;
       case CollectionItemType.surah:
         return Icons.menu_book;
       case CollectionItemType.ayah:

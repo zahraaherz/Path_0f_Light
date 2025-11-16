@@ -505,7 +505,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(
-                  Icons.swords,
+                  Icons.sports_martial_arts,
                   color: Colors.white,
                   size: 20,
                 ),
@@ -707,7 +707,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
             mainAxisSize: MainAxisSize.min,
             children: [
               const Icon(
-                Icons.swords,
+                Icons.sports_martial_arts,
                 size: 64,
                 color: AppTheme.goldAccent,
               ),

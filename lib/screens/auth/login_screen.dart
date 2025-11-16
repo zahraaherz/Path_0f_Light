@@ -105,19 +105,21 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Reset Password',
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Enter your email address to receive a password reset link.',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            SizedBox(height: r.spaceMedium),
+      builder: (dialogContext) {
+        final r = dialogContext.responsive;
+        return AlertDialog(
+          title: Text(
+            'Reset Password',
+            style: Theme.of(dialogContext).textTheme.titleLarge,
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Enter your email address to receive a password reset link.',
+                style: Theme.of(dialogContext).textTheme.bodyMedium,
+              ),
+              SizedBox(height: r.spaceMedium),
             TextField(
               controller: emailController,
               decoration: const InputDecoration(
@@ -130,7 +132,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         ),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () => Navigator.of(dialogContext).pop(),
             child: const Text('Cancel'),
           ),
           ElevatedButton(
@@ -139,14 +141,15 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               if (email.isNotEmpty) {
                 await ref.read(authControllerProvider.notifier).sendPasswordResetEmail(email);
                 if (context.mounted) {
-                  Navigator.of(context).pop();
+                  Navigator.of(dialogContext).pop();
                 }
               }
             },
             child: const Text('Send Reset Link'),
           ),
         ],
-      ),
+      );
+      },
     );
   }
 

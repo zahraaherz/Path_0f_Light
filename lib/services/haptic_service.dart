@@ -108,7 +108,7 @@ class HapticService {
     try {
       await Vibration.vibrate(
         pattern: pattern,
-        intensities: intensities,
+        intensities: intensities ?? [],
       );
     } catch (e) {
       debugPrint('Error with custom vibration: $e');

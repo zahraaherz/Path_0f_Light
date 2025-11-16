@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'config/theme/app_theme.dart';
 import 'providers/auth_providers.dart';
-import 'screens/auth/login_screen.dart';
+import 'providers/language_providers.dart';
 import 'screens/home/home_screen.dart';
 import 'services/notification_service.dart';
+import 'l10n/app_localizations.dart';
 
 // Import firebase_options if it exists
 // Note: Run 'flutterfire configure' to generate this file
@@ -55,17 +57,27 @@ void main() async {
   );
 }
 
-class PathOfLightApp extends StatelessWidget {
+class PathOfLightApp extends ConsumerWidget {
   const PathOfLightApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(localeProvider);
+
     return MaterialApp(
       title: 'Path of Light',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
+      locale: locale,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
       home: const AuthGate(),
     );
   }

@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
-import '../../providers/energy_providers.dart';
 import '../../providers/streak_providers.dart';
-import '../../widgets/energy_display.dart';
-import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
-import '../../widgets/islamic_pattern_background.dart';
 import '../../widgets/home/islamic_date_widget.dart';
 import '../../widgets/home/prayer_times_widget.dart';
 import '../../widgets/home/islamic_events_widget.dart';
@@ -17,11 +13,14 @@ import '../../widgets/home/audio_library_widget.dart';
 import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
-import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
 import '../auth/login_screen.dart';
 import '../masoomeen/masoomeen_browse_screen.dart';
+import '../library/library_screen.dart';
+import '../quran/quran_screen.dart';
+import 'collection_screen.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -36,8 +35,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    LibraryScreen(),
+    CollectionScreen(),
     LeaderboardScreen(),
-    AchievementsScreen(),
     ProfileScreen(),
   ];
 
@@ -90,6 +90,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
@@ -110,26 +112,31 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           elevation: 0,
           indicatorColor: AppTheme.primaryTeal.withOpacity(0.1),
           labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-          destinations: const [
+          destinations: [
             NavigationDestination(
-              icon: Icon(Icons.explore_outlined, size: 24),
-              selectedIcon: Icon(Icons.explore, color: AppTheme.primaryTeal, size: 24),
-              label: 'Explore',
+              icon: const Icon(Icons.explore_outlined, size: 24),
+              selectedIcon: const Icon(Icons.explore, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.explore,
             ),
             NavigationDestination(
-              icon: Icon(Icons.leaderboard_outlined, size: 24),
-              selectedIcon: Icon(Icons.leaderboard, color: AppTheme.primaryTeal, size: 24),
-              label: 'Leaderboard',
+              icon: const Icon(Icons.library_books_outlined, size: 24),
+              selectedIcon: const Icon(Icons.library_books, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.library,
             ),
             NavigationDestination(
-              icon: Icon(Icons.emoji_events_outlined, size: 24),
-              selectedIcon: Icon(Icons.emoji_events, color: AppTheme.primaryTeal, size: 24),
-              label: 'Achievements',
+              icon: const Icon(Icons.collections_bookmark_outlined, size: 24),
+              selectedIcon: const Icon(Icons.collections_bookmark, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.collection,
             ),
             NavigationDestination(
-              icon: Icon(Icons.person_outline, size: 24),
-              selectedIcon: Icon(Icons.person, color: AppTheme.primaryTeal, size: 24),
-              label: 'Profile',
+              icon: const Icon(Icons.leaderboard_outlined, size: 24),
+              selectedIcon: const Icon(Icons.leaderboard, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.leaderboard,
+            ),
+            NavigationDestination(
+              icon: const Icon(Icons.person_outline, size: 24),
+              selectedIcon: const Icon(Icons.person, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.profile,
             ),
           ],
         ),
@@ -146,6 +153,7 @@ class HomePage extends ConsumerWidget {
     final authUser = ref.watch(currentAuthUserProvider);
     final userProfileAsync = ref.watch(currentUserProfileProvider);
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -174,7 +182,7 @@ class HomePage extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'نور المعرفة',
+                            l10n.lightOfKnowledge,
                             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                                   color: AppTheme.primaryTeal,
                                   fontWeight: FontWeight.bold,
@@ -182,7 +190,7 @@ class HomePage extends ConsumerWidget {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            'Path of Light',
+                            l10n.pathOfLight,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                   color: AppTheme.textSecondary,
                                   letterSpacing: 1,
@@ -202,7 +210,7 @@ class HomePage extends ConsumerWidget {
                             side: BorderSide(color: AppTheme.primaryTeal, width: 1.5),
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                           ),
-                          child: const Text('Sign In'),
+                          child: Text(l10n.signIn),
                         )
                       else
                         IconButton(
@@ -247,7 +255,7 @@ class HomePage extends ConsumerWidget {
                     SizedBox(height: r.spaceSmall),
                     Center(
                       child: Text(
-                        'In the name of Allah, the Most Gracious, the Most Merciful',
+                        l10n.bismillahTranslation,
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: AppTheme.textSecondary,
                               fontStyle: FontStyle.italic,
@@ -283,7 +291,7 @@ class HomePage extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Your Progress',
+                          l10n.yourProgress,
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -295,7 +303,7 @@ class HomePage extends ConsumerWidget {
                               child: _StatCard(
                                 icon: Icons.auto_stories,
                                 value: '${profile.quizProgress.totalQuestionsAnswered}',
-                                label: 'Questions',
+                                label: l10n.questionsAnswered,
                                 color: AppTheme.primaryTeal,
                               ),
                             ),
@@ -304,7 +312,7 @@ class HomePage extends ConsumerWidget {
                               child: _StatCard(
                                 icon: Icons.local_fire_department,
                                 value: '${profile.quizProgress.currentStreak}',
-                                label: 'Day Streak',
+                                label: l10n.dayStreak(profile.quizProgress.currentStreak),
                                 color: AppTheme.goldAccent,
                               ),
                             ),
@@ -313,7 +321,7 @@ class HomePage extends ConsumerWidget {
                               child: _StatCard(
                                 icon: Icons.stars,
                                 value: '${profile.quizProgress.totalPoints}',
-                                label: 'Points',
+                                label: l10n.points,
                                 color: AppTheme.islamicGreen,
                               ),
                             ),
@@ -372,7 +380,7 @@ class HomePage extends ConsumerWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Browse by Topic',
+                          l10n.browseByTopic,
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -380,7 +388,7 @@ class HomePage extends ConsumerWidget {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            'View All',
+                            l10n.viewAll,
                             style: TextStyle(
                               color: AppTheme.primaryTeal,
                               fontWeight: FontWeight.w600,
@@ -406,31 +414,31 @@ class HomePage extends ConsumerWidget {
                 ),
                 delegate: SliverChildListDelegate([
                   _TopicCard(
-                    title: 'Quran',
-                    arabicTitle: 'القرآن',
+                    title: l10n.quran,
                     icon: Icons.menu_book,
                     color: AppTheme.primaryTeal,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const QuranScreen()),
+                      );
+                    },
                   ),
                   _TopicCard(
-                    title: 'Hadith',
-                    arabicTitle: 'الحديث',
+                    title: l10n.hadith,
                     icon: Icons.format_quote,
                     color: AppTheme.islamicGreen,
                     onTap: () {},
                   ),
                   _TopicCard(
-                    title: 'Fiqh',
-                    arabicTitle: 'الفقه',
+                    title: l10n.fiqh,
                     icon: Icons.account_balance,
                     color: AppTheme.goldAccent,
                     onTap: () {},
                   ),
                   _TopicCard(
-                    title: 'History',
-                    arabicTitle: 'التاريخ',
+                    title: l10n.history,
                     icon: Icons.history_edu,
-                    color: Color(0xFF8B7355),
+                    color: const Color(0xFF8B7355),
                     onTap: () {},
                   ),
                 ]),
@@ -444,7 +452,7 @@ class HomePage extends ConsumerWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: Text(
-                  'Continue Learning',
+                  l10n.continueLearning,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -459,8 +467,8 @@ class HomePage extends ConsumerWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: _LearningCard(
-                  title: 'Daily Quiz Challenge',
-                  subtitle: 'Test your knowledge with today\'s questions',
+                  title: l10n.dailyQuizChallenge,
+                  subtitle: l10n.testYourKnowledge,
                   icon: Icons.quiz,
                   onTap: () {
                     Navigator.of(context).push(
@@ -508,7 +516,7 @@ class HomePage extends ConsumerWidget {
                               ),
                               SizedBox(width: r.spaceSmall),
                               Text(
-                                'Quote of the Day',
+                                l10n.quoteOfTheDay,
                                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -548,6 +556,7 @@ class HomePage extends ConsumerWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }
@@ -600,17 +609,15 @@ class _StatCard extends StatelessWidget {
   }
 }
 
-// Topic Browse Card with Arabic
+// Topic Browse Card
 class _TopicCard extends StatelessWidget {
   final String title;
-  final String arabicTitle;
   final IconData icon;
   final Color color;
   final VoidCallback onTap;
 
   const _TopicCard({
     required this.title,
-    required this.arabicTitle,
     required this.icon,
     required this.color,
     required this.onTap,
@@ -633,18 +640,12 @@ class _TopicCard extends StatelessWidget {
             Icon(icon, color: color, size: r.iconMedium),
             SizedBox(height: r.spaceSmall),
             Text(
-              arabicTitle,
+              title,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: color,
                     fontWeight: FontWeight.bold,
                   ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppTheme.textSecondary,
-                  ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
@@ -735,6 +736,7 @@ class _FeaturedMasoomeenCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -771,22 +773,15 @@ class _FeaturedMasoomeenCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'المَعصُومُونَ الأَربَعَةَ عَشَر',
+                    l10n.the14Masoomeen,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           color: AppTheme.islamicGreen,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 8),
                   Text(
-                    'The 14 Masoomeen',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Learn about the Infallibles',
+                    l10n.learnAboutInfallibles,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppTheme.textSecondary,
                         ),

@@ -1,3 +1,4 @@
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -17,7 +18,7 @@ class BookmarksListSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final authUser = ref.watch(authUserProvider);
+    final authUser = ref.watch(currentAuthUserProvider);
 
     if (authUser == null) {
       return Container(
@@ -132,7 +133,7 @@ class BookmarksListSheet extends ConsumerWidget {
                             fontSize: 14,
                             color: Colors.grey[500],
                           ),
-                          textAlign: TextAlign.center,
+                          textAlign: ui.TextAlign.center,
                         ),
                       ],
                     ),

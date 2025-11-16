@@ -130,7 +130,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
   }
 
   void _showMoreMenu() {
-    final currentUser = ref.read(authUserProvider);
+    final currentUser = ref.read(currentAuthUserProvider);
     final isOwnComment = currentUser != null && widget.comment.isOwnedBy(currentUser.uid);
 
     showModalBottomSheet(
@@ -177,7 +177,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
 
   @override
   Widget build(BuildContext context) {
-    final currentUser = ref.watch(authUserProvider);
+    final currentUser = ref.watch(currentAuthUserProvider);
     final isLiked = currentUser != null && widget.comment.isLikedBy(currentUser.uid);
     final isOwnComment = currentUser != null && widget.comment.isOwnedBy(currentUser.uid);
 

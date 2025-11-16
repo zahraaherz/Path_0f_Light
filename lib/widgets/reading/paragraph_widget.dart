@@ -1,17 +1,18 @@
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../models/library/book.dart';
 import '../../models/library/paragraph.dart';
-import '../../models/library/reading_models.dart';
+import '../../models/library/reading_models.dart' as models;
 import '../../providers/comments_providers.dart';
 import '../comments/comments_sheet.dart';
 
 class ParagraphWidget extends ConsumerStatefulWidget {
   final Paragraph paragraph;
   final Book book;
-  final ReadingPreferences preferences;
+  final models.ReadingPreferences preferences;
   final bool isCurrentParagraph;
 
   const ParagraphWidget({
@@ -277,38 +278,38 @@ ${widget.paragraph.content.textAr}
 
   Color _getTextColor() {
     switch (widget.preferences.backgroundColor) {
-      case BackgroundColor.white:
-      case BackgroundColor.sepia:
+      case models.BackgroundColor.white:
+      case models.BackgroundColor.sepia:
         return Colors.black;
-      case BackgroundColor.dark:
-      case BackgroundColor.black:
+      case models.BackgroundColor.dark:
+      case models.BackgroundColor.black:
         return Colors.white;
     }
   }
 
   String _getFontFamily() {
     switch (widget.preferences.fontFamily) {
-      case FontFamily.amiri:
+      case models.FontFamily.amiri:
         return 'Amiri';
-      case FontFamily.scheherazade:
+      case models.FontFamily.scheherazade:
         return 'Scheherazade';
-      case FontFamily.notoNaskh:
+      case models.FontFamily.notoNaskh:
         return 'Noto Naskh Arabic';
-      case FontFamily.traditional:
+      case models.FontFamily.traditional:
         return 'Traditional Arabic';
     }
   }
 
-  TextAlign _getTextAlign() {
+  ui.TextAlign _getTextAlign() {
     switch (widget.preferences.textAlign) {
-      case TextAlign.justified:
-        return TextAlign.justify;
-      case TextAlign.right:
-        return TextAlign.right;
-      case TextAlign.left:
-        return TextAlign.left;
-      case TextAlign.center:
-        return TextAlign.center;
+      case models.TextAlign.justified:
+        return ui.TextAlign.left; // Flutter doesn't support justify, use left as fallback
+      case models.TextAlign.right:
+        return ui.TextAlign.right;
+      case models.TextAlign.left:
+        return ui.TextAlign.left;
+      case models.TextAlign.center:
+        return ui.TextAlign.center;
     }
   }
 }

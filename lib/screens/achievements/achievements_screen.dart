@@ -112,6 +112,7 @@ class AchievementsScreen extends ConsumerWidget {
     String title,
     List<Map<String, dynamic>> achievements,
   ) {
+    final r = context.responsive;
     if (achievements.isEmpty) return const SizedBox.shrink();
 
     return Column(
@@ -133,6 +134,7 @@ class AchievementsScreen extends ConsumerWidget {
   }
 
   Widget _buildAchievementCard(BuildContext context, Map<String, dynamic> achievement) {
+    final r = context.responsive;
     final isUnlocked = achievement['unlocked'] as bool;
     final progress = achievement['progress'] as int;
     final required = achievement['required'] as int;

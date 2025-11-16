@@ -1,0 +1,25 @@
+{
+  "name": "path_0f_light",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "extract_pdf_content.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:35158/git/zahraaherz/Path_0f_Light"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "pdf-poppler": "^0.2.3",
+    "tesseract.js": "^6.0.1"
+  }
+}

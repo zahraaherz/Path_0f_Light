@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart' as app_l10n;
 import '../../config/theme/app_theme.dart';
 import '../../providers/prayer_providers.dart';
 import '../../providers/language_providers.dart';
@@ -11,7 +11,7 @@ class IslamicCalendarWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
     final hijriDate = ref.watch(todayHijriDateProvider);
     final now = DateTime.now();
     final isRTL = ref.watch(isRTLProvider);
