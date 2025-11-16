@@ -105,6 +105,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get home => 'Home';
 
   @override
+  String get explore => 'Explore';
+
+  @override
   String get quiz => 'Quiz';
 
   @override
@@ -275,6 +278,21 @@ class AppLocalizationsEn extends AppLocalizations {
   String get quran => 'Quran';
 
   @override
+  String get surahs => 'Surahs';
+
+  @override
+  String get juz => 'Juz';
+
+  @override
+  String get verses => 'verses';
+
+  @override
+  String get hadith => 'Hadith';
+
+  @override
+  String get fiqh => 'Fiqh';
+
+  @override
   String get history => 'Islamic History';
 
   @override
@@ -440,7 +458,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get statistics => 'Statistics';
 
   @override
-  String get questionsAnswered => 'Questions Answered';
+  String get questionsAnswered => 'Questions';
 
   @override
   String get correctRate => 'Correct Rate';
@@ -575,6 +593,43 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get listenNow => 'Listen Now';
+
+  @override
+  String get yourProgress => 'Your Progress';
+
+  @override
+  String get browseByTopic => 'Browse by Topic';
+
+  @override
+  String get continueLearning => 'Continue Learning';
+
+  @override
+  String get dailyQuizChallenge => 'Daily Quiz Challenge';
+
+  @override
+  String get quoteOfTheDay => 'Quote of the Day';
+
+  @override
+  String get testYourKnowledge => 'Test your knowledge with today\'s questions';
+
+  @override
+  String get learnAboutInfallibles => 'Learn about the Infallibles';
+
+  @override
+  String get the14Masoomeen => 'The 14 Masoomeen';
+
+  @override
+  String get collections => 'Collections';
+
+  @override
+  String get bismillahTranslation =>
+      'In the name of Allah, the Most Gracious, the Most Merciful';
+
+  @override
+  String get pathOfLight => 'Path of Light';
+
+  @override
+  String get lightOfKnowledge => 'Light of Knowledge';
 
   @override
   String get library => 'Library';

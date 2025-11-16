@@ -290,6 +290,12 @@ abstract class AppLocalizations {
   /// **'Home'**
   String get home;
 
+  /// No description provided for @explore.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore'**
+  String get explore;
+
   /// No description provided for @quiz.
   ///
   /// In en, this message translates to:
@@ -626,6 +632,36 @@ abstract class AppLocalizations {
   /// **'Quran'**
   String get quran;
 
+  /// No description provided for @surahs.
+  ///
+  /// In en, this message translates to:
+  /// **'Surahs'**
+  String get surahs;
+
+  /// No description provided for @juz.
+  ///
+  /// In en, this message translates to:
+  /// **'Juz'**
+  String get juz;
+
+  /// No description provided for @verses.
+  ///
+  /// In en, this message translates to:
+  /// **'verses'**
+  String get verses;
+
+  /// No description provided for @hadith.
+  ///
+  /// In en, this message translates to:
+  /// **'Hadith'**
+  String get hadith;
+
+  /// No description provided for @fiqh.
+  ///
+  /// In en, this message translates to:
+  /// **'Fiqh'**
+  String get fiqh;
+
   /// No description provided for @history.
   ///
   /// In en, this message translates to:
@@ -947,7 +983,7 @@ abstract class AppLocalizations {
   /// No description provided for @questionsAnswered.
   ///
   /// In en, this message translates to:
-  /// **'Questions Answered'**
+  /// **'Questions'**
   String get questionsAnswered;
 
   /// No description provided for @correctRate.
@@ -1213,6 +1249,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Listen Now'**
   String get listenNow;
+
+  /// No description provided for @yourProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Progress'**
+  String get yourProgress;
+
+  /// No description provided for @browseByTopic.
+  ///
+  /// In en, this message translates to:
+  /// **'Browse by Topic'**
+  String get browseByTopic;
+
+  /// No description provided for @continueLearning.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue Learning'**
+  String get continueLearning;
+
+  /// No description provided for @dailyQuizChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Quiz Challenge'**
+  String get dailyQuizChallenge;
+
+  /// No description provided for @quoteOfTheDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Quote of the Day'**
+  String get quoteOfTheDay;
+
+  /// No description provided for @testYourKnowledge.
+  ///
+  /// In en, this message translates to:
+  /// **'Test your knowledge with today\'s questions'**
+  String get testYourKnowledge;
+
+  /// No description provided for @learnAboutInfallibles.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn about the Infallibles'**
+  String get learnAboutInfallibles;
+
+  /// No description provided for @the14Masoomeen.
+  ///
+  /// In en, this message translates to:
+  /// **'The 14 Masoomeen'**
+  String get the14Masoomeen;
+
+  /// No description provided for @collections.
+  ///
+  /// In en, this message translates to:
+  /// **'Collections'**
+  String get collections;
+
+  /// No description provided for @bismillahTranslation.
+  ///
+  /// In en, this message translates to:
+  /// **'In the name of Allah, the Most Gracious, the Most Merciful'**
+  String get bismillahTranslation;
+
+  /// No description provided for @pathOfLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Path of Light'**
+  String get pathOfLight;
+
+  /// No description provided for @lightOfKnowledge.
+  ///
+  /// In en, this message translates to:
+  /// **'Light of Knowledge'**
+  String get lightOfKnowledge;
 
   /// No description provided for @library.
   ///

@@ -98,7 +98,7 @@ dependencies:
   # Enhanced Quiz Features
   flutter_animate: ^4.5.0           # Animations
   audioplayers: ^5.2.1              # Sound effects
-  vibration: ^1.8.4                 # Haptic feedback
+  vibration: ^3.0.0                 # Haptic feedback
   percent_indicator: ^4.2.3         # Progress indicators
   confetti: ^0.7.0                  # Success celebrations
   lottie: ^3.0.0                    # Lottie animations

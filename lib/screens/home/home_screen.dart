@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
-import '../../providers/energy_providers.dart';
 import '../../providers/streak_providers.dart';
-import '../../widgets/energy_display.dart';
-import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
-import '../../widgets/islamic_pattern_background.dart';
 import '../../widgets/home/islamic_date_widget.dart';
 import '../../widgets/home/prayer_times_widget.dart';
 import '../../widgets/home/islamic_events_widget.dart';
@@ -17,7 +13,6 @@ import '../../widgets/home/audio_library_widget.dart';
 import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
-import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
 import '../auth/login_screen.dart';
 import '../masoomeen/masoomeen_browse_screen.dart';
@@ -741,6 +736,7 @@ class _FeaturedMasoomeenCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
       onTap: onTap,
       child: Container(
