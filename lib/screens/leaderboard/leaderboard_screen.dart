@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../config/theme/app_theme.dart';
@@ -46,6 +47,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final currentUserId = ref.watch(currentUserIdProvider);
     final leaderboardAsync = ref.watch(currentLeaderboardProvider);
     final userRankAsync = ref.watch(userRankByPointsProvider);
@@ -112,7 +114,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
           if (currentUserId != null)
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(r.paddingMedium),
                 child: userRankAsync.when(
                   data: (rank) => _buildUserRankCard(rank),
                   loading: () => const SizedBox.shrink(),
@@ -196,11 +198,11 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
       elevation: 4,
       color: AppTheme.primaryTeal.withOpacity(0.1),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
         side: const BorderSide(color: AppTheme.primaryTeal, width: 2),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -282,7 +284,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
         border: isCurrentUser
             ? Border.all(color: AppTheme.primaryTeal, width: 2)
             : null,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: ListTile(
         leading: Row(
@@ -311,7 +313,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
                       ),
               ),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: r.spaceSmall),
 
             // Avatar
             CircleAvatar(

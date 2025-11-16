@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/collection/collection_item.dart';
 import '../../providers/collection_providers.dart';
@@ -36,6 +37,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final viewMode = ref.watch(collectionViewModeProvider);
     final searchQuery = ref.watch(collectionSearchQueryProvider);
     final isGuest = ref.watch(isGuestUserProvider);
@@ -141,9 +143,9 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Icon(Icons.error_outline, size: 64, color: Colors.red),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             Text('Error: $error'),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             ElevatedButton(
               onPressed: () => ref.refresh(userCollectionItemsProvider),
               child: const Text('Retry'),
@@ -162,14 +164,14 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                   size: 80,
                   color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: r.spaceMedium),
                 Text(
                   category == null
                       ? 'Your collection is empty'
                       : 'No items in this category',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   'Add du\'as, surahs, ziyarats, and more',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -179,7 +181,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                             .withOpacity(0.6),
                       ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
                 ElevatedButton.icon(
                   onPressed: () => _showAddDialog(context),
                   icon: const Icon(Icons.add),
@@ -206,7 +208,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
         ref.invalidate(userCollectionItemsProvider);
       },
       child: ListView.builder(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         itemCount: items.length,
         itemBuilder: (context, index) {
           final item = items[index];
@@ -228,7 +230,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
         ref.invalidate(userCollectionItemsProvider);
       },
       child: GridView.builder(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 16,
@@ -274,12 +276,12 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                   size: 80,
                   color: Theme.of(context).colorScheme.primary.withOpacity(0.3),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: r.spaceMedium),
                 Text(
                   'No favorites yet',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   'Tap the star icon on items to add them here',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -427,7 +429,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               color: Theme.of(context).colorScheme.primary,
               size: 32,
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: r.spaceSmall),
             const Text('Create Account'),
           ],
         ),
@@ -441,14 +443,14 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                     fontWeight: FontWeight.w600,
                   ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             if (stats.itemsCreated > 0) ...[
               _buildStatRow(
                 context,
                 Icons.collections_bookmark,
                 '${stats.itemsCreated} items saved',
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
             ],
             if (stats.daysSinceCreation > 0) ...[
               _buildStatRow(
@@ -456,15 +458,15 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                 Icons.calendar_today,
                 '${stats.daysSinceCreation} days as guest',
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
             ],
             const Divider(),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             Text(
               'Benefits of creating an account:',
               style: Theme.of(context).textTheme.titleSmall,
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             _buildBenefitRow(context, 'Sync across all devices'),
             _buildBenefitRow(context, 'Never lose your data'),
             _buildBenefitRow(context, 'Access from web, phone, and tablet'),
@@ -496,7 +498,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
     return Row(
       children: [
         Icon(icon, size: 20, color: Theme.of(context).colorScheme.secondary),
-        const SizedBox(width: 8),
+        SizedBox(width: r.spaceSmall),
         Text(text, style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
@@ -512,7 +514,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
             size: 16,
             color: Theme.of(context).colorScheme.primary,
           ),
-          const SizedBox(width: 8),
+          SizedBox(width: r.spaceSmall),
           Text(text, style: Theme.of(context).textTheme.bodySmall),
         ],
       ),
@@ -526,6 +528,7 @@ class _SearchResultsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final searchQuery = ref.watch(collectionSearchQueryProvider);
     final searchResultsAsync =
         ref.watch(searchCollectionItemsProvider(searchQuery));
@@ -545,7 +548,7 @@ class _SearchResultsScreen extends ConsumerWidget {
           }
 
           return ListView.builder(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(r.paddingMedium),
             itemCount: items.length,
             itemBuilder: (context, index) {
               final item = items[index];
@@ -587,12 +590,13 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Scaffold(
       appBar: AppBar(
         title: Text(item.title),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -604,19 +608,19 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
                     ),
                 textDirection: TextDirection.rtl,
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
             ],
             Text(
               item.title,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
             // Arabic text
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(r.paddingMedium),
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.surfaceVariant,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Text(
                 item.arabicText,
@@ -628,24 +632,24 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
               ),
             ),
             if (item.translation != null) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Text(
                 'Translation',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
               Text(
                 item.translation!,
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
             if (item.transliteration != null) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Text(
                 'Transliteration',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
               Text(
                 item.transliteration!,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -654,11 +658,11 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
               ),
             ],
             if (item.sourceReference != null) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Row(
                 children: [
                   const Icon(Icons.source, size: 20),
-                  const SizedBox(width: 8),
+                  SizedBox(width: r.spaceSmall),
                   Text(
                     item.sourceReference!,
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -667,19 +671,19 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
               ),
             ],
             if (item.notes != null && item.notes!.isNotEmpty) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Text(
                 'Notes',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
               Text(
                 item.notes!,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             ],
             if (item.tags.isNotEmpty) ...[
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
               Wrap(
                 spacing: 8,
                 runSpacing: 8,
