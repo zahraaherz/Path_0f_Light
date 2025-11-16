@@ -11,6 +11,7 @@ import '../../widgets/reading/paragraph_widget.dart';
 import '../../widgets/reading/reading_settings_sheet.dart';
 import '../../widgets/reading/table_of_contents_sheet.dart';
 import '../../widgets/reading/bookmarks_list_sheet.dart';
+import '../../widgets/reading/search_in_book_sheet.dart';
 import '../auth/login_screen.dart';
 
 class BookReaderScreen extends ConsumerStatefulWidget {
@@ -141,6 +142,25 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
             );
           }
           Navigator.pop(context);
+        },
+      ),
+    );
+  }
+
+  void _showSearch() {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => SearchInBookSheet(
+        book: widget.book,
+        paragraphs: widget.paragraphs,
+        onResultTap: (int paragraphIndex) {
+          _scrollController.scrollTo(
+            index: paragraphIndex,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOut,
+          );
         },
       ),
     );
@@ -281,6 +301,11 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.search, color: Colors.white),
+            onPressed: _showSearch,
+            tooltip: 'Search in book',
+          ),
           IconButton(
             icon: const Icon(Icons.bookmark_border, color: Colors.white),
             onPressed: _addBookmark,
