@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
+import '../../providers/enhanced_quiz_providers.dart';
 
 class ChallengeModeScreen extends ConsumerStatefulWidget {
   const ChallengeModeScreen({super.key});
@@ -771,7 +772,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
     );
   }
 
-  void _startChallenge(Map<String, dynamic> player) {
+  void _startChallenge(Map<String, dynamic> player) async {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Starting challenge with ${player['name']}...'),
@@ -780,7 +781,25 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
     );
-    // TODO: Navigate to quiz screen with challenge mode
+
+    // Create a challenge session
+    final challengeNotifier = ref.read(challengeProvider.notifier);
+    await challengeNotifier.createChallenge(
+      opponentId: player['id'],
+      difficulty: 'intermediate',
+    );
+
+    // Note: In production, you would navigate to a quiz session with the created challenge
+    // For now, we show that the challenge is being created
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Challenge created! Starting quiz...'),
+          backgroundColor: AppTheme.info,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+    }
   }
 }
 

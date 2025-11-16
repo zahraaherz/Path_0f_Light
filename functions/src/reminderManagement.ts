@@ -2,30 +2,59 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import {Reminder, PrayerTimeOption} from "./types";
 import {sendNotification} from "./notificationService";
+import {Coordinates, CalculationMethod, PrayerTimes} from "adhan";
 
 const db = admin.firestore();
 
 /**
- * Scheduled function to process reminders every 5 minutes
- * Checks for reminders that need to be triggered and sends notifications
+ * ========================================================================
+ * HYBRID NOTIFICATION STRATEGY
+ * ========================================================================
+ *
+ * This app uses a HYBRID approach for notifications:
+ *
+ * LOCAL NOTIFICATIONS (Scheduled on device):
+ * - Prayer time reminders (5 daily prayers)
+ * - User-created collection reminders (du'as, dhikr, etc.)
+ * - Daily/weekly/monthly recurring reminders
+ * Benefits: Works offline, precise timing, better battery, lower cost
+ *
+ * FCM PUSH NOTIFICATIONS (Backend-triggered):
+ * - Admin announcements (new features, maintenance)
+ * - Special Islamic events (Ramadan, Eid, etc.)
+ * - Community notifications (challenges, leaderboard updates)
+ * - Cross-device sync notifications
+ * Benefits: Centralized control, cross-device, can update without app update
+ *
+ * NOTE: The functions below are ONLY for FCM push notifications.
+ * Prayer time and regular reminders use local notifications on the device.
+ * ========================================================================
+ */
+
+/**
+ * Scheduled function to process FCM-based reminders every 5 minutes
+ * ONLY processes reminders marked as 'use_fcm': true
+ * Regular user reminders use local notifications on device
  */
 export const processReminders = functions.pubsub
   .schedule("every 5 minutes")
   .onRun(async (context) => {
-    console.log("Processing reminders...");
+    console.log("Processing FCM-based reminders...");
 
     try {
       const now = admin.firestore.Timestamp.now();
 
-      // Query reminders that need to be triggered
+      // Query ONLY FCM-based reminders that need to be triggered
+      // Regular user reminders use local notifications on device
       const remindersSnapshot = await db
         .collection("reminders")
         .where("is_enabled", "==", true)
+        .where("use_fcm", "==", true) // ONLY FCM notifications
         .where("next_trigger", "<=", now)
         .limit(100) // Process 100 reminders at a time
         .get();
 
-      console.log(`Found ${remindersSnapshot.size} reminders to process`);
+      console.log(`Found ${remindersSnapshot.size} FCM reminders to process`);
 
       const batch = db.batch();
       const notifications: Array<Promise<void>> = [];
@@ -74,24 +103,31 @@ export const processReminders = functions.pubsub
   });
 
 /**
- * Scheduled function to calculate prayer-based reminders
- * Runs every hour to check and schedule prayer time reminders
+ * Scheduled function to calculate FCM-based prayer reminders
+ * Runs every hour to check and schedule prayer time reminders via FCM
+ *
+ * NOTE: Most prayer reminders use LOCAL NOTIFICATIONS on device.
+ * This function is ONLY for special cases where FCM is needed:
+ * - Cross-device synchronization
+ * - Special admin-initiated prayer notifications
+ * - Backup notifications for users without local notification permission
  */
 export const processPrayerReminders = functions.pubsub
   .schedule("every 1 hours")
   .onRun(async (context) => {
-    console.log("Processing prayer time reminders...");
+    console.log("Processing FCM-based prayer time reminders...");
 
     try {
-      // Get all prayer-based reminders
+      // Get ONLY FCM-based prayer reminders
       const remindersSnapshot = await db
         .collection("reminders")
         .where("is_enabled", "==", true)
+        .where("use_fcm", "==", true) // ONLY FCM
         .where("trigger_type", "==", "prayerTime")
         .get();
 
       console.log(
-        `Found ${remindersSnapshot.size} prayer reminders to update`
+        `Found ${remindersSnapshot.size} FCM prayer reminders to update`
       );
 
       const batch = db.batch();
@@ -474,24 +510,46 @@ async function calculatePrayerTimeTrigger(
 }
 
 /**
- * Get prayer times for a location
- * This is a placeholder - in production, use a proper prayer times library
+ * Get prayer times for a location using the Adhan library
+ * Calculates accurate prayer times based on coordinates and date
  */
 function getPrayerTimesForLocation(
   latitude: number,
   longitude: number,
   date: Date = new Date()
 ): {[key in PrayerTimeOption]: Date} {
-  // Placeholder times - in production, use the adhan package
-  const today = new Date(date);
-  return {
-    fajr: new Date(today.setHours(5, 30, 0, 0)),
-    sunrise: new Date(today.setHours(6, 45, 0, 0)),
-    dhuhr: new Date(today.setHours(12, 30, 0, 0)),
-    asr: new Date(today.setHours(15, 45, 0, 0)),
-    maghrib: new Date(today.setHours(18, 30, 0, 0)),
-    isha: new Date(today.setHours(20, 0, 0, 0)),
-  };
+  try {
+    const coordinates = new Coordinates(latitude, longitude);
+
+    // Use Muslim World League calculation method by default
+    // This can be made configurable per user in the future
+    const params = CalculationMethod.MuslimWorldLeague();
+
+    // Calculate prayer times for the given date
+    const prayerTimes = new PrayerTimes(coordinates, date, params);
+
+    return {
+      fajr: prayerTimes.fajr,
+      sunrise: prayerTimes.sunrise,
+      dhuhr: prayerTimes.dhuhr,
+      asr: prayerTimes.asr,
+      maghrib: prayerTimes.maghrib,
+      isha: prayerTimes.isha,
+    };
+  } catch (error) {
+    console.error("Error calculating prayer times:", error);
+
+    // Fallback to approximate times if calculation fails
+    const fallbackDate = new Date(date);
+    return {
+      fajr: new Date(fallbackDate.setHours(5, 30, 0, 0)),
+      sunrise: new Date(fallbackDate.setHours(6, 45, 0, 0)),
+      dhuhr: new Date(fallbackDate.setHours(12, 30, 0, 0)),
+      asr: new Date(fallbackDate.setHours(15, 45, 0, 0)),
+      maghrib: new Date(fallbackDate.setHours(18, 30, 0, 0)),
+      isha: new Date(fallbackDate.setHours(20, 0, 0, 0)),
+    };
+  }
 }
 
 /**

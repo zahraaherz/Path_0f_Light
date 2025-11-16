@@ -1,20 +1,105 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
-import '../../models/prayer/prayer_times.dart';
-import '../../data/mock_data.dart';
+import '../../models/prayer/prayer_times_model.dart';
+import '../../providers/prayer_providers.dart';
+import 'package:intl/intl.dart';
 
-class PrayerTimesWidget extends StatelessWidget {
+class PrayerTimesWidget extends ConsumerWidget {
   const PrayerTimesWidget({super.key});
 
+  String _formatTime(DateTime time) {
+    return DateFormat.jm().format(time);
+  }
+
   @override
-  Widget build(BuildContext context) {
-    final prayerTimes = MockData.todayPrayerTimes;
+  Widget build(BuildContext context, WidgetRef ref) {
+    final prayerTimesAsync = ref.watch(todayPrayerTimesProvider);
+    final nextPrayerAsync = ref.watch(nextPrayerProvider);
+
+    return prayerTimesAsync.when(
+      loading: () => _buildLoadingState(context),
+      error: (error, stack) => _buildErrorState(context, error),
+      data: (prayerTimes) {
+        return nextPrayerAsync.when(
+          loading: () => _buildPrayerTimesContent(context, prayerTimes, null),
+          error: (_, __) => _buildPrayerTimesContent(context, prayerTimes, null),
+          data: (nextPrayer) => _buildPrayerTimesContent(context, prayerTimes, nextPrayer),
+        );
+      },
+    );
+  }
+
+  Widget _buildLoadingState(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [AppTheme.primaryTeal.withOpacity(0.1), AppTheme.islamicGreen.withOpacity(0.05)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        border: Border.all(
+          color: AppTheme.primaryTeal.withOpacity(0.3),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: const Center(
+        child: CircularProgressIndicator(),
+      ),
+    );
+  }
+
+  Widget _buildErrorState(BuildContext context, Object error) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [AppTheme.primaryTeal.withOpacity(0.1), AppTheme.islamicGreen.withOpacity(0.05)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        border: Border.all(
+          color: AppTheme.primaryTeal.withOpacity(0.3),
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        children: [
+          const Icon(Icons.error_outline, color: Colors.red, size: 40),
+          const SizedBox(height: 10),
+          Text(
+            'Unable to load prayer times',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          const SizedBox(height: 5),
+          Text(
+            'Please check location permissions',
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: AppTheme.textSecondary,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPrayerTimesContent(
+    BuildContext context,
+    PrayerTimesModel prayerTimes,
+    ({PrayerName name, DateTime time})? nextPrayer,
+  ) {
+    final now = DateTime.now();
     final prayers = [
-      prayerTimes.fajr,
-      prayerTimes.dhuhr,
-      prayerTimes.asr,
-      prayerTimes.maghrib,
-      prayerTimes.isha,
+      (name: PrayerName.fajr, time: prayerTimes.fajr, arabicName: 'الفجر'),
+      (name: PrayerName.dhuhr, time: prayerTimes.dhuhr, arabicName: 'الظهر'),
+      (name: PrayerName.asr, time: prayerTimes.asr, arabicName: 'العصر'),
+      (name: PrayerName.maghrib, time: prayerTimes.maghrib, arabicName: 'المغرب'),
+      (name: PrayerName.isha, time: prayerTimes.isha, arabicName: 'العشاء'),
     ];
 
     return Container(
@@ -69,7 +154,7 @@ class PrayerTimesWidget extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              if (prayerTimes.nextPrayer != null)
+              if (nextPrayer != null)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
@@ -77,7 +162,7 @@ class PrayerTimesWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    '${prayerTimes.nextPrayer}',
+                    nextPrayer.name.displayNameEn,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 11,
@@ -91,12 +176,17 @@ class PrayerTimesWidget extends StatelessWidget {
           const SizedBox(height: 16),
 
           // Prayer times list
-          ...prayers.map((prayer) => _PrayerTimeRow(prayer: prayer)),
+          ...prayers.map((prayer) => _PrayerTimeRow(
+                name: prayer.name.displayNameEn,
+                arabicName: prayer.arabicName,
+                time: _formatTime(prayer.time),
+                isPassed: prayer.time.isBefore(now),
+              )),
 
           const SizedBox(height: 12),
 
           // Next prayer countdown
-          if (prayerTimes.timeUntilNext != null)
+          if (nextPrayer != null)
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
@@ -112,7 +202,7 @@ class PrayerTimesWidget extends StatelessWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Next prayer in ${prayerTimes.timeUntilNext}',
+                    'Next prayer: ${nextPrayer.name.displayNameEn} at ${_formatTime(nextPrayer.time)}',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppTheme.primaryTeal,
@@ -128,9 +218,17 @@ class PrayerTimesWidget extends StatelessWidget {
 }
 
 class _PrayerTimeRow extends StatelessWidget {
-  final PrayerTime prayer;
+  final String name;
+  final String arabicName;
+  final String time;
+  final bool isPassed;
 
-  const _PrayerTimeRow({required this.prayer});
+  const _PrayerTimeRow({
+    required this.name,
+    required this.arabicName,
+    required this.time,
+    required this.isPassed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +245,7 @@ class _PrayerTimeRow extends StatelessWidget {
                   width: 4,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: prayer.isPassed ? AppTheme.textSecondary : AppTheme.primaryTeal,
+                    color: isPassed ? AppTheme.textSecondary : AppTheme.primaryTeal,
                     shape: BoxShape.circle,
                   ),
                 ),
@@ -156,14 +254,14 @@ class _PrayerTimeRow extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      prayer.name,
+                      name,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.w600,
-                            color: prayer.isPassed ? AppTheme.textSecondary : AppTheme.textPrimary,
+                            color: isPassed ? AppTheme.textSecondary : AppTheme.textPrimary,
                           ),
                     ),
                     Text(
-                      prayer.arabicName,
+                      arabicName,
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppTheme.textSecondary,
                             fontSize: 11,
@@ -178,28 +276,16 @@ class _PrayerTimeRow extends StatelessWidget {
           // Prayer time
           Expanded(
             child: Text(
-              prayer.time,
+              time,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     fontWeight: FontWeight.bold,
-                    color: prayer.isPassed ? AppTheme.textSecondary : AppTheme.primaryTeal,
+                    color: isPassed ? AppTheme.textSecondary : AppTheme.primaryTeal,
                   ),
               textAlign: TextAlign.center,
             ),
           ),
 
-          // Iqama time (if available)
-          if (prayer.iqamaTime != null)
-            Expanded(
-              child: Text(
-                prayer.iqamaTime!,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: AppTheme.textSecondary,
-                    ),
-                textAlign: TextAlign.right,
-              ),
-            )
-          else
-            const Expanded(child: SizedBox()),
+          const Expanded(child: SizedBox()),
         ],
       ),
     );

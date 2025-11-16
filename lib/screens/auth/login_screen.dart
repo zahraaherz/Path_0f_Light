@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
@@ -116,7 +117,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               'Enter your email address to receive a password reset link.',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             TextField(
               controller: emailController,
               decoration: const InputDecoration(
@@ -151,6 +152,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final authState = ref.watch(authControllerProvider);
 
     // Show error snackbar
@@ -207,7 +209,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             size: 48,
                             color: Colors.white,
                           ),
-                          const SizedBox(height: 8),
+                          SizedBox(height: r.spaceSmall),
                           Text(
                             'Path of Light',
                             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -219,7 +221,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: r.spaceLarge),
 
                   // Welcome Text
                   Text(
@@ -227,7 +229,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     style: Theme.of(context).textTheme.headlineSmall,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     'Sign in to continue your journey',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -235,7 +237,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 32),
+                  SizedBox(height: r.spaceLarge),
 
                   // Email Field
                   TextFormField(
@@ -257,7 +259,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
 
                   // Password Field
                   TextFormField(
@@ -292,7 +294,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
 
                   // Forgot Password
                   Align(
@@ -302,7 +304,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       child: const Text('Forgot Password?'),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
 
                   // Sign In Button
                   SizedBox(
@@ -321,14 +323,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           : const Text('Sign In'),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
 
                   // Divider
                   Row(
                     children: [
                       const Expanded(child: Divider()),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                         child: Text(
                           'OR CONTINUE WITH',
                           style: Theme.of(context).textTheme.bodySmall,
@@ -337,7 +339,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       const Expanded(child: Divider()),
                     ],
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
 
                   // Social Sign In Buttons
                   Row(
@@ -368,7 +370,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
 
                   // Guest Access Button
                   OutlinedButton.icon(
@@ -376,14 +378,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     icon: const Icon(Icons.person_outline),
                     label: const Text('Continue as Guest'),
                     style: OutlinedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
                       side: BorderSide(
                         color: AppTheme.primaryTeal.withOpacity(0.5),
                         width: 1.5,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
 
                   // Guest Info Text
                   Text(
@@ -393,7 +395,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: r.spaceLarge),
 
                   // Sign Up Link
                   Row(
@@ -434,6 +436,7 @@ class _SocialSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Column(
       children: [
         Container(
@@ -441,7 +444,7 @@ class _SocialSignInButton extends StatelessWidget {
           height: 56,
           decoration: BoxDecoration(
             color: color.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(r.radiusMedium),
             border: Border.all(
               color: color.withOpacity(0.3),
               width: 1,

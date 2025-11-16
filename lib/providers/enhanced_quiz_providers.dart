@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import '../models/quiz/quiz_models.dart';
 import '../repositories/enhanced_quiz_repository.dart';
+import 'auth_providers.dart';
 
 /// Enhanced Quiz Repository Provider
 final enhancedQuizRepositoryProvider = Provider((ref) {
@@ -408,8 +409,7 @@ class ChallengeNotifier extends StateNotifier<ChallengeState> {
 final challengeProvider =
     StateNotifierProvider<ChallengeNotifier, ChallengeState>((ref) {
   final repository = ref.watch(enhancedQuizRepositoryProvider);
-  // TODO: Get actual user ID from auth provider
-  const userId = 'current_user_id';
+  final userId = ref.watch(currentUserIdProvider) ?? 'guest';
   return ChallengeNotifier(repository, userId);
 });
 
@@ -454,8 +454,11 @@ class QuestionTimerNotifier extends StateNotifier<int> {
 
 /// Book Collection Provider
 final savedBooksProvider = StreamProvider<List<String>>((ref) {
-  // TODO: Get actual user ID from auth provider
-  const userId = 'current_user_id';
+  final userId = ref.watch(currentUserIdProvider);
+
+  if (userId == null) {
+    return Stream.value(<String>[]);
+  }
 
   return FirebaseFirestore.instance
       .collection('users')

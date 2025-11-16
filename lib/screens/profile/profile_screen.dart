@@ -6,12 +6,14 @@ import '../../providers/auth_providers.dart';
 import '../../providers/auth_controller.dart';
 import '../../data/mock_data.dart';
 import '../auth/login_screen.dart';
+import '../../utils/responsive.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final userProfileAsync = ref.watch(currentUserProfileProvider);
 
     return Scaffold(
@@ -42,7 +44,7 @@ class ProfileScreen extends ConsumerWidget {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   child: Column(
                     children: [
                       // Profile Photo
@@ -67,7 +69,7 @@ class ProfileScreen extends ConsumerWidget {
                                 ),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: r.spaceMedium),
 
                       // Display Name
                       Text(
@@ -86,7 +88,7 @@ class ProfileScreen extends ConsumerWidget {
                               color: Colors.white.withOpacity(0.9),
                             ),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: r.spaceSmall),
 
                       // Role Badge
                       Container(
@@ -109,7 +111,7 @@ class ProfileScreen extends ConsumerWidget {
 
                 // Stats Section
                 Padding(
-                  padding: const EdgeInsets.all(16),
+                  padding: EdgeInsets.all(r.paddingMedium),
                   child: Row(
                     children: [
                       Expanded(
@@ -120,7 +122,7 @@ class ProfileScreen extends ConsumerWidget {
                           color: AppTheme.goldAccent,
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: r.spaceSmall),
                       Expanded(
                         child: _StatCard(
                           icon: Icons.stars,
@@ -129,7 +131,7 @@ class ProfileScreen extends ConsumerWidget {
                           color: AppTheme.primaryTeal,
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      SizedBox(width: r.spaceSmall),
                       Expanded(
                         child: _StatCard(
                           icon: Icons.local_fire_department,
@@ -223,11 +225,11 @@ class ProfileScreen extends ConsumerWidget {
                   ],
                 ),
 
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
 
                 // Sign Out Button
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                   child: SizedBox(
                     width: double.infinity,
                     child: OutlinedButton.icon(
@@ -237,13 +239,13 @@ class ProfileScreen extends ConsumerWidget {
                       style: OutlinedButton.styleFrom(
                         foregroundColor: AppTheme.error,
                         side: const BorderSide(color: AppTheme.error),
-                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
                       ),
                     ),
                   ),
                 ),
 
-                const SizedBox(height: 32),
+                SizedBox(height: r.spaceLarge),
               ],
             ),
           );
@@ -264,7 +266,7 @@ class ProfileScreen extends ConsumerWidget {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   child: Column(
                     children: [
                       // Profile Photo
@@ -282,7 +284,7 @@ class ProfileScreen extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: r.spaceMedium),
                       Text(
                         displayProfile.displayName ?? 'Loading...',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -317,7 +319,7 @@ class ProfileScreen extends ConsumerWidget {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   child: Column(
                     children: [
                       // Profile Photo
@@ -335,7 +337,7 @@ class ProfileScreen extends ConsumerWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16),
+                      SizedBox(height: r.spaceMedium),
                       Text(
                         displayProfile.displayName ?? 'Preview Mode',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -350,7 +352,7 @@ class ProfileScreen extends ConsumerWidget {
                               color: Colors.white.withOpacity(0.9),
                             ),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: r.spaceSmall),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
@@ -369,14 +371,14 @@ class ProfileScreen extends ConsumerWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   child: Column(
                     children: [
                       const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
-                      const SizedBox(height: 16),
+                      SizedBox(height: r.spaceMedium),
                       Text('Preview Mode - Mock Data',
                           style: Theme.of(context).textTheme.titleMedium),
-                      const SizedBox(height: 8),
+                      SizedBox(height: r.spaceSmall),
                       Text('Sign in to view your actual profile',
                           style: Theme.of(context).textTheme.bodySmall),
                     ],
@@ -440,14 +442,15 @@ class _StatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Card(
       elevation: 2,
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           children: [
             Icon(icon, color: color, size: 32),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             Text(
               value,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -481,6 +484,7 @@ class _SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Card(
@@ -489,11 +493,11 @@ class _SectionCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(r.paddingMedium),
               child: Row(
                 children: [
                   Icon(icon, color: AppTheme.primaryTeal),
-                  const SizedBox(width: 12),
+                  SizedBox(width: r.spaceSmall),
                   Text(
                     title,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -520,6 +524,7 @@ class _InfoRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Row(
