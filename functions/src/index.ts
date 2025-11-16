@@ -56,3 +56,14 @@ export {
   searchBooks,
   getBookDetails,
 } from "./contentManagement";
+
+// Export Questions Management Functions (Quiz System)
+export {
+  insertQuestionWithId,
+  bulkInsertQuestionsFromJSON,
+  getQuestions,
+  getQuestionById,
+  getRandomQuestions,
+  verifyQuestion,
+  getQuestionStats,
+} from "./questionsManagement";
