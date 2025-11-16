@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../models/library/paragraph.dart';
 import '../../models/library/reading_models.dart';
 import '../../providers/reading_providers.dart';
+import '../../providers/auth_providers.dart';
 import '../../widgets/reading/paragraph_widget.dart';
 import '../../widgets/reading/reading_settings_sheet.dart';
 import '../../widgets/reading/table_of_contents_sheet.dart';
 import '../../widgets/reading/bookmarks_list_sheet.dart';
+import '../auth/login_screen.dart';
 
 class BookReaderScreen extends ConsumerStatefulWidget {
   final Book book;
@@ -70,6 +73,10 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
   }
 
   Future<void> _saveProgress() async {
+    // Only save progress if user is logged in
+    final authUser = ref.read(currentAuthUserProvider);
+    if (authUser == null) return;
+
     if (_currentParagraphIndex >= widget.paragraphs.length) return;
 
     final paragraph = widget.paragraphs[_currentParagraphIndex];
@@ -140,6 +147,15 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
   }
 
   Future<void> _addBookmark() async {
+    // Require authentication for bookmarks
+    final authUser = ref.read(currentAuthUserProvider);
+    if (authUser == null) {
+      if (mounted) {
+        _showLoginPrompt('Sign in to add bookmarks');
+      }
+      return;
+    }
+
     if (_currentParagraphIndex >= widget.paragraphs.length) return;
 
     final paragraph = widget.paragraphs[_currentParagraphIndex];
@@ -157,6 +173,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Bookmark added'),
+            backgroundColor: AppTheme.success,
             duration: Duration(seconds: 2),
           ),
         );
@@ -166,11 +183,37 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Failed to add bookmark: $e'),
-            backgroundColor: Colors.red,
+            backgroundColor: AppTheme.error,
           ),
         );
       }
     }
+  }
+
+  void _showLoginPrompt(String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Sign in Required'),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const LoginScreen()),
+              );
+            },
+            style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primaryTeal),
+            child: const Text('Sign In'),
+          ),
+        ],
+      ),
+    );
   }
 
   void _toggleAutoScroll() {
@@ -218,29 +261,40 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
     final backgroundColor = _getBackgroundColor(preferences.backgroundColor);
     final textColor = _getTextColor(preferences.backgroundColor);
 
+    final authUser = ref.watch(currentAuthUserProvider);
+
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
         title: Text(
           widget.book.titleAr,
-          style: TextStyle(color: textColor),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
         ),
-        backgroundColor: backgroundColor,
+        backgroundColor: AppTheme.primaryTeal,
         elevation: 0,
-        iconTheme: IconThemeData(color: textColor),
+        iconTheme: const IconThemeData(color: Colors.white),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
         actions: [
           IconButton(
-            icon: Icon(Icons.bookmark_border, color: textColor),
+            icon: const Icon(Icons.bookmark_border, color: Colors.white),
             onPressed: _addBookmark,
-            tooltip: 'Add bookmark',
+            tooltip: authUser == null ? 'Sign in to bookmark' : 'Add bookmark',
           ),
           IconButton(
-            icon: Icon(Icons.bookmarks_outlined, color: textColor),
-            onPressed: _showBookmarks,
-            tooltip: 'View bookmarks',
+            icon: const Icon(Icons.bookmarks_outlined, color: Colors.white),
+            onPressed: authUser == null
+                ? () => _showLoginPrompt('Sign in to view bookmarks')
+                : _showBookmarks,
+            tooltip: authUser == null ? 'Sign in to view bookmarks' : 'View bookmarks',
           ),
           IconButton(
-            icon: Icon(Icons.settings, color: textColor),
+            icon: const Icon(Icons.settings, color: Colors.white),
             onPressed: _showReadingSettings,
             tooltip: 'Reading settings',
           ),
@@ -251,10 +305,8 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
           // Progress bar
           LinearProgressIndicator(
             value: progressPercentage / 100,
-            backgroundColor: Colors.grey.withOpacity(0.2),
-            valueColor: AlwaysStoppedAnimation<Color>(
-              Theme.of(context).primaryColor,
-            ),
+            backgroundColor: AppTheme.textSecondary.withOpacity(0.1),
+            valueColor: const AlwaysStoppedAnimation<Color>(AppTheme.primaryTeal),
           ),
 
           // Paragraphs list
@@ -316,8 +368,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
             mini: true,
             heroTag: 'autoScroll',
             onPressed: _toggleAutoScroll,
-            backgroundColor:
-                _isAutoScrolling ? Colors.red : Theme.of(context).primaryColor,
+            backgroundColor: _isAutoScrolling ? AppTheme.error : AppTheme.primaryTeal,
             child: Icon(_isAutoScrolling ? Icons.pause : Icons.play_arrow),
           ),
           const SizedBox(height: 12),
@@ -326,6 +377,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
           FloatingActionButton(
             heroTag: 'toc',
             onPressed: _showTableOfContents,
+            backgroundColor: AppTheme.islamicGreen,
             child: const Icon(Icons.list),
             tooltip: 'Table of Contents',
           ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../config/theme/app_theme.dart';
 import '../../models/friends/friend_models.dart';
 import '../../providers/friends_providers.dart';
+import '../../providers/auth_providers.dart';
+import '../auth/login_screen.dart';
 
 class FriendsScreen extends ConsumerStatefulWidget {
   const FriendsScreen({Key? key}) : super(key: key);
@@ -31,11 +34,86 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
 
   @override
   Widget build(BuildContext context) {
+    final authUser = ref.watch(currentAuthUserProvider);
+
+    // Require authentication for friends feature
+    if (authUser == null) {
+      return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Text(
+            'Friends',
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          backgroundColor: AppTheme.primaryTeal,
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.people_outline,
+                  size: 80,
+                  color: AppTheme.textSecondary.withOpacity(0.5),
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  'Sign in to connect with friends',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  'Search for friends, send requests, and build your learning community',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: AppTheme.textSecondary,
+                      ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 32),
+                ElevatedButton.icon(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const LoginScreen()),
+                    );
+                  },
+                  icon: const Icon(Icons.login),
+                  label: const Text('Sign In'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppTheme.primaryTeal,
+                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Friends'),
+        title: Text(
+          'Friends',
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        backgroundColor: AppTheme.primaryTeal,
         bottom: TabBar(
           controller: _tabController,
+          indicatorColor: Colors.white,
+          labelColor: Colors.white,
+          unselectedLabelColor: Colors.white.withOpacity(0.7),
           tabs: const [
             Tab(text: 'Friends', icon: Icon(Icons.people)),
             Tab(text: 'Requests', icon: Icon(Icons.person_add)),
@@ -70,16 +148,24 @@ class _FriendsListTab extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.people_outline, size: 64, color: Colors.grey[400]),
+                Icon(
+                  Icons.people_outline,
+                  size: 64,
+                  color: AppTheme.textSecondary.withOpacity(0.5),
+                ),
                 const SizedBox(height: 16),
                 Text(
                   'No friends yet',
-                  style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: AppTheme.textSecondary,
+                      ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   'Search for users to add as friends',
-                  style: TextStyle(fontSize: 14, color: Colors.grey[500]),
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: AppTheme.textSecondary.withOpacity(0.7),
+                      ),
                 ),
               ],
             ),
@@ -99,17 +185,25 @@ class _FriendsListTab extends ConsumerWidget {
           ),
         );
       },
-      loading: () => const Center(child: CircularProgressIndicator()),
+      loading: () => Center(
+            child: CircularProgressIndicator(color: AppTheme.primaryTeal),
+          ),
       error: (error, stack) => Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.error_outline, size: 48, color: Colors.red),
+            const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
             const SizedBox(height: 16),
-            Text('Failed to load friends', style: TextStyle(color: Colors.grey[600])),
+            Text(
+              'Failed to load friends',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: AppTheme.textSecondary,
+                  ),
+            ),
             const SizedBox(height: 8),
             ElevatedButton(
               onPressed: () => ref.invalidate(friendsListProvider),
+              style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primaryTeal),
               child: const Text('Retry'),
             ),
           ],
@@ -331,12 +425,12 @@ class _FriendCard extends ConsumerWidget {
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
-          backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                  style: const TextStyle(
+                    color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
@@ -345,7 +439,9 @@ class _FriendCard extends ConsumerWidget {
         ),
         title: Text(
           friend.displayText,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -398,7 +494,7 @@ class _FriendCard extends ConsumerWidget {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(result.message),
-                    backgroundColor: result.success ? Colors.green : Colors.red,
+                    backgroundColor: result.success ? AppTheme.success : AppTheme.error,
                   ),
                 );
               }
@@ -410,7 +506,7 @@ class _FriendCard extends ConsumerWidget {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(result.message),
-                    backgroundColor: result.success ? Colors.green : Colors.red,
+                    backgroundColor: result.success ? AppTheme.success : AppTheme.error,
                   ),
                 );
               }
@@ -442,12 +538,12 @@ class _FriendRequestCard extends ConsumerWidget {
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
-          backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                  style: const TextStyle(
+                    color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
@@ -456,7 +552,9 @@ class _FriendRequestCard extends ConsumerWidget {
         ),
         title: Text(
           friend.displayText,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ),
         subtitle: Text(isReceived ? 'Wants to be your friend' : 'Request sent'),
         trailing: isReceived
@@ -516,12 +614,12 @@ class _UserSearchResultCard extends ConsumerWidget {
           radius: 28,
           backgroundImage:
               user.photoURL != null ? CachedNetworkImageProvider(user.photoURL!) : null,
-          backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
           child: user.photoURL == null
               ? Text(
                   user.username[0].toUpperCase(),
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                  style: const TextStyle(
+                    color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
@@ -530,7 +628,9 @@ class _UserSearchResultCard extends ConsumerWidget {
         ),
         title: Text(
           user.displayName ?? user.username,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

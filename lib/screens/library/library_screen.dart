@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../providers/library_providers.dart';
+import '../../providers/auth_providers.dart';
 import 'book_reader_screen.dart';
+import '../auth/login_screen.dart';
 
 class LibraryScreen extends ConsumerStatefulWidget {
   const LibraryScreen({Key? key}) : super(key: key);
@@ -26,18 +29,38 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
   @override
   Widget build(BuildContext context) {
     final booksAsync = ref.watch(publishedBooksProvider);
+    final authUser = ref.watch(currentAuthUserProvider);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Library'),
+        title: Text(
+          'Library',
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        backgroundColor: AppTheme.primaryTeal,
         actions: [
           IconButton(
-            icon: Icon(_isGridView ? Icons.view_list : Icons.grid_view),
+            icon: Icon(_isGridView ? Icons.view_list : Icons.grid_view, color: Colors.white),
             onPressed: () {
               setState(() => _isGridView = !_isGridView);
             },
             tooltip: _isGridView ? 'List View' : 'Grid View',
           ),
+          // Login button if not authenticated
+          if (authUser == null)
+            IconButton(
+              icon: const Icon(Icons.login, color: Colors.white),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                );
+              },
+              tooltip: 'Sign In',
+            ),
         ],
       ),
       body: Column(
@@ -49,10 +72,10 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
               controller: _searchController,
               decoration: InputDecoration(
                 hintText: 'Search books...',
-                prefixIcon: const Icon(Icons.search),
+                prefixIcon: Icon(Icons.search, color: AppTheme.primaryTeal),
                 suffixIcon: _searchQuery.isNotEmpty
                     ? IconButton(
-                        icon: const Icon(Icons.clear),
+                        icon: Icon(Icons.clear, color: AppTheme.textSecondary),
                         onPressed: () {
                           setState(() {
                             _searchController.clear();
@@ -63,9 +86,18 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                     : null,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(color: AppTheme.primaryTeal.withOpacity(0.3)),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(color: Colors.grey.shade300),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: const BorderSide(color: AppTheme.primaryTeal, width: 2),
                 ),
                 filled: true,
-                fillColor: Colors.grey[100],
+                fillColor: Colors.grey[50],
               ),
               onChanged: (value) {
                 setState(() => _searchQuery = value.toLowerCase());
@@ -96,17 +128,16 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                               ? Icons.menu_book
                               : Icons.search_off,
                           size: 64,
-                          color: Colors.grey[400],
+                          color: AppTheme.textSecondary.withOpacity(0.5),
                         ),
                         const SizedBox(height: 16),
                         Text(
                           _searchQuery.isEmpty
                               ? 'No books available'
                               : 'No books found',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.grey[600],
-                          ),
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: AppTheme.textSecondary,
+                              ),
                         ),
                       ],
                     ),
@@ -122,22 +153,29 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                       : _buildListView(filteredBooks),
                 );
               },
-              loading: () => const Center(child: CircularProgressIndicator()),
+              loading: () => Center(
+                    child: CircularProgressIndicator(color: AppTheme.primaryTeal),
+                  ),
               error: (error, stack) => Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                    const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
                     const SizedBox(height: 16),
                     Text(
                       'Failed to load books',
-                      style: TextStyle(color: Colors.grey[600]),
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            color: AppTheme.textSecondary,
+                          ),
                     ),
                     const SizedBox(height: 8),
                     ElevatedButton(
                       onPressed: () {
                         ref.invalidate(publishedBooksProvider);
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppTheme.primaryTeal,
+                      ),
                       child: const Text('Retry'),
                     ),
                   ],
@@ -210,17 +248,19 @@ class _BookGridCard extends ConsumerWidget {
                         imageUrl: book.coverImageUrl!,
                         fit: BoxFit.cover,
                         placeholder: (context, url) => Container(
-                          color: Theme.of(context).primaryColor.withOpacity(0.1),
-                          child: const Center(child: CircularProgressIndicator()),
+                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          child: Center(
+                            child: CircularProgressIndicator(color: AppTheme.primaryTeal),
+                          ),
                         ),
                         errorWidget: (context, url, error) => Container(
-                          color: Theme.of(context).primaryColor.withOpacity(0.1),
-                          child: const Icon(Icons.menu_book, size: 48),
+                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          child: Icon(Icons.menu_book, size: 48, color: AppTheme.primaryTeal),
                         ),
                       )
                     : Container(
-                        color: Theme.of(context).primaryColor.withOpacity(0.1),
-                        child: const Icon(Icons.menu_book, size: 48),
+                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                        child: Icon(Icons.menu_book, size: 48, color: AppTheme.primaryTeal),
                       ),
               ),
             ),
@@ -243,10 +283,9 @@ class _BookGridCard extends ConsumerWidget {
                       children: [
                         Text(
                           book.titleAr,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                          ),
+                          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                              ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           textDirection: TextDirection.rtl,
@@ -254,10 +293,9 @@ class _BookGridCard extends ConsumerWidget {
                         const SizedBox(height: 4),
                         Text(
                           book.authorAr,
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey[600],
-                          ),
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: AppTheme.textSecondary,
+                              ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textDirection: TextDirection.rtl,
@@ -318,26 +356,30 @@ class _BookListCard extends ConsumerWidget {
                   placeholder: (context, url) => Container(
                     width: 60,
                     height: 80,
-                    color: Theme.of(context).primaryColor.withOpacity(0.1),
-                    child: const Center(child: CircularProgressIndicator()),
+                    color: AppTheme.primaryTeal.withOpacity(0.1),
+                    child: Center(
+                      child: CircularProgressIndicator(color: AppTheme.primaryTeal, strokeWidth: 2),
+                    ),
                   ),
                   errorWidget: (context, url, error) => Container(
                     width: 60,
                     height: 80,
-                    color: Theme.of(context).primaryColor.withOpacity(0.1),
-                    child: const Icon(Icons.menu_book),
+                    color: AppTheme.primaryTeal.withOpacity(0.1),
+                    child: Icon(Icons.menu_book, color: AppTheme.primaryTeal),
                   ),
                 )
               : Container(
                   width: 60,
                   height: 80,
-                  color: Theme.of(context).primaryColor.withOpacity(0.1),
-                  child: const Icon(Icons.menu_book),
+                  color: AppTheme.primaryTeal.withOpacity(0.1),
+                  child: Icon(Icons.menu_book, color: AppTheme.primaryTeal),
                 ),
         ),
         title: Text(
           book.titleAr,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
           textDirection: TextDirection.rtl,
         ),
         subtitle: Column(
@@ -346,16 +388,19 @@ class _BookListCard extends ConsumerWidget {
             const SizedBox(height: 4),
             Text(
               book.authorAr,
+              style: Theme.of(context).textTheme.bodyMedium,
               textDirection: TextDirection.rtl,
             ),
             const SizedBox(height: 4),
             Text(
               '${book.totalParagraphs} paragraphs',
-              style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppTheme.textSecondary,
+                  ),
             ),
           ],
         ),
-        trailing: const Icon(Icons.chevron_right),
+        trailing: Icon(Icons.chevron_right, color: AppTheme.primaryTeal),
         onTap: () {
           // TODO: Navigate to book reader
           showDialog(
