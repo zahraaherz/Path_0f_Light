@@ -1,0 +1,409 @@
+[
+  {
+    "id": "quran_para_001_001_001",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 1,
+    "page_number": 1,
+    "content": {
+      "text_ar": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "text_en": "In the name of Allah, the Entirely Merciful, the Especially Merciful."
+    },
+    "entities": {
+      "people": ["Allah"],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["بسم", "الله", "الرحمن", "الرحيم"],
+      "keywords_en": ["Allah", "Merciful", "name"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 5,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_002",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 2,
+    "page_number": 1,
+    "content": {
+      "text_ar": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "text_en": "[All] praise is [due] to Allah, Lord of the worlds"
+    },
+    "entities": {
+      "people": ["Allah"],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["الحمد", "لله", "رب", "العالمين"],
+      "keywords_en": ["praise", "Allah", "Lord", "worlds"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 4,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_003",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 3,
+    "page_number": 1,
+    "content": {
+      "text_ar": "الرَّحْمَٰنِ الرَّحِيمِ",
+      "text_en": "The Entirely Merciful, the Especially Merciful,"
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["الرحمن", "الرحيم"],
+      "keywords_en": ["Merciful", "mercy"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": ["quran_para_001_001_001"]
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 3,
+      "question_potential": {
+        "facts_count": 1,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_004",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 4,
+    "page_number": 1,
+    "content": {
+      "text_ar": "مَالِكِ يَوْمِ الدِّينِ",
+      "text_en": "Sovereign of the Day of Recompense."
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": ["Day of Judgment"],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["مالك", "يوم", "الدين"],
+      "keywords_en": ["Sovereign", "Day", "Judgment", "Recompense"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 3,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_005",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 5,
+    "page_number": 1,
+    "content": {
+      "text_ar": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "text_en": "It is You we worship and You we ask for help."
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["إياك", "نعبد", "نستعين"],
+      "keywords_en": ["worship", "help", "You"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 4,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_006",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 6,
+    "page_number": 1,
+    "content": {
+      "text_ar": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "text_en": "Guide us to the straight path"
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["اهدنا", "الصراط", "المستقيم"],
+      "keywords_en": ["guide", "straight", "path"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 4,
+      "question_potential": {
+        "facts_count": 1,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_001_007",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_001",
+    "section_title_ar": "الفاتحة",
+    "section_title_en": "Al-Fatiha",
+    "paragraph_number": 7,
+    "page_number": 1,
+    "content": {
+      "text_ar": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+      "text_en": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray."
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["صراط", "أنعمت", "المغضوب", "الضالين"],
+      "keywords_en": ["path", "favor", "anger", "astray"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": ["quran_para_001_001_006"]
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 8,
+      "question_potential": {
+        "facts_count": 3,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_112_001",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_112",
+    "section_title_ar": "الإخلاص",
+    "section_title_en": "Al-Ikhlas",
+    "paragraph_number": 1,
+    "page_number": 604,
+    "content": {
+      "text_ar": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+      "text_en": "Say, He is Allah, [who is] One,"
+    },
+    "entities": {
+      "people": ["Allah"],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["قل", "هو", "الله", "أحد"],
+      "keywords_en": ["Say", "Allah", "One"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 3,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_112_002",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_112",
+    "section_title_ar": "الإخلاص",
+    "section_title_en": "Al-Ikhlas",
+    "paragraph_number": 2,
+    "page_number": 604,
+    "content": {
+      "text_ar": "اللَّهُ الصَّمَدُ",
+      "text_en": "Allah, the Eternal Refuge."
+    },
+    "entities": {
+      "people": ["Allah"],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["الله", "الصمد"],
+      "keywords_en": ["Allah", "Eternal", "Refuge"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 2,
+      "question_potential": {
+        "facts_count": 1,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_112_003",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_112",
+    "section_title_ar": "الإخلاص",
+    "section_title_en": "Al-Ikhlas",
+    "paragraph_number": 3,
+    "page_number": 604,
+    "content": {
+      "text_ar": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "text_en": "He neither begets nor is born,"
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["لم", "يلد", "يولد"],
+      "keywords_en": ["beget", "born"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 3,
+      "question_potential": {
+        "facts_count": 2,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  },
+  {
+    "id": "quran_para_001_112_004",
+    "book_id": "quran_001",
+    "section_id": "quran_001_surah_112",
+    "section_title_ar": "الإخلاص",
+    "section_title_en": "Al-Ikhlas",
+    "paragraph_number": 4,
+    "page_number": 604,
+    "content": {
+      "text_ar": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+      "text_en": "Nor is there to Him any equivalent."
+    },
+    "entities": {
+      "people": [],
+      "places": [],
+      "events": [],
+      "dates": []
+    },
+    "search_data": {
+      "keywords_ar": ["لم", "يكن", "كفوا", "أحد"],
+      "keywords_en": ["equivalent", "equal"]
+    },
+    "references": {
+      "referenced_in_questions": [],
+      "related_paragraphs": []
+    },
+    "metadata": {
+      "difficulty": "basic",
+      "reading_time_seconds": 3,
+      "question_potential": {
+        "facts_count": 1,
+        "can_generate_questions": true
+      },
+      "content_priority": "high"
+    },
+    "created_at": null
+  }
+]
