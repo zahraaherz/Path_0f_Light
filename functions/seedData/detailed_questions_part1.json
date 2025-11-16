@@ -1,0 +1,406 @@
+{
+  "generated_at": "2025-11-16T20:12:59.789Z",
+  "total_questions": 9,
+  "note": "All questions have proper sources and detailed explanations of why wrong answers are incorrect",
+  "questions": {
+    "q_0201": {
+      "id": "q_0201",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "كم كان عمر النبي محمد (ص) عند البعثة؟",
+      "question_en": "How old was Prophet Muhammad (pbuh) when he received prophethood?",
+      "options": {
+        "A": {
+          "text_ar": "40 سنة",
+          "text_en": "40 years old"
+        },
+        "B": {
+          "text_ar": "25 سنة",
+          "text_en": "25 years old"
+        },
+        "C": {
+          "text_ar": "30 سنة",
+          "text_en": "30 years old"
+        },
+        "D": {
+          "text_ar": "50 سنة",
+          "text_en": "50 years old"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "sira_vol1_para_067",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "بُعث النبي محمد (ص) وهو ابن أربعين سنة في شهر رمضان",
+        "page_number": 134
+      },
+      "explanation_ar": "بُعث النبي (ص) وهو في سن الأربعين في غار حراء. الخيار B خاطئ لأن 25 سنة كان عمره عند زواجه من خديجة. الخيار C خاطئ لأنه لم يبعث في الثلاثين. الخيار D خاطئ لأنه توفي وعمره 63 سنة.",
+      "explanation_en": "The Prophet (pbuh) received prophethood at age 40 in Cave Hira. Option B is wrong because 25 was his age when he married Khadijah. Option C is wrong because he was not sent at 30. Option D is wrong because he passed away at 63.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": [
+        "prophet_muhammad"
+      ],
+      "topic_tags": [
+        "seerah",
+        "prophethood"
+      ]
+    },
+    "q_0202": {
+      "id": "q_0202",
+      "category": "prophet_muhammad",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "كم عدد أبناء النبي محمد (ص) الذكور؟",
+      "question_en": "How many sons did Prophet Muhammad (pbuh) have?",
+      "options": {
+        "A": {
+          "text_ar": "ثلاثة: القاسم وعبد الله وإبراهيم",
+          "text_en": "Three: al-Qasim, Abdullah, and Ibrahim"
+        },
+        "B": {
+          "text_ar": "أربعة",
+          "text_en": "Four"
+        },
+        "C": {
+          "text_ar": "اثنان فقط",
+          "text_en": "Only two"
+        },
+        "D": {
+          "text_ar": "خمسة",
+          "text_en": "Five"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "sira_vol1_para_178",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "كان للنبي (ص) ثلاثة من الذكور: القاسم وعبد الله من خديجة، وإبراهيم من مارية القبطية، وجميعهم توفوا صغاراً",
+        "page_number": 287
+      },
+      "explanation_ar": "كان للنبي ثلاثة أبناء ذكور توفوا جميعاً في طفولتهم. الخيار B خاطئ لأن العدد ثلاثة وليس أربعة. الخيار C خاطئ لأن إبراهيم كان الثالث. الخيار D خاطئ لأنه لم يكن له خمسة أبناء ذكور.",
+      "explanation_en": "The Prophet had three sons who all died in childhood. Option B is wrong because the number is three, not four. Option C is wrong because Ibrahim was the third. Option D is wrong because he didn't have five sons.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": [
+        "prophet_muhammad"
+      ],
+      "topic_tags": [
+        "family",
+        "seerah"
+      ]
+    },
+    "q_0203": {
+      "id": "q_0203",
+      "category": "prophet_muhammad",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "في أي غزوة كُسرت رباعية النبي (ص) وشُج رأسه؟",
+      "question_en": "In which battle was the Prophet's tooth broken and his head wounded?",
+      "options": {
+        "A": {
+          "text_ar": "غزوة أحد",
+          "text_en": "Battle of Uhud"
+        },
+        "B": {
+          "text_ar": "غزوة بدر",
+          "text_en": "Battle of Badr"
+        },
+        "C": {
+          "text_ar": "غزوة الخندق",
+          "text_en": "Battle of the Trench"
+        },
+        "D": {
+          "text_ar": "غزوة حنين",
+          "text_en": "Battle of Hunayn"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "uhud_battle_para_089",
+        "book_id": "maghazi_alnabi",
+        "exact_quote_ar": "وفي غزوة أحد كُسرت رباعية رسول الله (ص) وشُج في رأسه حتى سال الدم على وجهه",
+        "page_number": 156
+      },
+      "explanation_ar": "في غزوة أحد أصيب النبي في وجهه ورأسه. الخيار B خاطئ لأن بدر كانت انتصاراً ولم يُصب النبي. الخيار C خاطئ لأن الخندق لم تحدث فيها معركة مباشرة. الخيار D خاطئ لأنه لم يُصب في حنين.",
+      "explanation_en": "In the Battle of Uhud, the Prophet was injured in his face and head. Option B is wrong because Badr was a victory and the Prophet wasn't injured. Option C is wrong because there was no direct battle in the Trench. Option D is wrong because he wasn't injured in Hunayn.",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": [
+        "prophet_muhammad"
+      ],
+      "topic_tags": [
+        "battles",
+        "uhud"
+      ]
+    },
+    "q_0204": {
+      "id": "q_0204",
+      "category": "imam_ali",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "أين ولد الإمام علي (ع)؟",
+      "question_en": "Where was Imam Ali (as) born?",
+      "options": {
+        "A": {
+          "text_ar": "داخل الكعبة المشرفة",
+          "text_en": "Inside the holy Kaaba"
+        },
+        "B": {
+          "text_ar": "في بيت أبي طالب",
+          "text_en": "In Abu Talib's house"
+        },
+        "C": {
+          "text_ar": "في المدينة المنورة",
+          "text_en": "In Madinah"
+        },
+        "D": {
+          "text_ar": "في الطائف",
+          "text_en": "In Taif"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "birth_ali_para_001",
+        "book_id": "manaqib_ali",
+        "exact_quote_ar": "ولد أمير المؤمنين علي بن أبي طالب (ع) في جوف الكعبة المشرفة، ولم يولد فيها أحد قبله ولا بعده",
+        "page_number": 23
+      },
+      "explanation_ar": "ولد الإمام علي داخل الكعبة وهو شرف لم يحظ به أحد غيره. الخيار B خاطئ لأنه لم يولد في بيت أبي طالب. الخيار C خاطئ لأن المدينة لم تكن مسكن المسلمين بعد. الخيار D خاطئ لأن الطائف مدينة أخرى.",
+      "explanation_en": "Imam Ali was born inside the Kaaba, an honor no one else received. Option B is wrong because he wasn't born in Abu Talib's house. Option C is wrong because Madinah wasn't yet the Muslims' residence. Option D is wrong because Taif is another city.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": [
+        "imam_ali"
+      ],
+      "topic_tags": [
+        "birth",
+        "kaaba",
+        "miracles"
+      ]
+    },
+    "q_0205": {
+      "id": "q_0205",
+      "category": "imam_ali",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "كم عدد الخلفاء الراشدين حسب المعتقد الشيعي؟",
+      "question_en": "How many Rightly Guided Caliphs are there according to Shia belief?",
+      "options": {
+        "A": {
+          "text_ar": "اثنا عشر إماماً بدءاً بعلي (ع)",
+          "text_en": "Twelve Imams starting with Ali (as)"
+        },
+        "B": {
+          "text_ar": "أربعة خلفاء",
+          "text_en": "Four caliphs"
+        },
+        "C": {
+          "text_ar": "ثلاثة فقط",
+          "text_en": "Only three"
+        },
+        "D": {
+          "text_ar": "خمسة",
+          "text_en": "Five"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "imamate_concept_para_012",
+        "book_id": "alimamah_walimam",
+        "exact_quote_ar": "الأئمة الاثنا عشر هم الخلفاء الحقيقيون للنبي (ص)، أولهم علي بن أبي طالب وآخرهم المهدي المنتظر",
+        "page_number": 45
+      },
+      "explanation_ar": "الشيعة يؤمنون باثني عشر إماماً معصوماً. الخيار B خاطئ لأنه يمثل العقيدة السنية. الخيار C خاطئ لأن العدد اثنا عشر. الخيار D خاطئ لأنه ليس خمسة.",
+      "explanation_en": "Shias believe in twelve infallible Imams. Option B is wrong because it represents Sunni belief. Option C is wrong because the number is twelve. Option D is wrong because it's not five.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": [
+        "imam_ali"
+      ],
+      "topic_tags": [
+        "imamate",
+        "belief"
+      ]
+    },
+    "q_0206": {
+      "id": "q_0206",
+      "category": "imam_ali",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "كم مرة حج الإمام علي (ع) في حياته؟",
+      "question_en": "How many times did Imam Ali (as) perform Hajj in his lifetime?",
+      "options": {
+        "A": {
+          "text_ar": "أكثر من 20 مرة",
+          "text_en": "More than 20 times"
+        },
+        "B": {
+          "text_ar": "مرة واحدة فقط",
+          "text_en": "Only once"
+        },
+        "C": {
+          "text_ar": "خمس مرات",
+          "text_en": "Five times"
+        },
+        "D": {
+          "text_ar": "عشر مرات",
+          "text_en": "Ten times"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "ali_hajj_para_034",
+        "book_id": "manaqib_ali_vol2",
+        "exact_quote_ar": "حج أمير المؤمنين علي (ع) أكثر من عشرين حجة، بعضها مع النبي (ص) وبعضها بعد وفاته",
+        "page_number": 178
+      },
+      "explanation_ar": "حج الإمام علي أكثر من 20 مرة في حياته. الخيار B خاطئ لأنه حج عدة مرات. الخيار C خاطئ لأن العدد أكثر من ذلك. الخيار D خاطئ لأنه تجاوز العشرين.",
+      "explanation_en": "Imam Ali performed Hajj more than 20 times in his life. Option B is wrong because he performed it many times. Option C is wrong because the number is more than that. Option D is wrong because it exceeded twenty.",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": [
+        "imam_ali"
+      ],
+      "topic_tags": [
+        "worship",
+        "hajj"
+      ]
+    },
+    "q_0207": {
+      "id": "q_0207",
+      "category": "lady_fatimah",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "كم عدد أبناء السيدة فاطمة الزهراء (ع)؟",
+      "question_en": "How many children did Lady Fatimah al-Zahra (as) have?",
+      "options": {
+        "A": {
+          "text_ar": "أربعة: الحسن والحسين وزينب وأم كلثوم",
+          "text_en": "Four: Hasan, Husayn, Zaynab, and Umm Kulthum"
+        },
+        "B": {
+          "text_ar": "ثلاثة فقط",
+          "text_en": "Only three"
+        },
+        "C": {
+          "text_ar": "خمسة",
+          "text_en": "Five"
+        },
+        "D": {
+          "text_ar": "ستة",
+          "text_en": "Six"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "fatimah_children_para_023",
+        "book_id": "fatimah_alzahra",
+        "exact_quote_ar": "أنجبت فاطمة الزهراء (ع) أربعة أولاد: الحسن والحسين وزينب وأم كلثوم",
+        "page_number": 89
+      },
+      "explanation_ar": "أنجبت السيدة فاطمة أربعة أبناء جميعهم من الإمام علي. الخيار B خاطئ لأن العدد أربعة. الخيار C خاطئ لأنها لم تنجب خمسة. الخيار D خاطئ لأن العدد الصحيح أربعة.",
+      "explanation_en": "Lady Fatimah gave birth to four children, all from Imam Ali. Option B is wrong because the number is four. Option C is wrong because she didn't have five. Option D is wrong because the correct number is four.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": [
+        "lady_fatimah",
+        "imam_ali"
+      ],
+      "topic_tags": [
+        "family",
+        "children"
+      ]
+    },
+    "q_0208": {
+      "id": "q_0208",
+      "category": "lady_fatimah",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "كم كان عمر السيدة فاطمة (ع) عند وفاتها؟",
+      "question_en": "How old was Lady Fatimah (as) when she passed away?",
+      "options": {
+        "A": {
+          "text_ar": "18 سنة",
+          "text_en": "18 years old"
+        },
+        "B": {
+          "text_ar": "25 سنة",
+          "text_en": "25 years old"
+        },
+        "C": {
+          "text_ar": "30 سنة",
+          "text_en": "30 years old"
+        },
+        "D": {
+          "text_ar": "40 سنة",
+          "text_en": "40 years old"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "fatimah_death_para_056",
+        "book_id": "fatimah_alzahra",
+        "exact_quote_ar": "توفيت فاطمة الزهراء (ع) وعمرها ثماني عشرة سنة، بعد وفاة أبيها بتسعين يوماً",
+        "page_number": 234
+      },
+      "explanation_ar": "توفيت السيدة فاطمة في سن 18 سنة. الخيار B خاطئ لأنها توفيت في سن أصغر. الخيار C خاطئ لأنها لم تبلغ الثلاثين. الخيار D خاطئ لأنها توفيت شابة.",
+      "explanation_en": "Lady Fatimah passed away at age 18. Option B is wrong because she died younger. Option C is wrong because she didn't reach thirty. Option D is wrong because she died young.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": [
+        "lady_fatimah"
+      ],
+      "topic_tags": [
+        "death",
+        "history"
+      ]
+    },
+    "q_0209": {
+      "id": "q_0209",
+      "category": "lady_fatimah",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "ما اسم الخطبة الشهيرة التي ألقتها السيدة فاطمة (ع) في المسجد؟",
+      "question_en": "What is the name of the famous sermon Lady Fatimah (as) delivered in the mosque?",
+      "options": {
+        "A": {
+          "text_ar": "الخطبة الفدكية",
+          "text_en": "The Fadakiyya Sermon"
+        },
+        "B": {
+          "text_ar": "خطبة الغدير",
+          "text_en": "Ghadir Sermon"
+        },
+        "C": {
+          "text_ar": "خطبة الوداع",
+          "text_en": "Farewell Sermon"
+        },
+        "D": {
+          "text_ar": "خطبة الزهراء الكبرى",
+          "text_en": "The Great Zahra Sermon"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "fadakiyya_sermon_para_012",
+        "book_id": "balaghat_alnisa",
+        "exact_quote_ar": "دخلت فاطمة (ع) المسجد وألقت خطبتها الفدكية المشهورة تطالب بحقها في فدك",
+        "page_number": 67
+      },
+      "explanation_ar": "ألقت فاطمة الخطبة الفدكية للمطالبة بحقها. الخيار B خاطئ لأن خطبة الغدير كانت للنبي. الخيار C خاطئ لأن خطبة الوداع كانت للنبي. الخيار D خاطئ لأن الاسم الصحيح هو الفدكية.",
+      "explanation_en": "Fatimah delivered the Fadakiyya sermon to claim her right. Option B is wrong because Ghadir sermon was by the Prophet. Option C is wrong because Farewell sermon was by the Prophet. Option D is wrong because the correct name is Fadakiyya.",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": [
+        "lady_fatimah"
+      ],
+      "topic_tags": [
+        "fadak",
+        "rights",
+        "oppression"
+      ]
+    }
+  }
+}

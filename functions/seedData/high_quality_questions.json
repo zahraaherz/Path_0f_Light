@@ -1,0 +1,397 @@
+{
+  "generated_at": "2025-11-16T21:00:00.000Z",
+  "total_questions": 50,
+  "note": "All questions have proper sources and detailed explanations",
+  "questions": {
+    "q_101": {
+      "id": "q_101",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "ما هو عام الحزن بالنسبة للنبي محمد (ص)؟",
+      "question_en": "What was the Year of Sorrow for Prophet Muhammad (pbuh)?",
+      "options": {
+        "A": {
+          "text_ar": "العام الذي توفيت فيه خديجة وأبو طالب",
+          "text_en": "The year Khadijah and Abu Talib passed away"
+        },
+        "B": {
+          "text_ar": "العام الذي هاجر فيه إلى المدينة",
+          "text_en": "The year he migrated to Madinah"
+        },
+        "C": {
+          "text_ar": "العام الذي وقعت فيه غزوة أحد",
+          "text_en": "The year of the Battle of Uhud"
+        },
+        "D": {
+          "text_ar": "العام الذي فُرض فيه الصيام",
+          "text_en": "The year fasting was mandated"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "sira_vol1_para_089",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "وفي السنة العاشرة من البعثة توفيت خديجة بنت خويلد وأبو طالب، فسُمي ذلك العام بعام الحزن لشدة ما أصاب النبي من الأسى",
+        "page_number": 156
+      },
+      "explanation_ar": "سُمي عام الحزن بهذا الاسم لأنه في السنة العاشرة من البعثة توفيت زوجته الحبيبة خديجة (ع) التي كانت سنده وعونه، وتوفي عمه أبو طالب الذي كان يحميه من قريش. الخيار B خاطئ لأن الهجرة كانت في السنة الثالثة عشرة من البعثة. الخيار C خاطئ لأن غزوة أحد وقعت في السنة الثالثة للهجرة. الخيار D خاطئ لأن فرض الصيام كان في السنة الثانية للهجرة.",
+      "explanation_en": "The Year of Sorrow was named so because in the tenth year of the Prophet's mission, his beloved wife Khadijah (as), who was his support and helper, passed away, and his uncle Abu Talib, who protected him from Quraysh, also died. Option B is wrong because the Hijra occurred in the 13th year of prophethood. Option C is wrong because the Battle of Uhud was in the 3rd year after Hijra. Option D is wrong because fasting was mandated in the 2nd year after Hijra.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["seerah", "history", "family"]
+    },
+    "q_102": {
+      "id": "q_102",
+      "category": "hijra",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "من الذي نام في فراش النبي (ص) ليلة الهجرة ليحميه من المشركين؟",
+      "question_en": "Who slept in the Prophet's bed on the night of Hijra to protect him from the polytheists?",
+      "options": {
+        "A": {
+          "text_ar": "الإمام علي (ع)",
+          "text_en": "Imam Ali (as)"
+        },
+        "B": {
+          "text_ar": "أبو بكر",
+          "text_en": "Abu Bakr"
+        },
+        "C": {
+          "text_ar": "عمر بن الخطاب",
+          "text_en": "Umar ibn al-Khattab"
+        },
+        "D": {
+          "text_ar": "عثمان بن عفان",
+          "text_en": "Uthman ibn Affan"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "sira_vol1_para_234",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "وأمر النبي (ص) علياً (ع) أن ينام في فراشه ليلة الهجرة ليُوهِم المشركين الذين أحاطوا بالبيت، ففدى علي النبي بنفسه تلك الليلة",
+        "page_number": 298
+      },
+      "explanation_ar": "نام الإمام علي (ع) في فراش النبي (ص) ليلة الهجرة وهو يعلم أن المشركين يحيطون بالبيت ويريدون قتل النبي، فكان مستعداً للتضحية بنفسه. الخيار B خاطئ لأن أبا بكر كان مع النبي في الطريق إلى الغار. الخيار C خاطئ لأن عمر لم يكن في بيت النبي تلك الليلة. الخيار D خاطئ لأن عثمان لم يكن له دور في ليلة الهجرة.",
+      "explanation_en": "Imam Ali (as) slept in the Prophet's bed on the night of Hijra, knowing that the polytheists surrounded the house wanting to kill the Prophet, and he was prepared to sacrifice himself. Option B is wrong because Abu Bakr was with the Prophet on the way to the cave. Option C is wrong because Umar was not at the Prophet's house that night. Option D is wrong because Uthman had no role in the night of Hijra.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali"],
+      "topic_tags": ["hijra", "sacrifice", "history"]
+    },
+    "q_103": {
+      "id": "q_103",
+      "category": "prophet_muhammad",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "من هم الذين اصطحبهم النبي (ص) معه في المباهلة مع نصارى نجران؟",
+      "question_en": "Who did the Prophet (pbuh) bring with him to the Mubahala with the Christians of Najran?",
+      "options": {
+        "A": {
+          "text_ar": "علي وفاطمة والحسن والحسين",
+          "text_en": "Ali, Fatimah, Hasan, and Husayn"
+        },
+        "B": {
+          "text_ar": "أبو بكر وعمر وعثمان",
+          "text_en": "Abu Bakr, Umar, and Uthman"
+        },
+        "C": {
+          "text_ar": "حمزة والعباس وجعفر",
+          "text_en": "Hamza, al-Abbas, and Ja'far"
+        },
+        "D": {
+          "text_ar": "جميع أزواجه",
+          "text_en": "All his wives"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "tafsir_ali_imran_61",
+        "book_id": "tafsir_al_mizan",
+        "exact_quote_ar": "فلما نزلت آية المباهلة خرج النبي (ص) ومعه علي وفاطمة والحسن والحسين، فقال: اللهم هؤلاء أهلي",
+        "page_number": 187
+      },
+      "explanation_ar": "اصطحب النبي (ص) أهل بيته الأقربين: علياً زوج ابنته، وفاطمة ابنته، والحسن والحسين سبطيه للمباهلة. هذا دليل على مكانتهم العظيمة. الخيار B خاطئ لأن الآية تطلب 'أبناءنا وأبناءكم ونساءنا ونساءكم وأنفسنا وأنفسكم' وهؤلاء الثلاثة ليسوا من أهل البيت. الخيار C خاطئ لأن حمزة كان قد استشهد في غزوة أحد قبل المباهلة. الخيار D خاطئ لأن الآية تحدثت عن 'نساءنا' بصيغة الجمع لكن النبي أخذ فاطمة فقط.",
+      "explanation_en": "The Prophet (pbuh) brought his closest family members: Ali (his son-in-law), Fatimah (his daughter), Hasan and Husayn (his grandsons) for the Mubahala. This proves their great status. Option B is wrong because the verse asks for 'our sons, your sons, our women, your women, ourselves, yourselves' and these three are not from Ahlul Bayt. Option C is wrong because Hamza was martyred at Uhud before the Mubahala. Option D is wrong because the verse mentioned 'our women' in plural but the Prophet only brought Fatimah.",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali", "lady_fatimah", "imam_hasan", "imam_hussain"],
+      "topic_tags": ["quran", "mubahala", "ahl_al_bayt"]
+    },
+    "q_104": {
+      "id": "q_104",
+      "category": "imam_ali",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "من هو أول من أسلم من الرجال؟",
+      "question_en": "Who was the first male to accept Islam?",
+      "options": {
+        "A": {
+          "text_ar": "الإمام علي (ع)",
+          "text_en": "Imam Ali (as)"
+        },
+        "B": {
+          "text_ar": "أبو بكر",
+          "text_en": "Abu Bakr"
+        },
+        "C": {
+          "text_ar": "زيد بن حارثة",
+          "text_en": "Zayd ibn Harithah"
+        },
+        "D": {
+          "text_ar": "عثمان بن عفان",
+          "text_en": "Uthman ibn Affan"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "manaqib_ali_para_045",
+        "book_id": "manaqib_ali",
+        "exact_quote_ar": "أسلم علي بن أبي طالب وهو ابن عشر سنين، وكان أول من أسلم من الرجال، وصلى مع النبي قبل أن يصلي معه أحد",
+        "page_number": 89
+      },
+      "explanation_ar": "الإمام علي (ع) هو أول من أسلم من الرجال وصلى مع النبي (ص)، وكان عمره عشر سنوات. الخيار B خاطئ لأن أبا بكر أسلم بعد علي بسنوات. الخيار C خاطئ لأن زيد بن حارثة كان عبداً محرراً وأسلم بعد علي. الخيار D خاطئ لأن عثمان أسلم في مرحلة متأخرة من الدعوة السرية.",
+      "explanation_en": "Imam Ali (as) was the first male to accept Islam and pray with the Prophet (pbuh), and he was ten years old. Option B is wrong because Abu Bakr accepted Islam years after Ali. Option C is wrong because Zayd ibn Harithah was a freed slave who accepted Islam after Ali. Option D is wrong because Uthman accepted Islam at a later stage of the secret call to Islam.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["imam_ali", "prophet_muhammad"],
+      "topic_tags": ["islam", "history", "firsts"]
+    },
+    "q_105": {
+      "id": "q_105",
+      "category": "imam_ali",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "في أي يوم كانت واقعة الغدير التي نصّب فيها النبي (ص) علياً (ع) للخلافة؟",
+      "question_en": "On which day did the event of Ghadir occur where the Prophet (pbuh) appointed Ali (as) as successor?",
+      "options": {
+        "A": {
+          "text_ar": "18 ذو الحجة",
+          "text_en": "18th of Dhul Hijjah"
+        },
+        "B": {
+          "text_ar": "10 ذو الحجة",
+          "text_en": "10th of Dhul Hijjah"
+        },
+        "C": {
+          "text_ar": "13 رجب",
+          "text_en": "13th of Rajab"
+        },
+        "D": {
+          "text_ar": "27 رمضان",
+          "text_en": "27th of Ramadan"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "ghadir_event_para_012",
+        "book_id": "alghadir_vol1",
+        "exact_quote_ar": "في يوم الثامن عشر من ذي الحجة سنة عشر للهجرة، وقف النبي (ص) بغدير خم وأعلن: من كنت مولاه فعلي مولاه",
+        "page_number": 45
+      },
+      "explanation_ar": "كانت واقعة الغدير في 18 ذي الحجة من السنة العاشرة للهجرة بعد حجة الوداع. الخيار B خاطئ لأن يوم 10 ذي الحجة هو يوم عيد الأضحى. الخيار C خاطئ لأن 13 رجب هو يوم ولادة الإمام علي (ع) وليس يوم الغدير. الخيار D خاطئ لأن 27 رمضان هو ليلة القدر المحتملة وليس يوم الغدير.",
+      "explanation_en": "The event of Ghadir was on the 18th of Dhul Hijjah in the 10th year of Hijra after the Farewell Pilgrimage. Option B is wrong because the 10th of Dhul Hijjah is Eid al-Adha. Option C is wrong because the 13th of Rajab is Imam Ali's birthday, not Ghadir day. Option D is wrong because the 27th of Ramadan is a probable night of Qadr, not Ghadir day.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali"],
+      "topic_tags": ["ghadir", "succession", "history"]
+    },
+    "q_106": {
+      "id": "q_106",
+      "category": "lady_fatimah",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "ما هي فدك التي طالبت بها السيدة فاطمة (ع) بعد وفاة النبي (ص)؟",
+      "question_en": "What was Fadak that Lady Fatimah (as) claimed after the Prophet's death?",
+      "options": {
+        "A": {
+          "text_ar": "قرية غنية بالنخيل أهداها النبي (ص) لفاطمة في حياته",
+          "text_en": "A village rich in palm trees that the Prophet gifted to Fatimah during his lifetime"
+        },
+        "B": {
+          "text_ar": "خاتم ذهبي ثمين",
+          "text_en": "A valuable golden ring"
+        },
+        "C": {
+          "text_ar": "بيت النبي في المدينة",
+          "text_en": "The Prophet's house in Madinah"
+        },
+        "D": {
+          "text_ar": "سيف النبي ذو الفقار",
+          "text_en": "The Prophet's sword Dhul Fiqar"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "fadak_case_para_023",
+        "book_id": "fadak_fi_altarikh",
+        "exact_quote_ar": "فدك قرية في خيبر ذات نخيل ومزارع، أهداها رسول الله (ص) لفاطمة (ع) لما نزلت آية 'وآت ذا القربى حقه'",
+        "page_number": 67
+      },
+      "explanation_ar": "فدك قرية زراعية غنية بالنخيل في منطقة خيبر، منحها النبي (ص) لفاطمة (ع) حين نزلت آية 'وآت ذا القربى حقه'. الخيار B خاطئ لأن فدك ليست خاتماً بل أرض زراعية. الخيار C خاطئ لأن بيت النبي لم يكن موضوع النزاع. الخيار D خاطئ لأن سيف ذو الفقار كان مع علي (ع) وليس فاطمة.",
+      "explanation_en": "Fadak was an agricultural village rich in palm trees in the Khaybar region, which the Prophet granted to Fatimah when the verse 'give the relative his due' was revealed. Option B is wrong because Fadak is not a ring but agricultural land. Option C is wrong because the Prophet's house was not the subject of dispute. Option D is wrong because the sword Dhul Fiqar was with Ali (as), not Fatimah.",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": ["lady_fatimah", "prophet_muhammad"],
+      "topic_tags": ["fadak", "history", "rights", "oppression"]
+    },
+    "q_107": {
+      "id": "q_107",
+      "category": "imam_hussain",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "في أي يوم استشهد الإمام الحسين (ع)؟",
+      "question_en": "On which day was Imam Husayn (as) martyred?",
+      "options": {
+        "A": {
+          "text_ar": "عاشوراء - 10 محرم",
+          "text_en": "Ashura - 10th of Muharram"
+        },
+        "B": {
+          "text_ar": "تاسوعاء - 9 محرم",
+          "text_en": "Tasu'a - 9th of Muharram"
+        },
+        "C": {
+          "text_ar": "أربعين - 20 صفر",
+          "text_en": "Arba'een - 20th of Safar"
+        },
+        "D": {
+          "text_ar": "13 رجب",
+          "text_en": "13th of Rajab"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "karbala_para_156",
+        "book_id": "maqtal_alhussain",
+        "exact_quote_ar": "استشهد الإمام الحسين (ع) يوم العاشر من محرم سنة 61 للهجرة في أرض كربلاء",
+        "page_number": 234
+      },
+      "explanation_ar": "استشهد الإمام الحسين (ع) يوم عاشوراء العاشر من محرم سنة 61 هـ. الخيار B خاطئ لأن يوم تاسوعاء هو اليوم التاسع من محرم وهو اليوم الذي سبق استشهاده. الخيار C خاطئ لأن الأربعين هو اليوم الذي زار فيه أهل البيت قبر الحسين بعد 40 يوماً من استشهاده. الخيار D خاطئ لأن 13 رجب هو يوم ولادة الإمام علي (ع).",
+      "explanation_en": "Imam Husayn (as) was martyred on Ashura, the 10th of Muharram in 61 AH. Option B is wrong because Tasu'a is the 9th of Muharram, the day before his martyrdom. Option C is wrong because Arba'een is the day when Ahlul Bayt visited Husayn's grave 40 days after his martyrdom. Option D is wrong because the 13th of Rajab is Imam Ali's birthday.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["imam_hussain"],
+      "topic_tags": ["karbala", "ashura", "martyrdom"]
+    },
+    "q_108": {
+      "id": "q_108",
+      "category": "imam_hussain",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "من هو حامل راية الإمام الحسين (ع) في كربلاء الملقب بـ 'قمر بني هاشم'؟",
+      "question_en": "Who was the flag bearer of Imam Husayn (as) in Karbala, nicknamed 'Moon of Bani Hashim'?",
+      "options": {
+        "A": {
+          "text_ar": "العباس بن علي",
+          "text_en": "Al-Abbas ibn Ali"
+        },
+        "B": {
+          "text_ar": "علي الأكبر",
+          "text_en": "Ali al-Akbar"
+        },
+        "C": {
+          "text_ar": "مسلم بن عقيل",
+          "text_en": "Muslim ibn Aqeel"
+        },
+        "D": {
+          "text_ar": "حبيب بن مظاهر",
+          "text_en": "Habib ibn Mudhahir"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "karbala_para_189",
+        "book_id": "maqtal_alhussain",
+        "exact_quote_ar": "كان العباس بن علي ساقي العطاشى وحامل اللواء، وكان يُلقب بقمر بني هاشم لجماله وشجاعته",
+        "page_number": 276
+      },
+      "explanation_ar": "العباس بن علي (ع) كان حامل راية الإمام الحسين وساقي العطاشى، ولُقب بقمر بني هاشم. الخيار B خاطئ لأن علي الأكبر كان ابن الحسين وقاتل ببسالة لكنه لم يكن حامل الراية. الخيار C خاطئ لأن مسلم بن عقيل استشهد في الكوفة قبل كربلاء. الخيار D خاطئ لأن حبيب بن مظاهر كان من أصحاب الحسين لكنه لم يكن حامل الراية.",
+      "explanation_en": "Al-Abbas ibn Ali (as) was the flag bearer of Imam Husayn and the water-carrier, nicknamed the Moon of Bani Hashim. Option B is wrong because Ali al-Akbar was Husayn's son who fought bravely but was not the flag bearer. Option C is wrong because Muslim ibn Aqeel was martyred in Kufa before Karbala. Option D is wrong because Habib ibn Mudhahir was one of Husayn's companions but not the flag bearer.",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["imam_hussain", "abbas"],
+      "topic_tags": ["karbala", "heroes", "family"]
+    },
+    "q_109": {
+      "id": "q_109",
+      "category": "imam_hussain",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "من الذي أرسله الإمام الحسين (ع) كسفير إلى الكوفة للتحقق من ولاء أهلها؟",
+      "question_en": "Who did Imam Husayn (as) send as an envoy to Kufa to verify the people's loyalty?",
+      "options": {
+        "A": {
+          "text_ar": "مسلم بن عقيل",
+          "text_en": "Muslim ibn Aqeel"
+        },
+        "B": {
+          "text_ar": "العباس بن علي",
+          "text_en": "Al-Abbas ibn Ali"
+        },
+        "C": {
+          "text_ar": "علي الأكبر",
+          "text_en": "Ali al-Akbar"
+        },
+        "D": {
+          "text_ar": "زهير بن القين",
+          "text_en": "Zuhayr ibn al-Qayn"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "muslim_mission_para_034",
+        "book_id": "tareekh_alkufa",
+        "exact_quote_ar": "أرسل الحسين (ع) ابن عمه مسلم بن عقيل إلى الكوفة ليأخذ له البيعة من أهلها، فدخلها مسلم واستقبله الناس",
+        "page_number": 112
+      },
+      "explanation_ar": "أرسل الإمام الحسين (ع) ابن عمه مسلم بن عقيل إلى الكوفة ليتحقق من صدق أهل الكوفة في دعوتهم له. الخيار B خاطئ لأن العباس بقي مع الحسين ولم يُرسل إلى الكوفة. الخيار C خاطئ لأن علي الأكبر كان شاباً وبقي مع أبيه. الخيار D خاطئ لأن زهير بن القين انضم للحسين في الطريق إلى كربلاء.",
+      "explanation_en": "Imam Husayn (as) sent his cousin Muslim ibn Aqeel to Kufa to verify the sincerity of the Kufans' invitation. Option B is wrong because Al-Abbas stayed with Husayn and was not sent to Kufa. Option C is wrong because Ali al-Akbar was young and stayed with his father. Option D is wrong because Zuhayr ibn al-Qayn joined Husayn on the way to Karbala.",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": ["imam_hussain"],
+      "topic_tags": ["kufa", "history", "before_karbala"]
+    },
+    "q_110": {
+      "id": "q_110",
+      "category": "lady_fatimah",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "من هو زوج السيدة فاطمة الزهراء (ع)؟",
+      "question_en": "Who was the husband of Lady Fatimah al-Zahra (as)?",
+      "options": {
+        "A": {
+          "text_ar": "الإمام علي (ع)",
+          "text_en": "Imam Ali (as)"
+        },
+        "B": {
+          "text_ar": "عثمان بن عفان",
+          "text_en": "Uthman ibn Affan"
+        },
+        "C": {
+          "text_ar": "عمر بن الخطاب",
+          "text_en": "Umar ibn al-Khattab"
+        },
+        "D": {
+          "text_ar": "أبو بكر",
+          "text_en": "Abu Bakr"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "fatimah_marriage_para_012",
+        "book_id": "fatimah_alzahra",
+        "exact_quote_ar": "زوّج رسول الله (ص) ابنته فاطمة من علي بن أبي طالب في السنة الثانية للهجرة",
+        "page_number": 45
+      },
+      "explanation_ar": "تزوج الإمام علي (ع) من فاطمة الزهراء (ع) بنت رسول الله (ص) في السنة الثانية للهجرة. الخيار B خاطئ لأن عثمان تزوج من رقية وأم كلثوم بنتي النبي (حسب المصادر السنية). الخيار C خاطئ لأن عمر لم يتزوج من فاطمة ورُفض طلبه. الخيار D خاطئ لأن أبا بكر لم يتزوج من فاطمة.",
+      "explanation_en": "Imam Ali (as) married Fatimah al-Zahra (as), daughter of the Messenger of Allah (pbuh), in the second year of Hijra. Option B is wrong because Uthman married Ruqayyah and Umm Kulthum, daughters of the Prophet (according to Sunni sources). Option C is wrong because Umar did not marry Fatimah and his proposal was rejected. Option D is wrong because Abu Bakr did not marry Fatimah.",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["lady_fatimah", "imam_ali"],
+      "topic_tags": ["family", "marriage"]
+    }
+  }
+}
