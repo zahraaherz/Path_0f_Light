@@ -2,17 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
+import '../../models/library/paragraph.dart';
 import '../../repositories/library_repository.dart';
+import 'book_reader_screen.dart';
 
-/// Screen for reading a book's content
+/// Screen for loading book content and navigating to the reader
 class BookReadingScreen extends ConsumerStatefulWidget {
   final String bookId;
   final String? bookTitle;
+  final int? startParagraphIndex;
 
   const BookReadingScreen({
     Key? key,
     required this.bookId,
     this.bookTitle,
+    this.startParagraphIndex,
   }) : super(key: key);
 
   @override
@@ -20,305 +24,274 @@ class BookReadingScreen extends ConsumerStatefulWidget {
 }
 
 class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
-  final ScrollController _scrollController = ScrollController();
-  bool _isArabic = true;
+  final LibraryRepository _libraryRepository = LibraryRepository();
+
+  bool _isLoading = true;
+  String? _errorMessage;
+  Book? _book;
+  List<Paragraph>? _paragraphs;
 
   @override
-  void dispose() {
-    _scrollController.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
+    _loadBookContent();
+  }
+
+  Future<void> _loadBookContent() async {
+    setState(() {
+      _isLoading = true;
+      _errorMessage = null;
+    });
+
+    try {
+      // Load book data
+      final book = await _libraryRepository.getBook(widget.bookId);
+
+      if (book == null) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = 'Book not found';
+        });
+        return;
+      }
+
+      // Load all paragraphs for the book
+      final paragraphs = await _libraryRepository.getBookParagraphs(widget.bookId);
+
+      if (paragraphs.isEmpty) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = 'No content available for this book yet';
+        });
+        return;
+      }
+
+      setState(() {
+        _book = book;
+        _paragraphs = paragraphs;
+        _isLoading = false;
+      });
+
+      // Navigate to reader after content is loaded
+      if (mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => BookReaderScreen(
+              book: book,
+              paragraphs: paragraphs,
+              startParagraphIndex: widget.startParagraphIndex,
+            ),
+          ),
+        );
+      }
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+        _errorMessage = 'Failed to load book: ${e.toString()}';
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    // For now, we'll create a provider inline. In production, this should be in providers file
-    final libraryRepository = LibraryRepository();
-    final bookFuture = libraryRepository.getBook(widget.bookId);
-
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.bookTitle ?? 'Reading'),
-        actions: [
-          // Language toggle
-          IconButton(
-            icon: Icon(_isArabic ? Icons.translate : Icons.language),
-            onPressed: () {
-              setState(() {
-                _isArabic = !_isArabic;
-              });
-            },
-            tooltip: _isArabic ? 'Show English' : 'Show Arabic',
-          ),
-          // Font size controls
-          PopupMenuButton<String>(
-            icon: const Icon(Icons.text_fields),
-            onSelected: (value) {
-              // TODO: Implement font size adjustment
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Font size: $value')),
-              );
-            },
-            itemBuilder: (context) => [
-              const PopupMenuItem(value: 'small', child: Text('Small')),
-              const PopupMenuItem(value: 'medium', child: Text('Medium')),
-              const PopupMenuItem(value: 'large', child: Text('Large')),
-            ],
-          ),
-        ],
+        title: Text(widget.bookTitle ?? 'Loading Book...'),
+        backgroundColor: AppTheme.primaryTeal,
+        iconTheme: const IconThemeData(color: Colors.white),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
       ),
-      body: FutureBuilder<Book>(
-        future: bookFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
+      body: _buildBody(),
+    );
+  }
 
-          if (snapshot.hasError) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.error_outline, size: 60, color: AppTheme.error),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Unable to load book',
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    snapshot.error.toString(),
-                    style: Theme.of(context).textTheme.bodySmall,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton.icon(
-                    onPressed: () => Navigator.of(context).pop(),
-                    icon: const Icon(Icons.arrow_back),
-                    label: const Text('Go Back'),
-                  ),
+  Widget _buildBody() {
+    if (_isLoading) {
+      return _buildLoadingState();
+    }
+
+    if (_errorMessage != null) {
+      return _buildErrorState();
+    }
+
+    // This should rarely be shown as we navigate away immediately
+    return const Center(
+      child: CircularProgressIndicator(),
+    );
+  }
+
+  Widget _buildLoadingState() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Islamic pattern decoration
+          Container(
+            width: 120,
+            height: 120,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  AppTheme.primaryTeal.withOpacity(0.2),
+                  AppTheme.islamicGreen.withOpacity(0.2),
                 ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
-            );
-          }
-
-          if (!snapshot.hasData) {
-            return const Center(child: Text('Book not found'));
-          }
-
-          final book = snapshot.data!;
-          return _buildBookContent(context, book);
-        },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Scroll to top
-          _scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut,
-          );
-        },
-        child: const Icon(Icons.arrow_upward),
-      ),
-    );
-  }
-
-  Widget _buildBookContent(BuildContext context, Book book) {
-    return SingleChildScrollView(
-      controller: _scrollController,
-      padding: const EdgeInsets.all(20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Book header
-          _buildBookHeader(context, book),
-          const SizedBox(height: 24),
-
-          // Book description
-          if (book.description != null) ...[
-            Text(
-              book.description!,
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: AppTheme.textSecondary,
-                    height: 1.6,
-                  ),
+              shape: BoxShape.circle,
             ),
-            const SizedBox(height: 24),
-            const Divider(),
-            const SizedBox(height: 24),
-          ],
+            child: const Center(
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primaryTeal),
+                strokeWidth: 3,
+              ),
+            ),
+          ),
+          const SizedBox(height: 32),
 
-          // Book sections (placeholder)
-          _buildSectionsPlaceholder(context, book),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildBookHeader(BuildContext context, Book book) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            AppTheme.primaryTeal.withOpacity(0.1),
-            AppTheme.islamicGreen.withOpacity(0.05),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: AppTheme.primaryTeal.withOpacity(0.3),
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Title
+          // Loading text
           Text(
-            _isArabic ? book.titleAr : book.titleEn,
-            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+            'Opening Book...',
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppTheme.primaryTeal,
                 ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
 
-          // Author
-          Row(
-            children: [
-              const Icon(Icons.person, size: 20, color: AppTheme.textSecondary),
-              const SizedBox(width: 8),
-              Text(
-                _isArabic ? book.authorAr : book.authorEn,
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: AppTheme.textSecondary,
-                    ),
-              ),
-            ],
+          Text(
+            widget.bookTitle ?? '',
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: AppTheme.textSecondary,
+                ),
+            textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 24),
 
-          // Book stats
-          Row(
-            children: [
-              _buildStat(
-                context,
-                Icons.menu_book,
-                '${book.totalSections} Sections',
-              ),
-              const SizedBox(width: 16),
-              _buildStat(
-                context,
-                Icons.article,
-                '${book.totalParagraphs} Paragraphs',
-              ),
-              const SizedBox(width: 16),
-              _buildStat(
-                context,
-                Icons.access_time,
-                '${book.estimatedReadingTime} min',
-              ),
-            ],
-          ),
-
-          // Topics
-          if (book.topics.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: book.topics.map((topic) {
-                return Chip(
-                  label: Text(topic),
-                  backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
-                  labelStyle: const TextStyle(
-                    color: AppTheme.primaryTeal,
-                    fontSize: 12,
-                  ),
-                );
-              }).toList(),
+          // Progress steps
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              children: [
+                _buildLoadingStep(
+                  'Loading book information',
+                  _book != null,
+                ),
+                const SizedBox(height: 12),
+                _buildLoadingStep(
+                  'Loading content',
+                  _paragraphs != null,
+                ),
+                const SizedBox(height: 12),
+                _buildLoadingStep(
+                  'Preparing reader',
+                  false,
+                ),
+              ],
             ),
-          ],
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildStat(BuildContext context, IconData icon, String text) {
+  Widget _buildLoadingStep(String text, bool completed) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, size: 16, color: AppTheme.textSecondary),
-        const SizedBox(width: 4),
-        Text(
-          text,
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: AppTheme.textSecondary,
-              ),
+        Icon(
+          completed ? Icons.check_circle : Icons.circle_outlined,
+          color: completed ? AppTheme.success : AppTheme.textSecondary,
+          size: 20,
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: completed ? AppTheme.success : AppTheme.textSecondary,
+              fontSize: 14,
+            ),
+          ),
         ),
       ],
     );
   }
 
-  Widget _buildSectionsPlaceholder(BuildContext context, Book book) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Content Loading...',
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.bold,
+  Widget _buildErrorState() {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Error icon
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: AppTheme.error.withOpacity(0.1),
+                shape: BoxShape.circle,
               ),
-        ),
-        const SizedBox(height: 16),
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: AppTheme.info.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppTheme.info.withOpacity(0.3)),
-          ),
-          child: Column(
-            children: [
-              const Icon(Icons.construction, size: 48, color: AppTheme.info),
-              const SizedBox(height: 12),
-              Text(
-                'Book Content Coming Soon',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: AppTheme.info,
-                    ),
+              child: const Icon(
+                Icons.error_outline,
+                size: 60,
+                color: AppTheme.error,
               ),
-              const SizedBox(height: 8),
-              Text(
-                'The full book reading experience with sections, paragraphs, and interactive features will be available soon.',
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: AppTheme.textSecondary,
-                    ),
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 16),
-              if (book.pdfUrl != null)
-                ElevatedButton.icon(
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('PDF viewer coming soon'),
-                      ),
-                    );
-                  },
-                  icon: const Icon(Icons.picture_as_pdf),
-                  label: const Text('Open PDF'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.primaryTeal,
+            ),
+            const SizedBox(height: 24),
+
+            // Error title
+            Text(
+              'Unable to Load Book',
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: AppTheme.error,
+                  ),
+            ),
+            const SizedBox(height: 12),
+
+            // Error message
+            Text(
+              _errorMessage ?? 'An unknown error occurred',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: AppTheme.textSecondary,
+                  ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 32),
+
+            // Action buttons
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton.icon(
+                  onPressed: () => Navigator.of(context).pop(),
+                  icon: const Icon(Icons.arrow_back),
+                  label: const Text('Go Back'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.primaryTeal,
+                    side: const BorderSide(color: AppTheme.primaryTeal),
                   ),
                 ),
-            ],
-          ),
+                const SizedBox(width: 16),
+                ElevatedButton.icon(
+                  onPressed: _loadBookContent,
+                  icon: const Icon(Icons.refresh),
+                  label: const Text('Retry'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppTheme.primaryTeal,
+                    foregroundColor: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
