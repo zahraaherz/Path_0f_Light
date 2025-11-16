@@ -42,6 +42,9 @@ dependencies:
   firebase_auth: ^4.17.8
   cloud_firestore: ^4.15.8
   cloud_functions: ^4.6.12
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^17.0.0
+  timezone: ^0.9.2
   google_sign_in: ^6.2.1
   sign_in_with_apple: ^7.0.1
   flutter_facebook_auth: ^6.0.4
@@ -61,15 +64,45 @@ dependencies:
   cached_network_image: ^3.3.1
   image_picker: ^1.0.7
   hijri: ^3.0.0
+  flutter_slidable: ^3.0.1
 
   # Google Fonts for Islamic typography
   google_fonts: ^6.1.0
 
   # Prayer Times & Islamic Calendar
   adhan: ^2.0.0
-  hijri: ^3.0.0
   geolocator: ^11.0.0
   permission_handler: ^11.2.0
+
+  # Text-to-Speech for book reading
+  flutter_tts: ^4.0.2
+
+  # Better text rendering
+  flutter_markdown: ^0.7.3
+
+  # File operations & download
+  path_provider: ^2.1.4
+  dio: ^5.7.0
+
+  # Sharing functionality
+  share_plus: ^10.0.2
+
+  # Pull to refresh
+  pull_to_refresh: ^2.0.0
+
+  # Better list performance
+  flutter_sticky_header: ^0.6.5
+
+  # Scroll to index for book navigation
+  scrollable_positioned_list: ^0.3.8
+  # Enhanced Quiz Features
+  flutter_animate: ^4.5.0           # Animations
+  audioplayers: ^5.2.1              # Sound effects
+  vibration: ^1.8.4                 # Haptic feedback
+  percent_indicator: ^4.2.3         # Progress indicators
+  confetti: ^0.7.0                  # Success celebrations
+  lottie: ^3.0.0                    # Lottie animations
+  shimmer: ^3.0.0                   # Loading effects
 
 dev_dependencies:
   flutter_test:
@@ -102,10 +135,11 @@ flutter:
   # Enable internationalization code generation
   generate: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  # Assets
+  assets:
+    - assets/sounds/
+    - assets/animations/
+    - lib/data/mock_questions.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

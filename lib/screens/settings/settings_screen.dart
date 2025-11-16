@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/language_providers.dart';
@@ -24,6 +25,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final l10n = AppLocalizations.of(context)!;
     final currentLanguage = ref.watch(languageProvider);
     final theme = Theme.of(context);
@@ -35,11 +37,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         foregroundColor: Colors.white,
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         children: [
           // General Settings Section
           _buildSectionHeader(l10n.generalSettings, theme),
-          const SizedBox(height: 12),
+          SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
             children: [
@@ -69,11 +71,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ],
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: r.spaceLarge),
 
           // Notifications Section
           _buildSectionHeader(l10n.notifications, theme),
-          const SizedBox(height: 12),
+          SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
             children: [
@@ -123,11 +125,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ],
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: r.spaceLarge),
 
           // Sound & Vibration Section
           _buildSectionHeader('Sound & Vibration', theme),
-          const SizedBox(height: 12),
+          SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
             children: [
@@ -155,11 +157,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ],
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: r.spaceLarge),
 
           // Account Section
           _buildSectionHeader(l10n.accountSettings, theme),
-          const SizedBox(height: 12),
+          SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
             children: [
@@ -183,11 +185,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ],
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: r.spaceLarge),
 
           // About Section
           _buildSectionHeader(l10n.aboutApp, theme),
-          const SizedBox(height: 12),
+          SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
             children: [
@@ -243,7 +245,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ],
           ),
 
-          const SizedBox(height: 32),
+          SizedBox(height: r.spaceLarge),
         ],
       ),
     );
@@ -268,7 +270,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     return Card(
       elevation: 2,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: Column(
         children: children,

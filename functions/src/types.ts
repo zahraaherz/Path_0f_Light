@@ -302,3 +302,156 @@ export interface RestoreHeartsResponse {
   currentHearts: number;
   message: string;
 }
+
+// Collection Types
+export type CollectionItemType =
+  | "dua"
+  | "surah"
+  | "ayah"
+  | "ziyarat"
+  | "hadith"
+  | "passage"
+  | "dhikr"
+  | "custom";
+
+export type CollectionCategory =
+  | "morning"
+  | "evening"
+  | "friday"
+  | "ramadhan"
+  | "muharram"
+  | "safar"
+  | "rajab"
+  | "shaban"
+  | "daily"
+  | "weekly"
+  | "monthly"
+  | "special"
+  | "protection"
+  | "forgiveness"
+  | "gratitude"
+  | "healing"
+  | "guidance"
+  | "custom";
+
+export interface CollectionItem {
+  id: string;
+  user_id: string;
+  type: CollectionItemType;
+  title: string;
+  arabic_title?: string;
+  arabic_text: string;
+  translation?: string;
+  transliteration?: string;
+  category: CollectionCategory;
+  source?: string;
+  notes?: string;
+  tags: string[];
+  audio_url?: string;
+  is_favorite: boolean;
+  sort_order: number;
+  created_at: admin.firestore.Timestamp;
+  updated_at: admin.firestore.Timestamp;
+  last_accessed?: admin.firestore.Timestamp;
+}
+
+// Reminder Types
+export type ReminderTriggerType =
+  | "time"
+  | "prayerTime"
+  | "date"
+  | "dayOfWeek"
+  | "islamicDate";
+
+export type ReminderFrequency =
+  | "once"
+  | "daily"
+  | "weekly"
+  | "monthly"
+  | "custom";
+
+export type PrayerTimeOption =
+  | "fajr"
+  | "sunrise"
+  | "dhuhr"
+  | "asr"
+  | "maghrib"
+  | "isha";
+
+export type DayOfWeek =
+  | "monday"
+  | "tuesday"
+  | "wednesday"
+  | "thursday"
+  | "friday"
+  | "saturday"
+  | "sunday";
+
+export interface Reminder {
+  id: string;
+  user_id: string;
+  collection_item_id: string;
+  title: string;
+  message?: string;
+  inspirational_text?: string;
+  trigger_type: ReminderTriggerType;
+  frequency: ReminderFrequency;
+  trigger_time?: string; // HH:mm format
+  trigger_date?: admin.firestore.Timestamp;
+  days_of_week: DayOfWeek[];
+  prayer_time?: PrayerTimeOption;
+  minutes_before_prayer: number;
+  minutes_after_prayer: number;
+  hijri_month?: number;
+  hijri_day?: number;
+  is_enabled: boolean;
+  sound_enabled: boolean;
+  vibration_enabled: boolean;
+  last_triggered?: admin.firestore.Timestamp;
+  next_trigger?: admin.firestore.Timestamp;
+  total_triggers: number;
+  created_at: admin.firestore.Timestamp;
+  updated_at: admin.firestore.Timestamp;
+}
+
+// Habit Tracker Types
+export interface HabitTracker {
+  id: string;
+  user_id: string;
+  collection_item_id: string;
+  title: string;
+  arabic_title?: string;
+  description?: string;
+  target_count: number;
+  current_count: number;
+  tracking_period: string; // daily, weekly, monthly
+  is_completed_today: boolean;
+  last_completed_date?: string;
+  completion_history: string[];
+  current_streak: number;
+  longest_streak: number;
+  total_completions: number;
+  completion_rate: number;
+  weekly_completions: number;
+  monthly_completions: number;
+  created_at: admin.firestore.Timestamp;
+  updated_at: admin.firestore.Timestamp;
+}
+
+// Notification Types
+export interface NotificationPayload {
+  userId: string;
+  title: string;
+  body: string;
+  data?: {[key: string]: string};
+  imageUrl?: string;
+  sound?: string;
+}
+
+export interface FCMToken {
+  userId: string;
+  token: string;
+  platform: "android" | "ios" | "web";
+  createdAt: admin.firestore.Timestamp;
+  lastUsed: admin.firestore.Timestamp;
+}

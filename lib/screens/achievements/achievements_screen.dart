@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
@@ -8,6 +9,7 @@ class AchievementsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final userProfileAsync = ref.watch(currentUserProfileProvider);
 
     return Scaffold(
@@ -25,26 +27,26 @@ class AchievementsScreen extends ConsumerWidget {
           final achievements = _calculateAchievements(profile.quizProgress.toJson(), profile.dailyStats.toJson(), profile.energy.toJson());
 
           return SingleChildScrollView(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(r.paddingMedium),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Header
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
-                    borderRadius: BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(r.radiusMedium),
                   ),
                   child: Column(
                     children: [
                       const Icon(Icons.emoji_events, size: 64, color: AppTheme.goldAccent),
-                      const SizedBox(height: 12),
+                      SizedBox(height: r.spaceSmall),
                       Text(
                         'Your Achievements',
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -52,7 +54,7 @@ class AchievementsScreen extends ConsumerWidget {
                               fontWeight: FontWeight.bold,
                             ),
                       ),
-                      const SizedBox(height: 8),
+                      SizedBox(height: r.spaceSmall),
                       Text(
                         '${achievements.where((a) => a['unlocked'] == true).length} / ${achievements.length} Unlocked',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -62,7 +64,7 @@ class AchievementsScreen extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
 
                 // Achievement Categories
                 _buildAchievementCategory(
@@ -95,7 +97,7 @@ class AchievementsScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Icon(Icons.error_outline, size: 64, color: AppTheme.error),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
               Text('Error loading achievements',
                   style: Theme.of(context).textTheme.titleMedium),
             ],
@@ -125,7 +127,7 @@ class AchievementsScreen extends ConsumerWidget {
           ),
         ),
         ...achievements.map((achievement) => _buildAchievementCard(context, achievement)),
-        const SizedBox(height: 16),
+        SizedBox(height: r.spaceMedium),
       ],
     );
   }
@@ -141,7 +143,7 @@ class AchievementsScreen extends ConsumerWidget {
       color: isUnlocked ? null : Colors.grey[200],
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Row(
           children: [
             // Icon
@@ -152,7 +154,7 @@ class AchievementsScreen extends ConsumerWidget {
                 color: isUnlocked
                     ? AppTheme.goldAccent.withOpacity(0.2)
                     : Colors.grey[300],
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Icon(
                 _getIconForCategory(achievement['category'] as String),
@@ -160,7 +162,7 @@ class AchievementsScreen extends ConsumerWidget {
                 color: isUnlocked ? AppTheme.goldAccent : Colors.grey[500],
               ),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: r.spaceMedium),
 
             // Content
             Expanded(
@@ -182,7 +184,7 @@ class AchievementsScreen extends ConsumerWidget {
                         ),
                   ),
                   if (!isUnlocked) ...[
-                    const SizedBox(height: 8),
+                    SizedBox(height: r.spaceSmall),
                     LinearProgressIndicator(
                       value: progressPercent,
                       backgroundColor: Colors.grey[300],
