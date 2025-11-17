@@ -330,34 +330,48 @@ class MockData {
   static final List<Map<String, String>> quotesOfTheDay = [
     {
       'quote': '"The seeking of knowledge is obligatory for every Muslim."',
+      'quoteAr': '"طلب العلم فريضة على كل مسلم"',
       'author': 'Prophet Muhammad ﷺ',
+      'authorAr': 'النبي محمد ﷺ',
     },
     {
       'quote':
           '"He who dies in the search of knowledge dies a martyr."',
+      'quoteAr': '"من مات في طلب العلم مات شهيداً"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
     {
       'quote':
           '"Knowledge is better than wealth. Knowledge guards you, while you guard wealth."',
+      'quoteAr': '"العلم خير من المال، العلم يحرسك وأنت تحرس المال"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
     {
       'quote':
           '"The best form of devotion to the service of Allah is not to make a show of it."',
+      'quoteAr': '"أفضل العبادة إخفاؤها"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
     {
       'quote': '"Patience is of two kinds: patience over what pains you, and patience against what you covet."',
+      'quoteAr': '"الصبر صبران: صبر على ما تكره وصبر عما تحب"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
     {
       'quote': '"Your remedy is within you, but you do not sense it. Your sickness is from you, but you do not perceive it."',
+      'quoteAr': '"دواؤك فيك وما تشعر، وداؤك منك وما تبصر"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
     {
       'quote': '"Silence is the best reply to a fool."',
+      'quoteAr': '"السكوت أبلغ جواب للسفيه"',
       'author': 'Imam Ali (AS)',
+      'authorAr': 'الإمام علي (ع)',
     },
   ];
 
