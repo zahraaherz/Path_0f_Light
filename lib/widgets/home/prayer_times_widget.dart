@@ -4,6 +4,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/prayer/prayer_times_model.dart';
 import '../../providers/prayer_providers.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PrayerTimesWidget extends ConsumerWidget {
   const PrayerTimesWidget({super.key});
@@ -53,6 +54,8 @@ class PrayerTimesWidget extends ConsumerWidget {
   }
 
   Widget _buildErrorState(BuildContext context, Object error) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20),
       padding: const EdgeInsets.all(20),
@@ -73,12 +76,12 @@ class PrayerTimesWidget extends ConsumerWidget {
           const Icon(Icons.error_outline, color: Colors.red, size: 40),
           const SizedBox(height: 10),
           Text(
-            'Unable to load prayer times',
+            l10n.unableToLoadPrayerTimes,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           const SizedBox(height: 5),
           Text(
-            'Please check location permissions',
+            l10n.checkLocationPermissions,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(
               color: AppTheme.textSecondary,
             ),
@@ -93,6 +96,7 @@ class PrayerTimesWidget extends ConsumerWidget {
     PrayerTimesModel prayerTimes,
     ({PrayerName name, DateTime time})? nextPrayer,
   ) {
+    final l10n = AppLocalizations.of(context)!;
     final now = DateTime.now();
     final prayers = [
       (name: PrayerName.fajr, time: prayerTimes.fajr, arabicName: 'الفجر'),
@@ -136,22 +140,11 @@ class PrayerTimesWidget extends ConsumerWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Prayer Times',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                  Text(
-                    'أوقات الصلاة',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: AppTheme.textSecondary,
-                        ),
-                  ),
-                ],
+              Text(
+                l10n.prayerTimes,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               const Spacer(),
               if (nextPrayer != null)
@@ -202,7 +195,7 @@ class PrayerTimesWidget extends ConsumerWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    'Next prayer: ${nextPrayer.name.displayNameEn} at ${_formatTime(nextPrayer.time)}',
+                    '${l10n.nextPrayer}: ${nextPrayer.name.displayNameEn} ${_formatTime(nextPrayer.time)}',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppTheme.primaryTeal,

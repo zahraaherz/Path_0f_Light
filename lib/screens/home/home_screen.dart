@@ -244,7 +244,7 @@ class HomePage extends ConsumerWidget {
                     // Bismillah in Arabic calligraphy style
                     Center(
                       child: Text(
-                        'بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ',
+                        l10n.bismillah,
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                               color: AppTheme.islamicGreen,
                               fontWeight: FontWeight.w600,

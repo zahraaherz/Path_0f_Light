@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/islamic_events/islamic_event.dart';
 import '../../data/mock_data.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class IslamicEventsWidget extends StatelessWidget {
   const IslamicEventsWidget({super.key});
@@ -38,6 +39,7 @@ class IslamicEventsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final events = MockData.upcomingEvents;
 
     return Column(
@@ -49,27 +51,16 @@ class IslamicEventsWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Islamic Events',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                  Text(
-                    'المناسبات الإسلامية',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: AppTheme.textSecondary,
-                        ),
-                  ),
-                ],
+              Text(
+                l10n.islamicEvents,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               TextButton(
                 onPressed: () {},
                 child: Text(
-                  'View All',
+                  l10n.viewAll,
                   style: TextStyle(
                     color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.w600,
