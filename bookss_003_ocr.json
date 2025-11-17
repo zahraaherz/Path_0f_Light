@@ -5,8 +5,8 @@
     "title_en": "Lights on the Life of Imam Ali (as)",
     "author_ar": "السيد مرتضى الحسيني الشيرازي",
     "author_en": "Sayyid Murtadha al-Husayni al-Shirazi",
-    "total_sections": 1,
-    "total_paragraphs": 0,
+    "total_sections": 5,
+    "total_paragraphs": 291,
     "language": "ar",
     "pdf_url": "",
     "original_filename": "أضواء على حياة الإمام علي (ع) - السيد مرتضى الحسيني الشيرازي.pdf",
@@ -22,9 +22,9 @@
     "category": "سيرة",
     "processing_status": "completed",
     "total_pages": 98,
-    "total_characters": 194,
-    "total_words": 0,
-    "extraction_method": "pymupdf_low_content"
+    "total_characters": 73294,
+    "total_words": 13210,
+    "extraction_method": "tesseract_ocr_arabic"
   },
   "sections": [
     {
@@ -34,9 +34,2378 @@
       "title_ar": "القسم 1",
       "title_en": "Part 1",
       "startPosition": 0,
-      "endPosition": 194,
+      "endPosition": 15458,
       "estimated_page": 0
+    },
+    {
+      "section_id": "bookss_003_section_002",
+      "book_id": "bookss_003",
+      "section_number": 2,
+      "title_ar": "القسم 2",
+      "title_en": "Part 2",
+      "startPosition": 15458,
+      "endPosition": 30783,
+      "estimated_page": 25
+    },
+    {
+      "section_id": "bookss_003_section_003",
+      "book_id": "bookss_003",
+      "section_number": 3,
+      "title_ar": "القسم 3",
+      "title_en": "Part 3",
+      "startPosition": 30783,
+      "endPosition": 45847,
+      "estimated_page": 45
+    },
+    {
+      "section_id": "bookss_003_section_004",
+      "book_id": "bookss_003",
+      "section_number": 4,
+      "title_ar": "القسم 4",
+      "title_en": "Part 4",
+      "startPosition": 45847,
+      "endPosition": 61401,
+      "estimated_page": 64
+    },
+    {
+      "section_id": "bookss_003_section_005",
+      "book_id": "bookss_003",
+      "section_number": 5,
+      "title_ar": "القسم 5",
+      "title_en": "Part 5",
+      "startPosition": 61401,
+      "endPosition": 73286,
+      "estimated_page": 83
     }
   ],
-  "paragraphs": []
+  "paragraphs": [
+    {
+      "paragraph_id": "bookss_003_paragraph_0001",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 1,
+      "text_ar": "نضواء علص ‎Bs‏\n‏الاصام ‎inle‏\n‏بخص لشي عي ‎١‏\n‏تمع نحذاة ‎ayes‏\n‎ae‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0002",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 2,
+      "text_ar": "عِِ\nحياة الإمام علي ‎gah‏\n‏آية الله\nالسيد مرتضى الشيرازي ‎ABS‏\n‎shiabooks.net ١‏\nرابط بديل > ‎mktba.net‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0003",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 3,
+      "text_ar": "adi) ‏الطبعة‎\n‎ave dd / avery\nkkk\nDV E00 ‏الطبعة الأولى:‎\nAVENE ‏الطبعة الثانية:‎\ny",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0004",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 4,
+      "text_ar": "الحمد لله رب العالمين» والصلاة والسلام على محمد وآله\nالطاهرين» ولعنة الله على أعدائهم أجمعين » إلى قيام يوم\nالدين.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0005",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 5,
+      "text_ar": "لم يكن للأئمة الأطهار (عليهم أفضل الصلاة والسلام» موقف\nموحد تجاه القضايا والأحداث التي مرت بهم .. فقد كان لكل\nإمام موقف متميز تجاه الواقع الذي عايشه ( وطريقة خاصة في\nمعالجة المشاكل والأزمات التى مرت به..\nإمام» فالإمام الحسن ‎AEE‏ واجه ظروفاً تختلف تماماً عن\nالظروف التي واجهها ‎ey!‏ الحسين ‎OCA‏ والإمام الحسين\n‎ace‏ عايش جو مختلفاً كل الاختلاف عن الجو الذي عايشه\nالإمام السجاد ‎(XG‏ وهكذا تصالح الومام الحسن ‎OLE‏ مع",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0006",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 6,
+      "text_ar": "معاوية بينما ثار الإمام الحسين ‎AEE‏ على يزيد في الوقت الذي\nاتخذ فيه الإمام السجاد ‎PSR‏ أسلوب التربية المادئة في\n«الدعاء).. وهكذا سائر الأئمة ‎woe‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0007",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 7,
+      "text_ar": "من هنا.. فإن حياة الأئمة قاتلا هي حياة حافلة» غنية\nبالعبر والعظات؛ والدروس العملية.. التي يستطيع كل إنسان\nأن يستفيد منها مهما كانت الظروف والأوضاع التي يعيش\nفيها.. ‎OY‏ الأئمة ‎volte‏ واجهوا شتى الظروف؛ واتخذوا منها\nمواقف محددة يجب أن تكون درساً لكل الأجيال ومنهاجاً ينبغي\nالسير على ضوئه.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0008",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 8,
+      "text_ar": "ومن هنا تأتي ضرورة دراسة حياة الأئمة 9 ولذلك\nفقد ‎Lee thy‏ تاريخياً يتناول جوانب من حياة الأئمة الإثني\nعشر ‎Gag vile‏ أن نغير أنفسنا ونحاول الاقتداء بالأئمة\n‎sabe‏ وتطبيق ما كانوا يفعلونه . حسب الظرف الذي نعيشه ‏\nومن الله نستمد التوفيق..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0009",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 9,
+      "text_ar": "الإمام أمير المؤمنين ‎das AGE‏ متميزة ‎ChE‏ حاجر\nالزمان والمكان وتربعت على قمة المجد.. فقد تجمعت في هذه\nالشخصية الفذة العملاقة كل الصفات الرفيعة التي فاق بها\nجميع العظماء والعمالقة ‏ بعد الرسول الأعظم ‎BR‏ حتى\nلكأنه نسخة ثانية من شخصية الرسول الأعظم فل بل هو\nنفس الرسول ‎BB‏ بتصريح القرآن ‎ca SN‏ #أوَأنفْسَنَا\n‎aw OG So,‏ كان الإمام ‎ASB‏ متفوقاً في كل الجالات..\nومتقدماً في كل النواحي.. من هنا فقد اختاره الله سبحانه خليفة\nعلى المسلمين وقائداً لهم بعد الرسول الأعظم 2 .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0010",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 10,
+      "text_ar": "‎by‏ هذه الدراسة الموجزة سنتعرض لجوانب من حياة\nالإمام علي ‎LE‏ سردا وتحليلاً عبر سبعة فصول :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0011",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 11,
+      "text_ar": "‏الفصل الأول : مميزات الإمام علي ‎AER‏ 9 وصفاته.\n‎)١(‏ سورة آل عمران: ‎WV‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0012",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 12,
+      "text_ar": "الفصل الثاني: المرحلة التي سبقت حكم الإمام علي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0013",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 13,
+      "text_ar": "الفصل الثالث : الإمام علي ‎AER‏ حاكماً.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0014",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 14,
+      "text_ar": "الفصل الرابع : حروب الإمام ‎OEE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0015",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 15,
+      "text_ar": "الفصل الخامس : معاوية في حياته السياسية.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0016",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 16,
+      "text_ar": "الفصل السادس: الإمام علي عليه من الحرب - إلى\nالشهادة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0017",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 17,
+      "text_ar": "الفصل الأول:\nالإمام علي ويك خصائص ومميزات\n‎Opt‏ الإمام ‎AAR‏ كثيرة وهائلة ولا يمكننا أن نستوعبها في\nكتاب» لكننا سنتحدث عن بعض الصفات والمميزات الرئيسية\nللإمام ‎Aah‏ باختصار.. وهذه مجرد إضاءات :\nأولاً: الجهاد والتضحية\nفقد كان منذ الصغر يدافع عن الرسول يي ويحفظه من\nأذى الأطفال وأحجارهم»؛ فعند ما كان أطفال الكمّار يؤذون\n‎BS yu‏ ويرمونه بالأحجار كان يهجم عليهم وهو لم\nيبلغ العاشرة من العمر ويعض آذانهم وأنوفهم.. فكانوا يهربون\nمنه كالفئران المذعورة.. وتبلغ تضحية الإمام علي ‎OER‏ القمة\nعندما يبيت في فراش الرسول ‎BY‏ ليلة هجرة النبي من مكة\nإلى المدينة معرضاً نفسه لخطر محقق.. تعالوا لنسمع تلك الحادثة\n‎v‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0018",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 18,
+      "text_ar": "يقول الومام 2ه: «كنت على فراش رسول الله ‎BD‏\n‏وقد طرح علي بردة (البرد كساء من الصوف).. فأقبلت قريش\nمع كل رجل منهم هراوة فيها شوكها (عصي مليئة بالأشواك)\nفلم يبصروا رسول الله ل حيث خرج.. فأقبلوا علي\nيضربونني بما في أيديهم » فتنفط جسدي (أي تقرح) وصار مثل\nالبيض.. ثم انطلقوا يريدون قتلي)\"\" الخ ..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0019",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 19,
+      "text_ar": "وقد اشترك الإمام علي ‎AB‏ في كل حروب الرسول ‎BD‏\n‏(ما عدا تبوك) وهي تزيد على الثمانين حرباً..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0020",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 20,
+      "text_ar": "وفي حرب بدر الكبرى ‎JS‏ المسلمون جميعاً من الكفار\n)10( شخصاًء ‎ley‏ قتل الإمام علي ‎ASR‏ بمفرده ‎(Yo)‏\n‎Lads‏ وبذلك يكون مجموع قتلى الكفار هو: (0/0\nشخصاً.. قتل الإمام وحده نصفهم..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0021",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 21,
+      "text_ar": "وفي حرب ‎bl‏ أصيب الإمام ‎AE‏ بثمانين جراحة\n‎)١(‏ حار الأنوار للعلامة المجلسي: ج77 ص ‎AT‏\n‏)1( الأنوار: ج١5‏ ص50 وص55١1.‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0022",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 22,
+      "text_ar": "خطيرة''؟ وعندما انتهت الحرب ورجع المسلمون إلى المدينة كاد\nالإمام علي ‎eine, MED‏ إعياءً من كثرة ما نزف منه من الدماء\nومع ذلك قام الإمام علي ‎AEE‏ بصعوبة واتكأ على عبدين\nوتوجه نحو ساحة المعركة !!..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0023",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 23,
+      "text_ar": "وفي حرب الأحزاب أو الختدق التي وقعت عام (0)\nهجرية» كان الإمام ‎MEE‏ هو الوحيد الذي واجه أعظم أبطال\nجيش الكفار وهو (عمرو بن عبد ود العامري) واستطاع الإمام\nقتله وهو لم يبلغ الثلاثين من عمره!! وبقتل (عمرو بن عبد\nود) تحطمت معنويات قريش إلى درجة كبيرة وقال الرسول\nيي في ذلك: «ضربة علي يوم الخندق أفضل من عبادة\n‎elas‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0024",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 24,
+      "text_ar": "وفي حرب خيبر التي وقعت عام ‎(VY)‏ هجرية كان (مرحب)\nأهم أبطال اليهود وكان يضع على رأسه خوذه فولاذية\nبالإضافة إلى صخرة مثقوبة الوسط يضعها فوق الخوذة كان\n‎)١(‏ يحار الأنوار: ج77 ص5 7.. وينقل جواد فاضل في كتابه (معصومين جهارده كانه)",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0025",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 25,
+      "text_ar": "‎Ve‏ ص17 إن جراحات ‎PLY‏ كانت تسعين جراحة..\n‎IPE OY)‏ ج79 ص 1-1",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0026",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 26,
+      "text_ar": "مرحب عقبة أمام تقدم المسلمين إذ كان يقتل كل من جاء\nمبارزته» فأعطى الرسول لك الراية بيد أبي بكر ثم عمر ثم\nعثمان لكنهم تراجعوا وانهزمواء فتقدم الإمام علي عليه\nلمبارزة (مرحب) وبعد قليل كان سيف الإمام ‎OEE‏ يخترق رأسه\nمرحب محطماً الصخرة والخوذة الفولاذية وقد شق السيف رأسه\nحتى الأضراس !! ثم تقدم وانتزع باب خيبر.. وبذلك انتصر\nالمسلمون.:2©0.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0027",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 27,
+      "text_ar": "وفي معركة حنين قتل الإمام ‎AEE‏ بمفرده أربعين من\n‎LSI‏ كما قتل قائدهم (أبو جرول) بضربة واحدة أصابت\nالخوذة والعمامة والدرع وجعلته نصفين. .0\"",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0028",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 28,
+      "text_ar": "‎By‏ غزوة ‎ld‏ السلاسل ‎JS‏ الإمام ‎MEE‏ السبعة الأشداء\nوكان آخرهم أشدهه 7 .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0029",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 29,
+      "text_ar": "‏وقد كان كثير من رؤساء قوى الشرك والكفر يتساقطون\nقتلى على يد الإمام؛ أي إن الإمام ييه كان له الدور المبرز في\n)4 الأنوار: ج79 ‎Vee‏\n‏(؟) ‎pW‏ ج١5‏ ص ‎LWT‏\n‏(؟) يحار الأنوار: ج١5‏ ص ‎WAN‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0030",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 30,
+      "text_ar": "هذا ‎Sua‏ ولذلك فقد كان الكفار يسمون الإمام علي ‎BED‏\n‏ب «الموث الأحمر» وذلك لكثرة من قتل ‎ages‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0031",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 31,
+      "text_ar": "وبالإضافة إلى دور الإمام ‎AGE‏ البارز في ميدان ‎cht‏\n‏كان الإمام أمير المؤمنين ‎OBR‏ يعتبر اليد اليمنى للرسول ‎ABE‏\n‏وكان هو الذي يحافظ على الرسول ‎BB‏ ويرد عنه كيد\nالأعداء في جميع الأوقات» فقد خططت عصابة من مشركي\nمكة مكونة من ثلاثة من أقوى رجالاتها لاغتيال الرسول بول\nبسريّة تامّة.. وعرف الرسول ‎BB‏ بالخبر.. وفي ذات يوم بعد\nصلاة الفجر قال الرسول ا : «معاشر الناس أيكم ينهض إلى\nثلاثة نفر قد آلوا ‎OWL‏ والعزى ليقتلونني وقد كذبوا ورب\nالكعبة) فلم يقم أحدء وكان الإمام علي ‎Warye AEB‏ في داره»\nوعندما وصله الخبر «خرج كأنه نشط من عقال» وتقدم للرسول\n‎Lv SEB SY‏ رسول الله أنا لهم سرية وحدي) (السرية :\nقطعة من الجيش وسميت بذلك لأنها تسري ليلاً خفية)..\nوذهب الإمام علي ‎AER‏ لأداء مهمته ... وانقطعت أخباره عن\n‎)١(‏ يحار الأنوار: ج١5‏ ص ‎WAT‏\n‏(؟) يحار الأنوار: ج١5 ‎Wye‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0032",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 32,
+      "text_ar": "الرسول لي .. وبعد ثلاثة أيام رجع الإمام ‎AR‏ ومعه أسيران\nورأس» وأخبر الرسول ‎BB‏ بالقصّة: حيث صادف ‎AE‏\n‏الثلائة متجهين نحو المدينة؛ وعندما عرفت العصابة الإمام ‎OSE‏\n‏هجم عليه رئيس العصابة ودارت معركة ‎dale‏ وبعد جولة\nقصيرة استطاع الإمام ‎AGH‏ القضاء على رئيس العصابة.. وعند\nذلك استسلم الرجلان الآخران له وقالا للإمام: «...وصاحبنا\nالمقتول كان يعد بألف ‎OV (ay‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0033",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 33,
+      "text_ar": "وهكذا كان الإمام أمير المؤمنين علي ‎MEL‏ قمة الجهاد..\nوالتضحية.. ‎Ugly‏ ولذلك نزلت مجموعة كبيرة من الآيات\nالقرآنية تتحدث حول جهاد الإمام ‎AGE‏ وتضحيته؛ وسنذكر\nهنا بعضها فحسب لضيق ‎SEI‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0034",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 34,
+      "text_ar": "lis a ‏في‎ Spb Gall od dh ys yes ‏قال‎\n‏نزلت هذه الآية في أمير المؤمنين‎ PR Segoe Sey hile\nOO pA ‏وحمزة وعبيدة ومجموعة أخرى من‎\nONE ‏الأنوار: ج١5 ص‎ EO)\n.5 ‏سورة الصف:‎ (YD\nVee Ne ‏حار الأنوار:‎ (F)",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0035",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 35,
+      "text_ar": "staat La - ‏أي يبذل‎ - Sighs ‏من‎ tt Gas\n‏عند مبيته في‎ ASR ‏نزلت هذه الآية في الإمام‎ OPN ‏مَرْضَاةٍ‎\n‎HO ‏فراش الرسول‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0036",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 36,
+      "text_ar": "وقال تعالى: ‎pK Lig Go‏ عن ديه فَسَوْفَ ‎gi‏ الله\n‎ed eid‏ وَيْحبُونهُ ‎Je asl‏ المُؤْمِينَ ‎pS do Hel‏\nيُجَاهِدُونَ في سبل الله ‎Wh‏ يَحَافُونَ ‎a‏ لاح 7\" وقد نزلت\nهذه الآية أيضاً في الإمام علي ‎pee‏ ©.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0037",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 37,
+      "text_ar": "بالإضافة إلى مجموعة كبيرة من الآيات نزلت متحدثة عن\nجهاد الإمام وبطولته ‎BER‏\n‏(1) سورة البقرة: ‎YW‏\n‎OD)‏ حار الأنوار: ‎Ne‏ ص١‏ 5.\n)1( سورة المائدة: 208\n(5) يحار الأنوار: ج777 ص ‎YTV‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0038",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 38,
+      "text_ar": "فقد كان الإمام ييا يصلي كثيراً» وكان كثيراً ما يغمى\nعليه من شدة الخوف من الله فكان يصير كالخشبة اليابسة!!..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0039",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 39,
+      "text_ar": "وفي ليلة ‎Oy ell‏ كانت الحرب بين جيش الإمام علي\nتله وجيش معاوية على أشدهاء وكانت الأيدي والأرجل\nوالرؤوس تتطاير هنا وهناك.. ف هذه الأثناء حان موعد صلاة\n‎‘cena‏ فتقدم الومام تله وبسط له نطع (النطع : بساط من\nجلد) بين الحيشين ووقف الومام عليه وبدأ بالصلاة صلاة\nالصبح ‏ وهو غير آبه بالسهام التي تتطاير حوله؛ إلى أن أكمل\n‎Ors Sue‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0040",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 40,
+      "text_ar": "وفي إحدى الليالي رجع الإمام إلى داره متأخرا وسهر إلى\n‎)١١‏ في حرب صفين اشتدت المعركة بين الطرفين بعد عدة أشهر من بدثها واستمرت",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0041",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 41,
+      "text_ar": "المعركة إلى الليل.. وإلى الفجر وإلى الصبح ؛ ولو استمرت الحرب إلى الظهر لانتصر",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0042",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 42,
+      "text_ar": "جيش الإمام إلا أن خدعه معاوية «بالمصاحف» حالت دون ذلك وليلة المرير هي تلك",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0043",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 43,
+      "text_ar": "الليلة.\n() شرح نهج البلاغة لابن أبي الحديد: ‎Woe Ve‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0044",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 44,
+      "text_ar": "مدة طويلة من الليل مع أحد الأشخاص.. وفي ساعة متأخرة\nمن الليل ذهب ‎SR‏ للنوم ونام الرجل أيضاً.. يقول الرجل :\nوبعد ساعة (أي: مدة) رأيت الإمام ‎AER‏ يتجه نحو مكان\nالضوء وهو يتكئ على الجدار (من شدة الإرهاق) فقمت\nوقلت: إلى أين يا أمير المؤمنين؟",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0045",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 45,
+      "text_ar": "فقلت له: إنك لم تسترح إلا قليلاً فلماذا لا تنام أكثر؟",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0046",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 46,
+      "text_ar": "فقال الإمام ‎AG‏ «إن نمت الليل ضيعت نفسي» ‎Oly‏\n‎es‏ النهار ضيعت رعيتي» قال الإمام ذلك واتجه إلى ‎LE‏\n‏العبادة!!.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0047",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 47,
+      "text_ar": "‏فقد كان الإمام ‎ASE‏ يعيش حياة عادية جداً كحياة الفقراء\nبل أكثر تواضعاً منها.. فقد كان أكله لا يتعدى خبز الشعير\nالجاف ‏ وكان في بعض الأوقات يكسر الخبز بركبته لخشوتنته ‏\nوبعض الملح أو اللبن فقط!!",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0048",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 48,
+      "text_ar": "‏يقول سويد بن غفلة: «دخلت على علي بن أبي طالب\nالقصر فوجدته جالساً وبين يديه صفيحة فيها لبن ‎BR‏ (أي:\nغليظ) أجد ريحه من شدة حموضته.. وفي يده رغيف أرى\nقشار الشعير في وجهه وهو يكسره بيده أحياناً فإذا غلبه كسره\nبركبته وطرحه فيه...",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0049",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 49,
+      "text_ar": "‏ثم يقول سويد: فقلت ‎ray th‏ ويحك يا فضة أما تتقين\nالله في هذا الشيخ ألا تنخلون له طعاماً مما أرى فيه من النخالة؟\n‎JA)‏ الدقيق أي غربله وأزال قشوره).",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0050",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 50,
+      "text_ar": "‏فقالت : ‎ad‏ تقدم إلينا أن لا ننخل له طعاماً ‎Oc‏\n‎)١(‏ حار الأنوار: ج*4 ‎TT ge‏ وكشف الغمة: ج١ ‎VAY ge‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0051",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 51,
+      "text_ar": "مع أنه ‎AEE‏ كان يحكم على أكثر من )0%( دولة بما فيها\nإفريقيا وإيران وجميع الدول العربية !.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0052",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 52,
+      "text_ar": "بل أن الإمام ‎ASR‏ كان يأكل خبز الشعير اليابس حتى في\nيوم العيد ولا يرضى أن يخلطه أولاده بشيء من الدهن.. يقول\nعبد الله بن أبي رافع : دخلت عليه (الإمام) يوم ‎oe‏ فقدم\n‎(LD Ue‏ مختوماً فوجدنا فيه خبز شعير» يابساً مرضوضاً»\nفقدم ‎[Sb‏ « فقلت يا أمير المؤمنين: فكيف تختمه ‎oi)‏ لماذا\n‎bs‏ الكيس مع أنه لا شيء ذا أهمية فيه) قال عليه : «خفت\nهذين الولدين أن يلتاه (أي يبللاه ويلطخاه) بسمن أو ‎a5‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0053",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 53,
+      "text_ar": "أما ملابسه فقد كانت أكثر من عادية.. كانت مرقعة في كثير\nمن جوانبها ‏ يقول الإمام ‎AEE‏ «لقد رقعت مدرعتي هذه حتى\nاستحييت من ‎geal‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0054",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 54,
+      "text_ar": "ويقول أبو النوادر ‏ وهو بياع الكرابيس'\" : أتاني علي بن\nأبي طالب ‎AEE‏ ومعه غلام فاشترى مني قميصي كرابيس ‎SB‏\n‏)1( شرح نهج البلاغة لابن أبي الحديد: ج١ ‎YO ge‏\n‎(Y)‏ مستدرك الوسائل: ج77 ص77 ح 7009 عن نهج البلاغة.\n‎tL SK)‏ هو نوع من الأقمشة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0055",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 55,
+      "text_ar": "لغلامه: اختر أيهما ‎cost‏ فأخذ أحدهماء وأخذ علي مل\nالآخر فلبسه؛ ثم مد يده فقال: اقطع الذي يفضل من قدر\nيدي» فقطعته؛ وكفه (طواه) ولبسه؛ ‎Lady‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0056",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 56,
+      "text_ar": "‎Oy‏ الإمام ‎ASE‏ يلبس الملابس المرقعة!! وقد رئي وعليه\nإزار (ثوب) غليظ اشتراه يخمسة دراهه”\".",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0057",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 57,
+      "text_ar": "‏وأما منزله.. فلم تكن تجد فيه حتى ضروريات أي منزل\nعادي: فقد كان كل ما في داره ‎AGB‏ ليلة الزواج لا يتعدى ال\n‎OY)‏ شيئاً! !..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0058",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 58,
+      "text_ar": "‏يقول الإمام ‎Ly 1A‏ كان لنا إلا إهاب كبش (جلد\nخروف) أبيت عليه مع فاطمة عََابيَادِ بالليل ونعلف عليها\nالناضح (أي الجمل الذي ينقل عليه ‎OMe gly (Ul‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0059",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 59,
+      "text_ar": "‏ويقول سويد بن غفلة : دخلت على علي ‎ley AE‏\nوليس في داره سوى حصير رث (بال) وهو جالس عليه؛ فقلت\nيا أمير المؤمنين: أنت ملك المسلمين؛ والحاكم عليهم وعلى\n‎)١(‏ أسد الغابة: ‎te‏ ص5 ؟.\n(؟) يحار الأنوار: ج٠5 ‎TY Ge‏\n(؟) يحار الأنوار: ج٠5‏ ص5717.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0060",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 60,
+      "text_ar": "بيت المال» وتأتيك الوفود وليس في بيتك سوى هذا الحصير؟..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0061",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 61,
+      "text_ar": "قال يِيَاِهِ: ‎Cages bo‏ إن اللبيب (العاقل) لا يتأثث في دار\nالنقلة (الانتقال) وأمامنا دار المقامة (الآخرة) وقد نقلت إليها\nمتاعنا ونحن منقلبون إليها عن قريب».",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0062",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 62,
+      "text_ar": "قال سويد : فأبكاني والله كلامه”©.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0063",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 63,
+      "text_ar": "وقد كان الإمام ‎ASE‏ يطعم الناس خبز الب (الحنظة)\nواللحم وينصرف إلى منزله ويأكل خبز الشعير ‎(GLY‏ والزيت\n‎OW‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0064",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 64,
+      "text_ar": "وهكذا وبمنتهى البساطة كان يعيش أمير المؤمنين علي ‎BEE‏\n‏الحاكم على أكثر من خمسين دولة؛ بينما حكّام اليوم الذين\nيدعون الإسلام يعيشون في قصور أسطورية صرفت عليها\nالمليارات» وسيارات من آخر موديل؛ وأموالهم تملا البتوك\nالأجنبية» بينما أغلب الجماهير تعيش الفقر المدقع.\n)1( تذكرة ‎ge tel ht‏ وانظر يحار الأنوار: ‎We‏ ص١‏ 77.\n(0) بحار الأنوار: ج10 ‎TV Ge‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0065",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 65,
+      "text_ar": "الفصل الثاني:\nالمرحلة التي سبقت حكم الإمام علي\nعله",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0066",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 66,
+      "text_ar": "عندما وصل «عثمان بن عفان» إلى الحكم شاهد المسلمون",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0067",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 67,
+      "text_ar": "المزيد من الانحراف في خط السلطة.. فقد أبعد (عثمان) المؤمنين",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0068",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 68,
+      "text_ar": "الصادقين؛ وقرب إلى نفسه المنافقين وطرداء الرسول ‎BBY‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0069",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 69,
+      "text_ar": "وخصص أموال بيت المال لأقربائه وعشيرته.. وولّى على",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0070",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 70,
+      "text_ar": "الدول الإسلامية أشخاصاً منحرفين دون أن يمتلكوا شيئاً من\nالكفاءة» أو التقوى..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0071",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 71,
+      "text_ar": "فقد جعل عثمان عبد الله بن سعيد ‏ وهو أخوه في الرضاعة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0072",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 72,
+      "text_ar": ". والياً على مصر مع أن رسول الله ‎BD‏ كان قد أهدر دمهء",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0073",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 73,
+      "text_ar": "ورد الحكم بن العاص ‏ ابن ‎dae‏ إلى المدينة مع أن الرسول",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0074",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 74,
+      "text_ar": "‎BY‏ طرده من ‎Hall‏ فكان يسمى «طريد الرسول».. وجعل",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0075",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 75,
+      "text_ar": "Oe ype ‏كاتيه وصاحب‎ (Oly ya) a4!\n طيعم ‏وكذلك أعطى حكومة الكوفة للوليد ابن عقبة بن‎\n‏وقد دخل الوليد‎ La ‏أخ عثمان من أمه  مع أنه كان سكيراً‎\n‏وصلى صلاة الصبح أربع ركعات»‎ (OL Su ‏ا محراب مرة وهو‎\n‏وعندما قدم وفد من علماء وزهاد الكوفة إلى المدينة وأبلغوا‎\n‏عثمان بالخبر وأتوه بالأدلة التي لا تقبل الشك كذبهم عثمان‎\n‏يجلدهم أمام الناس لأنهم شهدوا على أخيه بالفجور‎ ply",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0076",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 76,
+      "text_ar": "ومروان ابن الحكم بن أبي العاص الذي طرده الرسول\n‎QB‏ هو وأباه من المدينة أرجعه عمر إلى المدينة بشفاعة\nعثمان؛ وعندما وصل عثمان إلى الحكم جعل مروان ‏ طريد\nالرسول ‏ وزيراً له ومنحه خمس إفريقيا!..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0077",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 77,
+      "text_ar": "كما أعطاه من بيت مال المسلمين أربعة ملايين وثلاغمائة\nوعشرة آلاف دينار ‎Hay Bley (Yor)‏ وعشرين\n‎)١(‏ الأئمة ‎QS‏ عشر دراسة تحليلية: ‎Woe‏ وبحار الأنوار: ‎Ag‏ الطبعة القديمة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0078",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 78,
+      "text_ar": "مليون وسبعمائة وسبعين ألف درهم ‎OCW LWejeee)‏\n‎JS‏ ذلك من أموال المسلمين.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0079",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 79,
+      "text_ar": "كما أعطى الحرية الكاملة لمعاوية ليعمل أي شيء شاء في\nالشام..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0080",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 80,
+      "text_ar": "وجعل عبد الله بن عامر ‏ ابن عمه ‏ حاكما على البصرة..\nويعلى بن أمية حاكماً على اليمن» لأنه ابن عمه..",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0081",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 81,
+      "text_ar": "وقد وهب عثمان إلى ‎Col‏ سفيان (رأس الكفر) ‎ale‏ ألف!\nوكل ذلك من بيت مال ‎eed‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0082",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 82,
+      "text_ar": "وأعطى عثمان الحارث بن الحكم ‏ صهره  ‎BU‏ ألف\nدرهم » ووردت إبل الصدقة فوهيها ‎yaJ‏ وأقطعه سوقاً في\n«المدينة) يعرف ب «تهزوز)» بعد أن تصدق به رسول الله ‎SY‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0083",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 83,
+      "text_ar": "وقد ‎Sy‏ عثمان الحكم بن العاص على صدقات منطقة\n«قضاعة» فبلغت ‎٠٠١‏ ألف درهم ‎OVS ag‏\n‎)١(‏ علي ميك من المهد إلى اللحد: ‎EN yo‏\n(؟) حياة الإمام الحسن بن علي ‎ERE‏ لباقر شريف القرشي: ج١‏ ص؟١11.‏\n)( المصدر: ص ‎TAY‏\n‏)2( المصدر: ص ‎5١5‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0084",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 84,
+      "text_ar": "ومنح عثمان سعيد بن العاص ‎Overy Virgen‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0085",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 85,
+      "text_ar": "وأعطى مروان بن الحكم ‏ بالإضافة إلى ما ذكرنا سابقاً .\nمائة وخمسين أوقية من الذهب أو الفضة.. كما أقطعه فدكاً\nوأعطاها ‎vas‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0086",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 86,
+      "text_ar": "وليس ذلك فقطء بل إن عثمان سلب ‎wlll‏ حرياتهم..\nفقد منع الناس من رعي دوابهم وحيواناتهم في الجبال والوديان",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0087",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 87,
+      "text_ar": "كما ‎Gb‏ مبدأ «الدكتاتورية» بأجلى معانيها.. فقد ‎OW‏\n‏الكلام ‎Le‏ الخليفة! أمراً حظوراً يعاقب عليه صاحبه.. فعندما\n‎ele‏ عمار بن ياسر حاملاً رسالة من أصحاب الرسول ‎BD‏\n‏إلى عثمان تنصحه بالعودة إلى تعاليم الوسلام وعدم إعطاء\nالأموال لبني أمية.. ‎call‏ عندما أوصل عمار الرسالة وقرأها\nعثمان ألقاها على الأرض ثم أمر الخدم بضرب عمار..\nفهجموا عليه وضربوه بشدة.. ولم يكتف عثمان بذلك بل قام\n)1( المصدر: 2 ‎AVAV‏\n‎(Y)‏ المصدر: ص9١51.‏\n)1 الأنوار: ج8 الطبعة القديمة ‎AVA Ge‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0088",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 88,
+      "text_ar": "وضربه برجله على بطنه عدة مرات حتى (أغمي عليه) وأصيب\nبالفتق!! ولولا هجوم أقرباء عمار وإنقاذهم له من بين أرجل\nعثمان لكان من الممكن أن يقتل جزاء قوله ‎ON GAT‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0089",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_001",
+      "paragraph_number": 89,
+      "text_ar": "وأبو ذر ذلك الذي قال الرسول ‎BB‏ فيه: «ما ‎cI‏\n‏الخضراء ولا أقلت الغبراء على ذي ‎igh‏ أصدق من أبي ‎os‏\n‏كان يمشي في الأسواق والأزقة وهو يقرأ هذه الآية : لوَالَذِينَ\nَكْيرُونَ الدب وَالْفِصَةَ ‎Vg‏ يُفِهُونَهَا في سيل الله ‎pkg GALS‏\n‎OG el‏ ولكن عثمان أصدر أمراً يمنعه من ذلك !! ثم سفّره من\nالمدينة إلى الشام.. ثم أمر بإرجاعه إلى المدينة ‎USL‏ جملاً\nعارياً.. وساروا به سيراً متواصلاً أياماً عديدة ‏ كل ذلك بأمر\nمن عثمان ‏ حتى تنائر لحم فخذيه من احتكاك فخذه بظهر\nالجمل ‎Og sb‏ ثم سفره إلى الربذة حيث لا ‎cle‏ ولا طعام..\nواستشهد أبو ذر هناك جوعاً وعطشاً.\n‎ILI )١(‏ مذكورة بصورة أخرى في يحار الأنوار: ‎Ag‏ ص18 5.\n‎YD‏ حار الأنوار: ج0١‏ ص8١١.‏\n)1( سورة التوبة: ‎YE‏\n‏(5) يحار الأنوار: ‎Ae‏ الطبعة القديمة 2 ‎VV‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0090",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 90,
+      "text_ar": "هذه الا نحرافات الخطيرة في سياسة الحكم عند عثمان سبب\nتذمر المسلمين» واشتد هذا التذمر حتى تحول إلى ثورة عارمة..\nحيث ‎opel‏ الجماهير منزل عثمان وبعد ‎BW‏ أيام من\nا محاصرة دخلوا قصر عثمان وقتلوه هناك.. ثم اتجهت الجماهير\nنحو الإمام علي ‎AEE‏ وطلبت منه البيعة وإمرة المؤمنين.. إلا أنه\n‎AE‏ رفض» ثم قبل تحت ضغط الإلحاح الجماهيري.. وهكذا\nرجع الحق إلى صاحبه.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0091",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 91,
+      "text_ar": "الفصل الثالث:\nالإمام علي ‎gop‏ حاكما",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0092",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 92,
+      "text_ar": "عندما وصل الإمام علي ‎AEE‏ إلى الحكم كان وضع البلاد\nالإسلامية متدهوراً ‎ae‏ فقد سرى الفساد والانحراف في كل\nأجهزة الدولة» وأصبح المجتمع طبقتين متباعدتين: طبقة غنية\nتملك من الذهب ما يكسر بالفؤوس» وطبقة فقيرة تمون في\nالعراء من وطأة الجوع!.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0093",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 93,
+      "text_ar": "وتجاه هذا الوضع المنحرف ‎LE‏ الإمام ‎AEE‏ عدة قرارات\nإيجابية وبناءه وحكيمة كان من أهمها :",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0094",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 94,
+      "text_ar": "‎:١‏ عزل جميع الولاة الفاسدين الذين ولاهم عثمان او\nمن سبقه الحكم.. فعند وصول الإمام عله إلى الحكم عزل\nمعاوية ‏ الوالي على الشام ‏ فوراً؛ كما عزل سائر الولاة الذين\nوصلوا إلى السلطة بواسطة المحسوبيات والمنسوبيات دون أن\nيملكوا شيئاً من الكفاءة أو التقوى, وقال الإمام كا في ذلك :\n«ولكني آسى أن يلي أمر هذه الأمة سفهاؤها وفجارها فيتخذوا\nمال الله ‎Yoo‏ وعباده خولاً والصالحين حرباً والفاسقين\n‎Og‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0095",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 95,
+      "text_ar": "‏؟: نصب ولاة صالحين مكانهم أمثال : عثمان بن\nحنيف؛ وسهل بن حنيف» وقيس بن سعد بن عبادة..\nوغيرهم » وقد أحدث هؤلاء الولاة ثورة في جميع ‎Vd‏\n‏فقد عادت الأمور إلى مجاريها ولم يعد في البلاد الإسلامية حتى\nفقير واحد.. ‎By‏ ذلك يقول الإمام ‎8G‏ «ولعل ‎SEAL‏ أو\n‎)١(‏ نهج البلاغة» الكتب: 57.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0096",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 96,
+      "text_ar": "اليمامة من لا عهد له بالشبع ولا طمع له ‎gh GEL‏ إن\nهناك احتمالاً ضعيفاً بوجود ققير في أحد هذين البلدين اللذين\nكانا من أكثر البلاد ‎WE‏ وفقراً آنذاك..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0097",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 97,
+      "text_ar": "وقد أرسل الإمام علي ‎Aah‏ والياً إلى أفريقيا ‏ أفريقيا التي\nيموت فيها الآن ‎)9٠٠١( Lag‏ إنسان تقريباً من الجوع أي\n(7”70) ألف في السنة الواحدة ”7‏ وبعد مدة أرسل الوالي إلى\nالإمام برسالة يقول فيها : إن الأموال كثيرة » فماذا نفعل\nبها؟.. فأرسل له الإمام ‎OEE‏ أن أعطها للفقراء كي يستغتوا..\nفأرسل الوالي مرة أخرى برسالة إلى الإمام يقول فيها : أنه أغنى\nالفقراء ولا تزال الأموال زائدة فماذا يفعل بها؟: فأمره الإمام\n‎ASE‏ بتزويج العزاب كلهم بهذه ‎Spel‏ فزوج العزاب ثم\nأرسل بالفائض من الأموال إلى الإمام ‎EE‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0098",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 98,
+      "text_ar": "وفي المجال الاقتصادي والمالي قام الإمام يتل بما يلي :",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0099",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 99,
+      "text_ar": "‎-١‏ ألغى مبدأ التفاضل في ‎«clan!‏ وأعاده كما كان في زمن\nالنبي ‎BB‏ فقد كان النبي ‎BB‏ يساوي في العطاءء فكل\n‎)١(‏ نهج ‎HENS‏ الكتب: 40 » ومن ‎OS‏ له إلى عثمان بن حنيف الأتصاري...\n(؟) هذا الإحصاء يعود إلى تاريخ التأليف وهو عام ١٠5١ه.‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0100",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 100,
+      "text_ar": "الأموال التي كانت تفيض من بيت المال كان يقسمها بين\nالمسلمين بالتساوي.. سواء منهم الغني والفقير والعربي\nوالأعجمي والسيد ولمولى» باعتبار أن بيت المال ملك",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0101",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 101,
+      "text_ar": "‎Y‏ أن عمر عند ما جاء قرر: التفاضل في العطاء.. ففضل\nالأوس على الخزرج ؛ والمهاجرين على الأنصار؛ والعرب على\nالعجم2» ومضر على ربيعة» فجعل لمضر ‎(Ye)‏ ولربيعة\n‎)5٠١(‏ وهكذا..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0102",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 102,
+      "text_ar": "‏وعندما تولى الإمام علي ‎AGE‏ الحكم أعاد العطاء\nمتساوياً.. وذلك للأضرار التي ولّدها التفاضل في العطاء.. ‎By‏\n‏طليعتها الطبقية والعنصرية؛ فقد تولدت بين العرب والعجم\nوالموالي والسادة.. الخ عداوات وأحقاد بسبب هذا التفضيل؛\nحتى أن عمر أدرك ذلك في آخر سنين خلافته فقال: «إن عشت\nهذه السنة ساويت بين الناس فلم أفضل أحمر على ‎caged‏ ولا\nعربياً على عجمي؛ وصنعت كما صنع رسول الله ‎SB‏ وأبو\n‎OCS,‏\n‎)١١‏ تاريخ اليعقوبي: ‎Ve‏ ص5 ‎VIVA‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0103",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 103,
+      "text_ar": "؟- أعاد الأموال غير الشرعية التي تكونت على أثر سياسة\nعثمان الجاهلية إلى بيت ‎as SW‏ كان الزبير يملك خمسين\nألف دينار وألف فرس وألف عبد وضياع أخرى.. وكانت غلة\nطلحة بن عبد الله في العراق كل يوم ألف دينار وغلّته في منطقة\n(السراة) أكثر من ذلك.. وعبد الله بن عوف كان على مربطه\nمائة فرس وعشرة آلاف شاة وألف بعيرء وقد بلغ ربع ثُمن ماله\nبعد وفاته 85 ألفاً!! وعندما قتل عثمان كان له ‎Vor‏ ألف ‎jl‏\n‏ومليون درهم وقيمة ضياعه : مائة ألف دينار”\"..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0104",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 104,
+      "text_ar": "وقد أعاد الإمام الأموال التي تجمعت عند هؤلاء وغيرهم\nمن بيت المال.. قال ال.. وقد أعاد الإمام ‎AER‏ الأموال التي\nتجمعت عند هؤلاء وغيرهم من بيت المال.. قال الإمام ‎BALE‏\n‏هذا المجال: «ألا وإن كل قطيعة أقطعها عثمان؛ وكل مال\nأعطاه من مال الله فهو مردود في بيت المال» فإن الحق لا يبطله\nشيء» ولو وجدته قد تزوج به النساء وملّك بن الإماء وفرق في\nالبلدان ‎cava)‏ فإن في العدل ‎daw‏ ومن ضاق عليه العدل\nفالجور عليه أضيق».\n)1( دائرة المعارف الإسلامية الشيعية ‎ech‏ الأمين: ص١7‏ نقلاً عن المسعودي.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0105",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 105,
+      "text_ar": "وقد ‎Gb‏ الإمام ‎SE‏ مبدأ العدالة في الحقوق إلى أقصى\nدرجة ممكنة.. فقد أتي الإمام عليه بمال من أصفهان فقرر\nالإمام ‎AEE‏ توزيعه بين المسلمين» وكان ‎fal‏ الكوفة سبعة\nأقسام فقسمه سبعة أسباع» وكان بين المال رغيف يابس فقسمه\nالإمام ‎AGE‏ سبعة أقسام ثم جعل على كل جزء من الأموال\nكسرة من ‎ODN‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0106",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 106,
+      "text_ar": "ودخل عليه عمرو بن العاص ليلة والإمام ‎BOGE‏ بيت\n‎«SU‏ فأطفأ الإمام مياه السراج وجلس يتحدث مع عمرو\nتحت ضوء القمرء فسأله عن ذلك؛ فقال ‎AE‏ إن السراج من\nبيت مال المسلمين ولا يحق ‎J‏ استخدامه لأجل شؤونى\n‎Ovo‏ ْ ْ",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0107",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 107,
+      "text_ar": "وقد ساومه ‎de get AGE‏ من الأشراف على أن يبايعوه\nبشرط أن يدع أموالهم ويقتل ‎US‏ عثمان» فرفض الإمام ‎OER‏\n‏ذلك.. فقد أرسل إليه أثرياء قريش الوليد بن عقبة بن أبي معيط\nفقال للومام ‎ae‏ يا أبا الحسن إنك قد وترتنا جميعاً ونحن\n‎)١(‏ حار الأنوار: ج١5 ‎VWAge‏\n‏(؟) يحار الأنوار: ج١4‏ ص5١1.‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0108",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 108,
+      "text_ar": "أخوتك ونظراؤك من بني عبد مناف» ونحن نبايعك اليوم على\nأن تضع ‎Le‏ ما أصبناه من المال أيام عثمان» وأن تقتل ‎ald‏ وإنا\nإن ‎Shas‏ تركتاك فالتحقنا بالشام» فرفض الإمام ‎AEE‏ ذلك\n‎mone‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0109",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 109,
+      "text_ar": "ورغم أن الإمام ‎OE‏ كان يعلم ‎LU‏ إن سياسته المبنية على\nأساس «العدالة والمساواة في العطاء» سوف تثير جميع الطبقات\nالبرجوازية أمثال طلحة والزبير وقريش والولاة السابقين ضده ‏\nكما حدث ذلك بالفعل ‏ ورغم الضغوط الشديدة التي وجهها\nإليه أصحابه والتي كان منها: (أن طائفة من أصحابه مشوا إليه\nعند تفرق الناس عنه وفرار كثير منهم إلى معاوية فقالوا: يا أمير\nالمؤمنين أعط هذه الأموال وفضل هؤلاء الأشراف من العرب\nوقريش على الموالي والعجم ومن يخاف عليه من الناس فراره\nإلى معاوية.. فقال لهم أمير المؤمنين ‎2A‏ «أتأمروني أن أطلب\nالنصر ‎gdh‏ لا والله لا أفعل ما طلعت شمس ولاح في\nالسماء نجم؛ والله ولو كان مالهم لي لواسيت بينهم؛ وكيف\n‎)١(‏ شرح نهج البلاغة: ‎LTV ye Ve‏ وعلي من المهد إلى اللحد: ‎EYE je‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0110",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 110,
+      "text_ar": "١ er\n‏وإنما هو أمواليم» (“الحديث.‎\n‏ح151495.‎ TOS 4١ص‎ ١١ج ‏مستدرك الوسائل:‎ (1)\nyy",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0111",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 111,
+      "text_ar": "الفصل الرابع:\nحروب الإمام علي ‎ASE‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0112",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 112,
+      "text_ar": "عاش الإمام علي ‎GAGE‏ ظروف حرجة جداً أيام حكمه؛\nإذ كان معاوية يحارب الإمام علي ‎AGE‏ من جهة؛ وكانت\nعائشة وطلحة والزبير يحاولون إثارة الفتن الداخلية ضْد الإمام\n‎AE‏ من جهة أخرى.. وقد أعلن الخوارج الحرب على الإمام\n‎AEE‏ من جهة ثالثة.. أما أشراف قريش فلم يكونوا راضين عن\nالإمام ‎AGE‏ بل كانوا بحاولون تدبير المؤامرات ضده في أية\nفرصة متاسبة.. والولاة السابقون الذين عزلبم الإمام ‎BEE‏\n‏كانوا يكنون للإمام ‎BER‏ حقداً دفيناً.. وهكذا.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0113",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 113,
+      "text_ar": "وفي مثل هذه الظروف الحرجة عاش الإمام ‎AGE‏ واستطاع\nرغم كل ذلك أن يطبق أهدافه إلى حد كبير.. ‎AB‏ زال الفقر من\nالبلاد الإسلامية وتحققت العدالة الاجتماعية فيها..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0114",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 114,
+      "text_ar": "وفي هذا الفصل سنتعرض لذكر الحروب التي وقعت بين\nالومام ‎AGE‏ وبين مناوئيه وهي : الجمل » وصفين والنهروان.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0115",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 115,
+      "text_ar": "بعد أن استلم الإمام علي ‎AEE‏ مقاليد الحكم والخلافة\nبعدة أسابيع فكرت عائشة في إثارة الفتنة ضد الإمام ‎OEE‏\n‏والاستيلاء على الحكم.. توجهت عائشة نحو منزلي طلحة\nوالزبير ثم نحو مروان بن الحكم ويعلى بن أمية  ‎Bl‏ اليمن\nسابقاً - والوليد بن عقبة أخ عثمان وعبد الله بن ‎ple‏ والي\nالبصرة سابقاً . وغيرهم وتحت عنوان ‎LW)‏ لدم ‎(late‏ دعتهم\nللخروج ‎oF‏ الإمام ‎AEE‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0116",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 116,
+      "text_ar": "ولكن باعتبار أن محيط مكة لم يكن مساعداً للحرب لذلك\nقرروا السفر نحو البصرة وقيادة الانشقاق من هناك.. توجهت\nعائشة مع طلحة والزبير مع ألف مسلح إلى البصرة ‏ وقد غطى\nيعلى بن أمية جزءً من ‎OLE‏ الحرب؛ ‎AB‏ قدم لعائشة ستمائة\nجمل لأجل الحرب ..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0117",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 117,
+      "text_ar": "وفي هذه الأثناء كان «عثمان بن حنيف» ‎Wh‏ للإمام ‎ae‏\n‏على البصرة.. فقررت عائشة ‎cactus‏ فدخلت هي وجيشها\nإلى البصرة تحت عنوان (الصلح) وعندما استقروا في البصرة",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0118",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 118,
+      "text_ar": "أخرجوا عثمان بن حنيف منها بعد حرب طاحنة قتل جيش\nعائشة فيها سبعين شخصاً من عباد ‎Jal‏ البصرة فقط ‎ONY‏\n‏وعندما وصل ‎DI‏ للإمام ‎AE‏ كان الإمام ‎AEE‏ مشغولاً\nبالإعداد لحرب معاوية إلا أن هذا الحادث الطارئ غير خطة\nالإمام ‎EE‏ فتوجه ‎AEE‏ عند سماعه النبأ إلى البصرة مع\nألف فارس.. ثم أرسل الإمام أمير المؤمنين ‎EE‏ الإمام الحسن\n‎aah‏ ومالك الأشتر وأشخاصاً آخرين إلى الكوفة لكي يجهزوا\nجيشاً قوياً من هناك؛ وقد كان أبو موسى الأشعري والياً على\nالكوفة ولغبائه وبلاهته كان يحرض الناس على ترك الحرب\nوعدم قتال عائشة!.. إلا أن مجموعة من أصحاب الإمام ‎BER‏\n‏بقيادة مالك الأشتر ثاروا ضده واحتلوا دار الإمارة وبذلك\nعزلوا ‎Ul‏ موسى الأشعري عن الولاية.. واستطاع الإمام الحسن\nيه أن ‎jet‏ جيشاً مكوناً من ‎IVY‏ شخص من الكوفة\nالتحق بجيش الإمام علي ‎AGE‏ في «ذي قار».. وهناك قرر الإمام\nعه إرسال وفد إلى البصرة لإطفاء الفتنة بدون حرب..\nوذهب الوفد.. ولكن لم تنفع نصائحه لطلحة والزبير في تغيير\n(1) يار الأنوار: ‎Ag‏ ص ‎VAs‏ الطبعة القديمة.\n‎yo‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0119",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 119,
+      "text_ar": "رأيهما.. واستطاعت عائشة أن تشكل جيشاً مكوناً من ثلاثين\n‎il‏ رجل من أهل البصرة لحرب الإمام علي ‎EH‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0120",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 120,
+      "text_ar": "وفي صحراء واسعة قرب بوابة البصرة عسكر جيش عائشة\n‎Gs‏ قباله جيش الإمام ‎AEE‏ وهناك وقبل بدأ المعركة اتبع الإمام",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0121",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 121,
+      "text_ar": "قبل بدأ المعركة بدقائق تقدم الإمام ‎AGE‏ نحو جيش البصرة\nبدون سلاح.. وتقدم.. حتى وصل إلى مقدمة الجيش..\nونادى : يا أبا عبد الله.. يا أبا عبد الله.. يا زبير بن العوام..\nتقدم زبير وجرت بينهما محادئات طويلة كانت أهم نقطة فيها\nهي : تذكير الإمام ‎AGE‏ له بحادثتين حدثتا في زمن الرسول\nل حيث قال الرسول بو للزبير: «.. أما انك ستقاتله ‏\nأي الإمام علي ‎ABE‏ وأنت له ‎(alle‏ وحادثة أخرى مشابهة..\nوبذلك استطاع الإمام ‎AGE‏ أن يؤثر عليه ويبدل رأيه .. فقرر\nالزبير الانسحاب من الحرب قبل أن ‎las‏ وبالطبع ‎OB‏\n‏انسحاب الزبير أثر تأثيراً كبيراً على جيش البصرة وأضعف\nمعنوياته إلى حد كبير.. وبعد قليل بدأ الجيش المناوئ برمي\nالسهام نحو جيش الإمام ‎AGE‏ وسقط عدة قتلى من جيشه»",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0122",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 122,
+      "text_ar": "وعند ذلك قرر الإمام ‎AE‏ الرد بالمثل.. وقبل ذلك اتبع الإمام\nياه خطة أخرى هي الحرب النفسية.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0123",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 123,
+      "text_ar": "الخطة الثانية : بعد أن رمى الأعداء جيش الإمام ‎OEE‏\n‏بالسهام وبعد أن شرعت الرماح ‎cop‏ دعا ‎OEE‏\n‏بمصحف.. وقال لجنوده: «من يأخذ هذا المصحف يعرضه\nعليهم ويدعوهم إلى ما فيه» فيحبي ما أحياه ويميت ما أماته)\nفتقدم مسلم المشاجعي إلى الإمام ‎AGE‏ وقال: يا أمير المؤمنين\n‎Ui‏ آخذه وأعرضه عليهم وأدعوهم إلى ما ‎cad‏ فقال له\nالإمامئيتج: «إن فعلت ذلك إنك ‎(gal‏ فقال الشاب:\n«والله يا أمير المؤمنين ما شيء أحب إلي من أن أرزق الشهادة\nبين يديك » ‎Oly‏ أقتل في طاعتك).. أعطاه الإمام كله القرآن..\nتقدم مسلم وصرخ في جيش الجمل : «معاشر الناس هذا كتاب\n‎«alt‏ وإن أمير المؤمنين ‎OEE‏ يدعوكم إلى كتاب ‎cal‏ والحكم بما\nأنزل الله فيه.. فأنيبوا إلى طاعة الله والعمل بكتابه)..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0124",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 124,
+      "text_ar": "وعندما سمع جيش الجمل صراخ الشاب يدوي في الفضاء\nتقدموا نحوه وقطعوا يده اليمنى وفيها المصحف» فتناول\nالمصحف بيده اليسرى وكرر نداءه.. فقطعوا يده اليسرى أيضاً..\nولكن كانت نداءاته لا تزال ترن في الفضاء ودماؤه تسيل على",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0125",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 125,
+      "text_ar": "الأرض.. هجم جيش الجمل عليه وقطعوه قطعة قطعة”\".",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0126",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 126,
+      "text_ar": "وقد أثرت هذه الحادثة على الكثيرين من جيش الجمل..\nفقد ضعضع ذلك إيمانهم بالحرب إذ رأوا أن قادة الجيش قتلوا\nحامل القرآن ومزقوا القرآن بالرماح ما سلب إيمان الكثيرين\nبقدسية أو حتى إسلامية الحرب التي يخوضونها ‎as‏ الإمام علي\n‎ae‏ واشتعلت الحرب.. حامية.. قاسية.. وانهزم الأعداء\n‎abel‏ جيش الإمام ‎AEE‏ واستمرت الحرب يومين آخرين\nوانتهت بهزيمة ساحقة للجيش المناوئ ‎Why‏ في ‎Vr‏ جمادى\nالأولى / 77 هجرية.. ثم دخل الإمام ‎OER‏ البصرة ‎By LEU‏\nهذه المعركة الطاحنة قتل من جيش الإمام طع ‎١7٠١‏\n‏مجاهد”'' بينما قتل من أصحاب الجمل ‎١7‏ ألف رجل.\n‎Je )١(‏ الأنوار: ‎Ag‏ ص 77.70 المصدر ‎5١‏ \" الطبعة القديمة.\n() ويقال: إنه قتل من جيش الإمام خمسة آلاف ومن جيش ‎fehl‏ تسعة عشر ألفا.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0127",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 127,
+      "text_ar": "سياسة الللاعنف\nوعندما انتهت ‎AS all‏ أمر الإمام ‎ye AEE‏ ينادي في الناس\n‎ob‏ (من ألقى سلاحه فهو آمن) ثم دعا ببغلة رسول الله ‎BD‏\n‏(الشهباء) فركبها وجمع حوله زهاء ستين شيخاً كلهم من\nهمدان مدججين بالسلاح؛ ثم سار وهم معه إلى أن وصل إلى\nدار كبيرة فأمر بفتح الباب ففتح ‎By ca‏ مساحة الدار الواسعة\nكانت عشرات النساء قد احتشدن فيها وهن يبكين» وعندما\nشاهدن الإمام ارتفعت أصواتهن بالبكاء وصرخن : هذا قاتل\nالأحبة.\nوالذي يظهر أن هذه المسرحية كانت خطة مدبرة من قبل\nعلى يد بعض قادة جيش الجمل الذين لم يقتلوا في المعركة\nوهربوا وكان اجتماع النساء في هذه الدار وبكائهن خطة للتغطية\nعلى القادة الذين اختبئوا في حجرات تلك الدارء وكانوا\nيتصورون أن الإمام سيخدع بذلك وسيتصور حقاً أن ليس 3\nالدار سوى النساء اللاتي يبكين قتلاهن.\nولكن الإمام ‎AEE‏ عرف أن وراء الأكمة ما وراءها وعرف\n‎r4‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0128",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 128,
+      "text_ar": "الخطة المرسومة فصاح (صفية) فأتته على جناح السرعة فقال\n‎Yo std‏ تبعدين عني هؤلاء ‎Oost‏ يزعمن إني قاتل\nالأحبة ولو كنت قاتل الأحبة لقتلت من في هذه الحجرة ومن في\nهذه». وأشار الإمام إلى ثلاث حجر.\nفتوجهت صفية إلى النساء اللاتي كن يبكين» وأخبرتهن بما\nقاله الإمام ‎AE‏ لبا: (فما بقيت في الدار صائحة إلا سكتت»\nولا قائمة إلا قعدت) أو ليست الخطة قد فشلت وها هو الإمام\n‎OE‏ قد عرف الخطة وأدرك أن بكاءهن ما هو إلا مسرحة\nللتغطية؟!\nوالآن لننظر إلى داخل الحجرات الثلاث لنرى من كان\nفيها؟\nفي الحجرة الأولى نجد: (عائشة) ‏ القائد العام لجيش الجمل\n- ومعها ‎de ged‏ من خاصتها.\nوفي الحجرة الثانية نشاهد: مروان بن الحكم ‏ أحد القادة ‏\nومجموعة من شباب قريش.\n‎)١١‏ يبدو أنهن كن كما قال تعالى : ‎ish Js ESD‏ إن تحمل ‎le‏ يله أو ترك\nيلْهَث © سورة الأعراف: ‎AVT‏\n‎4٠‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0129",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 129,
+      "text_ar": "وفي الحجرة الثالثة : عبد الله بن الزبير مع ‎Marble‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0130",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 130,
+      "text_ar": "وهكذا وقع أقطاب ‎GES)‏ وقادة حركة المعارضة بيد\nالإمام ‎AE‏ فماذا صنع الإمام بهم؟ وماذا كان موقف الإمام\nمنهم في الوقت الذي كان أصحابه قد ضربوا بأيديهم إلى قوائم\nسيوفهم وأحدوا أبصارهم واستعدوا لكي يقتلوهم في لحظة\nواحدة بمجرد صدور أمر ‎eu‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0131",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 131,
+      "text_ar": "لقد اتخذ الإمام ‎ASE‏ موقفاً حكيماً ‎AB Lin‏ عفا عن\nالجميع”” ذلك إنه كان يدرك أن قتل هؤلاء القادة وقتل أهل\nالبصرة ‎og tt‏ سيولد مضاعفات خطيرة في المستقبل\nوسيؤدي قتلهم إلى رد فعل معاكس في المستقبل» فبدل أن\nتنطفئ الفتنة» تستمر الاضطرابات طوال حكومة الإمام علي\n‎ae‏ وبعدها ‎(Lal‏ إذ أن لكل مقتول عشيرة وقبيلة أو على\nالأقل أقرباء وأصدقاء وهل يمكن أن يسكن أولئك إذا ما قتل\n)1( جواهر الكلام: ‎CVV‏ كتاب الجهاد» ص١1‏ 57.\n‎(Y)‏ المصدر.\n(؟) الصدر.\n(4) كان للإمام ‎AER‏ الحق في قتلهم وسبي ذراريهم ونسائهم على الخصوصء رغم",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0132",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 132,
+      "text_ar": "كونهم بغاة» وقد استفاضت بذلك النصوص. راجع الجواهر: ‎Ve‏ ص570.\n‎t\\‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0133",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 133,
+      "text_ar": "الإمام أبناءهم؟ ولو سكتوا ‎UG‏ هو نار تحت الرماد ستتأجج\nيوماً ما ضد أتباع الإمام علي ‎PEE‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0134",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 134,
+      "text_ar": "وهكذا كان عفو الإمام ‎OLE‏ عنهم سبباً لكسب أهل\nالبصرة إلى جانبه واطمئنانه من هذه الجهة.. وذلك ما فعله النبي",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0135",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 135,
+      "text_ar": "‎Lu‏ عند فتح مكة حيث قال: «اذهبوا فانتم الطلقاء»..\n«ومن دخل دار أبي سفيان فهو آمن و..» وبذلك خضعت له\nقبائل قريش كلهاء وأليس هذا هو النصر الحقيقي؟!",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0136",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 136,
+      "text_ar": "‏وفي هذا ‎SLA‏ يقول الإمام ‎SOE‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0137",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 137,
+      "text_ar": "‏«مننت على أهل البصرة كما من رسول الله ‎BB‏ على\nأهل ‎GaSe‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0138",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 138,
+      "text_ar": "‏ويشير إلى العلة التي ذكرناها قول الإمام الصادق ‎2S‏\n‎ob‏ علياً ‎ALR‏ إن ‎Go‏ عليهم (أي أهل البصرة) كما منّ رسول\nالله ‎BB‏ على أهل ‎Se‏ وإنها ترك علي ‎AE‏ لأنه كان يعلم\nأنه سيكون له شيعة؛ ‎Oly‏ دولة الباطل ستظهر عليهم فأراد أن\nيقتدى به شيعته» وقد رأيتم آثار ذلك هو ذا سائر في الناس\nسيرة علي ‎ALE‏ ولو قتل علي ‎Jal ash‏ البصرة جميعاً واتخذ\n)1( المصدر ص5 ‎YY‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0139",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 139,
+      "text_ar": "أموالهم لكان ذلك له ‎VIE‏ لكنه ‎ye‏ عليهم ‎yee)‏ على شيعته\n‎aes‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0140",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 140,
+      "text_ar": "وفي حديث آخر يقول: «لولا أن ‎ak Ue‏ سار في أهل\nحربه بالكف عن السبي والغنيمة للقيت شيعته من الناس بلاءً\n‎ads‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0141",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 141,
+      "text_ar": "ومن موقف الإمام أمير المؤمنين هذا ومواقف الرسول\nالأكرم ‎SY‏ في مكة وغيرها نستكشف أن أية دولة أو حركة\nتريد الاستقرار والاستمرار فإن عليها أن تتبع سياسة\nاللاعنف.. ولنتأمل القصة التالية :",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0142",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 142,
+      "text_ar": "فقد جعل الإمام كاه رجلاً ‎Uh‏ على عكبرا وعندما أراد\nالرجل التوجه إلى عكبرا قال له الإمام أمام الناس: لا تدعن\nلهم درهماً من ‎ogi Bt‏ وشدد علية القول (أي أمره أن يأخذ\nالضريبة منهم دون نقيصة درهم) ثم قال له الإمام (القني عند\nاتتصاف النهار) وعندما جاء الرجل قال له الإمام سراً: (إني\nكنت قد أمرتك بأمر وإني أتقدم إليك الآن (أي آمرك بأمر\n)1( الصدر.\n‎(Y)‏ المصدر.",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0143",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 143,
+      "text_ar": "جديد) فإن عصيتني نزعتك (أي عزلتك) لا تبعن لهم في\nخراجهم حمارا ولا بقرة ولا كسوة شتاء ولا ‎(aye‏ أرفق",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0144",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 144,
+      "text_ar": "ولنتأمل معاً القصة التالية لنرى ‎Gy GS‏ الإمام 5/2\nجنوده على المناقبيات الرفيعة؛ وكيف دربهم على الأخلاقيات\nالإسلامية: فبعد أن وضعت حرب الجمل أوزارها نادى الإمام\nعلي 102 ‎ger‏ وجد ماله فليأخذه» رغم أن أموال البغاة (أي\nالخارجين على الإمام) يملكها المجاهدون..",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0145",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_002",
+      "paragraph_number": 145,
+      "text_ar": "‎Gy‏ هذه الأثناء مر رجل من ‎pal‏ البصرة على مجموعة من\nالمجاهدين كانوا يطبخون طعاماً في قدر له؛ فطلب الرجل القدر\nالقدر؛ ولكن الرجل ضرب القدر برجله ثم أخذه وذهب ولم\nيتفوه أحد من هؤلاء المجاهدين . وهم الجيش الفاتح ‏ بكلمة\n)1( المصدر ‎VES oe‏",
+      "page_number": 26
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0146",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 146,
+      "text_ar": "اعتراض تجاه هذا التصرف الوقح الذي يصدر من أحد أفراد\n‎a‏ اه\nثانياً: معركة صفين\nبعد حوالي شهرين من انتهاء معركة (الجمل) بدأ الإمام\nعلى ‎ASE‏ بالإعداد لحرب معاوية.. ففى أول رجب سنة ‎7١1‏ ه\nبدأ الإمام ميته بتهيئة المقدمات وبالتعبئة العامة.. وفي اليوم\nالخامس من شعبان توجه جيش الإمام ‎OE‏ من النخيلة نحو\n8 2¢ . ماع 5 0\nالشام ووصل جيشه ‎OE‏ إلى صفين في أواخر ذي الحجة 7ك\nوعندما سمع معاوية ‎Lal‏ صعد على ‎pall‏ وتكلم بكلام طويل\nتناول فيه قصة مقتل عثمان وأن ‎Ue‏ هو قاتله وأنه ‏ أي معاوية\n- هو وارث دم عثمان.. ‎call‏ ثم وفي ‎BT‏ خطاب ألقاه أمر\n‎eal‏ بثوب ملطخ بالدماء ادعى أنه الثوب الذي قتل فيه\nعثمان.. وبذلك أثار معاوية حماسة ‎fal‏ الشام.. وبدأ معاوية\n‎)١(‏ حار الأنوار: ‎Ae‏ ص١‏ 4 7 الطبعة القديمة.\n‎A)‏ الأنوار: ‎Ag‏ ص 570 الطبعة القديمة.\n‎to‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0147",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 147,
+      "text_ar": "بتهيئة الجيش.. وتحرك بجيشه نحو صفين وفي ‎BUI‏ حرم ‎des‏\n‏معاوية إلى ‎nae‏ وعسكر هناك مقابل جيش الإمام..\nوابتدأت الحرب خفيفة باردة.. واستمرت الحرب الباردة بين\nالطرفين من شهر رجب عام 1\" إلى شهر صفر عام ‎oa YV‏\nوخلال هذه الأشهر السبعة كانت تحدث مناوشات صغيرة بين\nالجيشين.. إلا إنها لم تكن تسحق اسم (الحرب) والسبب في\nذلك هو:",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0148",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 148,
+      "text_ar": "أولا: ‎OYE‏ كثيرة جرب من جانب الإمام علي ‎BER‏\n‏لكي يرد معاوية عن عزمه ولكي يرجع معاوية عن غيه وغصبه\nللسلطة ويسلم الحكم للومام يتاه ودامت ‎wots oda‏ أكثر\nمن ثلاثة ‎OO gal‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0149",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 149,
+      "text_ar": "ثانياً : حيلولة الأشهر الحرم الثلاثة وهى : ذو القعدة وذو\nالحجة وحرم.. دون الابتداء بالحرب.. وهكذا بعد حرم في أول\nيوم من شهر صفر ابتدأت المعركة بين الجيشين.. بين جيش\nالإمام علي ‎AGE‏ وعدده خمسون ألف مقاتل وبين جيش\n‎)١(‏ حار الأنوار: ‎Ae‏ ص 575 الطبعة القديمة.\n‎EM)‏ الأنوار: ج8 ص 559 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0150",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 150,
+      "text_ar": "معاوية الذي يربو على المائة والعشرين ألف (١؟١/١0٠0)‏ بين\nفارس وراجل”\". وهو يربو على ضعف عدد جيش الإمام\n‎RE‏ ولكن الفرق هو أن جيش الإمام ‎BEE‏ كان يحارب\nمدافعاً عن ‎GLI‏ وكله شوق إلى الشهادة» ‎ley‏ جيش معاوية\nكان بحارب رغبة في ‎LA!‏ واشتدت المعركة.. وتساقط القتلى\nمن الجانبين.. ومضث عدة أشهر والحرب لا تزال مستمرة..\nوانتهت سنة ”7 ه والحرب لا تزال مستمرة.. وحتى شهر صفر\nمن عام ‎ATV‏ لم تكن الحرب قد انتهت بعد..\nعمليات تضحوية",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0151",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 151,
+      "text_ar": "وقد ‎cul‏ أصحاب الإمام ‎OEE‏ وجنوده تضحية كبيرة؛\nوقام الكثير منهم في حرب صفين بعمليات تضحوية كادت\nتقضي على معاوية :",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0152",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 152,
+      "text_ar": "‎١‏ :ني السابع من صفر ‎BTV‏ صمم مالك بن جرير (وكان\nمن أصحاب الرسول يي ) مع مجموعة من فدائبي قبيلة «بني\n‎)١(‏ يحار الأنوار: ‎Ae‏ ص 475 الطبعة القديمة.\n(؟) حار الأنوار: ‎Ae‏ ص07 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0153",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 153,
+      "text_ar": "تميم) صمموا على اختراق جيش الشام والوصول إلى مقر\nمعاوية رغم كل المصاعب الناتئة في الطريق.. واخترق مالك\nصفوف جيش الشام.. وتقدم.. ولكن قبل أن يكمل مهمته\nالرسالية كان قد وقع على الأرض» والدماء تنزف من جسمه؛\nواستشهد هناك.. في ساحة المعركة.\n؟: وفي اليوم السابع أيضاً قال الإمام ‎AGE‏ لعبد الله بن\nبديل: «احمل عليهم ‎COW‏ ونفذ ابن بديل الأمر فوراً.. توجه\nنحو معاوية مع ميمنة الجيش» وأخذ بيديه سيفين وحمل\nدرعين!.. وتقدم ابن بديل وتقدم » ووصل إلى مركز معاوية»\nوبلغت المعركة أقصى درجات العنف ‎Badly‏ وبدأ أصحاب\nمعاوية يتساقطون واحداً بعد الآخر.. كان موقف معاوية حرجاً\nجداً.. أرسل إلى حبيب ابن مسلمة الفهري.. أمير الميسرة ‏\nيستنجد به ويأمره بالدفاع.. وألقى ابن مسلمة الفهري بكل ثقله\nفي الميدان ولكن.. استطاع ابن بديل اختراق صفوفهم» وتقدم\nنحو معاوية.. وتراجع معاوية إلى ‎AIBN‏ وتراجع.\nطلب معاوية من ابن مسلمة الفهري تجميع قواه والقيام\nبهجوم كاسح على ابن بديل وعلى ميمنة أهل العراق..\n‎tA‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0154",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 154,
+      "text_ar": "استجمع ابن مسلمة قواه ولملم فلول ‎cade‏ ودارت معركة\nطاحنة.. قتل من جيش ابن بديل الكثير ولم يبق معه سوى مائة\nشخص !!",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0155",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 155,
+      "text_ar": "صمم ابن بديل على التقدم وقتل معاوية ‏ رأس الأفعى ‏\nرغم كل شيء.. وبعزيمة المؤمن وإيمان ‎ult‏ بدأ ابن بديل\nيقاتل مع جماعته؛ ووصل قرب معاوية» من جديد صاح\nمعاوية: «ويلكم! الصخرة والحجارة؛ إذا عجزتم عن\nالسلاح».. كان الإنهاك قد بلغ بأصحاب معاوية كل مبلغ.. لم\nيعودوا يستطيعون حمل ‎ect‏ والحرب.. رضخوه\nبالحجارة.. تساقطت الأحجار عليه كالمطرء» وسقط عن فرسه\nودمائه الحمراء الفانية تسيل من جسله.. تقدموا نحوه..\nوتناوشته سيوفهم وبعد دقائق كان عبد الله بن بديل قد أصبح\nفي عداد الشهداء©.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0156",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 156,
+      "text_ar": "‎it‏ قررت قبيلة ‎ayy‏ القضاء على رأس الفساد\n«معاوية).. اجتمع منهم سبعة آلاف محارب وتبايعوا على أن لا\n‎KO)‏ الأنوار: ‎Ag‏ ص 507 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0157",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 157,
+      "text_ar": "يرجعوا حتى ‎Loy‏ سرداق (خيمة) معاوية.. قاتلوا ‎YS‏\n‏شديداً» وبدأت جيوش معاوية تتراجع إلى الخلف» وتقدمت\nربيعة. ومن مقره في وسط الجيش رأى معاوية «ربيعة)!.. اتخل\nمعاوية قراراً جريئاً!!.. كان قراره هو المرب!!.. فر معاوية من\nسرداقه في وسط الجيش حتى وصل إلى آخر الجيش.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0158",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 158,
+      "text_ar": "وصلت ربيعة إلى سرداق معاوية ومقر قيادة القوات المعادية\nواحتلت المقر ولكن.. كان الفأر قد هرب من صياده!(\"2.. وبين\nربيعة ومعاوية عشرات الألوف من الجيوش.. ورجعت ربيعة\nإلى مقرها مسجلة اتتصاراً معنوياً ساحقاً على معاوية» بعد أن\nألصقت في جيشه بصمة العار إلى الأبد.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0159",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 159,
+      "text_ar": "5 : هاشم بن عتبة بن أبي وقاص كان يشن حملات فدائية\nرائعة على جيش ‎Vala‏ وفي كل مرة كان هدفه: الوصول\nإلى مركز معاوية والقضاء ‎cade‏ إلا أنه لم يستطع ذلك.. وفي\nكل مرة يهاجم فيها هاشم بن عتبة جيش الشام كان معاوية\nيرتعد من ‎Sob!‏ ويصيح في جنوده منبهاً لهم بمجيئه ‎So‏\n‏)1( انظر حار الأنوار: ‎Az‏ ص5 50 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0160",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 160,
+      "text_ar": ")1( بعض هذه الحملات مذكورة في يحار الأنوار: ‎Az‏ ص١‏ 50 الطبعة القديمة.\n‎Or‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0161",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 161,
+      "text_ar": "‎aged‏ بني زهرةء قاتله الله).. وأخيراً اتخل هاشم في الحملة\nالأخيرة قراراً خطيراً: إما الاستشهاد؛ وإما القضاء على\nمعاوية!.. وشق هاشم جيش الشام مع ألف فارس.. وتقدم\nواستمر في تقدمه.. واشتعلت نار الحرب حامية دامية بينه وبين\nأصحابه من جهة وبين الألوف من جيش معاوية من جهة\nأخرى.. ولكن: كان هاشم قد اتخذ قراره: إما القتل وإما\nالشهادة..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0162",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 162,
+      "text_ar": "‏فلم تعد تخيفه الدماء الحمراء التي كانت تطوقه من كل\nجانب ولم يعد ‎ath‏ شبح الموت الذي يرفرف عليه.. وتقدم\nهاشم.. وتقدم ووصل إلى مقر معاوية.. واحتل الأطراف\nالحيطة به.. واقتربت ساعة الصفر!! ولكن.. في اللحظات\nالأخيرة أصابته حربة غادرة.. سقط على الأرض؛: ومعه\nأصحابه.. واستشهد هتاك.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0163",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 163,
+      "text_ar": "‏0 أقسم بالله. . ‎Seu‏ «والله لأحملن على معاوية حتى\nأقتله).. أخذ الرجل ‏ وهو من أصحاب الإمام ‎ee‏ - فرساً\nوألقى بنفسه بين صفوف الأعداء: واستطاع رغم الجموع\nالبائلة من جيوش الشام إيصال نفسه إلى مقر معاوية.. رآه",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0164",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 164,
+      "text_ar": "معاوية.. ارتعد من الخوف.. ذهب واختبأ في مكان.. ونزل\nالرجل عن فرسه لكي يقتل معاوية في مخبأه.. خرج معاوية من\nالمخبأ ‏ عندما ‎GL‏ الرجل يتقدم نحوه ... وهرب!! ‎aad‏\n‏الرجل.. أحاط ‎wll‏ بمعاوية.. صرخ فيهم معاوية «(ويحكم! إن\nالسيوف لم يؤذن لبا في هذا ولولا ذلك لم يصل إليكم»\nعليكم بالحجارة»!! واستعمل ‎al‏ الشام السلاح.. سلاح\nالجبناء.. رضخوه بالحجارة من بعيد حتى قتل الرجل.. ثم عاد\n‎gles‏ إلى مجلسه بكل شجاعة ‎OY‏\n‏هؤلاء دخلوا التاريخ من أوسع أبوابه",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0165",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 165,
+      "text_ar": "في هذه المعركة الرهيبة.. استشهد مجموعة من خيرة\nأصحاب الإمام علي ‎8B‏ ومن طليعة المجاهدين في زمن\nالرسول ‎RB‏ وني عهد الإمام ‎OER‏ كان من بين هؤلاء\nالشهداء :",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0166",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 166,
+      "text_ar": "‎:١‏ عمار بن ياسر . الذي قال ‎Jy‏ فيه «الحق مع\n‎)١(‏ حار الأنوار: ج8 ص5 50 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0167",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 167,
+      "text_ar": "عمار يدور معه حيثما دار\" كان أبان الحرب يبلغ التسعين\nمن العمر.. كان ظهره منحنياً» وكان يلف حزاماً على ظهره:\nومع ذلك يحارب كالأسود الضارية2» يقول عبد الرحمن\nياسر وقد حمل فأبلي وانصرف وقد انثنى سيقه من\n‎OMG all‏ وطوال عدة أشهر من الحرب لم يصل عمار إلى\n‎une‏ إلى ما يعشقه.. إلى الشهادة..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0168",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 168,
+      "text_ar": "وفي سنة ‎TV‏ ه.. قرر عمار الشهادة وخرج نحو المعركة\n‎pls‏ أسلحته. واشتدت المعركة واشتدث» وبلغت الذروة..\nوعمار مستمر في الحرب واستطاع عمار قتل ‎aol‏ عشر شخصا\n3 سويعات ‎aL‏ وفجأة هجم عليه (أبو العادية الفزاري)\nوضربه بالرمح على جنبه وسقط عمار على الأرض ليدخل\nالتاريخ من أوسع أبوابه ‏ باب الشهادة .",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0169",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 169,
+      "text_ar": "‎:Y‏ أويس القرنى.. كان يقضى أيامه في الصحراء موزعاً\n‎EO)‏ الأنوار: ج٠7‏ 2 ‎TV‏\n‏)¥( دعائم الإسلام: ج١‏ 2 ‎TAY‏ جواهر الكلام: ج١7‏ 2 ‎TV‏\n‏(؟) يحار الأنوار: ‎Ae‏ ص587 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0170",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 170,
+      "text_ar": "أوقاته بين الرعي والعبادة» لذلك لم يكن قد رآه أحد إلا القليل\nجداً.. وفجأة ظهر في تلك الليلة.. تلك الليلة التي طلب الإمام\nعلي ‎Ble YS AGE‏ شخص من جنوده يبايعونه على الموت..\nتقدم الجنود واحداً بعد آخر ووصل العدد إلى تسعة وتسعين\nشخصاً كلهم بايعوه على الموت: وفجأة ظهر أويس وبايع\nالإمام ‎GE‏ وقامت المجموعة بحملة قاسية على جيش\nمعاوية؛ كان أويس ‎WME‏ يشوق المجموعة على الجهاد والتقدم\nوهو يحمل ‎OM opie‏ وبعد ساعة كان يقع على الأرض\nشهيداً وقد اخترق أحد السهام قلبه!.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0171",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 171,
+      "text_ar": "وكذلك استشهد مالك بن تيهان الأنصاري وعمرو بن\nحصن الأنصاري ومجموعة أخرى من خيرة أصحاب الإمام أمير\nالمؤمنين ‎AE‏ من جملتهم «بكر بن هوذة ‎(adel‏ وابنه\n«حيان» و«أبان بن قيس) و«عمير بن عبيد ‎Oe dt‏\nوغيرهم.\n‎EO)‏ الأنوار: ‎Ag‏ ص75 الطبعة القديمة.\n‎EY)‏ الأنوار: ‎Ag‏ ص75 الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0172",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 172,
+      "text_ar": "بعد البزائم المتكررة التي أصابت جيش الشام.. عقد\nمعاوية اجتماعاً خطيراً (اجتماع القمة المشؤوم) دعا إليه أربعة\nمن قادة جيشه ورؤسائه وهم: عمرو بن العاص» بسر بن\nأرطاة ؛ عبيد الله بن ‎pet‏ وعبد الرحمن بن خالد..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0173",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 173,
+      "text_ar": "وأدلى معاوية في هذا الاجتماع بتصريح خطير.. قال: لقد\nغمني رجال من أصحاب علي ‎MEE‏ منهم : سعيد بن قيس في\nقبيلة همدان»؛ ومالك الأشتر في قومه؛ والمرقال» وعدي بن\n‎fle‏ وقيس بن سعد في الأنصارء ثم قال لهم معاوية: إن\nالقضاء على هؤلاء الخمسة يعني الانتصار. وبدأ معاوية بشرح\nالخطة.. خطة القضاء على هؤلاء الخمسة.. وقسم عملية التنفيذ\nعلى خمسة أقسام في خمسة أيام.. وشرح معاوية لهم الخطة..\nوانتهى الاجتماع !..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0174",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 174,
+      "text_ar": "في اليوم ‎JU‏ حشد معاوية كل ‎cold‏ وجمع كل فارس\nوبطل في جيشه.. ثم هجم على جيش العراق وركز هجومه\nعلى قبيلة همدان وعلى سعيد بن قيس ودارت ‎AS yall‏ شديدة\nحاسمة بين الفريقين.. بين قبيلة همدان وحدها وبين خلاصة",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0175",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 175,
+      "text_ar": "جيش معاوية ولكن.. انتصف الليل ولم يستطع معاوية تنفيذ\nالبند الأول من الخطة إذ لم يستطع قتل سعيد..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0176",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 176,
+      "text_ar": "وفي اليوم الثاني : جمع عمرو العاص قوى الجيش.. وركز\nهجومه على (المرقال) ولكن لم يستطع عمرو أيضاً أداء دوره\nبنجاح ولم يستطع قتل المرقال.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0177",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 177,
+      "text_ar": "وفي اليوم الثالث : توجه بسر ومعه جميع أبطال الجيش نحو\n(قيس بن سعد) واشتد القتال ولكن.. فشل بسر بدوره في قتل",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0178",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 178,
+      "text_ar": "‎Go‏ اليوم الرابع : سار عبيد الله بن عمرو في عدد ضخم\nهائل من جيش الشام وقصد قتل مالك الأشتر.. وجاء ‎fol‏\n‏وانتهت المعركة.. ولم يصل عبيد الله إلى هدفه.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0179",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 179,
+      "text_ar": "‏وفي اليوم الخامس: حمل عبد الرحمن بن خالد على\nعدي بن حاتم وهو . أي عبد الرحمن . في حشد هائل من\nالسلاح والجنود.. ودارت المعركة طاحنة شديدة.. وانتهت»؛\nوعدي لا يزال حياً.. وهكذا باءت خطة معاوية الخماسية بفشل\n‎ness‏\n‎)١(‏ يحار الأنوار: ‎OW ge Ae‏ الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0180",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 180,
+      "text_ar": "مضت أربعة عشر شهرا على بدء الحرب.. والمعركة لا تزال\nمستمرة.. بدأ الملل يسري قليلاً قليلاً إلى جيش الإمام ‎BK‏\n‏وبدأ الحنين إلى ‎cobs‏ والراحة» والسكون يعاود الجنود..\nاجتمع أمراء الجيش بالإمام ‎AGE‏ وبعد اجتماع خطير هام قرروا\nإنهاء المعركة والقضاء على معاوية وجيشه 3 معركة واحدة\nنهائية. . التحم الجيشان 3 معركة حامية.. واستمرت المعركة\nحتى الليل.. لم تتوقف الحرب.. لقد صمم الإمام ‎OSE‏\n‏وجنوده على الحرب حتى القضاء على معاوية.. واقترب أذان\nالفجر ولا تزال الحرب مستمرة.. كانت تلك الليلة هي ليلة\nالحادي عشر من صفر.. ومع تباشير الصباح كان جيش معاوية\nيتراجع إلى الخلف.. ومالك الأشتر ‎WE.‏ قوات الإمام ‎AEE‏ -\nكان يقوم بحملاات شديدة مركزة على جيش الشام.. ويهاجم\nكالصاروخ جيوش معاوية المتراجعة.. وتلك كانت (ليلة المرير)\nوقد قتل الإمام ‎AaB‏ في هذه الليلة 077 شخصاً ‎Panis‏ وبلغ",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0181",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 181,
+      "text_ar": "‎)١(‏ يحار الأنوار: ج8 ص ‎48١‏ الطبعة القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0182",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 182,
+      "text_ar": "مجموع القتلى من الجانبين ‏ في تلك الليلة . سبعين ألف قتيل7\".",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0183",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 183,
+      "text_ar": "ساعات قليلة كان يفتقدها مالك الأشتر.. ساعات قليلة\nأخرى من الحرب كانت تعني المزيمة الساحقة لجيوش معاوية\nوالنصر التام لجيوش الإمام ‎ASE‏ فكر معاوية في (الخدعة)..\nأرسل خمسمائة فارس غير مسلح وبأيديهم رماح طويلة؛ على\nكل رمح نسخة من القرآن الكريم.. وتقدم فرسان جيش الشام\nووقفوا بين الجيشين وهم يصرخون (... الله الله في دينكم » هذا\nكتاب الله بينا وبينكم) ‏ أي أوقفوا الحرب واجعلوا القرآن حكماً\n- ولكن صاح مالك الأشتر في جيش الإمام: لا تنخدعوا\nفالقرآن ‎GUI‏ هو أمير المؤمنين علي بن أبي طالب ‎OEE‏ وهو\nيأمركم بالحرب.. وبعد ذلك هاجم الأشتر جيش الشام..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0184",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 184,
+      "text_ar": "ولكن ارتفع صوت المعارضة من الأشعث بن قيس.. أغمد\nسيفه وصاح في الجيش :",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0185",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 185,
+      "text_ar": "اتركوا الحرب؛ كتاب الله بيننا وبينهم..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0186",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 186,
+      "text_ar": "وتبعه مجموعة من الأشخاص الذين أتعبتهم الحرب إلا\nأنهم لم يكونوا كثرة تؤثر في الجيش.. رأى الأشعث فشله في\n)1( المصدر: ص ‎E10‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0187",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 187,
+      "text_ar": "التخريب فقام وألقى خطابة بليغة حول الوحدة والتحاكم\nللقرآن.. الخ..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0188",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 188,
+      "text_ar": "أثرت ‎alls‏ في الجيش.. فالإنهاك من جهة» والتقدس\nالزائف من جهة ‎cg bl‏ وتحريكات الأشعث وجماعته من جهة\nثالثة أثرت في قسم كبير من الجيش..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0189",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 189,
+      "text_ar": "وفجأة.. رأى الإمام ‎Lend MEE‏ كبيرا من جيشه ينسحب\nمن المعركة.. عشرين ألف شخص مقنعين بالحديد وبأيديهم\nالسيوف » وقد اسودت جباههم من كثرة السجود.. عشرين\n‎al‏ انسحبوا من ‎IS pall‏ وجاءوا للإمام قائلين: (يا علي\nأجب القوم إلى كتاب الله إذا دعيت ‎ca]‏ وإلا قتلناك كما قتلنا\nابن عفان» فوالله لنفعلتها إن لم تجبهم).",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0190",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 190,
+      "text_ar": "فأجابهم الإمام 06 (ويحكم.. أنا أول من دعا إلى كتاب\nالله وأول من أجاب.. ولكنى قد أعلمتكم أنهم قد كادوكم؛\nوأنهم ليس العمل بالقرآن يريدون)2\".",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0191",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 191,
+      "text_ar": "ولم ينفعهم كلام الإمام.. أجبروه ‎ee‏ على ‎yl‏ مالك\n‎)١(‏ علي يده من المهد إلى اللحد: ص ‎ley LAY‏ الأنوار: ج48 ص555 ط القديمة.\n(1) علي ‎MSE‏ من المهد إلى اللحد: ‎BAT ge‏ وبحار الأنوار: ‎Ae‏ ص55 ط القديمة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0192",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 192,
+      "text_ar": "الأشتر. الذي كان على شرف النصر .”© بالانسحاب..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0193",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 193,
+      "text_ar": "وانسحب مالك الأشتر» وتوقفت الحرب» وتقرر انتخاب\n‎reece‏ انتخب معاوية : عمرو بن العاص » وانتتخب الإمام\nعلى ‎ME‏ عبد الله بن عباس.. رفض الأشعث وجماعته ذلك\nوأصروا على انتخاب أبو موسى الأشعري وقالوا.. إنا لانرضى\nإلا به فإنه قد كان حذرنا ثما وقعنا فيه..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0194",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 194,
+      "text_ar": "فقال الإمام يتاه : ‎als)‏ ليبس لى ‎cle»‏ وقد فارقنى\nوخذل الناس عني» وهرب مني حتى أمنته قبل أشهر» ولكن\nهذا ابن عباس ‎US ad gh‏",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0195",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 195,
+      "text_ar": "ولكن رفض ابن الأشعث وجماعته ذلك وأصروا على\nرأيهم.. وتحت الضغط اضطر الإمام ‎ASE‏ إلى القبول”\" إذ أن\n‎ST‏ الجيش كان مؤيدا للأشعث””.\n‎)١(‏ علي يِه من المهد إلى اللحد: ص ‎EAT‏ وحار الأنوار: ج8 ص555 الطبعة",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0196",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 196,
+      "text_ar": "القدهة.\n‎(Y)‏ حار الأنوار: ‎Ae‏ ص377 الطبعة القديمة.\n‎)7١‏ سيأتي ذلك بالتفصيل في الفصل الأخير.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0197",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 197,
+      "text_ar": "توجه أبو موسى نحو (دومة ‎(Jad)‏ مع أربعمائة فارس\nبآيات القرآن..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0198",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 198,
+      "text_ar": "عندما وصل أبو موسى الأشعري كان عمرو بن العاص قد\nسبقه إلى (دومة الجندل) بأسبوع.. استقبل عمرو العاص أبا\nموسى من مسافة ستة كيلومترات وعانقه وقبله.. وطوال الأيام\nالتالية استعمل معه سياسة الاحترام الفائق في جميع ‎CONE‏\n‏وبذلك كسب ود أبا موسى الأشعري وثقته.. حذر ابن عباس -\nالمستشار الخاص لأبي موسى ‏ أبا موسى عدة مرات من انخداعه\nوابتدأت المناقشات والمشاورات بين الطرفين » وانفرد عمرو بن\nالعاص بأبى موسى واقترح عليه اقتراحاً ‎Ste‏ قال له: يا أبا\nموسى» يا أشرف أصحاب الرسول!! لي اقتراح.. هو أن أخلع\n‎tl‏ معاوية وتخلع أنت علياً ثم ننصب عبد الله بن عمر خليفة»\nأو ندع الأمر شورى بين المسلمين؟ !..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0199",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 199,
+      "text_ar": "وقبل أبو موسى الاقتراح» واجتمع الجيشان وتكلم أبو\nموسى قائلاً: بعد مقدمة طويلة حول حقن الدماء: (... وقد\nخلعت علياً كما خلعت عمامتي هذه) وانتهى كلام أبي موسى\nبين فرح أهل الشام؛ واعتراض ‎pal‏ العراق... وجاء الدور إلى\nعمرو بن العاص وتكلم عمرو وبدل أن يخلع هو بدوره ‎Lal‏\n‏معاوية حسب الاتفاق.. قال : (أيها الناس إن أبا موسى عبد الله\nبن قيس قد خلع علياً» وأخرجه من هذا الأمر الذي يطلب»\nوهو أعلم به.. ألا وإني خلعت ‎Ue‏ وأثبت معاوية علي\nوعليكم).. حدث ذلك بين صرخات الاستنكار التي صدرت\nمن ‎Jal‏ العراق.. قرر العراقيون قتل الاثنين . عمرو بن العاص\nوأبا موسى ... ولكن هرب أبو موسى إلى مكة؛ وعاد عمرو بن\nالعاص إلى دمشق تحت حماية جيش الشام.. وعاد أمراء جيش\nالإمام إلى ‎OB SI‏ وأخبروه بالقصة وأقسموا على الحرب مع\nمعاوية من جديد.. وبدأ الإمام يكاج بتهيئة النفوس للحرب\nعبر الخطب المتوالية.. وبعد مدة استعد الناس للحرب..\nولكن..\n‎OY (1)‏ الإمام يتيج غادر صفين بعد التحكيم إلى الكوفة.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0200",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 200,
+      "text_ar": "في بداية سنة ‎TA‏ للهجرة توجه الإمام ‎OER‏ نحو (النخيلة)\nوقد عسكر فيها عشرون ألف مجاهد وخلف الإمام (هاني\nالنخعي) على الكوفة وأمر عبد الله بن عباس واليه على\nالبصرة ‏ بتجهيز جيش من البصرة للتحرك نحو الشام.. وفجأة\n‎cle,‏ إلى الإمام ‎Se‏ أخبار تنبؤه بحدوث اضطرابات في\nالكوفة» فقد اجتمع أربعة آلاف من \"الخوارج\" وقرروا محاربة\nالإمام تحت شعار: ‎Yo‏ حكم إلا ‎(ab‏ وانضم إليهم ‎ITAL‏\n‏آخرين من الكوفة والبصرة وغيرها..",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0201",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 201,
+      "text_ar": "أرسل الإمام ‎AER‏ رسالة إلى عبد الله بن وهب الراسبي ‏\nقائد الخوارج ‏ يدعوه إلى الالتحاق به لحرب معاوية بدل إثارة\nالفتنة» وأرسل الإمام ‎AEE‏ مندوبين من قبله من جملتهم عبد\nالله بن عباس وصعصعة بن صوحان إلى الخوارج لكي يعودواء\nولكن لم ينفع ذلك كله.",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0202",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_003",
+      "paragraph_number": 202,
+      "text_ar": "وأخيرا.. تحرك الخوارج نحو (النهروان) وتمركزوا هناك..\nواضطر الإمام ‎AEE‏ للتوجه نحو النهروان بدل التوجه نحو",
+      "page_number": 46
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0203",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 203,
+      "text_ar": "الشام.. واصطف الجيشان وأرسل الإمام كباج عبد الله بن\nعباس ليتكلم معهم.. وبعد حوار قصير طلب عبد الله بن وهب\nالإمام نفسه لكي يتكلم معه.. تقدم الإمام عليه وطرح ابن\nوهب الراسبي عدة اشكالات على الإمام ‎OEE‏ من جملتها:\nلماذا قبلت التحكيم؟.. وأجاب الإمام ‎AEE‏ على أسئلتهم\nبإجابات ‎due‏ وحلل ما جرى في قصة التحكيم.. وعند ذلك\nارتفعت من معسكر الخوارج أصوات تنادي : «التوبة.. التوبة يا\nأمير المؤمنين») أي انهم طلبوا من الإمام أن يصفح عنهم ويتوب\nعليهم.. والتحق ‎GLA‏ الإمام ثانية آلاف من الخوارج!!(\"2\nولم يبق منهم سوى أربعة آلاف..\nوفي هذه المعركة أيضاً اتبع الإمام ‎AER‏ نفس الخطة التي\nاتبعها في ‎(AW‏ و«صفين) فقد دعا الإمام شخصاً لكي يأخذ\nالمصحف ويدعو القوم ‎ca‏ فقام شاب حديث السن.. وقبل\nالمهمة وذهب ودعاهم إلى القرآن.. ولكن رجع بعد قليل\nووجهه كالقنفذ من كثرة السهام التي رماها عليه الخوارج..\nواستشهد بعد قليل.. وقد ساعدت هذه الخطة كثيراً في إزالة\n‎)١(‏ يحار الأنوار: ‎Ag‏ ص07 الطبعة القديمة.\n14",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0204",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 204,
+      "text_ar": "الشك في مشروعية قتال الخوارج.. هذا الشك الذي تولد عند\nبعض أصحاب الإمام ‎ALE‏ عندما رأوا إن الخوارج يقرؤون\nالقرآن ووجوههم مسودة من كثرة ‎Pa gral‏ واستعرت المعركة\nحامية.. كان الخوارج فيها قد يئسوا من ‎BLN‏ فهم يحاربون\nحرب من يريد التخلص من الدنيا.. فقد ضعفت معنوياتهم إلى\nدرجة كبيرة بالتحاق ثلثيهم بيش الومام ‎SE‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0205",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 205,
+      "text_ar": "وخلال ساعة قتل ‎799١‏ من جيش الخوارج ولم يبق منهم\nسوى تسعة أنفار هربوا إلى أماكن متفرقة..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0206",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 206,
+      "text_ar": "بينما لم يقتل من جيش الإمام سوى تسعة أنفار”\"..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0207",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 207,
+      "text_ar": "ولكن معاوية لا يزال بعيث في البلاد الفساد...\n‎)١(‏ حار الأنوار: ‎Ag‏ ص ‎OW‏ الطبعة القديمة.\n(؟) المصدر: ‎LOW ye‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0208",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 208,
+      "text_ar": "أصبح معاوية ‎le Uy‏ الشام عام ‎١18‏ ه من قبل عمر بن\nالخطاب وذلك على أثر اتفاق كتبي عقده (أبو سفيان) مع أبي\nبكر عام ‎1٠‏ ه وينص الاتفاق على أن يعطي أبو بكر ولاية\nالشام لواحد من أقرباء أبي سفيان في أسرع وقت ممكن وذلك في\nقبال سكوت أبي سفيان عن حكومة أبي بكر وعدم إثارته الفتن\nضدها..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0209",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 209,
+      "text_ar": "وتحقق ما أراده ‎gil‏ سفيان عام ‎VA‏ ه.. أصبح معاوية بن\nأبى سفيان والياً على الشام.. ‎fas‏ ببناء قصر كبير فخم له\nلأول مرة في تاريخ الإسلام ... وفي زمن عثمان أيضاً كان\nمعاوية والياً على الشام.. وحتى سنة أربعين كان معاوية والياً\nعلى الشام رغم أن الإمام علي ‎ALE‏ عزله عن الولاية عام ‎YO‏\n‏ه... ومن سنة أربعين إلى سنة ستين للهجرة أصبح معاوية\nالحاكم المطلق على البلاد الإسلامية.. وخلال هذه ال 47 سنة",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0210",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 210,
+      "text_ar": "كان معاوية يحاول تثبيت أقدامه في الشام والبلاد الإسلامية..\nفقد ‎jer‏ أبان حكومة الإمام علي ‎AR‏ جيشاً قوياً وضعه على\nمعاوية والثالوث الرهيب",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0211",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 211,
+      "text_ar": "كما أن معاوية اتبع سياسة ‎Gig LSC‏ تثبيت حكمهء\nوالقضاء على أي صوت معارض ينطلق من ‎ale‏ الشعب..\nوخططه السياسية الثلاث هى :",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0212",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 212,
+      "text_ar": "أولاً: الخداع وتزوير الحقائق.. فقد حرك معاوية أهل\nالشام محاربة الإمام علي ‎aah‏ تحت شعار (الثأر لدم عثمان)\nوإن علياً قتله.. وأنه هو (أي معاوية) وارث دمه!.. ‎By‏ الأيام\nالأخيرة من ذهابه إلى حرب الإمام ‎OEE‏ صعد على المنبر وألقى\nخطابة حماسية.. تكلم ‎WINE‏ عن عثمان.. خليفة المسلمين!\nالذي قتل مظلوماء وقاتله علي بن أبي طالب ‎AEE‏ ثم رفع\nثوباً ملطخاً بالدماء ‎Geol‏ أنه ثوب عثمان.. وبهذه الخطوات\nالماكرة الخادعة استطاع معاوية أن يجهز جيشاً قوياً ‎Wye‏ من\n٠ه‏ رجل لقتال الإمام علي ‎OEE‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0213",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 213,
+      "text_ar": "وقصة المصاحف\" هي نموذج آخر على خداع معاوية\nومكره الجهنمي..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0214",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 214,
+      "text_ar": "وفي حرب صفين اتبع معاوية بعض الخطط لخداع جيش\nالإمام ‎aah‏ إلا أن خدعه لم تكن لتنطلي على الإمام علي\n‎0G‏ فعند ما احتل جيش الإمام يكل ضفة النهر وعسكر\nهناك قرر معاوية استرداد ذلك الموقع الاستراتيجي المشرف على\n‎el‏ ولكن لم يكن يستطيع ذلك بالحرب.. فكر قليلاً ئم كتب\nرسالة قال فيها: «من عبد من عبيد الله إلى جيش علي.. اعلموا\nإن معاوية قد أرسل عدداً كبيراً من جيشه لكي يخربوا السد\nعليكم وبذلك تغرقكم المياه المتجمعة وراء السد.. فارحلوا من\nالضفة).. ووضع معاوية الرسالة في سهم ورماها إلى معسكر\nالإمام.. وعثر البعض على الرسالة.. وتناقلتها الأيدي وأثار\nذلك اضطراباً في جيش الإمام ‎chess ASE‏ الرسالة إلى يد\nالإمام ‎AE‏ قرأها وقال: إن هذا الخط هو خط معاوية أراد\nخداعكم؛ ‎oly‏ تستطيع جماعته هدم السد لقوته ومتانته\nوضخامته0\").. وبالفعل فشلت خطة ‎aly Lisle‏ يستطع\n‎te)‏ الأنوار: ‎AG‏ الطبعة القديمة.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0215",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 215,
+      "text_ar": "جماعته هدم السدء وانتهت الأزمة..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0216",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 216,
+      "text_ar": "ثانياً: شراء الضمائر بالمال.. فقد كان معاوية يعطي\nالأموال الضخمة لكل شخصية بارزة تلحق به؛ كما كان يمني\nكل شخص ذي أهمية بالمال ويجعله والياً على إحدى المناطق..\nوبهذه الخطة استطاع جذب عبيد الله بن عباس . وهو أحد قادة\nجيش الإمام الحسن ‎AEE‏ وكان تحت قيادته اثني عشر ألف\nرجل - إلى صفوفه.. وبالخطة نفسها استطاع معاوية أن يسحب\nقائداً آخر من ‎BU‏ جيش الإمام الحسن ‎AEE‏ وهو: حكم\nالكندي.. واتبع معاوية خطة شراء الضمائر ‎JULY‏ مع بقية أمراء\nوقادة جيش الإمام واستطاع سحب الكثير منهم إلى صفوفه..\nكما اتبع معاوية هذه الخطة نفسها مع (عمرو بن العاص) عام\n‎O‏ ه فأرسل له رسالة يدعوه إلى ‎sal‏ للشام محاربة الإمام\nعلي ‎MEE‏ ولكن عمراً رفض ذلك قائلاً: «وكتابك يا\nمعاوية... ليس ‎GARE‏ به من له عقل ودين والسلام»)..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0217",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 217,
+      "text_ar": "وفي هذه المرة أرسل معاوية رسالة أخرى إلى عمرو وعده\nفيها بأن يعطيه ملك مصر ويجعله الحاكم المطلق عليها فيما لو\n)1( كان عمرو بن العاص آنذاك يعيش في فلسطين.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0218",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 218,
+      "text_ar": "اشترك في حربه ضد الإمام علي ‎OEE‏ وهنا استجاب عمرو\nوتحرك من فلسطين نحو الشام وكان في طليعة الذين قاتلوا\nالإمام علي ‎BAGH‏ حرب صفين بل كان يعد اليد اليمنى\nلمعاوية في هذه الحرب الدامية..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0219",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 219,
+      "text_ar": "ثالثاً: العنف والإرهاب.. فعندما كان معاوية يرى عدم\nجداوئية الطريقتين الأوليتين كان يصمّي المعارضة بهدوء؛ فقد\nكان يقتل الكثير من معارضيه بالسم الموضوع في العسل أو\nالحليب.. وكان يقول: (إن لله ‎loge‏ من عسل)!!.. وبهذه\nالطريقة قتل الإمام الحسن ‎AEE‏ كما قتل مالك الأشتر وسعد\nبن أبي وقاص وغيرهم.. وقد قتل معاوية الألوف من معارضيه\nومخالفيه.. فإنه قتل أربعين ‎Wi‏ من المهاجرين والأنصار مدة\n‎OV aS‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0220",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 220,
+      "text_ar": "كما قام معاوية بسلسلة من العمليات التخريبية ‎ts‏ الإمام\nعلي بنع هدفها إشاعة الرعب في نفوس أنصار الإمام»\nوتضعيف حكومته ‎Gh‏ وفيما يلي نذكر بعض هذه\nالعمليات :\n(1) بحار الأنوار: ‎Ag‏ ص ‎OY‏ الطبعة القديمة.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0221",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 221,
+      "text_ar": "أرسل معاوية الضحاك بن قيس الفهري مع أربعة آلاف\nفارس إلى العراق وأوصاه بالقيام بحروب ‎bE‏ بالبجوم\nعلى القرى والمناطق الآمنة وقتل الجميع: الصغير» والكبير»\nوالمرأة؛ والرجل؛ وكل أحد.. كما أوصاه بعدم البقاء في مكان\nواحد يوماً كاملاً إذ قد يلاحقه جيش من الكوفة آنذاك..\nوتوجه الضحاك نحو العراق.. وطبق تعاليم معاوية يحذافيرها..\nووصلت الأخبار للإمام علي ‎ace‏ أرسل الإمام حجر بن\nعدي مع ‎50٠١‏ فارس.. ولاحق حجر الضحاك.. ودارت\nمعركة.. وانهزم الضحاك هارباً نحو الشام بعد أن أفسد كثيراً..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0222",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 222,
+      "text_ar": "حدئت اضطرابات في ‎gall‏ حيث ثار بعض العثمانيين\nعلى عبيد الله بن عباس والي الإمام - وجهزوا جيشاً محاربة\nعبيد الله.. وكتبوا رسالة إلى معاوية يخبرونه بالثورة.. عند\nسماعه ‎Lal‏ أمر معاوية بسر بن أرطاة بالسير نحو اليمن من\n‎Gb‏ الحجاز ومكة والمدينة وأمره بأخذ البيعة من جميع الناس",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0223",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 223,
+      "text_ar": "على طول الطريق» ومن أبى فجزاؤه القتل. توجه بسر للحجاز\nمع ثلاثة آلاف فارس.. وطوال مسيره كان يقتل كل من تقع\nيده عليه من شيعة الإمام ‎frogs AGE (cle‏ إلى المدينة واستطاع\nدخول المدينة بسهولة لضعف تحصيناتها ولبروب الوالي..\nوهدد بسر أهل المدينة تهديداً مرعباً ثم طلب البيعة.. وبايعه\nالكثير.. ومن رفض ذلك قتله» وأحرق ‎Ly‏ كثيرة.. ثم توجه\nنحو مكة؛ وصتعاء و.. و.. حتى وصل إلى اليمن.. وقد قتل\nبسر في هذه العملية الإجرامية ثلاثين ألفاً! عدى الذين أحرقهم\nبالنار!! وعدى الدور التي أحرقها وهدمها..!!",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0224",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 224,
+      "text_ar": "بأمر من معاوية توجه النعمان بن بشير الأنصاري مع ألفي\nفارس لأجل القيام بأعمال قتل وسلب ونهب في الحجاز\nواليمن.. وتوجه النعمان نحو العراق وفي (عين التمر) تصدى له\nمالك بن كعب الأرجي وهو في مائة فارس فقط » وبقوة الإيمان\nوبعزيمة المؤمن ‎salt‏ استطاع المائة التخلب على الألفين..\nوهرب النعمان نحو الشام بعد فشل هذه العملية فشلاً\nذريعاً..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0225",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 225,
+      "text_ar": "فكر معاوية في احتلال البصرة ‏ المركز الرئيسي الثاني\nللإمام علي ‎AE‏ بعد الكوفة ‏ واتبع لذلك خطة ماكرة..\nفباعتبار أن البصرة كانت مركز تجمع الناقمين على حكومة\nالإمام علي ‎ee‏ وهم المطالبون بدم عثمان.. وباعتبار أن\nالإمام ‎AE‏ قتل الكثير منهم في حرب الجمل.. لذلك فمن\nالسهل إثارة الفتنة في هذه البلدة خصوصاً إذا كان المحرك\nشخصية بارزة مرموقة عند امجتمع البصري.. استشار معاوية\nعمراً وبعد التفكير وقع الاختيار على عبد الله بن عامر مع\nمجموعة أخرى من المطالبين بدم عثمان.. توجه عبد الله نحو\nالبصرة وأقام عند قبيلة بني تميم - وهي من محبي عثمان ‏ وبدأ\nببث سمومه في المجتمع البصري.. ووصل الخبر إلى والي الإمام\nعلى البصرة.. وعلم زياد بن عبيد بالخبر.. واتصل بقبيلة (أزد)\nوطلب منها محاربة (بني تميم).. واستعدت القبيلتان .. ودارت\nمعركة حامية.. وخلال أيام انتصرت أزد على تميم وقتل عبد\nالله بن عامر رأس الفتنة.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0226",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 226,
+      "text_ar": "وبذلك فشلت ‎des‏ معاوية وعملياته التخريبية في البصرة\nأيضاً .",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0227",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 227,
+      "text_ar": "وقد اتبع معاوية العديد من الخطط التخريبية التي باء الكثير\nمنها بالفشل ‏ ولا ‎WSU SE‏ الآن .0\".. وهكذا كانت حياة\nمعاوية سلسلة من المأسي.. والجرائم.. وعمليات التخريب»\n‎gladly‏ والتضليل » والتزوير.. ولا شيء آخر بعد ذلك..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0228",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 228,
+      "text_ar": "بعد انتهاء معركة ‎«Oly gl‏ وبعد القضاء على «الخوارج)\nصمم الإمام ‎OE‏ على تجهيز جيش قوي لمحاربة معاوية.. وبدأ\nفسيوفهم كانت لا تزال مبتلة بدماء أربعة آلاف خارجي؛ كما\nأن ذكريات حرب صفين كانت لا تزال تتراقص في مخيلتهم\n‎MSE‏ تخريكهم مخطاباته التي تفيض بلاغة وحماسة» وبكلماته\n)1( راجع كتاب معصوم دوم: ‎Ve‏ ص 717-1475 ‎ol ph‏ فاضل.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0229",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 229,
+      "text_ar": "وأخيراً.. في شهر شعبان عام ‎a ٠‏ استطاع الإمام ‎AER‏\n‏تجهيز جيش قوي ضخم مؤلف من مائة ألف فارس وراجل\nقدموا من الكوفة والبصرة والحجاز وإيران واليمن.. ثم عسكر\nالجيش في ‎ALS‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0230",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 230,
+      "text_ar": "وفي ‎١١‏ رمضان من عام ‎f+‏ ه تقدم الإمام ‎SER‏ وصعد\nعلى أحجار موضوعة بعضها فوق البعض الآخر وألقى خطابته\nالتاريخية على مائة ألف مسلح.. قال الإمام ‎OE‏ فيها: «..\nالجهاد.. الجهاد.. عباد الله.. ألا وإني معسكر في يومي هذا فمن\nأراد الرواح إلى الله فليخرج).. ‎tary‏ إلقاء هذه الخطابة بدأ\nالإمام ‎AGE‏ بتجهيز جيشه.. فجعل الإمام الحسين ‎EE‏ مع\nتسعة آخرين قادة للجيش.. كل واحد منهم قائد لكتيبة من\nالجيش تقدر بعشرة آلاف مسلح.. وفي هذه الأثناء.. تحرك قسم\nمن الخوارج بقيادة (المستورد) وتوجهوا من الكوفة نحو النخيلة\nمن جديد ليعسكروا هناك وحاربوا الإمام ‎AGE‏ ونصحهم\nالإمام ‎aE‏ لكن نصائحه لم تزدهم إلا عناداً.. وعندئذٍ قرر\nالإمام استعمال (منطق القوة) حيث لا ‎Gad‏ (منطق العقل)..\nوبأول ضربة تفرق الخوارج.. وانقشعت سحابة الصيف",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0231",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 231,
+      "text_ar": "العابرة! !..\nوتكاملت خيوط المؤامرة",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0232",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 232,
+      "text_ar": "وفي مكة... تكاملت خيوط المؤامرة الخطيرة هناك.. فبعد\nتشتت قوة الخوارج في (النهروان) توجه (الرجل المجهول) نحو\nمكة هارباً من وجه العدالة.. ‎Shay‏ عقد الخوارج اجتماعاً\nمصغراً.. حضره الرجل ودار الحديث حول قتلى التهروان:\nوعلي ومعاوية وعمرو ابن العاص؛ و.. و.. ووصل الجتمعون\nإلى هذه النتيجة: يجب اغتيال الثلاثة الكبار! رؤوس الفتنة\nوأساس الفساد!! - حسب رأيهم ‏ وهم: علي! ومعاوية\nوعمرو ابن العاص.. وتكفل برك بن عبد الله الصريمي بمعاوية..\nوتحمل عمرو بن بكر مسئولية اغتيال عمرو بن العاص» وبقي\nالإمام علي ‎AGH‏ وساد السكوت المكان.. وتقدم الرجل..\nوقبل المهمة الخطيرة!.. وتوجه الرجل المجهول نحو الكوفة..\nووصل إلى الكوفة في ‎YO‏ شعبان عام ‎4٠‏ ه.. ونزل ضيفاً في\n‎de‏ الخوارج ‎cel‏ وأثر الجو الجديد في ‎as)‏\n‏الرحمن)؛ جو سكوت الخوارج وعدم تدخلهم في السياسة»\n‎)١(‏ هم الثمانية آلاف الذين انسحبوا من معركة النهروان.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0233",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 233,
+      "text_ar": "فتراجع عبد الرحمن عن قراره.. ولكن.. تعرفه على «قطام»\nوغرامه بها قلب الوضع رأسه على عقب..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0234",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 234,
+      "text_ar": "كانت قطام تفكر منذ فترة طويلة باغتيال الإمام ‎Ai AGE‏\nقتل الإمام ‎LUI eee‏ وأخاها في النهروان.. ووجدت عبد\nالرحمن مطية جيدة لهذا الغرض.. اصطادته بشباك الجمال»\nوأوقعته في غرامها.. وعندما طلب منها الزواج طلبت مهراً..\nوالمهر هو: اغتيال الإمام علي ‎GE‏ وبعد قلق وتفكير قبل\nعبد الرحمن بن ملجم المهمة من جديد.. واستعد.. واقتربت\nساعة الكارثة..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0235",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 235,
+      "text_ar": "اعتكف أربعة مجرمين هم عبد الرحمن وقطام وشخصان\nآخران في المسجد وضربوا ‎dad‏ لهم هناك.. وبدؤوا يتداولون\nالخطة.. ومضت الأيام.. واقترب اليوم الجهنمي..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0236",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 236,
+      "text_ar": "قبل ساعات من ‎VA che‏ رمضان.. كان ابن ملجم\nيتقلب على ‎cate‏ ويفكر في مهمته الخطيرة» ومضت الدقائق\nثقيلة بطيئة » وكأنها لا ترغب في التقدم.. وأخيراً.. تقدم الإمام\n‎AGE‏ للصلاة.. ‎Gs‏ الظلام البهيم تقدم ابن ملجم ومعه\nزميلاه.. وعندما رفع الإمام ‎AEE‏ رأسه من السجود كانت يد\nابن ملجم ترتفع بسيف مسموم لتهبط على رأس الإمام ‎MEE‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0237",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 237,
+      "text_ar": "وجرت الدماء على ‎OL‏ العبادة.. وارتفع صوت الإمام ‎AEE‏\n‏يرن في جنبات المسجد: «فزت ورب الكعبة».. وحاول ابن\nملجم البرب.. ولكن ألقي عليه القبض.. ‎Jay‏ الإمام نحو\nمنزله.. وجاء الأطباء.. ولكن.. كان الجرح ‎nes‏ والسم قد\nسرى في جسد الإمام.. وخلال يومين كان الإمام ‎AEE‏ يعاني\nآلاماً رهيبة.. إلا أنها لم تمنعه من العبادة المستمرة وتوجيه\nوصاياه القيمة إلى ابنيه عن#الياد وإلى الآخرين.. وكان من جملة\nوصاياه ‎Sesh) : MGE‏ بتقوى الله ربكم» ولا تموتن إلا\nوأنتم مسلمون؛ واعتصموا بحبل الله جميعاً ولا تفرقواء\nواذكروا نعمة الله عليكم إذ كنتم أعداء فألف بين قلوبكم..\nأوصيكم بتقوى الله ونظم أمركم وصلاح ذات بينكم...)..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0238",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 238,
+      "text_ar": "وقال ‎AEE‏ في وصيته هذه : «.. الله الله في الجهاد في سبيل\nالله بأموالكم وأنفسكم وألستتكم» فإنما يجاهد في سبيل الله\nرجلان : ‎ale]‏ هدى 2 ومطيع له مقتد بهداه».. وفي ليلة الواحد\nوالعشرين من رمضان عام ‎٠‏ ه كان الإمام أمير المؤمنين ‎BAR‏\n‏يودع الحياة ‎Lull‏ لينتقل إلى ما مهد لنفسه: ‎gee HEP‏\nالسسَمَاوَاتُ وَالأَرْض أُعِدَّتْ ‎LOTT he ly Geka‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0239",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 239,
+      "text_ar": "الفصل السابع: تساؤلات ملحّة\nيصادف المطالع ‎ald‏ الإمام علي ‎AER‏ العديد من الأسئلة\nوعلامات الاستفهام حول حياة الإمام ومواقفه وأعماله\n‎GE‏ وفي هذا الفصل نحاول ‏ باختصار ‏ الإجابة على مجموعة\nمن هذه الأسئلة» وحل بعض هذه الاستفهامات.. والله ولي\nالتوفيق.\nالسؤال الأول:",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0240",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 240,
+      "text_ar": "ماذا كان دور الإمام علي ‎AGE‏ طوال حكومة أبي بكر\nوعمر وعثمان؟",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0241",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 241,
+      "text_ar": "الجواب : كان للإمام ‎AGE‏ مجموعة من الأدوار والأعمال\nنذكر منها دورين فقط :",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0242",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 242,
+      "text_ar": "‎١‏ : القيام بمهمة توجيه السلطة» والحد من انحرافها إلى\nأقصى درجة ممكنة.. فقد كان الإمام ‎AEE‏ يقوم بدور (الموجه)\nللدولة وللمسلمين.. كان الإمام ‎AEE‏ يقوم الأخطاء\nويصلحها.. ويحل المشاكل العسيرة التي كانت تواجه المسلمين..\nفقد كانت السلطات الحاكمة تقع في الكثير من الأخطاء القضائية",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0243",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 243,
+      "text_ar": "والتنفيذية والقانونية والسياسية وغيرها.. وكان الإمام ‎PAGE‏\n‏الذي يصححها ويقومها حتى قال عمر في سبعين موضعاً:\n«لولا علي ‎EUS‏ عمر).",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0244",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 244,
+      "text_ar": "كما كان الإمام ‎AGE‏ يتصدى للسلطات حينما تحاول\nالا نحراف عن الخط الإسلامي.. وكان الإمام يقوم ‏ تارة ‏ بهذا\nالدور بنفسه؛ ويأمر أصحابه وأنصاره بالقيام بهذا الدور ‏ تارة\nأخرى ‏ مثلاً: كان أبو ذر ‎LB‏ عثمان علناً ويبدي ‎asa AS‏\nأمام الناس.. كما كان يقوم بتحريك الناس ضد عثمان..\nوكذلك فإن عمار بن ياسر كان يقوم بنفس الدور.. وهكذا بقية\nأصحابه وأتباعه..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0245",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 245,
+      "text_ar": "وبالإضافة إلى كل ذلك كان الإمام يقوم بالتخطيط للحفاظ\nعلى كيان الأمة الإسلامية؛ فعند حدوث أي خطر على كيان\nالإسلام وعلى المسلمين كان الإمام ‎AEE‏ هو الملاذ والملجأ لرد\nالخطر والحفاظ على الإسلام. ولم تكن بعض الحروب التي يأمر\nبها ‎jae‏ مثلاً والاتتصارات والفتوحات التي حدثت في عهده\nبعيدة عن إذن الإمام علي ‎AEE‏ وإشارته المسبقة بذلك..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0246",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 246,
+      "text_ar": "قال السبزواري في الكفاية : (الظاهر أن الفتوح التي وقعت\nفي زمن عمر كانت بإذن أمير المؤمنين ‎GR‏ لأنه كان لا يصدر",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0247",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 247,
+      "text_ar": "ونحن لو لم نقل بأن كل الحروب التي أمر بها عمر كانت\nبإذن الإمام فإنه ما لا شك فيه أنه كان يشاور الإمام ‎BOE‏\n‏بعضها على الأقل ويتبعه فيها..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0248",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 248,
+      "text_ar": "فمثلاً عام ١؟‏ ه وصلت التقارير إلى عمر تنبؤه أن (يزد\nجرد) شاه إيران اجتمع بأمراء إيران وجميع القادة.. وقرروا في\nالاجتماع القيام بحملة ضخمة جداً على البلاد الإسلامية وفي\nطليعتها الكوفة والبصرة واحتلال هذه المراكز.. ومن ثم القضاء\nعلى الإسلام نهائياً.. واستطاع يزدجرد أن يجهز جيشاً مؤلفاً من\nمائة وخمسين ألف فارس مسلح تحت قيادة (فيروزان) وثلاثة\nقادة آخرين وهم من أكفأ ضباطه وأكثرهم خبرة في الشؤون\nالعسكرية.. وقرأ عمر التقرير.. وأمر ‎pet‏ الناس في المسجد..\nوأخبرهم بالقصة.. وطلب منهم العثور على حل ‎oh‏\n‏المشكلة.. وسكت الجميع.. لم يكن أحد منهم يعرف طريقة\nللخلاص.. وطرح عثمان خطة غير جيدة نحاربة جيش يزدجرد\nوقد رفضها عمر فوراً.. أما سائر المسلمين فقد لاذوا بالصمت\n‎)١(‏ راجع الجواهر: ‎Ne‏ ص١5‏ حيث ذكر كلام الكفاية.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0249",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 249,
+      "text_ar": "لأنهم لم يجدوا حلاً للمشكلة.. وأخيراً استنجد عمر بالإمام\nأمير المؤمنين ‎AEE‏ واستفسره عن الخطة العسكرية.. فشرح\nالإمام ‎AGE‏ له الخطة بالتفصيل خطة الحرب ووافق عمر على\nالخطة.. وحسب خطة الإمام ‎pel MEE‏ عمر واليه على الكوفة\n(عمار بن ‎Gul‏ بإعداد ثلث جيش الكوفة ‎LB‏ وهو ثلاثون\nألف مسلح!! لكي يذهبوا ‎Gut‏ جيوش يزد جرد التي تربو\nعلى مائة وخمسين ألف فارس مسلح.. والتقى الجيشان..\nودارت معركة طاحنة.. ‎gil‏ بانتصار جيش المسلمين» وهزيمة\nجيش الكفر والضلال.. حسبما خطط الإمام ‎OER‏",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0250",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 250,
+      "text_ar": "هذا المثال وكثير من الأمثلة الأخرى تبين : عمل الإمام\nَه ‎blind‏ على الأمة الإسلامية.. وهكذا ‎ad‏ أن الإمام\n‎ah‏ كان يقوم بدور (المرشد) و(الموجه) و(المخطط) للدولة\nعلى امتداد حكم أبي بكر وعمر وعثمان ‎aly‏ يكن منعزلاً عن\nالحياة السياسية7)..",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0251",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_004",
+      "paragraph_number": 251,
+      "text_ar": "؟ : تربية الطلائع الثورية.. فطوال ربع قرن من حياة الإمام\n‎aah‏ كانت له ليله اتصاللات مستمرة بشيعته وحواريه\n)1( هذا من دون أن بمنحهم أية شرعية.",
+      "page_number": 65
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0252",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 252,
+      "text_ar": "وخاصته أمثال: أبي ذرء وعمارء وميثم ‎«led!‏ وسلمان\nالفارسي» وأبي اليثم بن التيهان» وغيرهم من الثوار\nالأحرار.. وكان الإمام ‎OEE‏ يوجههم ويرسم لبم طريق\nالعمل..\nالسؤال الثاني:",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0253",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 253,
+      "text_ar": "كان باستطاعة الإمام ‎ASR‏ أن يصل إلى الحكم بعد عمر\nفيما لو قبل شروط عبد الرحمن بن عوف عندما قال له عبد\nالرحمن : «أبايعك على كتاب الله وسنة رسوله وسيرة الشيخين\nأبي بكر وعمر» فلماذا رفض الومام ذلك وقال: «بل على\nكتاب الله وسنة النبي واجتهاد ‎(aly‏ علماً بأن الإمام كان\nيستطيع أن يقبل شروط عبد الرحمن.. ‎tes‏ يبايعه عبد\nالرحمن ويصل الإمام إلى الحكم يضرب شرطه الأخير ‏ سيرة\nالشيخين ‏ عرض الحائط ؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0254",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 254,
+      "text_ar": "أولاً: يجب أن نعرف أن الإمام علي ‎AGE‏ لم يكن قائداً\nمحدوداً لعصره وزمانه فحسبء؛ بل هو قائد خالد.. وإمام\nلجميع العصور والأزمنة.. من هنا فإنه يجب أن يصل شعاعه إلى\nملايين السنين القادمة.. إلى أعماق المستقبل ومجاهيله.. وباعتبار",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0255",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 255,
+      "text_ar": "أنه يريد توجيه الملايين بل ‎SLU GIT‏ من البشر في\nالمستقبل.. يريد توجيههم نحو القيم الوسلامية.. نحو الصدق»\nنحو الطهارة؛ نحو الشرفء, نحو البطولة.. الخ.. ولأنه هو القائد\nالعالمي لذلك فإنه يجب أن يكون رمز الفضيلة ومثال الصدق\nوالطهارة والبطولة والتضحية.. ويجب أن لا تعكر صفحته البيضاء\nالنقية حتى ظلال خفيفة من الخداع والمكر حتى لو كان ذلك في\nسبيل البدف الأسمى.. ولذلك فإن كذبة صغيرة من الإمام ‏\nمع أنها محللة ‏ تعني تشويه صفحته عن الملايين.. كما تعني\nتضعيف تلك ‎DU‏ القدسية الشفافة التي تحيط به عند الناس.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0256",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 256,
+      "text_ar": "ثانياً: ‎OF‏ المسألة لم تكن مسألة كذبة واحدة ينتهي بعدها\nكل شيء.. بل كانت الكذبة موقفاً حاسماً من الإمام ‎BEE‏ فمن\nجهة كان قبول الإمام بالعمل على سيرة الشيخين يعني تأييده\nلبما ويعني صحة أفعالهما وأعمالهما ومواقفهما وذلك ما لا\nيمكن أن يقره الإمام بأي وجه.. ومن جهة أخرى فإن وعده\nبالعمل على سيرة الشيخين كان سيتبعه المطالبة بالوفاء بوعده..\nولو لم يعمل الإمام بما قال لبرج ضده عبد الرحمن ‏ وهو\nشخصية بارزة ‏ ووضع الإمام في موقف حرج وإعاقة عن تحقيق\nأهدافه الإصلاحية.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0257",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 257,
+      "text_ar": "‏لماذا لم يثر الإمام علي ‎AGE‏ ضد أبي بكر ويسترجع\nالخلافة المغصوبة بالقوة؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0258",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 258,
+      "text_ar": "‏السبب الأول : هو أن الإمام ‎IEE‏ يكن له نصراء.. فقد\nدعا الإمام جميع الأصحاب لنصرته.. فلم يستجب له إلا\nالقليل.. يقول في البحار: «... فلم يدع أحداً من أصحاب\nرسول الله بول إلا أتاه في منزله فتاشدهم الله حقه؛ ودعاهم\nإلى نصرته فما استجاب منهم رجل غير ‎OV dat‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0259",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 259,
+      "text_ar": "‏فعندما دعا الإمام الأصحاب لنصرته قبل منهم أربعة\nوأربعون رجلاً.. فعين لهم الإمام موعداً لكي يأتوا ويبايعوه\nعلى الموت أو لكي يسترجعوا الخلافة المغصوبة.. ولكن.. لم\nيحضر من ال 55 شخصاً سوى أربعة أشخاص ‎yy‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0260",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 260,
+      "text_ar": "‏إذن فالإمام عبج حاول القيام بالسيف ولكن لم يستطع\nذلك لعدم وجود من يحارب إلى جانبه.. يقول الإمام الصادق\n‎O)‏ حار الأنوار: ‎Ag‏ ص١0‏ الطبعة القديمة.\n‎le (1)‏ الأنوار: ‎Ag‏ ص١‏ 0 و5١‏ الطبعة القديمة.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0261",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 261,
+      "text_ar": "Oil gel ‏فلذلك كتم علي أمره... حيث لم يجد‎ ...« KE",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0262",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 262,
+      "text_ar": "السبب الثاني : هو الخوف من تدخل الروم.. فدولة الروم ‏\nأمريكا اليوم ‏ كانت تنتهز الفرص للهجوم على البلاد\nالإسلامية بعد أن هاجمها المسلمون وبعد أن وجه المسلمون\nإليها ضربات قاصمة طوال حربهم معها.. لذلك فإن وقوع أية\nاضطرابات في الدولة الإسلامية الوليدة كان يعني تضعيف قوة\nالمسلمين.. كما أن وقوع الحرب الداخلية بين رئيس الدولة (أبي\nبكر) وبين الإمام علي ‎AGE‏ وهو الخليفة الواقعي كان يعني\nتدخل الروم السريع في البلاد الإسلامية واحتلالها قبل أن يفيق\nالمتنازعون.. وقبل أن يستطيعوا تجميع قواهم للدفاع عن الدولة\nالإسلامية.. ولذلك ‎ad‏ قرار الإمام علي ‎OE‏ حكيماً بتركه\nالثورة والحرب ريثما تعود الظروف مناسبة وملائمة..",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0263",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 263,
+      "text_ar": "السبب الثالث: هو الخوف من حدوث ‎CN)‏ عند\nالمسلمين.. فالإسلام لم يكن متجذراً في نفوس بعض المسلمين\nإذ كان أكثر المليون مسلم ‏ الذين أسلموا في زمن ‎BRS yuo‏\nقد أسلم في السنوات الخمس الأخيرة.. بالإضافة إلى بعدهم\n)( الصدر: ص44.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0264",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 264,
+      "text_ar": "عن مركز الرسالة ومهبط الوحي ‏ باعتبار أن أكثرهم كان\nيسكن في أماكن بعيدة عن المدينة نسبياً كاليمن والعراق ‏ لذلك\nكله كان الإسلام غير متجذر في نفوسهم.. ولذلك أيضاً لم\nيكونوا يعرفون الصالح والطالح من أصحاب الرسول ‎RY‏\n‏فاندلاع حرب بين الإمام علي ‎ASE‏ وأنصاره من جهة» وبين\nأبي بكر وعثمان وجماعتهما من جهة أخرى ربما كان سيولد\n(ردة فعل) عنيفة عند المسلمين ويشككهم في أصل الإسلام\nوالدين..\nيقول الإمام الصادق ‎AGE‏ «إن الناس لما صنعوا ما صنعوا\nإذ بايعوا أبا بكر لم يمنع أمير المؤمنين ‎ABE‏ من أن يدعو إلى\nنفسه إلا نظراً للناس؛ وتخوفاً عليهم أن يرتدوا عن الإسلام\nويعبدوا الأوثان ولا يشهدوا أن (لا إله إلا الله ‎oly‏ محمداً\nرسول الله).. وكان الأحب إليه أن يقرهم على ما صنعوا من أن\nيرتدوا عن الإسلام.. فلذلك كتم علي أمره؛ حيث لم يجد\n‎Gt el‏\nوقال الإمام علي أمير المؤمنين ‎ASE‏ «بايع الناس أبا بكر\n‎)١(‏ يحار الأنوار: ج8 ص؟: الطبعة القديمة.\n‎AY‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0265",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 265,
+      "text_ar": "وأنا والله أولى بالأمر منه» فسمعت وأطعت ‎BE‏ أن يرجع\nالقوم كفاراً يضرب بعضهم رقاب بعض ‎OC Lipa‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0266",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 266,
+      "text_ar": "وهكذا نجد أن موقف الإمام ‎ALR‏ من الخلافة لم يكن نابعاً\nمن الجبن عن الحرب؛ أو الإقرار بحكومة أبي بكرء بل كان\nنابعاً من منطلق (الحفاظ على الإسلام ووجوده والتضحية بالمهم\nفي سبيل الأهم)..",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0267",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 267,
+      "text_ar": "‎Bu‏ بايع الإمام علي ‎Ui aa‏ بكر مع أنه ليس سوى",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0268",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 268,
+      "text_ar": "‏الجواب: إن الإمام ‎ALE‏ لم يبايع ابداً » بل كانوا هم\nالذين مسحوا على يده » وحتى هذا وان لم يكن مختاراً فيه بل\nكان ‎Ae‏ فقد قال له عمر: «... دع هذا عنك يا علي» فو الله\nإن لم تبايع ‎Ook‏ وقد ‎Ab‏ مبعوثو أبي بكر إلى\nالإمام علي ميته الببعة من الإمام فرفض وقال: «لا أفعل»\nفهددوه بالقتل وقالوا: ‎(ELLE)‏ ثم قبض الإمام يده فأرادوا\n)1( الصدر: ص10١.‏\n(؟) حار الأنوار: ‎AG‏ ص07 الطبعة القديمة.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0269",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 269,
+      "text_ar": "بسطها كي يبايع لكنهم لم يستطيعوا ذلك فمسحوا على يده\nدلالة على البيعة . وهى مضمومة7\"©.\nالسؤال الخامس:",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0270",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 270,
+      "text_ar": "إذا كان الإمام علي ‎AER‏ خليفة ‎lis‏ فلماذا لم يعلن القرآن",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0271",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 271,
+      "text_ar": "أولاً: ‎OY‏ القرآن كتاب قوانين عامة؛ فهو يرسم النطوط\nالعريضة للأجيال الصاعدة.. وبعد ذلك فإن بيان المسائل\nالأخرى والمصاديق تقع على عاتق الرسول ‎BO‏ والأئمة\nعد ولذلك نجد القرآن الكريم ‎pe‏ ويذكر ‎fel‏ مسألة\nيقول القرآن الكريم : ‎Xd vai‏ الله وَرَسْولُهُ وَالَّذِينَ آَمَنُوا\nالي يُقيمُونَ الصّلاة ‎BE Ops‏ وَهُمْ ‎PHS;‏ فالقرآن هنا\nعين أصل مسألة الولاية..\n)1( المصدر: ص08.\n(؟) سورة لمائدة: 00.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0272",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 272,
+      "text_ar": "ونجد الرسول الأكرم لي يقول: معيناً الخليفة والولي\nبالاسم : «من كنت مولاه فهذا علي مولاه...).. إذن فالقرآن\nمهمة رسم الخطوط العريضة للبشرية ولذلك لم يذكر اسم\nالإمام علي يتاه وترك ذكره إلى رسول الله .",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0273",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 273,
+      "text_ar": "‎Wt‏ : إن في القرآن الكريم آيات هي كالنص القاطع في\nولاية وخلافة الإمام أمير المؤمنين ‎ASE‏ فكلها تشير إلى أن\nالإمام علي ‎ASE‏ هو الخليفة الحقيقي للرسول فل مثل آية\nالإنذار والمباهلة والخدير وغيرها.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0274",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 274,
+      "text_ar": "‏ثالثاً: إن القرآن لو نص على ‎BE‏ الإمام علي 5/2\nلحرفته السلطات الجائرة إذ أن ذلك كان يشكل ضربة قاصمة\nلشرعية خلافتهم.. وأما قوله تعالى ‎YP‏ نَحْنْ ‎yy Sn OE‏\nلَحَافِظُونَ# 2 فإن حفظ الله للقرآن وصيانته له من التحريف\nيكون بتهيئة السباب والمقدمات فقد «أبى الله أن يجري الأمور\nإلا بأسبابها».. ومن جملة الأسباب والمقدمات هو: عدم ذكر\nشيء صريح بحرك الحكام الذين جاؤوا بعد الرسول\n)1( سورة الحجر: 9.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0275",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 275,
+      "text_ar": "أيه لتحريف القرآن.. إذ لم يكن من المستبعد أن يحرفوا\nالقرآن فيما لو كان فيه ذكر الإمام علي ‎AGE‏ صريحاء فكما\nأحرقوا القرآن كان يحرفوه ‎Leal‏ وتحريف القرآن يعني تحريف\nالإسلام أساساً.. وبذلك يتحول الإسلام إلى ألعوبة بأيديهم\nكما تحولت الديانة (اليهودية) و(المسيحية) ألعوبة بأيدي\nالصهيونية والاستعمار الغربي.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0276",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 276,
+      "text_ar": "عندما وصل الإمام علي ‎AGE‏ إلى الحكم قام بسلسلة من\nالإجراءات التغييرية الثورية لجميع أجهزة السلطة السابقة؛: كما\nعزل جميع الولاة السابقين المنحرفين ما ولد حقد وعداوة\nالكثيرين للإمام علي ‎AE‏ حيث عملوا على تقويض أركان\nحكومة الإمام علي ‎AEE‏ بالحرب ‎EU‏ وبإثارة الفتن وتحريك\nالناس ضد الإمام علي ‎ASE‏ تارة أخرى؛ وبالفعل حققوا\nبعض أهدافهم فقد أضعفوا حكومة الإمام ‎OLE‏ إلى درجة\nكبيرة كما استنزفوا الكثير من طاقاته وجهوده ‎AGE‏ في حاربتهم\nوإصلاح ما أفسدوهء أفلم يكن من الأفضل للإمام ‎AEE‏ أن\nيدع الولاة السابقين مدة حتى تستقر حكومته وحتى تخضع له",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0277",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 277,
+      "text_ar": "جميع الأطراف» وبعد ذلك يبدأ الإمام بعزل الولاة السابقين\n‎Jel)‏ معاوية وعبد الله بن ‎ple‏ ويعلى بن أمية وغيرهم)\nوإصلاح الأجهزة الحاكمة واحداً بعد آخر ودون إثارة أية\nضجة؟ وبذلك يضرب الإمام عصفورين بحجر ‎ely‏ فمن\nجهة يصل إلى أهدافه الإصلاحية ومن جهة أخرى تثبت أركان\nدولته ولا تحدث فيها أية اضطرابات أو حروب أو انشقاقات..؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0278",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 278,
+      "text_ar": "والجواب: أولاً: إن إقرار الإمام علي ‎ASR‏ الولاة\nالسابقين على الحكم كان يعني وقوع المزيد من الأعمال المنافية\nللشرع.. فقد بنى الحكام والولاة السابقين حكومتهم على\nأساس الظلم والجور وسرقة الأموال و.. و.. فلو أبقاهم الإمام\nعلي ‎AGE‏ في الحكم كان يعني وقوع المزيد من هذه العمليات\nالإجرامية ‏ على رغم إرادة الإمام ‏ بينما جاء الإمام علي ‎AGE‏\n‏إلى الحكم للإصلاح ولتغيير الواقع القائم من جذوره؛ ولم\n‎Ob‏ لكي بحكم ويتمتع بمباهج الحياة الدنيا.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0279",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 279,
+      "text_ar": "ثانياً: إن ثورة الشعوب الإسلامية ‎ae‏ عثمان كان من أهم\nأسبابها هو: إقراره الولاة ‎od pull‏ وتوليته إياهم على البلاد\nالإسلامية حيث كانت حكومتهم دكتاتورية محضة» بالإضافة\nإلى جرائمهم التي ارتكبوها بحق الشعوب المسلمة كسرقة بيت",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0280",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 280,
+      "text_ar": "مال المسلمين وقتل البعض بدون جرم والاعتداء على أموال\nالمسلمين.. فكيف يدع الإمام ‎EE‏ الولاة السابقين على الحكم\nمع أن الثورة كان من أهم أهدافها عزل هؤلاء الولاة الجائرين؟\nالسؤال السابع:",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0281",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 281,
+      "text_ar": "كان ‎Gay Gelb)‏ في طليعة الثوار الذين ثاروا على\nعثمان» فقد كانا يحرضان الناس على الثورة ضده.. كما ‎WS‏\n‏يمدان الثوار ‎PIUL‏ وبالإضافة إلى ذلك كانت ‎Lop)‏ شخصية\nبارزة عند المسلمين.. وقد ‎Ub‏ من الإمام ‎AGE‏ توليتهما البصرة\nوالكوفة ‏ بعد مبايعتهما له فلماذا رفض الإمام ذلك علماً بأن\nرفضه أدى إلى قيامهما بالتخريب» وإلى القيام بثورة مسلحة\nضد ‎SAGE ple‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0282",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 282,
+      "text_ar": "الجواب: ذلك ‎OY‏ البصرة والكوفة كانتا منطقتين\nحساستين جداً.. فقد كان الجيش الإسلامي يتركز فيهما ولذلك\nفإن تولية الإمام ‎Lap!‏ على البصرة والكوفة كان يعني خطأ كبيراً\nإذ لم يكن ‎gel‏ قيامهما بثورة ضده أو على الأقل لم يكن يأمن\nظلمهماء إذ أن طلحة والزبير كانا يريدان الحكومة لكي يحصلا\n‎AY LSI)‏ عشر دراسة وتحليل: فصل الإمام علي ‎AEE‏",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0283",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 283,
+      "text_ar": "على أكبر قدر مكن من ‎IU‏ وتوليتهما على الحكومة كان\n‎BL Al‏ عن الخط الإسلامي؛ ولذلك نجد أن طلحة والزبير\nعندما أعطاهما عمال الإمام ‎BU‏ دنانير من بيت المال - كبقية\nالناس ‏ اعترضا على ذلك وقالا للموزعين : هل هذا منكم أو\nمن أمر صاحبكم؟ (أي الإمام علي ‎CHEB‏\n‏فقال الموزعون : بل من ‎yl‏ صاحبنا!\nفجاء طلحة والزبير إلى الإمام ‏ وكان الإمام ‎AGE‏ في ضيعة\nله بالمدينة ‏ وطالباه ‎Ob‏ يعطيهما ‎ST‏ لقرابتهما من الرسول\n‎BD‏ ولسابقتيهما في الإسلام والجهاد؛ ولكن الإمام ‎BER‏\n‏رفض.. وهذه الحادثة الصغيرة تبين عقلية طلحة والزبير حيث\nإن المفاهيم الإسلامية لم تكن مشربة في أرواحهم فكيف\nيوليهما الإمام علي طِييَهِ الحكم؟\nالسؤال الثامن:\nعندما وصل الإمام علي ‎EE‏ إلى الحكم أصدر قرارا ثوريا\nبعزل معاوية عن الحكم فوراً» ألم يكن ذلك خطأ سياسياً وقع\nفيه الإمام علي ‎SASS‏ إذ ‎Of‏ معاوية كان يحكم في الشام حوالي\n‎W‏ سنة أي أنه استطاع تثبيت جذوره في المجتمع الشامي. بينما\n5",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0284",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 284,
+      "text_ar": "لم تكن حكومة الإمام علي ‎Spine ALE‏ فلو صبر الإمام قليلاً\nحتى تتجذر حكومته ثم يعزل معاوية لكان ذلك أفضل بكثير»\nفهل هذا صحيح؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0285",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 285,
+      "text_ar": "الجواب: إن عزل الإمام لمعاوية كان قرارا حكيما ‎/٠٠١‏\n‏ولم يكن باستطاعة الإمام ‎AEE‏ أن يفعل غير ذلك للأسباب\nالتالية :",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0286",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 286,
+      "text_ar": "‎:١‏ إن وجود معاوية في قمة ولاية الشام كان من أهم\nالمأخذ على عثمان؛ وهو أحد الأسباب التي أشعلت الثورة\nضد عثمان.. فكيف يبقيه الإمام ‎Wy‏ على الشام؛ وماذا يكون\nموقفه مع الثوار الذين ثاروا ضد عثمان؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0287",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 287,
+      "text_ar": "‏؟: إن الإمام يي أشار على عثمان مراراً بعزل معاوية\nفكيف لا يعزله هو؟",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0288",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 288,
+      "text_ar": "‏2 إن بقاء معاوية على الحكم كان يعني المزيد من الجرائم\nوالجنايات وذلك ما لا يرضى به الدين» ولم يكن من الصحيح\nإبقاء معاوية حتى تتجذر حكومته ثم عزله إذ «البدف لا يبرر\nالوسيلة» وإلا فما فهو الفرق بين علي وعثمان؟ لو كان كلاهما\nيوليان ولاة جائرين.",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0289",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 289,
+      "text_ar": "‏4 : إن معاوية ‏ حتى لو أبقاه الإمام علي ‎REE‏ كان يدرك",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0290",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 290,
+      "text_ar": "‎LU‏ أنه عنصر غير مرغوب فيه في دولة الإمام علي ‎PEE‏ ومن\nالممكن في كل لحظة أن يصل إليه قرار العزل وذلك لأنه كان\nيعرف الإمام جيداً.. كان يعرف أن الإمام لا يمكن أن يدعه ‏\nوهو الفاجر الفاسق ‏ يحكم مدة طويلة.. وذلك فإن معاوية ‏ لو\nأبقاه الإمام ‏ كان يفكر في الحكومة.. ولذلك كان يفكر في أخذ\nأزمة الدولة الإسلامية كلها بيده.. لذلك فإبقاء معاوية كان\nيعني : المزيد من المؤامرات والمزيد من التخريب تحت ستار كونه\n‎Uy‏ للإمام علي ‎WE‏\n‏وأخيراً فقد كانت حياة الإمام علي ‎ASE‏ سلسلة من\nالتجارب والدروس» علينا أن نستفيد منها في حياتنا.. ‎aly‏\n‏الموفق؛ وهو المستعان.\n1ه\nمرتضى الحسيني\nلل",
+      "page_number": 84
+    },
+    {
+      "paragraph_id": "bookss_003_paragraph_0291",
+      "book_id": "bookss_003",
+      "section_id": "bookss_003_section_005",
+      "paragraph_number": 291,
+      "text_ar": "الفهرس\nالمقدمة ‎Y.‏\n‏الإمام علي ليت الشخصية الفذّة 0\nالفصل الأول: الإمام علي ‎MEE‏ خصائص ومميزات ‎Vv‏\n‏أولاً: الجهاد والتضحية ‎v.‏\n‎GU‏ العبادة 1\nثالثاً: الزهد 1\nالفصل الثاني : المرحلة التي سبقت حكم الإمام علي ‎Ye AEE‏\nالفصل الثالث: الإمام علي ‎AGH‏ حاكما ‎Yo‏\n‏الفصل الرابع: ‎Gye‏ الإمام علي ‎yy ASE‏\nأولاً: معركة الجمل ‎Ye‏\n‏ثانياً: معركة صفين 3\nثالثاً: معركة النهروان ‎w‏\n‏الفصل الخامس : معاوية في حياته السياسية ‎VW.‏\n‏الفصل السادس: الإمام علي ‎AGE‏ من الحرب إلى الشهادة ‎veg‏\n‏الفصل السابع : تساؤلات ملحة ‎va.‏\n‎4V‏",
+      "page_number": 84
+    }
+  ]
 }

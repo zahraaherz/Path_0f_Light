@@ -5,8 +5,8 @@
     "title_en": "Fatima al-Zahra - The Scale of Knowledge",
     "author_ar": "الشيخ أحمد الحائري الأسدي",
     "author_en": "Sheikh Ahmad al-Ha'iri al-Asadi",
-    "total_sections": 1,
-    "total_paragraphs": 0,
+    "total_sections": 2,
+    "total_paragraphs": 172,
     "language": "ar",
     "pdf_url": "",
     "original_filename": "فاطمة الزهراء (ع) ميزان المعرفة - الشيخ أحمد الحائري الأسدي.pdf",
@@ -22,9 +22,9 @@
     "category": "فضائل",
     "processing_status": "completed",
     "total_pages": 42,
-    "total_characters": 82,
-    "total_words": 0,
-    "extraction_method": "pymupdf_low_content"
+    "total_characters": 29656,
+    "total_words": 5639,
+    "extraction_method": "tesseract_ocr_arabic"
   },
   "sections": [
     {
@@ -34,9 +34,1396 @@
       "title_ar": "القسم 1",
       "title_en": "Part 1",
       "startPosition": 0,
-      "endPosition": 82,
+      "endPosition": 15235,
       "estimated_page": 0
+    },
+    {
+      "section_id": "bookss_024_section_002",
+      "book_id": "bookss_024",
+      "section_number": 2,
+      "title_ar": "القسم 2",
+      "title_en": "Part 2",
+      "startPosition": 15235,
+      "endPosition": 29654,
+      "estimated_page": 20
     }
   ],
-  "paragraphs": []
+  "paragraphs": [
+    {
+      "paragraph_id": "bookss_024_paragraph_0001",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 1,
+      "text_ar": "فاطمة ‎“el taal‏\nميزان المعرفم\nلسلاح عليك ‎Laas)‏ المضطهدهة اممُهورة | /\n| ©\n‎٠‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0002",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 2,
+      "text_ar": "٠ ‏هو‎ ٠\ncst, SI ‏الل هر‎ dala ig\n‏أ املعر فة‎\nelas\n‏الحائرى الأسدي‎ anal ‏الشيخ‎\n‏ريا‎ he\n1 ahi ‏حسينية ديار الطف - كريبلاء‎\n‏شبكة كتب الشيعة‎ ١ ‏الحسين(ع با بالسدرة‎ ALY SL\nBB =\n‏طبع بمطيعدّ الزوراء‎\n‏كريلاء المقدسي‎\nvel\nshiabooks.net\nmktba.net > ‏رايط يديل‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0003",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 3,
+      "text_ar": "‎ie . 1‏\nإلى صاحب العصر والزمان (25)المنتقم لآل الرسول ‎A)‏ )والملصلح\nالحقيقي الأمام المنتظر ‎(BS)‏ آل محمد (عَبْمرَْ:)عجل الله تعالى فرجه\nالشريف وال مؤمل الغائب الذي أعد لكي ‎SG‏ ثار المستضعفين والمظلومين\nوعلى الأخص مظلوميةّ ‎al‏ فاطمة ‎(SEMEL del pajI‏ التي لم تزل تظلم يوما بعد\nآخر لتكشف اللثام عن وجه والمزئفين الذين يدعون الإسلام ويطعنونه في قفاه\nباسيافهم غدرا وغيلدٌ وينكرون الحقائق الواضحت ‎DN‏ بالأدلتّ والبرامين\nالقاطعت.\nأرفع إليك الشكوى عبر هذه الصفحات المتواضعتّ وأهدي ثواب عملي\nهذا إلى روح والدئ وأخوتي الشهداء رحمهم الله برحمته الواسعتّ الذين تحملوا\nالمصائب والشجون حتى فارقوا هذه الدنيا مظلومين صابرين ماجورين .\nالأقل\nأحميد",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0004",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 4,
+      "text_ar": "... a dal\n‏بسم الله الرحمن. الرجيم‎\n‏الحمد لله الذي هدانا إلى الحق والصواب وأنزل على محمد‎\n. ‏على أعدائهم إلى يوم الحساب‎ ily ‏وآلهريييتر) الكتاب‎\n‏أن القلم والعقل يتحيران ماذا يكتبان عن شخصية عظيمة لم‎\n. ‏يعرفها حق المعرفة إلا مجموعة قليلة من الناس‎\n‏فاطمة وما أدراك ما فاطمة ؟‎\n‏البطولة والشجاعة والفصاحة والبلاغة‎ gee ‏سيدة جليلة مثلت‎\n‏والحقيقة و ...... و ..... حتى صارت قدوة صالحة وأسوة فالحة‎\nre ‏للجميع ونبراساً وضياء وهاجا تنير الدرب للثائرين في كل‎\n‏ومصر.‎\n‏ماذا يقول الإنسان عن مثل هذه السيدة العظيمة التي عاشت‎\n‏دركه إلى يومنا هذا وإلى ماشاء‎ Se ‏مدة قصيرة وتركت تراثا هائلاً لا‎\n. ‏الله‎\n‏يعرفها إلا الله عز وجل وأبوها‎ ACB) ‏فاطمة الزهراء‎\n‏الرسول الأعظم صلى الله عليه وآله وزوجها أمير المؤمنين علي عليه‎\n‏السلام ثم هن بعدهم الأئمة الأطهار عليهم السلام . فاطمة‎\n‏صاغها الله وفضلها على جميع الخلق إلا أبيها صلى الله‎ (gee yet a jl\n32",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0005",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 5,
+      "text_ar": "عليه وآله وزوجها عليه السلام حتى صارت مفخرة للعالمين وامحور\nللأمة .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0006",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 6,
+      "text_ar": "ولقد مدحها الله عز وجل ثم رسوله الكريم صلى الله عليه وآله\nوسلم ثم الأئمة الطاهرون عليهم السلام وحتى أعدائها ( والفضل ما\nشهدت & الأعداءع) .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0007",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 7,
+      "text_ar": "ولقد كتب مجموعة كبيرة من أرباب القلم والأدب من\nالمسلمين وغير المسلمين عن جوانب من ‎le‏ , وأعتقد ‎pedi‏ لم يؤودوا\nحقها ‎KY‏ خالدة بمظلوميتها ضد أعداء الله والدين حتى صارت\nمظلوميتها ثورة ساخنة ضدهم في كل زمان ومكان .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0008",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 8,
+      "text_ar": "(اللظالم جولة وللمظلوم دولة)) . |",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0009",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 9,
+      "text_ar": "PU ‏كلمة حكيمة ذات معان كثيرة وتنطبق على كل‎ Ce Uy\n. ‏ومظلوم عبر العصور المختلفة‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0010",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 10,
+      "text_ar": "لأن الحق خالد والباطل زائل لا أساس له يذهب سدى . ومهما\nحاول الطغاة أن يحجبوا نور الحق لكنه سيظهر يوماً ما .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0011",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 11,
+      "text_ar": "وهذه الشخصية العظيمة ظهرت مدة قليلة ولكنها ‎Spb‏\n‏الكثير من القوانين الباطلة بصرختها المدويّة ‎CSF po UY‏ بكلمة الحق في\nوجه الطغاة وشيدت وبينت الأحكام ‎LAY‏ بالإضافة إلى دورها المهم\nفي دعم الخلافة الحقة التي نصبت من قبل الله عز وجل: ورسوله الأمين",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0012",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 12,
+      "text_ar": "(صلى الله عليه وآله وسلم) في واقعة الغدير المعروفة ولكنها غصبت من\nقبل حكام الجور وكشفت النقاب عن المتليسين بأسم الدين وأظهرهم\nعلئغ حقيقتهم. -",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0013",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 13,
+      "text_ar": "وقفت هذه السيدة المظلومة عليها السلام في وجه الغاصبين\nالحاقدين الذين يدعو ن الإسلام وتحولت ‎let‏ وأحتجاجاهًا ثورة\nعارمة هزت عروش الظلمين وصارت الستد والسد المنيع للدقاع عن\nالأمامة الكيرى. والخلافة العظمى إلى آخر أنفاسها الشريفة وكشفت\nاللغام عن وجه الطواغيت وبيتت ‎Pre‏ النتاصعة ووضعت ‎bus!‏ على\nالحروف حتى صارت رمز الأنتصار والخلود للسائرين على دروا القوم.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0014",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 14,
+      "text_ar": "وقد تأصسست دول بأسمها والدفاع عنها وسقطت دول أخرى\nبسيب الأتحراف عنها وعدم قبول الحق منها .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0015",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 15,
+      "text_ar": "وسأل أبن ‎Gal‏ الحديد المعتزلي من استاذه قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0016",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 16,
+      "text_ar": "اذا لم يعط ‎yi‏ بكر فدكا للزهراء ‎(SMB)‏ . مع علمه ‎Ob‏\n‏قدكا ها",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0017",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 17,
+      "text_ar": "أن المشكلة ليست في قضية فدك يل لو أعطوا فدكا\n‎(eRe! aU‏ لجاءت في اليوم الثاني وطاليت بالخلافة ‎LE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0018",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 18,
+      "text_ar": "وعندما شاهدوا من السيدة فاطمة الزهراء(##ضع) هذه\nالمواقف المشرفة حاولوا أزالتها وأزاحتها عن طريقهم ففعلوا ما فعلوا من",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0019",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 19,
+      "text_ar": "حرق الباب وضرب الزهراء (عََلي)» وأسقاط جنينها المحسن الشهيد\nوأخراج زوجها ‎aS‏ إلى المسجد و ....... و ..... و ..... وغيرها\nمن المصائب والشجون التي تحملتها ‎Cail)‏ أجل إعلان كلمة الحق\nودحض الباطل .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0020",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 20,
+      "text_ar": "وعلى القارئ الكريم مراجعة الكتب المهمة ‎Seal‏\n‏الغدير للعلامة ألأميني النجفي , الإمامة الكبرى للآية السيد محمد حسن\nالقزويني الخائري . فضائل الخمسة للحجة السيد مرتضى الفيروز ‎SOUT‏\n‏النجفي . فاطمة الزهراء (ا/مْ)من المهد إلى اللحد للعالم السيد محمد\nكاظم القزويني الحائري أعلموا أن فاطمة (َالت)للخطيب البارع\nالشيخ عبد الحميد المهاجر الحائري . فاطمة (6/لا)يمجة قلب\nالمصطفى للنخطيب الشيخ أحمد الرحمابي امحمدانن . فضائل الزهراء\n(عةاله)للعلامة السيد غلام رضا الكسائي الحائري 6 ملحمة\nالزهراء(22!) للأستاذ الأخ عبد العباس الأسدي الحائري , عظمة\nالزهراء ‎(icity‏ للكاتب الشيخ فاضل ‎(ale dob cog SEL SI dt‏\n‎Ug! i‏ للعلامة السيد فاضل الميلابي الحائري , فاجعة ‎(SEM el pat‏\nللخطيب قاسم الحائري ‎co‏ فاطمة الزهراء(إالتَور) ‎af‏ السبطين للأديب\n(' لقد نبهني الحاج ناظم العكيلي حفظه الله على ذكر المصادر من أهل السنة فقلت له : عندما\nأذكر كتب أصحابنا الإمامية حول الغدير والسيدة الزهراء (ع) هم الذين يرون عن أهل السنة .\n' 1",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0021",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 21,
+      "text_ar": "السيد سلمان آل طعمة الحائري وغيرها من الكتب ليطلع المنصف على\nالحقائق والفجائع التي حلت على هذه السيدة المظلومة في ربيع عمرها .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0022",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 22,
+      "text_ar": "ونرى بعض المرتزقة الغير مرغوب فيهم ظهروا ‎Mtl‏ وباعوا\nضمائرهم وأنفسهم وأقلامهم والسنتهم إلى أعداء الدين وقاموا بأنكار\nالحقائق الراسخة وتطاولوا على شخصية السيدة فاطمة الزهراء(باساد)\nومع الأسف ‎wel‏ ينسبون إلى الإسلام وبني الزهراء ‎(Dich)‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0023",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 23,
+      "text_ar": "ولكن السيدة ‎PLWH)‏ بريئون من أمنال هذه\nالحنالات والفقاعات الزائلة والشمس لا يتمكن الانسان أن ينكر\nوجودها وضوءها وفوائدها وما مثل هؤلاء-المنكرين والمشككين إلا\nكمثل البرق الخلب والسحاب الكاذب ولمطر الراشق الذي يظهر\nسريعاً ويزول سريعاً ولكن النور الآلهي يبقى ناصعاً شفافاً إلى الأبد.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0024",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 24,
+      "text_ar": "وجزاء هؤلاء الدخلاء على الدين والذين غصبوا وأغضبوا\nالزهراء ‎(Cottey‏ مع الإمام الحجة (عليه السلام)عند ظهوره\nوحسابهم مع الله عز وجل في الاخرة .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0025",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 25,
+      "text_ar": "وعلى كل حال الحديث ذو شجون نتركه للتاريخ ليحكم\nبالحق ويدون الحقيقة .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0026",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 26,
+      "text_ar": "وطبع هذا الكتاب بنفقة هيئة محمد الأمين بواسطة المرحوم\nالعلامة الشيخ فاضل ‎GI!‏ الحائري وأقترح علي جناب ‎EM‏ حاتم بن\nالحاج نعمة زنكي الأسدي أن أعيد طبعه للمرة الثانية على نفقته",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0027",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 27,
+      "text_ar": "وأهدى ثوابه إلى روح والده المرحوم قلبيت الطلب و أضفت عليه\nمعلومات أخرى أنه كتاب نفيس مع صغر حجمه لكنه ‎Gal pS‏\nواختوى .\nوف الأخير أرجوا من الله عز وجل ومنها سلام الله عليها\nالقبول ‎oly‏ تكون شفيعتنا يوم ‎tl‏ ( يوم لا ينفع مال ولا بنون إلا\nمن أتى الله بقلب سليم ) . وهي القلب السليم .\nوالسلام عليها يوم ولدت ويوم ودعت هذه الدنيا شهيدة\nمظلومة صابرة محتسبة ويوم تبعث حيا .\nوالله الموفق والمستعان\nالأقل\nأحمد الحائري الأسدي\nغفر الله له ورحم والديه\n‎YY‏ ذو الحجتّ\nكربلاء المقدسد\nباب الطاق\n‎A‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0028",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 28,
+      "text_ar": "تمر على حياة السيدة فاطمة ‎gol Baltes al‏ ومرور\nالكرام ‎pat‏ | لنطلع على بعض ‎Ble Cal ye‏ المشرقة .\nولادتها المباركة : 0",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0029",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 29,
+      "text_ar": "ولدت يوم الجمعة في العشرين من ‎Cole‏ الآخرة بعد النبوة\nبخمس سنين وبعد الإسراء ‎KY‏ سنين كما رواه أرباب التاريخ .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0030",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 30,
+      "text_ar": "أشرقت الدنيا بولادة هذه السيدة العظيمة وظهرت ‎Boy‏\n‏الخير والبركة .\nأسمائها : 00",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0031",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 31,
+      "text_ar": "فاطمة ‎Critic)‏ الزهراء (عبعالتد)» الصديقة ‎(Sele)‏\n‏اطباركة (علةاكتد)» الطاهرة «عنالتلد)» الزكية (غ#لايق). الراضية\n‎(BM) Apc ph! «(aisle )‏ اللحدثة ) ‎«(Bele‏ الكوثر ‎(SMe)‏\n‏البتول ‎(3th dealt «(ile y‏ وغيرها من الأسماء .\nأولادها :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0032",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 32,
+      "text_ar": "الإمام الحسن ‎(BER)‏ الإمام الحسين ‎(BER)‏ السيدة\n‎(SMe ain‏ » أم كلثوم ‎(eet)‏ ا ملحسن ‎(EB)‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0033",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 33,
+      "text_ar": "بأعتبارها من بيت الوحي والرسالة نزلت في حقها آيات راجع\nكتاب فاطمة الزهراء ‎(wiley‏ في القرآن للمرجع الديني السيد صادق\nالشيرازي الخائري (ذانظة:). 2 '\nالأحاديث المروية عنها ‎(Sia)‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0034",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 34,
+      "text_ar": "وخلفت أحاديث شريفة حتى الف أحدا أبنائها الكرام آية الله\nالشهيد حسن الشيرازي الحائري كتاباً أسمه كلمة فاطمة الزهراء\n‎Bee)‏ ).",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0035",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 35,
+      "text_ar": "بالإضافة إلى خطبها القيمة التي تركت ‎UT‏ هامة في عالم التاريخ\nوكشفت الحقائق وما جرى عليها .\nقضية فدك :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0036",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 36,
+      "text_ar": "قضية مهمة دونت في عالم التاريخ مزرعة أهداها رسول\nالله( بي ) في حياته إلى أبنته فاطمة الزهراء ‎Aa wiley‏ فأغتصبها\nحكام الجور منها راجع كتاب فدك لآية الله العظمى السيد محمد حسن\nالقزويني الحائري ترك لتطلع على هذه القضية .\nمواقفها المشرفة :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0037",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 37,
+      "text_ar": "قضت هذه السيدة العظيمة عمرها في ربيع الزهور ‎dy‏ تسكت\nعن بيان الحق وصارت في جانب العدل والحق ولكنها عانت مصائب",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0038",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 38,
+      "text_ar": "معروفة ‎arly‏ كتاب فاطمة الزهراء ‎atta)‏ )من المهد إلى اللحد للعالم\nالمحدث السيد محمد كاظم القزويني الحائري ‎OF‏\n‏مرضها : اا",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0039",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 39,
+      "text_ar": "ينقل أهل السنة أنما مرضت وماتت أسألك بالله شابة عمرها\n‎VA‏ سنة تتمرض وتموت بدون سبب على العاقل البصير أن يتبع أسباب\nالمرض ثم الوفاة .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0040",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 40,
+      "text_ar": "ألم يكن تجاسر القوم عليها أم إسقاط جنينها أم غصبها حقها أم\nأخذ حقوق زوجها أم ..... أم ...... أم ..... .\nشهادتها : _—",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0041",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 41,
+      "text_ar": "على أثر الصدمات الروحية والجسدية فارقت هذه الدنيا شهيدة\n‎due‏ وهناك أقوال في رحيلها المشهورثلاثة أقوال :\nالقول الأول : 8 ربيع الثابي . |\nالقول ‎١7” : Gut‏ جمادي الآخرة .\nالقول الثالث : ” ‎cole‏ الآخرة .\nفي سنة ‎١١‏ للهجرة وكنت أول الناس ‎Bd‏ برسول الله( ‎(BR‏\n‏وصينها :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0042",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 42,
+      "text_ar": "في آخر يوم من شهادقها نعت نفسها واستعدت للرحيل إلى ربا\nلتشكوا ‎of‏ لا قت من حكام الجور في عصرها فأوصت الإمام\n‎(am) de‏ بوصايهارهكك) منها :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0043",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 43,
+      "text_ar": "© كيف كانت معاشرهًا مع زوجها فأجايا نعم المعاشرة .\n0 عزيز عليها مفارقة زوجها وأولادها .\n» الزواج من بعدها من أجل مداراة الأولاد .\n» أن لا يشهد أحد من الذين 957 وظلمون في جنازي .\n» أن أدفن في الليل .\n‎Ler Ye‏ علي إلا أنت ياعلي (عليه السلام) .\n©» وغيرها من الوصايا ؟ .\nأين قبر الزهراء ‎BABB)‏ (-\nأي إنسان يفارق ‎BH‏ الدنيا يدفن فيجعل له قبرا ظاهرا حتى\nيزوره أقربائه أو أصدقائه أو عياله ؟ .\nلماذا السيدة الزهراء أوصت ‎cel pol‏ يإخفاء قبرها ؟\nعلى ‎padi‏ أن يتمعن ف الفقرة من الوصية لما فيها من ‎Nel‏\n‏مهمة ؟.\nعندما يذهب الحجاج لمكة ويعدها ‎Opal‏ إلى المدينة أول\nسوام بعد زيارة الي( ‎(ABE)‏ أين ‎(MAS‏ أبنته الوحيدة صاحبت\nالكرامات والمعجزات والآثار العظيمة والآثار الكرعة ؟فيتجول المسلمين\nيسألون أين قبر الزهراء ‎ARR)‏ )عاذا يجيبه البعض من الحاقدين يقولون\n‎Ul‏ أوصت أن يخفي قيرها وما هو السيب وما الذي جرى ؟ ‎BEd‏\n‏ليراجع كتب التاريخ الصحيحة فيرى الفضائح لحكام الجور وما ‎cals‏\n‎Av‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0044",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 44,
+      "text_ar": "السيدة ‎SR)‏ )منهم ماذا يقولون أين دفنت ‎(SEB ys! a)‏ فالبعض\nتأخذهم الحيرة ماذا يصنعون من أجل التمويه عن الحقائق وتأويلها\nوظلت السيدة(غنهلاتيق) نورة قز عروش الظالمين من الشهادة وإلى يومنا\nهذا وإلى يوم القيامة 0000700",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0045",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 45,
+      "text_ar": "الشعراء يشاركون في مصانب الزهراء (<تظلايّكه ):",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0046",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 46,
+      "text_ar": "أنطلقت قريحة الشعراء في مختلف العقاند والمذاهب من أجل بيان بعض\nالأمور والحقائق منهم :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0047",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 47,
+      "text_ar": "١.الإمام‏ علي (عليه السلام ) قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0048",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 48,
+      "text_ar": "نفسي على زفراهًا ‎apt‏ يليتها. خرجت مع الزفرات\nلا خير بعدك في الحياة ‎ely‏ أبكي ‎de‏ أن تطول ‎le‏\n‏؟.الشيخ كاظم الأزري قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0049",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 49,
+      "text_ar": "نقضوا ‎aml age‏ في أخيه وأذاقوا البتول ما أشجاها\nيوم جاءت إلى عدي وتيم 2 ومن الوجد ما أطال بكائها\n“'. الشيخ محمد حسين الكمباني قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0050",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 50,
+      "text_ar": "ومن نبوع الدم من ثدييها 0 يعرف ‎phe‏ ما جرى عليها\nوجاوزوها الحد بلطم الخد ‎le ١‏ يد الطغيان والتعدي\n4.للسيد شريف مكة قائلاً : 00",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0051",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 51,
+      "text_ar": "‎Cw‏ من ؟ ‎al‏ من؟ حليلة من؟ ويل لمن سّن ظلمها وآذاها\nشيعت نفسها ملائكة الر ‏ حمن ‎ly‏ يما وما شيعاها",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0052",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 52,
+      "text_ar": "ه.السيد مهدي القزويني الحلي قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0053",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 53,
+      "text_ar": "ومذ رأوها عصروها عصرة كادت بنفسي أن تموت حسرة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0054",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 54,
+      "text_ar": "فأسقطت بنت الهدى وحزنا جنينها ذاك المسمى ‎Least‏\n‏5\".السيد باقر ‎cal‏ قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0055",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 55,
+      "text_ar": "أو تدري ماصدر فاطمة ما المسمار ما بال ضلعها المكسور",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0056",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 56,
+      "text_ar": "ما سقوط الجنين مامرة العين وما بال قطرها المشغور\n.الحاج جواد بدقت الحائري قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0057",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 57,
+      "text_ar": "وبكسر ذاك الضلع ‎ avicy,‏ في طيها سر الآله مصون",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0058",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 58,
+      "text_ar": "وكما (علي) قوده بنجاده 2 فله ( علي) بالوثاق قرين\n8.الشيخ محسن أبو الحب الخائري قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0059",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 59,
+      "text_ar": "وإلى الجدار وعتبة الباب التعجت 20 بنت النبي فأسقطت ما تحمل",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0060",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 60,
+      "text_ar": "سقطت وأسقطت الجنين وحوها 0 من كل ذي حسب ‎ocd‏ جحفل\n3.السيد عبد اللطيف العاملي قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0061",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 61,
+      "text_ar": "كم في فؤادك فاطم من غصة توهي فؤاد الصخرة الصماء",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0062",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 62,
+      "text_ar": "أكذه الدنيا عزاء قائم وبدار ربك في أمض عزاء\n‎٠‏ .الشيخ صالح الكواز الحلي قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0063",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 63,
+      "text_ar": "الوائبين لظلم آل محمد ومحمد ملقى بلا تكفين",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0064",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 64,
+      "text_ar": "والداخلين على البتول بيتها 2 ولمسقطين لها أعز جنين\n: 1 |",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0065",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 65,
+      "text_ar": "١.لقاضي ‎yi‏ بكر بن أبي قريعة قائلاً :\nلولا أعتداء رعية القى ‏ سياستها الخليفة\nواريتعكم ‏ أن الحسين أصيب هن يوم السقيفة\n7 ا.لسيد محسن الأمين قائلاً :\nلكنني ‎SI‏ مصيبة من ‎Kas‏ قد أفنت الصبيرا\nلمصاب سيدة النساء العالمين ‎dedi‏ الزهرا\n‎VY‏ الشيخ حسين ‎glad)‏ الحائري قائلاً :\nتدري أذيه فاطم من بعد والدها فجيعة\nالغوا ‏ وصيته وما قد قاله فيها جميعه\n4 ١.السيد‏ مرتضى القزويني الحائري قائلاً :\nفالله شرفها والله فضلها ‎ails‏ صلى عليها ثم أطراها\nوالله زوجها والله أصدقها وخطبة العقد فوق العرش القاها\n‎Lite‏ سلمان آل طعمة الحائري قائلاً :\nأي ذكرى تموج بالحسرات ‎١‏ زخرت ‎we‏ والزفرات\nأنها فاطم ‎S gel‏ وبنت الخلد يا من حوت ‎ht‏ الصفات\n5.الشيخ عبد الحسين الحويزي الحائري قائلاً : 1\nويل لمن عنها زوى ميرائها ‎١‏ وتخصه- لبنينها الآباء\n10",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0066",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 66,
+      "text_ar": "وعزيزة المختار بعد وفاته طرقت ‎tals‏ للقضاء ارزاء",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0067",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 67,
+      "text_ar": "وما برحت مهظومة ذات ‎Ue‏ تأرقها البلوى وظلمها مغفي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0068",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 68,
+      "text_ar": "إلى أن قضت مكسورة الظلم مسقطا ‎١‏ جنين لا بالضرب مسودة ‎ASS‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0069",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 69,
+      "text_ar": "السيد مهدي الأعرجي النجفي قائلاً :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0070",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 70,
+      "text_ar": "حتى إذا خلت عن الباب وقد لاذت وراها منهم تحتجب",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0071",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 71,
+      "text_ar": "وكسروا أضلاعها وأغتصبوا ميرائها وللشهود كذبوا",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0072",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 72,
+      "text_ar": "فلم آثروا أن يحجبوا حر ارثها 2 وأن يوججوا أبنائها كل بلقع",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0073",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 73,
+      "text_ar": "أتلك التي أوصى الرسول بتقلها 0 تصار إلى هذا الصعيد المصدع",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0074",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 74,
+      "text_ar": ": ‏الأستاذ عباس أبو الطوس الحائري قائلاً‎ ٠",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0075",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 75,
+      "text_ar": "دافعت عن دين الرسول فما ‎Sal‏ بدفاعك الجهال والأشرار",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0076",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 76,
+      "text_ar": "كم موقف لك في الدفاع معظم من حيث غضت نحوك الأبصار",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0077",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 77,
+      "text_ar": "١للسيد‏ قتادة بن أدريس الحسني ‎WE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0078",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 78,
+      "text_ar": "‎i‏ لأن البتول أوصت بألا يشهد دفها فما شهداها",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0079",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 79,
+      "text_ar": "‏ولأي الأمور تدفن ‎pe‏ \\ بضعة المصطفى ويعفى ثراها\nوإلى ‎Lape‏ من القصائد الخالدة التي عبرت عن محنة ومصائب",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0080",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 80,
+      "text_ar": "‏وفاجعة الزهراء عليها السلام من القرن الأول للهجرة وإلى يومنا هذا .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0081",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 81,
+      "text_ar": "من جملة البحوث التي تحظا بأمية بالغة لدى كل المسلمين هي\nكيفية تعامل حكومة الخليفة من بعد وفاة النبي الأكرم ‎BR)‏ )مع أبنته\nامحترمة السيدة فاطمة الزهراء(212[22) .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0082",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 82,
+      "text_ar": "ولا يخفى أن شخصية هذه السيدة (عليها السلام) في نظر\nكل المسلمين محل إكرام واحترام .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0083",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 83,
+      "text_ar": "من هنا يتضح لنا المطلب لنستطيع أن نستخرج نتيجة موقف\nالحكومة اتجاه ببت الرسول الأعظم (صلى الله عليه وآله وسلم) ‎by‏\n‏هذا التحقيق القصير نبدأ البحث في نقطتين أساسيتين ومهمتين في هذا\n‎es‏ -",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0084",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 84,
+      "text_ar": "في صحيح البخاري . جه - ص 15 , هذا الحديث مروي\nعن النبي ‎SUE)‏ : ( فاطمة سيدة نساء ‎Jal‏ الجنة ).",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0085",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 85,
+      "text_ar": "هذا الحديث يدل على فضيلة وأفضلية هذه السيدة العظيمة\nعلى كل ‎Ls‏ العام .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0086",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 86,
+      "text_ar": "علما بأنه يوضح أن نساء أهل الجنة أفضل_نساء العالم وأن\nفاطمة الزهراء (#/يك)سيدقن وتعد أفضل منهن ‎Lem‏ 0",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0087",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 87,
+      "text_ar": "ومع التمعن في هذا ‎OLS‏ الذي يعم ولم يستثن أي امرأة أخرى\nيدل على ان هذه السيدة العظيمة أفضل من حواء وآسيا ومريم\nوخديجة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0088",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 88,
+      "text_ar": "مع العلم ان الله ‎je‏ وجل قال في خصوص السيدة مريم\n‎(eee y‏ 2 (وإذ ‎CSU‏ الملانكة يا مريم أن الله أصطفاك وطهرك وأصطفاك\nعلى نساء العالمين ) “.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0089",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 89,
+      "text_ar": "ومعطيات الآية تدل على أن الله أعطى السيادة للسيدة مريم\nفأختارها وطهرها وجعلها صديقة .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0090",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 90,
+      "text_ar": "وهذا يستلزم أن السيدة فاطمة الزهراء ‎gleich)‏ مرتبة\nورتبة من هذه المرأة وأعلى مقاماً منها .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0091",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 91,
+      "text_ar": "وتظهر لنا أفضلية السيدة فاطمة ‎Le (lite yo! sl‏ السيدة\nهرم ( ‎(oie‏ خلال جمل كثيرة من أحاديث أخرى ثم أن هذا المطلب\nقد أتى به المحققون في تصريح كامل يستفاد من ‎gall‏ الذي ذكرناه وقد\nذكره مجموعة من المحققين من أهل السنة مثل :",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0092",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 92,
+      "text_ar": "الالوسي في تفسيره روح ‎Fe ula‏ - صه ه ‎١‏ طبعة أحياء\nالتراث العربي عام 408 ‎١‏ ه .وذكره صحيح البخاري على عموميته\nهذا المطلب .\n‎٠‏ ' سورة آل عمران - الآية ؟4 . | ا",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0093",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 93,
+      "text_ar": "فقد ذكر في صحيح البخاري جه . ص95 في فضائل هذه\nالسيدة ‎(te)‏ رواية عن ‎ER ot‏ قال ( فاطمة بضعة مني ‎cad‏\n‏أغضبها أغضبني ( _",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0094",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 94,
+      "text_ar": "وفي هذا الحديث دلالة في كون السيدة فاطمة ‎(Site yc! 2 J‏\nجزءاً من وجود ‎(Bie SW dl‏ وأيضاً في الحديث دلالة على وجود\nتلازم بين غضب ‎y (BGM SAS!‏ وغضب النبي ‎(BE)‏ .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0095",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 95,
+      "text_ar": "وكل من الجملتين في هذا المطلب يفيد ويستفاد منه ان السيدة\nفاطمة ‎(BM yl a J!‏ إذا غضبت ليس غضبها ضادراً من الإحساس\nوالمشاعر بل غضبها غضب ملازم للعقل والوحي . المعلوم من هذا\nالوصف . فغضبها ملازم لغضب الله عز وجل ‎OY‏ غضب ‎EE) gd)‏\nيكون سبباً لغضب الله وغضب الله عز وجل يؤدي إلى سقوط الإنسان\nإلى الحضيض .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0096",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 96,
+      "text_ar": "كما قال الله عز وجل في كتابه المجيد : ( ومن يحلل عليه غضبي\nفقد ‎(Sp‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0097",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_001",
+      "paragraph_number": 97,
+      "text_ar": "وبعد بيان هذه المقدمة اللازم أن ننظر إلى بعض عبارات صحيح\nالبخاري وصحيح مسلم ومسند أحمد بن حنبل . 1\n‎١‏ سورة طه : الآية 46 .",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0098",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 98,
+      "text_ar": "ففي صحيح البخاري ‎Ar‏ ص 07\" قال :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0099",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 99,
+      "text_ar": "إن فاطمة ‎Ce ile‏ النبي أرسلت إلى أبي بكر تسأله ميراثها\nمن رسول الله ‎Le ER)‏ أفاء الله عليه بالمدينة وفدك وما بقي من حمس\nخيبر فقال أبو بكر:",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0100",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 100,
+      "text_ar": "أن رسول الله ‎SU BE)‏ : ( لا نورث ما تركناه ‎(Sue‏ !! ؟",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0101",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 101,
+      "text_ar": "فأبى أبو بكر أن يدفع إلى فاطمة منها شيئاً فوجدت - غضبت-\nفاطمة ‎aia)‏ على ‎Gi‏ بكر في ذلك فهجرته فلم تكلمه حتى توفيت .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0102",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 102,
+      "text_ar": "وعاشت بعد ‎(ER gli‏ ستة أشهر فلما توفيت دفناها زوجها\nعلي رعليه السلام) ليلاً ول يأذن يا أبو بكر ..... .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0103",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 103,
+      "text_ar": "هذه العبارات قد تفاوتت أو أختلفت قليلاً مع صحيح مسلم\n‎te‏ . ص4 ” مطبعة عز الدين عام ‎EV‏ 1ه ومسند أحمد بن حنبل\n‎Fd‏ ص4 مطبعة دار الصادر . وطبقات أبن سعد ‎Ve‏ ص ‎\"١6‏\n‏مطبعة دار بيروت عام ‎AVEO‏ وتاريخ الطبري 2. ج؟- ‎YEA‏\n‏مطبعة دار الكتب العلمية عام ١ه‏ وغيرها من مصادر أهل\nالسنة فراجع وهذه البانات تصرح بالأدلة على أن أبا بكر كان سببا في\nغضب السيدة فاطمة ‎(BEAR )e| A pM‏ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0104",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 104,
+      "text_ar": "ومن جهة أخرى لم يعطها من سهم ميراث النبي ‎(EB)‏ وأستند\nإلى حديث مجعول ومنسوب إلى ‎LIS BR) cel‏ والآن نقول :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0105",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 105,
+      "text_ar": ". ‏يقول مئل هذا الحديث ؟‎ (BE) od! Ob ‏هل تقبل وتتصور‎ .١\n( ‏والحال أن الإمام علي ر(عليه السلام) والسيدة فاطمة الزهراء‎\n‏الحديث‎ NG ‏عليها السلام) كانوا أقرب الناس له ولم يعلموا ويسمعوا‎\n‏وصي‎ (PAS ‏؟ اليس اتفاق الشيعة والسنة بإن الإمام علي ( عليه‎\n‏في كل الأمور المختصة به وهل من الممكن بأن الإمام علي‎ Bel\n‏أخفى عليه مسألة الأرث‎ (BE) ‏السلام) كان وصي البي‎ ASF )\n‏وحديث لا نورئت اليس الإمام (عليه السلام) كان مدينة علم‎\n: ‏حتى قال‎ (SB ei",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0106",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 106,
+      "text_ar": "(أنا مدينة العلم وعلي بابها ) \".",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0107",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 107,
+      "text_ar": "اليس الإمام علي عليه السلام) كان ‎yb‏ وعديلاً ‎OT AY‏\n‎LS‏ جاء 3 حديث الثقلين ‎pg”‏ موضع اتفاق الشيعة والسنة ومعنى\nهذا إن الإمام علي (عليه السلام) أعلم منهم بآيات القران والعموم\nوالخصوص والأطلاق والتقييد.",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0108",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 108,
+      "text_ar": "وذكر أبن سعد في طبقاته ‎id‏ صة ‎5١‏ مطبعة دار بيروت\nعام ‎4٠.‏ ١ه‏ قال :\n‎١‏ ' هناك مصادر كئيرة لأهل السنة يدونون هذا الحديث ‘ منهم أسد الغابة ج١‏ ٠ص\"56؟2,‏\nمطبعة التراث العربي .\n‎''١‏ مسد أحمد بن حنبل ‎One‏ صضكاما- 149ا.",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0109",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 109,
+      "text_ar": "‎Ost‏ فاطمة إلى ‎Gi‏ بكر تطلب ميراثها وجاء ‎lal‏ بن عبد\nالمطلب يطلب ميراثه وجاء ‎tages‏ علي رعليه السلام) ‎SUB‏ أبو بكر :\nقال رسول الله ‎BR)‏ ( لا نورث ما تركناه صدقة) .\nفقال علي ر(عليه السلام) :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0110",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 110,
+      "text_ar": "‏(وورث سليماد داود ‎WC‏\n‏وقال زكريا :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0111",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 111,
+      "text_ar": "‎.\" ) ‏ويرث من آل يعقوب‎ Se)\n: ‏هذا كتاب الله ينطق‎",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0112",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 112,
+      "text_ar": "‏وعلى هذا الأساس أستند الإمام علي ( عليه السلام) إلى هذه\nالآيات القرآنية المذكورة .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0113",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 113,
+      "text_ar": "‏لأن البي ‎IRR)‏ يقول خلاف القرآن الكريم . وجملة رلا\nنورث ‎lS ye‏ صدقة) صريحة في خرف ‎OU‏ المذكورة في القرآن .\n\".لو أفترضنا ‎Yur‏ أن أبا بكر هو ‎aby‏ والخليفة المنصوب من قبل\n‎(BEE) ail‏ فهل يتصوران أن فاطمة ‎(Site)‏ سيدة نساء ‎fal‏ الجنة\nكانت ستقف في ‎ory‏ الإمام والخليفة المخصوب من قبل ‎Bg)‏\n‏وتعامله ‎feo‏ هذه المعاملة ؟",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0114",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 114,
+      "text_ar": "‏فكيف وهي غاضبة وساخطة عليه ولم تكلمه إلى أخر عمرها.\n‎past‏ : الآية 15 .\n‎٠‏ مريم : الآية ه- 5.",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0115",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 115,
+      "text_ar": "لا سيما لو أفترضنا بأن أبا بكر عمل ذلك أي منع حق الزهراء\n‎(atte)‏ لحساب المراعات لكل شيء عمله ‎(BBall‏ فمنع\n‎(geeks! 2 jt‏ من فدك التي وهبها النبي ‎(BE)‏ لفاطمة !! فلماذا لم\nيراع هذا ‎GUI‏ أيضاً ويرد عليها فدك ؟ ونجلب الأنتباه ‎ob‏ غضب\n‎(aa ya‏ طبق الحديث المذكور الذي نقله البخاري يؤدي إلى\nغضب ‎BR) dl‏ ثم غضب الله عز وجل .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0116",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 116,
+      "text_ar": "فالشخص الذي ‎OS‏ سبباً في غضب فاطمة الزهراء ثم في\nغضب ‎(EA gl‏ هل يتأهل ‎BIE‏ البي ‎(Bley SW‏ ؟ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0117",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 117,
+      "text_ar": "وهل إن المسلمين الذين يقرأون في النهار والليل على الأقل\n‎٠‏ مرات في الصلاة الواجبة : ( إهدنا الصراط المستقيم صراط الذين\nأنعمت عليهم غير المغضوب عليه ..... )\" .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0118",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 118,
+      "text_ar": "فهم 131 يبرءون من المغضوب عليهم فكيف يستطيعون أن\nيعتقدوا بخليفة صار سبباً في غضب الله عز وجل والنبي ‎EBISU‏\n‏وكيف يسيرون على طريقته وهم يبرءون منه ؟!! .\n\".وقضية أخرى نقلها علماء ومؤرخون ‎fal‏ السنة حول تعامل حكومة\nالخليفة مع السيدة فاطمة الزهراء( ‎(alte‏ وهي رواية أخذ البيعة من\n‎pal‏ المؤمنين (عليه السلام) نقل أبن قتيبة في كتابه الإمام والسياسة",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0119",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 119,
+      "text_ar": "ج١‏ . ص١١‏ مطبعة مصطفى ‎QUI GUI‏ عام ١ه‏ هكذا\nيرويها :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0120",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 120,
+      "text_ar": "‎Uf oy‏ بكر تفقد قوماً تخلفوا عن بيعته وكانوا عند علي فبعث\nإليهم عمر فجاء فناداهم وهم في دار علي . فأبوا أن يخرجوا فدعا\nبالحطب وقال :\n( والذي نفس عمر بيده لتخرجن أو لأحرقنها على من فيها ) .\nفقيل له يا ‎Ul‏ حفص :\nإن فيها فاطمة !\nفقال : وإن !\nفخرجوا فبايعوا إلا علياً فأنه زعم أنه قال :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0121",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 121,
+      "text_ar": "‏حلفت أن لا أخرج ولا أضع ‎ug‏ على عاتقي حتى أجمع\nالقران.\nفوقفت فاطمة علي ‎KL‏ فقالت :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0122",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 122,
+      "text_ar": "‏لا عهد لي بقوم حضروا أسوأ محضر منكم وتركتم رسول الله\nجنازة بين أيدينا وقطعتكم أمركم بينكم لم تستأمرونا ولم تردوا لنا حقا.\nفأتى عمر أبا بكر فقال له :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0123",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 123,
+      "text_ar": "‏ألا تأخذ هذا المتخلف عنك بالبيعة .\nفقال أبو بكر لقنفذ وهو مولى له :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0124",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 124,
+      "text_ar": "فقال له :\nقال فذهب إلى علي '\n‎Peete‏ 0\nيدعوك خليفة رسو\n| ل الله .\n0 لسري ما كفم عل و\n” يلا .\nفبكى أبو بكر 296 ;\n0 بالبيعة .\n0 لا تمهل هذا المتخلف\n‎dad‏ :\n‎Ages‏ فقا له :\nعُد إليه فقل 00\nخليفة رسول الله يدعوك تبايع!\n9 أمر به .\nفجاءه قنفذ ‎cold‏ ما أمر ‎y‏\n‏فحاء\n‏| ته فقال : 1\n‎vga‏\n‏| 4\n, يلا .\nفبكى أبو بكر طور\n‎YO.‏",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0125",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 125,
+      "text_ar": "ثم ‎al‏ عمر فمشى معه ‎dele‏ حتى أتوا باب فاطمة فدقوا ‎GUI‏ فلما\nمعت ‎ofl pol‏ نادت ‎lel‏ صوقا :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0126",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 126,
+      "text_ar": "يا أبت يارسول الله ماذا لقينا ‎Say‏ من أبن الخطاب وأبن أبي\nقحافة فلما مع القوم صوت بكاءها أنصرفوا باكين وكادت قلوكم\nتتصدع وأكبادهم تتفطر .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0127",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 127,
+      "text_ar": "وبقى عمر ومعه قوم فأخرجوا علياً فمضوا به إلى أبي بكر فقالوا\nله :\nبايع ؟\nفقال : إن أنا لم أفعل فمه ؟\nقالوا :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0128",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 128,
+      "text_ar": "إذا والذي لا آله إلا هو نضرب عنقك !\nقال : إذاً تقعلون عبد الله وأخا رسول الله .\nقال عمر :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0129",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 129,
+      "text_ar": "أما عبد الله فنعم وأما أخو رسول فلا ! وأبو بكر ساكت لا\nيتكلم فقال له عمر : ألا تأمر فيه بأمرك .\nفقال :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0130",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 130,
+      "text_ar": "لا أكرهه على شيء ما كانت فاطمة إلى جنبه فلحق علي بقبر\nرسول الله يصيح ويبكي وينادي : يا أبن ‎al‏ أن القوم أستضعفوني\nوكادوا يقتلوي فقال عمر لأبي بكر : |",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0131",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 131,
+      "text_ar": "أنطلق بنا إلى فاطمة ‎UE‏ قد أغضبناها فأنطلقا جميعاً .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0132",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 132,
+      "text_ar": "فأستأذنا علي فاطمة فلم تأذن هما فأتيا ‎tle‏ فكلماه فأدخلهما\n‎We‏ فلما قعدا عندها حولت وجهها إلى الحائط فسلما عليها فلم ترد\nعليهما السلام . 0\nفتكلم أبو بكر فقال :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0133",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 133,
+      "text_ar": "يا حبيبة رسول الله والله إن قرابة رسول الله أحب ‎SE‏ من قرابتي\nوإنك لأحب ‎J‏ من عائشة أبنتي ولوددت يوم مات ‎Spl‏ إن مت ولا\nأبقى بعده ‎Ul pti‏ أعرفك وأعرف فضلك وشرفك وأمنعك حقك\nوميرائك من رسول الله إلا أن سمعت أباك_رسول الله يقول :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0134",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 134,
+      "text_ar": "(لا نورث ما تركناه فهو صدقة) .\nفقالت أرأيتكما أن حدثتكما حديئا عن رسول الله تعرفانه وتفعلان به\nقالا نعم .\nفقالت :\nنشدتكما بالله ألم تسمعا رسول الله يقول :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0135",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 135,
+      "text_ar": "رضا فاطمة من رضاي وسخط فاطمة من سخطي فمن أحب\nفاطمة أبنتي فقد أحبني ومن أرضى فاطمة فقد أرضابي .\n‎YU‏ : 7",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0136",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 136,
+      "text_ar": "فأنتي أشهد الله وملائكته أنكما أسخطتماني وما ‎glee yf‏ ولئن\nلقيت النبي لا شكونكما إليه .\nفقال أبو بكر :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0137",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 137,
+      "text_ar": "أنا عائد بالله ‎dle‏ من سخطه وسخطك يافاطمة ! .\nثم أنتحب ‎gl‏ بكر يبكي حتى كادت نفسه أن تزهق .\nوهي تقول :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0138",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 138,
+      "text_ar": "والله لأدعون الله عليك في كل صلاة أليها ! ثم خرج ‎LSU‏\n‏فأجتمع إليه الناس فقال لهم : ‎١‏",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0139",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 139,
+      "text_ar": "يبيت كل رجل منكم معانقاً حليلته مسروراً باهله وتركتموي\nوأنا فيه لا حاجة لي في بيعتكم أقيلوني بيعتي ....",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0140",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 140,
+      "text_ar": "وقضية إرسال ‎yl‏ بكر عمر إلى بيت الإمام علي (عليه\nالسلام) وحرق الباب ‎iby‏ أهل الدار ومنهم السيدة فاطمة الزهراء (\nعليها السلام) لحرق الدار قد ذكرت في كتب السنة ‎Seal‏ : تاريخ\nأبي. الفداء ج١‏ . ص55 ‎١‏ طبع دار المعرفة . والعقد الفريد جه 6\nص”١‏ طبع دار الكتب العلمية عام ‎5٠65‏ ١ه‏ ء وتاريخ الطبري ‎Ve‏\n‏؛ ص”7 7 طبع دار الكتب العلمية عام / ‎4٠‏ ١ه‏ وغيرها من المصادر\nنقلوا حدث الحجوم على الدار وحرق بيت فاطمة(+#يقع) (عليها\nالسلام) و .... و ......\nقال الله تعالى في كتابه الكريم :\n‎vA‏ |",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0141",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 141,
+      "text_ar": "‎OD)‏ الذين يؤذون الله ورسوله لعنهم الله في الدنيا والآخرة\nوأعد هم عذاباً مهيناً)» .\nعن المسور بن مخزمة عن رسول الله يقول ( إنما فاطمة أبنتي\nبضعة مني يريبني ما رابا ويؤذيني ما ‎(UIST‏\n‏علي مع الحق :\nالنقطة الخانية :\nومن ‎Ob gle CSL‏ الصديقة الكبرى فاطمة الزهراء(#قيقة)\nلم ‎als‏ أبا بكر ورحلت من الدنيا (##يخ)ساخطة وغاضبة عليه « ‎by‏\n‏يبايع الإمام علي ( عليه ‎via‏ بكر في ‎te‏ على ما نقله\nالبخاري .\nوقد روي في الكثير من مصادر أهل السنة أن النبي الأكرم\n‎(Ey‏ قال:\n‎.١‏ (( هن مات بغير إمام مات ميتة جاهلية )) \".\n\". ((من مات وليس في عنقه ‎day‏ مات ميتة جاهلية)) \".\n‎yy) .\"“‏ خرج من الطاعة وفارق الجماعة فمات مات ميتة\nجاهلية )) \".\n© حلية الأولياء » ج7 ء ص »5 ء مطبعة دار الفكر .\n‎hae ©‏ داودء ص704 ء ومسند أحمدج4 ‎AN oe‏\n© صحيح مسلم ء ‎Ve‏ ء ‎Wye‏ والستن الكيرى » ج4 ء ص67١‏ .\n4",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0142",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 142,
+      "text_ar": "إلى هنا أتضح لك أيها القارئ الكريم ‎Ob‏ لزوم البيعة مع الإمام\nوعدم الخروج من طاعته ‎pl‏ مسلّم وليس قابلاً للترديد .\nومن جانب آخر علمنا ‎ob‏ الصديقة الطاهرة فاطمة\nالزهراء(2[ينِ) لم تبايع أبا بكر حتى رحلت عن الدنيا » علماً ‎ob‏ هذه\nالسيدة ‎(ait)‏ كانت سيدة نساء أهل الجنة وبضعة الرسول ‎(BE)‏\n‏وهنا لا بد لنا أن ‎tt‏ أحد الأمور الغلاثة الآتية :\n‎.١‏ هذه الروايات المذكورة بأن الأعتقاد بالإمام وبيعته وعدم\nالخروج من طاعته لا تعد لأزمة أو غير صحيحة .\n؟. أن السيدة عليها السلام مضت ‎dy‏ تعمل وفق ذلك - نعوذ\nبالله - مع انما سيدة نساء ‎Jal‏ اجنة ‎(Silt)‏\n‏*. خلافة أبي بكر كانت غير شرعية وصحيحة وإمامة الإمام علي\n( عليه السلام) كانت صحيحة وعلى الحق ولذلك كانت\nالسيدة فاطمة الزهراء (غ2]كن)معتقدة وملتزمة ومؤيدة لأمامة\nالإمام علي (عليه السلام) .\nومن الواضح وامعلوم بأن ألي مسلم لا يختار الأمرين ‎١‏ لأولين ويدعي\n‎ere‏ بالخصوص بعد ما تفهم منطوق ومفهوم الروايات المذكورة بل\nسوف يختار الأمر الغالث وهو الصحيح .\n‎od‏ 3",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0143",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 143,
+      "text_ar": "وكذلك من اللازم قبول هذه الأمور الثلاثة في حق الإمام علي\n‎ale)‏ السلام) أيضاً ‎OY‏ مضمون هذه الروايات المذكورة أنه إذا\nمات الشخص من غير ‎alo}‏ - والعياذ بالله- مات ميتة جاهلية .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0144",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 144,
+      "text_ar": "فهل ينطبق ذلك في حق الإمام علي ( عليه السلام) الذي\nيعد عدل القرآن كما جاء في حديث الثقلين ؟ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0145",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 145,
+      "text_ar": "وروي عن ‎Ce EB coll‏ قال : (( علي مع الحق والحق مع\nعلي ‎oly‏ يفترقا حتى يردا ‎gle‏ الحوض يوم القيامة)) \".",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0146",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 146,
+      "text_ar": "وروي عنه ‎Lani BR‏ قال : (( علي مع القرآن والقرآن مع\nعلي لا يفترقان حتى يردا علي الحوض )) ”.",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0147",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 147,
+      "text_ar": "(( علي مع الحق ‎OF Wy . OT ly‏ مع علي ولن يفترقا حتى\nيردا علي الحوض ) *.",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0148",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 148,
+      "text_ar": "(علي مني بمترلة رأسي من بدي ) “.\n)© تاريخ بغداد ‏ ج4١‏ » ‎OTT Ge‏ مطبعة دار الكتب العربي . -_\n© الصواعق ‎BA‏ » ص ‎VIN‏ مكتبة القاهرة عام 4 ‎LANTAG‏\n‏() ربيع الأبرار » ج١‏ ء ‎ ATAGS‏ مطبعة أمير عام ١41١ه.‏\n() تاريخ بغداد ‎«Vee‏ ص١1‏ ء مطبعة دار الكتاب العربي . .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0149",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 149,
+      "text_ar": "فهل يمكننا أن نتصور ‎Ob‏ طول مدة الستة أشهر كما في صحيح\nالبخاري مم تبايع السيدة فاطمة الزهراء ( عليها السلام) أبا بكر\nفهل كانت تعيش حياة الجاهلية خلال هذه المدة — والعياذ بالله- .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0150",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 150,
+      "text_ar": "وهل هذه الروايات التي تنص على من مات بغير أمام ...... .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0151",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 151,
+      "text_ar": "تشتمل اللحظات الأولى بعد وفاة النبي إلى الوقت الذي لم يتعين\nفيه ‎gi‏ بكر ؟ وإن هذه الصورة بقيت الأمة الإسلامية من بعد\n‎(BR a!‏ إمام حتى للحظة الواحدة ؟ أقرأ وتدبر؟ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0152",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 152,
+      "text_ar": "وصلنا إلى نقطة مهمة وحساسة يعجز عن وصفها اللسان\nوالقلم ولا أعلم من أي مكان أبداً وأنتهي عن كارثة حلّت على\n‎OLY!‏ وأهله ويحاول البعض أن يعتم عليها ‎UY‏ فيها حقائق مهمة\nتكشف الأعمال الشنيعة التي أرتكبها القوم وحكام الجور وهتاك\nمؤامرات حيكت ضد بيت الرسالة وأنقلاب دموي على المبادئ\nوالنصوص هذه ‎OS‏ مملوءة من الأخبار الكاشفة عن هجوم الدار\nواسقاط المحسن الشهيد ‎ily‏ الإمام ‎(GB) dle‏ بشكل لا يتمكن القلم\nوصفه وهذه القضية ليست بعيدة عن ‎pti ogy‏ ما سرعان ما نسيت\nالأمة عهودها والتزاماهًا ؟ ؟ ؟ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0153",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 153,
+      "text_ar": "والأخبار كثيرة خرجت عن التواتر تروي هذه الأمور وربما\nالبعض يقول :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0154",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 154,
+      "text_ar": "هذه طائفية أو مبالغة أو أثارة ‎Ad‏ أو التفرقة أو المس بكرامة\nبعض الأفراد المعروفين ولكن العاقل المنصف يحكم علي غير ذلك عندما\nيطالع النصوص والتاريخ المروية عن السنة فضلاً عن الشيعة ؟ .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0155",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 155,
+      "text_ar": "‎Cally‏ ليس ذني بل ذنب الكتب والتاريخ والأخبار؟",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0156",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 156,
+      "text_ar": "‏عندما ألف المرحوم العلامة الأميني كتابه الشريق-الغدير أحتج\nعلماء السنة عتد الملك قيصل الأول فقالوا : هذا كتاب خطير علينا؟\n‎Ati‏ : :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0157",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 157,
+      "text_ar": "أجمعوا كتبكم كي لا يكتب عن الغدير فهل جاء العلامة الأميني\nمصدر شيعي بل كلها من مصادر السنة .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0158",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 158,
+      "text_ar": "وفي هذه امجال الأفضل مراجعة ‎OLS‏ الأحتجاج والمراجعات\nوفاجعة الزهراء (+ذالتلا:)والسقيفة وغيرها من المؤلفات القيمة التي\nتروي عن مصادر أهل السنة .\nالحق يقال :",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0159",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 159,
+      "text_ar": "الأفضل الأعتراف بالحق وكما ذكر في الحديث الأعتراف\nفضيلة .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0160",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 160,
+      "text_ar": "أنشدكم بالله لو كان هذا الاعتداء على أحد حكام الجور أو\nبناقم لسكت الأخرين فلماذا بائكم تجر وبائنا لا تجرد في الفترة الأخيرة\nفي سئة 437 ذه حدثت فاجعة عظيمة راح ضحيتها أكثر من ‎٠١‏\n‏شخص شهداء في منطقة النخيب ‎ols‏ وعدوانا والقضية لفقوها\nوتجاهلوا ما صار فالقوم أبناء القوم والتاريخ يعيد نفسه ولكنه واضح\nكالشمس في رابعة النهار .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0161",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 161,
+      "text_ar": "ونبث شكوانا إلى المنتقم الحقيقي لآل محمد ‎aru By‏\nالأخذ بنار أمه فاطمة الزهراء (عليها السلام) أن يظهر ليخلصنا بما\nنحن فيه من المصائب والشجون والمحن ‎Ly‏ التاريخ يعيد نفسه حيث\nالأعداء قد تربصوا بنا للقضاء علينا لأننا نسير على طريق وخطى أهل\nالبيت المظلومين ليحقق الحق ويزهق الباطل ويقيم دولة ‎GLE‏ والسلام",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0162",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 162,
+      "text_ar": "فهو أمل المستضعفين 3 العام والكل ينتظر قدومه الشريف وأودع",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0163",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 163,
+      "text_ar": "القارئ الكريم في هذه الجولة المختصرة راجياً من الله ‎Sua‏ العلي القدير",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0164",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 164,
+      "text_ar": "أن يوفق الجميع إلى الخير والهداية والسير على هدى الطريق المستقيم",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0165",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 165,
+      "text_ar": "‏كربلاء المقدسة /باب الطاق أحمد الحائري الأسدي\nغفر الله له ورحم والديه",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0166",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 166,
+      "text_ar": "آثار المؤلف :\n‎.١‏ منأعلامكربلاء . 0\n\". فاطمة الزهراء (هذا الكتاب ) .\n¥- رجل العلم والتقى +\n¢. النجوم ‎AGLI‏ .\n5. من أعلام الفكر في كربلاء ( \" أجزاء ) :\n5. ملاحظات على معجم الأميني .\n¥. ملاحظات على فهرس النزاث .\n‎-A‏ حياة آية الله الحجة . _\n5. الكوكب الدري .\n٠.الأوليات‏ في كربلاء .\n‎١١‏ سمن دفن في كربلاء .\n‎IY‏ .من جنى على كربلاء ‎٠‏\n‎١‏ .تاريخ الحوزة العلمية في كربلاء .\n.تاريخ الأسر العلمية والآدبية في كربلاء .\n‎ogi SUSU 10‏ في العالم .\n7 .تاريخ اطرجعية الدينية . ‎a‏\n‏.قي ‎pat‏ الأستاذ .\n.الوصية وأحكامها .\nيفا",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0167",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 167,
+      "text_ar": "7.الغخيبة امرض السائد في اللجتمع .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0168",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 168,
+      "text_ar": ". ‏إلى الإسلام من جديد‎ Sagal. PV\nvA",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0169",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 169,
+      "text_ar": "\".من سرقني .\n9.وظائف الإفامية فى عصر الغيبة .\n‎٠‏ أضواء على حياة الرسول ‎٠‏ .\n‎dyilis. ¢'‏ العصر . .\n‎ey‏ -التبليغ وفوائده .\n‎mile abl. 4“‏ على لوحة التساؤلات .\n££ .حنائق عن الشعائر الحسينية .\n£0 .أضرار الحسد .\n1.من قصص العلماء .\n¥£ .معجزات ‎Jal‏ البيت ( عليهم السلام) .\n‎ta‏ أهمية العلم والتقوى فى الإسلام .\n4 .كيف نعيش مع الناس .\n.الكذب وسيلة الهلاك .\n١.نظرة‏ إلى أوضاع المسلمين .\n\".ناس أخر الزمان .\n‎OF‏ .من هو الطسؤول .\n5 الاداب ‎Aygisehl‏ .\n0 التربية الإسلامية وغيرها .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0170",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 170,
+      "text_ar": "وأما الكتب المحققة منها :\n‎.١‏ نضرة الناظرين .",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0171",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 171,
+      "text_ar": "\". الرحلة العراقية .\n. حوادث الأيام .\n؛. السبيل الجدد .\n5. الأسناد ‎grab!‏ .\n1- ضياء اطفازات .\n‎.Y‏ مصفى اطقال .\n8. اللمعة التاريخية .\n4. منار افدى .\n‎٠‏ .لباب ‎ol‏ .\n١.الروضة‏ البهية .\n‎VY‏ .بقايا الأطياب.\n‎٠‏ .نقباء البشر .\n‎bite‏ الأطياب .\n0.نقباء البشر .\n5.الكرام البررة .\n‎dat. ١‏ الأخلاء .\n‎aad. 1A‏ الكملاء .\n14 .ملاحظات على المنتخب .\nوله مقالات كثيرة في مختلف اللمجالات والجرائد وله مقدمات على\nمجموعة من الكتب .\n3",
+      "page_number": 21
+    },
+    {
+      "paragraph_id": "bookss_024_paragraph_0172",
+      "book_id": "bookss_024",
+      "section_id": "bookss_024_section_002",
+      "paragraph_number": 172,
+      "text_ar": "8 0 5 ‘eer... Pres Bs,\n5 re 1 bie:\n8 0\nFr , 2 2 ¥\nAe wi.\nee ee\nya ‏عا‎ Cg\n‏1و‎ aug. | ‏يا‎\n‎eo aqet\n١ ٠ 0 ‏هعم‎\n‎5 one\nay . too\n1 BA ro VEY\nWM. ee\n‏ف 3 داس‎\nbf Ones geek | <5\nop BS EE :\n‏طبع على نفقة الحاج حاتم بن الحاج نعمة العبد‎\n‏رنكي الأسدي الكر بلاني‎\n‏حرم لاه - باخام‎ \\V ‏نعمة بوم‎ ia ‏توق‎\n‎00 ‏على روحه‎ Anata",
+      "page_number": 21
+    }
+  ]
 }
