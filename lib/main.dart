@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'config/theme/app_theme.dart';
 import 'providers/auth_providers.dart';
 import 'providers/language_providers.dart';
@@ -35,6 +36,22 @@ void main() async {
 
     // Set up background message handler
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+    // Initialize AdMob with G-rating filter (Family-safe, no violence/nudity/gambling)
+    try {
+      await MobileAds.instance.initialize();
+
+      final RequestConfiguration requestConfiguration = RequestConfiguration(
+        maxAdContentRating: MaxAdContentRating.g,
+        tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,
+      );
+
+      MobileAds.instance.updateRequestConfiguration(requestConfiguration);
+      debugPrint('AdMob initialized with G-rating filter');
+    } catch (e) {
+      debugPrint('AdMob initialization error: $e');
+      // Non-critical, app can continue without ads
+    }
 
     // Initialize notification service
     // Note: This will request permissions and register FCM token

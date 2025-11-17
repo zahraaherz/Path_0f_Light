@@ -21,6 +21,7 @@ import '../quran/quran_screen.dart';
 import 'collection_screen.dart';
 import '../../utils/responsive.dart';
 import '../../l10n/app_localizations.dart';
+import "../../widgets/halal_banner_ad.dart";
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -552,6 +553,10 @@ class HomePage extends ConsumerWidget {
             // Audio Library
             const SliverToBoxAdapter(child: AudioLibraryWidget()),
 
+            // Banner Ad
+            const SliverToBoxAdapter(child: HalalBannerAd()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
         ),
