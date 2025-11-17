@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/collection/habit_tracker.dart';
 import '../../providers/collection_providers.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Widget to display daily checklist with completion tracking
 class ChecklistViewWidget extends ConsumerWidget {
@@ -41,6 +42,7 @@ class ChecklistViewWidget extends ConsumerWidget {
 
   /// Build stats header
   Widget _buildStatsHeader(BuildContext context, Map<String, dynamic> stats) {
+    final l10n = AppLocalizations.of(context)!;
     final totalItems = stats['total_items'] as int;
     final completedItems = stats['completed_items'] as int;
     final percentage = stats['completion_percentage'] as double;
@@ -66,14 +68,14 @@ class ChecklistViewWidget extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Today\'s Progress',
+                    l10n.todaysProgress,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    '$completedItems of $totalItems completed',
+                    l10n.completedOf.replaceAll('{completed}', completedItems.toString()).replaceAll('{total}', totalItems.toString()),
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
@@ -98,7 +100,7 @@ class ChecklistViewWidget extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            '${percentage.toStringAsFixed(0)}% Complete',
+            l10n.percentComplete.replaceAll('{percent}', percentage.toStringAsFixed(0)),
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
@@ -179,6 +181,7 @@ class ChecklistViewWidget extends ConsumerWidget {
 
   /// Build empty state
   Widget _buildEmptyState(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -190,12 +193,12 @@ class ChecklistViewWidget extends ConsumerWidget {
           ),
           const SizedBox(height: 16),
           Text(
-            'No items in today\'s checklist',
+            l10n.noItemsInTodaysChecklist,
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(height: 8),
           Text(
-            'Add items from your collection to track daily',
+            l10n.addItemsFromCollection,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: Theme.of(context)
                       .colorScheme
