@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/collection/collection_item.dart';
 import '../../providers/collection_providers.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/guest_access_providers.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Dialog for adding a new item to the collection
 class AddToCollectionDialog extends ConsumerStatefulWidget {

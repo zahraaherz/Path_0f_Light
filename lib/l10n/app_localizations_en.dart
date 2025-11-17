@@ -1094,4 +1094,254 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get qiyamah => 'Qiyamah';
+
+  @override
+  String get myCollection => 'My Collection';
+
+  @override
+  String get signUp => 'Sign Up';
+
+  @override
+  String get changeViewMode => 'Change view mode';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get favorites => 'Favorites';
+
+  @override
+  String get yourCollectionIsEmpty => 'Your collection is empty';
+
+  @override
+  String get noItemsInThisCategory => 'No items in this category';
+
+  @override
+  String get addDuasSurahsZiyarats => 'Add Du\'as, Surahs, Ziyarats and more';
+
+  @override
+  String get addItem => 'Add Item';
+
+  @override
+  String get noFavoritesYet => 'No favorites yet';
+
+  @override
+  String get addItemsToFavorites =>
+      'Add items to your favorites by tapping the star icon';
+
+  @override
+  String get tapStarIconToAdd => 'Tap the star icon to add items to favorites';
+
+  @override
+  String get deleteItem => 'Delete Item';
+
+  @override
+  String get areYouSureDelete => 'Are you sure you want to delete this item?';
+
+  @override
+  String areYouSureDeleteItem(String title) {
+    return 'Are you sure you want to delete $title?';
+  }
+
+  @override
+  String get itemDeleted => 'Item deleted successfully';
+
+  @override
+  String get searchCollection => 'Search Collection';
+
+  @override
+  String get searchByTitleTextTags => 'Search by title, text, or tags...';
+
+  @override
+  String searchResults(int count, Object query) {
+    return '$count results';
+  }
+
+  @override
+  String get noResultsFound => 'No results found';
+
+  @override
+  String itemsSaved(int count) {
+    return '$count items saved';
+  }
+
+  @override
+  String daysAsGuest(int count) {
+    return '$count days as guest';
+  }
+
+  @override
+  String get benefitsOfAccount => 'Benefits of creating an account:';
+
+  @override
+  String get syncAcrossDevices => 'Sync across devices';
+
+  @override
+  String get neverLoseData => 'Never lose your data';
+
+  @override
+  String get accessFromAllDevices => 'Access from all devices';
+
+  @override
+  String get backupAndRestore => 'Backup and restore';
+
+  @override
+  String get maybeLater => 'Maybe Later';
+
+  @override
+  String get favorite => 'Favorite';
+
+  @override
+  String get unfavorite => 'Unfavorite';
+
+  @override
+  String get todaysProgress => 'Today\'s Progress';
+
+  @override
+  String completedOf(int completed, int total) {
+    return '$completed of $total completed';
+  }
+
+  @override
+  String percentComplete(int percent) {
+    return '$percent% complete';
+  }
+
+  @override
+  String get noItemsInTodaysChecklist => 'No items in today\'s checklist';
+
+  @override
+  String get addItemsFromCollection => 'Add items from your collection';
+
+  @override
+  String get addToCollection => 'Add to Collection';
+
+  @override
+  String get type => 'Type';
+
+  @override
+  String get selectType => 'Select Type';
+
+  @override
+  String get category => 'Category';
+
+  @override
+  String get titleEnglish => 'Title (English)';
+
+  @override
+  String get enterTitleEnglish => 'Enter title in English';
+
+  @override
+  String get titleRequired => 'Title is required';
+
+  @override
+  String get titleArabic => 'Title (Arabic)';
+
+  @override
+  String get enterTitleArabic => 'Enter title in Arabic';
+
+  @override
+  String get arabicTextRequired => 'Arabic Text (Required)';
+
+  @override
+  String get enterArabicText => 'Enter Arabic text';
+
+  @override
+  String get arabicTextIsRequired => 'Arabic text is required';
+
+  @override
+  String get enterTranslation => 'Enter translation';
+
+  @override
+  String get enterTransliteration => 'Enter transliteration';
+
+  @override
+  String get enterSource => 'Enter source reference';
+
+  @override
+  String get personalNotes => 'Personal Notes';
+
+  @override
+  String get addPersonalNotes => 'Add your personal notes';
+
+  @override
+  String get tags => 'Tags';
+
+  @override
+  String get separateTagsWithCommas => 'Separate tags with commas';
+
+  @override
+  String get itemAddedSuccessfully => 'Item added successfully';
+
+  @override
+  String get dua => 'Du\'a';
+
+  @override
+  String get surah => 'Surah';
+
+  @override
+  String get ayah => 'Ayah';
+
+  @override
+  String get ziyarat => 'Ziyarat';
+
+  @override
+  String get passage => 'Passage';
+
+  @override
+  String get dhikr => 'Dhikr';
+
+  @override
+  String get custom => 'Custom';
+
+  @override
+  String get morning => 'Morning';
+
+  @override
+  String get evening => 'Evening';
+
+  @override
+  String get friday => 'Friday';
+
+  @override
+  String get ramadhan => 'Ramadhan';
+
+  @override
+  String get muharram => 'Muharram';
+
+  @override
+  String get safar => 'Safar';
+
+  @override
+  String get rajab => 'Rajab';
+
+  @override
+  String get shaban => 'Sha\'ban';
+
+  @override
+  String get daily => 'Daily';
+
+  @override
+  String get weekly => 'Weekly';
+
+  @override
+  String get monthly => 'Monthly';
+
+  @override
+  String get specialOccasions => 'Special Occasions';
+
+  @override
+  String get protection => 'Protection';
+
+  @override
+  String get forgiveness => 'Forgiveness';
+
+  @override
+  String get gratitude => 'Gratitude';
+
+  @override
+  String get healing => 'Healing';
+
+  @override
+  String get guidance => 'Guidance';
 }

@@ -1093,4 +1093,255 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get qiyamah => 'القيامة';
+
+  @override
+  String get myCollection => 'مجموعتي';
+
+  @override
+  String get signUp => 'التسجيل';
+
+  @override
+  String get changeViewMode => 'تغيير وضع العرض';
+
+  @override
+  String get all => 'الكل';
+
+  @override
+  String get favorites => 'المفضلة';
+
+  @override
+  String get yourCollectionIsEmpty => 'مجموعتك فارغة';
+
+  @override
+  String get noItemsInThisCategory => 'لا توجد عناصر في هذه الفئة';
+
+  @override
+  String get addDuasSurahsZiyarats => 'أضف أدعية وسوراً وزيارات وأكثر';
+
+  @override
+  String get addItem => 'إضافة عنصر';
+
+  @override
+  String get noFavoritesYet => 'لا توجد مفضلات بعد';
+
+  @override
+  String get addItemsToFavorites =>
+      'Add items to your favorites by tapping the star icon';
+
+  @override
+  String get tapStarIconToAdd =>
+      'انقر على أيقونة النجمة على العناصر لإضافتها هنا';
+
+  @override
+  String get deleteItem => 'حذف العنصر';
+
+  @override
+  String get areYouSureDelete => 'Are you sure you want to delete this item?';
+
+  @override
+  String areYouSureDeleteItem(String title) {
+    return 'هل أنت متأكد من حذف \"$title\"؟';
+  }
+
+  @override
+  String get itemDeleted => 'تم حذف العنصر';
+
+  @override
+  String get searchCollection => 'البحث في المجموعة';
+
+  @override
+  String get searchByTitleTextTags => 'البحث بالعنوان أو النص أو العلامات...';
+
+  @override
+  String searchResults(int count, Object query) {
+    return 'البحث: \"$query\"';
+  }
+
+  @override
+  String get noResultsFound => 'لم يتم العثور على نتائج';
+
+  @override
+  String itemsSaved(int count) {
+    return '$count عناصر محفوظة';
+  }
+
+  @override
+  String daysAsGuest(int count) {
+    return '$count أيام كضيف';
+  }
+
+  @override
+  String get benefitsOfAccount => 'مزايا إنشاء حساب:';
+
+  @override
+  String get syncAcrossDevices => 'مزامنة عبر جميع الأجهزة';
+
+  @override
+  String get neverLoseData => 'لا تفقد بياناتك أبداً';
+
+  @override
+  String get accessFromAllDevices => 'الوصول من الويب والهاتف والتابلت';
+
+  @override
+  String get backupAndRestore => 'النسخ الاحتياطي والاستعادة';
+
+  @override
+  String get maybeLater => 'ربما لاحقاً';
+
+  @override
+  String get favorite => 'مفضل';
+
+  @override
+  String get unfavorite => 'إزالة من المفضلة';
+
+  @override
+  String get todaysProgress => 'تقدم اليوم';
+
+  @override
+  String completedOf(int completed, int total) {
+    return '$completed من $total مكتمل';
+  }
+
+  @override
+  String percentComplete(int percent) {
+    return '$percent% مكتمل';
+  }
+
+  @override
+  String get noItemsInTodaysChecklist => 'لا توجد عناصر في قائمة اليوم';
+
+  @override
+  String get addItemsFromCollection => 'أضف عناصر من مجموعتك للمتابعة اليومية';
+
+  @override
+  String get addToCollection => 'إضافة إلى المجموعة';
+
+  @override
+  String get type => 'النوع';
+
+  @override
+  String get selectType => 'اختر النوع';
+
+  @override
+  String get category => 'الفئة';
+
+  @override
+  String get titleEnglish => 'العنوان (بالإنجليزية)';
+
+  @override
+  String get enterTitleEnglish => 'أدخل العنوان بالإنجليزية';
+
+  @override
+  String get titleRequired => 'العنوان مطلوب';
+
+  @override
+  String get titleArabic => 'العنوان (بالعربية)';
+
+  @override
+  String get enterTitleArabic => 'أدخل العنوان بالعربية';
+
+  @override
+  String get arabicTextRequired => 'النص العربي *';
+
+  @override
+  String get enterArabicText => 'أدخل النص بالعربية';
+
+  @override
+  String get arabicTextIsRequired => 'النص العربي مطلوب';
+
+  @override
+  String get enterTranslation => 'أدخل الترجمة بالإنجليزية';
+
+  @override
+  String get enterTransliteration => 'أدخل النقحرة';
+
+  @override
+  String get enterSource => 'مثال: الصحيفة السجادية، الدعاء 23';
+
+  @override
+  String get personalNotes => 'ملاحظات شخصية';
+
+  @override
+  String get addPersonalNotes => 'أضف ملاحظاتك الشخصية';
+
+  @override
+  String get tags => 'علامات';
+
+  @override
+  String get separateTagsWithCommas => 'افصل العلامات بفواصل';
+
+  @override
+  String get itemAddedSuccessfully => 'تم إضافة العنصر إلى المجموعة بنجاح!';
+
+  @override
+  String get dua => 'دعاء';
+
+  @override
+  String get surah => 'سورة';
+
+  @override
+  String get ayah => 'آية';
+
+  @override
+  String get ziyarat => 'زيارة';
+
+  @override
+  String get passage => 'مقطع';
+
+  @override
+  String get dhikr => 'ذكر';
+
+  @override
+  String get custom => 'مخصص';
+
+  @override
+  String get morning => 'الصباح';
+
+  @override
+  String get evening => 'المساء';
+
+  @override
+  String get friday => 'الجمعة';
+
+  @override
+  String get ramadhan => 'رمضان';
+
+  @override
+  String get muharram => 'محرم';
+
+  @override
+  String get safar => 'صفر';
+
+  @override
+  String get rajab => 'رجب';
+
+  @override
+  String get shaban => 'شعبان';
+
+  @override
+  String get daily => 'يومي';
+
+  @override
+  String get weekly => 'أسبوعي';
+
+  @override
+  String get monthly => 'شهري';
+
+  @override
+  String get specialOccasions => 'مناسبات خاصة';
+
+  @override
+  String get protection => 'حماية';
+
+  @override
+  String get forgiveness => 'مغفرة';
+
+  @override
+  String get gratitude => 'شكر';
+
+  @override
+  String get healing => 'شفاء';
+
+  @override
+  String get guidance => 'هداية';
 }

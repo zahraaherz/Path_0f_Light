@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/collection/habit_tracker.dart';
 import '../../providers/collection_providers.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Widget to display daily checklist with completion tracking
 class ChecklistViewWidget extends ConsumerWidget {
@@ -75,7 +75,7 @@ class ChecklistViewWidget extends ConsumerWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    l10n.completedOf.replaceAll('{completed}', completedItems.toString()).replaceAll('{total}', totalItems.toString()),
+                    l10n.completedOf(completedItems, totalItems),
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
@@ -100,7 +100,7 @@ class ChecklistViewWidget extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            l10n.percentComplete.replaceAll('{percent}', percentage.toStringAsFixed(0)),
+            l10n.percentComplete(percentage.toInt()),
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),

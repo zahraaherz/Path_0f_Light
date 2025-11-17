@@ -8,7 +8,7 @@ import '../../widgets/collection/collection_item_card.dart';
 import '../../widgets/collection/checklist_view_widget.dart';
 import '../../widgets/collection/add_to_collection_dialog.dart';
 import '../auth/register_screen.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 
 /// My Collection Screen - User's Personal Library
 class CollectionScreen extends ConsumerStatefulWidget {
@@ -397,7 +397,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
       context: context,
       builder: (context) => AlertDialog(
         title: Text(l10n.deleteItem),
-        content: Text(l10n.areYouSureDeleteItem.replaceAll('{title}', item.title)),
+        content: Text(l10n.areYouSureDeleteItem(item.title)),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
@@ -460,7 +460,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               _buildStatRow(
                 context,
                 Icons.collections_bookmark,
-                l10n.itemsSaved.replaceAll('{count}', stats.itemsCreated.toString()),
+                l10n.itemsSaved(stats.itemsCreated),
               ),
               SizedBox(height: r.spaceSmall),
             ],
@@ -468,7 +468,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               _buildStatRow(
                 context,
                 Icons.calendar_today,
-                l10n.daysAsGuest.replaceAll('{count}', stats.daysSinceCreation.toString()),
+                l10n.daysAsGuest(stats.daysSinceCreation),
               ),
               SizedBox(height: r.spaceMedium),
             ],
@@ -548,21 +548,29 @@ class _SearchResultsScreen extends ConsumerWidget {
     final searchResultsAsync =
         ref.watch(searchCollectionItemsProvider(searchQuery));
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.searchResults.replaceAll('{query}', searchQuery)),
+    return searchResultsAsync.when(
+      loading: () => Scaffold(
+        appBar: AppBar(
+          title: Text(l10n.searchCollection),
+        ),
+        body: const Center(child: CircularProgressIndicator()),
       ),
-      body: searchResultsAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(child: Text('${l10n.error}: $error')),
-        data: (items) {
-          if (items.isEmpty) {
-            return Center(
-              child: Text(l10n.noResultsFound),
-            );
-          }
-
-          return ListView.builder(
+      error: (error, stack) => Scaffold(
+        appBar: AppBar(
+          title: Text(l10n.searchCollection),
+        ),
+        body: Center(child: Text('${l10n.error}: $error')),
+      ),
+      data: (items) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(l10n.searchResults(items.length, searchQuery)),
+          ),
+          body: items.isEmpty
+              ? Center(
+                  child: Text(l10n.noResultsFound),
+                )
+              : ListView.builder(
             padding: EdgeInsets.all(r.paddingMedium),
             itemCount: items.length,
             itemBuilder: (context, index) {
@@ -587,9 +595,9 @@ class _SearchResultsScreen extends ConsumerWidget {
                 },
               );
             },
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

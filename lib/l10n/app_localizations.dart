@@ -2245,6 +2245,480 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Qiyamah'**
   String get qiyamah;
+
+  /// No description provided for @myCollection.
+  ///
+  /// In en, this message translates to:
+  /// **'My Collection'**
+  String get myCollection;
+
+  /// No description provided for @signUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Up'**
+  String get signUp;
+
+  /// No description provided for @changeViewMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Change view mode'**
+  String get changeViewMode;
+
+  /// No description provided for @all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get all;
+
+  /// No description provided for @favorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favorites;
+
+  /// No description provided for @yourCollectionIsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Your collection is empty'**
+  String get yourCollectionIsEmpty;
+
+  /// No description provided for @noItemsInThisCategory.
+  ///
+  /// In en, this message translates to:
+  /// **'No items in this category'**
+  String get noItemsInThisCategory;
+
+  /// No description provided for @addDuasSurahsZiyarats.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Du\'as, Surahs, Ziyarats and more'**
+  String get addDuasSurahsZiyarats;
+
+  /// No description provided for @addItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Item'**
+  String get addItem;
+
+  /// No description provided for @noFavoritesYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No favorites yet'**
+  String get noFavoritesYet;
+
+  /// No description provided for @addItemsToFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Add items to your favorites by tapping the star icon'**
+  String get addItemsToFavorites;
+
+  /// No description provided for @tapStarIconToAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the star icon to add items to favorites'**
+  String get tapStarIconToAdd;
+
+  /// No description provided for @deleteItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Item'**
+  String get deleteItem;
+
+  /// No description provided for @areYouSureDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete this item?'**
+  String get areYouSureDelete;
+
+  /// No description provided for @areYouSureDeleteItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to delete {title}?'**
+  String areYouSureDeleteItem(String title);
+
+  /// No description provided for @itemDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Item deleted successfully'**
+  String get itemDeleted;
+
+  /// No description provided for @searchCollection.
+  ///
+  /// In en, this message translates to:
+  /// **'Search Collection'**
+  String get searchCollection;
+
+  /// No description provided for @searchByTitleTextTags.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by title, text, or tags...'**
+  String get searchByTitleTextTags;
+
+  /// No description provided for @searchResults.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} results'**
+  String searchResults(int count, Object query);
+
+  /// No description provided for @noResultsFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No results found'**
+  String get noResultsFound;
+
+  /// No description provided for @itemsSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} items saved'**
+  String itemsSaved(int count);
+
+  /// No description provided for @daysAsGuest.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} days as guest'**
+  String daysAsGuest(int count);
+
+  /// No description provided for @benefitsOfAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Benefits of creating an account:'**
+  String get benefitsOfAccount;
+
+  /// No description provided for @syncAcrossDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync across devices'**
+  String get syncAcrossDevices;
+
+  /// No description provided for @neverLoseData.
+  ///
+  /// In en, this message translates to:
+  /// **'Never lose your data'**
+  String get neverLoseData;
+
+  /// No description provided for @accessFromAllDevices.
+  ///
+  /// In en, this message translates to:
+  /// **'Access from all devices'**
+  String get accessFromAllDevices;
+
+  /// No description provided for @backupAndRestore.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup and restore'**
+  String get backupAndRestore;
+
+  /// No description provided for @maybeLater.
+  ///
+  /// In en, this message translates to:
+  /// **'Maybe Later'**
+  String get maybeLater;
+
+  /// No description provided for @favorite.
+  ///
+  /// In en, this message translates to:
+  /// **'Favorite'**
+  String get favorite;
+
+  /// No description provided for @unfavorite.
+  ///
+  /// In en, this message translates to:
+  /// **'Unfavorite'**
+  String get unfavorite;
+
+  /// No description provided for @todaysProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Today\'s Progress'**
+  String get todaysProgress;
+
+  /// No description provided for @completedOf.
+  ///
+  /// In en, this message translates to:
+  /// **'{completed} of {total} completed'**
+  String completedOf(int completed, int total);
+
+  /// No description provided for @percentComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% complete'**
+  String percentComplete(int percent);
+
+  /// No description provided for @noItemsInTodaysChecklist.
+  ///
+  /// In en, this message translates to:
+  /// **'No items in today\'s checklist'**
+  String get noItemsInTodaysChecklist;
+
+  /// No description provided for @addItemsFromCollection.
+  ///
+  /// In en, this message translates to:
+  /// **'Add items from your collection'**
+  String get addItemsFromCollection;
+
+  /// No description provided for @addToCollection.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Collection'**
+  String get addToCollection;
+
+  /// No description provided for @type.
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get type;
+
+  /// No description provided for @selectType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Type'**
+  String get selectType;
+
+  /// No description provided for @category.
+  ///
+  /// In en, this message translates to:
+  /// **'Category'**
+  String get category;
+
+  /// No description provided for @titleEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'Title (English)'**
+  String get titleEnglish;
+
+  /// No description provided for @enterTitleEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter title in English'**
+  String get enterTitleEnglish;
+
+  /// No description provided for @titleRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Title is required'**
+  String get titleRequired;
+
+  /// No description provided for @titleArabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Title (Arabic)'**
+  String get titleArabic;
+
+  /// No description provided for @enterTitleArabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter title in Arabic'**
+  String get enterTitleArabic;
+
+  /// No description provided for @arabicTextRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic Text (Required)'**
+  String get arabicTextRequired;
+
+  /// No description provided for @enterArabicText.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Arabic text'**
+  String get enterArabicText;
+
+  /// No description provided for @arabicTextIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic text is required'**
+  String get arabicTextIsRequired;
+
+  /// No description provided for @enterTranslation.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter translation'**
+  String get enterTranslation;
+
+  /// No description provided for @enterTransliteration.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter transliteration'**
+  String get enterTransliteration;
+
+  /// No description provided for @enterSource.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter source reference'**
+  String get enterSource;
+
+  /// No description provided for @personalNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Notes'**
+  String get personalNotes;
+
+  /// No description provided for @addPersonalNotes.
+  ///
+  /// In en, this message translates to:
+  /// **'Add your personal notes'**
+  String get addPersonalNotes;
+
+  /// No description provided for @tags.
+  ///
+  /// In en, this message translates to:
+  /// **'Tags'**
+  String get tags;
+
+  /// No description provided for @separateTagsWithCommas.
+  ///
+  /// In en, this message translates to:
+  /// **'Separate tags with commas'**
+  String get separateTagsWithCommas;
+
+  /// No description provided for @itemAddedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Item added successfully'**
+  String get itemAddedSuccessfully;
+
+  /// No description provided for @dua.
+  ///
+  /// In en, this message translates to:
+  /// **'Du\'a'**
+  String get dua;
+
+  /// No description provided for @surah.
+  ///
+  /// In en, this message translates to:
+  /// **'Surah'**
+  String get surah;
+
+  /// No description provided for @ayah.
+  ///
+  /// In en, this message translates to:
+  /// **'Ayah'**
+  String get ayah;
+
+  /// No description provided for @ziyarat.
+  ///
+  /// In en, this message translates to:
+  /// **'Ziyarat'**
+  String get ziyarat;
+
+  /// No description provided for @passage.
+  ///
+  /// In en, this message translates to:
+  /// **'Passage'**
+  String get passage;
+
+  /// No description provided for @dhikr.
+  ///
+  /// In en, this message translates to:
+  /// **'Dhikr'**
+  String get dhikr;
+
+  /// No description provided for @custom.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom'**
+  String get custom;
+
+  /// No description provided for @morning.
+  ///
+  /// In en, this message translates to:
+  /// **'Morning'**
+  String get morning;
+
+  /// No description provided for @evening.
+  ///
+  /// In en, this message translates to:
+  /// **'Evening'**
+  String get evening;
+
+  /// No description provided for @friday.
+  ///
+  /// In en, this message translates to:
+  /// **'Friday'**
+  String get friday;
+
+  /// No description provided for @ramadhan.
+  ///
+  /// In en, this message translates to:
+  /// **'Ramadhan'**
+  String get ramadhan;
+
+  /// No description provided for @muharram.
+  ///
+  /// In en, this message translates to:
+  /// **'Muharram'**
+  String get muharram;
+
+  /// No description provided for @safar.
+  ///
+  /// In en, this message translates to:
+  /// **'Safar'**
+  String get safar;
+
+  /// No description provided for @rajab.
+  ///
+  /// In en, this message translates to:
+  /// **'Rajab'**
+  String get rajab;
+
+  /// No description provided for @shaban.
+  ///
+  /// In en, this message translates to:
+  /// **'Sha\'ban'**
+  String get shaban;
+
+  /// No description provided for @daily.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily'**
+  String get daily;
+
+  /// No description provided for @weekly.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly'**
+  String get weekly;
+
+  /// No description provided for @monthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get monthly;
+
+  /// No description provided for @specialOccasions.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Occasions'**
+  String get specialOccasions;
+
+  /// No description provided for @protection.
+  ///
+  /// In en, this message translates to:
+  /// **'Protection'**
+  String get protection;
+
+  /// No description provided for @forgiveness.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgiveness'**
+  String get forgiveness;
+
+  /// No description provided for @gratitude.
+  ///
+  /// In en, this message translates to:
+  /// **'Gratitude'**
+  String get gratitude;
+
+  /// No description provided for @healing.
+  ///
+  /// In en, this message translates to:
+  /// **'Healing'**
+  String get healing;
+
+  /// No description provided for @guidance.
+  ///
+  /// In en, this message translates to:
+  /// **'Guidance'**
+  String get guidance;
 }
 
 class _AppLocalizationsDelegate
