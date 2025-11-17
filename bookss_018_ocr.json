@@ -5,8 +5,8 @@
     "title_en": "The Political History of Imam Ali ibn Abi Talib",
     "author_ar": "عبدالله بن علي رستم",
     "author_en": "Abdullah ibn Ali Rustam",
-    "total_sections": 1,
-    "total_paragraphs": 0,
+    "total_sections": 7,
+    "total_paragraphs": 382,
     "language": "ar",
     "pdf_url": "",
     "original_filename": "تاريخ الإمام علي بن أبي طالب (ع) السياسي - عبدالله بن علي رستم.pdf",
@@ -23,9 +23,9 @@
     "category": "تاريخ",
     "processing_status": "completed",
     "total_pages": 116,
-    "total_characters": 230,
-    "total_words": 0,
-    "extraction_method": "pymupdf_low_content"
+    "total_characters": 97208,
+    "total_words": 17456,
+    "extraction_method": "tesseract_ocr_arabic"
   },
   "sections": [
     {
@@ -35,9 +35,3126 @@
       "title_ar": "القسم 1",
       "title_en": "Part 1",
       "startPosition": 0,
-      "endPosition": 230,
+      "endPosition": 15930,
       "estimated_page": 0
+    },
+    {
+      "section_id": "bookss_018_section_002",
+      "book_id": "bookss_018",
+      "section_number": 2,
+      "title_ar": "القسم 2",
+      "title_en": "Part 2",
+      "startPosition": 15930,
+      "endPosition": 31650,
+      "estimated_page": 24
+    },
+    {
+      "section_id": "bookss_018_section_003",
+      "book_id": "bookss_018",
+      "section_number": 3,
+      "title_ar": "القسم 3",
+      "title_en": "Part 3",
+      "startPosition": 31650,
+      "endPosition": 46915,
+      "estimated_page": 40
+    },
+    {
+      "section_id": "bookss_018_section_004",
+      "book_id": "bookss_018",
+      "section_number": 4,
+      "title_ar": "القسم 4",
+      "title_en": "Part 4",
+      "startPosition": 46915,
+      "endPosition": 62288,
+      "estimated_page": 56
+    },
+    {
+      "section_id": "bookss_018_section_005",
+      "book_id": "bookss_018",
+      "section_number": 5,
+      "title_ar": "القسم 5",
+      "title_en": "Part 5",
+      "startPosition": 62288,
+      "endPosition": 78076,
+      "estimated_page": 72
+    },
+    {
+      "section_id": "bookss_018_section_006",
+      "book_id": "bookss_018",
+      "section_number": 6,
+      "title_ar": "القسم 6",
+      "title_en": "Part 6",
+      "startPosition": 78076,
+      "endPosition": 93419,
+      "estimated_page": 89
+    },
+    {
+      "section_id": "bookss_018_section_007",
+      "book_id": "bookss_018",
+      "section_number": 7,
+      "title_ar": "القسم 7",
+      "title_en": "Part 7",
+      "startPosition": 93419,
+      "endPosition": 97196,
+      "estimated_page": 107
     }
   ],
-  "paragraphs": []
+  "paragraphs": [
+    {
+      "paragraph_id": "bookss_018_paragraph_0001",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 1,
+      "text_ar": "6 :\na\ni Reg |\n3 ‏الاه لام‎ i oe\n‏طال”‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0002",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 2,
+      "text_ar": "ٌ السياسية في حياة أمير المؤمكين ‎(putida)‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0003",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 3,
+      "text_ar": "ااه\n‎Bins‏\n‏باس ‎II‏\n‎dal)‏\n‎NES 1‏\nارم 4\nاما",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0004",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 4,
+      "text_ar": "قراءة موجزة عن بعض الأوضاع\nالسياسية في حياة أمير ‎Ce StI‏ (ميهسلم)\n‎oe‏ بقلم\nشبكة كتب الشيعة عبدالله بن علي رستم\n‎Nadie io shiabooks.net‏\n‎lal,‏ بديل > ‎mktba.net‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0005",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 5,
+      "text_ar": "‎HOD‏ ماه\nجع لفق ن كفزتم\n‎SSN A‏ 2\n‎eels A PVENN‏\n/\nالرويس - مفرق محلات محفوظ ستورز - بناية رمال\n‎SZ x‏ ص.ب: ‎١4/0406‏ هاتف: ‎SN JOEVYNY © AT /YAVIVE‏\n> مه 0\nل ‎eng‏ تلفاكس: ‎E-mail. almahajja@terranetlb . ١١/057841‏\n‎wwwdaralmahajacom info@daralmahajacom Capea!‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0006",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 6,
+      "text_ar": "إلى رمزي الحرية في حياتي والدي الكريمين ‎GD‏ منحاني\nالحب والعطف والرعاية وحرية التفكير.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0007",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 7,
+      "text_ar": "وإلى شركاء حياتي في السراء والضراء زوجتي وأبنائي الذين\nوهبوني جزءاً من وقتهم في كتابة هذا البحث.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0008",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 8,
+      "text_ar": "وإلى الصديق الغالي الذي نحت اسمه في قلبيء وما انفك لحظة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0009",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 9,
+      "text_ar": "وإلى الشخصية المثابرة في تشجيع الباحثين على طباعة\nإنتاجاتهم والوقوف معهم المهندس/ ‎dle‏ بن عبدالمحسن الشايب.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0010",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 10,
+      "text_ar": "حفظهم الله جميعاً ولا أراني مكروهاً فيهم...",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0011",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 11,
+      "text_ar": "‏الحمد لله رب العالمين والصلاة والسلام على أشرف",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0012",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 12,
+      "text_ar": "‏الأنبياء والمرسلين محمد وعلى آله الطيبين الطاهرين وأصحابه\nلا شك أن الدراسات التي تناولت شخصية أمير المؤمنين",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0013",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 13,
+      "text_ar": "‏علي بن أبي ‎RBI‏ كثيرة» ومتفاوتة من حيث المُوَّةٍ\nوالضَّعْفء الشمولية والاختصارء السَّرّْد والتحليل» وذلك\nلاعتماد مؤلّفي تلك الدراسات على منهج مُعَيّنَء قد نتفق معهم\nوقد لا نتّفق» إلا أنه في المحصلة النهائية أن هذه الشخصية\nحازت على بروز عالمي» ومع كثرة تلك الدراسات المطبوعة\nوالمخطوطة, القديمة والحديثة» ‎WAY)‏ ما نزال ‎See‏ إلى\nتناول هذه الشخصية في ‎JS‏ عَضْرِء لأنها بحر لا ينضب»\nفالقراءة الأرلى لتاريخ الإمام ‎RE‏ ليست كافيةء وتناول\nسكم الصادرة من ‎cote‏ والواردة ‎diy‏ تحتاج إلى تفكير\n‎UL‏ قَرَأَنَا شيئاً من سيرته» ‎OY‏ عقل الإنسان قاصر عن إدراك",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0014",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 14,
+      "text_ar": "مل ل ل تريخ الإمام علي بن أبي طالب ‎BEE‏ السياسي\nهذه الشخصية ‎ASU SI‏ وهذه الشخصية بلا شك تواكب كل\nعصر بمعطياته الثقافية والفكرية والسياسية وجميع جوانب\nالحياة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0015",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 15,
+      "text_ar": "ما في هذه الدراسة الموجزة هو تركيز على ‎BW‏ أحداثٍ\n‎Eel‏ في حياته ‎RE‏ ألا وهي: قتاله الناكثين والقاسطين\nوالمارقين» مع مرورٍ سريع في بداية البحث على أحداث\nالسقيفة وما أنتجته. باعتبار أن كل ‎gue‏ في حياته يستلزم $503\nفكريّة كبيرة في استقراء ما هو مطبوع عنه ‎WB‏ إضافة إلى ذلك\nأن بعض ما هو مطبوع يحتاج إلى قراءةٍ ‎Dale‏ بعيداً عن الانتماء\nالطائفي أو ‎aU‏ لذا فقد ‎CIE‏ جهدي في التركيز على بعض\nالدراسات المعاصرة» التي يعتقد بعض من يقرؤها ‎Ul‏ منهجية\nوموضوعية!! وهذه مغالطة وإن كانت تحمل شيئاً من الصحةء\nإلا أنه وكما أسلفتٌ أننا بحاجة إلى قراءة ما ‎OS‏ عنه لنحقق\nشيئاً من الشمولية» ثم ‎Bf‏ هذه الدراسة محاولة قد ‎atk‏ فيها\nوقد ‎‘eel‏ وهذا ما يقرره القارئٌ العزيز.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0016",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 16,
+      "text_ar": "ولا أظنني أدّعي ‎Spal‏ في طرحي ‎Levant SY clin‏ بيد\nمن ‎Gl ee‏ من الزلل والخطأء فقد ‎PUY SE‏ لقراءة ‎van‏\n‏الجوانب من سيرته ‎BE‏ ونعطيها بعداً أكبر وشموليةٍ منحازةٍ إلى\nالموضوعية والمنهجية التي هي والحق في خط واحدء وكذلك",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0017",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 17,
+      "text_ar": "2\nهذا الجانب (السياسي) الذي قد تطرأ عليه بعض التعديلات في\nالأيام والسنوات المقبلة وهذا ما أرجوه.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0018",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 18,
+      "text_ar": "‎UL.‏ أتمنى تحقيقها في أيّ دراسة تتعلق ‎Gb‏ شخصية من\nشخصيات بيت النبوة ‎ORE‏ وهي: وجود متخصصين في مجال\nالدراسة التي تأخذ مجراها من البحث والتحقيق» مثل: لو أتينا\nإلى الجانب السياسي» حبذا لو يتفرّغ أحد الباحثين السياسيين\n‎Lay‏ هذا الجانب من شخصية الإمام كد ويبحثها من ‎dee‏\n‏تخصصية» مع تسليط الضوءٍ على الأحداث السياسية التي مرّت\nعلى التاريخ ومقارنتها بما قام به الإمام من أدوار سياسيّة في\n‎cathe‏ قنك ‎OF‏ بستحي ليم رق مُق في مجال الدراسة»\nولا أقصد ذلك التحليل التاريخي!! بل ما أقصده وأرجوه هو:\nدراسة الجانب السياسي دراسةً مستفيضةً من متخصصء ذلك أن\nالمتخصص يمتلك الآليات التي ‎ORS‏ من إعطاء البحث ‎Aad‏\n‎iy‏ وشموليّة» وكذلك الجانب العبادي في سيرته ‎RE‏ حبذا\nلو صَدّرت من إنسان كرّس حياته شكلاً ومضموناً في الجانب\nالعبادي» ‎SB‏ ذلك له أثره من حيث القرّة ‎mally‏ وهكذا في\nالجوانب الأخرى من حياته وحياة أبناءه ‎MB‏ ولذا ‎Ob‏ هذه\nالدراسة وإن ‎EOS‏ غير متخصص في مجال السياسة, إلا أنها\nمحاولة أرجو فيها تقديمٌ شيءٍ جديد على مستوى الجانب\nالنظري.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0019",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 19,
+      "text_ar": "عل تريخ الإمام علي بن أبي طالب ‎BR‏ السياسي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0020",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 20,
+      "text_ar": "وقد ‎ode‏ بعض الدراسات في مجالات أخرى اطلعتٌ",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0021",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 21,
+      "text_ar": "عليها بأقلام متخصصين.ء مثل: الجانب القضائي» الجانب",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0022",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 22,
+      "text_ar": "‎eg ye‏ الجانب الفلسفي... وغيرها من الجوانب التي كان",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0023",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 23,
+      "text_ar": "‏عليٌ ‎BE‏ موجودٌ فيهاء ‎SL‏ الله من ‎Gat‏ لتلك الجوانب من",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0024",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 24,
+      "text_ar": "‎JL‏ الله العليّ القدير أن يوفقني في ‎RES‏ بحوث أخرى",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0025",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 25,
+      "text_ar": "‎Ve BEY YS ‏مختلفةً‎ O55 ‏أن‎ oly Be ‏عن سيرتهم‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0026",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 26,
+      "text_ar": "‏هو مطبوع. ‎SY‏ البَخْرٌ ‎EG‏ الذي يغرفٌ منهُ كل من ‎SN‏\n‏الحقيقة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0027",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 27,
+      "text_ar": "‎as\n‏عبدالله بن علي الرستم‎\nها147١ ‏رمضان‎\n‏ل‎ =",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0028",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 28,
+      "text_ar": "VV aes\n‏تعتبر شخصية أمير المؤمنين علي بن أبي طالب ة من‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0029",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 29,
+      "text_ar": "أبرز الشخصيات التي عاشت في كنف النبوة» وأعظم وأهم\nشخصية قبل وبعد رحيل النبي الأعظم ‎Be‏ وذلك لما تحمله\nمن مؤهلات وسمات جعلته يكون ‎HUES‏ ليس ‎OY‏ صهر\nرسول الله وَ؟! أو أنه ابن عمه؟! أو أو... ‎cat‏ بل ‎GY‏\n‏حمل تلك السمات التي لو كانت في شخص آخر لاحتل\nهذه المساحة في التاريخ الإسلامي التي احتلّها أمير\nوبإطلالة خاطفة على صفحات التاريخ الإسلامي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0030",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 30,
+      "text_ar": "والإنساني والعربي والعالمي بإمكاننا استلهام الكثير من الفوائد\nوالقضايا المختلفة في جميع مجالات الحياة المستلّة من\nحياته ‎RE‏ والتي ملأها بعلمه وحكمتهء بحكمه ‎LAD,‏\n‏بإدارته ونضالهء لأنه تربى في أفضل بيت وجد على وجه\nالبسيطة» وهذا البيت هو بيت رسول الله ‎Be‏ الذي أخذ تعاليمه",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0031",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 31,
+      "text_ar": "دل تابيخ الإمام علي بن أبي طالب ‎RE‏ السياسي\nمن تعاليم الله ‎fe‏ وجلء وهذا صريح قوله ‎BB‏ أدبني ربي\nفأحسن ‎OE gals‏ والذي يؤكده نلا من جهة أخرى يقوله:\nوَلَقَدْ قَرَنَ الله ‎Sus‏ به يله ‎tle eT Ld OS 151] Ob.‏\nمِنْ ‎Hy oki‏ به طَرِيقَ الْمَكَارِم وَمَحَاسِنَ ‎GET‏ الْعَالَم\nْله ‎LS td ous‏ أََعْهُ ابَاعَ الْقَصِيلٍ أَثْرَ ‎BISA‏\n‎YS‏ يَوْم ‎Ue‏ مِنْ ‎Py VL Gils caret‏ وغيرها من\nالشواهد التى ‎Jas‏ على ‎GT‏ نفسٌ رسول الله ‎BE‏ والنسخة\nالأخرى في كلامه وسلوكه وشجاعته وحكمته وجميع شؤون\nحياته.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0032",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 32,
+      "text_ar": "ولأهميّة ما ذُكر ‎aT‏ تنتج الآراء المتباينة في فهم\nالجانب السياسي لتاريخ الإمام علي ‎RE‏ الذي أرجىئٌ بدايته\nالنظرية والعملية أثناء وجوده فى مككة المكرمة» وربما بالتحديد\nحينما وقف النبي الأعظم ‎Be‏ على رؤوس قومه عندما نزلت آية\n‎CRSA Tse Subp‏ وقوله لهم: «...أيكم يؤازرني على\nهذا الأمر على أن يكون أخي ووصيي وخليفتي ‎Kd‏\n‏قال: فأحجم القوم عنها ‎Leper‏ وقلت: أنا يا ‎ts‏ الله...\n‎)١(‏ مجمع البيان في تفسير ‎COLD‏ الشيخ الطبرسي» ج١٠‏ ص85.\nزفق نهج البلاغة» الشريف الرضي» تصنيف : صبحي الصالح خطبة رقم",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0033",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 33,
+      "text_ar": ")141( المسماة بالخطبة القاصعة قسم [فضل الوحي] ‎Pees‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0034",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 34,
+      "text_ar": "تمهيد ل يبحب ‎NY‏\n‎MGI‏ وحيث إن هذا الموقف يبلور مدى إدراكه ‎RH‏ لهذه\nالدعوة والرسالة العالمية» والتي تُعتبر من المسائل المهمة وإن\nأعطاها بعض المؤرخين زاوية ضيّقة من التفسير العلمي في\nتاريخه ‎REE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0035",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 35,
+      "text_ar": "إضافة إلى ذلك أن هناك عوامل ساعدت على بروز\nشخصية أمير المؤمنين ‎BE‏ على الساحة السياسية» وذلك بوضعه\nالبنود والحلول الكثيرة للقضايا الواقعة والطارئة سواء فترة\nخلافته أو قبل استلامه زمام الخلافة» وإن كان ظاهر تلك\nالتحركات والحلول الفشل الذريع كما يفهمه ويفسره بعض من",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0036",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 36,
+      "text_ar": "يتناول شخصية أمير المؤمنين ‎BH‏ وهي على خلاف ذلك»",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0037",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 37,
+      "text_ar": "باعتبارها أطروحات وحلول مارسها ‎CSS BE‏ بعض نتائجها",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0038",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 38,
+      "text_ar": "الفعلية بعد فترة من الزمن» وبعضها كانت في الوقت ذاتهء",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0039",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 39,
+      "text_ar": "وذلك لتحركه المقرون بالمبادئ والقيم الإسلامية والإنسانية»",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0040",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 40,
+      "text_ar": "وسنرى ذلك خلال النقاط التي سيتم استعراضها في الأسطر",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0041",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 41,
+      "text_ar": "‎arly )١(‏ في تفاصيل هذه المسألة شرح الآية الكريمة عند كل من: الغدير\nللعلامة الأميني ج؟ ص0»5278 الإرشاد للشيخ المفيد ج١‏ ص44»\nتفسير الكاشف للشيخ محمد جواد مغنية» تفسير القرآن العظيم لابن\nكثير؛ وتفسير مجمع البيان للشيخ العلامة الطبرسي» وموسوعة الإمام\nعلي ‎١4 ١ص Ve BE‏ للريشهريء وذلك بألفاظ مختلفة» ومصادر\nأخرى كثيرة ذكرها الشيخ الريشهري في موسوعته.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0042",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 42,
+      "text_ar": "#؛د ل تريغ الإمام علي بن أبي طالب ‎BEE‏ السياسي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0043",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 43,
+      "text_ar": "والأجدر في تناول هذا الجانب من شخصية أمير\nالمؤمنين ‎BE‏ هو التركيز على الوضع الجغرافي والاقتصادي\nالمعاصر لفترة زمنية معينة هي النصف الأول من القرن الأول»\nأو دراسة وضع الحجاز ‎OU‏ وجود النبي ‎BE‏ في المدينة المنورة\nوحتى وفاة معاوية بن أبى سفيان باعتباره ‏ معاوية ‏ معاصرٌ\nللأحداث المريرة التى حلّت بالأمة الإسلامية» ولما له ‎ay‏\n‏من اليد الطولى في ذلك لانسلاخهما عن القيم والمبادئ\nالقرشية وتفريغهما من محتواهما الروحي» وصبغهما بصبغة\nالعصبية القبلية التي نهى عنها الدين العالمي الجديد (الإسلام).\n‎(yo pall‏ من هذا البحث:",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0044",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 44,
+      "text_ar": "ليس الغرض من هذا البحث هو تدوين كل ما جرى على\nأمير المؤمنين ‎RR‏ في حياته السياسية!! أو تسجيل بعض\nالملاحظات للشخصيات ‎BLS‏ له!! ‎OV‏ وظيفة التاريخ وظيفة\nأخلاقية قبل كل ‎cet‏ باعتبار أن سرد الحوادث سردا ‎UT‏ لا\nيرفع تلك الحوادث إلى مستوى التاريخ!! وأن المطلوب هو\nالتركيز على أمهات الحوادث التي تجعل من التاريخ سلسلة\nمتماسكة الحلقات بيّنة الأثر فى حياة الأمة التى ‎fat‏ تاريخهاء\nودراسته لا تكون صحيحة إلا بتعليل الحوادث”': وهذا ما\n‎)١(‏ تاريخ صدر الإسلام والدولة ‎cay‏ د/ عمر فرّوخْ» ص\" (بتصرف).",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0045",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 45,
+      "text_ar": "‎cc“‏ و\nسنقوم به إن شاء الله قدر ‎cp ler‏ محاولين الحفاظ على\nتماسك ‎OEY‏ ولنخرج بفوائد شتى بعيدة كل البعد عن\nالسرد الممل؛ إضافة إلى ذلك هو تقديم شيء قد يكون مختلفا\n‎Ke‏ هو مطروح سواءً من حيث الاستدلال أو الأسلوب أو\nالعرض.\nمكانة الامام ‎RE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0046",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 46,
+      "text_ar": "‏قبل الولوج في خضم هذه الدراسة» من الواجب توضيح\nمكانة هذه الشخصية التي نفرد لها دراسة مستقلة في جانب من\nجوانب حياتها وهو الجانب السياسي»؛ ولن أطيل في ذلك\nباعتبار أن هذا الجانب مشبعٌ في دراساتٍ كثيرة» وحتى\nالأحاديث التي سنستشهد بها فإنها مستفيضة عند جمع كبيرٍ من\nالمحدثين والمؤرخين من أتباع المذاهب الإسلامية» ولكن ‎SE‏\n‏بذلك لتوضيح مقام الإمام ‎RE‏ حيث من خلال معرفتنا لمكانته\nنستطيع قراءة سيرته بجميع جوانبها قراءة مختلفة عما قدّمه بعض\nمن كتب عنه ‎HE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0047",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 47,
+      "text_ar": "‏فلتوضيح مقامه ‎BE‏ نستشهد بأقوال النبي الأعظم ‎FB‏\n‏حقهء والتى تعتبر فيصلاً فى هذا ‎op VI‏ وسنحاول قدر الإمكان\nأخذ حديث واحد في كل ‎Cle‏ من جوانب حياته ‎IB‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0048",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 48,
+      "text_ar": "1! ل تريخ الإمام علي بن أبي طالب ‎BBE‏ السياسي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0049",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 49,
+      "text_ar": "1ك ار بعثن رجلا د يحب الله ورسوله. ود يحبه الله ورسوله)\nالمحبة ‎PES‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0050",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 50,
+      "text_ar": "؟ - (أقضى أمتي ‎(de‏ الجانب القضائي”\".",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0051",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 51,
+      "text_ar": "\"' - (برز الإيمان كله إلى الشرك كله) الجانب الإيماني””.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0052",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 52,
+      "text_ar": "‎ :‏ (والذي بعثني بالحق ما أخرتك إلا لنفسي. وأنت مني\nبمنزلة هارون من موسى غير أنه لا نبي بعدي وأنت أخي\nووارئي) الجانب ‎Ose‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0053",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 53,
+      "text_ar": "‏ه ‏ (أنا مدينةٌ العلم وعليٌ بابّها) الجانب ‎OB pall‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0054",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 54,
+      "text_ar": "‎)١(‏ أصول الكافيء الشيخ الكليني ‎Ve‏ ص ‎١94‏ والسيرة النبوية» ابن هشام\n‎Ne‏ ص 74 ‎Lal‏ مختلف «لأعطين الراية غداً رجلاً يحب الله ورسوله؛\nوغيرها من المصادر المختلفة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0055",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 55,
+      "text_ar": "‎)١(‏ الغديرء الشيخ. عبد الحسين الأميني ‎Ne‏ ص”4: وراجع: الوافي\nبالوفيات لصلاح الدين الصفدي فصل (أمير المؤمنين على بن أبي\n‎(Ub‏ وذكر كذلك قول عمر بن الخطاب: علي أقضانا. وراجع:\nذخائر العقبى للطبري ‎AY Ge‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0056",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 56,
+      "text_ar": "‏() شرح نهج البلاغة» ابن أبي الحديد ج9١ ‎Woe‏ إرشاد القلوب\nللديلمي ص144.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0057",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 57,
+      "text_ar": "‏)2( التذكرة الحمدونية» ابن حمدون, الباب الحادي والعشرون في المودة\nوالإخاء والمعاشرة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0058",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 58,
+      "text_ar": "‏)0( القول الجلي في فضائل ‎cle‏ السيوطي. ص ”60‏ 7 والمستدرك\nعلى الصحيحين» النيسابوري» ‎Yo‏ ص1777.\nصتّف كل من الشيخ إبراهيم الأميني» والشيخ أحمد بن الصديق\nالغماري كتابا في تخريج هذا الحديث ‎OLY‏ صحته بطرق كثيرة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0059",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 59,
+      "text_ar": "1 (أعلم أمتي من بعدي علي بن أبي طالب) ‎Wel‏\n‏لق ار",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0060",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 60,
+      "text_ar": "‎-Vv‏ (يا علي إن فيك مثلاً من عيسى ابن مريم ‎BE‏ أحبته\nالنصارى حتى أنزلته بالمنؤل الذي ليس ‎ca)‏ وأبغضته اليهود\nحتى بهتوا أمه. ولولا أن تقول فيك طوائفٌ من أمّتى ما\nقالت النصارى في المسيح ابن مريم لقلتٌ فيك قولاً. لا\nتمر بمل من أمّتي إلا أخذوا من ثُرابك وطلبوا فضل\nطهورك؛ ولكن أنت أخي ووزيري ‎shes‏ ووارثي ‎Hs‏\n‎PC sabe‏ ررك ‎ollid‏ اسم",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0061",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 61,
+      "text_ar": "‏أخلاق السياسة عند الامام علي ‎RB‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0062",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 62,
+      "text_ar": "‏أخلاقيات السياسة» التي تُعد ‎UL‏ مهمةٌ في التاريخ العربي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0063",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 63,
+      "text_ar": "‏القديم والحديث» ويعتبر مر المؤمنين ‎RE‏ من الشخصيات",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0064",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 64,
+      "text_ar": "‏البارزة التي ‎cabs‏ الجانب الأخلاقي في التعاملات السياسية»",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0065",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 65,
+      "text_ar": "‏الأمّة!! ولم يتعامل قط بالطرق الملتوية وغير المشروعة",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0066",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 66,
+      "text_ar": "‏)1( الغدير؛ الشيخ عبدالحسين الأميني ج7 ص45.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0067",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 67,
+      "text_ar": "‏(؟) الأمالي الشجرية» ابن الشجريء الحديث السادس: فضل علي بن أبي\nطالب ‎WOE‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0068",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 68,
+      "text_ar": "ل تري الإمام علي بن أبي طالب ‎BEB‏ السياسي\nكالاغتيالات وطرق الانتقام وتصفية الآخرين سراً وعلناً كما فعل\nندّهُ معاوية بن أبي سفيان الذي ‎be‏ الجند من نساء ورجال لتحقيق\nمآربه الشخصية للوصول إلى عرش المّلك الذي نهجه في حياته.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0069",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 69,
+      "text_ar": "إضافة إلى ذلك أن أمير المؤمنين ‎BE‏ يدرك الطرق التي\nيتعامل بها معاوية» إلا أنه يربأ بنفسه أن يفسد دينه لأجل دنياه\nكما صرّح بذلك في بعض أقواله» ‎Wy‏ فإن الشواهد كثيرة على\nهذا القول في حياته السياسية» فهو لا ينتقم لأجل تقديم رضاه\nعلى رضا الله وق ولم يدخل حرباً لأجل نفسه؛ ولم\nولم...الخ». على خلاف بعض المؤرخين الذين يرون أن\n‎BLE‏ يرى نفسه أحق بالخلافة دون سواهء فقط لأنه\n‎Ly eth‏ المسألة أعمق وأخطر من ذلك بكثيرء باعتبار أن\nهناك ‎tbs‏ مديّرة ضده له وذلك ‎GEL‏ جميع الأبواب في\nوجهه لئلا يصل إلى مركز الخلافة بأيّ شكل من الأشكال.\nولذا حينما وصلهاء فإنه ‎log‏ وهي مثقلةٌ بأغلال المشاكل\nوالقضايا التي ‎Ugly HE‏ من كان قبله ومن كان معهء وهذا\nما سنأتي عليه إن شاء الله وهذه كذلك من المسائل التي\nحيكت ضده لإسقاطه سياسياً؛ ومع ذلك مازال ملتزماً بمنهجه\nالأخلاقي السياسي الذي خظة لنفسيء ولأهميّة هذا الجانب\nقدّمنا الفكرة وتركنا الشواهد تُبرز نفسها ‎pels‏ هذا البحث»\nوإلا فهذا موضوع يحتمل أضعاف هذه الأسطر القليلة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0070",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 70,
+      "text_ar": "‎tes‏ وى\nكيف برز ‎SEY‏ سياسياً؛",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0071",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 71,
+      "text_ar": "‏من المسائل التي ‎chi‏ حول تاريخ الإمام علي ‎ABE‏ أنه\nكيف برز سياسياً؟",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0072",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 72,
+      "text_ar": "‏وللإجابة على هذا التساؤل» نقول:",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0073",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 73,
+      "text_ar": "‏إن الأحداث التي مرّت ‎BIL‏ من غزوات وحروب\n‎Cole‏ الشجاعة هو الدور الأبرز في هذه المسألة حيث جدّل\nفرسان الأعداء من مشركى قريش بدءاً من دفاعه عن النبى ‎Be‏\n‏وحتى الجمل وصفين والنهروان» كل هذه الأحداث جعلت\nالرأي العام من مشركي قريش وحلفاءهم ‎SLs] Cis CT,‏\nإلى ذلك عدم مبالاتهٍ بأحدٍ في تنفيذٍ أوامر ‎Bal‏ وأوامر\nرسوله ‎db sv Vy BE‏ هو: يوم وفاة النبي\nالأعظم ‎By‏ أو ما يُعرف بأحداث السقيفة ورزية الخميس وما\nرافقها من أحداث ‎pl‏ على ذكرها بإيجاز.\nتحرك الامام السياسي ‎oll‏ حياة النبي ‎Be‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0074",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 74,
+      "text_ar": "‏لم تكن تحركاتٍ الإمام ‎BB‏ بدون ‎Mail ye‏ ومباركةٍ ‎deel‏\n‏الأعظم ‎By‏ لأنه ممن تأدّبَ بأدب ‎ULB‏ وتخلّق ‎BEL‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0075",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 75,
+      "text_ar": ".لبلب تريخ الإمام علي بن أبي طالب ‎BBE‏ السياسي\nالنبوّة» ‎Wy‏ كان هذا من سماته وخصاله ‎BE‏ التي انفردٌ بها عن\nغيره» ‎BLA]‏ إلى ذلك لم يكن من الشخصيّات التي تتعامل مع\nالنبي ‎Be‏ تعاملاً سطحياًء بل كان يعتبر وجود النبي الأعظم وه\nالمحفوف بالرعاية الإلهية وجوداً مهماً بالنسبة للأمّة وله\n‎Luss‏ ذلك أنه أعطى النبوة فهماً مغايراً لما يفهمه بقبّة\nالصحابة والمعاصرين لفترة النبوة» وتعامّل معها بتعامل يختلف\nعن تعامل الصحابة» وهذا يتجلى في أقواله وأفعاله والأحاديث\nالتي ‎S545‏ بحقّه ‎Zell pe BB‏ الأعظم ‎Bi‏ والأقوال التي\nصدرت منه بحق رسول ‎BS‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0076",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 76,
+      "text_ar": "وحينما أرجأنا بداية تحركه السياسي إلى مؤازرته\n‎Be!‏ في مكّة المكرّمة؛ فإن الحدث الذي ‎thay tle‏ هو\nمقارعته صبيانٍ قريش الذين آذوا النبي و أشد الإيذاء. مما\nحدا بالنبي ‎Be‏ أن يقول: «ما أوذي نبي بمثل ما ‎ea I‏\nفقد كان يدافع عن النبي ‎BE‏ متى ما سنحت له الفرصة» كأبيه\nأبي طالب ‎RE‏ باعتبار ‎oF a yt‏ النبي ‎Be‏ هو دفاعٌ ‎oF‏\n‎IL‏ ذاتها.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0077",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 77,
+      "text_ar": "وليس صحيحاً ما يقال ‎Ob‏ علياً ‎ee‏ لم يكن يدخل في",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0078",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 78,
+      "text_ar": "ry gs\n‏كما كان يدخل معه أبو‎ Be ‏الأمور مع الكبار أثناء حياة النبي‎\nNWO ey ‏بكر‎",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0079",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 79,
+      "text_ar": "لأن دخول بعض الصحابة مع رسول الله ‎pte, BE‏ تارة\nمعارضة وتثبيط. كالذي جرى في غزوة بدرء وعند احتضار\nرسول الله ‎Be‏ وغيرها من ‎Se‏ ويا ترى أين الأحاديث\nالصادرة من النبي الأعظم يِه في حق بعضهم وتوضيح\nمقامهم. وما الروايات التاريخية وغيرها التي أعطت غيره مكانة\nتفوق الواقع» فإنها محل نظر لا تصمدٌ أمامً النقاشٍ العلمي\nالتي ليس ‎Yu‏ هناء فأمير المؤمنين ‎BE‏ يتعبّد يأوامر رسول\nالله يه وما صرّح القرآن الكريم بهء وما أكثر التصرفات التي\nصَدَرّت ‎BB‏ وأقرّها رسول الله ‎Be‏ وخيرٌ شاهدٍ فى ذلك\nالأحاديث التي صدرت ‎dey‏ والتي ذكرنا جزءًا منها ‎“ti‏\n‏أحداث السقيفة:",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0080",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 80,
+      "text_ar": "لتكن النقطة الأخرى حول التحرك السياسي ‎BE‏ من\nوفاةٍ ‎gol‏ الأعظم ‎Be‏ الذي أفرز الصحابة وفرّقهم إلى تيارات\nصغيرة اختلفت في ‎Gal‏ قضية من قضايا الإسلام وهي (الخلافة)\nوهل هي ‎Gai‏ أم شورى؟!\n‎)١(‏ المنتقى من منهاج الاعتدال؛ ابن تيمية» اختصره الذهبي» حققه وعلق",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0081",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 81,
+      "text_ar": "على حواشيه/ محب الدين الخطيب» ‎EVA Ge‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0082",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 82,
+      "text_ar": "دبل تاريخ الإمام علي بن أبي طالب ‎BE‏ السياسي",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0083",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 83,
+      "text_ar": "‎Lb‏ نرى ‎al‏ مَارَسَ دوره ‎SL‏ المنوط ‎oy‏ والتكليف\nالشرعي الذي تعلّمه من أخيه وحبيبه رسول الله ‎BE‏ وواجبه\n‎LY!‏ والفطريّ ‎oles‏ أي إنسانٍ يموتٌ» فكيف إذا كان المسجى\nبين يديه هو أخوه وابن عمه وأبو زوجته وحبيبه وقرّةٌ عينه ومن له\nالفضل في كل شؤون ‎RR whe‏ ثم إِنَّ الحركةً التي قام بها القوم\nاجتماع السقيفة ‏ تعتبر في غاية الذكاء بالمنظور التاريخي» إلا\nأنها بالمنظور الإسلامي والرسالي تعتبر تصرف لا يليق بمن يسعى\nإلى ‎Jy‏ منصب الخلافة ولا يقبله أصحاب العقول ‎a oN‏ ذلك\nأنتهم حصروا ‎fal‏ المدينة في زاويةٍ ضيّقةٍ وهي المبايعة بالحيلة»\nمما جعل الشقاق يدب بين الصحابة على ‎pal‏ قد حسمه رسول\nالله ‎Be‏ قبل وفاته في مواقم كثيرةٍ وبتصريحاتٍ مختلفةٍ أهتها ما\nحَدَتَ في ‎dt‏ الوداع وهو ما يسمى ب(بيعة الغدير) التي ‎oF‏ فيها\nمبايعة الحجيج لأمير المؤمنين ‎BB‏ بالإمرة على المؤمنين بنص\n‎Eel)‏ وبنصوص نبوية كثيرة.",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0084",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_001",
+      "paragraph_number": 84,
+      "text_ar": "‏ولذا حينما ‎Go‏ الخلاف بين بني هاشم والمهاجرين\nوالأنصار حول الخلافة حاججهم بقوله: (أفكنتٌ ‎Got‏ رسول الله\nفي ‎Jon‏ أدفنه» وأخرج أنازع ‎OGG aL Goll‏ مما يدلّك\nعلى أهمية احترام ‎cecal‏ وهذا من ‎UST‏ الحقوقٍ للمؤمن\n‎)١(‏ الإمامة والسياسة» ابن قتيبة الدينوري» ‎Vos Ve‏",
+      "page_number": 1
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0085",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 85,
+      "text_ar": "12511 سس سيل\nالمعروف فكيف برسول الله ‎Oly Be‏ القضية بالنسبة لعلي غلا\nمحسومة» وإذا به يتفاجأ بتصرّفٍ القوم وما 35 ‎oy‏ تجاه هذه\nالمسألة.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0086",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 86,
+      "text_ar": "ثم إنه بعد وفاة الرسول الأعظم ‎Be‏ نرى كل الأنظار\nتتجه إلى أمير المؤمنين ‎BR‏ باعتباره أبرز شخصية كما أسلفنا\nالقول مع وجود ‎ane‏ العباس بن عبد المطلب» وليس صحيحاً\nها قاله الدكتور ‎ab‏ حسين حول هذا الأمرء حيث قال: (ولولا\nأن العبّاس ‎Lt‏ بأخرة لفكّر في نفسه أن يرشّح نفسه خليفة\nلابن أخيه فيتلقى ‎be‏ تراثه في القيام بشأن المسلمين» ولكنه\nنظر في الأمر فرأى ابن أخيه ‎be‏ أحق منه بوراثةٍ هذا\nالسلطانء ‎Cay SY‏ النبيَ» وصاحب السابقة في الإسلامء\nوصاحب البلاء الحسن الممتاز في المشاهد كلهاء ولأنَّ النبن\nكان يدعوه ‎LET‏ وهذا حسب تصوّري افتراضٌ من الدكتور\nطه حسين غير معتمد على دليل» باعتبار ‎OF‏ كبّار الصحابة\nيعلمون أنَّ ‎UL‏ الخلافة ليست من شأنهم» بل هي متعلقةٌ ‎ph‏\n‏الله وق كما هو حال تزويج السيدة الزهراء ‎ORB‏ وغيرها من\n)1( الفتنة الكبرى \"علي وبنوه»» طه حسين» ‎Woe Ye‏\n‎(1D‏ القول الجلي في فضائل ‎gle‏ السيوطي» ‎Ge‏ فقد ورد عن ابن",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0087",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 87,
+      "text_ar": "مسعود أن رسول الله ‎Be‏ أنه قال: ‎op‏ الله أمرني أن أزْوّج فاطمة من",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0088",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 88,
+      "text_ar": "»ل تاريخ الإمام علي بن أبي طالب ‎BB‏ السياسي\nالأحداث التي كانت أمراً ‎bg‏ قال تعالى ‎yh) 6 wp:‏ ولا\nٍَُْ دا ضَّى ‎ts at‏ آنا لك ‎dl AG‏ ين أيهم 5\nيحص ‎SAYS af‏ صَلَّ صللا 68",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0089",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 89,
+      "text_ar": "‎Ot Le‏ العبّاس أقبل إلى أمير المؤمنين ‎RE‏ فقال له:\nابسط يدك ‎cull‏ ولكن ‎We‏ أبى مخافة الفتنة» وما أتى ليبايع\nإلا لعلمه ‎BY ST‏ ولم يكن في نفس العباس شيءٌ من ذلك»\nوكذلك أتى ‎yl‏ سفيان زعيم فريش » أرادٌ أن يبايع علياً بعد ‎slay‏\n‏النبن ‎Be‏ لا حباً له ولا رضى به ولا اعترافاً بمكانته الخاصّة\nمن النبي و بل عصبيةً لبنى عبد ‎PGs‏ ذلك أن أبا سفيان\nشئت سس عليه خيلا ورجلاً, فزجره علي وقال: ‎ails‏ ما\n‎Sah‏ بهذا إلا ‎ESI‏ وإنك ‎aly‏ طالما بغيتَ للإسلام شَرَّاء لا\nحاجة لنا ‎oO, Pp‏ °",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0090",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 90,
+      "text_ar": "‏ونتسائل لماذا لم يبايع أبو سفيان رجلاً آخر غير\nعلي ‎{ME‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0091",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 91,
+      "text_ar": "‎LEW,‏ على ذلك نقول ‎ob‏ المسألة واضحة» مما يدلل\n‎)١(‏ سورة الأحزاب» الآية: ‎WV‏\n‎(Y)‏ الفتنة الكبرى «علي ‎ab Mo guy‏ حسين» ‎Woe Ye‏\n‎yall (1)‏ الشيخ الأميني؛ ‎Ke‏ ص54\" (بتصرف).",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0092",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 92,
+      "text_ar": "eee ia\n‏في هذا الأمر وإن كان غرض أبي سفيان‎ BE Ble ‏على أحقيّة‎\n‏تصرّف بعض الصحابة بسرعة البرق نظراً‎ Wy ‏الفتنة»‎ ZU]\n‏وذلك إيماناً منهم بأنه لو لم‎ DL ‏للترتيب المسبق لهذه‎\n‏ولذا‎ BEE ‏يقوموا بهذه العملية لانتهى الأمر إلى أمير المؤمنين‎\n‏وأثناء قيام أمير‎ Be ‏كان اجتماع السقيفة قبل دفن النبيّ‎\n‏وإلا لو كان هناك خوف على‎ Be ‏بتجهيز النبي‎ BE ‏المؤمنين‎\n‏الإسلام كما يدّعي أصحاب هذه المدرسة أو هذا الاتجاه لتم‎\n‏بتجهيزه.‎ BE ‏الالتحاق بجيش أسامة بن زيدٍ الذي أمر النبي‎\n‏حيث إنهم‎ Gap tl ‏يعتبر قضية حساسة عند مدرسة‎ Gilly\n‏تأولوا تأويلات غير منطقية ليس هنا محلها.‎\n‏بعض الصحابةٍ من بعض‎ Sa] ‏خلاصة تلك التأويلات‎\n‏ولذا لن نسهب في هذه المسألة باعتبار أن‎ ced Set yell gill\n‏التحليل في هذه المسألة يحتاج إلى استحضار قضايا وقرائن‎\n‏كثيرة لها مساس بقضيةٍ اجتماع السقيفة» والتي في الوقت ذاته‎\n‏قد تحرفنا عن مسار البحث» مثل: أمر النبي وَل بتجهيز جيش‎\n‏الإمامة» حركة الردقء‎ OE ‏بن زيدء» حرق بيت فاطمة‎ ULI\n‏في سقيفة بني ساعدة والتي لها تفاصيل‎ SH ‏الأحداث التي‎\n‏بني هاشم‎ OF ‏طويلة... الخ» إلا أن المسألة الأهم في ذلك‎\n‏لم يبايعوا إلا بعد وفاة السيدة‎ cpg ‏وبعض من له علاقة وطيدة‎\n‏أو على قول بعض المؤرخحين أن أمير‎ ont ‏الزهراء‎",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0093",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 93,
+      "text_ar": "2د ل تريخ الإمام علي بن أبي طالب 8546 السياسي\nالمؤمنين 42 أكره على البيعة بعد أشهرء وأقرب دليل في أن\nالسقيفة أو بيعة أبي بكر ذات تخطيط مسيق قول أمير\nالمؤمنين ‎BE‏ حينما طلب منه عمر بن الخطاب البيعة: (احلب\nحلباً لك شطرهء واشدد له اليوم أمره يردد عليك ‎Mae‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0094",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 94,
+      "text_ar": "بعد أحداث السقيفة التي كانت نتائجها استلام أبي بكر\nزمام الخلافة ومن ثم عهدٌ إلى عمر بن الخطاب وفاءً لوقوفه\nمعه في البيعة» ومن ثم أشار عمر إلى ستةٍ من الصحابة حين\n‎p>‏ أجله مرجحاً ‎Us‏ على أخرى. حيث كانت المحصلة النهائية\nمن نصيب الأموي عثمان بن عفان الذي كان نهاية خلافته\nوسياسته ثورة عارمة من الأمصار )55 بقتله.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0095",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 95,
+      "text_ar": "من وفاة النبي الأعظم ‎BE‏ وحتى مقتل عثمان كانت\nالحجاز تعيش الثقل السياسي ‎ly‏ مما يجعل أمير\nالمؤمنين ‎BB‏ خلال هذه الفترة أن تكون لديه أطروحة جديدة\nفي التعامل السياسي مع الخلافة» وكما أسلفنا القول بأنه ليس\nالعكر!! بل همّه الأول والأخير هو الحفاظ على بيضة\nالإسلام» ولأنه ‎Wis‏ يحمل ‎Lead‏ عالمية» ومعلوم ‎OF‏ الذين\nيحملون في تحرّكهم السياسي والاجتماعي ‎Lad‏ ماء فإنهم\n‎)١(‏ الإمامة والسياسة» ابن قتيبة الدينوري» ‎Ve‏ ص©19١.‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0096",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 96,
+      "text_ar": "تمهيد ‎Yv‏\n‏يضحًون بالكثير من قضاياهم الشخصية من أجل الحفاظ على\nالمبدأ الذي يريدون تحقيقه بطرقٍ وصور ‎EE‏ تتلاءم مع\nالظروف ‎Atle!‏ وهذا ما حصل بالفعل فقد كان المستشار في\nالمعضلات؛ وصاحب الرأي في المدلهمات» فقد وقف بجانب\nالخلفاء الثلائة ناصحاً تارة ومعارضاً لبعض الأمور تارة أخرى»\nولذا فكل مسألة يحار فيها الخليفة فإنه يلجأ إلى حَدَثِ السنّ\nالذي لم تكن الخلافة لتناسبه ولم تكن من نصيبهء مما حدا\nبالخليفة الثاني الاعتراف بفضله ‎HE‏ وذلك بقوله: (لا أبقاني\nالله بعدك يا ‎(gle‏ أو ‎Ble VN‏ لهلكَ عُمر)”\".",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0097",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 97,
+      "text_ar": "ثم إن السياسة التي اتخذها علي ل تتمثل في مقولةٍ\nصدرت منه توضّح مدى إدراكه للخطر ‎Grad!‏ الذي حل ‎BYU‏\n‏بعد وفاة ‎oll‏ و وهو أعظم من تولّي أبي بكر الخلافة» ذلك\nأن حركة المرتدين في بعض الأمصار كانت تشكل خطراً على\nالمدينة» ولذا كان الإمام ‎BH‏ بسلوكه الأخلاقي وحنكته\nالسياسية ‎Low‏ أنظار الخلفاء في كل مهمّة» وما أكثر الشواهد\nفي ذلك» نقتصر على ما ‎co Slee‏ وهو: حينما أراد أبو بكر أن\nيغزو الروم استشار علي بن أبي طالب» فأشار أن يفعل» فقال:\n‎YY‏ فعلتَ ‎Me ib‏\n)1( ذخائر العقبى في مناقب ذوي القربى» محب الدين الطبري 52 ‎AY‏\n‏(؟) تاريخ اليعقوبي ‎Vue Te‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0098",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 98,
+      "text_ar": "‎YA‏ تاريخ الإمام علي بن أبي طالب ‎BIE‏ السياسي",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0099",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 99,
+      "text_ar": "‏وكذلك نصحه لعثمان بن عمّان ‎OU!‏ ثورةٍ الأمصار ضده\nوضد الولاةٍ الذين أوكلهم رقاب المسلمينء» فقدبعث\nالحسنين ‎LLY BE‏ الثائرين عن عثمان وتهدئة الأمور» وذلك\nحتى لا يُتهم بالتحريض ‎cote‏ وخوفاً من التباس الكثير من\nالأمور على الصحابة» وما ‎GE‏ منه نكل قد وقع.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0100",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 100,
+      "text_ar": "‏بعد أن أعطينا لمحةً سريعةًٌ عن سياسة الإمام أمير\nالمؤمنين ‎OU BE‏ ما يُسَمَّى ‎(GLE! SAW‏ واستعرضنا\nأبرز الأمور دون الدخول في تفاصيل بعضهاء نأتي لنتناول\nالأوضاع السياسية بعد مقتل عثمان واستلامه زمام الأمور\n‎(EI!)‏ وكيف تعامل معها وفق المبادئ التي صاغها\n‎Panel‏ وهي بصريح القول التطبيق الفعلي للمبادئ الإسلامية\nوالمستقاة من القرآن الكريم ‎Ey‏ المطهرة أو التعاليم النبوية»\n‎July‏ الذين تأوّلوا على غير بصيرة من أمرهم في هذه الفترة من\nخلافته يد ‎coy tS‏ والآراء والدراسات الواردة في سياسة\nالإمام نل لا ‎SUG‏ تُحصى رغم وجود اتفاق بين كثير من\nالمؤرّخين القدماء والمعاصرين حول كثير من النتائج التي\nتوصلوا إليها.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0101",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 101,
+      "text_ar": "‏ولقراءةٍ هذه الفترة التي تعتبر في غاية الحساسيّة عند\nبعضهم» يستلزم على من يتناول فترة خلافته ‎BB‏ أن يكون ‎Lely‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0102",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 102,
+      "text_ar": "5 rT YY\npated ee! ‏وأن يستحضر أدوات‎ cde yo Li ‏إلى‎\n‎(eld!) ‏قراءة هذا الجانب‎ Ob ‏الأمورء وكما أسلفنا القول‎\n‏يجب أن لا نعتبر شخصيته سياسية‎ BE ‏من حياة أمير المؤمنين‎\n‏كالدور‎ cay ‏كما يتعامل معها البعض متناسياً الأدوار المنوطة‎\n‏بعض المسائل تحتاج‎ OY all ‏الرسالي والإنساني والتربوي...‎\n‏المؤمنين تكلا‎ Be ‏إلى استحضار وصايا الرسول الأعظم‎\n‏وبعضها الآخر يعتمد على قراءة‎ cdi ‏عليها إن شاء‎ Gh ‏والتي‎\n‏الأوضاع والملابسات المحيطة بالظروف التي عاشها مع تقديم‎\n‏الأولويّات المتعلقةٍ بصالح الأمّة قبل كل شيءء مما يعني أن‎\n‏بعض الأحداث تحتاج إلى قراءة تجزيئية وبعضها الآخر إلى‎\n‏ببعضها‎ RE ‏وذلك لربط تحركات حر المؤمنين‎ as sel 3\n‏مبادئه لا تتغيّر بتغيّر الظروف» بل إن سياسته لا‎ OF ant\n‏تنفك عن مبادثه وأخلاقه مهما حصل من تغيّر في الأجواء‎\nas ‏السائدة لفترة‎\n‏دعوني والتمسوا غيري:‎",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0103",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 103,
+      "text_ar": "التفت الناس حول أمير المؤمنين نكا لمبايعته بعد مقتل\nعثمانء. ‎J‏ لهم : دعوني والتمسوا غيري » ‎Ub‏ سرد أمراً",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0104",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 104,
+      "text_ar": "evshnall BE ‏اه نلك‎ Se ‏اررقم لام‎ ay dr\n‏ولا تثبت عليه العُقُول.‎ cw glist ‏تقوم له‎ Y LST ‏له وجوة‎\n‏كَدْ أغامت» والمحجة قَدْ 2585 واعلموا أنّى إن‎ GUN SL,\ney ‏أصغ إلى قولٍ القائل‎ Sy hel ‏أجبتكم ركبتٌ بكم ما‎\n‏أمْرَكم» وأنا لكم وزيراًء خيرٌ لكم منّي‎ opel ‏وأطوعكم لمن‎\nOF al",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0105",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 105,
+      "text_ar": "والسؤال المطروح حول الكلام السابق:\nلماذا لم يوافق الامام ‎RE‏ على بيعة ‎Sc LS)‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0106",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 106,
+      "text_ar": "للإجابة على ذلك» ندرك أن الإمام ‎BH‏ من خلال كلامه\nالسابق يريد من المبايعين أن يكونوا على وعي تام بالأحداث\nالقادمة حتى لا تلتبس عليهم الأمورء لأنه ‎bs J‏\nباعتبار أن كثيراً من الأمور قد تبدّلت خصوصاً فترة خلافة\n‎colt‏ الذي ‎WE‏ شروط المبايعة التي وافق عليها عندما\nبايعه عليه عبدالرحمن بن عوف وهى: كتاب ‎Gl‏ وسنة\nرسوله ‎Be‏ وسيرة الشيخين؛ وهذا صريح قوله: (الآفاق قد\nأغامت. والحجّة قد تنككرت)» ‎Gad‏ إيماننا ‎OL‏ سيرة الشيخين\n‎ae! ce (\\)‏ الشريف الرضي» تصنيف : صبحي الصالح خطبة رقم ‎ay‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0107",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 107,
+      "text_ar": "‎Ye)‏ ل\nليست حُجَة إلا ‎LT‏ كانا ‎Pail‏ منه وإن كانت في سيرتهما\nالسياسية والدينية بعض ‎old‏ التي ليس هُنَا مَحلّهاء ‎aly‏\n‏سيحملهم على ما يعلم وما يريد» وليس ما يريدون هُمْء وأن\nهناك أموراً كثيرةً ‎Glos‏ إلى إصلاحاتٍ ‎BE‏ منها: السياسة\nالقضائية؛ السياسة المالية» السياسة الإدارية... الخ. وهذا صريح\nقول ‎pe‏ عند احتضاره واصفاً المرشحين الستة بقوله: (أما أنت\nيا زيير! فوعقٌ ‎Gal‏ مؤمنٌ الرّضاء ‎LAE BIS‏ يوماً إنسان»\nويوماً شيطان» ولعلها لو أفضت إليك ظَلَّتْ يومك تلاطم\nسحن ‎le‏ قل ‎L cat ily cad oe‏ امد ‎ai‏ مارت\nرسول الله ‎By‏ ساخطاً عليك بالكلمة التي ‎GEE‏ يوم أنزلت آية\nالحجاب» وأما أنتَ يا عليٌ: لله ‎Sat‏ لولا دعابةٌ فيك! أما والله\nلو ولّيتهم لتحملتهم على ‎Gol‏ الواضح. ‎aly‏ البيضاءء\nوأما ‎cal‏ يا عثمان: هيهاً إليك! ‎Gis‏ بك قد َلَدَنْكَ قريشٌ هذا\nالأمر لحبّها ‎AU‏ فحملت بني أميّة وبني أبي معيط على رقاب\nالنّاسء وآثرتهم بالفيء. فسارت إليك عُصَابةٌ من ذؤبان\nالعرب» فذبحوك على فراشك ذبحاً. ‎dl,‏ لعن فعلوا لتفعلن»\nونتن فعلت ليفعلن)\".",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0108",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 108,
+      "text_ar": "‏وبالتركيز على حياة أمير المؤمنين ‎RE‏ نرى أنه وضعَ\n‎)١(‏ شرح نهج البلاغة» ابن أبي الحديد ‎Ve‏ ص2180 187 (بتصرف).",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0109",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 109,
+      "text_ar": "‎rr‏ بر سس\nمشروعاً إصلاحياً ‎Lake‏ باعتبار أن فترة الخلفاء الثلائة كثرت\nالفتوحات ودخل كثيرون في الإسلام» وهذا ‎pS‏ الهائل من\nالمسلمين الجُجدد بعد وفاة النبي ‎Be‏ محتاجون إلى التعاليم\nالواقعية للإسلام التي تعالج مشاكلهم الحياتية» وليس إسلاماً\nسطحياً ‎Gs‏ الصلاة والصيام والحج والزكاة فقطء أو الحفاظ\nعلى الطقوس الدينية!! وأمير المؤمنين ‎BE‏ شخصية تعيش\nالحدث كما هو بدون مماطلة ومجاملات» وهو الشخصية\nالمعروفة التي لا تخاف في الله لومة ‎iY‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0110",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 110,
+      "text_ar": "‏وهنا مسألة مهمّة تكاد تكون غامضة في تصريحاته نلا\nوهي قوله: (واعلموا ‎SE‏ إِنْ أجبتكُم ركبتٌ بكم ما أعلمء وَلَمْ\nأصغ إلى قولٍ القائل وعتب ‎CSL‏ وهو في هذا الحديث\nيشير إلى الإمامة التي لا تقبل المساومات في قراءة الأحداث»\nولا تخضع لتقديرات الآخرين, ‎BUY‏ الذي جرى فيما بعد\nالمبايعة هو عدم ‎fees‏ كثير من الناس الذين بايعوه بهذه\n‎Lo‏ وأنّهم لا يفرّقرن بين الخلافة والإمامة!!\nالفرق بين الخلافة والامامة:",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0111",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 111,
+      "text_ar": "‏لم أشأ التحدث عن هذه المسألة باعتبار ‎OF‏ حقيقتها\nأوسع من هذه الأسطر القليلة» ولكن!! ‎Leal‏ أن أعطي ‎feed‏\n‎ip y‏ لما له صلة ببحثنا حول الفرق بين الخلافة والإمامة.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0112",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 112,
+      "text_ar": "لا يوجد ثمّة شك في ‎Of‏ مسألة (الخلافة/الإمامة)\nموجودتان عند كافة المسلمين» فهي تعني قيادة أمور المسلمين\nقي لُمُور ‎Gul‏ والدين» إلا أنَّ الشيعة الإمامية تُضيفٌ على\n‎BL!‏ أمرين آخرين هما: المرجعية الدينية والولاية على أمور\n#لملمينء فهم ‏ الشيعة الإماميّة ‏ يقولون ‎LY Ob‏ جعل\n‎Soh‏ تحتويها العصمة عن ‎YS‏ خط( وزلل» وهذا ما لم يؤمن به\n‎Sol‏ من المدارس الإسلاميّة غير الشيعة» كذلك لم يقّل غير\n‎Geel GLY Ob tem‏ من أصول الدين!! بل يعتبرونها فرعاً\nمن قروع الدين.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0113",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 113,
+      "text_ar": "وقد طَمَحَتْ ‎CS‏ الشيعة في مناقشة هذه المسألة باعتبار\n‎Ste 3!‏ تغييباً للمعنى الحقيقي لمفهوم الإمامة من خلال أعداءٍ\n‎al‏ البيت ‎BE‏ في صدر الإسلام وما تلاه. وعدم بذلٍ ‎Bees!‏\n‏من غير المؤمنين بمفهوم الإمامة الذي يقول به أتباع هذه\nالمدرسة في الوقت الحاضرهء اعتماداً على ما ‎a‏ التاريخ\nالمُعْرض من فهم خاطىءٍ حول المفهوم ‎AN‏ والنبوي للإمامة\n‎SI‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0114",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 114,
+      "text_ar": "وقد حصل التفريقٌ بين مفهوم ‎GLY‏ والخلافة جرّاء عبثٍ\nالعابثين في تغيير مسيرة التاريخ ‎sled‏ هذين المصطلحين» وتم\nحرفٌ مسارهما عن مفهومهما ‎Ghee!‏ وقد ‎Shel‏ الخلافةٌ",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0115",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 115,
+      "text_ar": "‎a‏ تاريخ الإمام علي بن أبي طالب ‎EE‏ السياسي\nمعنئ مغايراً عن ‎cbs‏ القرآني: ظإِنْ ‎Ge‏ في ‎BAT‏\n‎(GGL‏ وكذلك جاءت محاولات إلى تغيير مفهوم\nالمصطلح الآخر وهو: الإمامة: ‎PGC HEY He AP‏\nإلا أن هذه المحاولات باءت بالفشل» ذلك أن المفهوم القرآني\nللإمام والخليفة يعني: وجود شخصية ‎Wid pe‏ من ‎J‏ الله كك\nحاصلةً على مواصفات ‎ILS‏ والقدرة على إدارة شؤون البشر\nوفقٌ الضوابط الكونية؛ إضافة إلى ذلك لا بد من ‎hg‏ بعض\nالعناصر م هذه الشخصية كالعصمة والعدلٍ والعلم... ‎cel‏\n‏وغيرها من الأمور المطروحة في كتب العقائد حول ما يتعلق\nبهذه المسألة التي يعتبرها الشيعة الإماميّة ‎Gal‏ الإسلام.\nببس ‎٠ a BOC‏\n‎)١(‏ سورة البقرق» ‎eh)‏\n‏(؟) سورة ‎Ra‏ الآية: ‎AVE‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0116",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 116,
+      "text_ar": "Yo Be ‏سول الل‎ coe ga\nDe ‏نبوءات رسول النه‎\nBEE ‏لعلي‎ Be ‏من الأحاديث التي أخبر بها النبي الأعظم‎\n‏قوله: (ستقاتل بعدي الناكثين والقاسطين والمارقين)2\".‎\n‏وهذه نبوءة لا تحتاج إلى مداهنة أو مماطلة من شخصية‎\n‏كشخصية علي ل فهو مأمورٌ بمقاتلةٍ هذه الفئات بصفاتهم لا‎\n‏في‎ BESS ‏يأشخاصهم. أي: مهما توافرت الصفات التي‎\n‏ذلك أن‎ aS! ‏بإعداد‎ RE ‏فئة من الناس» فعلى أمير المؤمنين‎\n‏كما تهمّه الصفات‎ BE ‏الشخصيات لا تهم أمير المؤمنين‎\n‏المتوافرة في فئة من الناس. وهذا السلوك سلوك القرآن‎\n‏مصلا‎ EST ‏مِنّ المُؤْمِنينَ‎ ol asd ‏الكريمء قال تعالى:‎\n‏ص‎ hue Bee ee ‏األطج807)])[( ه04‎\nA A ‏تفن إل‎ & 25 Bl bes ‏الأخرى‎ Fey Cab ‏هما‎\n‏الغديرء الشيخ الأميني ج١٠ ص\"47» شرح نهج البلاغة؛ ابن أبي‎ OD)\n‏الشيخ‎ RB ‏موسوعة الإمام علي‎ We ‏وج\"‎ ٠١ ١ص‎ ١ج ‏الحديد‎\n‎Noe ‏ج05‎ Srl",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0117",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 117,
+      "text_ar": "»ل تاريق الإمام علي بن أبي طالب ‎BE‏ السياسي\n‎LG sah as aah Sa of‏ إِنَّ ‎Geet Le df‏\nفالمطلوب فى هذه الآية قتال الفئة التى تبغى» وليس الأشخاص\nبعينهم رغم أنه وصفهم بالمؤمنين.",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0118",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 118,
+      "text_ar": "التى عاشتها الدولة الإسلامية ‎SUL‏ تلك الأحداث» إضافة\nإلى ذلك دراسة الشخصيات وتوجهاتها السياسية وذلك منذ\nإسلامهم وحتى هذا الحدث الذي أرّق أمير المؤمنين ‎BRE‏ إلا\nأننا سنكتفي بوضع أهم الأحداث المتعلقة بسياسته يل لتتجلّى",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0119",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 119,
+      "text_ar": "لنا حقيقة الأمر حيال قتال الناكثين والقاسطين والمارقين»",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0120",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 120,
+      "text_ar": "‎ole‏ ببعض كلامه من نهج البلاغة الذي يعتبر مصدراً هاماً",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0121",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 121,
+      "text_ar": "‏قبل الولوج في خلفيّة الأحداث المتعلقةٍ بالناكثين» علينا\nالتعريف برموز الناكثين» ذلك أن أبرز الشخصيات التي نكثت بيعة\nأمير المؤمنين ‎BE‏ هما: طلحة بن عبيد الله ‎ey‏ بن ‎olga‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0122",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 122,
+      "text_ar": "‏)1( طلحة بن عبيد الله بن عثمان التيمي القرشي المدني (58؟ ق.ه -\n‎Yt‏ أبو محمد صحابي شجاع من ‎colye I‏ وأحد اله أصحاب\nالشورى» شهد أحداً والخندق وسائر المشاهدء قُتل يوم الجمل وهو\nبجانب عائشة ودفن بالبصرية. (الأعلام» الزركلي» ‎TVA Ge Te‏ قال\nعنه الإمام علي ‎RB‏ أدهى الناس وأسخاهم طلحة. (تاريخ من دفن -",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0123",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 123,
+      "text_ar": "اي و ‎i SE‏\nوخلاصةٌ خروجهم على أمير المؤمنين ل أنهما فقدا الامتيازات\nالتي تحصّلوا عليها ‎OU]‏ خلافة عثمان» فمن خلال الأموال التي\n‎a aor, : oe‏ 4\nتحصّل عليها طلحة على سبيل المثال ‎ST‏ ابتنى دورأ في كل من\nالكوفة والمدينة وغيرها من البلاد ‎PRIN‏ ورغم أنّه كان\nعثماني الهوى إلا أنه لم ينقذ صاحبه من حركة الثوّار» وحينما قُتل\nعثمان وتمت البيعة لعلي َك توقع أنه سيحصل على ما كان\nيحصل عليه في فترة الخليفة السابق» فتعذر بالخروج للعمرة هو\nوالزبير» فأخبرهما الإمام ‎RH‏ ما العمرة تريدان» وإنما تريدان\n‎Bua‏ ونكث العهد. والتحقا ‎Ol‏ المؤمنين عائشة التي كانت بمكّة\nالمكرّمة ‎OL]‏ الثورة على عثمان وقتله وقد فرحت لمقتل عثمان إلا\nأنها ادّعت المطالبة بدمهِ لا حباً فى عثمان!! بل لكراهتها بيعة\nالناس لأمير المؤمنين ‎BEE‏\n‏- في العراق من الصحابة» الهاشمي. 775. نقلاً عن الاستيعاب على\nهامش الإصابة ‎AVY Ge Te‏\nالزبير بن العوّام بن خويلد الأسدي القرشي ‎YA)‏ ق.ه ‎GPT.‏ أبو\nعبد الله» الصحابي الشجاعء أول من سل سيفه في الإسلامء وهو ابن\nعمّة النبي وله وله ‎١7‏ سنة؛ شهد بدراً وأحداً وغيرهماء جعله عمر في\nمن يصلح للخلافة بعده. وكان موسراً» كثير المتاجرء خلّف أملاكاً\nكثيرة» كان طويل القامة. ‎ep MeN)‏ الزركلي» ج7٠‏ ص\"1). كان ممن\nثبت يوم أحد في ‎OU‏ عن رسول وَلكِ. (تاريخ من دفن في العراق من\nالصحابة» الهاشمي ‎VTA Ge‏\n)\\( مروج الذهب» المسعودي» ‎ve‏ اككسي",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0124",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 124,
+      "text_ar": "‎YA‏ ل لل تريغ الإمام علي بن أبي طالب ‎BEE‏ السياسي\nشعار الناكثين:",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0125",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 125,
+      "text_ar": "‏كان شعار الناكثين شعاراً مطاطياً غير ثابت على ‎US‏ عند\nمن يأوي إلى عقله للتفكير في هذا الأمرء حيث ‎GU ols‏\nالمستعمل في ‎tls‏ هو: (القصاص من قتلةٍ عثمان)؛ وعجباً\nللمطالبين بدم عثمان» فأم المؤمنين عائشة كانت من المحرّضينَ\nعلى قتل ‎Ol‏ بقولها: اقتلوا نعثلاً فقد كَمَرِْ وطلحة كما قال\nأمير المؤمنين ‎RE‏ (والله ما استعجل متجرداً للطلب بدم عثمان\nإلا ‎bs‏ من أن ‎Hi‏ بدمه لأنه مظنته ولم يكن في القوم\n‎Ge pi‏ علي ‎cae‏ فأراد أن يغالط بما أجلب فيه ليُلبس الأمر\nويقع الشك. والزبير يقول: اقتلوه ‏ أي عثمان ‏ فقد بدّل\n‎«Sis‏ إن عثمان ‎Hag‏ على الصراط ‎USE‏",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0126",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_002",
+      "paragraph_number": 126,
+      "text_ar": "‏والزبير كما يقول ابن أبي الحديد”': (كان عبد الله بن\nالزبير هو الذي ‎La‏ بالناس في ‎UT‏ الجَمّلء ‎OY‏ طلحة\nوالزبير تدافعا للصلاة» فأمرت عائشة عبدالله أن ‎Lad‏ قطعاً\nلمنازعتهماء ومعلوم أن النزاع على التقدم في الصلاة سيلحقه\nالتنازع في ‎BEI!‏ وهذا مصداق قوله ‎WB‏ كل واحدٍ ‎Lage‏\n‏يرجو الأمر له ويعطفه عليه دون ‎Maske‏\n‎)١(‏ شرح ‎GE ad‏ ابن أبي الحديد ج9 ‎Wye‏\n‏(؟) شرح نهج البلاغة» ابن أبي الحديد ‎Ye‏ ص57١.‏\n)1( نهج ‎EM‏ الشريف الرضي» خطبة رقم ‎TT ye ١54‏ تصنيف:",
+      "page_number": 25
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0127",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 127,
+      "text_ar": "ومع اعتبار أن حركة المعارضة (الناكثين) تعد أوّل\nمعارضة وأوّل تحرّك ضد الإمام الشرعي وفق نظرية النص»\nفإنها لم تكن قائمة لأجل ذكرى عثمان ‏ وإن كان هذا هو\nالشعار المرفوع ‏ بقدر ما كانت موجهة ضد ‎(ide‏ ويخالف هذا\nاحص ‎OU ot‏ اماس ‎ake Get‏ الجر ‎LS‏ مامد\nالسراب على العطشانء فلو كان الذين شكلوا المعارضة بعد\n‎day‏ الإمام مقتنعين بشعاراتهم, ‎I LS‏ حتى ‎CK‏ دم\nالخليفة بمرأىّ منهم ومسمع دون ‎OF‏ يُحَرّكوا ساكتاً!!",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0128",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 128,
+      "text_ar": "مع معرفة الإمام ‎RE‏ بتحركات أقطاب الناكثين» فقد كان\nلهم بالمرصادء ‎Wy‏ فإن سياسته في قتال الناكثين مبنيّة على\nأصول علمية تناولتها الكتب المختصة بالتفصيل ونحن نوجزهاء\nفقد بدأ ا معهم بالحوار الذي لم يكونوا يستطيعون ‎cage‏\n‏ولم يقووا على مواجهته؛ باعتبار أنه حينما وافق على بيعة\nالناس له أوضح لهم المسار الذي هو فيه» ويعلم بما سيتركه\nمقتل عثمان من فتنة لا تقل عن فتنة المرتدين بعد وفاة الرسول\nالأعظم ‎Be‏ وقد أوضحنا قوله ‎BE‏ في هذا الأمر: ‎GLa)‏\n‏مستقبلونَ أمراً له وجوٌ ‎SL‏ لا تقوم لهُ القلوب» ولا تثبت\nعليه العقول)» ولذا فهو مطمئنٌ من ‎YS‏ حركةٍ قام ‎cles‏ وبعد\n)1( الفتنة؛ هشام ‎chine‏ ص154.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0129",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 129,
+      "text_ar": "4 ل تريخ الإمام علي بن أبي طالب ‎BEE‏ السياسي\nالحوار والمجادلة وإلقاء الحجَةٍ تلوّ الحبجَة عليهم؛ وتعريتهم من\nحركتهم المقبلين عليهاء مؤثراً الإصلاح ما استطاع إليه ‎See‏\n‏أرسل رسله إلى الكوفة ‏ بعد استيلاء الناكثين على البصرة وقثل\nالكثير من المسلمين فيها صبراً واحتساباً - مستنهضاً بعامله أبي\nموسى الأشعري الذي ما إن وصلت رسل الإمام ‎BR‏ لحنّهم\nعلى الاستعداد لمواجهة الناكثين» حتى بادر الأشعري بتثبيط\nالناس عن الاستعداد لمواجهة جيش البصرة (الناكثين)» إلا أن\nالأشعري لم ‎he‏ وكأن أصابع الاتهام تقول إحدى أمرين:\nفإما أن يكون ‎Ebi‏ مع شبكة الناكثين لبيعة أمير\nالمؤمنين ‎RE‏ وإما حُبّا في عدم التدخل في الفتنة حسب\nزعمهء والتي استجلت أنوارها وملابساتها من خلال ‎Sod‏ أمير\nالمؤمنين ‎RE‏ لإخمادها حتى لا تكون الكوفة للأشعري.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0130",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 130,
+      "text_ar": "إضافة إلى ذلك فإن ما توقعه ‎BB‏ حصل بالفعلء إنها\nالحربٌ التي تأكل الحرث والنسل فهو الحل الأخير الذي\nطرحه ‎BB‏ لمواجهة هذه الفتنة». وكما يقال: (آخر الدواء\n‎(SI‏ ذلك ‎BE ST‏ طرح حلولاً كثيرة لم يقبلها حزب الناكثين\nوتفاصيل ذلك في كتاب نهج البلاغة المعروف. فما زال\nالإمام ‎BE‏ يبتعد عن الحرب قدر المستطاع, إلى درجة أنه\nطلب منهم تحكيم من كان في المدينة ولم يقبلوا.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0131",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 131,
+      "text_ar": "oy BE ‏يسول اث‎ cle gat\n‏الزبير حريصٌ على القتال بالشعار الذي استعمله‎ als,\n‏الزبير وطلحة من حرصهما على القتال واتهام آخرين بإشعال‎\n‏والذي وردت بحقه‎ Odd ‏فتيل الحرب كحكيم بن جبلة‎\n‏أحاديث إجلال من قبل العلماء الذين ترجموه ا مصئّفاتهم»‎\n: ‏ققد ذكر صاحب الدرجات الرفيعة‎\n‏أبو عمرو بن عبد البر والفيروز أبادي وغيرهما من‎ the\n‏العلماء فى الصحابة كان رجلاً صالحاً شجاعاً مذكوراً مطاعاً‎\n‏في قومهء وفيه يقول أمير المؤمنين على ما ذكره ابن عبد ربه في‎\n‏العقد الفريد:‎\n‏دعا حكيمٌ دعوءً سميعة نال بهاالمنزلةالرفيعة“”©‎\n‏ثم إنه - حكيم  ثارَ على الزبير وحزبه لأنهم سجنوا والي‎\nAB SS) ‏الإمام عثمان بن حنيف غدراً ونتفوا شعر لحيتدء ثم‎\npy MUSLisy Len, olijy ‏اتح‎ Le ObLe 5 als\nPty ‏أحد الأشراف الأبطال؛ كان ذا دين‎ itis\n.١ ‏خلافة علي بن أبي طالب . عبد الحميد فقيهي © 6 ص68‎ (2)\nVAN ‏السيد علي خان الشيرازي» ص‎ cing JM ‏النرجات‎ (7)\nOO ‏ص‎ Ye ‏الذهب» المسعودي؛‎ wt 62\nOV Ve Te ‏سير أعلام النبلاء؛ الذهبي؛‎ )8(",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0132",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 132,
+      "text_ar": ":ود لل تريخ الإمام علي بن أبي طالب ‎BB‏ السياسي",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0133",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 133,
+      "text_ar": "ولعل ما ذكرناه في حق حكيم بن ‎the‏ يكفي لرد مزاعم\nمن قال إنه كان حريصاً على القتال وإشعال الحرب.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0134",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 134,
+      "text_ar": "ثم ‎ES‏ الباحث قال بحق حكيم ما ‎dU‏ أن يناقش ما\nفعل الزبير وطلحة حينما أحضروا خمسين رجلاً يشهدون بأن\nالمنطقة التي نيبحت بها كلاب الحوأب ليست بالحوأب» والتي\nوصفها المسعودي بأنها أوَّلُ شهادةٌ زور أقيمت في الإسلام»\nوهم أول من قتل ظلماً في الإسلام وصبرا0\".",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0135",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 135,
+      "text_ar": "نعم!! ناقش هذه المسألة بكلمةٍ مرسلةٍ أطلقها يراعه دون\nإسهاب في التحقيق» وعدم 35 في تناول المسألة من جميع\nجوانبها متهماً المسعودي بالافتراء» نقلاً عن أحد المصادر التي\nتؤيد ما يذهب إليه من ‎Osh‏",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0136",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 136,
+      "text_ar": "وسبب ابتعاده عن تحقيق ذلك أنه سيرى نفسه ليس جديراً\nبتحقيق هذه المسألة» وذلك أنه اتهم هشام ‎AS‏ الذي يروي\n‎Gises Col ge‏ ل ل ‎Lyte‏ ا ‎coe‏\n‏التحقيق باعتبار أن هذان الراويان رافضيان في نظرهء إلا أنه لم\nيسعفنا بمصدر واحدٍ على أنهما متروكان» ولعلّه اعتمد على\n)\\( مروج الذهب» المسعودي». ‎Ve‏ 0050\n)1( خلافة علي بن أبي طالب ‎HE‏ عبد الحميد فقيهي» ‎NON ONG‏\nإفف خلافة علي بن أبي طالب ‎BE‏ عبد الحميد فقيهي» ج١‏ 50 ‎ON‏",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0137",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 137,
+      "text_ar": "‎cle gas‏ رول أت ‎BE‏ اق\nفهشام كما قال النجاشي بأنه مشهور بالفضل ‎lly‏ وأحاديثه\nمشهورة» وكان يختص بمذهب أهل البيت ‎ORB‏ وكذا أبو\nمخنف الذي ليس ببعيد عمًا ذكرناه ‎Gow‏ هشامء ‎Ob‏ عدم الأخذ\nعنه كونه شيعيا» مع العلم أن كثيراً من المؤرخين رووا ‎as‏\n‏وذكروا له الكثير من أخباره.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0138",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 138,
+      "text_ar": "‏فإذا كان التحقيق والتأليف بهذه النظرة الطائفية الضيّقة:\nفئن نعتمد على ما يذكره فقيهي في كتابه هذا الذي نال به درجة\nالماجستير» وكان الأحرى به أن يكون منهجياً وموضوعياً في\nتناول القضايا وبعيداً عن التعصب.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0139",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 139,
+      "text_ar": "‏ثم إننا لسنا متحاملين على أصحاب رسول الله يه\nكطلحة والزبير وزوجته أم المؤمنين عائشة ل بل نقول\n‎ily‏ أمير المؤمنين وسيّد الموحدين علي بن أبي طالب نلا\nالذي أحزنه مقتل طلحة والزبير وأبنهما بتأبينه الأخلاقي رغم\nالاختلاف معهما في الرأي وخروجهما ‎Gls] cade‏ إلى ذلك\n‎)١(‏ سير أعلام النبلاءء الذهبي؛ ‎Ee‏ ص4٠\".‏\nزقفق معجم رجال الحديث» السيد الخوئي» ‎Te Ve‏\n‎(vr)‏ مقتل الإمام الحسين كلا لوط بن يحيى (أبومخنف)» ص١‏ -9.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0140",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 140,
+      "text_ar": "غ4 د لل ل تريخ الإمام علي بن أبي طالب ‎RB‏ السياسي\nلم نعتمد بالجملة على أقوال المسعودي الذي اعتبره مفترياً على\nصحابة رسول الله ‎Bi‏ بل اعتمدنا على غيره من المؤرخين\nالذين وافقوا المسعودي وغيره في نقلهم تلك الأحداث.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0141",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 141,
+      "text_ar": "ومع ما حصل من قتال راحت فيه الآلاف من الأنفس في\nكلا الجيشين» فإنه يقف محزونا على جثةٍ الزبير الذي كان معه\nفي كثير من غزوات النبي ‎Be‏ وهذا يعطينا درساً ‎ST‏ لا ‎(ele‏\n‏أشخاصاً بل ‎Eb ple‏ بلباس غير الذي كان في زمن\nالنبي َي ثم إنه لما أجلسوا ‎Ell‏ بعد مقتلو قال: (اعزز علي\nأبا محمد أن ‎[aes iT‏ تحت نجوم السماء وفي بَظْنِ هذا\nالوادي! أبعد جهادك في ‎cdl‏ وذبّك عن رسول الله ‎OB‏\n‏وقد كان الزبير على ‎ple‏ بما سيؤول إليه من فعل» ذلك أن\nرسول الله ‎Be‏ أخبره بقوله: ‎Bap‏ تقاتل ‎Ble‏ وأنت ظالمٌ ‎PGs‏\n‏ومع ما صدرٌ من ‎Al‏ المؤمنين عائشة وموقفها منه ‎BEE‏ فإنا نراه\n‎LIS Ghee ee‏ إلى بيتها في المدينة» وهذا السّلوك الذي\nصدر من أمير المؤمنين ‎YA‏ يتمثل به سياسي» بل يتمثل به\nأصحاب المبادئ الذين يحملون بين جوانحهم رسالة ‎LW‏\n‏والدين» ويجسّدون الشريعةً في ‎YS‏ تحركاتهم وسكناتهم.\n‎)١(‏ شرح نهج البلاغة» ابن ‎ol‏ الحديد ‎Ve‏ ص548.\n)1( الغديرء الشيخ الأميني ج١٠ ‎AV Ge‏",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0142",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 142,
+      "text_ar": "‎GLY‏ إلى ذلك ‎OF‏ النبيّ ‎Be‏ حينما ذكر خروج بعض\nأمّهات المؤمنين ضحكت عائشة فقال: (انظري يا حميراء أن لا\nتكوني أنت) ثم التفتَ إلى ‎Yle‏ فقال: (إن ‎Eady‏ من أمرها شيئاً\nقارفق ‎Ue‏",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0143",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 143,
+      "text_ar": "‏ولذا نراه نهذ ما انفك ‎Cty‏ موقِمَهُ من الناكثين في كل\nما قاموا به حتى لا ‎the‏ من في جيشه بشعاراتٍ لا تمت إلى\nالواقع بصلة.\nالحرية السياسية:",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0144",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 144,
+      "text_ar": "‏حينما نضفي آيات الثناء والتمجيد على شخصية أمير\nالمؤمنين 4 ‎OL‏ ذلك مستلٌ من سلوكه الذي ما فارق القرآن\nالكريم ووصايا حبيبه ‎Bb BE‏ عين ‎Lal‏ فإنَهُ مع ‎pele‏ بخروج\nطلحة والزبير ‎ale‏ فقد أعطاهما حريتهما السياسية في\nالمعارضة أثناء خروجهما من المدينة» ولذا أخبرهما ‎logis‏\n‏يقوله: (ما العمرةً تريدان» ‎UES‏ له ‎Lgl‏ ما يريدان غير ذلك»\nققال لهما: ‎Lily‏ تريدان الغدرة ونكث ‎Gg‏ باعتبار ‎St‏ لَمْ\n‎pes‏ شيء من قبلهما حينما كانا في المدينة حتى يحاربهما أو\n19) المستدرك على الصحيحين؛ النيسابوري؛ ‎Age Te‏ حديث رقم",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0145",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 145,
+      "text_ar": "‏(؟) شرح نهج ‎EU‏ ابن أبي الحديد» ‎WY Ge Ve‏ (بتصرف).",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0146",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 146,
+      "text_ar": "ل ا ال ‎BEE‏ ل ال\nيحبسهماء ومع ذلك فما زال يتعامل معهما ‎JS‏ احترام» إلا أن\nالمسألة وصلت إلى ‎CIE‏ التاس عليه وهو الذي قد بايعة\n‎GUI‏ بما فيهما ‎Wy Copy edb‏ نراه يوبخهما حينما خرجا\nوأم المؤمنين عائشة معهماء باعتبار أن أم المؤمنين عائشة وإن\nكانت غير راضية ببيعة الناس لأمير المؤمنين ‎RE‏ إلا أن ما\nشجعها على الخروج هو تهييج الموقف من قبل المحيطين بها\nومنهم: طلحة والزبير اللذان يريدانها غطاءً شرعيا لهما في\n‎Le Les >‏ مركز ‎BEI‏ في المدينة المنوّرة» ولذا يقول يلكلا\nفي ذلك: (فخرجوا يجرّون ‎GIP‏ رسولٍ الله ‎Bi‏ كما ‎Sad‏ الأمة\nعند شرائها متوجهين بها إلى البصرة فحبسا نساءهما في\nبيوتهماء وأبرزا حبيس رسول الله © لهما ولغيرهماء في جيش\nما منهم رجل إلا وقد أعطاني الطاعةً وسمع لي بالبيعة طائعاً\nغير ‎OS‏ ثم إن ما يتعلق بأم المؤمنين عائشة فلربما مكثت\nفي مكة المكرمة بعد مقتل عثمان وتولي أمير المؤمنين ‎BE‏ أمور\nالناس.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0147",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 147,
+      "text_ar": "ولذا نرى هذا السلوك وهو إعطاء الحرية السياسية غير\nمتوفر في العصر الحاضرهء باعتبار أن المعاصرين أصحاب\n‎)١(‏ نهج البلاغة» الشريف الرضيء خطبة رقم ‎TEV Go WY‏ تصنيف:",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0148",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 148,
+      "text_ar": "نبوءات رسول ‎sv — BB‏\nتوجهات سياسية صرفة وليسوا أصحاب مبادئ وقيم منطلقة من\nجوهر الدين إلا ما ندر ويعاقبون قبل صدور أي أمر من أي\nمعارض أو مختلف معهم في أي قضية؛ مما يستدعي القول ‎Ob‏\n‏الوعي السياسي غائب عن ‎OLS‏ وما هو مستفحل هو: حب\nالسيطرة والتسلط على رقاب الناس» وما خروج الإمام ‎RE‏ إلى\nحرب الناكثينَ إلا حربٌ للفتنة التي اشتعلت» لأنه لو تركهما\nلما ‎GUE‏ الفتنة» ‎et,‏ كثيرٌ من حملة الفكر النيّر من\nأصحاب رسول الله ‎vl wl, De‏ الإمام ‎wl, RB‏ الكثير\nمن معالم الحركة الإسلامية على ما هي عليه من تغير» فكان لا\nيد من محاربة الإمام ‎BE‏ لها لاستئصال شأفتها.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0149",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 149,
+      "text_ar": "وممن ‎Gm‏ باحترام ‎al‏ وسلوكهء الذين رفضوا بيعة\nالإمام ‎BE‏ كثير» مثل: عبد الله بن عمرء سعد بن أبي ‎gels‏\n‎uli‏ بن زيدء زيد بن ثايت... ‎Ve ey‏\nلماذا الذهاب إلى الكوفة؟",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0150",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 150,
+      "text_ar": "لعل سؤالاً يطرحٌ نفسه. وهو: لماذا ‎GF‏ الإمامٌ نظ إلى\nحرب الناكثين في الكوفة. ولماذا لم يوجه جيشاً لهم من\n‎)١(‏ الفتنق. هشام ‎clue‏ ص177.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0151",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 151,
+      "text_ar": "‎tA‏ ل تاريخ الإمام علي بن أبي طالب ف السياسي",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0152",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 152,
+      "text_ar": "‏والإجابة على ذلك تستلزم الكثير من الأدلة ولعل أبرزها",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0153",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 153,
+      "text_ar": "‎Je ‏ومن معهما‎ ply ‏طلحةً‎ YS ‏تجييش البصريين من‎ - ١\n‏الإمام نظ وهو في المدينة» خصوصاً أن طلحة كما أسلفنا‎\n‏خلافة عثمان» وكانت هي‎ OU] ‏له دُوراً ابتاعها‎ Ob ‏القول‎\n‏وقود الحرب وإلا لما قدر طلحة وغيره على دفع الحرب‎\n‏بهذه السرعة.‎",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0154",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 154,
+      "text_ar": "‎١‏ - النقطة الأخرى بعد البصرة لحركة التجييش هي الكوفة»\nوالكوفة معروفة ‎GELS Ob‏ عظيم» يَدُرُ الكثير من الأموال\nعلى خزينة الدولة الإسلامية» فكان لا بد من الإمام التحرك\nنحو الكوفة واستعمال عاملها في تحقيق العدالة وإخماد\nالفتنة قبل وصول الناكثين إليهاء إلا أن عامل الإمام ‎REE‏ أبا\nموسى الأشعري ثبّط الناس عن ‎AUS‏ ولعله حبأ في\nاستفراده بالكوفة وليس ‎be‏ منه بعدم الوقوع في الفتنة.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0155",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 155,
+      "text_ar": "‎٠‏ - منطقة الكوفة لها خصائص من حيث ‎HS pI‏ ومن حيث\nوجود الكثير من المدربين عسكرياً. فكان على الإمام نلا\nاستثمار هذه النقطة لصالحه قبل وصول طلحة والزبير\nإليهاء إلا أن كثرة الحروب ‎ESSE‏ ذلك الجيش إلى\nأحزاب ‎SLE‏ فيما بعد.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0156",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 156,
+      "text_ar": "88 Bt ‏نشول‎ cle gat\n‏تفادي عملية توحيد الشعار (القصاص من قتلة عثمان).‎ - 4\n‏والذي بدوره قد يربط البصرة والكوفة والشام تحت هذا‎\n‏الشعار» وينضم تحته الآلاف ص مالس هذه المناطق.‎\n‏ويضيف الدكتور إبراهيم بيضون نقطتان مع عدم إيمانه‎\n‏وهما: تفادي تكريس‎ LET ‏بالنقطة الأولى التي ذكرناها‎\n‏الانقسام الواقع بقيام «دولة» معاوية في الشام» وتأمين بؤرة‎\n‏صالحة للمجتمع النموذج الذي توخى من خلاله التصدي‎\n‏رار‎ Shan\n‏كلاب الحوأب:‎ cls\n‏يقول المسعودي: (وسار القومٌ نحو البصرةٍ في ستمائة‎\n‏لبني كلاب يُعرفُ بالحوأاب»‎ he ‏راكب» فانتهوا في الليل إلى‎\n‏فقالت‎ SN ‏على‎ EIS OH COS ‏من بَنِي‎ GU ‏عليه‎\n‏فقالت:‎ US ‏الحوأب» فاسترجعت وذكرت ما قيل لها في‎\n‏لا حاجة لي في المسيرء فقال‎ Be ‏رهُوني إلى حرم رسول الله‎\n‏وكان‎ ce ‏فيما أخبرك‎ BLE ‏ولقد‎ coll ‏'لزبير: بالله ما هذا‎\n‏ورواية «التاريخ», د. إبراهيم بيضون»‎ ‘eel ‏الإمام علي بين رؤية‎ 109)\n.٠١ة؟ص‎",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0157",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 157,
+      "text_ar": ".ءد لل تريخ الإمام علي بن أبي طالب 8 السياسي\nطلحة في ساقة الناس» فلحقها فأقسم أن ذلك ليس بالحوأب»\nوشهد معهما ‎Operas‏ ل ‎OWS‏ معهمء ‎J5) Gus ols‏\nشهادة زور أقيمت في ‎MOY‏\n‏رسول الله ‎Be‏ لأنه قال ذات يوم يخاطب نسائه: (ليت شعري\nأيتكن صاحبة ‎Jest‏ الأدبّبُ تخرج فينبحها كلاب الحوأب يقتل\nعن يمينها وعن يسارها قتلى كثير ثم تنجو بعدما كادت)”\".\nوالزوجةٌ الوحيدة التي خرجت هي أم المؤمنين عائشة»\nوذلك من قبل طلحة والزبير اللذان جعلاها غطاءً شرعياً\nلأهدافهما الشخصية؛ ‎Lane Wy‏ وصلت المحل المعهود =\nالحوأب  ‎Ue Carl‏ عَزمت ‎WY ale‏ أدركت الحقيقة التي\nأخبر بها النبي وَل إضافة إلى ذلك ‎OF‏ القرآنَ الكريم أَمَرَمُنّ -\nأزواج النبي ‎Be‏ - بالإقرار في بيوتهن وذلك في قوله تعالى:\nوَل في £562 [الأحزاب: ‎Art‏\n‏الأعظم وك حينما علمت بخروج طلحة والزبير وإخراجهما أم\nالمؤمنين عائشة ويا قالت لأمير المؤمنين ‎BE‏ (ولولا ما نهانا\n‎)١(‏ مروج الذهب, المسعودي. ج؟ ص؛4ه ”0‏ 800.\n‎(Y)‏ مروج الذهب» المسعودي» ‎ve‏ ص ‎Yoo‏ (الحاشية).",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0158",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 158,
+      "text_ar": "ON Be ‏يسول اث‎ cle ge\n‏الله عنه من الخروج وأمرنا به من لزوم البيوت لم أدع الخروج‎\n‏نحوك ابني عدل نفسي عمر بن‎ Bel ‏إليك والنصرة لك. ولكني‎\nOOS ‏أبي سلمة فاستوص به يا أمير المؤمنين‎",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0159",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 159,
+      "text_ar": "وفي ‎ba‏ آخر: أن أم المؤمنين أمَّ سلمة ونا قالت لأمير\nالمؤمنين ‎RB‏ (سِر في حفظ الله وفي كنفه فوالله إِنَكَ لعلى\n‎Godly Goal‏ معك. ولولا أني أكره أن أعصي الله ورسوله فإنه\nأمرنا و أن ‎fas‏ في بيوتنا لسرت معكء ولكن والله لأَرْسِلَنٌ\nمَعَكَ من هو أفضل عندي ‎Ble Joly‏ من نفسي ابني ‎OC sb‏",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0160",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 160,
+      "text_ar": "هناك من يذهب من الباحثين إلى أن دور أم سلمة فيما\nمُسمى ‎Gab‏ لا أساس له من الصحةء إلا أن هؤلاء الباحثين\nلم يوضحوا لنا تلك الأدوار أو الشواهد التاريخية التي تجعل أم\nسلمة في ‎cle‏ ومعزل عن هذه الأحداث» فهذه دعوى غير\nعلمية» ‎oF‏ حججهم لا تتعدى اتهام بعض المؤرخين بالتشيّع»\nأو وجود نقد لبعض مواقف الصحابة أو أي حجة أخرى.",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0161",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 161,
+      "text_ar": "بينما المنهج العلمي يفرض على الباحث أن يأتي بالشواهد\nويناقشها مناقشة علمية بعيداً عن التحيّز إلى آراء واهية”\" .\n‎)١١‏ الدرجات الرفيعة؛ السيد علي ‎١917 (OLE‏ 194\n(؟) المستدرك على الصحيحين؛ النيسابوري» ‎NTR Ge Ne‏ حديث رقم",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0162",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 162,
+      "text_ar": "TEN Go cut dem 12 (ey) take pl gape phi OF)",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0163",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 163,
+      "text_ar": "5ع ‎ploy! aaj‏ علي بن أبي طالب ‎BB‏ السياسي\nثم إن أم المؤمنين عائشة ‎the‏ حينما سُئلت عن هذا\nالخروج من حيث إنه ‎Age‏ من رسول الله ‎Be‏ أم رأيْ رأته؟!\nقالت: ‎LL)‏ رأيته حينما ‎GL JS‏ وقد قالت في شأن\nخروجها: (وددثٌ أني ‎es‏ ثكلت عشرة مثل الحارث بن هشام\n‎(y) { 4‏\nومن الطريف أن أحد الباحثين”\" اعتمد على أقوالٍ ‎daly‏\n‏لا تصمد أمام الدليل ‎carb‏ فقد اعتمد على قول عبدالحميد\nفقيهي الذي ناقشنا آراءه ‎Le‏ وعلى قولٍ آخر أورده وهو أن\nالحديث الوارد عن النبى ‎BE‏ ليس فيه ما يدل على نهى عن\nشيءء أو أمر بشيء لتفعله عائشة» بل إن ما يفهم من الحديث\nمرّت بهذا الماء لا يعدو أن يكون ‎bb‏ في احتمال الرجوع كما\nجاء على لسانهاء وهو ‎Bb‏ لم يلتبس إلا يسيراً في نفسها ثم\nعاد هدفها من الخروج واضحاً كما ذُكرت بما عسى أن يجري\n‎)١(‏ أحاديث أم المؤمنين عائشة؛ السيد العسكري». ‎Ve‏ ص187.\nزفق المستدرك على الصحيحين» ‎Te (Sop‏ ص159ء حديث رقم\n1505لا\n)1( حقيقة الخلاف بين أمير المؤمنين علي ‎BE‏ وعائشة والزبير وطلحة ‎Bp‏\n‏عام الجمل» د. محمد إبراهيم أبا الخيل» ص©9١٠‏ [مجلة الدرعية].",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0164",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 164,
+      "text_ar": "تومت رسول الث ‎oy BE‏\n‎Comey‏ هذا الرأي الذي ‎WEY‏ صريح القرآن الكريم\nهومن فى ‎lt OY EGY‏ والحقيقة إذا كانت\nالعراسات العليا بهذه الصورة ‎obey‏ الانحيازية نحو أضعف\nالآراء التي هي أوهن من بيت العنكبوت فعلى العقل السلامء يا\n‎el ss‏ قوله يعدالة الصحابة التي أوردها في بحثه؟! وهذه\nليست ‎ope‏ صحابية وفقطء بل هي أفقه زوجة والمحدثة عن\nالتبي يك ثم إن النبي ‎Be‏ لا ينطق عن الهوىء أتكون نبوءةٌ\n‎SE‏ من تعاليم؟ ثم هل تكون نبوءةٌ من أَجْلٍ نباح كلاب\nوققط؟!. إن من يذهب إلى مثل هذه الآراء الواهية فإنه في\nتصوّري يقدح في كل ما حدّث به رسول الله ‎Be‏ من أحاديث\nوتيوءات... الخ.\nثم إن هناك عدّة قرائن ذكرناها في هذه الصفحات ونذكر\nأخرى غيرهاء وهي:\n1 ارتباط الحديث (نباح كلاب الحوأب) بخروج أم المؤمنين\nعائشة مع طلحة والزبير ضد الإمام علي ‎BBE‏\n‏؟ - مناقشة بعض الصحابة العدول والتابعين لأم المؤمنين ‎he‏\n‏حول إخراجها الذي لا يقبله أي إنسان في حق ‎wert‏\n‏رسول الله ‎DE‏\n‏“- نصيحةٌ ‎pl‏ المؤمنين أم سلمة لعائشة وها وموقفها من هذه",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0165",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 165,
+      "text_ar": "عوهد دل تريخ الإمام علي بن أبي طالب ‎BE‏ السياسي\nالأحداث» فقد ‎CU‏ برأيها في هذه المسألة ‎JS‏ صراحة\nودون ‎Oey‏\n‏المؤمنين ‎pls BBE‏ سلمة التي أرسلت ولدهاء فيا ترى هل\n‎Gs‏ معتزلات الإصلاح» أم ‎Sail‏ تأولنَ كلام ‎Bail‏ على\nغير الجادة؟ أم أن حالة الحرب التي يرونها تشتعل بين",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0166",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 166,
+      "text_ar": "قد يقول قائل بأن خروج أصحاب الجمل كان لأجل\nالإصلاح» ولم يقاتلوا أحداً إلا حين اضطرًوا لذلك!!",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0167",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 167,
+      "text_ar": "ومع إيماننا التام ‎ob‏ ذلك ليس هدف أصحاب الجمل\nباعتبار أن أمير المؤمنين ‎BEE‏ كان يعلم بما ستؤول إليه الأمور\n‎OL,‏ القرائَ لا تخدم الحجة القائلة بطلبٍ الإصلاح بشهادة\nالمصادر التي أوردناهاء فلو كان الإصلاح كما يقول فلماذا لم",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0168",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 168,
+      "text_ar": "يقيموا ‎ead‏ على أمير المؤمنين في المدينة؟!",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0169",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_003",
+      "paragraph_number": 169,
+      "text_ar": "- 4١ ‏ص؛‎ Ne ‏أحاديث أم المؤمنين عائشة» السيد مرتضى العسكري»‎ )١(\n‏فقد ذكر السيد نص الرسالة التي بعثتها أم المؤمنين أم سلمة‎ 5\n‏لعائشة» ولطولها لم نذكرهاء واكتفينا بالقرائن وبعض الأحاديث التي‎\n‏أوردناها.‎",
+      "page_number": 41
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0170",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 170,
+      "text_ar": "ولماذا لم يتخذ أصحاب الجمل أم المؤمنين شعاراً لهم\nفى الحجازء أو جلبها إلى المدينة؟! فلو قاموا بهذا فإنه سلوكٌ\nوتصرّفٌ أقوى باعتبارها زوجة رسول الله ‎Be‏ والمطيعون لها\nكثيرون من الصحابة.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0171",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 171,
+      "text_ar": "ولماذا حينما سأل أبو الأسود الدؤلى أم المؤمنين\nعائشة ‎ge Ue‏ مسيرها قالت: أطلب بدم عثمان» قال لها: إنه\nئيس بالبصرة من قتلة عثمان أحد»ء قالت: صدقت ‎pty‏ مع\nعني بن أبي طالب بالمدينة وجئتٌ أستنهض ‎fal‏ البصرة\nلقتاله... ‎aire‏ فيا ترى لماذا لم تستنهض أهل مكةء أو أهل\nاالمدينة؟!! ولماذا لم ترسل كتاباً لهم ليأتوا؟!",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0172",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 172,
+      "text_ar": "‎Wis,‏ لو كان قصد الناكثين الإصلاح» فلماذا يتم تأليب\nالتاس ضد الإمام؟! ولماذا يُرفع فيها السيف ‎aby‏ دور الحوار\nقي مثل هذه المسائل المصيرية؟! ثم كذلك لماذا يتم فيها\n‎gaat‏ على ‎Sly‏ الإمام في البصرة؟!ء ولكن المسألة في\nلواقم : تأويل خاضع لمصلحة شخصية:» بعيداً عن القضية\nالمقدسة المسماة ب(الإصلاح)» ‎oy‏ الإصلاح له آليات وأدوات\nغايت عن سلوك حركة المعارضة» والتي من الواجب التمثّل بها\nحتى لا تتعرض إلى الهتك كما حصل.\n1) أحاديث أم المؤمنين عائشة» السيد العسكري» ‎Ve‏ ص185.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0173",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 173,
+      "text_ar": "3س تريخ الإمام علي بن لبي طالب ‎BE‏ السياسي",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0174",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 174,
+      "text_ar": "ولا بأس بالاستشهاد بقول أحد ‎SUE‏ حول من رفع\nشعار (المطالبة يدم عثمان)» قال قاضي القضاة علي بن علي بن\nمحمد بن أبي العز الحَنّفي: (وكان في عسكر علي ‎RB‏ - من\nأولئك الطغاة الخوارج الذين قتلوا عثمان ‏ من لَمْ يُعرف يعينه»\nومن تنتصر له ‎cold‏ ومن لم يقم عليه ‎the‏ يما ‎saad‏ ومن في\nقلبه فاق لم ‎Ser‏ من إظهاره ‎MS‏\n‏قول الحق أم التحامل على الصحابة؟",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0175",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 175,
+      "text_ar": "من خلال استعراضنا للأحداث التي تَنْتْ مقتل عثمان»\nقد ‎qa‏ القارئ الكريم أن ذلك تحاملاً على صحاية رسول\nالله يَ! ! وأم المؤمنين عائشة ‎We‏ ومن سار في ركيهم؟!",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0176",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 176,
+      "text_ar": "والواقع خلاف هذا الرأي» بل إِنَّ الغرضّ من قلك هو\nتوضيح جليّة الحال التى عاشها أولئك الصحاية الكرام»\nوتوضيح ملابسات التحرك الذي ساد المدينة بعد ‎cole ee‏\nمع عدم إنكارنا لفضائلهما التي لا ينكرها إلا ‎Line‏ أو مصاحب\n‎een)‏ فمواقفهما ‏ طلحة والزبير - وذبّهما عن رسول الله يه\nفي الحروب التي شهدوها تشهد بمكانتهما العظيمة. إلا أنهما\nطرأت عليهما هذه الحالة التي قَلَّبَت الأمور ‎LA,‏ على عَقِبْء\n‎)١(‏ شرح الطحاوية؛ صدر الدين ‎AME EAN Goo dod‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0177",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 177,
+      "text_ar": "ov Be ‏يسول اذك‎ cle gas\n‏المؤمنين 2 أثناء وقوفه على جئتيهما‎ pal ‏وخيرٌ دليل أقوالٌ‎\n‏بعل قتلهماء وعلى م أراد ذلك فليراجع المصادر التي تحدثت‎\n‏وحروبه.‎ Bi ‏عن غزوات الرسول‎\n‏عدالة الصحابة:‎\n‏بعض الباحثين مسألة عدالة الصحابة حينما يبحث‎ pad\n‏بين‎ Chee ‏أو‎ ke ‏فيها لاف‎ Cte ‏مثل هذه المواضيع التي‎\n‏بعض الصحابة» لذا يقول أحد الباحئين حول هذا الأمر: (ذلك‎\n‏أن عدالة الصحابة  كما يقول الخطيب البغدادي  ثابتةٌ معلومةٌ‎\n‏منهم مع تعديل‎ ded ‏بتعديل الله لهم.... ثم يقول: فلا يحتاج‎\n‏من الخلق‎ gol ‏الله تعالى لهم المظلع على بواطنهم إلى تعديل‎\n‏لهم)”\".‎\n‏أنه لم يقحم عدالة الصحابة في مثل هذه‎ ot ‏ويا‎\n‏هذه الدعوى باطلةٌ من أساسها لأسباب كثيرة»‎ OY ‏المسائل.‎\n‎: ‏منها‎\n‏لو كان الصحابة عدول لما وقع القتلّ فضلاً عن الخلاف‎ -١\n‏الذي جرى بينهم.‎\nBp ‏وعائشة والزبير وطلحة‎ BB ‏حقيقة الخلاف بين أمير المؤمنين علي‎ )١(\n‏(مجلة‎ .97 AY Ge esl ‏عام الجمل» د. محمد إبراهيم أبا‎\n‏الدرعية).‎",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0178",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 178,
+      "text_ar": "54 ب تايخ الإمام علي بن ابي طقب ‎BB‏ السياسي\n1- وجود أحاديث كثيرة وصحيحة تنص على ‎goth GUN‏\nالمؤمنين َل في جميع الأحوال؛ ولذا تُقحم في مثل هذه\nالمسائل التاريخية.\nيتم الدفاع عنها تحت عناوين ‎ide‏ ومنها: (عدالة\nالصحابة) أو (الاجتهاد الخاطى) أو ‎LSI)‏ من قتلة عثمان)\n- تَحَقّنْ الكثير من نبوءات ‎cel‏ الأعظم ‎BE‏ وقد ذكرناها في\n‎wlglews‏\n‏0 - التقديس غير المقنن للصحابة كلّهمء مع أنّهه محل احترام\nوتقدير المسلمين.\n5 - وغيرها من الأسباب التي قد يطول المقام بذكرها.\nإضافة إلى ما ذكر فإن الدكتور وقع في النقض دون أن\nيشعرء فإنه بعد ذكره عدالة الصحابة التى هى من تعديل الله\nلهمء يستدرك قائلاً: (فهم على هذه الصفة إلا أن يثبت على\nأحد ارتكاب ما لا يحتمل إلا قصد المعصية؛ والخروج من\nباب التأويل بسقوط ‎Md‏\n‎)١(‏ حقيقة الخلاف بين أمير المؤمنين علي ‎BB‏ وعائشة والزبير وطلحة ‎Ai‏\n‏عام الجمل» د. محمد إبراهيم أبا الخيل» ‎AT G2‏ (مجنة الدرعية).",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0179",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 179,
+      "text_ar": "i\n‏وما حصل من بعض الصحابة ومنهم أصحاب الجمل لم‎\n‏يكونوا متأولين أو مشتبهين» باعتبار أن أمير المؤمنين :ل‎\n‏أوضح لهم مقاصده منذ بداية الأمرء ورسائله وكتبه لهم مبثوثة‎\n‏فى هذه الصفحات»‎ Yaw ‏وقد أوردنا‎ oll ‏ولا‎ OI ‏فيها‎\n‏فكيف‎ HG ‏ثم إذا كان هذا الصحابي أو ذاك معدّل من قبل الله‎\n‏يجوز عليه قصد المعصية؟!‎\n‏وطعنه‎ LEY ‏فى من روى هذه‎ GAB ‏إضافة إلى أنه‎\n‏مأخوذ من مصدر اعتمد عليه وهو عبد الحميد فقيهي الذي‎\nmole ‏في نصر بن‎ Gb ‏فقد‎ GL ‏استشهدنا ببعض آرائه‎\noot ot ye ( 5 fe 5 wie Ft -\n‏مَخنف وهشام الكلبي واليعقوبي” 3 ولذا 33 نكرر‎ gly ‏المنقري‎\n‏أنهم شيعة أو رافضة كما‎ A ‏تضعيفة لَهُم‎ Ob ‏ما ذكرناه» باعتبارٍ‎\n‏على توثيق‎ Os ‏بن مُرَاجِمْ‎ pet OT ‏أن يَصِمَّهُم. مع العلم‎ ol\n‏وكذلك قال في حق كتابه‎ We ole ‏كابن‎ ZI ‏بعض أعلام‎\n‏فإن‎ ESS ‏عبد السلام هارون: (ومهما‎ LL ‏(وقعة صفين)‎\n‏هدوء المُوَّرّحَ الذي لا تستفرّهُ العَصَبيّة‎ Gk ‏هذا‎ ats ‏الناظر في‎\nBp ‏وعائشة والزبير وطلحة‎ BB ‏حقيقة الخلاف بين أمير المؤمنين علي‎ )١(\n‏(مجلة‎ .٠٠١ AV Ge ‏الخيل»‎ UT ‏عام الجملء د. محمد إبراهيم‎\n‏الدرعية).‎",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0180",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 180,
+      "text_ar": "٠د‏ تاي ‎ploy!‏ علي بن أبي طالب ‎BB‏ السياسي\nإلى هواهء إلا في القليل الذي لا يستطيع مِنْهُ ‎GWG)‏ فهو حين\nيذكرٌ مثالب معاوية لا يُخفي مطاعِنَ الأعداء في ‎de‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0181",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 181,
+      "text_ar": "‎BEY! CLS (3b KK ge Ll‏ الس فلن شان\nلنا بطعنه فيهء ذلك ‎GT‏ الأخبار المرويّة في قضيةٍ الجَمّل\nذَكَرَهَا ‎Oey‏ آخرون ‎BS‏ غير كتاب الإمامة والسياسة.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0182",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 182,
+      "text_ar": "‏ثم يأتي ‎ol‏ على أمر لا يستحق المناقشة. ولكن لا\nبأس بالتعرّضٍ له على سبيل الإيجاز وهو قوله: (وقبل أن نترك\nهذه القضية نشير إلى ثمة حديثاً ‎Sap‏ عن النبي ييه من غير\n‎he‏ عن ‎ge‏ وأبي سعيد وأبي ‎pl‏ أن ‎Bat se‏\n‎Be Le‏ بقتال الناكثين والقاسطين والمارقين. وقد فسّروا\nالناكثين بأصحاب ‎«ford!‏ والقاسطين بأهل ‎volt‏ والمارقين\nبالخوارج» ‎Cytol gy‏ من ساس ‎5p GS Che‏ ري ‎AS‏\n‎co pty‏ وعندئذٍ فلا وجة للاعتمادٍ ‎cade‏ والأخذٍ به دَعْ ‎dhe‏\n‏النظر في تفسير ألفاظه. وتطبيقها على الوقائع ‎su‏\n‏)1( وقعة صفين» نصر بن مزاحم» ص (و).\n(؟) حقيقة الخلاف بين أمير المؤمنين علي ‎BB‏ وعائشة والزبير وطلحة ‎Ap‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0183",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 183,
+      "text_ar": "‏عام ‎coal‏ د. محمد إبراهيم أبا الخيل» ص١ ‎2٠١‏ (مجلة الدرعية).\n)1( حقيقة الخلاف بين أمير المؤمنين علي ‎BE‏ وعائشة والزبير وطلحة ‎Bp‏\n‏عام الجمل» د. محمد إبراهيم ‎LT‏ الخيل» ‎VIN Ge‏ (مجلة الدرعية).",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0184",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 184,
+      "text_ar": ")- أن الدكتور لم يُوضٌّح ‎eal ey‏ في هذا الحديث لا\nبالنقل ولا بالبحث». سوى إيعاز ذلك إلى ابن كثير\nوغيره.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0185",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 185,
+      "text_ar": "؟ - إِنَّ الباحث المنصف لا يقبل مثل هذا الكلام» ‎OV‏ الدكتور\nعَنْوَنَ ‎ate,‏ هذا ب(دراسة تاريخية تحليلية على ضوء\nالروايات الصحيحة) فأين الدراسة لهذه المرويات الضعيفة؟\nفهذه دعوى وعلى المدّعى ‎ALS‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0186",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 186,
+      "text_ar": "“- وَصَفَ فى مقدمةٍ بحثه هذا أن من ذهب إلى هذا المجال\nفي اتهام الصحابة إنما يذهب طبقاً لما يناسب توجهه\nوفكره وهدفه. وها نحن نرى الدكتور يسعى بكل ما أوتي\nمن قوّة لدحض رواية دون مناقشتها مناقشة علمية» وذلك\n‎Led Lady‏ مسار ‎age si‏ وفكره وهدفه» وغابت ‎Ue‏ تلك\nالدراسة التحليلية التى يزعمها.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0187",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 187,
+      "text_ar": "4 - إذا كان تناول الدّكتور لهذه الرواية بهذه الطريقة» فيا ترى\nالمؤمنين ‎OY NORE‏ في هذا تحقق نبوءة النبي ‎BE‏ ونحن",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0188",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 188,
+      "text_ar": "ملل تريخ الإمام علي بن أبي طالب 826 السياسي\n‎LI‏ على استعداد لتلميع سيرة إنسان ما في مقايلها تكذيب\nنبوءة النبى ‎BE‏ التى تحققت بانطباق المواصفات على هذه\nالفرق الثلاث» ناهيك عن الأحاديث والرسائل والقرائن\nالتي تنبت بأن هذا الحديث صحيح.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0189",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 189,
+      "text_ar": "0 - قال الإمام علي 822 للحسنين ‎BEE‏ وهو ذاهب إلى ‎JUS‏\n‏الناكثين: (ما لكما ‎Ole‏ حنينَ الجارية» والله لقد ‎Cope‏\n‏هذا الأمرّ ظهراً لبطن فما ‎Suny‏ بدا من ‎UE‏ القوم أو\nالكُفْر بما ‎Del‏ على محمد ‎Be‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0190",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 190,
+      "text_ar": "هل حضر واقعة الجمل ‎el‏ من الصحابة؟\nيستشهدٌ ‎GP) Gan‏ والباحثينَ بمقولةٍ مرويّة عن",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0191",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 191,
+      "text_ar": "الشعبي الذي يُفْسِم أنه لم يكن في الجمل أكثر من أربعة من",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0192",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 192,
+      "text_ar": "الصحابة في الجانبين: علي وطلحة والزبير وعمّار\".\nوهذا رأيٌّ ليس له نصيبٌ من الصحة. باعتبار ‎ST‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0193",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 193,
+      "text_ar": "الصّحَابة الذين شاركوا مع أمير المؤمنين ‎FRE‏ حرب الجملٍ",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0194",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 194,
+      "text_ar": ")\\( المستدرك على الصحيحين» النيسابوري» ‎vo‏ صخ ‎VYO_ ١1١‏ 6 حديث\nرقم ‎/£04V)‏ 190(",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0195",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 195,
+      "text_ar": ")1( الفتنة. هشام جعيط ‎WI ge‏ نقلاً عن أنساب ‎PLAY)‏ 7717",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0196",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 196,
+      "text_ar": "Woo Be ‏سول انل‎ ct gs\n‏بين أصحاب رسول‎ SF Cts ‏كثيرون» ثم لا يُعقل أن‎\n‏ولا يكون فيها إلا هؤلاء الأربعة!! ومن الذين حضروا‎ Be ‏الله‎\n‎: ‏التالية أسماؤهم‎\n‏جارية بن قدامة السعدي.‎ - ١\n‏زيد بن صوحان العبدي.‎ - ١\n‏سيحان بن صوحان العبدي.‎ -'\n‏عدي بن حاتم الطائي.‎ -&\n‏هند بن أبى هالة التميمى.‎",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0197",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 197,
+      "text_ar": "وشخصيات كثيرة من الصحابة ذكرها علي بن الحسين\nالخطيب في كتابه (تاريخ من دُفن في العراق من الصحابة).\nقتال القاسطين:",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0198",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 198,
+      "text_ar": "هُمْ الفئةُ الثانية التي أخبر بها النبي الأعظم يه أمير\nالمؤمنين ‎REE‏ بقتالهاء وهم معاوية وأصحابيه ‎velit! so‏\n‎Lore,‏ ذلك أنه بعد فراغ ‎BH PLY!‏ من قتال الناكثين أو ما\nيسمى بحرب الجمل وجّه رسولَهُ إلى معاوية ‎ob‏ يأخذ منه\nالبيعة» وكان هذا الأمرٌ متوقعاً من ‎Lyles JS‏ الذي ربما كان\nفي ‎OLS‏ نفسو أنَّ الأمر ‎JO Se‏ بعد مقتل ‎glete‏ في ولايته\nللشام أو يُفسد الأمر على الإمام ‎HE‏ ولم ‎EU‏ بانثيال الناس",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0199",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 199,
+      "text_ar": "4ه لل تريخ الإمام علي بن أبي طالب ‎BE‏ السياسي\nعلى علي ‎RE‏ للبيعة» باعتبارها قطب الرحى ومركز الأحداث»\nإلا أن هذا ‎Dy‏ مشكلةً جديدةً لدى الطرفين أمير المؤمنين نظلا\nمن جهة ومعاوية من جهة أخرىء ‎YS‏ منهم يرفض أن يُعطي\nالآخر ما يريد إلا أن أمير المؤمنين ‎BE‏ وسياسته الإصلاحية\nتقتضي القضاء على الفسادٍ المالي والإداري وكل ما هو ‎BIE‏\n‎prey!‏ ويرى أن معاوية لا يَصْلّح للولاية حتى ليومين.\nولا بأس بنقل بعض الأخبار عن معاوية على النحو التالي\nللتعريف بشخصيته على سبيل الإيجاز:\n‎ds -١‏ أحمدٍ بن حنبل عن معاوية: (لم يكن أحقٌ بالخلافةٍ\nفي زمان عليٌ من علي).\n؟- قول أحمد بن حنبل: ‎Us of)‏ كان كثيرٌ ‎Gad cola YI‏ له\nأعداؤهٌ ‎pls Lis‏ يجدواء فجاؤوا إلى رجل قد حارَبَهُ\nوقاتله. ‎Las Abb‏ منهم ‎OS‏\n‏فقد ‎BEL‏ أمير المؤمنين ‎Gye WE‏ وأقام ‎UY)‏\n‏والبراهين عليه بوجوب البيعة» ومن ‎DT‏ ذلك ‎88s‏ في\nكتاب أرسله له: ‎ai)‏ بايعني القومٌ ‎GU)‏ بايعوا ‎LP‏ بكر ‎pes‏\n‏وعُئْمان على ما بايعوهم عليه... ‎OG‏ إلا أنَّ معاوية رفض\n)1( تاريخ الخلفاءء السيوطيء ص908١ ‎NOV‏\n‏(؟) شرح ‎EW ad‏ ابن أبي الحديد ج4١ ‎Voge‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0200",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 200,
+      "text_ar": "‎gy cle gt‏ انك أ سس ةا\nكُلَّ ‎Dot‏ الإمام» وجعل يماطل برسائله التي ‎coed‏ لهء عِلْمَاً أنه\nطلب من الإمام ‎RB‏ أن ‎Sy‏ الشام ومصر وخراجهما ‎MES‏\n‎as‏ الإمام هذا العرض وغيره.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0201",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 201,
+      "text_ar": "‏بعد أن استنفذت ‎eae‏ معاوية قواها وانتهت المماطلة\nالتي أراد من ‎OF WE‏ يستفيد من الوقت فقطء طرحَ شِعَاراً\nآخر يخرجه من المأزق الذي وقع فيه» والشعارٌ هو: (المطالبة\nبَدَم عثمان) ولم يُظرّح هذا الشعار إلا بعد أن ‎Ee‏ نفوسَ\nالشاميين ‎Ue OL‏ ف هو القاتلٌ الحقيقي لعثمان وأنه يتستر\nعلى قاتليه في الوقت ذاته» فما كان من الإمام ‎BE‏ إلا الإجابة\nعلى هذه الشبهة والإشاعة بكتب ورسائل كثيرة» وأثبت بصورة\n‎by‏ أن المتهم في قتل عثمان معاوية لا ‎cone‏ وهذا ليس\nأسلوب المراوغة السياسية كما ‎Gs‏ البعض» بل لأن أمير\nالمؤمنين :8 لا يطرح أوراقه ‎dds‏ واحدة!! بل يجعلها لحينهاء\n‎Wy‏ نراه يجيب على هذه المسألة حينما تم طرحها كشعارٍ يتستر\nخلفه معاويةء حيث قال 4 : (ثم لم تكن ‎Lal‏ مِنْكَ ‎Cans‏\n‏لابن ‎Me‏ عثمان» نَشَرْتَ مقابحه ‎Canby Coles Sighs‏ في\nفهو ثم في دينو» ثم في سيرتو» ثم في ‎aie‏ وأغريتٌ به\n‎tye‏ من أصحابك وشيعتك» حتى ‎old‏ بمحضر منكٌ» لا\n‎GL Le gous‏ ولا ‎MC‏ قال الشاعر: 1\n‎)١(‏ شرح نهج ‎EW‏ ابن أبي الحديد ج١١‏ ص185.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0202",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 202,
+      "text_ar": "13 ل تريغ الإمام علي بن أبي طالب ‎BE‏ السياسي\nلا ‎GET‏ بعد الموت تندبني وفى حياتى ما زودتنى زادا(©»",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0203",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 203,
+      "text_ar": "وقد أكّد ‎SSP‏ الدارسينَ ذلك فى وصفه هذه الأحداث\nبقوله:",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0204",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 204,
+      "text_ar": "(فاتخدٌ ‎Lyles‏ ويه من قضيةٍ قميص عثمان ومن رسالةٍ\nنائلة ليزيد من ‎tes cals‏ بيعته لأمير المؤمنين على ‎RE‏ بل\nوزاد على ذلك ‎ob‏ 25 نفسه ‎Uy‏ لعثمان ومطالباً بدمه بصفته\n‎DT‏ أبناء عمومته» مع أن معاوية ‎Bi‏ كان يعرف مسبقاً أن في\nفقط القيام بمهمة القِصّاص من قتلة عثمان ‎Ae‏ إن عُرفوا)”\"©.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0205",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 205,
+      "text_ar": "فالإمام يعرف من هو معاوية ‎Ges‏ لا تحيدٌ عن الواقع\nالملموس» ويعلم مدى ما تكنه سريرته من نوايا سيئة غرضها\nالإطاحة ‎GGL‏ الإمام © أو إثارة التشويش ضده لتختلط\nالمفاهيم التى يريد تحقيقها أمير المؤمنين ‎BB‏ ولذا ‎Ob‏ معاوية\nاستمرٌ في رفع شعار أصحاب الجمل وهو (المطالبة بدم\nعثمان)»؛ وهذا ما حصل حيث ترسّخت هذه الفكرة في عقول\nالشاميين» باعتبار أن القاتل هو علىٌ لا ‎Oly coe‏ هذا الشّعار\n‎)١(‏ تاريخ الخلفاء. السيوطي» 159.\n)1( خلافة معاوية بن أبي سفيان» د. عمر سليمان العقيلي» ص١\".‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0206",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 206,
+      "text_ar": "WwW Bt ‏نول‎ le gt\n‏إرسال‎ ope WH ‏من مرَّةٍ ونصحهء وقد أكثر‎ AST ‏حذر معاوية‎\n‏وعدم إعطاءه‎ «onl cH ‏الرسائل والكتب إليه وذلك لإبعادٍ‎\n‏من مريديه؛ إلا أنه‎ BE ‏الذي لم يكن‎ ALOU ‏فرصة إلى اللقاء‎\n‏إلى طَرْح هذا الحل بعد أن وجد‎ Fas! ‏في نهاية المطاف‎\n‏عن‎ aR ‏وسببُ‎ OU ‏معاوية ظاهرةً‎ JG ‏المكابرةً من‎\nBG ‏الحرب هو إبعاد ما أسماهم بالسفهاء عن قتل ليس لهم فيه‎\n‏ولا اختيار.‎ fos ‏ولا‎",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0207",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 207,
+      "text_ar": "ومع إيمان الإمام ‎EB‏ بسياسته الإصلاحية فإنه وضع\n‎Laat‏ لهذه الحرب» ونقصد ‎YL‏ هي الضوابط الإنسائيّة\n‎EN,‏ والرساليّة التي يتمثل بها أمير المؤمنين نلا في\n‎Ub as lt‏ حياته» كان ينصح أصحابه في كل حرب بقوله:\n‎bug Y)‏ القومّ حتى يبدؤوكم» فهي حُبجّةٌ أخرى لكم ‎cote‏\n‏فإذا قاتلتموهم فهزمتموهم, فلا تقتلوا ‎Lyle‏ ولا تجهزوا على\nجريح ولا تكشفوا ‎Gaye‏ ولا ‎YES‏ بقتيل... ‎GS‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0208",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 208,
+      "text_ar": "ومن أخلاقه ‎HE‏ في الحرب أنه لما ‎Shee ae‏ معاوية\nالماء عن جيشه اشتبك جيشه ‎ae BR‏ جيش معاوية للحصول\nعلى ‎ce Ll‏ ولما صار الماء تحت سيطرة جيش الإمام ‎RE‏\n‏قالوا: والله لا نسقيهم؛ فأرسل الإمام ‎BB‏ إلى أصحابه بقوله:\n‎)١(‏ شرح ‎EU ag‏ ابن أبي الحديدء ‎Woe te‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0209",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 209,
+      "text_ar": "‎A‏ ل تاريق الإمام علي بن أبي طالب ‎HB‏ السياسي\n(خذوا من الماء قدر حاجتكمء وارجعوا إلى عسكركم وخَلُوا\nبينهم وبين الماءء فإن الل قد ‎pS pal‏ ببغيهم ‎pals‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0210",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 210,
+      "text_ar": "‏نفهم من كلامه ‎RE‏ آنف ‎sh)‏ أنه يريد أن ‎WE‏ قدر\n‎OGY!‏ من الضحايا البشريّة في هذه الحرب ‎cde Ua!‏ إلا أن\nمعاوية الذي تلبّس بلباس الإسلام في العام الثامن من الهجرة\n‎(qs! ple)‏ فإنه ما زال على عصبيته الجاهلية مؤثراً الدنيا\nعلى الآخرة» وقد اختار الحرب على ‎LI‏ حيث تترّسَ\nوتدرّع بجماجم جنده الذين ‎GCS‏ عقولهم بأن من يقاتلون هو\nقات الخليفة عثمان» وذلك ليحولوا بينه وبين سيوف الحق.",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0211",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 211,
+      "text_ar": "‏ومع اشتباكِ ‎CL) LAV!‏ بين الجيشينء والذي ‎ONS‏\n‏تنكسرٌ فيه شوكةٌ معاوية إلى أبد الآبدين» نرى ثمة ‎lage Hat‏\nالمستشارٌ الأول لمعاوية عمرو بن العاص حينما شارف جيش\nمعاوية على الهلاك» فقد ‎Jol eas‏ العاص معاوية أن يرفع\nشعاراً ‎Gel‏ من الشعار الذي من ‎gle‏ قامت هذه الحرب»ء\nوذلك ليخلّص معاوية من جيش أمير المؤمنين ‎WE‏ وليفوز\nبالولاية على مصر كما وعدهٌ صاحبةء كان ‎SUA‏ هذه المَرَّة:\n05 المصاحف على الأسئّة ‎Cb‏ للتحكيم وِفْقّ ‎ES‏\n‎)١(‏ وقعة صفينء نصر بن مزاحمء ‎NW G2‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0212",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 212,
+      "text_ar": "‎er‏ اا ا\nالله ‎8S‏ والغاية ليست ‎Wis‏ بل لإيقاف القتال حفاظاً على\nوانقسامه إلى قسمين الأول منه: مؤيدون في مواصلة القتال\nومنهم أمير المؤمنين ‎RE‏ والثاني منه : المنصاعين لهذا الشعار\nشرح 6 مغزى هذه الحركة ‎ELE Ugly‏ وشرح لهم ذلك\nبقوله: (عِبَادَ ‎ail‏ إني ‎GST‏ من أجاب إلى كتاب الله ولكنّ\nمعاوية وعمرو بن ‎old‏ وابن أبي معيط ¢ وحبيب بن مسلمة.\nوابن ‎ganas ‘om wl‏ \\ بأصحاب ‎we‏ ولا ‎Ls‏ إني ‎ogi‏ بهم\nمنكمء ‎ree‏ أطفالاٌ وصحبتهم رجالاً فكانوا م أطفالٍ ‎aay‏\n‎JEL‏ إنها كلمةٌ ‎Sy Ge‏ بها باطل. إنهما ‎aly‏ ما رفعوها أنهم\nيعرفونها ويعملون ‎cle‏ ولكنها الخديعة والوهن والمكيدة.\n‎nel‏ ونى سواعدكم وجماجمكم ‎Helo.‏ واحدة. فقد بلغ ‎bot‏\n‏مقطعهء ‎ply‏ يبق إلا أن يقطع دابر الذين ظلموا)”\".\n‎Gy (1)‏ .|\n‎is‏ على اعتبار أن الذي طلب ‎GL‏ هو الأشعث الذي كان في\nجيش الإمام ‎RB‏ وكم هي مغالطة في تحليل مثل هذه الأحداث»\n‎Wb‏ لحياة الأشعث يعرف مدى سياسته في البحث عن مصالحه.\n)1( وقعة صفين» نصر بن مزاحم المنقري» ص184. وعجباً من قول جعيط\nفي كتابه الفتنة ص 774 الذي يرى أن ‎BB PLY!‏ كان مؤيداً لوقف\nالمعركة» ولم يكن هناك انقسام حول وقف المعارك في جيشه ‎TEE‏ =",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0213",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_004",
+      "paragraph_number": 213,
+      "text_ar": "بد دل لت تريخ الإمام علي بن أبي طالب ‎RE‏ السيلسي\nنلاحظ ‎Be PLY! ST‏ قد شرح لهم ماذا تعني هذه\nالحركة» وماذا يعنى هذا الشعارء إلا أنه للأسف توجه له زهاء\nعشرينَ ‎Wt‏ وطالبوه بالامتثال لمطالب ‎caylee‏ وقالوا له: (يا\n‎«gle‏ أجب القوم إلى ‎OLS‏ الله إذ دُعيتٌ ‎A‏ وإلا قتلناك كما\nقتلنا ابن عَفَانَء فوالله لنفعلنّها إن لم تجبهم”\".\nوحصل ما حصل من أمر التحكيم الذي ‎cad‏ فيه أبو\nموسى ‎OG AREY‏ وفي الواقع رغم أنها خدعة إلا أنها مسألة\nقد تناسب توجهات الأشعري» ‎OY‏ الأشعري طرح الاثنين وأمر\nبِالسُورَى بين المسلمين من جديد» ومعلوم ‎al‏ الأشعري هو\nالذي ‎LS‏ الناس في الكوفة عن مساندة أمير المؤمنين ‎RE‏ في\nحرب البصرة (الجمل)» وقد شرحنا ذلك ‎AR‏ فى حرب\nالناكثين.\nوليس باستطاعة أمير المؤمنين ‎BB‏ مواصلة الحرب بعد\nهذا الانقسام» والذي ‎GST‏ إلى ‎slash GlE‏ جُدّد يشكلون خطراً\n‎p=‏ كان هناك ‎at‏ إجماع. ولم يكن ثمة ضغط شديد على علي من جهة\nالقرّاء!! ولعل قوله ‎WE‏ آنف الذكر يعتبر فيصلاً في مثل هذه الآراء\nالتي يطرحها جعيط ‎aly‏ وإن كان يرى أن نهج البلاغة موضوع\n‎ey‏\n‏)\\( وقعة صفين» نصر بن مزاحم المنقري» ‎E49 _ EAL‏\n(؟) شرح نهج البلاغة» ابن أبي ‎Ve cde‏ ص ‎VY LYN‏",
+      "page_number": 57
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0214",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 214,
+      "text_ar": "Vy Bt ‏سول‎ leg\n‏الخوارج)» وهذا مما ساعد معاوية على التقاط أنفاسهء وتنظيم‎\n‏جيشه من جديدٍ أثناء انشغال الإمام 0 ب(خرب الخوارج)»‎\n‏ولكنّهُ يغدرٌ ويفجر. ولولا كراهية الغدر‎ ob ‏معاويةٌ بأدهى‎\n‏اضر‎ sy BAD DE ‏كال‎ yy ‏اعون‎ Gaol ‏وق‎ CESS\n‏م به يوم القيامة. والله ما أستغفلٌ‎ 2 43 ple ‏ولكل‎ as\nMCLE Labial ‏بالمكيدة» ولا‎\n‏الفئة الباغية:‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0215",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 215,
+      "text_ar": "كثيرٌ من الباحثين يلوّحون بأقلامهم لحرفٍ مسارٍ بعض\nالمفاهيم التي ‎Gad‏ عليها القرآن الكريم ‎Syl Ly‏ المطهرةء\nوقد ذكرنا شيئاً من ذلك في قتال الناكثين» ونواصل الطرح في\nهذا القسم.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0216",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 216,
+      "text_ar": "حينما يذكر القرآن الكريم ‎HUB‏ 45 فإنا نربط\nهذه الآية بحديث النبي وَل في ‎Ge‏ الصحابي الجليل عمار بن\nياسر ‎Be‏ (يا عمّار تقتلك الفئة ‎PSI‏ فرغم صحة صدور\n)\\( نهج البلاغة» الشريف الرضي» تصنيف: صبحي الصالحء ص186١7”1‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0217",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 217,
+      "text_ar": "كلمة رقم ‎(Vee)‏\n‏)1( وقعة صفين. نصر بن مزاحم» ص”7”57. المستدرك على الصحيحين» =",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0218",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 218,
+      "text_ar": "'لل دل تريخ الإمام علي بن أبي طالب عه السياسي",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0219",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 219,
+      "text_ar": "هذا الحديث من النبي ‎BE‏ فإن كثيراً من أعلام ‎VI‏ ومحققيها",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0220",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 220,
+      "text_ar": "CaS ‏قال ابن حجر: وفى هذا الحديث علم من أعلام‎ ١\n‏على النواصب الزاعمين‎ 35, ie, gl ‏وفضيلةٌ ظاهرةٌ‎\n‏دل‎ Lat ‏وقال‎ Pay > ‏أن علياً لم يكن مُصيباً فى‎\n‏الحديث على أن علياً كان المصيب فى تلك الحرب لأن‎\nPa gh ‏أصحاب معاوية‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0221",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 221,
+      "text_ar": "؟ - قال ابن كثير: كان علي وأصحابه أدنى الطائفتين إلى الحق\nمن أصحاب معاوية» وأصحاب معاوية ‎Vols‏ باغين\n‎rede‏ وقال أيضاً: وهذا مقتل عمار بن ياسر ‎BB‏ مع\nأمير المؤمنين على بن ‎ol‏ طالب» قتله أهن ‎cell‏ وبان\nوظهر بذلك سر ما أخبر ‎Pa‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0222",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 222,
+      "text_ar": "‎JU LT‏ اسه ‎1d‏ براك ‎Ede UL) ee le Jay‏ وبريت\nطاعتهء ‎Oly‏ الداعي إلى طاعته داع إلى ‎Ball‏ والداعي",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0223",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 223,
+      "text_ar": "‏= النيسابوري» ‎EPO eo Te‏ حديث رقم ‎CVV 00 /O10V)‏ السيرة\n‎cyl‏ ابن ‎AV oe Vi cele‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0224",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 224,
+      "text_ar": "‏)\\( فتح الباري؛ ابن حجر» ‎Ye‏ ص ‎.L0Y‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0225",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 225,
+      "text_ar": "‎V0 ‏ص‎ We pe ‏اس‎ «soll ‏الك فتح‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0226",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 226,
+      "text_ar": "‎ATA Ve OS ‏ابن‎ aly ‏البداية‎ 1)",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0227",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 227,
+      "text_ar": "‏(5) البداية والنهاية؛ ابن كثير» ‎Ve‏ ص595.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0228",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 228,
+      "text_ar": "ee\n‏مع أن علياً أولى‎ Lal ‏إلى مقاتلته داع إلى النار”''. وقال‎\n‏ومع أن عماراً قتلته الفئة الباغية  كما‎ cab ‏مع ممن‎\n‏من عند‎ ele ‏جاءت به النصوص - فعلينا أن نؤمن بكل ما‎\n‏ولا يكون لنا هوى» ولا نتكلم بغير‎ AS ‏الله ونقرٌ بالحق‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0229",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 229,
+      "text_ar": "5 - قول قاضي القضاة علي بن علي بن محمد بن أبي ‎Sod‏\n‏الحنفي ‎VAY)‏ ه) حيث قال: (لما ‎Jd‏ عثمان وبايع\nالناس ‎Ue‏ صار ‎LU‏ > واجب الطاعة)» وقال كذلك:\n(فالخلافة ثبتت لأمير المؤمنين علي بن أبي طالب ‎BE‏ بعد\nعثمان ‎fe‏ بمبايعة الصحابة» سوى معاوية مع أهل\n‎(Lest‏ وقال كذلك: (وعلىي ‎RH‏ هو الخليفةٌ الراشد\nالمهدي الذي تجب طاعتهء ويجب أن يكونوا مجتمعين\n‎Ode‏\n‏ورغم ‎Be‏ هذا الحديث وتواتره» إلا أن بعضهم يطرح",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0230",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 230,
+      "text_ar": "‎ULL‏ أخرى لا تكاد تناسب ما ‎Sb‏ هؤلاء الأعلام السالف",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0231",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 231,
+      "text_ar": "‎ATV Ge ‏ج4‎ deed ‏مجموع الفتاوى» ابن‎ )١(",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0232",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 232,
+      "text_ar": "‎£00 EAE os be thee ‏مجموع الفتاوى» ابن‎ (1)",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0233",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 233,
+      "text_ar": "‏() شرح الطحاوية في العقيدة السلفية؛ صدر الدين ‎git)‏ ص195 -\n£48",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0234",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 234,
+      "text_ar": "؛لالد ل تريغ الإمام علي بن أبي طالب 8 السياسي\nقولهم في فهم هذا الحديث. وهو أن الذين قاتلوا الإمام\nعلي ‎BH‏ متأولون ومجتهدون فلهم ‎Jol‏ واحد حيث ‎OG‏ لهم\nالخطأء وهذه المسألة ‎bs‏ انطباعاً آخر وهو: أن ما وقع في\nقول النبي 6 أوضح من الشمس في رابعة النهار: ما ‎re‏\n‏ولِعَمَّارء يدعوهم إلى ‎Catt‏ ويدعونّهُ إلى ‎GEN‏ وكذا\nقوله ‎Be‏ (إن ابن سميّة لم يخيّر بين أمرين قط إلا اختار\nأرشدهما ‏ يعنى عماراً - فالزموا ‎OEE‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0235",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 235,
+      "text_ar": "فمقتل عمّار يعتبر فيصلاً في هذه القضية التي ‎Cals‏\n‏رأي كل ‎URES‏ وكل مَنَّبع لهواه. ولا حظ للمتأولين\nوالمشككين في هذه ‎Ld‏ خصوصاً مع ما ذكرنا من\n‎evel‏ في حقٌّ ‎we‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0236",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 236,
+      "text_ar": "ثم ما أعجبٌ منه قول بعض المؤرخين والباحثين الذين\nأوقفوا سلوك ‎chy‏ كثير من الصحابة على ‎Lad slic‏ أسموه\nبالفتنة» ولم يوقفوه على موقف أمير المؤمنين ‎RE‏ فإني ألاحظ\n)\\( وقعة صفين؛ نصر بن مزاحمء» ص47 صحيح ‎«gol‏ باب",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0237",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 237,
+      "text_ar": "التعاون في بناء المساجد ج١‏ ص9١١‏ السيرة النبوية» ابن هشام؛ ‎Yo‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0238",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 238,
+      "text_ar": "‎£4V 2‏\n‎(Y)‏ وقعة صفين» نصر بن مزاحم» ‎Tet Ue‏ المستدرك على الصحيحين»",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0239",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 239,
+      "text_ar": "‏النيسابوري» ‎fT AG e Ve‏ حديث رقم )01710/ ‎bal (VY‏ متقارب.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0240",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 240,
+      "text_ar": "Vo Be ‏ان‎ guy cle gat\n‏ولن أناقش هذه المسألة‎ Mele ‏مَعَ‎ Gol OT ‏لهم‎ SL ‏عَمّار‎ Ys\n‏باعتبار أن الذاهبينَ إلى هذا الرأي ومنهم عبد الحميد فقيهي لا‎\n‏ما ذكرنا من‎ Sy ‏يستحقون المناقشة أو الوقوف على أقوالهم»‎\n‏آراء وتحليلات تكادٌ تَنْسِفكُ ما أدلوا به.‎\n‏حول التحكيم:‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0241",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 241,
+      "text_ar": "يرى ‎Ob het‏ خديعةً عمرو لأبي موسى في التحكيم\nرواية موضوعة ارتقت إلى مستوى ‎SU‏ المقبول بالإجماع ‎Ugly‏\n‎oe‏ الأجيال بنجاح., ذاكراً أن بعض المستشرقين مثل:\nفلهاوزن و لامنس لا يسلّمان بهذه الرواية» وذلك ‎hee‏ أن\nالطبّريّ ينقل الخبر بشكل متناقض حول تاريخ التسليم على\nمعاوية بالخلافة عام ‎ATA‏ و ‎abt‏ قبل اغتيال ‎MoM‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0242",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 242,
+      "text_ar": "وحسب وجهة نظري أن ذلك لا يستدعي التشكيك في\nهذه الرواية» فقد يكون التسليم عليه بالخلافة في كلا التاريخين\nمن قبل بعض أصحابه بشكل ‎ford‏ عام ‎ATA‏ وبشكل مكف\nعام ‎olny Mats‏ أمنية معاوية الذي أقام الحرب ضد الإمام\nبعدم مبايعته له بالخلافة.\n‎cecal )١(‏ هشام ‎cYOY oc dane‏ 767",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0243",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 243,
+      "text_ar": "»لل تريغ الإمام علي بن ابي طالب ‎BB‏ السياسي",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0244",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 244,
+      "text_ar": "وما التفسير الذي قدّمه جعيط إلا تصورٌ ‎Be‏ في التعامل\nمع أحداث وحروب أجبر الإمام 8 عليها في التعامل بهذه\nالطريقة» بحكم الشرخ الكبير الذي أصاب جيشه.ء القرّاء\n(الخوارج ‎Led‏ بعد) من جهة وبينه من جهة أخرى: ليصل\nجعيط إلى أن الإمام من خلال قناعته أنه ما زال يرى نفسه\nالخليفة على المساحة الإسلامية» وأنه  ‎Oly - BB PLY‏ نجح\nفي تحقيق خططه التي سار عليها > وفاته» إلا أنه في قضية\nالتحكيم (فشل ‏ ولم يكن في إمكانه إلا أن يفشل ‏ في أن\nيصبح خليفة جميع المسلمين» بل كان خليفة الكوفة والعراق\nفي مقابل خليفة ‎Gus‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0245",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 245,
+      "text_ar": "بهذه الروح السطحية ‎$e‏ جعيط على مثل هذه ‎cel Vi‏\n‎LY‏ نرى الإمام ‎OS RE‏ همّه الوحيد هو: توحيد صفوف ‎BY)‏\n‎Get‏ المشروعة» والذي في نفس الوقت يعرف صلاحهم\nحينما ‎copie‏ ولكن ذلك مشروط بفساد ‎aye‏ الذي يأبى أن\nيضحّي بهء وهذه الطريقة في تحليل القضايا الواقعة في صدر\nالإسلام أتى بها بعض المستشرقين الذين يتعاملون مع الأحداث\nبعقلية السياسة الصرفة التي لا تفهم سوى لغة الدم والتصفية»\nأو قياسها بسياسة الوقت الحاضر وبيئته» مودّعين عقلية إدارة",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0246",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 246,
+      "text_ar": "تبوعات يسول أت ‎vy Be‏\n‎OY‏ الإسلامية وفق دستور رَسَمِهُ رسول الأمّة وك والذي سار\nعليه الإمام وفق مبدأ خظّه لنفسه ‎GIL)‏ ما سلمت أمور\nالمسلمين)؛ ولذا كان يرى قوام سلوك ‎BVI‏ بتطهير عقليتها من\nبعض أدران الجاهليّة التى ‎Che‏ بمسارها.\nقتال المارقين:",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0247",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 247,
+      "text_ar": "وهذه هي الفئة الثالثة التي كان لا بد من الإمام ‎RE‏\n‏قتالها كما أخبرهٌ رسول الله ‎Be‏ والتي لعبت دوراً في تأويل\nكتاب الله على غير بصيرة من أمرها في قضية التحكيم وقضايا\nأخرى» ذلك أنهم بعد حركة التحكيم في ‎Geter‏ وبعد أن بان\nفشلهم أمام أمير المؤمنين ‎RE‏ وذلك أنه قد نصحهم وأوضح\nلهم ‎ob‏ طلب معاوية للتحكيم مكيدة» اخترعوا لأنفسهم غطاءاً\nدينياً وهو: الاعتراف بأنهم مخطئين واستغفروا الله ‎«SB‏ وطلبوا\nمن الإمام الاستغفار والتوبة» فقال لهم 8 : (أبعد إيماني بالله\nوجهادي مع رسول الله ‎Be‏ أشهد على نفسي بالكفر!)”© وبما\nأن هذه الفئة ‎EE JRE‏ على مصير المجتمع الإسلامي\nلتَطرَّفها غير المحدودء كان لا بد من الإمام يك المواجهة معها\n‎)١(‏ نهج ‎EM‏ الشريف الرضي» تصنيف: صبحي الصالحء ص95 =",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0248",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 248,
+      "text_ar": "0 - - د ل تريخ الإمام علي بن أبي طالب ‎BB‏ السياسي\nوفتح باب الحوار معها ‎BS GIS‏ قبل كل شيء؛ فقد أرسل ابن\n‎ane‏ عبدالله بن عباس للحوار معهم». وذهب هو بنفسه مما أدى\nإلى نتيجة لا بأس بهاء فقد انضم إليه من انضم واختار\nالآخرون ‎KG pdt‏ إلا أن الحوار في نهاية المطاف لم يجدٍ\nنفعاً مع فئة متطرفة ترى خليفة المسلمين ‎AIS‏ وتطلبٌ منه\nالتوبة» وقد أسلفنا القولٌ بِأنّهُ أفحمهم بِحُجَجِدء ومن القضايا\nالرائعة التي حَصَلَّت في قتاله مع الخوارج أنه أخبرهم ببعض\nالمغيّبات لتثبيت عزائم أصحابه وتثبيط عزائم الخوارج» فقد قال\nلأصحابه: (لا يقتل منكم ‎BEE‏ ولا يسلم منهم ‎GEE‏ فكان\nكما أخبر حيث قتل من أصحابه تسعة وأفلت من الخوارج\n‎spay Le 053 L Lag coal opt dha, PALE‏\nإخبار النبي ‎Be‏ بقتاله الفعاتٍ الثلاث التي ذكرناها.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0249",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 249,
+      "text_ar": "ونُريدٌ أن نوضّحَ هنا سلوك الإمام ‎RE‏ مع الخوارج من\nخلال هذا الموقف الذي يعكس مدى التزام الإمام بمبادئه التي\nاختطّها ‎cand‏ واقتبسها من تعاليم الدين الحنيف» فقد قال\nأحد الخوارج ذات يوم بعد أن سمع كلاماً ‎I‏ (قاتله الله\nكافراً ما أفقهه). فوثب القومُ ‎LAT‏ فقال ‎PE‏ (رويداً إنما\n‎ec pal (1)‏ ابن أعثم الكوفي» ‎YOO YON Go Ex‏\n‎oY)‏ نهج البلاغة» ابن أبي الحديدء ‎AW Ge Ve‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0250",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 250,
+      "text_ar": "تبوءات سول ات ‎Be‏ قلا\n‎Oo { Be be‏ 017 لحف\nهو ‎Oe‏ أو ‎He‏ عن 83( 1\n‎gb, ye‏ 3 8 5 3\nوكذا رده على كل من ررعه الطائي وحرفوص السعدي\nاللذان هاجماه بأقسى العبارات والتي تعامل معها الإمام ‎RE‏\n‏لهم ومفسراً ما اشتبه عليهم.\nحصل في أمر التحكيم» وزرعة يهدد الإمام بقوله: ‎dily Ul)‏ يا\nعلي لئن لم تدع تحكيم الرجال في ‎OLS‏ الله ‎ALLL BB‏\nأطلب بذلك وجه الله ورضوانه)» فما كان من الإمام إلا أن\nذكرهم بالله ويك بقوله: (اتقوا الله ‎SB‏ إنه لا خير في دنياً\nتقاتلون عليها)”\".\nوكذا موقفه معابن ملجم ‎oa‏ ضربهء فقد\nأوصى به بقوله: (قد ضربني فأحسنوا إليه وألينوا له فراشه»\n‎ob‏ أعش ‎pags‏ أو قصاصصء وإن أمت فعالجوهء فإني\nمخاصمه عند ربي ‎OCB‏ وقد جعل يتفقده ويقول:\n)\\( نهج البلاغة» الشريف الرضي » تصنيف : صبحي الصالح كلامه ‎WE‏\n‏رقم ‎AEN)‏\n‏زفهفق تاريخ الطبري» ‎oY We te‏\n)1( المستدرك على الصحيحين» النيسابوري» ‎Yo‏ 2 100 حديث رقم\n85/4595 ).",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0251",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 251,
+      "text_ar": "الى لل ‎gy‏ الإمام علي بن أبي طالب 856 السياسي\n(أرسلتم إلى أسيركم ‎CEL‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0252",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 252,
+      "text_ar": "‎oat)‏ كل ما صدر من الخوارج خاطبهم بقوله: ‎op‏ لكم\nعندنا ثلاثاً ما صحبتموناء لا نمنعكم ‎Gels‏ الله أن تذكروا\nفيها اسمهء ولا نمنعكم الفيء ما دامت أيديكم في أيديناء ولا\nنقاتلكم حتى لو",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0253",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 253,
+      "text_ar": "‏وهذا يؤكد لنا أن أمير المؤمنين نك ليس له إلا تطبيق\nمعالم الدين وآدابه» مقدّماً رضا الله ‎BB‏ على رضا نفسهء وما\nأكثر النماذج في حياته التي نَذَرَّها ‎Bb‏\n‏وقفة مع بعض الدراسات الحديثة:",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0254",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 254,
+      "text_ar": "‏من القضايا التي تثار في الدراسات الحديثة هو وضع\nعلامات استفهام في كثير من الأمور المتعلقة بتاريخ أمير\nالمؤمنين ‏ ذكرنا بعضها وسنذكر غيرها لاحقاًء ولا غرابةٌ\nمن هذه الشبهات ‎ARK,‏ التي ‎s gus‏ مثل هذه\n‎OY coll‏ المصدر الوحيد والمعتمد عند أصحاب هذه\nالدراسات الحديثة هو اتهام الرواة ‎gh‏ شيعة» أو ادعاؤهم\n‎ob‏ هذه الأحداث الملصقة بأميرٍ المؤمنين ‎BE‏ رُوراً وافتراءاً...\n‎)١(‏ الفتوحء ابن أعثمء ‎be‏ ص798؟.\n)1( تاريخ الطبري» ‎ON Ge be‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0255",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 255,
+      "text_ar": "تيوءات ورسول الك ‎AY Bi‏\nوغيرهاء وكم تمنيتٌ أن تكون هذه الدراسات المسماة\nدراسات ‎LE‏ والمقدّمة للجامعات ليُمنح صاحبها الماجستير\nوالدكتوراه والأستاذية أن ‎Kage ESTOS‏ وموضوعيةً من\nغيرهاء وسأحاول تسليط الضوء على بعض الشبهات ودراستها\nخصوصاً المتعلقة ببحثنا حتى لا نذهب بعيداً عن مسار\nالبحث.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0256",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 256,
+      "text_ar": "فمن ضمن تلك التشكيكات قول إحدى الباحثات حول ما\nيتعلق بمعركة النهروان:",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0257",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 257,
+      "text_ar": "(وتبالغ المصادر كثيراً عند حديثها عن النتائج العسكرية\n‎as‏ حيث ‎si‏ أنها أسفرت عن مقتل عشرة فقط من\nجانب ‎fle‏ ونجاة عشرة من الجانب المقابل. ويضيف بعض\nالرواة أنَّ ‎Le‏ نفسه ‎GS‏ بهذو النتيجة قبل اندلاع القتال.\nوتبدو هذه الروايات غير مقبولة لا لأنها تدخل في باب\nالتنبؤات والخوارق» وهي صفات ألصقتها الشيعة بعلي في\nفترةٍ متأخرة).",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0258",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 258,
+      "text_ar": "وتواصل الباحثة تشكيكاتها بقولها:",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0259",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 259,
+      "text_ar": "(ويذكر الرواة عند سردهم لأحداث النهروان أن علياً ‎jal‏\n‏أصحابه بعد نهاية المعركة بالبحث بين القتلى عن رجل ‎SAE‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0260",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 260,
+      "text_ar": "5 دل تريخ الإمام علي بن أبي طالب ‎BER‏ السياسي",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0261",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 261,
+      "text_ar": "اليد في عضده ‎dos Lt‏ كهيئة ‎gat‏ وهو الشخص الذي",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0262",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 262,
+      "text_ar": "أخبره الرسول أنه يكون العلامة المميزة لقوم سيخرجون",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0263",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 263,
+      "text_ar": "يتكلمون كلام ‎Goll‏ لا يتجاوز حُلوقهم يمرقون من ‎hh‏ مُروقَ",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0264",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 264,
+      "text_ar": "السهم من الرمية وقد ‎te‏ أصحاب ‎Ble‏ على ‎de‏ هذا الرجل",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0265",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 265,
+      "text_ar": "بين القتلى» ففرح ‎Ye‏ من ‎Bee‏ موقفه في هذه الحرب”\".\nولرد مثل هذه الشبهات نقول:",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0266",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 266,
+      "text_ar": "‎-١‏ إن هذه الروايات ليست ببعيدة عن الواقع» حيثها وردت\nفي المصادر التاريخية والحديثية» القديمة والحديثة» السئيّة\nوالشيعية» وممن ذكرها اليعقوبي (ت بعد 597ه) في\nتاريخه ‎Ve‏ ص ‎AT‏ 6 ابن أعثم الكوفي ‎OVE)‏ في\nالفتوح ج ؛ ص 2777 وكذلك الشيخ المفيد (ت 417ه)\nفي الاختصاص ص 21179 ‎ply‏ بكر البيهقي (ت ‎(£0A‏\n‏في السئن الكبرى ج 8 ص ‎V0‏ وابن الصبّاغ المالكي\n(ت ‎Cadoo‏ في الفصول المهمّة ص ‎VE‏ والمتقي\nالهندي (ت ‎(AVO‏ في كنز العمال ج ‎١١‏ ص “2587\nوأخيراً العلامة الأميني (ت ٠94١ه)‏ في الغدير ج لا ص\n37 وأضاف مصادر غير التي ذكرناها.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0267",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 267,
+      "text_ar": "‎)١(‏ حركة ‎cel all‏ لطيفة البكاي؛ ص47",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0268",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 268,
+      "text_ar": "تبوءات رسول الث ‎AY BE‏\n؟ - إذا كانت هذه الأمور من الملصقات الشيعية في الفترة\nالمتأخرة ‎HU! ob‏ غاب عنها أنها نقلت روايتها من\n3 فرح أمير المؤمنين 42 أنه ‎ab‏ بهم» وليس لتأكده من\nصحة ‎addy‏ في هذه ‎Copal‏ ذلك أننا ذكرنا أنه سيقاتل\nهذه الفئات كما أخبره رسول الله ‎Be‏ إضافةً إلى ما ذُكر\nفإنها تسعى إلى الفصل بين أحاديتٌ صَدَرَثْ من النبي وله\nوانطبقت على أناس بعينهم» ‎ald‏ إلى أن العملية يهدف\nأصحابها من ورائها إلى إكساب شرعية أو تدعيم موقفهم\nوإضعاف موقف أعدائهه”\".\nوهذا الرأي ذهب إليه أبا الخيل كما أسلفنا في الصفحات\nالسابقة» ‎May‏ في الواقع فصل بين النظرية والتطبيق ومحاولة\nمن الباحثة إلى تلميع شخصيات قاتلها أمير المؤمنين ‎RE‏ وهو\nعلى يقين بما قام ‎oer‏\n‏4 - ليس من العجيب أن يُخبر الإمام ‎ebrel BE‏ بما سيجري\nفي هذه الحرب» إضافة إلى ذلك أن أصحاب الإمام ‎pele‏\n‏من الكوفة» والكوفة كما يُعبّر ‎es‏ بأنها منطقة عسكرية\n‎)١(‏ حركة الخوارج.د. لطيفة البكاي» ‎AV G2‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0269",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 269,
+      "text_ar": "‎At‏ لل ترية الإمام علي بن أبي طالب 86 السياسي\nقطنها الكثيرون من الأقوام والقبائل الذين دخلوا الإسلام»\nمما يعني أن تبادل فنون القتال بين هذه الطبقات ‎al‏ وارد»\nويجعل من أصحاب الإمام مقاتلين أشدّاء متمرّسين على\nجميع فنون القتال» إضافة إلى كثرة عددهه'\".\nنعم!! ذهبت البكاي إلى مسألةٍ نتفق معها والتي ‎La Sd‏\nكذلك الدُوري”\" وقد نَقَلَنْهَا ‎cue‏ وهي: أن حِرْبَ المارقين\nتطوّر فيما بعد ليكوّن لديه ثلّة من الفقهاء والمفكّرين... إلى إقامة\nعدةٍ دولٍ في شمالٍ أفريقيا وفي ‎OLE‏ وغيرها من بقاع الأرض»\nولكن هذا ليس معناه أن البذرة كانت تحمل النوايا السليمة»\nوالفكر المنفتح!! وليس باستطاعتنا أن نستميت لتضعيف بعض\nالأحاديث والتعامل معها بطريقة ‎Che‏ بحجةٍ ‎OF‏ فيها مبالغات\nأو أن رواتها شيعة وغير ذلك!» بل علينا أن نجعل المعيار هو\nتطبيق الأحداث وفق تلك النظريات» إضافة إلى ذلك أنها\nتنبؤات صدرت من عند رسول الله يه الذي لا ينطق عن\nالهوى. ومعلوم أن التنبؤات الصادرة من عند رسول الله ‎BE‏ لها\n‎Bb, )١(‏ أن الحروب الدينية من أعتى الحروب وأشدّهاء على خلافه في\nالحروب من أجل مصالح سياسية أو من أجل عرش. ويلي الحروب\nالدينية من حيث الشدة والقسوة الحروب القبلية أو الأهليّة.\n)1( مقدمة في تاريخ صدر الإسلام» د. عبدالعزيز الدوري» ‎The‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0270",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 270,
+      "text_ar": "he re\n‏صدى واسعء وقد أوردنا شيئاً منها في الصفحات السابقة»‎\nBe ‏فكيف إذا كانت كما وردت عنه‎\n5 4 0",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0271",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 271,
+      "text_ar": "ونواصل طرح هذه ‎fon oI‏ الدكتور الدوري» الذي\nالخلافات مبنيّة على تيارين وهما: التيّار القَّبَلي والتيّار\n‎Ll‏ على عنصر القبلية أو عنصر الإسلامية» متغافلاً ومتجاملاً\nقول الشيعة في هذه المسألة وهو: (القول بالنص) أي: تعيين\nالخليفة ‎vay‏ إلهيّ أو نبويّ وليس بشورى.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0272",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 272,
+      "text_ar": "وهو يدافع عن مبدأ الشورى دفاعاً من منطلق نظرته\nالقومية والقبليّة» ليصل إلى الابتعاد عن طرح رأيه الشخصي في\nالموضوع ومكتفياً ‎Ly‏ طرحه ‎Poy poled‏ ولا أعلم ‎Janel‏\n‏في قدرات الدكتورء أم أنه خائفٌ بالاصطدام بمسألة الإمامة\nالتى يقول بها الشيعة ‎MALY‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0273",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 273,
+      "text_ar": "وحاول كثيراً في ‎ob‏ التحرك الإسلامي أنه ‎ced‏ كل\nذلك ليعطينا نتيجة ‎ob‏ الخوارج ‎gall‏ أصحاب فكر قومي\nمقابل قومية وقبلية قريش» وأنهم ‏ الخوارج ‏ ليسوا بأعراب\n)1( مقدمة في تاريخ صدر الإسلام» د. عبد العزيز الدوري» 2 ‎OV‏\n‏زفق مقدمة في تاريخ صدر الإسلام» د. عبد العزيز الدوري» ‎Ae‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0274",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 274,
+      "text_ar": "د تريخ الإمام علي بن أبي طالب ‎BEE‏ السياسي\nوأنهم ‎ead Vos gees‏ في النهاية أن بيئة صدرٍ الإسلام وما\nقامت عليهء هي بيئة قبليّة في مقابل سياسة الإمام ‎BE‏\n‏الإسلامية والذي وصف تحركه الإصلاحي في ظل هذه الظروف\n‎Thal‏ (كمن يطرق في حديد ‎Mak‏",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0275",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 275,
+      "text_ar": "نعم!! لا نخفي ‎TEA ode‏ ولا ‎SG‏ ولكن كيف يؤمن\nالدكتور بمبدأ الشورى» والشورى قدّمت ‎DN‏ على المبدأ\nالإسلامي» وقد ‎aT‏ ذلك في كتابه الذي ‎WG‏ عنهء ‎Ob‏ عثمان\nقدّم قبيلته وَقرَبَهُم إليه على الطرح الإسلامي؛ وقد دافع عن هذا\nالسلوك دفاعاً غريباً ذاهباً إلى أن مصلحة ‎BV‏ في هذا التقريب",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0276",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 276,
+      "text_ar": "من خلال ما ذكرنا يا ترى أي الأمرين نسلكء. الطرح\n‎al‏ أم الطرح الإسلامي؟! لا ‎SEE‏ أن مسألة القبيلة تشكل\n‎UL.‏ ذات بعد قبلي صِرْف!! فمع وجود هذه المسألة إلا أنها\nتُظمَثْ منذ عهد الرسالة ليأتي أمير المؤمنين ‎BB‏ ليواصل الطرح\nالإسلامي الصافي من الشوائب العالقة بمفهوم القبيلة بما هي\nقبيلة» ولا نخفي أن بعض الصحابة ما زال متمسكا ببعض\nالمفاهيم السائدة للقبيلة كالتعاون غير المحدودء والثأر من أجل\n‎)١(‏ مقدمة في تاريخ صدر الإسلام» د. عبد العزيز الدوري» ص4\".\n)1( مقدمة في تاريخ صدر الإسلام؛ د. عبد العزيز الدوري»ء ص58.",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0277",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 277,
+      "text_ar": "AV eB ‏أذ‎ fe cle gs\n‏الثأرء والكرم... وغيرها من الطقوس المعروفة في تُرف‎\n‏القبائل» وهناك بعض الصحابة الذين تعاملوا مع قضية القبيلة‎\n‏من حيث إنها داعم نفسي كالافتخار وحفظ العهود والتحالف...‎\n‏ولا نريد الاستطراد أكثر في هذه المسألة» لأنها ستدخلنا‎ cal\n‏بصلةٍ إلى جوهر البحث.‎ Ea ‏في مواضيع فرعية لا‎\n‏نظرة سريعة على عبقرية الامام للعقّاد:‎\n‏على بعض ما أورده الكاتب الكبير/‎ La ‏هذه وقفة‎\n‏لنقرل حول‎ (gle ‏عبّاس محمود العَقّاد في كتابه (عبقريّة الإمام‎\n‏ما سطرته يداه التالي:‎\n‏العمّاد من المؤلفين الموسوعيين» ومن الشخصيات التي‎",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0278",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 278,
+      "text_ar": "تطرح رأيها بجرأة القلم ‎OL,‏ ولكن كما يقال: ‎JSD)‏ جوادٍ\nكبوة)» فمع قوّة قلمه وتفكيره وتحليله إلا أنه يخضع تارة\nلسلطان الهوى والمشارب الفكرية المختلفة» فقد وقع في\nمغالطات كبيرة وأعطاها مساحة صغيرة في ‎«SU GT abs‏\nولن نتقضّى كلماته تلك بل نناقش بعضها وتُعْرِضٌُ عن البعض\nالآخر:\n‎١‏ تكلّم عن ‎ple‏ الإمام وشجاعته وأن المسائل التي خنقته",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0279",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 279,
+      "text_ar": "‎ott]‏ تسلّمه زمام البيعة وتصرّف إزاءها معذورٌ فيهاء ولو أن",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0280",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_005",
+      "paragraph_number": 280,
+      "text_ar": "‏أي ‎OLY!‏ وُضعٌ في الظروف التي عاشها الإمام لقام بنفس",
+      "page_number": 73
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0281",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 281,
+      "text_ar": "‎AA‏ ل تريخ الإمام علي بن أبي طالب ‎BE‏ السياسي\nالتصرّف. بعد التحليل والاسترسال السابق الذي 60553\n‎Geta‏ سن د رقن كر ‎PLY ade gle‏\nعلي » ويتغامل معه كأي ‎Ql]‏ يخضع لغرائزه وشعوره\nفي طرح ما ‎tin‏ وكأني به ‎Che‏ حين يُعظم ‎PLY!‏\n‏ويضعه على المشرحة حينما لا يعجبه كلام الإمام» ومن\nذلك قوله بعد أن كان الإمام يطرح مسألة القرابة كعنصر\nضروري في استلام زمام الأمور بعد النبي ‎Be‏ (وأنه =\nأي الإمام ‏ كان يرى أن قرابته من النبي مزية ترشّحه\nللخلافة بعده ‎WY‏ فرعٌ من النبوّة على ‎coolizel‏ وهم شجرة\nالنبوّة ومحط الرسالة). كما قال: (ومما لا شك ‎cad‏ أن\nشعوره هذا طبيعي في النفس الإنسانية كيفما كان حظّها من\nالزهد والقناعة» ‎OY‏ تخطيه ‏ مع هذه المزية التي ترشحه\nللبيعة  ‎ot‏ أن يكون قدحاً في مزاياه الأخرى» من علم\nوشجاعة وسابقة جهاد وعمّة عن المطامع» ‎ol ata ol‏\nيكون كراهة له وممالأة على الغض من قدره» ولم يزل من\nغرائز النفوس أن يسوءها القدحٌ فيها ‎Badly‏ من مزاياها\nومواجهتها بالنفرة ‎Gal Sy‏\nوما ‎Col‏ توضيحه هناء أن الإمام لم يطرح المسألة إيماناً",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0282",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 282,
+      "text_ar": "‎.١١١ص‎ colin code ‏عبقرية الإمام‎ )١(",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0283",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 283,
+      "text_ar": "‏بها!! بل طرحها ‎Ube He‏ من ‎Bel‏ بالقرابة من رسول الله وإ",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0284",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 284,
+      "text_ar": "‏حينما تولّى غيره أمور الخلافة وطرحها كشعارٍ يخدمٌ ما ‎EG‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0285",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 285,
+      "text_ar": "‏السقيفة» وإلا فالإمام يحتج بالإمامة» وما البيانات الصادرة",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0286",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 286,
+      "text_ar": "‏منه ل في أمور ‎VEY‏ من باب المحاججة التي يطرحها",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0287",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 287,
+      "text_ar": "‏غيره لدحض تلك الشعارات المرفوعة.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0288",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 288,
+      "text_ar": "‏” - النظرة القبليّة التي كان يتعامل معها بعض المؤرخين وسار\nعليها من أتى بعدهم ليؤمنوا ‎GI Ob‏ الحاصل بين\nالصحابة في صدر الإسلام سببه النظرة القبليّة» وقد أقحم\n‎olin!‏ هذه المسألة في كتابه آنف ‎SUI‏ كغيره» وألبسها\nأمير المؤمنين ‎BB‏ بقوله: (ويشاء القدر أن تكون المزية في\nميزان ‎tle‏ هي العائق الأوّل في سائر الموازين)\"',\nويقصد بذلك قرابته من النبي 6 كما ذكرنا في النقطة\nالأولى» ويواصل العقّاد نقده الذي ليس له محل من\nالإعراب بقوله: (فليس من المعقول أن تسود ‎SUSI‏ كلّه\nأسرةٌ ‎LL‏ ولا من المعقول أن يُبنى الأساس على\nالمساواة» ‎Oty‏ يقام الحكم على هذا التفضيل)”\"»: متهماً\nفي الوقت ذاته أن ذلك قول الغلاة» والقول الذي يقصده",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0289",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 289,
+      "text_ar": "‎VV Ge ‏عبقرية الإمام؛ العقاد»‎ )١(",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0290",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 290,
+      "text_ar": "‏)1( عبقرية الإمام؛ ‎coli!‏ ص57١١.‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0291",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 291,
+      "text_ar": ".و تريخ الإمام علي بن أبي طالب ‎FE‏ السياسي\nهو أن الخلافة في بني هاشم حكمٌ من أحكام الله وضرورة\nمن ضرورات الدين» وينفي نفياً قاطعاً أن هذا ‎pV)‏ =\nالخلافة ‏ له دليل واحد صريح أو حادثة ‎Cot‏ على أن\nعاك اريك متا\nوكم ‎Corel‏ من استرساله هذاء الذي فرّق بين الملك",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0292",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 292,
+      "text_ar": "والخلافة في صفحات سابقة من كتابه هذاء ولم يبحث الفرق",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0293",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 293,
+      "text_ar": "بين الأمر الإلهي الذي قال به الغلاة كما تفضل» وبين الخلافة\nالهاشميّة التي أعطاها نظرةً قبليّة!! مناقشاً هذه المسألة حسب\nما يراه من وجهة نظر ‎Die‏ غير مكترث بالنصوص التي أوردها\n‎tlle‏ الفريقين والتي ‎Ute‏ بها البحث. وغيرها من النصوص\nالصريحة التي هي في الواقع دعامة أساسية في إمامة أمير\nالمؤمنين ‎ME‏ وخلافتهء والتي يؤمن بها ويرجّحها كما ذكر في",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0294",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 294,
+      "text_ar": "فصل (النبي والإمام والصحابة) من كتابه.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0295",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 295,
+      "text_ar": "1 - يعاود العقّاد ‎Sy‏ عبير يراعه حول سيرة الإمام ‎HEE‏\n‏ويشرّحه في الوقت ‎Sb‏ وذلك بعد أن شرّحه في قضايا\nأستغرب منه أنه لم يعطها مساحةً من ينبوع عقله السيّاح\nبقوله: (وقد كان له ‎(oly‏ عالِم» وفطنةٌ حكيمء ومشورةٌ",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0296",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 296,
+      "text_ar": "AVY LVN 2 coli ‏عبقرية الإمام»‎ )١(",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0297",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 297,
+      "text_ar": "مدبّر.. ولكننا إذا قلنا: ‎Gael‏ في العمل لأنه لم يغلب",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0298",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 298,
+      "text_ar": "القدّرء فذلك تكليف بما لا يطاق» وإنما نقول إنه أخفقٌ",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0299",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 299,
+      "text_ar": "أي فكر هذا الذي لا ‎Gian‏ هذا ‎SLU‏ الحكيم ذو\nالمشورةء وينعته بأفضل ما ‎Eu‏ غيرهء ليأتى فى خاتمة كتابه\nعلى جملةٍ تَنْسِفكُ وتنقض كل ما كتبه!!",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0300",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 300,
+      "text_ar": "فالتناقضات ليس لها محل في مثل هذه البحوث التي\nتوجب على ‎IS‏ أن يكون ‎Rly‏ الرؤية» شديد البصيرة»\nوخصوصاً حينما يتناول تاريخ هذا الإمام العظيم بجميع جوانب\nحياته» فإن الباحث بحيادية في تاريخ هذا الرجل العظيم سيصل\nإلى نتيجة قد تخالف ‎beat, col ga‏ شخصيات لها مكانتهاء\nوهذا ما لم يُوَّق له العقّاد ‎re‏ ذكائه وفطنته وقوّة بيانه» أو أنه\nربما ‎Gb‏ للوصول إلى بعض الأمورء إلا أن جرأته لم تسعفه\nهذه المرّة بما يؤمن به.\nرؤية:",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0301",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 301,
+      "text_ar": "لعل كثير من المؤرخين تطرّقوا إلى هذه ‎DLS!‏ إلا أني\nأحببت أن أعطيها شيئاً من الاهتمام على نحو الإيجازء فكما\n‎)١(‏ عبقرية الإمامء العقادء ص159١.‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0302",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 302,
+      "text_ar": "5ل -ت تايغ ‎play‏ علي بن ابي طالب ‎BB‏ السياسي\nهو معلوم ‎OF‏ الفتوحات ‎Ob‏ خلافة ‎WE‏ الثّلائة أخذت\nطريقها ‎JR,‏ مستمرٍء دون التركيز على تعليم هذه الفئة التعاليم\nالدينية وخصوصاً ‎pl‏ التي كان فتحها على يد يزيد بن أبي\nسفيان» وحين توفي تم تعيين معاوية على الشامء مما يدلل أن\nالشام تخضع لسيطرة سفيانية» وهذا ما جعل عقولهم تخضع\nلأطروحات معاوية» وسببٌ هذا الخضوع أن التعاليم التي\nيأخذونها لا يقبلونها من أي شخص آخر باستثناء من حضر\nالمدينة المنورة وعرف الصحابة عن قرب.\nالإمام عي في الشام وخارجها بشكلٍ مُتظمء فهو لم ‎OY al‏\nلديه الكثير من ‎A‏ المنتمين إلى قبائل ‎SE‏ وأخضعهم إلى\n‎ua cb.‏ اك مل ‎PLM elec}‏ رن ‎apt‏ بت ‎SLIT‏\n‎dys‏ توقفاء فقط لأجل حَشّْدٍ أكبر عدد حوله لقتال\nالإمام ‎ABE‏\n‏معاوية وااصطياد في الماء العكر:",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0303",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 303,
+      "text_ar": "هناك ‎OLAS‏ كثيرة فى وصف معاوية» تبيّن مدى بعده عن\n‎SI‏ الإسلامي ونهجهء إلا أن أوجز كلمة تصف معاوية كلمة\nعبد الله بن عباس حين اجتماع الحكمين في صفين» فقد قال",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0304",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 304,
+      "text_ar": "ay Be ‏سول أن‎ cle gs\n- BB ‏لأبي موسى الأشعري: (ليس فيه أي أمير المؤمنين‎\n‏خصلة تباعده من الخلافة» وليس فى معاوية خصلة تقربه من‎\nOES",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0305",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 305,
+      "text_ar": "فرغم ما صدر من معاوية من سلوك لا يليق ‎GL‏ مسلم\nالتلبّس ‎ce‏ فإنه ومع انشغال الإمام نه بقتال الخوارج فقد\n‎gol‏ أن يوفى بوعذده مهارم ابن العاص وذلك ‎doa)‏ إياه\n‎«poe‏ فقد وجهه إلى مصر لقتال ابن الخليفة الأول محمد بن\nأبي ‎cS‏ وما كفى ابن العاص قتل ابن الخليفة!! فقد مثّل\n‎che‏ تمثيلاً بشعاً ‎Foy‏ معاوية بذلك» وقد جزع الإمام ‎BB‏ لقتله\nفقال بحقه: (فما جزعت على هالك منذ ‎elss‏ هذه الحروب\n0 )1(\nجَرّعي ‎ade‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0306",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 306,
+      "text_ar": "ولما ‎rhe‏ معاوية بإرسال الإمام عضذه الوفي مالك\nالأشتر» بَعَتَ له من يَسْمُهُ وكان ما أراد وقيمة مالك عند الإمام\nكبيرة» فقد قال بحقه: (كان ‎J‏ مالك كما ‎ES‏ لرسولٍ ‎OG‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0307",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 307,
+      "text_ar": "‎BLE‏ إلى تناك ‎foi sas‏ محارت ‎Gan‏ جتن بطق\nالغاراتٍ على المناطق التى بايعت أمير المؤمنين ‎BE‏ بالخلافة\n)1( مروج ‎all‏ المسعودي؛. ‎TAY G2 Ve‏\n(1) مروج ‎all‏ المسعودي» ‎teks Te‏\n)1( أعيان الشيعة» السيد محسن ‎eet‏ ج9 ‎EV Ge‏ (ترجمة مالك).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0308",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 308,
+      "text_ar": "‎ag‏ ل ل ار الإ ل ار ال اق\nمثل: مكة المكرمة» المدينة المنورة» اليمن» بعض نواحي\nالكوفة...الخ؛ وما زاد الوضع تأزماً هو عدم قيام الكثير لمناصرة\nالإمام ‎RE‏ ولذا فقد حَطبَ ‎ME LY!‏ في أصحابه وقال لهم:\n(يا أهل الكوفة ‎Jal LEST‏ منسر من مناسِرٍ ‎Jal‏ الشام ‎Gel‏ كل\nامرىءٍ بابه وانجحر في بيته انجحار الضب والضبع الذليل في\nوجاره؟ أن لكم! لقد ‎Coad‏ منكمء يوماً أناجيكم ويوماً\nأناديكم» فلا إخوان في النجاءء ولا أحرار في ‎VC‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0309",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 309,
+      "text_ar": "‏ونتيجة هذه النقطة أننا ذكرنا الفرق بين معاوية\nوالإمام ‎BE‏ وهو (الغدر)ء وهذه السلوكيات توضح لنا مدى\nخبث معاوية والسياسة التي ينتهجهاء مما جعل الإمام لا يساوم\nولا يهادن معاوية أو يبقيه على الشام حتى لأيَّام فسياسةٌ\nالإمام ‎MH‏ تجاه معاوية لم تكن ‎UL‏ شخصيةٌ أو عِنادٍ أو غير\nذلك!! بل الظروف المحيطة به جعلته ‎WIS‏ ولذا لم يتوانَ في\n‎Obs‏ الحق والمنهج الإسلامي ‎deed‏ واحدة.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0310",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 310,
+      "text_ar": "‏وقبل إسدال الستار على قتال الإمام للقاسطين ورفعهم\n‎ie‏ شعاراتٍ للتشويش على المسلمين» فإني أتساءل: ماذا فعل\nمعاوية بعد مقتل الإمام علي ‎ORE‏ هل بحث عن الذين قتلوا\n‎)١(‏ تاريخ اليعقوبي»؛ ‎Te‏ ص90 ؟١٠.‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0311",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 311,
+      "text_ar": "تبوعات سول اذك 235 3 ب 8\nالخليفة عثمان حينما جلس على 35 ‎MUL‏ أم أن الكرسيّ\nأنساه القصاص من ‎Us‏ الخليفة ابن ‎Wade‏\n‎ploy!‏ علي ‎BI‏ والحكومة الإسلامية:",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0312",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 312,
+      "text_ar": "بلا شك أن ما ذكرناه ‎oe ET‏ مقتل عثمان مروراً بقتاله\nللناكثين والقاسطين وختاماً بالمارقين» توضّح لنا أن هناك شيئاً\n‎ly‏ > الإمام غك ويريد أن ‎ale‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0313",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 313,
+      "text_ar": "هذا الأمر الذي سعى الإمام ‎BB‏ إلى تطبيقه هو السير\n‎le‏ كارن الله وسنة رسوله ‎BE‏ وخلاصة ذلك نل 0\nعهدهٍ لمالك الأشتر الذي عبّر عنه ‎Ch GL‏ من سيوف الله\n‎Le‏ اا را ات ‎Glas tee‏ مي ‎lie‏ نمم ‎hb‏\n‎tis,‏ سياسيّة مهمّة لكل من أراد أن يَظْرّقَ بات السياسة»\nفالإمام ‎oye RE‏ خلال حياته السياسية وعهده هذاء أراد أن يُدِير\nالسياسة بالدّين لا أن يدير ‎BU)‏ بالسّياسة» ولسنا بصددٍ دراسة\nعهده لمالك الأشتر! ولكن أحببنا الإشارة إليه ‎plead‏ هذا العهد\nالذي ‎at;‏ للومام أن يطبق بعضه» وينصح عضده ‎alles‏ الجديد\nصا محر ‎ol LI ois Gabe‏ اج ‎3S cpa) pe Has‏\n‎aif‏ والمنبثقة من جوهر الدين.\n‎)١(‏ نهج البلاغة؛ الشريف الرضي» تصنيف: صبحي الصالح ‎EV G2‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0314",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 314,
+      "text_ar": "‎an‏ تاي الإمام علي بن أبي طالب 826 السياسي",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0315",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 315,
+      "text_ar": "‏ثم إن الأمر يستلزم دراسة حياة مالك الأشترء ولماذا\nاستعمله الإمام ‎BB‏ بدلاً من محمد بن أبي بكر؟ ‎Heady‏ تطرح\nنفسها في هذا المضمار وهذا التغيّر في سياسة الإمام ‎BE‏ في\nتغيير ‎JL‏ ذلك أن الأشتر شخصية بارزة في حياة\nالإمام ‎BB‏ في سرعة طاعته ‎eV yal‏ وعدم تشكيكه في وصايا\n‎RE OL!‏ ولذا نرى الإمام يوصيه بوصايا مختلفة ‎Ie‏ من\nعلاقته بخالقه وتطبيق فرائضه ‎ely‏ إلى وضع البلاد التي\nأرسله لهاء ومفسّراً له طبقات المجتمع» ومحذّراً له بالابتعاد\nعن احتواء بعض من يحملون السلوكيّات غير المقبولة وألا\nيجعلهم بطانته؛ وموصياً له ‎de EIU‏ من لم ‎AT eal‏ عند\nالعامّة» ‎oly‏ يكون ناصحاً لرعيّتوء ‎oly‏ يُدَارِسَ العُلماء\n‎LS,‏ وأن يختبر ‎ILE‏ إذا استعملهم» وأن يجعل أمر ما\nاشتبه عليه إلى ‎OLS‏ الله و ‎Hey‏ رسوله ‎BE‏ وأن لا ينسى\nمن لا حول لهم ولا قوّة كالفقراء والمساكين وغيرهم» وأن\n‎Pe‏ نفسه لذوي الحاجات بجعل جزءاً من وقته لهمء ‎Shey‏\n‏من سفكِ الدماء بغير ‎Ge‏ وأْمَّرَهُ بعدم ‎Fal‏ على الرعيّة\n‎oly‏ وأن لا يَعْجَل بالأمور قبل ‎cles‏ إلى أن يختم\nعهده هذا بالدعاء له بالسعادة والشهادة.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0316",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 316,
+      "text_ar": "‏وهذا العهد لم يكن مجرد تنظير يؤمن به الإمام ‎RE‏ أو\nيطرحه ليهرب من الواقع الذي هو فيه!! بل هي صادرةٌ ‎HE‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0317",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 317,
+      "text_ar": "‎gy ole gat‏ ا لش للش ا\nتجربةٍ طويلةٍ في المعترك السياسي والديني ومشروع إقامة الدولة\nالإسلامية المواكبة للتقدم الحضاري ومنها ترسية ‎«Jaa piles‏\nوقد كان أمير المؤمنين ‎BH‏ في أوج المعترك السياسي بدءاً من\nوجوده في مكةً المكرمة ‎OU]‏ بداية الدعوة» وأثناء تواجده في\nالمدينة مع رسول الله ‎BH‏ وما جرى من أحداث بعد السقيفة\nمن تولي الثلاثة منصب ‎BI‏ كل هذه الأمور وغيرها أمّلته\nأن يُمَارِسَ ‎HLA‏ وفق ضوابط معينة وعلى خطى ثابتة\nومدروسة, إلا أن الحروب التي ‎CLE‏ ضِدَهُ جَعَلَتْ منه في\n‎bi‏ ب إل رن ‎Lote pl tly‏ وو الات\nتنظير لا يقبله أي ‎Cae‏ وعلى المنصفين أن يقرؤوا أمير\nالمؤمنين ‎BH‏ من خلال نهج ‎EAS!‏ الذي يعكس الصورةً\nالحقيقية لسيرته وسلوكه مقارنين في ذلك روايات المؤّرّخين\nحتى يأخذ ‎law Got‏ أو يقرؤوه من زوايا أخرى غير جانب\nالانتصارٍ العسكري الذي يسيطرٌ على العُقُول.\nوللأسف أن بعض المؤرخين والمحدّلين المتقدمين منهم\n‎)١(‏ يقول جعيط في كتابه (الفتنة) ص7597: (أما الخطب المنسوبة لعلي»\nالرائعة البيان والبلاغة» فموضوعة برمّتها). هكذا هي عقلية جعيط\nورؤيته لخطب مولانا أمير المؤمنين ا بحركة قلم يريد أن ينسف\nمصدراً من مصادر التاريخ واللغة والأدب» وليته أوضح بعض الأسباب\nحيال هذا الرأي» أو صف شيئاً تجاه ما ذهب إليه!!.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0318",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 318,
+      "text_ar": "‎gy A‏ ا ‎BE alll ol So gle‏ لسلسم\nوالمتأخرين» يتناولون شخصية الإمام ‎BE‏ من جوانب معينة»\nمثل: الجانب السياسي الصِرّفء الديني» الجهادي» ويتغافلون\nبعض الجوانب الأخرى التي لها مساس بشخصية الإمام ‎RE‏\n‏مثل: الجانب ‎«SLs‏ الإنساني» الاجتماعيء التربوي»\n‎cg alll eg seal‏ القضائي. وغيرها إلا ما ندر.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0319",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 319,
+      "text_ar": "‏ثم إن إقامة الدولة عند الإمام يك كما أسلفنا القول تعني\nمزج الدين ‎LIL‏ باعتبارهما حلقتا وصل ‎YS‏ منهما يكمّل\nالآخرء على خلافه عند معاوية وغيره الذين اتخذوا الدين\nوسيلة لتحقيق مآربهم الشخصية» وقد سار على سياسة معاوية\nبني أمية ومن تبعهمء ‎IL GIES‏ ومخلّفين حقوق الرعيّة\n‎GLE‏ أظهرهمء والمظلع على ‎age‏ الإمام ‎BE‏ لمالك الأشتر\nيرى أنه يستوفي جميع حقوق الرعية جميعها من الفقير والغني\nوالتاجر والعامل وكل فردٍ من أفرادٍ الرّعيّة» وذلك لتحقيق\nالعدالة على ‎ary‏ الأرض.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0320",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 320,
+      "text_ar": "‎ieee‏ دوّنا ‎Ed‏ من سياسته ‎BE‏ مع معارضيه ومخالفيه»\nوأوضحنا بعض الأمور التي حاولنا فيها استجلاء الحقيقة قدر\nالمستطاع» نؤكد أن الإمام ‎BB‏ لم يصارع من أجل المنصب»\nجوهر الإسلام» سواء في تعامله الاعتيادي أو تعامله السياسي\nأو غير ذلك.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0321",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 321,
+      "text_ar": "‏وقد نطق بذلك غير مرّة موضحا الغرضَ من قبوله\nالخلافة» ومن أقواله حيال هذا الأمر: (اللهم إنك تعلم أنه لم\n‎ES‏ الذي ‎SIS‏ مِنَاء مُنَافَسَةَ في ‎coll‏ ولا التماس شيءٍ من\nفضولٍ الحُظامء ولكن ‎ge SLI YS‏ دينك؛ ‎Gey‏ الإصلاح\nفي بلادك» ‎gals‏ المظلومون وثُقَام ‎ge MER‏ حدودك)”\".",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0322",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 322,
+      "text_ar": "‏ولذا رغم ما تعرض له ‎BB‏ من ‎dele]‏ في شخصه ودينه»\n‎)١(‏ شرح ‎cael‏ ابن أبي الحديد» ‎TAY Ge Ag‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0323",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 323,
+      "text_ar": "د تريخ الإمام علي بن أبي طالب ‎BB‏ السياسي\nفإنه يأبى إلا أن يظلّ ذلكَ الرمز الذي يعكس التربية النبوية\nليجسّدها وكأن رسول الله ‎Be‏ لم ‎ey‏ وتعاليمه لم تَنْدَرسء\nوقد ذكرنا مواقفاً من ذلك في ثنايا البحث مستدلّينَ ببعض\nالشواهد التاريخية لتقريبها إلى ‎COLT‏ فسلامٌُ الله على أميرٍ\nالمؤمنين يوم ‎Uy‏ في أطهر بقعةٍ من بيت الله ‎SB‏ ويوم ‎J‏\n‏شهيداً في ‎ce‏ منْ بيوتٍ الله ‎SB‏ وعلى أفضل ‎Bee‏ ويومٌ يُبِعثُ\n‎Cubs en‏ خصومه وأعدَاءَه في محكمَة ‎JAS!‏ الإلهيّة.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0324",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 324,
+      "text_ar": "هذه مقطوعة شعرية جادت بها قريحتناء أحببنا أن نثبتها\nفي الخاتمة:\nعشقتكٌ ‎Sa‏ جيلاً فجيلا وتعاليتٌ ‎ES‏ قتيلا\nورماكَ الزمانُ لحناً تليداً ‎oye‏ حناجري ترتيلا\n‎Hi‏ وأنت سِرٌ نشيدي أي حرفٍ حوّلتني تحويلا\nيا أميرّ البيانٍ مُذني فإنّي أتمنَّى ‎Ste‏ تظليلا\nياعليّ الزمانٍأنتٌ ‎Wessel AG‏\nتتهادى على القلوب ‎Zhe‏ صاغها الدهرٌ مأتماً وعويلا\nوقلوبٌ على ‎CIBC‏ بعلاكمتُعَازِلُ التبجيلا",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0325",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 325,
+      "text_ar": "‎١‏ د أحاديث أم المؤمنين عائشة» السيّد مرتضى العسكري»\nكليّة أصول الدينء, الطبعة السادسة- ‎VEN4F‏\n‏(1999م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0326",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 326,
+      "text_ar": "‎١‏ - الاختصاصء الشيخ المفيدء تحقيق: علي أكبر\nالغفاري ‎A‏ السيد: محمود الزرندي» دار المفيد ‏\n‎Cy‏ الطبعة ‎AUS)‏ - 4ه (1999م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0327",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 327,
+      "text_ar": "‏7 - إرشاد القلوب» الحسن بن محمد الديلمى» مؤسسة\nالأعلمى للمطبوعات ‏ بيروت» [د.ت].",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0328",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 328,
+      "text_ar": "‏م الإرشاد في معرفة حجج الله على العباد, ‎al‏\n‏المفيد. دار المفيد ‏ بيروت» الطبعة الثانية  ‎AVENE‏\n‎(eV 44%)‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0329",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 329,
+      "text_ar": "؟ ٠ل‏ تريخ الإمام علي بن أبي طالب ‎BE‏ السياسي",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0330",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 330,
+      "text_ar": "ا أصول ‎pls‏ « محمد بن يعقوب الكليني» صححه\nوعلق عليه: علي أكبر الغفاري» دار الأضواء ‏ بيروت»\n6ه (1980م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0331",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 331,
+      "text_ar": "1 - أعيان الشيعة» السيد محسن الأمين» تحقيق: حسن\nالأمين» دار التعارف ‏ بيروت» ‎VERT‏ (1947م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0332",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 332,
+      "text_ar": "‎cere =‏ خير الزركلي» دار العلم للملايين ‏ بيروت»\nالطبعة السابعة عشر - 7١55م.‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0333",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 333,
+      "text_ar": "‎A‏ - الأمالي الشجرية» ابن الشجري» اسطوانة ممغنطة من\nإصدار المجمع الثقافي - أبو ظبي.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0334",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 334,
+      "text_ar": "‏4 - الإمام علي بين رؤية ‎(ees‏ ورواية «التاريخ», >-\nإبراهيم ‎pee‏ بيسان ‏ بيروت» الطبعة الأولى ‏\n6م",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0335",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 335,
+      "text_ar": "‎٠‏ الإمامة والسياسة؛ ابن قتيبة الدينوري» تعليق: خليل\nمنصورء دار الكتب العلمية ‏ بيروت» الطبعة الأولى -\n6ه (199م)",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0336",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 336,
+      "text_ar": "‎-١‏ البداية والنهاية» ابن كثير» تحقيق: ‎ole‏ شيري » دار\nإحياء التراث العربىي» الطبعة الأولى ‎VEAL‏\n‎eV AAA)‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0337",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 337,
+      "text_ar": "‎١‏ تاريخ الأمم ‎Ally‏ محمد بن جرير الطبري» مؤسسة\nالأعلمي للمطبوعات ‏ بيروت» [د.ت].",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0338",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 338,
+      "text_ar": "‏عات تاريخ الخلفاعء» جلال الدين السيوطي» دار الكتب\nالعلمية - بيروت» الطبعة الأولى - 1408١ه‏ (1948م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0339",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 339,
+      "text_ar": "‏1 تاريخ اليعقوبي» أحمد بن أبي يعقوب. تحقيق: عبد\nالأمير مهناء مؤسسة الأعلمي للمطبوعات ‏ بيروت»\n‎[o.0]‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0340",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 340,
+      "text_ar": "‎‘tay ‏عمر‎ oe) ‏تاريخ صدر الإسلام والدولة الأموية.‎ ~\\o\n‏دار العلم للملايين - بيروت» الطبعة السابعة  1985م.‎",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0341",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 341,
+      "text_ar": "‏7 تاريخ من دفن في العراق من الصحابة» علي بن الحسين\nالهاشمي الخطيب» [د.ن] [د.ت].",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0342",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 342,
+      "text_ar": "‏7 التذكرة الحمدونية» ابن حمدون» أسطوانة ممغنطة من\nإصدار المجمع الثقافي - أبو ظبي.",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0343",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 343,
+      "text_ar": "‏تفسير القرآن العظيمء الحافظ ابن كثيرء دار الفكر ‏\nبيروت» ‎avery‏ (5١10م)‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0344",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 344,
+      "text_ar": "‎1G)‏ = التفسير الكاشف» الشيخ : محمد جواد مغنية) مؤسسة\nدار الكتاب الإسلامي ‏ بيروت» الطبعة الأولى ‏\n4ه )90 ‎(oY‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0345",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 345,
+      "text_ar": ":٠ل‏ تريق الإمام علي بن أبي طالب ‎BE‏ السياسي",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0346",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 346,
+      "text_ar": "‎٠‏ حركة الخوارج «نشأتها وتطورها إلى نهاية العهد الأموي\n‎tv‏ عب ‎dak) /s‏ البكاي. دار الطليعة ‏\nبيروت »2 الطبعة الأولى ‏ ١١56م.‏\nلضن لعش ‎ST‏ لز تر ‎Sb‏ اجام =\nلاه (1005م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0347",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 347,
+      "text_ar": "‏7 خلافة معاوية بن أبى سفيان ‎AB‏ د. عمر سليمان\nالعقيليء الطبعة ‎(VAAL) ه١4105 Sy)‏ ~\n‎Ld - 3]‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0348",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 348,
+      "text_ar": "‎YY‏ الدرجات الرفيعة فى طبقات ‎aA‏ السيد على خان\nالشيرازي» مؤسسة الوفاء - بيروت» الطبعة الثانية -\n‎weer‏ (1987م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0349",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 349,
+      "text_ar": "‎Ye‏ ذخائر العقبى في مناقب ذوي القربى» محب الدين\nالطبري» دار المعرفة ‏ بيروت» [د.ت].",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0350",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 350,
+      "text_ar": "‎Yo‏ سير أعلام النبلاء في نقد الرجال» محمد بن أحمد\nالذهبى» تحقيق: على محمد ‎(Gale‏ دار المعرفة -\nبيروت» [دآات].",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0351",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 351,
+      "text_ar": "57 سير أعلام النبلاء» محمد بن أحمد الذهبي» تحقيق:\nشعيب الأرناؤوط. محمد نعيم العرقسوسي» ‎opel‏\n‎ce ele‏ مؤسسة ‎UL‏ الطبعة ‎VOY. OW‏\n‎(eV 44¥)‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0352",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 352,
+      "text_ar": "77 - سيرة أم المؤمنين أم سلمة (رض)» 00 حصة بنت عبد\nالكريم الزيد» مكتبة العبيكان ‏ الرياض» الطبعة الأولى\n- 1451ه (1١10م).‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0353",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 353,
+      "text_ar": "‎LTA‏ السيرة النبوية». ابن ‎colin‏ تحقيق: مصطفى السقا\nوصاحبيهء مؤسسة علوم القرآن» دار القيلة للثقافة\nالإسلامية» ‎foo]‏",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0354",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 354,
+      "text_ar": "‏8 شرح الطحاوية في العقيدة السلفية» صدر الدين علي بن\nعلى بن محمد بن أبى العرٌّ الحنفى (ت؟ولاهم).\nتحقيق: أحمد محمد شاكرء مطبوعات وزارة الشؤون\nالإسلامية والأوقاف والدعوة والإرشاد ‏ الرياض»\nها",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0355",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_006",
+      "paragraph_number": 355,
+      "text_ar": "‎Ts‏ شرح نهج البلاغةء ابن أبي ‎(dedi‏ تحقيق: محمد\nأبوالفضل إبراهيم» دار الجيل ‏ بيروت» الطبعة الأولى =\n١ه‏ (1995م).",
+      "page_number": 90
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0356",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 356,
+      "text_ar": "65 تريخ الإمام علي بن أبي طالب ‎BEE‏ السياسي",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0357",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 357,
+      "text_ar": "لات صحيح البخاري» محمد بن إسماعيل البخاري» المكتبة\nالإسلامية ‏ استانبول» اموام.",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0358",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 358,
+      "text_ar": "‎YY‏ عبقرية الإمام ‎ele‏ عباس محمود العقادء المكتبة\nالعصرية ‏ بيروت» [د.ت].",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0359",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 359,
+      "text_ar": "‏#6 الغديرء الشيخ: عبد الحسين الأميني» دار الكتب\nالإسلامية ‏ طهران» 174١1ه.ش.‏",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0360",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 360,
+      "text_ar": "‏4 فتح الباري في شرح صحيح البخاري؛ شهاب الدين ابن\nحجر العسقلاني» دار المعرفة ‏ بيروت» الطبعة الثانية.",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0361",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 361,
+      "text_ar": "‏5“ الفتنة «جدلية الدين والسياسة في الإسلام المبكراء هشام\nجعيط. دار الطليعة ‏ بيروت» الطبعة الخامسة ‏\n‎qu 2d‏",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0362",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 362,
+      "text_ar": "‎Acca) #55‏ الكبرى ‎(Y)‏ «على ‎cho gray‏ طه حسين» دار\nالمعارف - ‎ci alll‏ الطبعة الحادية عشرء [د.ت].",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0363",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 363,
+      "text_ar": "‎TV‏ الفصول المهمة في معرفة أحوال الأئمة ‎AB‏ علي بن\nمحمد المالكي (ابن الصبّاغ)» دار الأضواء ‏ بيروت»\nالطبعة الثانية ‏ 409١ه‏ (19848م).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0364",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 364,
+      "text_ar": "‏- القول الجليَ في فضائل ‎ce‏ جلال الدين السيوطي»\nالطبعة الأولى ‏ ١٠5١ه‏ )440 ‎(eV‏ مؤسسة نادر ‏\nبيروت.",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0365",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 365,
+      "text_ar": "‎wks 89‏ الفتوح» صمل بن أعثم الكوفي» تحقيق: علي",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0366",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 366,
+      "text_ar": "‏شيريء دار الأضواء ‏ بيروت» الطبعة الأولى ‏\n١ه‏ (1991م)).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0367",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 367,
+      "text_ar": "‎ma‏ الكشكول» الشيخ: ‎cle‏ الدين العاملى. أسطوانة ممغنطة\nمن إصدار المجمع الثقافي - أبو ظبي.",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0368",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 368,
+      "text_ar": "‎١‏ مجلة الدرعية» السنة السابعة العددان السابع والثامن\nوالعشرون «(رمضان ‏ ذو الحجة 51560١ه).. ‎Cow‏\n‏للدكتور: محمد إبراهيم أبا الخيل.",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0369",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 369,
+      "text_ar": "‏£7 = مجمع البيان في تفسير القرآن» الشيخ الطبرسي» مؤسسة\nالأعلمي ‏ بيروت» الطبعة ‏ 416١ه‏ (1146م).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0370",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 370,
+      "text_ar": "‎ty‏ مروج ‎on wel‏ ومعادن الجرهر» علي بن الحسين\nالمسعودي» تحقيق وتعليق: سعيد محمد اللحامء دار\nالفكر ‏ بيروت» 6ه ‎(Vee)‏",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0371",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 371,
+      "text_ar": "‏45- المستدرك على الصحيحين» الحاكم النيسابوري»\nتحقيق: مصطفى عبد القادر عطاء دار الكتب العلمية -\nبيروت» الطبعة ‎lp‏ = ١ه‏ (1190م)).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0372",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 372,
+      "text_ar": "‏6- معجم رجال الحديثء السيد أبو القاسم الخوئي»\nالطبعة الخامسة  ‎ENT‏ ١ه‏ (1995١م)»‏ [د.ن].",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0373",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 373,
+      "text_ar": "‎ploy! Gey 64‏ علي بن أبي طالب ‎FE‏ السياسي",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0374",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 374,
+      "text_ar": "‏د مقتل الإمام الحسين بن علي ‎RE‏ لوط بن يحيى (أبو\nمخنف)» تحقيق: كامل سلمان الجبوري» دار المحجة\nالبيضاء + دار الرسول الأكرم ‎BE‏ - بيروت» الطبعة\nالأولى  ‎aleve‏ (1000م).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0375",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 375,
+      "text_ar": "‎-tv‏ مقدمة في تاريخ صدر ‎Cpe YT‏ د/ عبد العزيز الدوري»\nمركز دراسات الوحدة العربية -بيروت» الطبعة الأولى -\nا",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0376",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 376,
+      "text_ar": "‏48 المنتقى من منهاج الاعتدال» ابن تيمية» اختصره\nالخطيب» مطبوعات وزارة الشؤون الإسلامية والأوقاف\nوالدعوة والإرشاد  ‎cob SI‏ 8١51١اه.‏\nمؤسسة دار الحديث ‏ قمء الطبعة الأولى ‏ ١57١ه.‏",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0377",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 377,
+      "text_ar": "‏06 نهج البلاغة؛ جمع: الشريف الرضي» تصنيف : صبحي\n‎cuss‏ دار الكتاب المصري - القاهرة» دار الكتاب\nاللبناني - بيروت» الطبعة الثالثة ‏ ١1١5١ه‏ (1991م).",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0378",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 378,
+      "text_ar": "‎-١‏ الوافي بالوفيات». صلاح الدين الصفديء أسطوانة",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0379",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 379,
+      "text_ar": "ل ل ل\n‎OY‏ وقعة صفين » نصر بن مزاحم المنقري » مكتبة الخانجى»\nالمؤسسة العربية الحديثة ‏ مصرء الطبعة الثالثة ‏\n‎lbs)‏ (1985م).\n‎BOS et ——‏ +",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0380",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 380,
+      "text_ar": "111 sh ginal\n52\n0 ‏إهداء‎\n‎1 ‏تمهيد‎\n‎VE cece ees ‏الغرض من هذا البحث‎\nVO eee BBE ‏مكانة الإمام‎\nVV BE ‏أخلاق السياسة عند الإمام علي‎\n14 ‏كيف برز لك سياسياً؟‎\n14 Be ‏تحرك الإمام السياسي إبان حياة النبي‎\nVV es ‏أحداث السقيقة‎\n>39 ‏دعوني والتمسوا غيري‎\n7 ‏على بيعة الناس؟‎ RE ‏لماذا لم يوافق الإمام‎\n‏الام‎ eee ‏والإمامة‎ BI ‏الفرق بين‎\nYo Be ‏نبوءات رسول الله‎\n‏قتال الناكثين بض‎\nTA ‏شعار الناكثين‎",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0381",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 381,
+      "text_ar": "11 تريغ الإمام علي بن أبي طالب ‎BEE‏ السياسي\nالحرية السياسية ‎tees‏\n‏لماذا الذهاب إلى الكوفة؟ ‎tv‏\n‏نباح كلاب ‎vipdl‏ £4\nالحرب أم الإصلاح ‎og‏\n‏قول الحق أم التحامل على الصحابة؟ 655\nعدالة الصحابة ‎ov‏\n‏هل حضر واقعة الجمل أحدٌ من الصحابة؟ ‎WY‏\n‏قتال القاسطين .........22222.2.2.2.22.2.2 .ااا للا\nحول التحكيم ‎Vo‏\n‏قتال المارقين ‎vv‏\n‏وقفة مع بعض الدراسات الحديثة .................. 68م\nنظرة سريعة على عبقرية الإمام للعقّاد ............... 40\nمعاوية والاصطياد في الماء العكر ‎ay‏\n‏الإمام علي ‎BE‏ والحكومة الإسلامية ‎qo‏",
+      "page_number": 108
+    },
+    {
+      "paragraph_id": "bookss_018_paragraph_0382",
+      "book_id": "bookss_018",
+      "section_id": "bookss_018_section_007",
+      "paragraph_number": 382,
+      "text_ar": "2 © sD ‏ناوي‎ q\nTa | C4\nEz J, | ‏و1‎ |\nne ‏السياسي‎\n‏قراءة موجزة عن بعض الأوضاع‎\n‏السياسية في حياة أمير المؤمنين دسب‎\n|. ‏عبداله بن مان رست‎ 3\n‏الأحساء‎  فوفهلا‎\nه١‎\n‏الرؤيس - مفرق محلات محفوظ ستورز - بناية رمال‎ ~ 5\nSes\n١1/041511 2 a /TAVIVA ‏هاتف:‎ - ١4/9414 oe News\nE-mail almahajja@terra net Ib. «\\ /oovAcy ‏تلفاكس:‎ i Beg :\nwwwdaralmahajacom info@daralmahajacom",
+      "page_number": 108
+    }
+  ]
 }
