@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../models/collection/collection_item.dart';
 import '../../providers/collection_providers.dart';
 import '../../providers/auth_providers.dart';
+import '../../providers/guest_access_providers.dart';
 
 /// Dialog for adding a new item to the collection
 class AddToCollectionDialog extends ConsumerStatefulWidget {
@@ -311,9 +312,16 @@ class _AddToCollectionDialogState
     });
 
     try {
-      final userId = ref.read(currentUserIdProvider);
+      // Auto-sign in as guest if user is not logged in
+      var userId = ref.read(currentUserIdProvider);
       if (userId == null) {
-        throw Exception('User not logged in');
+        final guestService = ref.read(guestAccessServiceProvider);
+        final userCredential = await guestService.signInAsGuest();
+        userId = userCredential.user?.uid;
+
+        if (userId == null) {
+          throw Exception('Failed to sign in as guest');
+        }
       }
 
       // Parse tags
