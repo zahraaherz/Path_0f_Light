@@ -71,45 +71,13 @@ export {
   getBookDetails,
 } from "./contentManagement";
 
-// Export Friends Management Functions
+// Export Questions Management Functions (Quiz System)
 export {
-  searchUsers,
-  sendFriendRequest,
-  acceptFriendRequest,
-  rejectFriendRequest,
-  removeFriend,
-  blockUser,
-  getFriendsList,
-  getPendingRequests,
-} from "./friendsManagement";
-
-// Export Book Reading & Comments Management Functions
-export {
-  saveReadingProgress,
-  markSectionCompleted,
-  createBookmark,
-  deleteBookmark,
-  createComment,
-  updateComment,
-  deleteComment,
-  toggleCommentLike,
-  getComments,
-  reportParagraph,
-  addToCollection,
-} from "./bookReadingManagement";
-// Export Reminder Management Functions
-export {
-  processReminders,
-  processPrayerReminders,
-  onReminderWrite,
-} from "./reminderManagement";
-
-// Export Notification Service Functions
-export {
-  registerFCMToken,
-  unregisterFCMToken,
-  sendTestNotification,
-  sendAdminAnnouncement,
-  cleanupOldTokens,
-  onUserDeleted as onUserDeletedCleanupTokens,
-} from "./notificationService";
+  insertQuestionWithId,
+  bulkInsertQuestionsFromJSON,
+  getQuestions,
+  getQuestionById,
+  getRandomQuestions,
+  verifyQuestion,
+  getQuestionStats,
+} from "./questionsManagement";
