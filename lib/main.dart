@@ -1,41 +1,185 @@
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'config/theme/app_theme.dart';
+import 'providers/auth_providers.dart';
+import 'providers/language_providers.dart';
+import 'providers/theme_providers.dart';
 import 'screens/home/home_screen.dart';
+import 'services/notification_service.dart';
+import 'l10n/app_localizations.dart';
+
+// Import firebase_options if it exists
+// Note: Run 'flutterfire configure' to generate this file
+// or copy from firebase_options.dart.example
+import 'firebase_options.dart' show DefaultFirebaseOptions;
+
+// Background message handler (must be top-level function)
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  debugPrint('Background message received: ${message.messageId}');
+  // Handle background message here if needed
+}
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
-  await Firebase.initializeApp();
+  try {
+    // Initialize Firebase
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
-  // Initialize AdMob
-  await MobileAds.instance.initialize();
+    // Set up background message handler
+    FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
-  // Configure G-rating filter (Family-safe, no violence/nudity/gambling)
-  final RequestConfiguration requestConfiguration = RequestConfiguration(
-    maxAdContentRating: MaxAdContentRating.g,
-    tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,
+    // Initialize AdMob with G-rating filter (Family-safe, no violence/nudity/gambling)
+    try {
+      await MobileAds.instance.initialize();
+
+      final RequestConfiguration requestConfiguration = RequestConfiguration(
+        maxAdContentRating: MaxAdContentRating.g,
+        tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,
+      );
+
+      MobileAds.instance.updateRequestConfiguration(requestConfiguration);
+      debugPrint('AdMob initialized with G-rating filter');
+    } catch (e) {
+      debugPrint('AdMob initialization error: $e');
+      // Non-critical, app can continue without ads
+    }
+
+    // Initialize notification service
+    // Note: This will request permissions and register FCM token
+    try {
+      final notificationService = NotificationService();
+      await notificationService.initialize();
+    } catch (e) {
+      debugPrint('Notification service initialization error: $e');
+      // Non-critical, app can continue without notifications
+    }
+  } catch (e) {
+    debugPrint('Firebase initialization error: $e');
+    debugPrint('Please run "flutterfire configure" to set up Firebase');
+  }
+
+  runApp(
+    // Wrap app with ProviderScope for Riverpod state management
+    const ProviderScope(
+      child: PathOfLightApp(),
+    ),
   );
-
-  MobileAds.instance.updateRequestConfiguration(requestConfiguration);
-
-  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PathOfLightApp extends ConsumerWidget {
+  const PathOfLightApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final locale = ref.watch(localeProvider);
+    final themeMode = ref.watch(themeModeProvider);
+
     return MaterialApp(
       title: 'Path of Light',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        useMaterial3: true,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: themeMode,
+      locale: locale,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: const AuthGate(),
+    );
+  }
+}
+
+/// AuthGate shows the home screen by default
+/// Users can access most features without authentication
+/// Login is only required for specific features (profile, leaderboard, etc.)
+class AuthGate extends ConsumerWidget {
+  const AuthGate({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authStateProvider);
+
+    return authState.when(
+      data: (user) {
+        // Always show home screen
+        // Authentication status is checked within individual features
+        return const HomeScreen();
+      },
+      loading: () => const Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(
+                color: AppTheme.primaryTeal,
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Path of Light',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: AppTheme.primaryTeal,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
-      home: const HomeScreen(),
+      error: (error, stack) => Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.error_outline,
+                  size: 64,
+                  color: AppTheme.error,
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  'Firebase Configuration Error',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Please run "flutterfire configure" to set up Firebase.\n\nOr copy firebase_options.dart.example to firebase_options.dart and add your Firebase configuration.',
+                  style: const TextStyle(fontSize: 14),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Error: $error',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: AppTheme.textSecondary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

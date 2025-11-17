@@ -1,0 +1,380 @@
+import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import '../../config/theme/app_theme.dart';
+import '../../models/leaderboard/leaderboard_entry.dart';
+import '../../providers/leaderboard_providers.dart';
+import '../../providers/auth_providers.dart';
+import '../../data/mock_data.dart';
+import 'user_comparison_screen.dart';
+
+class LeaderboardScreen extends ConsumerStatefulWidget {
+  const LeaderboardScreen({super.key});
+
+  @override
+  ConsumerState<LeaderboardScreen> createState() => _LeaderboardScreenState();
+}
+
+class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+    _tabController.addListener(() {
+      if (!_tabController.indexIsChanging) {
+        // Update selected leaderboard type when tab changes
+        final types = [
+          LeaderboardType.points,
+          LeaderboardType.streak,
+          LeaderboardType.accuracy,
+          LeaderboardType.questions,
+        ];
+        ref.read(selectedLeaderboardTypeProvider.notifier).state =
+            types[_tabController.index];
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final r = context.responsive;
+    final currentUserId = ref.watch(currentUserIdProvider);
+    final leaderboardAsync = ref.watch(currentLeaderboardProvider);
+    final userRankAsync = ref.watch(userRankByPointsProvider);
+
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          // App Bar with gradient
+          SliverAppBar(
+            expandedHeight: 200,
+            floating: false,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text(
+                'Leaderboard',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(0, 1),
+                      blurRadius: 3.0,
+                      color: Colors.black26,
+                    ),
+                  ],
+                ),
+              ),
+              background: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 40),
+                    Icon(
+                      Icons.emoji_events,
+                      size: 64,
+                      color: AppTheme.goldAccent,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            bottom: TabBar(
+              controller: _tabController,
+              isScrollable: true,
+              indicatorColor: AppTheme.goldAccent,
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white70,
+              tabs: const [
+                Tab(text: 'Points'),
+                Tab(text: 'Streak'),
+                Tab(text: 'Accuracy'),
+                Tab(text: 'Questions'),
+              ],
+            ),
+          ),
+
+          // User's Rank Card
+          if (currentUserId != null)
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.all(r.paddingMedium),
+                child: userRankAsync.when(
+                  data: (rank) => _buildUserRankCard(rank),
+                  loading: () => const SizedBox.shrink(),
+                  error: (_, __) => const SizedBox.shrink(),
+                ),
+              ),
+            ),
+
+          // Leaderboard List
+          leaderboardAsync.when(
+            data: (entries) {
+              // Use mock data if no real data is available
+              final displayEntries = entries.isEmpty
+                  ? MockData.getLeaderboardByType(
+                      ref.watch(selectedLeaderboardTypeProvider))
+                  : entries;
+
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final entry = displayEntries[index];
+                    final isCurrentUser = entry.uid == currentUserId;
+
+                    return _buildLeaderboardEntry(
+                      entry,
+                      isCurrentUser,
+                    );
+                  },
+                  childCount: displayEntries.length,
+                ),
+              );
+            },
+            loading: () {
+              // Show mock data while loading
+              final selectedType = ref.watch(selectedLeaderboardTypeProvider);
+              final mockEntries = MockData.getLeaderboardByType(selectedType);
+
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final entry = mockEntries[index];
+                    final isCurrentUser = entry.uid == currentUserId;
+
+                    return _buildLeaderboardEntry(
+                      entry,
+                      isCurrentUser,
+                    );
+                  },
+                  childCount: mockEntries.length,
+                ),
+              );
+            },
+            error: (error, stack) {
+              // Show mock data on error
+              final selectedType = ref.watch(selectedLeaderboardTypeProvider);
+              final mockEntries = MockData.getLeaderboardByType(selectedType);
+
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final entry = mockEntries[index];
+                    final isCurrentUser = entry.uid == currentUserId;
+
+                    return _buildLeaderboardEntry(
+                      entry,
+                      isCurrentUser,
+                    );
+                  },
+                  childCount: mockEntries.length,
+                ),
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildUserRankCard(int rank) {
+    final r = context.responsive;
+    return Card(
+      elevation: 4,
+      color: AppTheme.primaryTeal.withOpacity(0.1),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+        side: const BorderSide(color: AppTheme.primaryTeal, width: 2),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(r.paddingMedium),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Your Rank',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: AppTheme.textSecondary,
+                      ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  rank == -1 ? 'Unranked' : '#$rank',
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.primaryTeal,
+                      ),
+                ),
+              ],
+            ),
+            Icon(
+              rank <= 10
+                  ? Icons.emoji_events
+                  : rank <= 50
+                      ? Icons.workspace_premium
+                      : Icons.military_tech,
+              size: 48,
+              color: rank <= 10
+                  ? AppTheme.goldAccent
+                  : rank <= 50
+                      ? AppTheme.primaryTeal
+                      : AppTheme.textSecondary,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLeaderboardEntry(LeaderboardEntry entry, bool isCurrentUser) {
+    final r = context.responsive;
+    final selectedType = ref.watch(selectedLeaderboardTypeProvider);
+
+    // Determine the value to display based on leaderboard type
+    String valueText;
+    IconData valueIcon;
+    Color valueColor;
+
+    switch (selectedType) {
+      case LeaderboardType.points:
+        valueText = '${entry.points}';
+        valueIcon = Icons.stars;
+        valueColor = AppTheme.goldAccent;
+        break;
+      case LeaderboardType.streak:
+        valueText = '${entry.currentStreak}';
+        valueIcon = Icons.local_fire_department;
+        valueColor = AppTheme.error;
+        break;
+      case LeaderboardType.accuracy:
+        valueText = '${entry.accuracy.toStringAsFixed(1)}%';
+        valueIcon = Icons.check_circle;
+        valueColor = AppTheme.success;
+        break;
+      case LeaderboardType.questions:
+        valueText = '${entry.totalQuestionsAnswered}';
+        valueIcon = Icons.quiz;
+        valueColor = AppTheme.info;
+        break;
+    }
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      decoration: BoxDecoration(
+        color: isCurrentUser
+            ? AppTheme.primaryTeal.withOpacity(0.1)
+            : Colors.transparent,
+        border: isCurrentUser
+            ? Border.all(color: AppTheme.primaryTeal, width: 2)
+            : null,
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: ListTile(
+        leading: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // Rank
+            SizedBox(
+              width: 40,
+              child: Center(
+                child: entry.rank <= 3
+                    ? Icon(
+                        Icons.emoji_events,
+                        size: 32,
+                        color: entry.rank == 1
+                            ? AppTheme.goldAccent
+                            : entry.rank == 2
+                                ? Colors.grey[400]
+                                : Colors.brown[300],
+                      )
+                    : Text(
+                        '${entry.rank}',
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: AppTheme.textSecondary,
+                            ),
+                      ),
+              ),
+            ),
+            SizedBox(width: r.spaceSmall),
+
+            // Avatar
+            CircleAvatar(
+              radius: 24,
+              backgroundColor: AppTheme.primaryTeal.withOpacity(0.2),
+              backgroundImage: entry.photoURL != null
+                  ? CachedNetworkImageProvider(entry.photoURL!)
+                  : null,
+              child: entry.photoURL == null
+                  ? Text(
+                      entry.displayName[0].toUpperCase(),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.primaryTeal,
+                      ),
+                    )
+                  : null,
+            ),
+          ],
+        ),
+        title: Text(
+          entry.displayName,
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+        ),
+        subtitle: Text(
+          '${entry.totalQuestionsAnswered} questions • ${entry.accuracy.toStringAsFixed(1)}% accuracy',
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(valueIcon, color: valueColor, size: 20),
+            const SizedBox(width: 4),
+            Text(
+              valueText,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: valueColor,
+                  ),
+            ),
+          ],
+        ),
+        onTap: () {
+          // Navigate to user comparison or profile
+          final currentUserId = ref.read(currentUserIdProvider);
+          if (currentUserId != null && entry.uid != currentUserId) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => UserComparisonScreen(
+                  userId1: currentUserId,
+                  userId2: entry.uid,
+                ),
+              ),
+            );
+          }
+        },
+      ),
+    );
+  }
+}

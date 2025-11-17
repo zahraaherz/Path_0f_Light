@@ -1,0 +1,784 @@
+{
+  "questions": {
+    "q_001": {
+      "id": "q_001",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "في أي عام وُلد النبي محمد (ص)؟",
+      "question_en": "In which year was Prophet Muhammad (pbuh) born?",
+      "options": {
+        "A": {
+          "text_ar": "عام الفيل",
+          "text_en": "Year of the Elephant"
+        },
+        "B": {
+          "text_ar": "عام الحزن",
+          "text_en": "Year of Sorrow"
+        },
+        "C": {
+          "text_ar": "عام الفتح",
+          "text_en": "Year of Conquest"
+        },
+        "D": {
+          "text_ar": "عام الهجرة",
+          "text_en": "Year of Hijra"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_sira_001",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "وُلد محمد بن عبد الله بن عبد المطلب في مكة المكرمة في عام الفيل",
+        "page_number": 15
+      },
+      "explanation_ar": "وُلد النبي محمد (ص) في عام الفيل، وهو العام الذي حاول فيه أبرهة الحبشي هدم الكعبة بالفيلة",
+      "explanation_en": "Prophet Muhammad (pbuh) was born in the Year of the Elephant, the year when Abraha attempted to destroy the Kaaba with elephants",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["seerah", "history"]
+    },
+    "q_002": {
+      "id": "q_002",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "ما اسم أم النبي محمد (ص)؟",
+      "question_en": "What was the name of Prophet Muhammad's (pbuh) mother?",
+      "options": {
+        "A": {
+          "text_ar": "خديجة",
+          "text_en": "Khadijah"
+        },
+        "B": {
+          "text_ar": "آمنة بنت وهب",
+          "text_en": "Aminah bint Wahb"
+        },
+        "C": {
+          "text_ar": "فاطمة",
+          "text_en": "Fatimah"
+        },
+        "D": {
+          "text_ar": "حليمة السعدية",
+          "text_en": "Halimah al-Sa'diyah"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_sira_002",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "كانت أمه آمنة بنت وهب من بني زهرة",
+        "page_number": 18
+      },
+      "explanation_ar": "آمنة بنت وهب هي أم النبي محمد (ص)، وقد توفيت وهو صغير في السادسة من عمره",
+      "explanation_en": "Aminah bint Wahb was the mother of Prophet Muhammad (pbuh). She passed away when he was six years old",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["seerah", "family"]
+    },
+    "q_003": {
+      "id": "q_003",
+      "category": "imam_ali",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "في أي يوم ولد الإمام علي (ع) في الكعبة؟",
+      "question_en": "On which day was Imam Ali (as) born inside the Kaaba?",
+      "options": {
+        "A": {
+          "text_ar": "13 رجب",
+          "text_en": "13th of Rajab"
+        },
+        "B": {
+          "text_ar": "15 شعبان",
+          "text_en": "15th of Sha'ban"
+        },
+        "C": {
+          "text_ar": "27 رمضان",
+          "text_en": "27th of Ramadan"
+        },
+        "D": {
+          "text_ar": "9 ربيع الأول",
+          "text_en": "9th of Rabi' al-Awwal"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_manaqib_ali_001",
+        "book_id": "manaqib_ali",
+        "exact_quote_ar": "ولد أمير المؤمنين علي بن أبي طالب (ع) في جوف الكعبة يوم الجمعة الثالث عشر من شهر رجب",
+        "page_number": 42
+      },
+      "explanation_ar": "الإمام علي (ع) هو الوحيد الذي ولد داخل الكعبة المشرفة، وكان ذلك في 13 رجب",
+      "explanation_en": "Imam Ali (as) is the only person born inside the holy Kaaba, and this occurred on the 13th of Rajab",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["imam_ali"],
+      "topic_tags": ["history", "masoomeen"]
+    },
+    "q_004": {
+      "id": "q_004",
+      "category": "prophet_muhammad",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "كم كان عمر النبي محمد (ص) عندما تزوج السيدة خديجة (ع)؟",
+      "question_en": "How old was Prophet Muhammad (pbuh) when he married Lady Khadijah (as)?",
+      "options": {
+        "A": {
+          "text_ar": "20 سنة",
+          "text_en": "20 years old"
+        },
+        "B": {
+          "text_ar": "25 سنة",
+          "text_en": "25 years old"
+        },
+        "C": {
+          "text_ar": "30 سنة",
+          "text_en": "30 years old"
+        },
+        "D": {
+          "text_ar": "35 سنة",
+          "text_en": "35 years old"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_sira_025",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "تزوج رسول الله (ص) خديجة بنت خويلد وهو ابن خمس وعشرين سنة",
+        "page_number": 67
+      },
+      "explanation_ar": "تزوج النبي محمد (ص) من السيدة خديجة (ع) وهو في الخامسة والعشرين من عمره، وكانت خديجة أول من آمن به",
+      "explanation_en": "Prophet Muhammad (pbuh) married Lady Khadijah (as) when he was 25 years old. Khadijah was the first to believe in him",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "lady_khadijah"],
+      "topic_tags": ["seerah", "family"]
+    },
+    "q_005": {
+      "id": "q_005",
+      "category": "islamic_history",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "في أي غزوة قال النبي (ص) عن الإمام علي (ع): 'لأعطين الراية غداً رجلاً يحب الله ورسوله ويحبه الله ورسوله'؟",
+      "question_en": "In which battle did the Prophet (pbuh) say about Imam Ali (as): 'Tomorrow I will give the flag to a man who loves Allah and His Messenger, and Allah and His Messenger love him'?",
+      "options": {
+        "A": {
+          "text_ar": "غزوة بدر",
+          "text_en": "Battle of Badr"
+        },
+        "B": {
+          "text_ar": "غزوة أحد",
+          "text_en": "Battle of Uhud"
+        },
+        "C": {
+          "text_ar": "غزوة خيبر",
+          "text_en": "Battle of Khaybar"
+        },
+        "D": {
+          "text_ar": "غزوة الخندق",
+          "text_en": "Battle of the Trench"
+        }
+      },
+      "correct_answer": "C",
+      "source": {
+        "paragraph_id": "para_manaqib_ali_087",
+        "book_id": "manaqib_ali",
+        "exact_quote_ar": "في غزوة خيبر قال رسول الله (ص): لأعطين الراية غداً رجلاً يحب الله ورسوله ويحبه الله ورسوله، كرار غير فرار، لا يرجع حتى يفتح الله على يديه",
+        "page_number": 156
+      },
+      "explanation_ar": "في غزوة خيبر، أعطى النبي (ص) الراية للإمام علي (ع) بعد أن قال هذا الحديث الشريف، وفتح الله على يديه",
+      "explanation_en": "In the Battle of Khaybar, the Prophet (pbuh) gave the flag to Imam Ali (as) after saying this blessed hadith, and Allah granted victory through him",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali"],
+      "topic_tags": ["history", "battles", "hadith"]
+    },
+    "q_006": {
+      "id": "q_006",
+      "category": "imam_hussain",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "في أي يوم استشهد الإمام الحسين (ع) في كربلاء؟",
+      "question_en": "On which day was Imam Hussain (as) martyred in Karbala?",
+      "options": {
+        "A": {
+          "text_ar": "9 محرم 61 هـ",
+          "text_en": "9th of Muharram, 61 AH"
+        },
+        "B": {
+          "text_ar": "10 محرم 61 هـ",
+          "text_en": "10th of Muharram, 61 AH"
+        },
+        "C": {
+          "text_ar": "11 محرم 61 هـ",
+          "text_en": "11th of Muharram, 61 AH"
+        },
+        "D": {
+          "text_ar": "7 محرم 61 هـ",
+          "text_en": "7th of Muharram, 61 AH"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_karbala_156",
+        "book_id": "maqtal_hussain",
+        "exact_quote_ar": "استشهد سيد الشهداء الحسين بن علي (ع) يوم عاشوراء العاشر من المحرم سنة إحدى وستين للهجرة",
+        "page_number": 234
+      },
+      "explanation_ar": "استشهد الإمام الحسين (ع) في يوم عاشوراء، العاشر من محرم عام 61 للهجرة، في واقعة كربلاء",
+      "explanation_en": "Imam Hussain (as) was martyred on the day of Ashura, the 10th of Muharram in the year 61 AH, in the event of Karbala",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": ["imam_hussain"],
+      "topic_tags": ["history", "karbala", "ashura"]
+    },
+    "q_007": {
+      "id": "q_007",
+      "category": "ghadir",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "ما هي الآية القرآنية التي نزلت في واقعة غدير خم بعد إعلان النبي (ص) ولاية الإمام علي (ع)؟",
+      "question_en": "Which Quranic verse was revealed at Ghadir Khumm after the Prophet (pbuh) announced the succession of Imam Ali (as)?",
+      "options": {
+        "A": {
+          "text_ar": "اليوم أكملت لكم دينكم وأتممت عليكم نعمتي ورضيت لكم الإسلام ديناً",
+          "text_en": "Today I have perfected your religion for you, completed My favor upon you, and chosen Islam as your religion"
+        },
+        "B": {
+          "text_ar": "يا أيها الرسول بلغ ما أنزل إليك من ربك",
+          "text_en": "O Messenger! Convey what has been revealed to you from your Lord"
+        },
+        "C": {
+          "text_ar": "إنما وليكم الله ورسوله والذين آمنوا",
+          "text_en": "Your guardian is only Allah, His Messenger, and the believers"
+        },
+        "D": {
+          "text_ar": "ومن يتول الله ورسوله والذين آمنوا فإن حزب الله هم الغالبون",
+          "text_en": "Those who take Allah, His Messenger, and the believers as guardians—it is the party of Allah that will be victorious"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_ghadir_042",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "نزلت آية 'اليوم أكملت لكم دينكم' بعد أن نصب رسول الله (ص) علياً للولاية في غدير خم",
+        "page_number": 543
+      },
+      "explanation_ar": "نزلت آية إكمال الدين (المائدة:3) بعد واقعة الغدير مباشرة، مما يدل على أهمية هذا الحدث في إكمال الدين",
+      "explanation_en": "The verse of completion of religion (Al-Ma'idah:3) was revealed immediately after the event of Ghadir, indicating the importance of this event in completing the religion",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali"],
+      "topic_tags": ["quran", "ghadir", "history", "wilayah"]
+    },
+    "q_008": {
+      "id": "q_008",
+      "category": "imam_mahdi",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "ما هو لقب الإمام الثاني عشر (عج)؟",
+      "question_en": "What is the title of the Twelfth Imam (aj)?",
+      "options": {
+        "A": {
+          "text_ar": "المهدي المنتظر",
+          "text_en": "Al-Mahdi Al-Muntadhar (The Awaited Mahdi)"
+        },
+        "B": {
+          "text_ar": "الصادق",
+          "text_en": "Al-Sadiq"
+        },
+        "C": {
+          "text_ar": "الكاظم",
+          "text_en": "Al-Kadhim"
+        },
+        "D": {
+          "text_ar": "الرضا",
+          "text_en": "Al-Ridha"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_imam_mahdi_001",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "الإمام الثاني عشر محمد بن الحسن العسكري (عج) الملقب بالمهدي المنتظر",
+        "page_number": 89
+      },
+      "explanation_ar": "الإمام المهدي (عج) هو الإمام الثاني عشر من أئمة أهل البيت (ع)، ويلقب بالمهدي المنتظر",
+      "explanation_en": "Imam Mahdi (aj) is the Twelfth Imam of Ahlul Bayt (as), known as Al-Mahdi Al-Muntadhar (The Awaited Mahdi)",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["imam_mahdi"],
+      "topic_tags": ["masoomeen", "beliefs"]
+    },
+    "q_009": {
+      "id": "q_009",
+      "category": "lady_fatimah",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "ما هو لقب السيدة فاطمة الزهراء (ع) الذي يعني 'سيدة نساء العالمين'؟",
+      "question_en": "What is the title of Lady Fatimah Al-Zahra (as) that means 'Leader of the Women of the Worlds'?",
+      "options": {
+        "A": {
+          "text_ar": "الصديقة",
+          "text_en": "Al-Siddiqah"
+        },
+        "B": {
+          "text_ar": "سيدة نساء العالمين",
+          "text_en": "Sayyidat Nisa' Al-Alamin"
+        },
+        "C": {
+          "text_ar": "البتول",
+          "text_en": "Al-Batool"
+        },
+        "D": {
+          "text_ar": "المباركة",
+          "text_en": "Al-Mubarakah"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_fatimah_012",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "قال رسول الله (ص): فاطمة سيدة نساء العالمين من الأولين والآخرين",
+        "page_number": 125
+      },
+      "explanation_ar": "لقبها النبي (ص) بسيدة نساء العالمين، وهي ابنة رسول الله وزوجة أمير المؤمنين (ع)",
+      "explanation_en": "The Prophet (pbuh) titled her the Leader of the Women of the Worlds. She is the daughter of the Messenger of Allah and wife of Amir al-Mu'minin (as)",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["lady_fatimah"],
+      "topic_tags": ["masoomeen", "family", "hadith"]
+    },
+    "q_010": {
+      "id": "q_010",
+      "category": "quran",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "أي سورة في القرآن الكريم نزلت في حق أهل البيت (ع) وتعرف بآية التطهير؟",
+      "question_en": "Which verse in the Holy Quran was revealed about Ahlul Bayt (as) and is known as the Verse of Purification?",
+      "options": {
+        "A": {
+          "text_ar": "سورة الأحزاب، الآية 33",
+          "text_en": "Surah Al-Ahzab, Verse 33"
+        },
+        "B": {
+          "text_ar": "سورة الشورى، الآية 23",
+          "text_en": "Surah Ash-Shura, Verse 23"
+        },
+        "C": {
+          "text_ar": "سورة الإنسان، الآية 8",
+          "text_en": "Surah Al-Insan, Verse 8"
+        },
+        "D": {
+          "text_ar": "سورة المائدة، الآية 55",
+          "text_en": "Surah Al-Ma'idah, Verse 55"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_tathir_001",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "إنما يريد الله ليذهب عنكم الرجس أهل البيت ويطهركم تطهيراً، نزلت في علي وفاطمة والحسن والحسين (ع)",
+        "page_number": 387
+      },
+      "explanation_ar": "آية التطهير في سورة الأحزاب (33) نزلت في أهل الكساء: النبي محمد وعلي وفاطمة والحسن والحسين (ع)",
+      "explanation_en": "The Verse of Purification in Surah Al-Ahzab (33) was revealed about the People of the Cloak: Prophet Muhammad, Ali, Fatimah, Hasan, and Hussain (as)",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad", "imam_ali", "lady_fatimah", "imam_hasan", "imam_hussain"],
+      "topic_tags": ["quran", "beliefs", "ahl_al_bayt"]
+    },
+    "q_011": {
+      "id": "q_011",
+      "category": "imam_hasan",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "ما هو لقب الإمام الحسن المجتبى (ع)؟",
+      "question_en": "What is the title of Imam Hasan Al-Mujtaba (as)?",
+      "options": {
+        "A": {
+          "text_ar": "الزكي",
+          "text_en": "Al-Zaki"
+        },
+        "B": {
+          "text_ar": "المجتبى",
+          "text_en": "Al-Mujtaba (The Chosen)"
+        },
+        "C": {
+          "text_ar": "التقي",
+          "text_en": "Al-Taqi"
+        },
+        "D": {
+          "text_ar": "العسكري",
+          "text_en": "Al-Askari"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_imam_hasan_003",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "الحسن بن علي (ع) الملقب بالمجتبى، الإمام الثاني من أئمة أهل البيت",
+        "page_number": 198
+      },
+      "explanation_ar": "الإمام الحسن المجتبى (ع) هو الإمام الثاني من أئمة أهل البيت (ع) وابن الإمام علي (ع) والسيدة فاطمة (ع)",
+      "explanation_en": "Imam Hasan Al-Mujtaba (as) is the second Imam of Ahlul Bayt (as) and the son of Imam Ali (as) and Lady Fatimah (as)",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["imam_hasan"],
+      "topic_tags": ["masoomeen", "history"]
+    },
+    "q_012": {
+      "id": "q_012",
+      "category": "prophet_muhammad",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "في أي مدينة ولد النبي محمد (ص)؟",
+      "question_en": "In which city was Prophet Muhammad (pbuh) born?",
+      "options": {
+        "A": {
+          "text_ar": "المدينة المنورة",
+          "text_en": "Madinah"
+        },
+        "B": {
+          "text_ar": "مكة المكرمة",
+          "text_en": "Makkah"
+        },
+        "C": {
+          "text_ar": "الطائف",
+          "text_en": "Taif"
+        },
+        "D": {
+          "text_ar": "جدة",
+          "text_en": "Jeddah"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_sira_001",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "وُلد محمد بن عبد الله في مكة المكرمة",
+        "page_number": 12
+      },
+      "explanation_ar": "ولد النبي محمد (ص) في مكة المكرمة في عام الفيل",
+      "explanation_en": "Prophet Muhammad (pbuh) was born in Makkah in the Year of the Elephant",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["seerah", "history"]
+    },
+    "q_013": {
+      "id": "q_013",
+      "category": "islamic_history",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "من هو أول شهيد في الإسلام من الرجال؟",
+      "question_en": "Who was the first male martyr in Islam?",
+      "options": {
+        "A": {
+          "text_ar": "حمزة بن عبد المطلب",
+          "text_en": "Hamzah ibn Abdul Muttalib"
+        },
+        "B": {
+          "text_ar": "ياسر",
+          "text_en": "Yasir"
+        },
+        "C": {
+          "text_ar": "الحارث بن أبي هالة",
+          "text_en": "Al-Harith ibn Abi Halah"
+        },
+        "D": {
+          "text_ar": "مصعب بن عمير",
+          "text_en": "Mus'ab ibn Umair"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_martyrs_001",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "كان ياسر والد عمار بن ياسر أول شهيد في الإسلام من الرجال",
+        "page_number": 178
+      },
+      "explanation_ar": "ياسر والد عمار بن ياسر هو أول شهيد من الرجال في الإسلام، بينما كانت زوجته سمية أول شهيدة",
+      "explanation_en": "Yasir, the father of Ammar ibn Yasir, was the first male martyr in Islam, while his wife Sumayyah was the first female martyr",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": [],
+      "topic_tags": ["history", "martyrdom", "early_islam"]
+    },
+    "q_014": {
+      "id": "q_014",
+      "category": "imam_ali",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "كم عدد خطب الإمام علي (ع) المجموعة في نهج البلاغة؟",
+      "question_en": "How many sermons of Imam Ali (as) are collected in Nahj al-Balagha?",
+      "options": {
+        "A": {
+          "text_ar": "239 خطبة",
+          "text_en": "239 sermons"
+        },
+        "B": {
+          "text_ar": "241 خطبة",
+          "text_en": "241 sermons"
+        },
+        "C": {
+          "text_ar": "245 خطبة",
+          "text_en": "245 sermons"
+        },
+        "D": {
+          "text_ar": "252 خطبة",
+          "text_en": "252 sermons"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_nahjulbalagha_intro",
+        "book_id": "manaqib_ali",
+        "exact_quote_ar": "يحتوي نهج البلاغة على 239 خطبة للإمام علي (ع)",
+        "page_number": 5
+      },
+      "explanation_ar": "نهج البلاغة يحتوي على 239 خطبة، 79 رسالة، و480 حكمة وكلمة قصيرة للإمام علي (ع)",
+      "explanation_en": "Nahj al-Balagha contains 239 sermons, 79 letters, and 480 sayings and short words of Imam Ali (as)",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": ["imam_ali"],
+      "topic_tags": ["literature", "nahjul_balagha", "knowledge"]
+    },
+    "q_015": {
+      "id": "q_015",
+      "category": "imam_sajjad",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "ما اسم الكتاب المشهور للإمام علي بن الحسين زين العابدين (ع)؟",
+      "question_en": "What is the famous book of Imam Ali ibn Hussain Zayn al-Abidin (as)?",
+      "options": {
+        "A": {
+          "text_ar": "نهج البلاغة",
+          "text_en": "Nahj al-Balagha"
+        },
+        "B": {
+          "text_ar": "الصحيفة السجادية",
+          "text_en": "Al-Sahifa Al-Sajjadiyya"
+        },
+        "C": {
+          "text_ar": "مفاتيح الجنان",
+          "text_en": "Mafatih al-Jinan"
+        },
+        "D": {
+          "text_ar": "الكافي",
+          "text_en": "Al-Kafi"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_imam_sajjad_045",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "الصحيفة السجادية هي مجموعة أدعية الإمام علي بن الحسين السجاد (ع)",
+        "page_number": 267
+      },
+      "explanation_ar": "الصحيفة السجادية تحتوي على أدعية الإمام السجاد (ع) وتعتبر من أهم الكتب الدعائية في التراث الإسلامي",
+      "explanation_en": "Al-Sahifa Al-Sajjadiyya contains the supplications of Imam Al-Sajjad (as) and is considered one of the most important books of supplications in Islamic heritage",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["imam_sajjad"],
+      "topic_tags": ["literature", "supplications", "knowledge"]
+    },
+    "q_016": {
+      "id": "q_016",
+      "category": "battles",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "ما هي أول غزوة للمسلمين؟",
+      "question_en": "What was the first battle of the Muslims?",
+      "options": {
+        "A": {
+          "text_ar": "غزوة بدر",
+          "text_en": "Battle of Badr"
+        },
+        "B": {
+          "text_ar": "غزوة أحد",
+          "text_en": "Battle of Uhud"
+        },
+        "C": {
+          "text_ar": "غزوة الخندق",
+          "text_en": "Battle of the Trench"
+        },
+        "D": {
+          "text_ar": "غزوة حنين",
+          "text_en": "Battle of Hunayn"
+        }
+      },
+      "correct_answer": "A",
+      "source": {
+        "paragraph_id": "para_battles_012",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "كانت غزوة بدر أول معركة كبرى بين المسلمين والمشركين",
+        "page_number": 289
+      },
+      "explanation_ar": "غزوة بدر الكبرى هي أول معركة فاصلة في الإسلام، وقعت في السنة الثانية للهجرة",
+      "explanation_en": "The Battle of Badr was the first decisive battle in Islam, which took place in the second year of Hijra",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["history", "battles"]
+    },
+    "q_017": {
+      "id": "q_017",
+      "category": "imam_sadiq",
+      "difficulty": "intermediate",
+      "level_evaluation": "medium",
+      "question_ar": "ما هو لقب الإمام جعفر (ع)؟",
+      "question_en": "What is the title of Imam Ja'far (as)?",
+      "options": {
+        "A": {
+          "text_ar": "الباقر",
+          "text_en": "Al-Baqir"
+        },
+        "B": {
+          "text_ar": "الصادق",
+          "text_en": "Al-Sadiq (The Truthful)"
+        },
+        "C": {
+          "text_ar": "الكاظم",
+          "text_en": "Al-Kadhim"
+        },
+        "D": {
+          "text_ar": "الرضا",
+          "text_en": "Al-Ridha"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_imam_sadiq_001",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "الإمام جعفر بن محمد الصادق (ع) السادس من أئمة أهل البيت",
+        "page_number": 312
+      },
+      "explanation_ar": "الإمام جعفر الصادق (ع) هو الإمام السادس من أئمة أهل البيت، عُرف بعلمه الواسع وتأسيسه للمدرسة الفقهية",
+      "explanation_en": "Imam Ja'far Al-Sadiq (as) is the sixth Imam of Ahlul Bayt, known for his vast knowledge and founding of the jurisprudential school",
+      "points": 15,
+      "verified": true,
+      "masoom_tags": ["imam_sadiq"],
+      "topic_tags": ["masoomeen", "knowledge"]
+    },
+    "q_018": {
+      "id": "q_018",
+      "category": "hajj",
+      "difficulty": "advanced",
+      "level_evaluation": "hard",
+      "question_ar": "في أي سنة كانت حجة الوداع للنبي محمد (ص)؟",
+      "question_en": "In which year was the Farewell Pilgrimage of Prophet Muhammad (pbuh)?",
+      "options": {
+        "A": {
+          "text_ar": "السنة الثامنة للهجرة",
+          "text_en": "8th year of Hijra"
+        },
+        "B": {
+          "text_ar": "السنة التاسعة للهجرة",
+          "text_en": "9th year of Hijra"
+        },
+        "C": {
+          "text_ar": "السنة العاشرة للهجرة",
+          "text_en": "10th year of Hijra"
+        },
+        "D": {
+          "text_ar": "السنة الحادية عشرة للهجرة",
+          "text_en": "11th year of Hijra"
+        }
+      },
+      "correct_answer": "C",
+      "source": {
+        "paragraph_id": "para_hajj_farewell",
+        "book_id": "alsera_alnabaweya",
+        "exact_quote_ar": "حج رسول الله (ص) حجة الوداع في السنة العاشرة للهجرة",
+        "page_number": 512
+      },
+      "explanation_ar": "حجة الوداع كانت في السنة العاشرة للهجرة، وفيها أعلن النبي (ص) ولاية الإمام علي (ع) في غدير خم",
+      "explanation_en": "The Farewell Pilgrimage was in the 10th year of Hijra, during which the Prophet (pbuh) announced the succession of Imam Ali (as) at Ghadir Khumm",
+      "points": 20,
+      "verified": true,
+      "masoom_tags": ["prophet_muhammad"],
+      "topic_tags": ["history", "hajj", "seerah"]
+    },
+    "q_019": {
+      "id": "q_019",
+      "category": "quran",
+      "difficulty": "basic",
+      "level_evaluation": "easy",
+      "question_ar": "كم عدد سور القرآن الكريم؟",
+      "question_en": "How many chapters (surahs) are in the Holy Quran?",
+      "options": {
+        "A": {
+          "text_ar": "110 سورة",
+          "text_en": "110 chapters"
+        },
+        "B": {
+          "text_ar": "114 سورة",
+          "text_en": "114 chapters"
+        },
+        "C": {
+          "text_ar": "120 سورة",
+          "text_en": "120 chapters"
+        },
+        "D": {
+          "text_ar": "124 سورة",
+          "text_en": "124 chapters"
+        }
+      },
+      "correct_answer": "B",
+      "source": {
+        "paragraph_id": "para_quran_intro",
+        "book_id": "tafsir_quran",
+        "exact_quote_ar": "القرآن الكريم يتكون من 114 سورة",
+        "page_number": 1
+      },
+      "explanation_ar": "القرآن الكريم يحتوي على 114 سورة، تبدأ بسورة الفاتحة وتنتهي بسورة الناس",
+      "explanation_en": "The Holy Quran contains 114 chapters, beginning with Surah Al-Fatiha and ending with Surah Al-Nas",
+      "points": 10,
+      "verified": true,
+      "masoom_tags": [],
+      "topic_tags": ["quran", "basics"]
+    },
+    "q_020": {
+      "id": "q_020",
+      "category": "imam_kadhim",
+      "difficulty": "expert",
+      "level_evaluation": "very_hard",
+      "question_ar": "كم سنة قضى الإمام موسى الكاظم (ع) في سجون الطواغيت؟",
+      "question_en": "How many years did Imam Musa Al-Kadhim (as) spend in the prisons of tyrants?",
+      "options": {
+        "A": {
+          "text_ar": "10 سنوات",
+          "text_en": "10 years"
+        },
+        "B": {
+          "text_ar": "14 سنة",
+          "text_en": "14 years"
+        },
+        "C": {
+          "text_ar": "15 سنة",
+          "text_en": "15 years"
+        },
+        "D": {
+          "text_ar": "20 سنة",
+          "text_en": "20 years"
+        }
+      },
+      "correct_answer": "C",
+      "source": {
+        "paragraph_id": "para_imam_kadhim_prison",
+        "book_id": "manaqib_ahl_bayt",
+        "exact_quote_ar": "قضى الإمام موسى الكاظم (ع) خمسة عشر عاماً في سجون هارون الرشيد",
+        "page_number": 378
+      },
+      "explanation_ar": "سُجن الإمام الكاظم (ع) لمدة 15 عاماً في سجون هارون الرشيد، وأخيراً استشهد مسموماً في السجن",
+      "explanation_en": "Imam Al-Kadhim (as) was imprisoned for 15 years in the prisons of Harun al-Rashid, and was finally martyred by poison in prison",
+      "points": 25,
+      "verified": true,
+      "masoom_tags": ["imam_kadhim"],
+      "topic_tags": ["history", "martyrdom", "oppression"]
+    }
+  }
+}
