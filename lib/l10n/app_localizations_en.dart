@@ -395,6 +395,11 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String loginStreakMilestone(int count) {
+    return 'Alhamdulillah! You reached a $count-day login streak!';
+  }
+
+  @override
   String get topLearners => 'Top Learners';
 
   @override

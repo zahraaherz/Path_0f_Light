@@ -395,6 +395,11 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
+  String loginStreakMilestone(int count) {
+    return 'الحمد لله! لقد وصلت إلى سلسلة تسجيل دخول لمدة $count يوم!';
+  }
+
+  @override
   String get topLearners => 'أفضل المتعلمين';
 
   @override

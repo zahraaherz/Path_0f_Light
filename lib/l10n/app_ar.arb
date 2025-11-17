@@ -140,6 +140,7 @@
   "consecutiveDays": "أيام متتالية",
   "congratulations": "تهانينا!",
   "streakCelebration": "رائع! {count} أيام متتالية!",
+  "loginStreakMilestone": "الحمد لله! لقد وصلت إلى سلسلة تسجيل دخول لمدة {count} يوم!",
 
   "@_comment_leaderboard": "===== لوحة المتصدرين =====",
   "topLearners": "أفضل المتعلمين",

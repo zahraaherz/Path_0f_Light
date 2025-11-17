@@ -168,6 +168,14 @@
       }
     }
   },
+  "loginStreakMilestone": "Alhamdulillah! You reached a {count}-day login streak!",
+  "@loginStreakMilestone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
 
   "@_comment_leaderboard": "===== Leaderboard =====",
   "topLearners": "Top Learners",

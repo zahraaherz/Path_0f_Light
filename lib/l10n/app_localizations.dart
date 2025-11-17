@@ -854,6 +854,12 @@ abstract class AppLocalizations {
   /// **'You\'re on fire! {count} days in a row!'**
   String streakCelebration(int count);
 
+  /// No description provided for @loginStreakMilestone.
+  ///
+  /// In en, this message translates to:
+  /// **'Alhamdulillah! You reached a {count}-day login streak!'**
+  String loginStreakMilestone(int count);
+
   /// No description provided for @topLearners.
   ///
   /// In en, this message translates to:

@@ -61,13 +61,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           if (isMilestone) {
             Future.delayed(const Duration(milliseconds: 500), () {
               if (mounted) {
+                final l10n = AppLocalizations.of(context)!;
                 StreakCelebrationDialog.show(
                   context,
                   StreakCelebration(
                     type: StreakType.login,
                     streak: result.loginStreak,
                     isMilestone: true,
-                    message: 'Alhamdulillah! You reached a ${result.loginStreak}-day login streak!',
+                    message: l10n.loginStreakMilestone(result.loginStreak),
                     timestamp: DateTime.now(),
                   ),
                 );
