@@ -5,6 +5,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/energy/energy_config.dart';
 import '../../providers/energy_providers.dart';
 import '../../utils/responsive.dart';
+import '../premium/premium_screen.dart';
 
 class EnergyRefillScreen extends ConsumerStatefulWidget {
   const EnergyRefillScreen({super.key});
@@ -469,57 +470,10 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   void _showPremiumDialog() {
-    final r = context.responsive;
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Row(
-          children: [
-            Icon(Icons.workspace_premium, color: AppTheme.goldAccent),
-            SizedBox(width: r.spaceSmall),
-            Text('Premium Subscription'),
-          ],
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Upgrade to Premium for:',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: r.spaceSmall),
-            _buildBulletPoint('200 max energy (2x)'),
-            _buildBulletPoint('10 energy per hour (2x refill speed)'),
-            _buildBulletPoint('No ads required'),
-            _buildBulletPoint('Exclusive badges'),
-            SizedBox(height: r.spaceMedium),
-            Text(
-              'Payment integration coming soon!',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-                color: AppTheme.textSecondary,
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text('Cancel'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Payment integration coming soon!'),
-                ),
-              );
-            },
-            child: Text('Upgrade'),
-          ),
-        ],
+    // Navigate to the premium screen
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const PremiumScreen(),
       ),
     );
   }
