@@ -32,7 +32,8 @@ class CollectionRepository {
   /// Get all collection items for current user
   Future<List<CollectionItem>> getUserCollectionItems() async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -54,7 +55,8 @@ class CollectionRepository {
   Future<List<CollectionItem>> getCollectionItemsByCategory(
       CollectionCategory category) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -78,7 +80,8 @@ class CollectionRepository {
   Future<List<CollectionItem>> getCollectionItemsByType(
       CollectionItemType type) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -100,7 +103,8 @@ class CollectionRepository {
   /// Get favorite collection items
   Future<List<CollectionItem>> getFavoriteCollectionItems() async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -122,7 +126,8 @@ class CollectionRepository {
   /// Get recently accessed collection items
   Future<List<CollectionItem>> getRecentlyAccessedItems({int limit = 10}) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -144,7 +149,8 @@ class CollectionRepository {
   /// Search collection items
   Future<List<CollectionItem>> searchCollectionItems(String query) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -285,7 +291,8 @@ class CollectionRepository {
   /// Get all reminders for a collection item
   Future<List<Reminder>> getRemindersForItem(String collectionItemId) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -307,7 +314,8 @@ class CollectionRepository {
   /// Get all active reminders for the user
   Future<List<Reminder>> getActiveReminders() async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -415,7 +423,8 @@ class CollectionRepository {
   /// Get habit tracker for a collection item
   Future<HabitTracker?> getHabitTrackerForItem(String collectionItemId) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return null for unauthenticated users
+      return null;
     }
 
     try {
@@ -437,7 +446,8 @@ class CollectionRepository {
   /// Get all habit trackers for the user
   Future<List<HabitTracker>> getAllHabitTrackers() async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -581,7 +591,8 @@ class CollectionRepository {
   /// Get checklist items for a specific date
   Future<List<ChecklistItem>> getChecklistItemsForDate(String date) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty list for unauthenticated users
+      return [];
     }
 
     try {
@@ -655,7 +666,12 @@ class CollectionRepository {
   Future<Map<String, dynamic>> getCompletionStats(
       DateTime startDate, DateTime endDate) async {
     if (_currentUserId == null) {
-      throw Exception('User must be logged in');
+      // Return empty stats for unauthenticated users
+      return {
+        'total_items': 0,
+        'completed_items': 0,
+        'completion_rate': 0.0,
+      };
     }
 
     try {
