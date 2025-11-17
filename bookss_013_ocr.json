@@ -5,7 +5,7 @@
     "title_en": "Continuation in the Histories of the Imams",
     "author_ar": "السيد تاج الدين بن علي بن أحمد الحسيني العاملي",
     "author_en": "Sayyid Taj al-Din ibn Ali ibn Ahmad al-Husayni al-Amili",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "تاريخ",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 201,
+    "total_characters": 400,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_013_section_001",
+      "book_id": "bookss_013",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 400,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

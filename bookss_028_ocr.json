@@ -5,7 +5,7 @@
     "title_en": "Revealing the Obscurity in Knowing the Imams - Vol 1",
     "author_ar": "أبي الحسن علي بن عيسى بن أبي الفتح الأربلي",
     "author_en": "Abi al-Hasan Ali ibn Isa ibn Abi al-Fath al-Arbali",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "سيرة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 617,
+    "total_characters": 1232,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_028_section_001",
+      "book_id": "bookss_028",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 1232,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

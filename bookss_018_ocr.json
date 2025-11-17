@@ -5,7 +5,7 @@
     "title_en": "The Political History of Imam Ali ibn Abi Talib",
     "author_ar": "عبدالله بن علي رستم",
     "author_en": "Abdullah ibn Ali Rustam",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "تاريخ",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 116,
+    "total_characters": 230,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_018_section_001",
+      "book_id": "bookss_018",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 230,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

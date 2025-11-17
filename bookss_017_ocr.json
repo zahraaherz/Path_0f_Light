@@ -5,7 +5,7 @@
     "title_en": "The Grand Encyclopedia of Ahlul Bayt - Imam Ali ibn Abi Talib",
     "author_ar": "الشيخ مهدي خليل جعفر",
     "author_en": "Sheikh Mahdi Khalil Ja'far",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "موسوعة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 328,
+    "total_characters": 654,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_017_section_001",
+      "book_id": "bookss_017",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 654,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

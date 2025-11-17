@@ -5,7 +5,7 @@
     "title_en": "Arrangement of Pearls of the Two Strings on the Virtues of al-Mustafa, al-Murtada, al-Batul and the Two Grandsons",
     "author_ar": "جمال الدين محمد بن محمد الزرندي الحنفي",
     "author_en": "Jamal al-Din Muhammad ibn Muhammad al-Zarandi al-Hanafi",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "فضائل",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 327,
+    "total_characters": 652,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_034_section_001",
+      "book_id": "bookss_034",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 652,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

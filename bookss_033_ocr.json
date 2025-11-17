@@ -5,7 +5,7 @@
     "title_en": "The Delight of Sights and the Beauties of Traditions",
     "author_ar": "أبي الحسن علي بن مهدي الطبري المامطيري",
     "author_en": "Abi al-Hasan Ali ibn Mahdi al-Tabari al-Mamtiri",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "سيرة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 544,
+    "total_characters": 1086,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_033_section_001",
+      "book_id": "bookss_033",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 1086,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

@@ -5,7 +5,7 @@
     "title_en": "Ali ibn Abi Talib - The Gate of the City of Knowledge",
     "author_ar": "حسنين رعد حمزة شكيّر الدجيلي",
     "author_en": "Husaynin Ra'd Hamza Shakir al-Dujayli",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "فضائل",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 175,
+    "total_characters": 348,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_022_section_001",
+      "book_id": "bookss_022",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 348,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

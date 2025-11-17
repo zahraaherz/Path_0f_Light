@@ -5,7 +5,7 @@
     "title_en": "The Mother of the Prophet (s), Sublimity of Meaning in Sublimity of Essence",
     "author_ar": "حسين علي المصطفى",
     "author_en": "Hussein Ali al-Mustafa",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "سيرة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 146,
+    "total_characters": 290,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_004_section_001",
+      "book_id": "bookss_004",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 290,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

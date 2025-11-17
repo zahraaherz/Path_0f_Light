@@ -5,7 +5,7 @@
     "title_en": "The Slain of Tears on the Virtue of Weeping and Holding Mourning for the Martyr",
     "author_ar": "السيد محمد حسين ميرباقري",
     "author_en": "Sayyid Muhammad Hussein Mirbaqiri",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "مقتل",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 595,
+    "total_characters": 1188,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_026_section_001",
+      "book_id": "bookss_026",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 1188,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

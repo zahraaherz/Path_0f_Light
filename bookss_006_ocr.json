@@ -5,7 +5,7 @@
     "title_en": "The Imam's Week (Collection of Lectures)",
     "author_ar": "المجمع الثقافي الديني",
     "author_en": "Religious Cultural Assembly",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "ثقافة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 241,
+    "total_characters": 480,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_006_section_001",
+      "book_id": "bookss_006",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 480,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

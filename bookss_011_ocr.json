@@ -5,7 +5,7 @@
     "title_en": "Imam Ali ibn Abi Talib the Knight and His Battles",
     "author_ar": "الدكتور طلعت نوري علي بيرقدار",
     "author_en": "Dr. Tal'at Nuri Ali Bairaqdar",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "تاريخ",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 133,
+    "total_characters": 264,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_011_section_001",
+      "book_id": "bookss_011",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 264,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

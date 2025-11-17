@@ -5,7 +5,7 @@
     "title_en": "The Death of Imam al-Ridha",
     "author_ar": "الشيخ أحمد بن الشيخ صالح إبن طعّان القديحي القطيفي",
     "author_en": "Sheikh Ahmad ibn Sheikh Salih ibn Ta'an al-Qudayhi al-Qatifi",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "تاريخ",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 89,
+    "total_characters": 176,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_035_section_001",
+      "book_id": "bookss_035",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 176,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

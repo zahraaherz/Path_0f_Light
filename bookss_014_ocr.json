@@ -5,7 +5,7 @@
     "title_en": "The Clear Truth in the Judgments of Amir al-Mu'minin Ali ibn Abi Talib",
     "author_ar": "الشيخ حسين علي الشفائي المازندراني",
     "author_en": "Sheikh Hussein Ali al-Shafa'i al-Mazandarani",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "فقه",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 128,
+    "total_characters": 254,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_014_section_001",
+      "book_id": "bookss_014",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 254,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

@@ -5,7 +5,7 @@
     "title_en": "Proving the Guides through Texts and Miracles (Specific to Imam al-Ridha)",
     "author_ar": "الشيخ محمد بن الحسن الحرّ العاملي",
     "author_en": "Sheikh Muhammad ibn al-Hassan al-Hurr al-Amili",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -22,11 +22,22 @@
     ],
     "category": "عقائد",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 203,
+    "total_characters": 404,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_005_section_001",
+      "book_id": "bookss_005",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 404,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

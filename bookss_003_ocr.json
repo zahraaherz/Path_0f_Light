@@ -5,7 +5,7 @@
     "title_en": "Lights on the Life of Imam Ali (as)",
     "author_ar": "السيد مرتضى الحسيني الشيرازي",
     "author_en": "Sayyid Murtadha al-Husayni al-Shirazi",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "سيرة",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 98,
+    "total_characters": 194,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_low_content"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_003_section_001",
+      "book_id": "bookss_003",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 194,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }

@@ -5,7 +5,7 @@
     "title_en": "Ali (as) in the Commitment to Truth",
     "author_ar": "ضياء الدين زين الدين",
     "author_en": "Diya' al-Din Zayn al-Din",
-    "total_sections": 0,
+    "total_sections": 1,
     "total_paragraphs": 0,
     "language": "ar",
     "pdf_url": "",
@@ -21,11 +21,22 @@
     ],
     "category": "أخلاق",
     "processing_status": "completed",
-    "total_pages": 0,
-    "total_characters": 0,
+    "total_pages": 525,
+    "total_characters": 1048,
     "total_words": 0,
-    "extraction_method": "ocr_space_api"
+    "extraction_method": "pymupdf_text_extraction"
   },
-  "sections": [],
+  "sections": [
+    {
+      "section_id": "bookss_021_section_001",
+      "book_id": "bookss_021",
+      "section_number": 1,
+      "title_ar": "القسم 1",
+      "title_en": "Part 1",
+      "startPosition": 0,
+      "endPosition": 1048,
+      "estimated_page": 0
+    }
+  ],
   "paragraphs": []
 }
