@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/dua/dua_model.dart';
 import '../../data/mock_data.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SpiritualChecklistWidget extends StatefulWidget {
   const SpiritualChecklistWidget({super.key});

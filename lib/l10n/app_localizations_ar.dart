@@ -565,10 +565,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get duaOfTheDay => 'دعاء اليوم';
 
   @override
+  String get dailyDuas => 'الأدعية اليومية';
+
+  @override
   String get spiritualGoals => 'الأهداف الروحية';
 
   @override
   String get dailyChecklist => 'قائمة المهام اليومية';
+
+  @override
+  String get dailySpiritualChecklist => 'قائمة المهام الروحية اليومية';
 
   @override
   String get reciteQuran => 'تلاوة القرآن';
@@ -623,6 +629,56 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get bismillahTranslation => 'بسم الله الرحمن الرحيم';
+
+  @override
+  String get islamicEvents => 'المناسبات الإسلامية';
+
+  @override
+  String get upcomingEvents => 'المناسبات القادمة';
+
+  @override
+  String get nextPrayer => 'الصلاة القادمة';
+
+  @override
+  String get unableToLoadPrayerTimes => 'تعذر تحميل أوقات الصلاة';
+
+  @override
+  String get checkLocationPermissions => 'يرجى التحقق من أذونات الموقع';
+
+  @override
+  String get arabicText => 'النص العربي';
+
+  @override
+  String get transliteration => 'النقحرة';
+
+  @override
+  String get translation => 'الترجمة';
+
+  @override
+  String get meaning => 'المعنى';
+
+  @override
+  String get tafsir => 'التفسير';
+
+  @override
+  String get benefits => 'الفوائد';
+
+  @override
+  String get playAudio => 'تشغيل الصوت';
+
+  @override
+  String get addToFavorites => 'إضافة إلى المفضلة';
+
+  @override
+  String get removeFromFavorites => 'إزالة من المفضلة';
+
+  @override
+  String completedTasks(int completed, int total) {
+    return 'تم إكمال $completed من $total';
+  }
+
+  @override
+  String get minutes => 'دقيقة';
 
   @override
   String get pathOfLight => 'طريق النور';

@@ -1190,6 +1190,12 @@ abstract class AppLocalizations {
   /// **'Du\'a of the Day'**
   String get duaOfTheDay;
 
+  /// No description provided for @dailyDuas.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Du\'as'**
+  String get dailyDuas;
+
   /// No description provided for @spiritualGoals.
   ///
   /// In en, this message translates to:
@@ -1201,6 +1207,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Daily Checklist'**
   String get dailyChecklist;
+
+  /// No description provided for @dailySpiritualChecklist.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Spiritual Checklist'**
+  String get dailySpiritualChecklist;
 
   /// No description provided for @reciteQuran.
   ///
@@ -1309,6 +1321,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'In the name of Allah, the Most Gracious, the Most Merciful'**
   String get bismillahTranslation;
+
+  /// No description provided for @islamicEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Islamic Events'**
+  String get islamicEvents;
+
+  /// No description provided for @upcomingEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'Upcoming Events'**
+  String get upcomingEvents;
+
+  /// No description provided for @nextPrayer.
+  ///
+  /// In en, this message translates to:
+  /// **'Next prayer'**
+  String get nextPrayer;
+
+  /// No description provided for @unableToLoadPrayerTimes.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to load prayer times'**
+  String get unableToLoadPrayerTimes;
+
+  /// No description provided for @checkLocationPermissions.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check location permissions'**
+  String get checkLocationPermissions;
+
+  /// No description provided for @arabicText.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic Text'**
+  String get arabicText;
+
+  /// No description provided for @transliteration.
+  ///
+  /// In en, this message translates to:
+  /// **'Transliteration'**
+  String get transliteration;
+
+  /// No description provided for @translation.
+  ///
+  /// In en, this message translates to:
+  /// **'Translation'**
+  String get translation;
+
+  /// No description provided for @meaning.
+  ///
+  /// In en, this message translates to:
+  /// **'Meaning'**
+  String get meaning;
+
+  /// No description provided for @tafsir.
+  ///
+  /// In en, this message translates to:
+  /// **'Tafsir'**
+  String get tafsir;
+
+  /// No description provided for @benefits.
+  ///
+  /// In en, this message translates to:
+  /// **'Benefits'**
+  String get benefits;
+
+  /// No description provided for @playAudio.
+  ///
+  /// In en, this message translates to:
+  /// **'Play Audio'**
+  String get playAudio;
+
+  /// No description provided for @addToFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Favorites'**
+  String get addToFavorites;
+
+  /// No description provided for @removeFromFavorites.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove from Favorites'**
+  String get removeFromFavorites;
+
+  /// No description provided for @completedTasks.
+  ///
+  /// In en, this message translates to:
+  /// **'{completed} of {total} completed'**
+  String completedTasks(int completed, int total);
+
+  /// No description provided for @minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'min'**
+  String get minutes;
 
   /// No description provided for @pathOfLight.
   ///

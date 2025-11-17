@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/prayer/prayer_times_model.dart';
 import '../../providers/prayer_providers.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PrayerTimesWidget extends ConsumerWidget {
   const PrayerTimesWidget({super.key});
