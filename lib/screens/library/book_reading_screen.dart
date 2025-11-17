@@ -5,6 +5,7 @@ import '../../models/library/book.dart';
 import '../../models/library/paragraph.dart';
 import '../../repositories/library_repository.dart';
 import 'book_reader_screen.dart';
+import '../../utils/responsive.dart';
 
 /// Screen for loading book content and navigating to the reader
 class BookReadingScreen extends ConsumerStatefulWidget {
@@ -94,14 +95,15 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.bookTitle ?? 'Loading Book...'),
         backgroundColor: AppTheme.primaryTeal,
         iconTheme: const IconThemeData(color: Colors.white),
-        titleTextStyle: const TextStyle(
+        titleTextStyle: TextStyle(
           color: Colors.white,
-          fontSize: 18,
+          fontSize: r.fontLarge,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -110,12 +112,13 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
   }
 
   Widget _buildBody() {
+    final r = context.responsive;
     if (_isLoading) {
-      return _buildLoadingState();
+      return _buildLoadingState(r);
     }
 
     if (_errorMessage != null) {
-      return _buildErrorState();
+      return _buildErrorState(r);
     }
 
     // This should rarely be shown as we navigate away immediately
@@ -124,15 +127,15 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
     );
   }
 
-  Widget _buildLoadingState() {
+  Widget _buildLoadingState(Responsive r) {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Islamic pattern decoration
           Container(
-            width: 120,
-            height: 120,
+            width: r.iconXLarge * 2,
+            height: r.iconXLarge * 2,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -151,7 +154,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
               ),
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: r.spaceLarge + 8),
 
           // Loading text
           Text(
@@ -161,7 +164,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                   color: AppTheme.primaryTeal,
                 ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: r.paddingSmall),
 
           Text(
             widget.bookTitle ?? '',
@@ -170,24 +173,27 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                 ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 24),
+          SizedBox(height: r.spaceLarge),
 
           // Progress steps
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
+            padding: EdgeInsets.symmetric(horizontal: r.paddingLarge + 16),
             child: Column(
               children: [
                 _buildLoadingStep(
+                  r,
                   'Loading book information',
                   _book != null,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: r.paddingSmall),
                 _buildLoadingStep(
+                  r,
                   'Loading content',
                   _paragraphs != null,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: r.paddingSmall),
                 _buildLoadingStep(
+                  r,
                   'Preparing reader',
                   false,
                 ),
@@ -199,21 +205,21 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
     );
   }
 
-  Widget _buildLoadingStep(String text, bool completed) {
+  Widget _buildLoadingStep(Responsive r, String text, bool completed) {
     return Row(
       children: [
         Icon(
           completed ? Icons.check_circle : Icons.circle_outlined,
           color: completed ? AppTheme.success : AppTheme.textSecondary,
-          size: 20,
+          size: r.iconSmall,
         ),
-        const SizedBox(width: 12),
+        SizedBox(width: r.paddingSmall),
         Expanded(
           child: Text(
             text,
             style: TextStyle(
               color: completed ? AppTheme.success : AppTheme.textSecondary,
-              fontSize: 14,
+              fontSize: r.fontMedium,
             ),
           ),
         ),
@@ -221,28 +227,28 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
     );
   }
 
-  Widget _buildErrorState() {
+  Widget _buildErrorState(Responsive r) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: EdgeInsets.all(r.paddingLarge),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Error icon
             Container(
-              width: 100,
-              height: 100,
+              width: r.iconXLarge + 36,
+              height: r.iconXLarge + 36,
               decoration: BoxDecoration(
                 color: AppTheme.error.withOpacity(0.1),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.error_outline,
-                size: 60,
+                size: r.iconXLarge,
                 color: AppTheme.error,
               ),
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Error title
             Text(
@@ -252,7 +258,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                     color: AppTheme.error,
                   ),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.paddingSmall),
 
             // Error message
             Text(
@@ -262,7 +268,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                   ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 32),
+            SizedBox(height: r.spaceLarge + 8),
 
             // Action buttons
             Row(
@@ -277,7 +283,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                     side: const BorderSide(color: AppTheme.primaryTeal),
                   ),
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: r.spaceMedium),
                 ElevatedButton.icon(
                   onPressed: _loadBookContent,
                   icon: const Icon(Icons.refresh),

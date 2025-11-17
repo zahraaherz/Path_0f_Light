@@ -3,6 +3,7 @@ import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/language_providers.dart';
+import '../../providers/theme_providers.dart';
 import '../../providers/auth_controller.dart';
 import '../../l10n/app_localizations.dart' as app_l10n;
 
@@ -55,18 +56,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
               const Divider(),
 
-              // Theme (placeholder for future dark mode toggle)
+              // Theme switcher
               ListTile(
                 leading: const Icon(Icons.palette, color: AppTheme.primaryTeal),
                 title: Text(l10n.theme),
-                subtitle: Text(l10n.lightMode),
+                subtitle: Text(_getThemeDisplayName(ref.watch(themeProvider))),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () {
-                  // TODO: Implement theme switcher
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(l10n.comingSoon)),
-                  );
-                },
+                onTap: () => _showThemeDialog(context),
               ),
             ],
           ),
@@ -300,6 +296,66 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               onChanged: (value) {
                 if (value != null) {
                   ref.read(languageProvider.notifier).setLanguage(value);
+                  Navigator.pop(context);
+                }
+              },
+            );
+          }).toList(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l10n.cancel),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Get theme display name
+  String _getThemeDisplayName(AppThemeMode themeMode) {
+    return themeMode.displayName;
+  }
+
+  /// Show theme selection dialog
+  void _showThemeDialog(BuildContext context) {
+    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
+    final currentTheme = ref.read(themeProvider);
+
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(l10n.theme),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: AppThemeMode.values.map((themeMode) {
+            IconData icon;
+            switch (themeMode) {
+              case AppThemeMode.light:
+                icon = Icons.light_mode;
+                break;
+              case AppThemeMode.dark:
+                icon = Icons.dark_mode;
+                break;
+              case AppThemeMode.system:
+                icon = Icons.brightness_auto;
+                break;
+            }
+
+            return RadioListTile<AppThemeMode>(
+              title: Row(
+                children: [
+                  Icon(icon, size: 20, color: AppTheme.primaryTeal),
+                  const SizedBox(width: 8),
+                  Text(themeMode.displayName),
+                ],
+              ),
+              value: themeMode,
+              groupValue: currentTheme,
+              activeColor: AppTheme.primaryTeal,
+              onChanged: (value) {
+                if (value != null) {
+                  ref.read(themeProvider.notifier).setTheme(value);
                   Navigator.pop(context);
                 }
               },

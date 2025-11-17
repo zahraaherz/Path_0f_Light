@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 
 class IslamicContentComponent extends StatefulWidget {
   const IslamicContentComponent({Key? key}) : super(key: key);
@@ -46,13 +47,14 @@ class _IslamicContentComponentState extends State<IslamicContentComponent> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final content = _islamicContent[_currentContentIndex];
 
     return Card(
-      margin: const EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(r.paddingSmall),
       elevation: 4.0,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -61,14 +63,14 @@ class _IslamicContentComponentState extends State<IslamicContentComponent> {
               children: [
                 Text(
                   content['type'] ?? '',
-                  style: const TextStyle(
-                    fontSize: 18,
+                  style: TextStyle(
+                    fontSize: r.fontLarge,
                     fontWeight: FontWeight.bold,
                     color: Colors.green,
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.refresh),
+                  icon: Icon(Icons.refresh, size: r.iconMedium),
                   onPressed: _nextContent,
                   tooltip: 'Next',
                 ),
@@ -82,15 +84,15 @@ class _IslamicContentComponentState extends State<IslamicContentComponent> {
                     // Arabic content
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.all(16.0),
+                      padding: EdgeInsets.all(r.paddingMedium),
                       decoration: BoxDecoration(
                         color: Theme.of(context).colorScheme.background,
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(r.radiusSmall),
                       ),
                       child: Text(
                         content['content'] ?? '',
-                        style: const TextStyle(
-                          fontSize: 22,
+                        style: TextStyle(
+                          fontSize: r.fontXLarge,
                           fontFamily: 'Amiri',
                           height: 1.5,
                         ),
@@ -98,22 +100,22 @@ class _IslamicContentComponentState extends State<IslamicContentComponent> {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: r.spaceMedium),
                     // Translation
                     Text(
                       content['translation'] ?? '',
-                      style: const TextStyle(
-                        fontSize: 16,
+                      style: TextStyle(
+                        fontSize: r.fontMedium,
                         fontStyle: FontStyle.italic,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: r.spaceMedium),
                     // Source
                     Text(
                       'Source: ${content['source']}',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: r.fontMedium,
                         color: Colors.grey[600],
                       ),
                       textAlign: TextAlign.end,
@@ -135,6 +137,7 @@ class PrayerTimesComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     // Prayer times (static for demo)
     final Map<String, String> prayerTimes = {
       'Fajr': '04:15',
@@ -146,17 +149,17 @@ class PrayerTimesComponent extends StatelessWidget {
     };
 
     return Card(
-      margin: const EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(r.paddingSmall),
       elevation: 4.0,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Shia Prayer Times',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: r.fontLarge,
                 fontWeight: FontWeight.bold,
                 color: Colors.green,
               ),
@@ -183,11 +186,11 @@ class PrayerTimesComponent extends StatelessWidget {
                                   now.hour < int.parse(prayerTimes.values.elementAt(index + 1).split(':')[0])));
 
                   return Container(
-                    margin: const EdgeInsets.symmetric(vertical: 4.0),
-                    padding: const EdgeInsets.all(12.0),
+                    margin: EdgeInsets.symmetric(vertical: r.spaceSmall / 2),
+                    padding: EdgeInsets.all(r.paddingSmall),
                     decoration: BoxDecoration(
                       color: isCurrentPrayer ? Colors.green.withOpacity(0.2) : Theme.of(context).colorScheme.surface,
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(r.radiusSmall),
                       border: isCurrentPrayer
                           ? Border.all(color: Colors.green, width: 2.0)
                           : null,
@@ -200,13 +203,13 @@ class PrayerTimesComponent extends StatelessWidget {
                             Icon(
                               Icons.access_time,
                               color: isCurrentPrayer ? Colors.green : Colors.grey,
-                              size: 20,
+                              size: r.iconSmall,
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: r.spaceSmall),
                             Text(
                               prayerName,
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: r.fontMedium,
                                 fontWeight: isCurrentPrayer ? FontWeight.bold : FontWeight.normal,
                               ),
                             ),
@@ -215,7 +218,7 @@ class PrayerTimesComponent extends StatelessWidget {
                         Text(
                           prayerTime,
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: r.fontMedium,
                             fontWeight: isCurrentPrayer ? FontWeight.bold : FontWeight.normal,
                           ),
                         ),

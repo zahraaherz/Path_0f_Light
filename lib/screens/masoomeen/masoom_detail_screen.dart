@@ -4,6 +4,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/masoomeen/masoom_model.dart';
 import '../../providers/quiz_providers.dart';
 import '../quiz/quiz_question_screen.dart';
+import '../../utils/responsive.dart';
 
 class MasoomDetailScreen extends ConsumerWidget {
   final Masoom masoom;
@@ -20,6 +21,7 @@ class MasoomDetailScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final color = _getOrderColor(masoom.order);
 
     return Scaffold(
@@ -31,27 +33,27 @@ class MasoomDetailScreen extends ConsumerWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(r.paddingLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // Header Card
             Container(
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(r.paddingLarge),
               decoration: BoxDecoration(
                 color: color.withOpacity(0.05),
                 border: Border.all(
                   color: color.withOpacity(0.3),
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Column(
                 children: [
                   // Order badge
                   Container(
-                    width: 64,
-                    height: 64,
+                    width: r.iconXLarge,
+                    height: r.iconXLarge,
                     decoration: BoxDecoration(
                       color: color.withOpacity(0.1),
                       border: Border.all(
@@ -64,7 +66,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                       child: Text(
                         '${masoom.order}',
                         style: TextStyle(
-                          fontSize: 28,
+                          fontSize: r.fontXLarge + 4,
                           fontWeight: FontWeight.bold,
                           color: color,
                         ),
@@ -72,7 +74,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                     ),
                   ),
 
-                  const SizedBox(height: 16),
+                  SizedBox(height: r.spaceMedium),
 
                   // Arabic name
                   Text(
@@ -84,7 +86,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                     textAlign: TextAlign.center,
                   ),
 
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
 
                   // English name
                   Text(
@@ -95,7 +97,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                     textAlign: TextAlign.center,
                   ),
 
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
 
                   // Titles
                   Text(
@@ -106,7 +108,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                     textAlign: TextAlign.center,
                   ),
 
-                  const SizedBox(height: 4),
+                  SizedBox(height: r.spaceSmall / 2),
 
                   Text(
                     masoom.title,
@@ -120,10 +122,11 @@ class MasoomDetailScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Biography
             _SectionCard(
+              r: r,
               title: 'Biography',
               color: color,
               child: Text(
@@ -134,30 +137,34 @@ class MasoomDetailScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
 
             // Life Details
             _SectionCard(
+              r: r,
               title: 'Life Details',
               color: color,
               child: Column(
                 children: [
                   _InfoRow(
+                    r: r,
                     icon: Icons.location_on_outlined,
                     label: 'Birth Place',
                     value: masoom.birthPlace,
                     color: color,
                   ),
-                  const Divider(height: 20),
+                  Divider(height: r.paddingLarge),
                   _InfoRow(
+                    r: r,
                     icon: Icons.calendar_today_outlined,
                     label: 'Birth Date',
                     value: masoom.birthDate,
                     color: color,
                   ),
                   if (masoom.deathPlace != null) ...[
-                    const Divider(height: 20),
+                    Divider(height: r.paddingLarge),
                     _InfoRow(
+                      r: r,
                       icon: Icons.location_on_outlined,
                       label: 'Place of Martyrdom',
                       value: masoom.deathPlace!,
@@ -165,8 +172,9 @@ class MasoomDetailScreen extends ConsumerWidget {
                     ),
                   ],
                   if (masoom.deathDate != null) ...[
-                    const Divider(height: 20),
+                    Divider(height: r.paddingLarge),
                     _InfoRow(
+                      r: r,
                       icon: Icons.calendar_today_outlined,
                       label: 'Date of Martyrdom',
                       value: masoom.deathDate!,
@@ -177,22 +185,23 @@ class MasoomDetailScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
 
             // Notable Events
             _SectionCard(
+              r: r,
               title: 'Notable Events',
               color: color,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: masoom.notableEvents.map((event) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
+                    padding: EdgeInsets.only(bottom: r.spaceSmall),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: r.spaceSmall / 1.5),
                           width: 6,
                           height: 6,
                           decoration: BoxDecoration(
@@ -200,7 +209,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                             shape: BoxShape.circle,
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        SizedBox(width: r.paddingSmall),
                         Expanded(
                           child: Text(
                             event,
@@ -214,22 +223,23 @@ class MasoomDetailScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
 
             // Teachings
             _SectionCard(
+              r: r,
               title: 'Key Teachings',
               color: color,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: masoom.teachings.map((teaching) {
                   return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
+                    padding: EdgeInsets.only(bottom: r.spaceSmall),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(top: 6),
+                          margin: EdgeInsets.only(top: r.spaceSmall / 1.5),
                           width: 6,
                           height: 6,
                           decoration: BoxDecoration(
@@ -237,7 +247,7 @@ class MasoomDetailScreen extends ConsumerWidget {
                             shape: BoxShape.circle,
                           ),
                         ),
-                        const SizedBox(width: 12),
+                        SizedBox(width: r.paddingSmall),
                         Expanded(
                           child: Text(
                             teaching,
@@ -251,29 +261,29 @@ class MasoomDetailScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: r.spaceLarge + 8),
 
             // Start Quiz Button
             SizedBox(
-              height: 52,
+              height: r.iconLarge + 4,
               child: ElevatedButton.icon(
                 onPressed: () => _startMasoomQuiz(context, ref),
-                icon: const Icon(Icons.quiz),
+                icon: Icon(Icons.quiz, size: r.iconMedium),
                 label: Text(
                   'Start Quiz (${masoom.quizCount} available)',
-                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: r.fontMedium, fontWeight: FontWeight.bold),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: color,
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(r.radiusMedium),
                   ),
                 ),
               ),
             ),
 
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
           ],
         ),
       ),
@@ -307,11 +317,13 @@ class MasoomDetailScreen extends ConsumerWidget {
 }
 
 class _SectionCard extends StatelessWidget {
+  final Responsive r;
   final String title;
   final Widget child;
   final Color color;
 
   const _SectionCard({
+    required this.r,
     required this.title,
     required this.child,
     required this.color,
@@ -320,13 +332,13 @@ class _SectionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(r.paddingLarge),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey.shade300,
           width: 1,
         ),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -338,7 +350,7 @@ class _SectionCard extends StatelessWidget {
                   color: color,
                 ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: r.paddingSmall),
           child,
         ],
       ),
@@ -347,12 +359,14 @@ class _SectionCard extends StatelessWidget {
 }
 
 class _InfoRow extends StatelessWidget {
+  final Responsive r;
   final IconData icon;
   final String label;
   final String value;
   final Color color;
 
   const _InfoRow({
+    required this.r,
     required this.icon,
     required this.label,
     required this.value,
@@ -364,18 +378,18 @@ class _InfoRow extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: const EdgeInsets.all(8),
+          padding: EdgeInsets.all(r.spaceSmall),
           decoration: BoxDecoration(
             color: color.withOpacity(0.1),
             border: Border.all(
               color: color.withOpacity(0.3),
               width: 1,
             ),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(r.radiusSmall),
           ),
-          child: Icon(icon, color: color, size: 18),
+          child: Icon(icon, color: color, size: r.fontLarge),
         ),
-        const SizedBox(width: 12),
+        SizedBox(width: r.paddingSmall),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -386,7 +400,7 @@ class _InfoRow extends StatelessWidget {
                       color: AppTheme.textSecondary,
                     ),
               ),
-              const SizedBox(height: 2),
+              SizedBox(height: r.spaceSmall / 4),
               Text(
                 value,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(

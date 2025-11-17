@@ -3,19 +3,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/streak_providers.dart';
 import '../../widgets/streak_display.dart';
+import '../../utils/responsive.dart';
 
 class StreakDetailsScreen extends ConsumerWidget {
   const StreakDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final loginStreak = ref.watch(currentLoginStreakProvider);
     final longestLoginStreak = ref.watch(longestLoginStreakProvider);
     final quizStreak = ref.watch(currentQuizStreakProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Streak Statistics'),
+        title: Text('Streak Statistics'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -24,7 +26,7 @@ class StreakDetailsScreen extends ConsumerWidget {
           children: [
             // Header
             Container(
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(r.paddingLarge),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
@@ -34,26 +36,26 @@ class StreakDetailsScreen extends ConsumerWidget {
               ),
               child: Column(
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.local_fire_department,
-                    size: 80,
+                    size: r.iconLarge * 2.5,
                     color: AppTheme.goldAccent,
                   ),
-                  const SizedBox(height: 16),
-                  const Text(
+                  SizedBox(height: r.spaceMedium),
+                  Text(
                     'Keep Your Streak Alive!',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: r.fontLarge * 1.2,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     'Consistency is the key to knowledge',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: r.fontMedium,
                       color: Colors.white.withOpacity(0.9),
                     ),
                     textAlign: TextAlign.center,
@@ -62,11 +64,11 @@ class StreakDetailsScreen extends ConsumerWidget {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // Current Streaks
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -76,19 +78,19 @@ class StreakDetailsScreen extends ConsumerWidget {
                           fontWeight: FontWeight.bold,
                         ),
                   ),
-                  const SizedBox(height: 16),
-                  const StreakCard(type: StreakType.login),
-                  const SizedBox(height: 12),
-                  const StreakCard(type: StreakType.quiz),
+                  SizedBox(height: r.spaceMedium),
+                  StreakCard(type: StreakType.login),
+                  SizedBox(height: r.spaceSmall),
+                  StreakCard(type: StreakType.quiz),
                 ],
               ),
             ),
 
-            const SizedBox(height: 32),
+            SizedBox(height: r.spaceXLarge),
 
             // Best Records
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

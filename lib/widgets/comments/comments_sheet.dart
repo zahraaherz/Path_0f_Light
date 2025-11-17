@@ -238,7 +238,7 @@ class _CommentsSheetState extends ConsumerState<CommentsSheet> {
                     onPressed: () {
                       Navigator.pop(context);
                       // Navigate to login screen
-                      // TODO: Navigate to login
+                      Navigator.pushNamed(context, '/login');
                     },
                     child: const Text('Sign In'),
                   ),

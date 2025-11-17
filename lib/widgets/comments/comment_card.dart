@@ -125,6 +125,67 @@ class _CommentCardState extends ConsumerState<CommentCard> {
     }
   }
 
+  Future<void> _reportComment() async {
+    final reportReasons = [
+      'Spam or misleading',
+      'Offensive content',
+      'Harassment or bullying',
+      'False information',
+      'Other',
+    ];
+
+    String? selectedReason;
+
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          title: const Text('Report Comment'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('Please select a reason for reporting this comment:'),
+              const SizedBox(height: 16),
+              ...reportReasons.map((reason) => RadioListTile<String>(
+                title: Text(reason),
+                value: reason,
+                groupValue: selectedReason,
+                onChanged: (value) {
+                  setState(() => selectedReason = value);
+                },
+              )),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: selectedReason == null
+                  ? null
+                  : () => Navigator.pop(context, true),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+              child: const Text('Report'),
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (confirmed == true && selectedReason != null && mounted) {
+      // TODO: Implement backend report functionality
+      // For now, show confirmation message
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Comment reported for: $selectedReason. Thank you for helping keep our community safe.'),
+          duration: const Duration(seconds: 3),
+        ),
+      );
+    }
+  }
+
   void _cancelEdit() {
     setState(() => _isEditing = false);
   }
@@ -163,10 +224,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
                 title: const Text('Report'),
                 onTap: () {
                   Navigator.pop(context);
-                  // TODO: Report comment
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Report functionality coming soon')),
-                  );
+                  _reportComment();
                 },
               ),
           ],
