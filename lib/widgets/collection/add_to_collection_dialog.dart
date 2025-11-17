@@ -4,6 +4,7 @@ import '../../models/collection/collection_item.dart';
 import '../../providers/collection_providers.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/guest_access_providers.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// Dialog for adding a new item to the collection
 class AddToCollectionDialog extends ConsumerStatefulWidget {
@@ -45,6 +46,7 @@ class _AddToCollectionDialogState
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Dialog(
       child: Container(
         constraints: const BoxConstraints(maxWidth: 600, maxHeight: 700),
@@ -68,7 +70,7 @@ class _AddToCollectionDialogState
                   ),
                   const SizedBox(width: 12),
                   Text(
-                    'Add to Collection',
+                    l10n.addToCollection,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           color:
                               Theme.of(context).colorScheme.onPrimaryContainer,
@@ -93,20 +95,20 @@ class _AddToCollectionDialogState
                     children: [
                       // Type selection
                       Text(
-                        'Type',
+                        l10n.type,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
                       DropdownButtonFormField<CollectionItemType>(
                         value: _selectedType,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Select type',
+                        decoration: InputDecoration(
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.selectType,
                         ),
                         items: CollectionItemType.values.map((type) {
                           return DropdownMenuItem(
                             value: type,
-                            child: Text(_getTypeName(type)),
+                            child: Text(_getTypeName(context, type)),
                           );
                         }).toList(),
                         onChanged: (value) {
@@ -121,20 +123,20 @@ class _AddToCollectionDialogState
 
                       // Category selection
                       Text(
-                        'Category',
+                        l10n.category,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       const SizedBox(height: 8),
                       DropdownButtonFormField<CollectionCategory>(
                         value: _selectedCategory,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Select category',
+                        decoration: InputDecoration(
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.selectCategory,
                         ),
                         items: CollectionCategory.values.map((category) {
                           return DropdownMenuItem(
                             value: category,
-                            child: Text(_getCategoryName(category)),
+                            child: Text(_getCategoryName(context, category)),
                           );
                         }).toList(),
                         onChanged: (value) {
@@ -150,14 +152,14 @@ class _AddToCollectionDialogState
                       // Title
                       TextFormField(
                         controller: _titleController,
-                        decoration: const InputDecoration(
-                          labelText: 'Title (English)',
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter title in English',
+                        decoration: InputDecoration(
+                          labelText: l10n.titleEnglish,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterTitleEnglish,
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Title is required';
+                            return l10n.titleRequired;
                           }
                           return null;
                         },
@@ -167,10 +169,10 @@ class _AddToCollectionDialogState
                       // Arabic Title
                       TextFormField(
                         controller: _arabicTitleController,
-                        decoration: const InputDecoration(
-                          labelText: 'Title (Arabic)',
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter title in Arabic',
+                        decoration: InputDecoration(
+                          labelText: l10n.titleArabic,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterTitleArabic,
                         ),
                         textDirection: TextDirection.rtl,
                         style: const TextStyle(fontFamily: 'Amiri'),
@@ -180,10 +182,10 @@ class _AddToCollectionDialogState
                       // Arabic Text
                       TextFormField(
                         controller: _arabicTextController,
-                        decoration: const InputDecoration(
-                          labelText: 'Arabic Text *',
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter text in Arabic',
+                        decoration: InputDecoration(
+                          labelText: l10n.arabicTextRequired,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterArabicText,
                         ),
                         textDirection: TextDirection.rtl,
                         style: const TextStyle(
@@ -193,7 +195,7 @@ class _AddToCollectionDialogState
                         maxLines: 5,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Arabic text is required';
+                            return l10n.arabicTextIsRequired;
                           }
                           return null;
                         },
@@ -203,10 +205,10 @@ class _AddToCollectionDialogState
                       // Translation
                       TextFormField(
                         controller: _translationController,
-                        decoration: const InputDecoration(
-                          labelText: 'Translation',
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter English translation',
+                        decoration: InputDecoration(
+                          labelText: l10n.translation,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterTranslation,
                         ),
                         maxLines: 3,
                       ),
@@ -215,10 +217,10 @@ class _AddToCollectionDialogState
                       // Transliteration
                       TextFormField(
                         controller: _transliterationController,
-                        decoration: const InputDecoration(
-                          labelText: 'Transliteration',
-                          border: OutlineInputBorder(),
-                          hintText: 'Enter transliteration',
+                        decoration: InputDecoration(
+                          labelText: l10n.transliteration,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterTransliteration,
                         ),
                         maxLines: 2,
                       ),
@@ -227,10 +229,10 @@ class _AddToCollectionDialogState
                       // Source
                       TextFormField(
                         controller: _sourceController,
-                        decoration: const InputDecoration(
-                          labelText: 'Source',
-                          border: OutlineInputBorder(),
-                          hintText: 'e.g., Sahifa Sajjadiya, Du\'a 23',
+                        decoration: InputDecoration(
+                          labelText: l10n.source,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.enterSource,
                         ),
                       ),
                       const SizedBox(height: 16),
@@ -238,10 +240,10 @@ class _AddToCollectionDialogState
                       // Notes
                       TextFormField(
                         controller: _notesController,
-                        decoration: const InputDecoration(
-                          labelText: 'Personal Notes',
-                          border: OutlineInputBorder(),
-                          hintText: 'Add your personal notes',
+                        decoration: InputDecoration(
+                          labelText: l10n.personalNotes,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.addPersonalNotes,
                         ),
                         maxLines: 3,
                       ),
@@ -250,10 +252,10 @@ class _AddToCollectionDialogState
                       // Tags
                       TextFormField(
                         controller: _tagsController,
-                        decoration: const InputDecoration(
-                          labelText: 'Tags',
-                          border: OutlineInputBorder(),
-                          hintText: 'Separate tags with commas',
+                        decoration: InputDecoration(
+                          labelText: l10n.tags,
+                          border: const OutlineInputBorder(),
+                          hintText: l10n.separateTagsWithCommas,
                         ),
                       ),
                       const SizedBox(height: 24),
@@ -279,7 +281,7 @@ class _AddToCollectionDialogState
                     onPressed: _isLoading
                         ? null
                         : () => Navigator.of(context).pop(),
-                    child: const Text('Cancel'),
+                    child: Text(l10n.cancel),
                   ),
                   const SizedBox(width: 8),
                   ElevatedButton(
@@ -290,7 +292,7 @@ class _AddToCollectionDialogState
                             height: 20,
                             child: CircularProgressIndicator(strokeWidth: 2),
                           )
-                        : const Text('Add to Collection'),
+                        : Text(l10n.addToCollection),
                   ),
                 ],
               ),
@@ -368,19 +370,21 @@ class _AddToCollectionDialogState
       ref.invalidate(userCollectionItemsProvider);
 
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Item added to collection successfully!'),
+          SnackBar(
+            content: Text(l10n.itemAddedSuccessfully),
             backgroundColor: Colors.green,
           ),
         );
       }
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Error: $e'),
+            content: Text('${l10n.error}: $e'),
             backgroundColor: Colors.red,
           ),
         );
@@ -394,65 +398,67 @@ class _AddToCollectionDialogState
     }
   }
 
-  String _getTypeName(CollectionItemType type) {
+  String _getTypeName(BuildContext context, CollectionItemType type) {
+    final l10n = AppLocalizations.of(context)!;
     switch (type) {
       case CollectionItemType.dua:
-        return 'Du\'a';
+        return l10n.dua;
       case CollectionItemType.surah:
-        return 'Surah';
+        return l10n.surah;
       case CollectionItemType.ayah:
-        return 'Ayah';
+        return l10n.ayah;
       case CollectionItemType.ziyarat:
-        return 'Ziyarat';
+        return l10n.ziyarat;
       case CollectionItemType.hadith:
-        return 'Hadith';
+        return l10n.hadith;
       case CollectionItemType.passage:
-        return 'Passage';
+        return l10n.passage;
       case CollectionItemType.dhikr:
-        return 'Dhikr';
+        return l10n.dhikr;
       case CollectionItemType.custom:
-        return 'Custom';
+        return l10n.custom;
     }
   }
 
-  String _getCategoryName(CollectionCategory category) {
+  String _getCategoryName(BuildContext context, CollectionCategory category) {
+    final l10n = AppLocalizations.of(context)!;
     switch (category) {
       case CollectionCategory.morning:
-        return 'Morning';
+        return l10n.morning;
       case CollectionCategory.evening:
-        return 'Evening';
+        return l10n.evening;
       case CollectionCategory.friday:
-        return 'Friday';
+        return l10n.friday;
       case CollectionCategory.ramadhan:
-        return 'Ramadhan';
+        return l10n.ramadhan;
       case CollectionCategory.muharram:
-        return 'Muharram';
+        return l10n.muharram;
       case CollectionCategory.safar:
-        return 'Safar';
+        return l10n.safar;
       case CollectionCategory.rajab:
-        return 'Rajab';
+        return l10n.rajab;
       case CollectionCategory.shaban:
-        return 'Sha\'ban';
+        return l10n.shaban;
       case CollectionCategory.daily:
-        return 'Daily';
+        return l10n.daily;
       case CollectionCategory.weekly:
-        return 'Weekly';
+        return l10n.weekly;
       case CollectionCategory.monthly:
-        return 'Monthly';
+        return l10n.monthly;
       case CollectionCategory.special:
-        return 'Special Occasions';
+        return l10n.specialOccasions;
       case CollectionCategory.protection:
-        return 'Protection';
+        return l10n.protection;
       case CollectionCategory.forgiveness:
-        return 'Forgiveness';
+        return l10n.forgiveness;
       case CollectionCategory.gratitude:
-        return 'Gratitude';
+        return l10n.gratitude;
       case CollectionCategory.healing:
-        return 'Healing';
+        return l10n.healing;
       case CollectionCategory.guidance:
-        return 'Guidance';
+        return l10n.guidance;
       case CollectionCategory.custom:
-        return 'Custom';
+        return l10n.custom;
     }
   }
 }
