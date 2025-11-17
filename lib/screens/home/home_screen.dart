@@ -490,6 +490,10 @@ class HomePage extends ConsumerWidget {
                 child: Builder(
                   builder: (context) {
                     final quote = MockData.getRandomQuote();
+                    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+                    final quoteText = isArabic ? quote['quoteAr']! : quote['quote']!;
+                    final authorText = isArabic ? quote['authorAr']! : quote['author']!;
+
                     return Container(
                       padding: EdgeInsets.all(r.paddingMedium),
                       decoration: BoxDecoration(
@@ -527,7 +531,7 @@ class HomePage extends ConsumerWidget {
                           ),
                           SizedBox(height: r.spaceMedium),
                           Text(
-                            quote['quote']!,
+                            quoteText,
                             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                   fontStyle: FontStyle.italic,
                                   height: 1.6,
@@ -535,7 +539,7 @@ class HomePage extends ConsumerWidget {
                           ),
                           SizedBox(height: r.spaceSmall),
                           Text(
-                            '— ${quote['author']!}',
+                            '— $authorText',
                             style: Theme.of(context).textTheme.bodySmall?.copyWith(
                                   color: AppTheme.islamicGreen,
                                   fontWeight: FontWeight.w600,

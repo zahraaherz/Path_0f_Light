@@ -155,7 +155,9 @@ class PrayerTimesWidget extends ConsumerWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(
-                    nextPrayer.name.displayNameEn,
+                    Localizations.localeOf(context).languageCode == 'ar'
+                        ? nextPrayer.name.displayNameAr
+                        : nextPrayer.name.displayNameEn,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 11,
@@ -170,7 +172,9 @@ class PrayerTimesWidget extends ConsumerWidget {
 
           // Prayer times list
           ...prayers.map((prayer) => _PrayerTimeRow(
-                name: prayer.name.displayNameEn,
+                name: Localizations.localeOf(context).languageCode == 'ar'
+                    ? prayer.name.displayNameAr
+                    : prayer.name.displayNameEn,
                 arabicName: prayer.arabicName,
                 time: _formatTime(prayer.time),
                 isPassed: prayer.time.isBefore(now),
@@ -195,7 +199,7 @@ class PrayerTimesWidget extends ConsumerWidget {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '${l10n.nextPrayer}: ${nextPrayer.name.displayNameEn} ${_formatTime(nextPrayer.time)}',
+                    '${l10n.nextPrayer}: ${Localizations.localeOf(context).languageCode == 'ar' ? nextPrayer.name.displayNameAr : nextPrayer.name.displayNameEn} ${_formatTime(nextPrayer.time)}',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           fontWeight: FontWeight.w600,
                           color: AppTheme.primaryTeal,

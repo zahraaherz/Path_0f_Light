@@ -103,6 +103,8 @@ class _EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+
     return Container(
       width: 280,
       margin: const EdgeInsets.only(right: 12),
@@ -154,7 +156,7 @@ class _EventCard extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          // Title
+          // Title - show Arabic title prominently, English subtitle only if not Arabic locale
           Text(
             event.arabicTitle,
             style: Theme.of(context).textTheme.titleSmall?.copyWith(
@@ -162,26 +164,27 @@ class _EventCard extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          const SizedBox(height: 4),
-          Text(
-            event.title,
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  fontWeight: FontWeight.w600,
-                ),
-          ),
-
-          const SizedBox(height: 8),
-
-          // Description
-          Text(
-            event.description,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                  color: AppTheme.textSecondary,
-                  height: 1.4,
-                ),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-          ),
+          if (!isArabic) ...[
+            const SizedBox(height: 4),
+            Text(
+              event.title,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+            ),
+            const SizedBox(height: 8),
+            // Description
+            Text(
+              event.description,
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppTheme.textSecondary,
+                    height: 1.4,
+                  ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ] else
+            const SizedBox(height: 8),
         ],
       ),
     );
