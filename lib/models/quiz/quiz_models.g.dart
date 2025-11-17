@@ -68,6 +68,9 @@ _$AnswerResultImpl _$$AnswerResultImplFromJson(Map<String, dynamic> json) =>
       energyConsumed: (json['energyConsumed'] as num).toInt(),
       energyRemaining: (json['energyRemaining'] as num).toInt(),
       source: AnswerSource.fromJson(json['source'] as Map<String, dynamic>),
+      explanationAr: json['explanationAr'] as String?,
+      bookTitleAr: json['bookTitleAr'] as String?,
+      bookTitleEn: json['bookTitleEn'] as String?,
     );
 
 Map<String, dynamic> _$$AnswerResultImplToJson(_$AnswerResultImpl instance) =>
@@ -80,6 +83,9 @@ Map<String, dynamic> _$$AnswerResultImplToJson(_$AnswerResultImpl instance) =>
       'energyConsumed': instance.energyConsumed,
       'energyRemaining': instance.energyRemaining,
       'source': instance.source,
+      'explanationAr': instance.explanationAr,
+      'bookTitleAr': instance.bookTitleAr,
+      'bookTitleEn': instance.bookTitleEn,
     };
 
 _$AnswerSourceImpl _$$AnswerSourceImplFromJson(Map<String, dynamic> json) =>
@@ -88,6 +94,8 @@ _$AnswerSourceImpl _$$AnswerSourceImplFromJson(Map<String, dynamic> json) =>
       paragraphId: json['paragraphId'] as String,
       pageNumber: (json['pageNumber'] as num).toInt(),
       quote: json['quote'] as String,
+      exactQuoteAr: json['exactQuoteAr'] as String?,
+      bookTitle: json['bookTitle'] as String?,
     );
 
 Map<String, dynamic> _$$AnswerSourceImplToJson(_$AnswerSourceImpl instance) =>
@@ -96,6 +104,76 @@ Map<String, dynamic> _$$AnswerSourceImplToJson(_$AnswerSourceImpl instance) =>
       'paragraphId': instance.paragraphId,
       'pageNumber': instance.pageNumber,
       'quote': instance.quote,
+      'exactQuoteAr': instance.exactQuoteAr,
+      'bookTitle': instance.bookTitle,
+    };
+
+_$EnhancedQuestionImpl _$$EnhancedQuestionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EnhancedQuestionImpl(
+      id: json['id'] as String,
+      category: json['category'] as String,
+      difficulty: json['difficulty'] as String,
+      questionAr: json['questionAr'] as String,
+      questionEn: json['questionEn'] as String,
+      options: (json['options'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Map<String, String>.from(e as Map)),
+      ),
+      correctAnswer: json['correctAnswer'] as String,
+      source: QuestionSource.fromJson(json['source'] as Map<String, dynamic>),
+      explanationAr: json['explanationAr'] as String,
+      explanationEn: json['explanationEn'] as String,
+      points: (json['points'] as num).toInt(),
+      questionType:
+          $enumDecodeNullable(_$QuestionTypeEnumMap, json['questionType']) ??
+              QuestionType.multipleChoice,
+      verified: json['verified'] as bool? ?? false,
+    );
+
+Map<String, dynamic> _$$EnhancedQuestionImplToJson(
+        _$EnhancedQuestionImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'category': instance.category,
+      'difficulty': instance.difficulty,
+      'questionAr': instance.questionAr,
+      'questionEn': instance.questionEn,
+      'options': instance.options,
+      'correctAnswer': instance.correctAnswer,
+      'source': instance.source,
+      'explanationAr': instance.explanationAr,
+      'explanationEn': instance.explanationEn,
+      'points': instance.points,
+      'questionType': _$QuestionTypeEnumMap[instance.questionType]!,
+      'verified': instance.verified,
+    };
+
+const _$QuestionTypeEnumMap = {
+  QuestionType.multipleChoice: 'multipleChoice',
+  QuestionType.trueFalse: 'trueFalse',
+  QuestionType.fillInBlank: 'fillInBlank',
+  QuestionType.matching: 'matching',
+};
+
+_$QuestionSourceImpl _$$QuestionSourceImplFromJson(Map<String, dynamic> json) =>
+    _$QuestionSourceImpl(
+      paragraphId: json['paragraphId'] as String,
+      bookId: json['bookId'] as String,
+      exactQuoteAr: json['exactQuoteAr'] as String,
+      pageNumber: (json['pageNumber'] as num).toInt(),
+      bookTitleAr: json['bookTitleAr'] as String?,
+      bookTitleEn: json['bookTitleEn'] as String?,
+    );
+
+Map<String, dynamic> _$$QuestionSourceImplToJson(
+        _$QuestionSourceImpl instance) =>
+    <String, dynamic>{
+      'paragraphId': instance.paragraphId,
+      'bookId': instance.bookId,
+      'exactQuoteAr': instance.exactQuoteAr,
+      'pageNumber': instance.pageNumber,
+      'bookTitleAr': instance.bookTitleAr,
+      'bookTitleEn': instance.bookTitleEn,
     };
 
 _$QuizSummaryImpl _$$QuizSummaryImplFromJson(Map<String, dynamic> json) =>

@@ -1,0 +1,27 @@
+{
+  "id": "quran_001",
+  "title_ar": "القرآن الكريم",
+  "title_en": "The Holy Quran",
+  "author_ar": "كلام الله",
+  "author_en": "Word of Allah",
+  "total_sections": 114,
+  "total_paragraphs": 6236,
+  "language": "ar",
+  "pdf_url": null,
+  "version": "1.0",
+  "verified_by": "islamic_scholars",
+  "content_status": "published",
+  "description": "The Holy Quran - The final revelation to humanity through Prophet Muhammad (PBUH). 114 Surahs containing 6,236 verses of divine guidance.",
+  "topics": [
+    "Quran",
+    "Revelation",
+    "Islamic Scripture",
+    "Divine Guidance",
+    "Tawhid",
+    "Prophets",
+    "Hereafter"
+  ],
+  "cover_image_url": null,
+  "created_at": null,
+  "updated_at": null
+}

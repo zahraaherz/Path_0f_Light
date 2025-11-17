@@ -20,7 +20,7 @@ enum AppLanguage {
 
 /// Language state notifier
 class LanguageNotifier extends StateNotifier<AppLanguage> {
-  LanguageNotifier() : super(AppLanguage.english) {
+  LanguageNotifier() : super(AppLanguage.arabic) {
     _loadSavedLanguage();
   }
 
@@ -35,13 +35,13 @@ class LanguageNotifier extends StateNotifier<AppLanguage> {
       if (savedLanguageCode != null) {
         final language = AppLanguage.values.firstWhere(
           (lang) => lang.code == savedLanguageCode,
-          orElse: () => AppLanguage.english,
+          orElse: () => AppLanguage.arabic,
         );
         state = language;
       }
     } catch (e) {
-      // If loading fails, default to English
-      state = AppLanguage.english;
+      // If loading fails, default to Arabic
+      state = AppLanguage.arabic;
     }
   }
 

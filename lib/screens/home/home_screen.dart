@@ -2,18 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
-import '../../providers/energy_providers.dart';
 import '../../providers/streak_providers.dart';
-import '../../widgets/energy_display.dart';
-import '../../widgets/streak_display.dart';
 import '../../widgets/streak_celebration_dialog.dart';
-import '../../widgets/islamic_pattern_background.dart';
+import '../../widgets/home/islamic_date_widget.dart';
+import '../../widgets/home/prayer_times_widget.dart';
+import '../../widgets/home/islamic_events_widget.dart';
+import '../../widgets/home/dua_slider_widget.dart';
+import '../../widgets/home/spiritual_checklist_widget.dart';
+import '../../widgets/home/audio_library_widget.dart';
+import '../../data/mock_data.dart';
 import '../profile/profile_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
-import '../achievements/achievements_screen.dart';
 import '../quiz/quiz_start_screen.dart';
 import '../auth/login_screen.dart';
 import '../masoomeen/masoomeen_browse_screen.dart';
+import '../library/library_screen.dart';
+import '../quran/quran_screen.dart';
+import 'collection_screen.dart';
+import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -28,8 +35,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   final List<Widget> _pages = const [
     HomePage(),
+    LibraryScreen(),
+    CollectionScreen(),
     LeaderboardScreen(),
-    AchievementsScreen(),
     ProfileScreen(),
   ];
 
@@ -82,6 +90,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
@@ -102,26 +112,31 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           elevation: 0,
           indicatorColor: AppTheme.primaryTeal.withOpacity(0.1),
           labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-          destinations: const [
+          destinations: [
             NavigationDestination(
-              icon: Icon(Icons.explore_outlined, size: 24),
-              selectedIcon: Icon(Icons.explore, color: AppTheme.primaryTeal, size: 24),
-              label: 'Explore',
+              icon: const Icon(Icons.explore_outlined, size: 24),
+              selectedIcon: const Icon(Icons.explore, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.explore,
             ),
             NavigationDestination(
-              icon: Icon(Icons.leaderboard_outlined, size: 24),
-              selectedIcon: Icon(Icons.leaderboard, color: AppTheme.primaryTeal, size: 24),
-              label: 'Leaderboard',
+              icon: const Icon(Icons.library_books_outlined, size: 24),
+              selectedIcon: const Icon(Icons.library_books, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.library,
             ),
             NavigationDestination(
-              icon: Icon(Icons.emoji_events_outlined, size: 24),
-              selectedIcon: Icon(Icons.emoji_events, color: AppTheme.primaryTeal, size: 24),
-              label: 'Achievements',
+              icon: const Icon(Icons.collections_bookmark_outlined, size: 24),
+              selectedIcon: const Icon(Icons.collections_bookmark, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.collection,
             ),
             NavigationDestination(
-              icon: Icon(Icons.person_outline, size: 24),
-              selectedIcon: Icon(Icons.person, color: AppTheme.primaryTeal, size: 24),
-              label: 'Profile',
+              icon: const Icon(Icons.leaderboard_outlined, size: 24),
+              selectedIcon: const Icon(Icons.leaderboard, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.leaderboard,
+            ),
+            NavigationDestination(
+              icon: const Icon(Icons.person_outline, size: 24),
+              selectedIcon: const Icon(Icons.person, color: AppTheme.primaryTeal, size: 24),
+              label: l10n.profile,
             ),
           ],
         ),
@@ -137,12 +152,15 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final authUser = ref.watch(currentAuthUserProvider);
     final userProfileAsync = ref.watch(currentUserProfileProvider);
+    final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
+        child: r.constrainWidth(
+          child: CustomScrollView(
+            slivers: [
             // Minimalist Header with Islamic Border
             SliverToBoxAdapter(
               child: Container(
@@ -155,7 +173,7 @@ class HomePage extends ConsumerWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(r.paddingMedium),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -164,7 +182,7 @@ class HomePage extends ConsumerWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'نور المعرفة',
+                            l10n.lightOfKnowledge,
                             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                                   color: AppTheme.primaryTeal,
                                   fontWeight: FontWeight.bold,
@@ -172,7 +190,7 @@ class HomePage extends ConsumerWidget {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            'Path of Light',
+                            l10n.pathOfLight,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                   color: AppTheme.textSecondary,
                                   letterSpacing: 1,
@@ -192,7 +210,7 @@ class HomePage extends ConsumerWidget {
                             side: BorderSide(color: AppTheme.primaryTeal, width: 1.5),
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                           ),
-                          child: const Text('Sign In'),
+                          child: Text(l10n.signIn),
                         )
                       else
                         IconButton(
@@ -209,15 +227,15 @@ class HomePage extends ConsumerWidget {
             // Islamic Greeting with Pattern
             SliverToBoxAdapter(
               child: Container(
-                margin: const EdgeInsets.all(20),
-                padding: const EdgeInsets.all(24),
+                margin: EdgeInsets.all(r.paddingMedium),
+                padding: EdgeInsets.all(r.paddingLarge),
                 decoration: BoxDecoration(
                   color: AppTheme.islamicGreen.withOpacity(0.05),
                   border: Border.all(
                     color: AppTheme.islamicGreen.withOpacity(0.3),
                     width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(r.radiusMedium),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -234,10 +252,10 @@ class HomePage extends ConsumerWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    const SizedBox(height: 12),
+                    SizedBox(height: r.spaceSmall),
                     Center(
                       child: Text(
-                        'In the name of Allah, the Most Gracious, the Most Merciful',
+                        l10n.bismillahTranslation,
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: AppTheme.textSecondary,
                               fontStyle: FontStyle.italic,
@@ -250,48 +268,60 @@ class HomePage extends ConsumerWidget {
               ),
             ),
 
+            const SliverToBoxAdapter(child: SizedBox(height: 8)),
+
+            // Islamic Date Display
+            const SliverToBoxAdapter(child: IslamicDateWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+            // Prayer Times
+            const SliverToBoxAdapter(child: PrayerTimesWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 24)),
+
             // Dashboard Stats
             SliverToBoxAdapter(
               child: userProfileAsync.when(
                 data: (profile) {
                   if (profile == null) return const SizedBox.shrink();
                   return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Your Progress',
+                          l10n.yourProgress,
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
-                        const SizedBox(height: 16),
+                        SizedBox(height: r.spaceMedium),
                         Row(
                           children: [
                             Expanded(
                               child: _StatCard(
                                 icon: Icons.auto_stories,
                                 value: '${profile.quizProgress.totalQuestionsAnswered}',
-                                label: 'Questions',
+                                label: l10n.questionsAnswered,
                                 color: AppTheme.primaryTeal,
                               ),
                             ),
-                            const SizedBox(width: 12),
+                            SizedBox(width: r.spaceSmall),
                             Expanded(
                               child: _StatCard(
                                 icon: Icons.local_fire_department,
                                 value: '${profile.quizProgress.currentStreak}',
-                                label: 'Day Streak',
+                                label: l10n.dayStreak(profile.quizProgress.currentStreak),
                                 color: AppTheme.goldAccent,
                               ),
                             ),
-                            const SizedBox(width: 12),
+                            SizedBox(width: r.spaceSmall),
                             Expanded(
                               child: _StatCard(
                                 icon: Icons.stars,
                                 value: '${profile.quizProgress.totalPoints}',
-                                label: 'Points',
+                                label: l10n.points,
                                 color: AppTheme.islamicGreen,
                               ),
                             ),
@@ -308,10 +338,25 @@ class HomePage extends ConsumerWidget {
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
 
+            // Islamic Events
+            const SliverToBoxAdapter(child: IslamicEventsWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Daily Du'as Slider
+            const SliverToBoxAdapter(child: DuaSliderWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Spiritual Checklist
+            const SliverToBoxAdapter(child: SpiritualChecklistWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
             // Featured: The 14 Masoomeen
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: _FeaturedMasoomeenCard(
                   onTap: () {
                     Navigator.of(context).push(
@@ -327,7 +372,7 @@ class HomePage extends ConsumerWidget {
             // Browse Content Section
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -335,7 +380,7 @@ class HomePage extends ConsumerWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Browse by Topic',
+                          l10n.browseByTopic,
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -343,7 +388,7 @@ class HomePage extends ConsumerWidget {
                         TextButton(
                           onPressed: () {},
                           child: Text(
-                            'View All',
+                            l10n.viewAll,
                             style: TextStyle(
                               color: AppTheme.primaryTeal,
                               fontWeight: FontWeight.w600,
@@ -359,41 +404,41 @@ class HomePage extends ConsumerWidget {
 
             // Content Categories Grid
             SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
               sliver: SliverGrid(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: r.valueWhen(mobile: 2, tablet: 3, desktop: 4),
+                  crossAxisSpacing: r.spaceSmall,
+                  mainAxisSpacing: r.spaceSmall,
                   childAspectRatio: 1.3,
                 ),
                 delegate: SliverChildListDelegate([
                   _TopicCard(
-                    title: 'Quran',
-                    arabicTitle: 'القرآن',
+                    title: l10n.quran,
                     icon: Icons.menu_book,
                     color: AppTheme.primaryTeal,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const QuranScreen()),
+                      );
+                    },
                   ),
                   _TopicCard(
-                    title: 'Hadith',
-                    arabicTitle: 'الحديث',
+                    title: l10n.hadith,
                     icon: Icons.format_quote,
                     color: AppTheme.islamicGreen,
                     onTap: () {},
                   ),
                   _TopicCard(
-                    title: 'Fiqh',
-                    arabicTitle: 'الفقه',
+                    title: l10n.fiqh,
                     icon: Icons.account_balance,
                     color: AppTheme.goldAccent,
                     onTap: () {},
                   ),
                   _TopicCard(
-                    title: 'History',
-                    arabicTitle: 'التاريخ',
+                    title: l10n.history,
                     icon: Icons.history_edu,
-                    color: Color(0xFF8B7355),
+                    color: const Color(0xFF8B7355),
                     onTap: () {},
                   ),
                 ]),
@@ -405,9 +450,9 @@ class HomePage extends ConsumerWidget {
             // Continue Learning
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: Text(
-                  'Continue Learning',
+                  l10n.continueLearning,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -420,10 +465,10 @@ class HomePage extends ConsumerWidget {
             // Quiz Card
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                 child: _LearningCard(
-                  title: 'Daily Quiz Challenge',
-                  subtitle: 'Test your knowledge with today\'s questions',
+                  title: l10n.dailyQuizChallenge,
+                  subtitle: l10n.testYourKnowledge,
                   icon: Icons.quiz,
                   onTap: () {
                     Navigator.of(context).push(
@@ -439,68 +484,79 @@ class HomePage extends ConsumerWidget {
             // Islamic Quote of the Day
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: AppTheme.goldAccent.withOpacity(0.3),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+                padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
+                child: Builder(
+                  builder: (context) {
+                    final quote = MockData.getRandomQuote();
+                    return Container(
+                      padding: EdgeInsets.all(r.paddingMedium),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: AppTheme.goldAccent.withOpacity(0.3),
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(r.radiusMedium),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.all(8),
-                            decoration: BoxDecoration(
-                              color: AppTheme.goldAccent.withOpacity(0.1),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.auto_awesome,
-                              color: AppTheme.goldAccent,
-                              size: 20,
-                            ),
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  color: AppTheme.goldAccent.withOpacity(0.1),
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(
+                                  Icons.auto_awesome,
+                                  color: AppTheme.goldAccent,
+                                  size: 20,
+                                ),
+                              ),
+                              SizedBox(width: r.spaceSmall),
+                              Text(
+                                l10n.quoteOfTheDay,
+                                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(height: r.spaceMedium),
                           Text(
-                            'Quote of the Day',
-                            style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                                  fontWeight: FontWeight.bold,
+                            quote['quote']!,
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  fontStyle: FontStyle.italic,
+                                  height: 1.6,
+                                ),
+                          ),
+                          SizedBox(height: r.spaceSmall),
+                          Text(
+                            '— ${quote['author']!}',
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  color: AppTheme.islamicGreen,
+                                  fontWeight: FontWeight.w600,
                                 ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
-                      Text(
-                        '"The seeking of knowledge is obligatory for every Muslim."',
-                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              fontStyle: FontStyle.italic,
-                              height: 1.6,
-                            ),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        '— Prophet Muhammad ﷺ',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: AppTheme.islamicGreen,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
-                  ),
+                    );
+                  },
                 ),
               ),
             ),
 
             const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+            // Audio Library
+            const SliverToBoxAdapter(child: AudioLibraryWidget()),
+
+            const SliverToBoxAdapter(child: SizedBox(height: 32)),
           ],
         ),
       ),
+    ),
     );
   }
 }
@@ -521,16 +577,17 @@ class _StatCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(r.paddingMedium),
       decoration: BoxDecoration(
         border: Border.all(color: color.withOpacity(0.3), width: 1),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: Column(
         children: [
-          Icon(icon, color: color, size: 24),
-          const SizedBox(height: 8),
+          Icon(icon, color: color, size: r.iconSmall),
+          SizedBox(height: r.spaceSmall),
           Text(
             value,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -552,17 +609,15 @@ class _StatCard extends StatelessWidget {
   }
 }
 
-// Topic Browse Card with Arabic
+// Topic Browse Card
 class _TopicCard extends StatelessWidget {
   final String title;
-  final String arabicTitle;
   final IconData icon;
   final Color color;
   final VoidCallback onTap;
 
   const _TopicCard({
     required this.title,
-    required this.arabicTitle,
     required this.icon,
     required this.color,
     required this.onTap,
@@ -570,32 +625,27 @@ class _TopicCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(r.radiusMedium),
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: color.withOpacity(0.3), width: 1),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: color, size: 32),
-            const SizedBox(height: 12),
+            Icon(icon, color: color, size: r.iconMedium),
+            SizedBox(height: r.spaceSmall),
             Text(
-              arabicTitle,
+              title,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: color,
                     fontWeight: FontWeight.bold,
                   ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppTheme.textSecondary,
-                  ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
@@ -620,30 +670,31 @@ class _LearningCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(r.radiusMedium),
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(r.paddingMedium),
         decoration: BoxDecoration(
           color: AppTheme.primaryTeal.withOpacity(0.05),
           border: Border.all(
             color: AppTheme.primaryTeal.withOpacity(0.3),
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(r.paddingSmall),
               decoration: BoxDecoration(
                 color: AppTheme.primaryTeal,
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(r.radiusSmall),
               ),
-              child: Icon(icon, color: Colors.white, size: 24),
+              child: Icon(icon, color: Colors.white, size: r.iconSmall),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: r.spaceMedium),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -684,29 +735,31 @@ class _FeaturedMasoomeenCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(r.paddingMedium),
         decoration: BoxDecoration(
           color: AppTheme.islamicGreen.withOpacity(0.05),
           border: Border.all(
             color: AppTheme.islamicGreen.withOpacity(0.3),
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(r.paddingMedium),
               decoration: BoxDecoration(
                 color: AppTheme.islamicGreen.withOpacity(0.1),
                 border: Border.all(
                   color: AppTheme.islamicGreen.withOpacity(0.3),
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: const Icon(
                 Icons.auto_stories,
@@ -714,28 +767,21 @@ class _FeaturedMasoomeenCard extends StatelessWidget {
                 size: 32,
               ),
             ),
-            const SizedBox(width: 16),
+            SizedBox(width: r.spaceMedium),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'المَعصُومُونَ الأَربَعَةَ عَشَر',
+                    l10n.the14Masoomeen,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           color: AppTheme.islamicGreen,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 8),
                   Text(
-                    'The 14 Masoomeen',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Learn about the Infallibles',
+                    l10n.learnAboutInfallibles,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppTheme.textSecondary,
                         ),

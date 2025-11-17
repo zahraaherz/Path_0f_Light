@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/masoomeen/masoom_model.dart';
 import 'masoom_detail_screen.dart';
+import '../../utils/responsive.dart';
 
 class MasoomeenBrowseScreen extends StatelessWidget {
   const MasoomeenBrowseScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -17,20 +19,20 @@ class MasoomeenBrowseScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(r.paddingLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // Header with Arabic
             Container(
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(r.paddingLarge),
               decoration: BoxDecoration(
                 color: AppTheme.islamicGreen.withOpacity(0.05),
                 border: Border.all(
                   color: AppTheme.islamicGreen.withOpacity(0.3),
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Column(
                 children: [
@@ -42,7 +44,7 @@ class MasoomeenBrowseScreen extends StatelessWidget {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     'The 14 Infallibles',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -50,7 +52,7 @@ class MasoomeenBrowseScreen extends StatelessWidget {
                         ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: r.paddingSmall),
                   Text(
                     'Peace be upon them all',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -63,17 +65,17 @@ class MasoomeenBrowseScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
 
             // List of Masoomeen
             ...MasoomeenData.all.map((masoom) {
               return Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: _MasoomCard(masoom: masoom),
+                padding: EdgeInsets.only(bottom: r.paddingSmall),
+                child: _MasoomCard(r: r, masoom: masoom),
               );
             }).toList(),
 
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
           ],
         ),
       ),
@@ -82,9 +84,10 @@ class MasoomeenBrowseScreen extends StatelessWidget {
 }
 
 class _MasoomCard extends StatelessWidget {
+  final Responsive r;
   final Masoom masoom;
 
-  const _MasoomCard({required this.masoom});
+  const _MasoomCard({required this.r, required this.masoom});
 
   Color _getOrderColor(int order) {
     if (order == 1) return AppTheme.goldAccent; // Prophet
@@ -106,22 +109,22 @@ class _MasoomCard extends StatelessWidget {
           ),
         );
       },
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(r.radiusMedium),
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         decoration: BoxDecoration(
           border: Border.all(
             color: color.withOpacity(0.3),
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
         ),
         child: Row(
           children: [
             // Order number
             Container(
-              width: 48,
-              height: 48,
+              width: r.iconLarge,
+              height: r.iconLarge,
               decoration: BoxDecoration(
                 color: color.withOpacity(0.1),
                 border: Border.all(
@@ -134,7 +137,7 @@ class _MasoomCard extends StatelessWidget {
                 child: Text(
                   '${masoom.order}',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: r.fontLarge,
                     fontWeight: FontWeight.bold,
                     color: color,
                   ),
@@ -142,7 +145,7 @@ class _MasoomCard extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(width: 16),
+            SizedBox(width: r.spaceMedium),
 
             // Info
             Expanded(
@@ -156,14 +159,14 @@ class _MasoomCard extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: r.spaceSmall / 2),
                   Text(
                     masoom.name,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppTheme.textPrimary,
                         ),
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: r.spaceSmall / 2),
                   Text(
                     masoom.title,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -177,28 +180,28 @@ class _MasoomCard extends StatelessWidget {
 
             // Quiz count badge
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              padding: EdgeInsets.symmetric(horizontal: r.paddingSmall, vertical: r.spaceSmall / 1.5),
               decoration: BoxDecoration(
                 color: AppTheme.goldAccent.withOpacity(0.1),
                 border: Border.all(
                   color: AppTheme.goldAccent.withOpacity(0.3),
                   width: 1,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(r.radiusMedium),
               ),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.quiz,
-                    size: 14,
+                    size: r.fontMedium,
                     color: AppTheme.goldAccent,
                   ),
-                  const SizedBox(width: 4),
+                  SizedBox(width: r.spaceSmall / 2),
                   Text(
                     '${masoom.quizCount}',
-                    style: const TextStyle(
-                      fontSize: 12,
+                    style: TextStyle(
+                      fontSize: r.fontSmall,
                       fontWeight: FontWeight.bold,
                       color: AppTheme.goldAccent,
                     ),
@@ -207,11 +210,11 @@ class _MasoomCard extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(width: 8),
+            SizedBox(width: r.spaceSmall),
 
             Icon(
               Icons.arrow_forward_ios,
-              size: 16,
+              size: r.fontMedium,
               color: color,
             ),
           ],

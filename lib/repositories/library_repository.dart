@@ -179,6 +179,23 @@ class LibraryRepository {
     }
   }
 
+  /// Get all paragraphs for a book
+  Future<List<Paragraph>> getBookParagraphs(String bookId) async {
+    try {
+      final snapshot = await _paragraphsCollection
+          .where('book_id', isEqualTo: bookId)
+          .orderBy('paragraph_number')
+          .get();
+
+      return snapshot.docs.map((doc) {
+        final data = doc.data() as Map<String, dynamic>;
+        return Paragraph.fromJson({'id': doc.id, ...data});
+      }).toList();
+    } catch (e) {
+      throw Exception('Error loading book paragraphs: $e');
+    }
+  }
+
   /// Search paragraphs within a book
   Future<List<Paragraph>> searchParagraphsInBook(
       String bookId, String query) async {

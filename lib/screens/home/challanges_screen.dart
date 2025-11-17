@@ -2,12 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:hijri/hijri_calendar.dart';
+import '../../utils/responsive.dart';
 
 class TodayEventsComponent extends StatelessWidget {
   const TodayEventsComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     // Get current Hijri date for event checking
     final HijriCalendar hijriDate = HijriCalendar.fromDate(DateTime.now());
 
@@ -52,17 +54,17 @@ class TodayEventsComponent extends StatelessWidget {
     }
 
     return Card(
-      margin: const EdgeInsets.all(8.0),
+      margin: EdgeInsets.all(r.paddingSmall),
       elevation: 4.0,
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Today\'s Islamic Events',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: r.fontLarge,
                 fontWeight: FontWeight.bold,
                 color: Colors.green,
               ),
@@ -75,31 +77,31 @@ class TodayEventsComponent extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.celebration,
-                    size: 40,
+                    size: r.iconLarge,
                     color: Colors.amber[700],
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     eventTitle,
-                    style: const TextStyle(
-                      fontSize: 18,
+                    style: TextStyle(
+                      fontSize: r.fontLarge,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: r.spaceSmall),
                   Text(
                     eventDescription,
-                    style: const TextStyle(fontSize: 14),
+                    style: TextStyle(fontSize: r.fontMedium),
                     textAlign: TextAlign.center,
                   ),
                 ],
               )
-                  : const Center(
+                  : Center(
                 child: Text(
                   'No significant events today',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: r.fontMedium,
                     fontStyle: FontStyle.italic,
                     color: Colors.grey,
                   ),

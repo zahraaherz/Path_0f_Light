@@ -1,4 +1,4 @@
-import 'package:adhan/adhan.dart';
+import 'package:adhan/adhan.dart' as adhan;
 import 'package:geolocator/geolocator.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/prayer/prayer_times_model.dart';
@@ -13,7 +13,7 @@ class PrayerTimeService {
   /// Get current prayer times for today
   Future<PrayerTimesModel> getTodayPrayerTimes() async {
     final coordinates = await _getCoordinates();
-    final method = await _getCalculationMethod();
+    final method = await getCalculationMethod();
     final locationName = await _getLocationName();
 
     return _calculatePrayerTimes(
@@ -28,7 +28,7 @@ class PrayerTimeService {
   /// Get prayer times for a specific date
   Future<PrayerTimesModel> getPrayerTimesForDate(DateTime date) async {
     final coordinates = await _getCoordinates();
-    final method = await _getCalculationMethod();
+    final method = await getCalculationMethod();
     final locationName = await _getLocationName();
 
     return _calculatePrayerTimes(
@@ -48,9 +48,9 @@ class PrayerTimeService {
     DateTime date,
     CalculationMethod method,
   ) {
-    final coordinates = Coordinates(latitude, longitude);
+    final coordinates = adhan.Coordinates(latitude, longitude);
     final params = _getCalculationParameters(method);
-    final prayerTimes = PrayerTimes.today(coordinates, params);
+    final prayerTimes = adhan.PrayerTimes.today(coordinates, params);
 
     return PrayerTimesModel(
       date: date,
@@ -80,35 +80,37 @@ class PrayerTimeService {
   }
 
   /// Get calculation parameters based on method
-  CalculationParameters _getCalculationParameters(CalculationMethod method) {
+  adhan.CalculationParameters _getCalculationParameters(CalculationMethod method) {
     switch (method) {
       case CalculationMethod.muslimWorldLeague:
-        return CalculationMethod.muslim_world_league.getParameters();
+        return adhan.CalculationMethod.muslim_world_league.getParameters();
       case CalculationMethod.egyptian:
-        return CalculationMethod.egyptian.getParameters();
+        return adhan.CalculationMethod.egyptian.getParameters();
       case CalculationMethod.karachi:
-        return CalculationMethod.karachi.getParameters();
+        return adhan.CalculationMethod.karachi.getParameters();
       case CalculationMethod.ummAlQura:
-        return CalculationMethod.umm_al_qura.getParameters();
+        return adhan.CalculationMethod.umm_al_qura.getParameters();
       case CalculationMethod.dubai:
-        return CalculationMethod.dubai.getParameters();
+        return adhan.CalculationMethod.dubai.getParameters();
       case CalculationMethod.qatar:
-        return CalculationMethod.qatar.getParameters();
+        return adhan.CalculationMethod.qatar.getParameters();
       case CalculationMethod.kuwait:
-        return CalculationMethod.kuwait.getParameters();
+        return adhan.CalculationMethod.kuwait.getParameters();
       case CalculationMethod.moonSightingCommittee:
-        return CalculationMethod.moon_sighting_committee.getParameters();
+        return adhan.CalculationMethod.moon_sighting_committee.getParameters();
       case CalculationMethod.singapore:
-        return CalculationMethod.singapore.getParameters();
+        return adhan.CalculationMethod.singapore.getParameters();
       case CalculationMethod.northAmerica:
-        return CalculationMethod.north_america.getParameters();
+        return adhan.CalculationMethod.north_america.getParameters();
       case CalculationMethod.other:
-        return CalculationMethod.other.getParameters();
+        return adhan.CalculationMethod.other.getParameters();
+      default:
+        return adhan.CalculationMethod.muslim_world_league.getParameters();
     }
   }
 
   /// Get user's coordinates (from cache or location services)
-  Future<Coordinates> _getCoordinates() async {
+  Future<adhan.Coordinates> _getCoordinates() async {
     final prefs = await SharedPreferences.getInstance();
 
     // Try to get cached location
@@ -116,17 +118,17 @@ class PrayerTimeService {
     final cachedLon = prefs.getDouble(_longitudeKey);
 
     if (cachedLat != null && cachedLon != null) {
-      return Coordinates(cachedLat, cachedLon);
+      return adhan.Coordinates(cachedLat, cachedLon);
     }
 
     // If no cached location, try to get current location
     try {
       final position = await _getCurrentPosition();
       await saveLocation(position.latitude, position.longitude);
-      return Coordinates(position.latitude, position.longitude);
+      return adhan.Coordinates(position.latitude, position.longitude);
     } catch (e) {
       // Fallback to default location (Mecca)
-      return Coordinates(21.4225, 39.8262);
+      return adhan.Coordinates(21.4225, 39.8262);
     }
   }
 

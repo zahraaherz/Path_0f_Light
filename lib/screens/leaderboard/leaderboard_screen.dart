@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/leaderboard/leaderboard_entry.dart';
 import '../../providers/leaderboard_providers.dart';
 import '../../providers/auth_providers.dart';
+import '../../data/mock_data.dart';
 import 'user_comparison_screen.dart';
 
 class LeaderboardScreen extends ConsumerStatefulWidget {
@@ -45,6 +47,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final currentUserId = ref.watch(currentUserIdProvider);
     final leaderboardAsync = ref.watch(currentLeaderboardProvider);
     final userRankAsync = ref.watch(userRankByPointsProvider);
@@ -111,7 +114,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
           if (currentUserId != null)
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(r.paddingMedium),
                 child: userRankAsync.when(
                   data: (rank) => _buildUserRankCard(rank),
                   loading: () => const SizedBox.shrink(),
@@ -123,18 +126,16 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
           // Leaderboard List
           leaderboardAsync.when(
             data: (entries) {
-              if (entries.isEmpty) {
-                return const SliverFillRemaining(
-                  child: Center(
-                    child: Text('No data available'),
-                  ),
-                );
-              }
+              // Use mock data if no real data is available
+              final displayEntries = entries.isEmpty
+                  ? MockData.getLeaderboardByType(
+                      ref.watch(selectedLeaderboardTypeProvider))
+                  : entries;
 
               return SliverList(
                 delegate: SliverChildBuilderDelegate(
                   (context, index) {
-                    final entry = entries[index];
+                    final entry = displayEntries[index];
                     final isCurrentUser = entry.uid == currentUserId;
 
                     return _buildLeaderboardEntry(
@@ -142,36 +143,50 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
                       isCurrentUser,
                     );
                   },
-                  childCount: entries.length,
+                  childCount: displayEntries.length,
                 ),
               );
             },
-            loading: () => const SliverFillRemaining(
-              child: Center(child: CircularProgressIndicator()),
-            ),
-            error: (error, stack) => SliverFillRemaining(
-              child: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.error_outline, size: 64, color: AppTheme.error),
-                    const SizedBox(height: 16),
-                    Text('Error loading leaderboard',
-                        style: Theme.of(context).textTheme.titleMedium),
-                    const SizedBox(height: 8),
-                    Text(error.toString(),
-                        style: Theme.of(context).textTheme.bodySmall),
-                    const SizedBox(height: 16),
-                    ElevatedButton(
-                      onPressed: () {
-                        ref.invalidate(currentLeaderboardProvider);
-                      },
-                      child: const Text('Retry'),
-                    ),
-                  ],
+            loading: () {
+              // Show mock data while loading
+              final selectedType = ref.watch(selectedLeaderboardTypeProvider);
+              final mockEntries = MockData.getLeaderboardByType(selectedType);
+
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final entry = mockEntries[index];
+                    final isCurrentUser = entry.uid == currentUserId;
+
+                    return _buildLeaderboardEntry(
+                      entry,
+                      isCurrentUser,
+                    );
+                  },
+                  childCount: mockEntries.length,
                 ),
-              ),
-            ),
+              );
+            },
+            error: (error, stack) {
+              // Show mock data on error
+              final selectedType = ref.watch(selectedLeaderboardTypeProvider);
+              final mockEntries = MockData.getLeaderboardByType(selectedType);
+
+              return SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    final entry = mockEntries[index];
+                    final isCurrentUser = entry.uid == currentUserId;
+
+                    return _buildLeaderboardEntry(
+                      entry,
+                      isCurrentUser,
+                    );
+                  },
+                  childCount: mockEntries.length,
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -179,15 +194,16 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
   }
 
   Widget _buildUserRankCard(int rank) {
+    final r = context.responsive;
     return Card(
       elevation: 4,
       color: AppTheme.primaryTeal.withOpacity(0.1),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
         side: const BorderSide(color: AppTheme.primaryTeal, width: 2),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -230,6 +246,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
   }
 
   Widget _buildLeaderboardEntry(LeaderboardEntry entry, bool isCurrentUser) {
+    final r = context.responsive;
     final selectedType = ref.watch(selectedLeaderboardTypeProvider);
 
     // Determine the value to display based on leaderboard type
@@ -269,7 +286,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
         border: isCurrentUser
             ? Border.all(color: AppTheme.primaryTeal, width: 2)
             : null,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: ListTile(
         leading: Row(
@@ -298,7 +315,7 @@ class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen>
                       ),
               ),
             ),
-            const SizedBox(width: 8),
+            SizedBox(width: r.spaceSmall),
 
             // Avatar
             CircleAvatar(

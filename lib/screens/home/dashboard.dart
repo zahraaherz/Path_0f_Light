@@ -1,18 +1,20 @@
 // Component 5: Navigation Dashboard Widget
 import 'package:flutter/material.dart';
+import '../../utils/responsive.dart';
 
 class NavigationDashboardComponent extends StatelessWidget {
   const NavigationDashboardComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: EdgeInsets.symmetric(vertical: r.spaceSmall),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceVariant,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(16.0),
-          topRight: Radius.circular(16.0),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(r.radiusMedium),
+          topRight: Radius.circular(r.radiusMedium),
         ),
       ),
       child: Row(
@@ -20,6 +22,7 @@ class NavigationDashboardComponent extends StatelessWidget {
         children: [
           _buildNavButton(
             context,
+            r,
             icon: Icons.home,
             label: 'Home',
             isActive: true,
@@ -29,6 +32,7 @@ class NavigationDashboardComponent extends StatelessWidget {
           ),
           _buildNavButton(
             context,
+            r,
             icon: Icons.collections_bookmark,
             label: 'Collections',
             isActive: false,
@@ -40,6 +44,7 @@ class NavigationDashboardComponent extends StatelessWidget {
           ),
           _buildNavButton(
             context,
+            r,
             icon: Icons.menu_book,
             label: 'Books',
             isActive: false,
@@ -51,6 +56,7 @@ class NavigationDashboardComponent extends StatelessWidget {
           ),
           _buildNavButton(
             context,
+            r,
             icon: Icons.history_edu,
             label: 'Sira',
             isActive: false,
@@ -62,6 +68,7 @@ class NavigationDashboardComponent extends StatelessWidget {
           ),
           _buildNavButton(
             context,
+            r,
             icon: Icons.settings,
             label: 'Settings',
             isActive: false,
@@ -77,7 +84,8 @@ class NavigationDashboardComponent extends StatelessWidget {
   }
 
   Widget _buildNavButton(
-      BuildContext context, {
+      BuildContext context,
+      Responsive r, {
         required IconData icon,
         required String label,
         required bool isActive,
@@ -85,12 +93,12 @@ class NavigationDashboardComponent extends StatelessWidget {
       }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(8.0),
+      borderRadius: BorderRadius.circular(r.radiusSmall),
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+        padding: EdgeInsets.symmetric(vertical: r.spaceSmall, horizontal: r.paddingSmall),
         decoration: BoxDecoration(
           color: isActive ? Theme.of(context).primaryColor.withOpacity(0.2) : Colors.transparent,
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(r.radiusSmall),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -98,12 +106,13 @@ class NavigationDashboardComponent extends StatelessWidget {
             Icon(
               icon,
               color: isActive ? Theme.of(context).primaryColor : Colors.grey,
+              size: r.iconMedium,
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: r.spaceSmall / 2),
             Text(
               label,
               style: TextStyle(
-                fontSize: 12,
+                fontSize: r.fontSmall,
                 color: isActive ? Theme.of(context).primaryColor : Colors.grey,
                 fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
               ),

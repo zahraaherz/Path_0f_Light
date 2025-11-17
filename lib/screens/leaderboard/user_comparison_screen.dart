@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/leaderboard_providers.dart';
+import '../../utils/responsive.dart';
 
 class UserComparisonScreen extends ConsumerWidget {
   final String userId1;
@@ -16,6 +17,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final r = context.responsive;
     final comparisonAsync = ref.watch(userComparisonProvider([userId1, userId2]));
 
     return Scaffold(
@@ -41,20 +43,22 @@ class UserComparisonScreen extends ConsumerWidget {
                       end: Alignment.bottomRight,
                     ),
                   ),
-                  padding: const EdgeInsets.all(24),
+                  padding: EdgeInsets.all(r.paddingLarge),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       _buildUserAvatar(
+                        r,
                         user1['displayName'] as String,
                         user1['photoURL'] as String?,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.flash_on,
-                        size: 48,
+                        size: r.iconLarge,
                         color: AppTheme.goldAccent,
                       ),
                       _buildUserAvatar(
+                        r,
                         user2['displayName'] as String,
                         user2['photoURL'] as String?,
                       ),
@@ -62,11 +66,12 @@ class UserComparisonScreen extends ConsumerWidget {
                   ),
                 ),
 
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
 
                 // Comparison stats
                 _buildComparisonStat(
                   context,
+                  r,
                   'Points',
                   user1['points'] as int,
                   user2['points'] as int,
@@ -78,6 +83,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
                 _buildComparisonStat(
                   context,
+                  r,
                   'Total Questions',
                   user1['totalQuestions'] as int,
                   user2['totalQuestions'] as int,
@@ -89,6 +95,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
                 _buildComparisonStat(
                   context,
+                  r,
                   'Correct Answers',
                   user1['correctAnswers'] as int,
                   user2['correctAnswers'] as int,
@@ -100,6 +107,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
                 _buildComparisonStat(
                   context,
+                  r,
                   'Current Streak',
                   user1['currentStreak'] as int,
                   user2['currentStreak'] as int,
@@ -110,38 +118,41 @@ class UserComparisonScreen extends ConsumerWidget {
                 ),
 
                 // Accuracy comparison
-                _buildAccuracyComparison(context, user1, user2),
+                _buildAccuracyComparison(context, r, user1, user2),
 
-                const SizedBox(height: 24),
+                SizedBox(height: r.spaceLarge),
               ],
             ),
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.error_outline, size: 64, color: AppTheme.error),
-              const SizedBox(height: 16),
-              Text('Error loading comparison',
-                  style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 8),
-              Text(error.toString(),
-                  style: Theme.of(context).textTheme.bodySmall),
-            ],
-          ),
-        ),
+        error: (error, stack) {
+          final r = context.responsive;
+          return Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.error_outline, size: r.iconXLarge, color: AppTheme.error),
+                SizedBox(height: r.spaceMedium),
+                Text('Error loading comparison',
+                    style: Theme.of(context).textTheme.titleMedium),
+                SizedBox(height: r.spaceSmall),
+                Text(error.toString(),
+                    style: Theme.of(context).textTheme.bodySmall),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
 
-  Widget _buildUserAvatar(String displayName, String? photoURL) {
+  Widget _buildUserAvatar(Responsive r, String displayName, String? photoURL) {
     return Column(
       children: [
         Container(
-          width: 80,
-          height: 80,
+          width: r.iconXLarge + 16,
+          height: r.iconXLarge + 16,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(color: Colors.white, width: 3),
@@ -153,21 +164,21 @@ class UserComparisonScreen extends ConsumerWidget {
                     fit: BoxFit.cover,
                     placeholder: (_, __) => const CircularProgressIndicator(),
                     errorWidget: (_, __, ___) =>
-                        const Icon(Icons.person, size: 40, color: Colors.white),
+                        Icon(Icons.person, size: r.iconLarge, color: Colors.white),
                   )
                 : Container(
                     color: Colors.white.withOpacity(0.2),
-                    child: const Icon(Icons.person, size: 40, color: Colors.white),
+                    child: Icon(Icons.person, size: r.iconLarge, color: Colors.white),
                   ),
           ),
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: r.spaceSmall),
         Text(
           displayName,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
-            fontSize: 16,
+            fontSize: r.fontMedium,
           ),
           textAlign: TextAlign.center,
         ),
@@ -177,6 +188,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
   Widget _buildComparisonStat(
     BuildContext context,
+    Responsive r,
     String label,
     int value1,
     int value2,
@@ -192,17 +204,17 @@ class UserComparisonScreen extends ConsumerWidget {
             : 0;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: r.spaceSmall),
       child: Card(
         elevation: 2,
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: Column(
             children: [
               Row(
                 children: [
-                  Icon(icon, color: color),
-                  const SizedBox(width: 8),
+                  Icon(icon, color: color, size: r.iconMedium),
+                  SizedBox(width: r.spaceSmall),
                   Text(
                     label,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -211,23 +223,25 @@ class UserComparisonScreen extends ConsumerWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Expanded(
                     child: _buildStatValue(
                       context,
+                      r,
                       value1,
                       name1,
                       winner == 1,
                       color,
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: r.spaceMedium),
                   Expanded(
                     child: _buildStatValue(
                       context,
+                      r,
                       value2,
                       name2,
                       winner == 2,
@@ -237,7 +251,7 @@ class UserComparisonScreen extends ConsumerWidget {
                 ],
               ),
               if (winner != 0) ...[
-                const SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   winner == 1 ? '$name1 wins!' : '$name2 wins!',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -255,26 +269,27 @@ class UserComparisonScreen extends ConsumerWidget {
 
   Widget _buildStatValue(
     BuildContext context,
+    Responsive r,
     int value,
     String name,
     bool isWinner,
     Color color,
   ) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: EdgeInsets.all(r.paddingSmall),
       decoration: BoxDecoration(
         color: isWinner ? color.withOpacity(0.1) : Colors.transparent,
         border: Border.all(
           color: isWinner ? color : AppTheme.textSecondary.withOpacity(0.3),
           width: isWinner ? 2 : 1,
         ),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: Column(
         children: [
           if (isWinner)
-            Icon(Icons.emoji_events, color: AppTheme.goldAccent, size: 20),
-          if (isWinner) const SizedBox(height: 4),
+            Icon(Icons.emoji_events, color: AppTheme.goldAccent, size: r.iconSmall),
+          if (isWinner) SizedBox(height: r.spaceSmall / 2),
           Text(
             '$value',
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -289,6 +304,7 @@ class UserComparisonScreen extends ConsumerWidget {
 
   Widget _buildAccuracyComparison(
     BuildContext context,
+    Responsive r,
     Map<String, dynamic> user1,
     Map<String, dynamic> user2,
   ) {
@@ -307,17 +323,17 @@ class UserComparisonScreen extends ConsumerWidget {
             : 0;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: r.spaceSmall),
       child: Card(
         elevation: 2,
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: Column(
             children: [
               Row(
                 children: [
-                  const Icon(Icons.percent, color: AppTheme.success),
-                  const SizedBox(width: 8),
+                  Icon(Icons.percent, color: AppTheme.success, size: r.iconMedium),
+                  SizedBox(width: r.spaceSmall),
                   Text(
                     'Accuracy',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -326,7 +342,7 @@ class UserComparisonScreen extends ConsumerWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -338,7 +354,7 @@ class UserComparisonScreen extends ConsumerWidget {
                           style: Theme.of(context).textTheme.bodyMedium,
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: r.spaceSmall),
                         LinearProgressIndicator(
                           value: accuracy1 / 100,
                           backgroundColor: Colors.grey[300],
@@ -346,7 +362,7 @@ class UserComparisonScreen extends ConsumerWidget {
                             winner == 1 ? AppTheme.success : AppTheme.info,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        SizedBox(height: r.spaceSmall / 2),
                         Text(
                           '${accuracy1.toStringAsFixed(1)}%',
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -357,7 +373,7 @@ class UserComparisonScreen extends ConsumerWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(width: 24),
+                  SizedBox(width: r.spaceLarge),
                   Expanded(
                     child: Column(
                       children: [
@@ -366,7 +382,7 @@ class UserComparisonScreen extends ConsumerWidget {
                           style: Theme.of(context).textTheme.bodyMedium,
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 8),
+                        SizedBox(height: r.spaceSmall),
                         LinearProgressIndicator(
                           value: accuracy2 / 100,
                           backgroundColor: Colors.grey[300],
@@ -374,7 +390,7 @@ class UserComparisonScreen extends ConsumerWidget {
                             winner == 2 ? AppTheme.success : AppTheme.info,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        SizedBox(height: r.spaceSmall / 2),
                         Text(
                           '${accuracy2.toStringAsFixed(1)}%',
                           style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -388,7 +404,7 @@ class UserComparisonScreen extends ConsumerWidget {
                 ],
               ),
               if (winner != 0) ...[
-                const SizedBox(height: 8),
+                SizedBox(height: r.spaceSmall),
                 Text(
                   winner == 1
                       ? '${user1['displayName']} is more accurate!'

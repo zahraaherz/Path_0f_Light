@@ -4,6 +4,7 @@ import 'dart:async';
 import '../../config/theme/app_theme.dart';
 import '../../models/energy/energy_config.dart';
 import '../../providers/energy_providers.dart';
+import '../../utils/responsive.dart';
 
 class EnergyRefillScreen extends ConsumerStatefulWidget {
   const EnergyRefillScreen({super.key});
@@ -32,15 +33,16 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final r = context.responsive;
     final energyStatus = ref.watch(energyStatusProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Energy'),
+        title: Text('Energy'),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.refresh),
+            icon: Icon(Icons.refresh),
             onPressed: () {
               ref.invalidate(energyStatusProvider);
             },
@@ -49,19 +51,19 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
       ),
       body: energyStatus.when(
         data: (status) => SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(r.paddingMedium),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Energy Status Card
               _buildEnergyStatusCard(status.currentEnergy, status.maxEnergy, status.isPremium),
 
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
 
               // Energy Info
               _buildEnergyInfoSection(status.isPremium),
 
-              const SizedBox(height: 24),
+              SizedBox(height: r.spaceLarge),
 
               // Refill Options
               Text(
@@ -70,7 +72,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                       fontWeight: FontWeight.bold,
                     ),
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: r.spaceMedium),
 
               // Natural Refill
               _buildRefillOption(
@@ -84,7 +86,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                 onTap: null, // Can't trigger, happens automatically
               ),
 
-              const SizedBox(height: 12),
+              SizedBox(height: r.spaceSmall),
 
               // Daily Bonus
               _buildRefillOption(
@@ -99,7 +101,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                     : null,
               ),
 
-              const SizedBox(height: 12),
+              SizedBox(height: r.spaceSmall),
 
               // Watch Ad
               _buildRefillOption(
@@ -112,7 +114,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                 onTap: !status.isPremium ? () => _watchAd() : null,
               ),
 
-              const SizedBox(height: 12),
+              SizedBox(height: r.spaceSmall),
 
               // Premium Subscription
               _buildRefillOption(
@@ -124,23 +126,23 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                 onTap: () => _showPremiumDialog(),
               ),
 
-              const SizedBox(height: 32),
+              SizedBox(height: r.spaceXLarge),
 
               // Energy Usage Info
               _buildEnergyUsageInfo(),
             ],
           ),
         ),
-        loading: () => const Center(child: CircularProgressIndicator()),
+        loading: () => Center(child: CircularProgressIndicator()),
         error: (error, stack) => Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.error_outline, size: 64, color: AppTheme.error),
-              const SizedBox(height: 16),
+              Icon(Icons.error_outline, size: r.iconLarge * 2, color: AppTheme.error),
+              SizedBox(height: r.spaceMedium),
               Text('Error loading energy',
                   style: Theme.of(context).textTheme.titleMedium),
-              const SizedBox(height: 8),
+              SizedBox(height: r.spaceSmall),
               Text(error.toString(),
                   style: Theme.of(context).textTheme.bodySmall),
             ],
@@ -151,14 +153,15 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Widget _buildEnergyStatusCard(int current, int max, bool isPremium) {
+    final r = context.responsive;
     final percentage = (current / max).clamp(0.0, 1.0);
 
     return Card(
       elevation: 4,
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: EdgeInsets.all(r.paddingLarge),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
           gradient: LinearGradient(
             colors: [AppTheme.goldAccent, AppTheme.goldLight],
             begin: Alignment.topLeft,
@@ -172,8 +175,8 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.bolt, color: Colors.white, size: 32),
-                    const SizedBox(width: 8),
+                    Icon(Icons.bolt, color: Colors.white, size: r.iconLarge),
+                    SizedBox(width: r.spaceSmall),
                     Text(
                       'Energy',
                       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -185,20 +188,20 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                 ),
                 if (isPremium)
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                    padding: EdgeInsets.symmetric(horizontal: r.paddingSmall, vertical: 6),
                     decoration: BoxDecoration(
                       color: Colors.white.withOpacity(0.3),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(r.radiusLarge),
                     ),
                     child: Row(
-                      children: const [
-                        Icon(Icons.workspace_premium, color: Colors.white, size: 16),
-                        SizedBox(width: 4),
+                      children: [
+                        Icon(Icons.workspace_premium, color: Colors.white, size: r.paddingMedium),
+                        SizedBox(width: r.spaceXSmall),
                         Text(
                           'PREMIUM',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 12,
+                            fontSize: r.fontSmall,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -207,7 +210,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                   ),
               ],
             ),
-            const SizedBox(height: 24),
+            SizedBox(height: r.spaceLarge),
             Text(
               '$current / $max',
               style: Theme.of(context).textTheme.displayLarge?.copyWith(
@@ -215,22 +218,22 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                     fontWeight: FontWeight.bold,
                   ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             ClipRRect(
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(r.radiusSmall),
               child: LinearProgressIndicator(
                 value: percentage,
-                minHeight: 12,
+                minHeight: r.spaceSmall,
                 backgroundColor: Colors.white.withOpacity(0.3),
-                valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
               ),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: r.spaceSmall),
             Text(
               '${(percentage * 100).toStringAsFixed(0)}% Full',
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 14,
+                fontSize: r.fontSmall,
               ),
             ),
           ],
@@ -240,19 +243,20 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Widget _buildEnergyInfoSection(bool isPremium) {
+    final r = context.responsive;
     final refillRate = isPremium ? 10 : 5;
     final minutesPerPoint = isPremium ? 6 : 12;
 
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                const Icon(Icons.info_outline, color: AppTheme.primaryTeal),
-                const SizedBox(width: 8),
+                Icon(Icons.info_outline, color: AppTheme.primaryTeal),
+                SizedBox(width: r.spaceSmall),
                 Text(
                   'Energy Info',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
@@ -261,7 +265,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: r.spaceMedium),
             _buildInfoRow('Refill Rate', '$refillRate per hour'),
             _buildInfoRow('Time per Energy', '$minutesPerPoint minutes'),
             _buildInfoRow('Cost per Question', '${EnergyConfig.energyPerQuestion} energy'),
@@ -273,8 +277,9 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Widget _buildInfoRow(String label, String value) {
+    final r = context.responsive;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
+      padding: EdgeInsets.symmetric(vertical: r.spaceXSmall),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -304,15 +309,16 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
     bool enabled = true,
     VoidCallback? onTap,
   }) {
+    final r = context.responsive;
     return Card(
       color: enabled ? null : Colors.grey[200],
       child: ListTile(
         enabled: enabled,
         leading: Container(
-          padding: const EdgeInsets.all(8),
+          padding: EdgeInsets.all(r.paddingSmall),
           decoration: BoxDecoration(
             color: color.withOpacity(0.2),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(r.radiusSmall),
           ),
           child: Icon(icon, color: color),
         ),
@@ -326,7 +332,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
         subtitle: Text(
           subtitle,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: r.fontSmall,
             color: enabled ? AppTheme.textSecondary : Colors.grey[500],
           ),
         ),
@@ -343,27 +349,28 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Widget _buildEnergyUsageInfo() {
+    final r = context.responsive;
     return Card(
       color: AppTheme.info.withOpacity(0.1),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(r.paddingMedium),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              children: const [
+              children: [
                 Icon(Icons.lightbulb_outline, color: AppTheme.info),
-                SizedBox(width: 8),
+                SizedBox(width: r.spaceSmall),
                 Text(
                   'How Energy Works',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 16,
+                    fontSize: r.fontMedium,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.spaceSmall),
             _buildBulletPoint('Each question costs ${EnergyConfig.energyPerQuestion} energy'),
             _buildBulletPoint('Energy refills naturally over time'),
             _buildBulletPoint('Complete quizzes to earn bonus energy'),
@@ -376,16 +383,17 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Widget _buildBulletPoint(String text) {
+    final r = context.responsive;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4),
+      padding: EdgeInsets.symmetric(vertical: r.spaceXSmall),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('• ', style: TextStyle(fontSize: 16)),
+          Text('• ', style: TextStyle(fontSize: r.fontMedium)),
           Expanded(
             child: Text(
               text,
-              style: const TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: r.fontSmall),
             ),
           ),
         ],
@@ -461,13 +469,14 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   void _showPremiumDialog() {
+    final r = context.responsive;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: Row(
-          children: const [
+          children: [
             Icon(Icons.workspace_premium, color: AppTheme.goldAccent),
-            SizedBox(width: 8),
+            SizedBox(width: r.spaceSmall),
             Text('Premium Subscription'),
           ],
         ),
@@ -475,17 +484,17 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Upgrade to Premium for:',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: r.spaceSmall),
             _buildBulletPoint('200 max energy (2x)'),
             _buildBulletPoint('10 energy per hour (2x refill speed)'),
             _buildBulletPoint('No ads required'),
             _buildBulletPoint('Exclusive badges'),
-            const SizedBox(height: 16),
-            const Text(
+            SizedBox(height: r.spaceMedium),
+            Text(
               'Payment integration coming soon!',
               style: TextStyle(
                 fontStyle: FontStyle.italic,
@@ -497,18 +506,18 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text('Cancel'),
           ),
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop();
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
+                SnackBar(
                   content: Text('Payment integration coming soon!'),
                 ),
               );
             },
-            child: const Text('Upgrade'),
+            child: Text('Upgrade'),
           ),
         ],
       ),
