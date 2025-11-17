@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import '../../models/collection/collection_item.dart';
+import '../../l10n/app_localizations.dart';
 
 /// Card widget to display a collection item
 class CollectionItemCard extends StatelessWidget {
@@ -30,6 +31,7 @@ class CollectionItemCard extends StatelessWidget {
 
   /// Build list card with swipe actions
   Widget _buildListCard(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Slidable(
       key: ValueKey(item.id),
       endActionPane: ActionPane(
@@ -40,14 +42,14 @@ class CollectionItemCard extends StatelessWidget {
             backgroundColor: item.isFavorite ? Colors.grey : Colors.amber,
             foregroundColor: Colors.white,
             icon: item.isFavorite ? Icons.star_border : Icons.star,
-            label: item.isFavorite ? 'Unfavorite' : 'Favorite',
+            label: item.isFavorite ? l10n.unfavorite : l10n.favorite,
           ),
           SlidableAction(
             onPressed: (context) => onDelete(),
             backgroundColor: Colors.red,
             foregroundColor: Colors.white,
             icon: Icons.delete,
-            label: 'Delete',
+            label: l10n.delete,
           ),
         ],
       ),

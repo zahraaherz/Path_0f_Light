@@ -168,6 +168,14 @@
       }
     }
   },
+  "loginStreakMilestone": "Alhamdulillah! You reached a {count}-day login streak!",
+  "@loginStreakMilestone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
 
   "@_comment_leaderboard": "===== Leaderboard =====",
   "topLearners": "Top Learners",
@@ -440,5 +448,139 @@
   "adl": "Adl",
   "nubuwwah": "Nubuwwah",
   "imamate": "Imamate",
-  "qiyamah": "Qiyamah"
+  "qiyamah": "Qiyamah",
+
+  "@_comment_collection_screen": "===== Collection Screen =====",
+  "myCollection": "My Collection",
+  "signUp": "Sign Up",
+  "changeViewMode": "Change view mode",
+  "all": "All",
+  "favorites": "Favorites",
+  "yourCollectionIsEmpty": "Your collection is empty",
+  "noItemsInThisCategory": "No items in this category",
+  "addDuasSurahsZiyarats": "Add Du'as, Surahs, Ziyarats and more",
+  "addItem": "Add Item",
+  "noFavoritesYet": "No favorites yet",
+  "addItemsToFavorites": "Add items to your favorites by tapping the star icon",
+  "tapStarIconToAdd": "Tap the star icon to add items to favorites",
+  "deleteItem": "Delete Item",
+  "areYouSureDelete": "Are you sure you want to delete this item?",
+  "areYouSureDeleteItem": "Are you sure you want to delete {title}?",
+  "@areYouSureDeleteItem": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "itemDeleted": "Item deleted successfully",
+  "searchCollection": "Search Collection",
+  "searchByTitleTextTags": "Search by title, text, or tags...",
+  "searchResults": "{count} results",
+  "@searchResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noResultsFound": "No results found",
+  "itemsSaved": "{count} items saved",
+  "@itemsSaved": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAsGuest": "{count} days as guest",
+  "@daysAsGuest": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "benefitsOfAccount": "Benefits of creating an account:",
+  "syncAcrossDevices": "Sync across devices",
+  "neverLoseData": "Never lose your data",
+  "accessFromAllDevices": "Access from all devices",
+  "backupAndRestore": "Backup and restore",
+  "maybeLater": "Maybe Later",
+  "favorite": "Favorite",
+  "unfavorite": "Unfavorite",
+
+  "@_comment_checklist": "===== Checklist =====",
+  "todaysProgress": "Today's Progress",
+  "completedOf": "{completed} of {total} completed",
+  "@completedOf": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "percentComplete": "{percent}% complete",
+  "@percentComplete": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "noItemsInTodaysChecklist": "No items in today's checklist",
+  "addItemsFromCollection": "Add items from your collection",
+
+  "@_comment_collection_dialog": "===== Collection Dialog =====",
+  "addToCollection": "Add to Collection",
+  "type": "Type",
+  "selectType": "Select Type",
+  "category": "Category",
+  "titleEnglish": "Title (English)",
+  "enterTitleEnglish": "Enter title in English",
+  "titleRequired": "Title is required",
+  "titleArabic": "Title (Arabic)",
+  "enterTitleArabic": "Enter title in Arabic",
+  "arabicTextRequired": "Arabic Text (Required)",
+  "enterArabicText": "Enter Arabic text",
+  "arabicTextIsRequired": "Arabic text is required",
+  "enterTranslation": "Enter translation",
+  "enterTransliteration": "Enter transliteration",
+  "enterSource": "Enter source reference",
+  "personalNotes": "Personal Notes",
+  "addPersonalNotes": "Add your personal notes",
+  "tags": "Tags",
+  "separateTagsWithCommas": "Separate tags with commas",
+  "itemAddedSuccessfully": "Item added successfully",
+
+  "@_comment_collection_types": "===== Collection Item Types =====",
+  "dua": "Du'a",
+  "surah": "Surah",
+  "ayah": "Ayah",
+  "ziyarat": "Ziyarat",
+  "passage": "Passage",
+  "dhikr": "Dhikr",
+  "custom": "Custom",
+
+  "@_comment_collection_categories": "===== Collection Categories =====",
+  "morning": "Morning",
+  "evening": "Evening",
+  "friday": "Friday",
+  "ramadhan": "Ramadhan",
+  "muharram": "Muharram",
+  "safar": "Safar",
+  "rajab": "Rajab",
+  "shaban": "Sha'ban",
+  "daily": "Daily",
+  "weekly": "Weekly",
+  "monthly": "Monthly",
+  "specialOccasions": "Special Occasions",
+  "protection": "Protection",
+  "forgiveness": "Forgiveness",
+  "gratitude": "Gratitude",
+  "healing": "Healing",
+  "guidance": "Guidance"
 }

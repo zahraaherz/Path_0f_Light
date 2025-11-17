@@ -8,6 +8,7 @@ import '../../widgets/collection/collection_item_card.dart';
 import '../../widgets/collection/checklist_view_widget.dart';
 import '../../widgets/collection/add_to_collection_dialog.dart';
 import '../auth/register_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 /// My Collection Screen - User's Personal Library
 class CollectionScreen extends ConsumerStatefulWidget {
@@ -41,10 +42,11 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
     final viewMode = ref.watch(collectionViewModeProvider);
     final searchQuery = ref.watch(collectionSearchQueryProvider);
     final isGuest = ref.watch(isGuestUserProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('My Collection'),
+        title: Text(l10n.myCollection),
         elevation: 0,
         actions: [
           // Show "Sign Up" button for guest users
@@ -52,7 +54,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
             TextButton.icon(
               onPressed: () => _showUpgradeDialog(context),
               icon: const Icon(Icons.person_add, color: Colors.white),
-              label: const Text('Sign Up', style: TextStyle(color: Colors.white)),
+              label: Text(l10n.signUp, style: const TextStyle(color: Colors.white)),
             ),
           // View mode toggle
           IconButton(
@@ -72,24 +74,24 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                       : 'list';
               ref.read(collectionViewModeProvider.notifier).state = nextMode;
             },
-            tooltip: 'Change view mode',
+            tooltip: l10n.changeViewMode,
           ),
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () => _showSearchDialog(context),
-            tooltip: 'Search',
+            tooltip: l10n.search,
           ),
         ],
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
-          tabs: const [
-            Tab(text: 'All'),
-            Tab(text: 'Favorites'),
-            Tab(text: 'Morning'),
-            Tab(text: 'Evening'),
-            Tab(text: 'Friday'),
-            Tab(text: 'Ramadhan'),
+          tabs: [
+            Tab(text: l10n.all),
+            Tab(text: l10n.favorites),
+            Tab(text: l10n.morning),
+            Tab(text: l10n.evening),
+            Tab(text: l10n.friday),
+            Tab(text: l10n.ramadhan),
           ],
         ),
       ),
@@ -113,7 +115,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => _showAddDialog(context),
         icon: const Icon(Icons.add),
-        label: const Text('Add to Collection'),
+        label: Text(l10n.addToCollection),
       ),
     );
   }
@@ -132,6 +134,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   /// Build items list
   Widget _buildItemsList(CollectionCategory? category) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final collectionItemsAsync = category == null
         ? ref.watch(userCollectionItemsProvider)
         : ref.watch(collectionItemsByCategoryProvider(category));
@@ -145,11 +148,11 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
           children: [
             const Icon(Icons.error_outline, size: 64, color: Colors.red),
             SizedBox(height: r.spaceMedium),
-            Text('Error: $error'),
+            Text('${l10n.error}: $error'),
             SizedBox(height: r.spaceMedium),
             ElevatedButton(
               onPressed: () => ref.refresh(userCollectionItemsProvider),
-              child: const Text('Retry'),
+              child: Text(l10n.retry),
             ),
           ],
         ),
@@ -168,13 +171,13 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                 SizedBox(height: r.spaceMedium),
                 Text(
                   category == null
-                      ? 'Your collection is empty'
-                      : 'No items in this category',
+                      ? l10n.yourCollectionIsEmpty
+                      : l10n.noItemsInThisCategory,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(height: r.spaceSmall),
                 Text(
-                  'Add du\'as, surahs, ziyarats, and more',
+                  l10n.addDuasSurahsZiyarats,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: Theme.of(context)
                             .colorScheme
@@ -186,7 +189,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                 ElevatedButton.icon(
                   onPressed: () => _showAddDialog(context),
                   icon: const Icon(Icons.add),
-                  label: const Text('Add Item'),
+                  label: Text(l10n.addItem),
                 ),
               ],
             ),
@@ -263,12 +266,13 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   /// Build favorites view
   Widget _buildFavoritesView() {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final favoritesAsync = ref.watch(favoriteCollectionItemsProvider);
     final viewMode = ref.watch(collectionViewModeProvider);
 
     return favoritesAsync.when(
       loading: () => const Center(child: CircularProgressIndicator()),
-      error: (error, stack) => Center(child: Text('Error: $error')),
+      error: (error, stack) => Center(child: Text('${l10n.error}: $error')),
       data: (items) {
         if (items.isEmpty) {
           return Center(
@@ -282,12 +286,12 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                 ),
                 SizedBox(height: r.spaceMedium),
                 Text(
-                  'No favorites yet',
+                  l10n.noFavoritesYet,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(height: r.spaceSmall),
                 Text(
-                  'Tap the star icon on items to add them here',
+                  l10n.tapStarIconToAdd,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: Theme.of(context)
                             .colorScheme
@@ -320,15 +324,16 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Show search dialog
   void _showSearchDialog(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Search Collection'),
+        title: Text(l10n.searchCollection),
         content: TextField(
           controller: _searchController,
-          decoration: const InputDecoration(
-            hintText: 'Search by title, text, or tags...',
-            prefixIcon: Icon(Icons.search),
+          decoration: InputDecoration(
+            hintText: l10n.searchByTitleTextTags,
+            prefixIcon: const Icon(Icons.search),
           ),
           autofocus: true,
           onSubmitted: (value) {
@@ -340,7 +345,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () {
@@ -349,7 +354,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               Navigator.of(context).pop();
               _showSearchResults(context);
             },
-            child: const Text('Search'),
+            child: Text(l10n.search),
           ),
         ],
       ),
@@ -387,28 +392,29 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
 
   /// Delete item
   void _deleteItem(CollectionItem item) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Item'),
-        content: Text('Are you sure you want to delete "${item.title}"?'),
+        title: Text(l10n.deleteItem),
+        content: Text(l10n.areYouSureDeleteItem(item.title)),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () {
               ref.read(deleteCollectionItemProvider(item.id));
               Navigator.of(context).pop();
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Item deleted')),
+                SnackBar(content: Text(l10n.itemDeleted)),
               );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.red,
             ),
-            child: const Text('Delete'),
+            child: Text(l10n.delete),
           ),
         ],
       ),
@@ -418,6 +424,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
   /// Show upgrade dialog for guest users
   void _showUpgradeDialog(BuildContext context) async {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final guestService = ref.read(guestAccessServiceProvider);
     final upgradeMessage = await guestService.getUpgradeMessage();
     final stats = await guestService.getGuestStats();
@@ -435,7 +442,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               size: 32,
             ),
             SizedBox(width: r.spaceSmall),
-            const Text('Create Account'),
+            Text(l10n.createAccount),
           ],
         ),
         content: Column(
@@ -453,7 +460,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               _buildStatRow(
                 context,
                 Icons.collections_bookmark,
-                '${stats.itemsCreated} items saved',
+                l10n.itemsSaved(stats.itemsCreated),
               ),
               SizedBox(height: r.spaceSmall),
             ],
@@ -461,27 +468,27 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
               _buildStatRow(
                 context,
                 Icons.calendar_today,
-                '${stats.daysSinceCreation} days as guest',
+                l10n.daysAsGuest(stats.daysSinceCreation),
               ),
               SizedBox(height: r.spaceMedium),
             ],
             const Divider(),
             SizedBox(height: r.spaceMedium),
             Text(
-              'Benefits of creating an account:',
+              l10n.benefitsOfAccount,
               style: Theme.of(context).textTheme.titleSmall,
             ),
             SizedBox(height: r.spaceSmall),
-            _buildBenefitRow(context, 'Sync across all devices'),
-            _buildBenefitRow(context, 'Never lose your data'),
-            _buildBenefitRow(context, 'Access from web, phone, and tablet'),
-            _buildBenefitRow(context, 'Backup and restore'),
+            _buildBenefitRow(context, l10n.syncAcrossDevices),
+            _buildBenefitRow(context, l10n.neverLoseData),
+            _buildBenefitRow(context, l10n.accessFromAllDevices),
+            _buildBenefitRow(context, l10n.backupAndRestore),
           ],
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Maybe Later'),
+            child: Text(l10n.maybeLater),
           ),
           ElevatedButton(
             onPressed: () {
@@ -492,7 +499,7 @@ class _CollectionScreenState extends ConsumerState<CollectionScreen>
                 ),
               );
             },
-            child: const Text('Create Account'),
+            child: Text(l10n.createAccount),
           ),
         ],
       ),
@@ -536,25 +543,34 @@ class _SearchResultsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final searchQuery = ref.watch(collectionSearchQueryProvider);
     final searchResultsAsync =
         ref.watch(searchCollectionItemsProvider(searchQuery));
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Search: "$searchQuery"'),
+    return searchResultsAsync.when(
+      loading: () => Scaffold(
+        appBar: AppBar(
+          title: Text(l10n.searchCollection),
+        ),
+        body: const Center(child: CircularProgressIndicator()),
       ),
-      body: searchResultsAsync.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, stack) => Center(child: Text('Error: $error')),
-        data: (items) {
-          if (items.isEmpty) {
-            return const Center(
-              child: Text('No results found'),
-            );
-          }
-
-          return ListView.builder(
+      error: (error, stack) => Scaffold(
+        appBar: AppBar(
+          title: Text(l10n.searchCollection),
+        ),
+        body: Center(child: Text('${l10n.error}: $error')),
+      ),
+      data: (items) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(l10n.searchResults(items.length, searchQuery)),
+          ),
+          body: items.isEmpty
+              ? Center(
+                  child: Text(l10n.noResultsFound),
+                )
+              : ListView.builder(
             padding: EdgeInsets.all(r.paddingMedium),
             itemCount: items.length,
             itemBuilder: (context, index) {
@@ -579,9 +595,9 @@ class _SearchResultsScreen extends ConsumerWidget {
                 },
               );
             },
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
@@ -598,6 +614,7 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         title: Text(item.title),
@@ -641,7 +658,7 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
             if (item.translation != null) ...[
               SizedBox(height: r.spaceLarge),
               Text(
-                'Translation',
+                l10n.translation,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: r.spaceSmall),
@@ -653,7 +670,7 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
             if (item.transliteration != null) ...[
               SizedBox(height: r.spaceLarge),
               Text(
-                'Transliteration',
+                l10n.transliteration,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: r.spaceSmall),
@@ -680,7 +697,7 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
             if (item.notes != null && item.notes!.isNotEmpty) ...[
               SizedBox(height: r.spaceLarge),
               Text(
-                'Notes',
+                l10n.notes,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               SizedBox(height: r.spaceSmall),

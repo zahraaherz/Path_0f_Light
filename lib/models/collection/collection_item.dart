@@ -90,78 +90,78 @@ extension CollectionItemExtensions on CollectionItem {
     return title;
   }
 
-  /// Get category display name
+  /// Get category display name (Arabic)
   String getCategoryName() {
     switch (category) {
       case CollectionCategory.morning:
-        return 'Morning';
+        return 'الصباح';
       case CollectionCategory.evening:
-        return 'Evening';
+        return 'المساء';
       case CollectionCategory.friday:
-        return 'Friday';
+        return 'الجمعة';
       case CollectionCategory.ramadhan:
-        return 'Ramadhan';
+        return 'رمضان';
       case CollectionCategory.muharram:
-        return 'Muharram';
+        return 'محرم';
       case CollectionCategory.safar:
-        return 'Safar';
+        return 'صفر';
       case CollectionCategory.rajab:
-        return 'Rajab';
+        return 'رجب';
       case CollectionCategory.shaban:
-        return 'Sha\'ban';
+        return 'شعبان';
       case CollectionCategory.daily:
-        return 'Daily';
+        return 'يومي';
       case CollectionCategory.weekly:
-        return 'Weekly';
+        return 'أسبوعي';
       case CollectionCategory.monthly:
-        return 'Monthly';
+        return 'شهري';
       case CollectionCategory.special:
-        return 'Special Occasions';
+        return 'مناسبات خاصة';
       case CollectionCategory.protection:
-        return 'Protection';
+        return 'حماية';
       case CollectionCategory.forgiveness:
-        return 'Forgiveness';
+        return 'مغفرة';
       case CollectionCategory.gratitude:
-        return 'Gratitude';
+        return 'شكر';
       case CollectionCategory.healing:
-        return 'Healing';
+        return 'شفاء';
       case CollectionCategory.guidance:
-        return 'Guidance';
+        return 'هداية';
       case CollectionCategory.custom:
-        return 'Custom';
+        return 'مخصص';
     }
   }
 
-  /// Get type display name
+  /// Get type display name (Arabic)
   String getTypeName() {
     switch (type) {
       case CollectionItemType.dua:
-        return 'Du\'a';
+        return 'دعاء';
       case CollectionItemType.surah:
-        return 'Surah';
+        return 'سورة';
       case CollectionItemType.ayah:
-        return 'Ayah';
+        return 'آية';
       case CollectionItemType.ziyarat:
-        return 'Ziyarat';
+        return 'زيارة';
       case CollectionItemType.hadith:
-        return 'Hadith';
+        return 'حديث';
       case CollectionItemType.passage:
-        return 'Passage';
+        return 'مقطع';
       case CollectionItemType.dhikr:
-        return 'Dhikr';
+        return 'ذكر';
       case CollectionItemType.custom:
-        return 'Custom';
+        return 'مخصص';
     }
   }
 
-  /// Get source reference (e.g., "Surah 1, Ayah 5")
+  /// Get source reference (e.g., "سورة 1، آية 5")
   String? get sourceReference {
     if (surahNumber != null && ayahNumber != null) {
-      return 'Surah $surahNumber, Ayah $ayahNumber';
+      return 'سورة $surahNumber، آية $ayahNumber';
     } else if (surahNumber != null) {
-      return 'Surah $surahNumber';
+      return 'سورة $surahNumber';
     } else if (bookReference != null && pageNumber != null) {
-      return '$bookReference, Page $pageNumber';
+      return '$bookReference، صفحة $pageNumber';
     } else if (bookReference != null) {
       return bookReference;
     }

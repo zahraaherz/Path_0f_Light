@@ -105,6 +105,8 @@ class _EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isArabic = Localizations.localeOf(context).languageCode == 'ar';
+
     return Container(
       width: 280,
       margin: const EdgeInsets.only(right: 12),
@@ -156,7 +158,7 @@ class _EventCard extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          // Title
+          // Title - show Arabic title prominently, English subtitle only if not Arabic locale
           Text(
             event.arabicTitle,
             style: Theme.of(context).textTheme.titleSmall?.copyWith(
