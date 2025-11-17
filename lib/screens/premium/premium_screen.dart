@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/purchase_providers.dart';
-import '../../services/in_app_purchase_service.dart';
 import '../../utils/responsive.dart';
+import 'purchase_history_screen.dart';
 
 class PremiumScreen extends ConsumerStatefulWidget {
   const PremiumScreen({super.key});
@@ -17,18 +17,9 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   bool _isProcessing = false;
 
   @override
-  void initState() {
-    super.initState();
-    // Initialize purchase service
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(purchaseControllerProvider).initialize();
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
     final r = context.responsive;
-    final productsAsync = ref.watch(availableProductsProvider);
+    final packagesAsync = ref.watch(availablePackagesProvider);
     final hasPremiumAsync = ref.watch(hasPremiumAccessProvider);
 
     return Scaffold(
@@ -36,6 +27,17 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
         title: const Text('Premium'),
         centerTitle: true,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.history),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const PurchaseHistoryScreen(),
+                ),
+              );
+            },
+            tooltip: 'Purchase History',
+          ),
           TextButton(
             onPressed: _restorePurchases,
             child: const Text('Restore'),
@@ -61,7 +63,12 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
             hasPremiumAsync.when(
               data: (hasPremium) {
                 if (hasPremium) {
-                  return _buildPremiumActiveCard(r);
+                  return Column(
+                    children: [
+                      _buildPremiumActiveCard(r),
+                      SizedBox(height: r.spaceLarge),
+                    ],
+                  );
                 }
                 return const SizedBox.shrink();
               },
@@ -69,13 +76,13 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
               error: (_, __) => const SizedBox.shrink(),
             ),
 
-            // Available Products
-            productsAsync.when(
-              data: (products) {
-                if (products.isEmpty) {
+            // Available Packages
+            packagesAsync.when(
+              data: (packages) {
+                if (packages.isEmpty) {
                   return _buildNoProductsCard(r);
                 }
-                return _buildProductsList(products, r);
+                return _buildProductsList(packages, r);
               },
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => _buildErrorCard(error.toString(), r),
@@ -257,7 +264,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
     );
   }
 
-  Widget _buildProductsList(List<ProductDetails> products, Responsive r) {
+  Widget _buildProductsList(List<Package> packages, Responsive r) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -268,27 +275,28 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
               ),
         ),
         SizedBox(height: r.spaceMedium),
-        ...products.map((product) => _buildProductCard(product, r)),
+        ...packages.map((package) => _buildPackageCard(package, r)),
       ],
     );
   }
 
-  Widget _buildProductCard(ProductDetails product, Responsive r) {
-    // Determine if this is the recommended plan
-    final isRecommended = product.id == InAppPurchaseService.premiumYearlyId;
+  Widget _buildPackageCard(Package package, Responsive r) {
+    // Determine if this is the recommended plan (annual)
+    final isRecommended = package.packageType == PackageType.annual;
 
     String planName = 'Premium';
     String planDuration = '';
     String savingsText = '';
 
-    if (product.id == InAppPurchaseService.premiumMonthlyId) {
+    // Determine package details based on type
+    if (package.packageType == PackageType.monthly) {
       planName = 'Monthly Premium';
       planDuration = 'Billed monthly';
-    } else if (product.id == InAppPurchaseService.premiumYearlyId) {
+    } else if (package.packageType == PackageType.annual) {
       planName = 'Yearly Premium';
       planDuration = 'Billed annually';
       savingsText = 'Save 30%';
-    } else if (product.id == InAppPurchaseService.premiumLifetimeId) {
+    } else if (package.packageType == PackageType.lifetime) {
       planName = 'Lifetime Premium';
       planDuration = 'One-time payment';
       savingsText = 'Best Value';
@@ -304,7 +312,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
             : BorderSide.none,
       ),
       child: InkWell(
-        onTap: _isProcessing ? null : () => _purchaseProduct(product),
+        onTap: _isProcessing ? null : () => _purchasePackage(package),
         borderRadius: BorderRadius.circular(r.radiusMedium),
         child: Padding(
           padding: EdgeInsets.all(r.paddingLarge),
@@ -338,7 +346,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        product.price,
+                        package.storeProduct.priceString,
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: AppTheme.goldAccent,
@@ -401,7 +409,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: _isProcessing ? null : () => _purchaseProduct(product),
+                  onPressed: _isProcessing ? null : () => _purchasePackage(package),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: isRecommended ? AppTheme.goldAccent : null,
                     padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
@@ -450,7 +458,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
             ),
             SizedBox(height: r.spaceMedium),
             ElevatedButton(
-              onPressed: () => ref.invalidate(availableProductsProvider),
+              onPressed: () => ref.invalidate(availablePackagesProvider),
               child: const Text('Retry'),
             ),
           ],
@@ -509,35 +517,33 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
     );
   }
 
-  Future<void> _purchaseProduct(ProductDetails product) async {
+  Future<void> _purchasePackage(Package package) async {
     setState(() => _isProcessing = true);
 
     try {
       final controller = ref.read(purchaseControllerProvider);
-      final success = await controller.purchaseProduct(product.id);
+      await controller.purchasePackage(package);
 
       if (!mounted) return;
 
-      if (success) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Purchase initiated. Please complete the payment.'),
-            backgroundColor: AppTheme.success,
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Failed to initiate purchase. Please try again.'),
-            backgroundColor: AppTheme.error,
-          ),
-        );
-      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Purchase successful! Thank you for supporting Path of Light.'),
+          backgroundColor: AppTheme.success,
+          duration: Duration(seconds: 3),
+        ),
+      );
     } catch (e) {
       if (!mounted) return;
+
+      String errorMessage = 'Purchase failed. Please try again.';
+      if (e.toString().contains('cancelled')) {
+        errorMessage = 'Purchase was cancelled.';
+      }
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Error: ${e.toString()}'),
+          content: Text(errorMessage),
           backgroundColor: AppTheme.error,
         ),
       );

@@ -34,6 +34,11 @@ export {
   checkSubscriptionStatus,
 } from "./energySystem";
 
+// Export RevenueCat Webhook Handler
+export {
+  revenueCatWebhook,
+} from "./revenueCatWebhooks";
+
 // Export Quiz Management Functions (UPDATED for Energy System)
 export {
   getQuizQuestions,
