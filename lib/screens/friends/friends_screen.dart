@@ -61,7 +61,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                 Icon(
                   Icons.people_outline,
                   size: r.iconLarge * 2.5,
-                  color: AppTheme.textSecondary.withOpacity(0.5),
+                  color: AppTheme.textSecondary.withValues(alpha: 0.5),
                 ),
                 SizedBox(height: r.spaceLarge),
                 Text(
@@ -115,7 +115,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
           controller: _tabController,
           indicatorColor: Colors.white,
           labelColor: Colors.white,
-          unselectedLabelColor: Colors.white.withOpacity(0.7),
+          unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
           tabs: const [
             Tab(text: 'Friends', icon: Icon(Icons.people)),
             Tab(text: 'Requests', icon: Icon(Icons.person_add)),
@@ -154,7 +154,7 @@ class _FriendsListTab extends ConsumerWidget {
                 Icon(
                   Icons.people_outline,
                   size: r.iconLarge * 2,
-                  color: AppTheme.textSecondary.withOpacity(0.5),
+                  color: AppTheme.textSecondary.withValues(alpha: 0.5),
                 ),
                 SizedBox(height: r.spaceMedium),
                 Text(
@@ -167,7 +167,7 @@ class _FriendsListTab extends ConsumerWidget {
                 Text(
                   'Search for users to add as friends',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppTheme.textSecondary.withOpacity(0.7),
+                        color: AppTheme.textSecondary.withValues(alpha: 0.7),
                       ),
                 ),
               ],
@@ -431,7 +431,7 @@ class _FriendCard extends ConsumerWidget {
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
-          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
@@ -545,7 +545,7 @@ class _FriendRequestCard extends ConsumerWidget {
           backgroundImage: friend.friendPhotoURL != null
               ? CachedNetworkImageProvider(friend.friendPhotoURL!)
               : null,
-          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
           child: friend.friendPhotoURL == null
               ? Text(
                   (friend.friendUsername ?? 'U')[0].toUpperCase(),
@@ -622,7 +622,7 @@ class _UserSearchResultCard extends ConsumerWidget {
           radius: r.iconLarge * 0.875,
           backgroundImage:
               user.photoURL != null ? CachedNetworkImageProvider(user.photoURL!) : null,
-          backgroundColor: AppTheme.primaryTeal.withOpacity(0.1),
+          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
           child: user.photoURL == null
               ? Text(
                   user.username[0].toUpperCase(),

@@ -6,7 +6,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../providers/library_providers.dart';
 import '../../providers/auth_providers.dart';
-import 'book_reader_screen.dart';
+import 'book_reading_screen.dart';
 import '../auth/login_screen.dart';
 import '../../utils/responsive.dart';
 
@@ -89,7 +89,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                     : null,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(r.radiusMedium),
-                  borderSide: BorderSide(color: AppTheme.primaryTeal.withOpacity(0.3)),
+                  borderSide: BorderSide(color: AppTheme.primaryTeal.withValues(alpha:0.3)),
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(r.radiusMedium),
@@ -131,7 +131,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                               ? Icons.menu_book
                               : Icons.search_off,
                           size: r.iconLarge * 2,
-                          color: AppTheme.textSecondary.withOpacity(0.5),
+                          color: AppTheme.textSecondary.withValues(alpha:0.5),
                         ),
                         SizedBox(height: r.spaceMedium),
                         Text(
@@ -233,7 +233,7 @@ class _BookGridCard extends ConsumerWidget {
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha:0.1),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -252,18 +252,18 @@ class _BookGridCard extends ConsumerWidget {
                         imageUrl: book.coverImageUrl!,
                         fit: BoxFit.cover,
                         placeholder: (context, url) => Container(
-                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          color: AppTheme.primaryTeal.withValues(alpha:0.1),
                           child: Center(
                             child: CircularProgressIndicator(color: AppTheme.primaryTeal),
                           ),
                         ),
                         errorWidget: (context, url, error) => Container(
-                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          color: AppTheme.primaryTeal.withValues(alpha:0.1),
                           child: Icon(Icons.menu_book, size: 48, color: AppTheme.primaryTeal),
                         ),
                       )
                     : Container(
-                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                        color: AppTheme.primaryTeal.withValues(alpha:0.1),
                         child: Icon(Icons.menu_book, size: 48, color: AppTheme.primaryTeal),
                       ),
               ),
@@ -342,11 +342,14 @@ class _BookGridCard extends ConsumerWidget {
   }
 
   void _openBook(BuildContext context, WidgetRef ref) async {
-    // Navigate to BookReaderScreen
+    // Navigate to BookReadingScreen which will load paragraphs and then open reader
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => BookReaderScreen(book: book),
+        builder: (context) => BookReadingScreen(
+          bookId: book.id,
+          bookTitle: book.titleAr,
+        ),
       ),
     );
   }
@@ -374,7 +377,7 @@ class _BookListCard extends ConsumerWidget {
                   placeholder: (context, url) => Container(
                     width: 60,
                     height: 80,
-                    color: AppTheme.primaryTeal.withOpacity(0.1),
+                    color: AppTheme.primaryTeal.withValues(alpha:0.1),
                     child: Center(
                       child: CircularProgressIndicator(color: AppTheme.primaryTeal, strokeWidth: 2),
                     ),
@@ -382,14 +385,14 @@ class _BookListCard extends ConsumerWidget {
                   errorWidget: (context, url, error) => Container(
                     width: 60,
                     height: 80,
-                    color: AppTheme.primaryTeal.withOpacity(0.1),
+                    color: AppTheme.primaryTeal.withValues(alpha:0.1),
                     child: Icon(Icons.menu_book, color: AppTheme.primaryTeal),
                   ),
                 )
               : Container(
                   width: 60,
                   height: 80,
-                  color: AppTheme.primaryTeal.withOpacity(0.1),
+                  color: AppTheme.primaryTeal.withValues(alpha:0.1),
                   child: Icon(Icons.menu_book, color: AppTheme.primaryTeal),
                 ),
         ),
@@ -420,11 +423,14 @@ class _BookListCard extends ConsumerWidget {
         ),
         trailing: Icon(Icons.chevron_right, color: AppTheme.primaryTeal),
         onTap: () {
-          // Navigate to book reader
+          // Navigate to book reading screen which will load paragraphs
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => BookReaderScreen(book: book),
+              builder: (context) => BookReadingScreen(
+                bookId: book.id,
+                bookTitle: book.titleAr,
+              ),
             ),
           );
         },

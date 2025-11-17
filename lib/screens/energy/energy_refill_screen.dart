@@ -190,7 +190,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: r.paddingSmall, vertical: 6),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.3),
+                      color: Colors.white.withValues(alpha: 0.3),
                       borderRadius: BorderRadius.circular(r.radiusLarge),
                     ),
                     child: Row(
@@ -224,7 +224,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
               child: LinearProgressIndicator(
                 value: percentage,
                 minHeight: r.spaceSmall,
-                backgroundColor: Colors.white.withOpacity(0.3),
+                backgroundColor: Colors.white.withValues(alpha: 0.3),
                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
               ),
             ),
@@ -317,7 +317,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
         leading: Container(
           padding: EdgeInsets.all(r.paddingSmall),
           decoration: BoxDecoration(
-            color: color.withOpacity(0.2),
+            color: color.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(r.radiusSmall),
           ),
           child: Icon(icon, color: color),
@@ -351,7 +351,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   Widget _buildEnergyUsageInfo() {
     final r = context.responsive;
     return Card(
-      color: AppTheme.info.withOpacity(0.1),
+      color: AppTheme.info.withValues(alpha: 0.1),
       child: Padding(
         padding: EdgeInsets.all(r.paddingMedium),
         child: Column(

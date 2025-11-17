@@ -105,9 +105,9 @@ class _QuizQuestionScreenState extends ConsumerState<QuizQuestionScreen> {
                         children: [
                           Icon(Icons.local_fire_department, color: AppTheme.goldAccent, size: r.iconSmall),
                           SizedBox(width: r.spaceSmall),
-                          const Text(
+                          Text(
                             'Current Streak: ${quizState.answers.last.currentStreak}',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               color: AppTheme.goldAccent,
                             ),
@@ -305,9 +305,9 @@ class _QuizQuestionScreenState extends ConsumerState<QuizQuestionScreen> {
                                         color: currentResult!.isCorrect ? AppTheme.success : AppTheme.error,
                                       ),
                                     ),
-                                    const Text(
+                                    Text(
                                       '+${currentResult!.pointsEarned} points',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: AppTheme.goldAccent,
                                       ),

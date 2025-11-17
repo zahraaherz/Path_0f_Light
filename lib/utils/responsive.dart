@@ -31,6 +31,7 @@ class Responsive {
   double get paddingSmall => isMobile ? 12.0 : 16.0;
   double get paddingMedium => isMobile ? 16.0 : 24.0;
   double get paddingLarge => isMobile ? 20.0 : 32.0;
+  double get paddingXLarge => isMobile ? 24.0 : 40.0;
 
   /// Responsive font sizes
   double get fontSmall => isMobile ? 12.0 : 14.0;
@@ -46,9 +47,11 @@ class Responsive {
   double get iconXLarge => isMobile ? 64.0 : 80.0;
 
   /// Responsive spacing
+  double get spaceXSmall => isMobile ? 4.0 : 6.0;
   double get spaceSmall => isMobile ? 8.0 : 12.0;
   double get spaceMedium => isMobile ? 16.0 : 20.0;
   double get spaceLarge => isMobile ? 24.0 : 32.0;
+  double get spaceXLarge => isMobile ? 32.0 : 48.0;
 
   /// Responsive border radius
   double get radiusSmall => isMobile ? 8.0 : 12.0;
