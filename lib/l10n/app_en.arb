@@ -240,8 +240,10 @@
   "gregorianDate": "Gregorian Date",
   "dailyDua": "Daily Du'a",
   "duaOfTheDay": "Du'a of the Day",
+  "dailyDuas": "Daily Du'as",
   "spiritualGoals": "Spiritual Goals",
   "dailyChecklist": "Daily Checklist",
+  "dailySpiritualChecklist": "Daily Spiritual Checklist",
   "reciteQuran": "Recite Quran",
   "performSalah": "Perform Salah",
   "makeDua": "Make Du'a",
@@ -261,6 +263,32 @@
   "the14Masoomeen": "The 14 Masoomeen",
   "collections": "Collections",
   "bismillahTranslation": "In the name of Allah, the Most Gracious, the Most Merciful",
+  "islamicEvents": "Islamic Events",
+  "upcomingEvents": "Upcoming Events",
+  "nextPrayer": "Next prayer",
+  "unableToLoadPrayerTimes": "Unable to load prayer times",
+  "checkLocationPermissions": "Please check location permissions",
+  "arabicText": "Arabic Text",
+  "transliteration": "Transliteration",
+  "translation": "Translation",
+  "meaning": "Meaning",
+  "tafsir": "Tafsir",
+  "benefits": "Benefits",
+  "playAudio": "Play Audio",
+  "addToFavorites": "Add to Favorites",
+  "removeFromFavorites": "Remove from Favorites",
+  "completedTasks": "{completed} of {total} completed",
+  "@completedTasks": {
+    "placeholders": {
+      "completed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "minutes": "min",
   "pathOfLight": "Path of Light",
   "lightOfKnowledge": "Light of Knowledge",
 
