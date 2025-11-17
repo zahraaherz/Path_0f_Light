@@ -5,6 +5,7 @@ import '../../config/theme/app_theme.dart';
 import '../../providers/language_providers.dart';
 import '../../providers/theme_providers.dart';
 import '../../providers/auth_controller.dart';
+import '../../providers/calendar_providers.dart';
 import '../../l10n/app_localizations.dart' as app_l10n;
 
 /// Settings screen with language switcher, theme options, and more
@@ -120,6 +121,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ),
             ],
           ),
+
+          SizedBox(height: r.spaceLarge),
+
+          // Islamic Events Notifications Section
+          _buildSectionHeader('Islamic Events & Celebrations', theme),
+          SizedBox(height: r.spaceSmall),
+          _buildEventNotificationsCard(context, r, theme),
 
           SizedBox(height: r.spaceLarge),
 
@@ -366,6 +374,136 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           TextButton(
             onPressed: () => Navigator.pop(context),
             child: Text(l10n.cancel),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Build event notifications card with settings
+  Widget _buildEventNotificationsCard(BuildContext context, Responsive r, ThemeData theme) {
+    final eventNotificationsAsync = ref.watch(eventNotificationsEnabledProvider);
+    final daysBeforeAsync = ref.watch(notificationDaysBeforeProvider);
+
+    return _buildSettingsCard(
+      context,
+      children: [
+        // Enable/Disable Event Notifications
+        eventNotificationsAsync.when(
+          data: (enabled) => SwitchListTile(
+            secondary: const Icon(Icons.event, color: AppTheme.primaryTeal),
+            title: const Text('Event Notifications'),
+            subtitle: const Text('Get notified about upcoming Islamic celebrations'),
+            value: enabled,
+            activeColor: AppTheme.primaryTeal,
+            onChanged: (value) async {
+              await ref
+                  .read(eventNotificationSettingsProvider.notifier)
+                  .toggleNotifications(value);
+              // Refresh the providers
+              ref.invalidate(eventNotificationsEnabledProvider);
+            },
+          ),
+          loading: () => const ListTile(
+            leading: CircularProgressIndicator(),
+            title: Text('Loading...'),
+          ),
+          error: (_, __) => const ListTile(
+            leading: Icon(Icons.error),
+            title: Text('Error loading settings'),
+          ),
+        ),
+        const Divider(),
+
+        // Days Before Notification Setting
+        daysBeforeAsync.when(
+          data: (days) => ListTile(
+            leading: const Icon(Icons.notifications_active, color: AppTheme.primaryTeal),
+            title: const Text('Notification Timing'),
+            subtitle: Text('Notify me $days ${days == 1 ? 'day' : 'days'} before event'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => _showDaysBeforeDialog(context, days),
+          ),
+          loading: () => const ListTile(
+            leading: CircularProgressIndicator(),
+            title: Text('Loading...'),
+          ),
+          error: (_, __) => const ListTile(
+            leading: Icon(Icons.error),
+            title: Text('Error loading settings'),
+          ),
+        ),
+        const Divider(),
+
+        // View All Events
+        ListTile(
+          leading: const Icon(Icons.calendar_month, color: AppTheme.primaryTeal),
+          title: const Text('View All Events'),
+          subtitle: const Text('Browse all Islamic celebrations'),
+          trailing: const Icon(Icons.chevron_right),
+          onTap: () {
+            // Navigate to events calendar screen (to be implemented)
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Full calendar view coming soon!')),
+            );
+          },
+        ),
+      ],
+    );
+  }
+
+  /// Show days before notification dialog
+  void _showDaysBeforeDialog(BuildContext context, int currentDays) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Notification Timing'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Choose when to be notified before an event:'),
+            const SizedBox(height: 16),
+            ...List.generate(8, (index) {
+              final days = [0, 1, 2, 3, 5, 7, 14, 30][index];
+              String label;
+              if (days == 0) {
+                label = 'On the day';
+              } else if (days == 1) {
+                label = '1 day before';
+              } else if (days == 7) {
+                label = '1 week before';
+              } else if (days == 14) {
+                label = '2 weeks before';
+              } else if (days == 30) {
+                label = '1 month before';
+              } else {
+                label = '$days days before';
+              }
+
+              return RadioListTile<int>(
+                title: Text(label),
+                value: days,
+                groupValue: currentDays,
+                activeColor: AppTheme.primaryTeal,
+                onChanged: (value) async {
+                  if (value != null) {
+                    await ref
+                        .read(eventNotificationSettingsProvider.notifier)
+                        .updateDaysBefore(value);
+                    // Refresh the provider
+                    ref.invalidate(notificationDaysBeforeProvider);
+                    Navigator.pop(context);
+                  }
+                },
+              );
+            }).toList(),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
           ),
         ],
       ),

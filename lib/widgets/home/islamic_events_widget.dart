@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import '../../models/islamic_events/islamic_event.dart';
-import '../../data/mock_data.dart';
+import '../../providers/calendar_providers.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class IslamicEventsWidget extends StatelessWidget {
+class IslamicEventsWidget extends ConsumerWidget {
   const IslamicEventsWidget({super.key});
 
   Color _getEventColor(IslamicEventType type) {
@@ -164,18 +166,20 @@ class _EventCard extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          if (!isArabic) ...[
-            const SizedBox(height: 4),
+          const SizedBox(height: 4),
+          Text(
+            event.title,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  fontWeight: FontWeight.w600,
+                ),
+          ),
+
+          const SizedBox(height: 8),
+
+          // Description
+          if (event.description != null)
             Text(
-              event.title,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
-            ),
-            const SizedBox(height: 8),
-            // Description
-            Text(
-              event.description,
+              event.description!,
               style: Theme.of(context).textTheme.bodySmall?.copyWith(
                     color: AppTheme.textSecondary,
                     height: 1.4,
@@ -183,8 +187,6 @@ class _EventCard extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-          ] else
-            const SizedBox(height: 8),
         ],
       ),
     );

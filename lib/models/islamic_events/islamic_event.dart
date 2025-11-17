@@ -19,9 +19,11 @@ class IslamicEvent with _$IslamicEvent {
     required String id,
     required String title,
     required String arabicTitle,
-    required String description,
+    String? description,
     required IslamicEventType type,
     required String hijriDate, // e.g., "10 Muharram"
+    int? hijriMonth, // Month number (1-12)
+    int? hijriDay, // Day number
     String? gregorianDate, // Approximate or calculated
     String? significance,
     List<String>? recommendations,

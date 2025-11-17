@@ -10,6 +10,7 @@ import 'providers/language_providers.dart';
 import 'providers/theme_providers.dart';
 import 'screens/home/home_screen.dart';
 import 'services/notification_service.dart';
+import 'services/islamic_calendar_service.dart';
 import 'l10n/app_localizations.dart';
 
 // Import firebase_options if it exists
@@ -55,12 +56,26 @@ void main() async {
 
     // Initialize notification service
     // Note: This will request permissions and register FCM token
+    NotificationService? notificationService;
     try {
-      final notificationService = NotificationService();
+      notificationService = NotificationService();
       await notificationService.initialize();
     } catch (e) {
       debugPrint('Notification service initialization error: $e');
       // Non-critical, app can continue without notifications
+    }
+
+    // Initialize Islamic calendar service
+    // This will schedule notifications for upcoming Islamic events
+    if (notificationService != null) {
+      try {
+        final calendarService = IslamicCalendarService(notificationService);
+        await calendarService.initialize();
+        debugPrint('Islamic calendar service initialized');
+      } catch (e) {
+        debugPrint('Islamic calendar service initialization error: $e');
+        // Non-critical, app can continue without event notifications
+      }
     }
   } catch (e) {
     debugPrint('Firebase initialization error: $e');
