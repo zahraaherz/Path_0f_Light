@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/dua/dua_model.dart';
 import '../../data/mock_data.dart';
 
@@ -30,6 +31,7 @@ class _SpiritualChecklistWidgetState extends State<SpiritualChecklistWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final completedCount = items.where((item) => item.isCompleted).length;
     final progress = items.isEmpty ? 0.0 : completedCount / items.length;
 
@@ -68,13 +70,13 @@ class _SpiritualChecklistWidgetState extends State<SpiritualChecklistWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Daily Spiritual Checklist',
+                      l10n.dailySpiritualChecklist,
                       style: Theme.of(context).textTheme.titleSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                     ),
                     Text(
-                      '$completedCount of ${items.length} completed',
+                      l10n.completedTasks(completedCount, items.length),
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppTheme.textSecondary,
                           ),

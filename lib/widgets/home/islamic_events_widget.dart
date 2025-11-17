@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/islamic_events/islamic_event.dart';
 import '../../providers/calendar_providers.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -39,10 +40,9 @@ class IslamicEventsWidget extends ConsumerWidget {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    // Get upcoming events from the calendar provider
-    final events = ref.watch(upcomingEventsProvider(6));
+    final events = MockData.upcomingEvents;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

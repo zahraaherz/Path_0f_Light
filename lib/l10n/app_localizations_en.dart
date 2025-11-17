@@ -565,10 +565,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get duaOfTheDay => 'Du\'a of the Day';
 
   @override
+  String get dailyDuas => 'Daily Du\'as';
+
+  @override
   String get spiritualGoals => 'Spiritual Goals';
 
   @override
   String get dailyChecklist => 'Daily Checklist';
+
+  @override
+  String get dailySpiritualChecklist => 'Daily Spiritual Checklist';
 
   @override
   String get reciteQuran => 'Recite Quran';
@@ -624,6 +630,56 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get bismillahTranslation =>
       'In the name of Allah, the Most Gracious, the Most Merciful';
+
+  @override
+  String get islamicEvents => 'Islamic Events';
+
+  @override
+  String get upcomingEvents => 'Upcoming Events';
+
+  @override
+  String get nextPrayer => 'Next prayer';
+
+  @override
+  String get unableToLoadPrayerTimes => 'Unable to load prayer times';
+
+  @override
+  String get checkLocationPermissions => 'Please check location permissions';
+
+  @override
+  String get arabicText => 'Arabic Text';
+
+  @override
+  String get transliteration => 'Transliteration';
+
+  @override
+  String get translation => 'Translation';
+
+  @override
+  String get meaning => 'Meaning';
+
+  @override
+  String get tafsir => 'Tafsir';
+
+  @override
+  String get benefits => 'Benefits';
+
+  @override
+  String get playAudio => 'Play Audio';
+
+  @override
+  String get addToFavorites => 'Add to Favorites';
+
+  @override
+  String get removeFromFavorites => 'Remove from Favorites';
+
+  @override
+  String completedTasks(int completed, int total) {
+    return '$completed of $total completed';
+  }
+
+  @override
+  String get minutes => 'min';
 
   @override
   String get pathOfLight => 'Path of Light';

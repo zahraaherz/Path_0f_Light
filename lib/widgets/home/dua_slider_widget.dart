@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/dua/dua_model.dart';
 import '../../data/mock_data.dart';
 
@@ -8,6 +9,7 @@ class DuaSliderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final duas = MockData.duaList;
 
     return Column(
@@ -16,22 +18,11 @@ class DuaSliderWidget extends StatelessWidget {
         // Header
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Daily Du\'as',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-              Text(
-                'الأدعية اليومية',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: AppTheme.textSecondary,
-                    ),
-              ),
-            ],
+          child: Text(
+            l10n.dailyDuas,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
           ),
         ),
 
@@ -78,6 +69,7 @@ class _DuaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final color = _getCategoryColor(dua.category);
 
     return GestureDetector(
@@ -163,7 +155,7 @@ class _DuaCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  'Tap to view full',
+                  l10n.readMore,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: color,
                         fontWeight: FontWeight.w600,
@@ -200,6 +192,8 @@ class _DuaDetailSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return DraggableScrollableSheet(
       initialChildSize: 0.9,
       minChildSize: 0.5,
@@ -253,8 +247,7 @@ class _DuaDetailSheet extends StatelessWidget {
 
                       // Arabic text
                       _Section(
-                        title: 'Arabic Text',
-                        arabicTitle: 'النص العربي',
+                        title: l10n.arabicText,
                         child: Text(
                           dua.arabicText,
                           style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -271,8 +264,7 @@ class _DuaDetailSheet extends StatelessWidget {
 
                       // Transliteration
                       _Section(
-                        title: 'Transliteration',
-                        arabicTitle: 'الكتابة بالحروف اللاتينية',
+                        title: l10n.transliteration,
                         child: Text(
                           dua.transliteration,
                           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -286,8 +278,7 @@ class _DuaDetailSheet extends StatelessWidget {
 
                       // Translation
                       _Section(
-                        title: 'Translation',
-                        arabicTitle: 'الترجمة',
+                        title: l10n.translation,
                         child: Text(
                           dua.translation,
                           style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -299,8 +290,7 @@ class _DuaDetailSheet extends StatelessWidget {
                       if (dua.meaning != null) ...[
                         const SizedBox(height: 20),
                         _Section(
-                          title: 'Meaning',
-                          arabicTitle: 'المعنى',
+                          title: l10n.meaning,
                           child: Text(
                             dua.meaning!,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -314,8 +304,7 @@ class _DuaDetailSheet extends StatelessWidget {
                       if (dua.tafsir != null) ...[
                         const SizedBox(height: 20),
                         _Section(
-                          title: 'Tafsir',
-                          arabicTitle: 'التفسير',
+                          title: l10n.tafsir,
                           child: Text(
                             dua.tafsir!,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -329,8 +318,7 @@ class _DuaDetailSheet extends StatelessWidget {
                       if (dua.benefits != null) ...[
                         const SizedBox(height: 20),
                         _Section(
-                          title: 'Benefits',
-                          arabicTitle: 'الفوائد',
+                          title: l10n.benefits,
                           child: Text(
                             dua.benefits!,
                             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -358,7 +346,7 @@ class _DuaDetailSheet extends StatelessWidget {
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                'Source: ${dua.source}',
+                                '${l10n.source}: ${dua.source}',
                                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                                       fontWeight: FontWeight.w600,
                                       color: AppTheme.islamicGreen,
@@ -380,7 +368,7 @@ class _DuaDetailSheet extends StatelessWidget {
                               // Play audio
                             },
                             icon: const Icon(Icons.play_arrow),
-                            label: const Text('Play Audio'),
+                            label: Text(l10n.playAudio),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: AppTheme.primaryTeal,
                               padding: const EdgeInsets.symmetric(vertical: 14),
@@ -403,7 +391,7 @@ class _DuaDetailSheet extends StatelessWidget {
                           icon: Icon(
                             dua.isFavorite ? Icons.favorite : Icons.favorite_border,
                           ),
-                          label: Text(dua.isFavorite ? 'Remove from Favorites' : 'Add to Favorites'),
+                          label: Text(dua.isFavorite ? l10n.removeFromFavorites : l10n.addToFavorites),
                           style: OutlinedButton.styleFrom(
                             foregroundColor: AppTheme.primaryTeal,
                             side: const BorderSide(color: AppTheme.primaryTeal),
@@ -428,12 +416,10 @@ class _DuaDetailSheet extends StatelessWidget {
 
 class _Section extends StatelessWidget {
   final String title;
-  final String arabicTitle;
   final Widget child;
 
   const _Section({
     required this.title,
-    required this.arabicTitle,
     required this.child,
   });
 
@@ -442,22 +428,11 @@ class _Section extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(width: 8),
-            Text(
-              arabicTitle,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppTheme.textSecondary,
-                  ),
-            ),
-          ],
+        Text(
+          title,
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
         ),
         const SizedBox(height: 8),
         child,

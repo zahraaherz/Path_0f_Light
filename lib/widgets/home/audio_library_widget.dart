@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/dua/dua_model.dart';
 import '../../data/mock_data.dart';
 
@@ -8,6 +9,7 @@ class AudioLibraryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final audios = MockData.audioRecitations;
 
     return Column(
@@ -19,27 +21,16 @@ class AudioLibraryWidget extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Audio Library',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                  Text(
-                    'مكتبة الصوتيات',
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: AppTheme.textSecondary,
-                        ),
-                  ),
-                ],
+              Text(
+                l10n.audioLibrary,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               TextButton(
                 onPressed: () {},
                 child: Text(
-                  'View All',
+                  l10n.viewAll,
                   style: TextStyle(
                     color: AppTheme.primaryTeal,
                     fontWeight: FontWeight.w600,
@@ -66,6 +57,8 @@ class _AudioCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
       padding: const EdgeInsets.all(16),
@@ -138,7 +131,7 @@ class _AudioCard extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Text(
-                '${audio.durationMinutes} min',
+                '${audio.durationMinutes} ${l10n.minutes}',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       fontWeight: FontWeight.w600,
                       color: AppTheme.textSecondary,
