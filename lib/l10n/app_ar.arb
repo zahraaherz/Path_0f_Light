@@ -822,6 +822,8 @@
   "startBattleToSeeHistory": "ابدأ معركة لرؤية تاريخك",
   "challengeFriend": "تحدي صديق",
   "addFriendsToChallenge": "أضف أصدقاء لتحديهم",
+  "noFriends": "لا يوجد أصدقاء",
+  "customizeSettings": "تخصيص الإعدادات",
   "challenge": "تحدي",
   "leaveBattle": "مغادرة المعركة؟",
   "leaveBattleWarning": "إذا غادرت، ستخسر هذه المعركة",

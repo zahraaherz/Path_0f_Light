@@ -1218,6 +1218,104 @@ class AppLocalizationsEn extends AppLocalizations {
   String get upgradeToPremium => 'Upgrade to Premium';
 
   @override
+  String get premiumTitle => 'Path of Light Premium';
+
+  @override
+  String get premiumSubtitle => 'Unlock the full Islamic learning experience';
+
+  @override
+  String get premiumFeatures => 'Premium Features';
+
+  @override
+  String get maxEnergy => 'Max Energy';
+
+  @override
+  String get maxEnergyDesc => 'Double your learning capacity';
+
+  @override
+  String get fasterRefill => 'Faster Refill';
+
+  @override
+  String get fasterRefillDesc => 'energy per hour instead of';
+
+  @override
+  String get adFreeExperience => 'Ad-Free Experience';
+
+  @override
+  String get adFreeDesc => 'No interruptions, pure learning';
+
+  @override
+  String get exclusiveBadges => 'Exclusive Badges';
+
+  @override
+  String get exclusiveBadgesDesc => 'Show your premium status';
+
+  @override
+  String get prioritySupport => 'Priority Support';
+
+  @override
+  String get prioritySupportDesc => 'Get help when you need it';
+
+  @override
+  String get premiumActive => 'Premium Active';
+
+  @override
+  String get thankYouSupport => 'Thank you for your support!';
+
+  @override
+  String get chooseYourPlan => 'Choose Your Plan';
+
+  @override
+  String get monthlyPremium => 'Monthly Premium';
+
+  @override
+  String get yearlyPremium => 'Yearly Premium';
+
+  @override
+  String get lifetimePremium => 'Lifetime Premium';
+
+  @override
+  String get billedMonthly => 'Billed monthly';
+
+  @override
+  String get billedAnnually => 'Billed annually';
+
+  @override
+  String get oneTimePayment => 'One-time payment';
+
+  @override
+  String savePercent(int percent) {
+    return 'Save $percent%';
+  }
+
+  @override
+  String get bestValue => 'Best Value';
+
+  @override
+  String get mostPopular => 'Most Popular';
+
+  @override
+  String get subscribeNow => 'Subscribe Now';
+
+  @override
+  String get subscriptionTerms =>
+      'By subscribing, you agree to our Terms of Service and Privacy Policy. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.';
+
+  @override
+  String get manageSubscription =>
+      'Manage your subscription in your device settings.';
+
+  @override
+  String get noProductsAvailable => 'No products available';
+
+  @override
+  String get checkConnection =>
+      'Please check your internet connection and try again.';
+
+  @override
+  String get errorLoadingProducts => 'Error loading products';
+
+  @override
   String get errorLoadingData => 'Error loading data';
 
   @override
@@ -2089,4 +2187,116 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get goHome => 'Go to Home';
+
+  @override
+  String get battleArena => 'Battle Arena';
+
+  @override
+  String get quickMatch => 'Quick Match';
+
+  @override
+  String get quickMatchDesc => 'Random opponent, start immediately';
+
+  @override
+  String get friendChallenge => 'Friend Challenge';
+
+  @override
+  String get friendChallengeDesc => 'Challenge a specific friend';
+
+  @override
+  String get tournament => 'Tournament';
+
+  @override
+  String get tournamentDesc => 'Compete in brackets for prizes';
+
+  @override
+  String get findingOpponent => 'Finding Opponent';
+
+  @override
+  String get searchingForOpponent => 'Searching for opponent...';
+
+  @override
+  String get cancelSearch => 'Cancel Search';
+
+  @override
+  String get battleSettings => 'Battle Settings';
+
+  @override
+  String get chooseBattleMode => 'Choose Battle Mode';
+
+  @override
+  String get pendingChallenges => 'Pending Challenges';
+
+  @override
+  String get activeBattles => 'Active Battles';
+
+  @override
+  String get battleHistory => 'Battle History';
+
+  @override
+  String get noBattlesYet => 'No battles yet';
+
+  @override
+  String get startBattleToSeeHistory => 'Start a battle to see your history';
+
+  @override
+  String get challengeFriend => 'Challenge a Friend';
+
+  @override
+  String get addFriendsToChallenge => 'Add friends to challenge them';
+
+  @override
+  String get noFriends => 'No friends';
+
+  @override
+  String get customizeSettings => 'Customize Settings';
+
+  @override
+  String get leaveBattle => 'Leave Battle?';
+
+  @override
+  String get leaveBattleWarning => 'If you leave, you will lose this battle';
+
+  @override
+  String get leave => 'Leave';
+
+  @override
+  String get submitAnswer => 'Submit Answer';
+
+  @override
+  String get victory => 'Victory!';
+
+  @override
+  String get defeat => 'Defeat';
+
+  @override
+  String get backToHome => 'Back to Home';
+
+  @override
+  String get won => 'Won';
+
+  @override
+  String get lost => 'Lost';
+
+  @override
+  String get tournaments => 'Tournaments';
+
+  @override
+  String get noTournamentsAvailable => 'No tournaments available';
+
+  @override
+  String get checkBackLater => 'Check back later for upcoming tournaments';
+
+  @override
+  String get joinTournament => 'Join Tournament';
+
+  @override
+  String get tournamentFull => 'Tournament Full';
+
+  @override
+  String get viewTournament => 'View Tournament';
+
+  @override
+  String get matchmakingTip =>
+      'Tip: Speed matters! Answer quickly for bonus points.';
 }

@@ -130,19 +130,19 @@ class FriendChallengeScreen extends ConsumerWidget {
                       margin: EdgeInsets.only(bottom: r.spaceMedium),
                       child: ListTile(
                         leading: CircleAvatar(
-                          backgroundImage: friend.photoURL != null
-                              ? NetworkImage(friend.photoURL!)
+                          backgroundImage: friend.friendPhotoURL != null
+                              ? NetworkImage(friend.friendPhotoURL!)
                               : null,
-                          child: friend.photoURL == null
+                          child: friend.friendPhotoURL == null
                               ? const Icon(Icons.person)
                               : null,
                         ),
                         title: Text(
-                          friend.displayName,
+                          friend.friendDisplayName ?? friend.friendUsername ?? 'Friend',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
-                          '${friend.totalPoints} points • ${friend.booksRead} books read',
+                          '${friend.friendTotalPoints ?? 0} points • ${friend.friendBooksRead ?? 0} books read',
                         ),
                         trailing: ElevatedButton(
                           onPressed: () async {

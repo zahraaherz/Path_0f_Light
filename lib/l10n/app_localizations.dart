@@ -2474,6 +2474,192 @@ abstract class AppLocalizations {
   /// **'Upgrade to Premium'**
   String get upgradeToPremium;
 
+  /// No description provided for @premiumTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Path of Light Premium'**
+  String get premiumTitle;
+
+  /// No description provided for @premiumSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock the full Islamic learning experience'**
+  String get premiumSubtitle;
+
+  /// No description provided for @premiumFeatures.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium Features'**
+  String get premiumFeatures;
+
+  /// No description provided for @maxEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'Max Energy'**
+  String get maxEnergy;
+
+  /// No description provided for @maxEnergyDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Double your learning capacity'**
+  String get maxEnergyDesc;
+
+  /// No description provided for @fasterRefill.
+  ///
+  /// In en, this message translates to:
+  /// **'Faster Refill'**
+  String get fasterRefill;
+
+  /// No description provided for @fasterRefillDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'energy per hour instead of'**
+  String get fasterRefillDesc;
+
+  /// No description provided for @adFreeExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Ad-Free Experience'**
+  String get adFreeExperience;
+
+  /// No description provided for @adFreeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'No interruptions, pure learning'**
+  String get adFreeDesc;
+
+  /// No description provided for @exclusiveBadges.
+  ///
+  /// In en, this message translates to:
+  /// **'Exclusive Badges'**
+  String get exclusiveBadges;
+
+  /// No description provided for @exclusiveBadgesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Show your premium status'**
+  String get exclusiveBadgesDesc;
+
+  /// No description provided for @prioritySupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Priority Support'**
+  String get prioritySupport;
+
+  /// No description provided for @prioritySupportDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Get help when you need it'**
+  String get prioritySupportDesc;
+
+  /// No description provided for @premiumActive.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium Active'**
+  String get premiumActive;
+
+  /// No description provided for @thankYouSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for your support!'**
+  String get thankYouSupport;
+
+  /// No description provided for @chooseYourPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Your Plan'**
+  String get chooseYourPlan;
+
+  /// No description provided for @monthlyPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly Premium'**
+  String get monthlyPremium;
+
+  /// No description provided for @yearlyPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Yearly Premium'**
+  String get yearlyPremium;
+
+  /// No description provided for @lifetimePremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifetime Premium'**
+  String get lifetimePremium;
+
+  /// No description provided for @billedMonthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Billed monthly'**
+  String get billedMonthly;
+
+  /// No description provided for @billedAnnually.
+  ///
+  /// In en, this message translates to:
+  /// **'Billed annually'**
+  String get billedAnnually;
+
+  /// No description provided for @oneTimePayment.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time payment'**
+  String get oneTimePayment;
+
+  /// No description provided for @savePercent.
+  ///
+  /// In en, this message translates to:
+  /// **'Save {percent}%'**
+  String savePercent(int percent);
+
+  /// No description provided for @bestValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Best Value'**
+  String get bestValue;
+
+  /// No description provided for @mostPopular.
+  ///
+  /// In en, this message translates to:
+  /// **'Most Popular'**
+  String get mostPopular;
+
+  /// No description provided for @subscribeNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscribe Now'**
+  String get subscribeNow;
+
+  /// No description provided for @subscriptionTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'By subscribing, you agree to our Terms of Service and Privacy Policy. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.'**
+  String get subscriptionTerms;
+
+  /// No description provided for @manageSubscription.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage your subscription in your device settings.'**
+  String get manageSubscription;
+
+  /// No description provided for @noProductsAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'No products available'**
+  String get noProductsAvailable;
+
+  /// No description provided for @checkConnection.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check your internet connection and try again.'**
+  String get checkConnection;
+
+  /// No description provided for @errorLoadingProducts.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading products'**
+  String get errorLoadingProducts;
+
   /// No description provided for @errorLoadingData.
   ///
   /// In en, this message translates to:
@@ -4111,6 +4297,228 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Go to Home'**
   String get goHome;
+
+  /// No description provided for @battleArena.
+  ///
+  /// In en, this message translates to:
+  /// **'Battle Arena'**
+  String get battleArena;
+
+  /// No description provided for @quickMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Match'**
+  String get quickMatch;
+
+  /// No description provided for @quickMatchDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Random opponent, start immediately'**
+  String get quickMatchDesc;
+
+  /// No description provided for @friendChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Friend Challenge'**
+  String get friendChallenge;
+
+  /// No description provided for @friendChallengeDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge a specific friend'**
+  String get friendChallengeDesc;
+
+  /// No description provided for @tournament.
+  ///
+  /// In en, this message translates to:
+  /// **'Tournament'**
+  String get tournament;
+
+  /// No description provided for @tournamentDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Compete in brackets for prizes'**
+  String get tournamentDesc;
+
+  /// No description provided for @findingOpponent.
+  ///
+  /// In en, this message translates to:
+  /// **'Finding Opponent'**
+  String get findingOpponent;
+
+  /// No description provided for @searchingForOpponent.
+  ///
+  /// In en, this message translates to:
+  /// **'Searching for opponent...'**
+  String get searchingForOpponent;
+
+  /// No description provided for @cancelSearch.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel Search'**
+  String get cancelSearch;
+
+  /// No description provided for @battleSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Battle Settings'**
+  String get battleSettings;
+
+  /// No description provided for @chooseBattleMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Battle Mode'**
+  String get chooseBattleMode;
+
+  /// No description provided for @pendingChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending Challenges'**
+  String get pendingChallenges;
+
+  /// No description provided for @activeBattles.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Battles'**
+  String get activeBattles;
+
+  /// No description provided for @battleHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Battle History'**
+  String get battleHistory;
+
+  /// No description provided for @noBattlesYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No battles yet'**
+  String get noBattlesYet;
+
+  /// No description provided for @startBattleToSeeHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Start a battle to see your history'**
+  String get startBattleToSeeHistory;
+
+  /// No description provided for @challengeFriend.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge a Friend'**
+  String get challengeFriend;
+
+  /// No description provided for @addFriendsToChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Add friends to challenge them'**
+  String get addFriendsToChallenge;
+
+  /// No description provided for @noFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'No friends'**
+  String get noFriends;
+
+  /// No description provided for @customizeSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Customize Settings'**
+  String get customizeSettings;
+
+  /// No description provided for @leaveBattle.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave Battle?'**
+  String get leaveBattle;
+
+  /// No description provided for @leaveBattleWarning.
+  ///
+  /// In en, this message translates to:
+  /// **'If you leave, you will lose this battle'**
+  String get leaveBattleWarning;
+
+  /// No description provided for @leave.
+  ///
+  /// In en, this message translates to:
+  /// **'Leave'**
+  String get leave;
+
+  /// No description provided for @submitAnswer.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit Answer'**
+  String get submitAnswer;
+
+  /// No description provided for @victory.
+  ///
+  /// In en, this message translates to:
+  /// **'Victory!'**
+  String get victory;
+
+  /// No description provided for @defeat.
+  ///
+  /// In en, this message translates to:
+  /// **'Defeat'**
+  String get defeat;
+
+  /// No description provided for @backToHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Home'**
+  String get backToHome;
+
+  /// No description provided for @won.
+  ///
+  /// In en, this message translates to:
+  /// **'Won'**
+  String get won;
+
+  /// No description provided for @lost.
+  ///
+  /// In en, this message translates to:
+  /// **'Lost'**
+  String get lost;
+
+  /// No description provided for @tournaments.
+  ///
+  /// In en, this message translates to:
+  /// **'Tournaments'**
+  String get tournaments;
+
+  /// No description provided for @noTournamentsAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'No tournaments available'**
+  String get noTournamentsAvailable;
+
+  /// No description provided for @checkBackLater.
+  ///
+  /// In en, this message translates to:
+  /// **'Check back later for upcoming tournaments'**
+  String get checkBackLater;
+
+  /// No description provided for @joinTournament.
+  ///
+  /// In en, this message translates to:
+  /// **'Join Tournament'**
+  String get joinTournament;
+
+  /// No description provided for @tournamentFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Tournament Full'**
+  String get tournamentFull;
+
+  /// No description provided for @viewTournament.
+  ///
+  /// In en, this message translates to:
+  /// **'View Tournament'**
+  String get viewTournament;
+
+  /// No description provided for @matchmakingTip.
+  ///
+  /// In en, this message translates to:
+  /// **'Tip: Speed matters! Answer quickly for bonus points.'**
+  String get matchmakingTip;
 }
 
 class _AppLocalizationsDelegate

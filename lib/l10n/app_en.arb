@@ -1033,6 +1033,8 @@
   "startBattleToSeeHistory": "Start a battle to see your history",
   "challengeFriend": "Challenge a Friend",
   "addFriendsToChallenge": "Add friends to challenge them",
+  "noFriends": "No friends",
+  "customizeSettings": "Customize Settings",
   "challenge": "Challenge",
   "leaveBattle": "Leave Battle?",
   "leaveBattleWarning": "If you leave, you will lose this battle",

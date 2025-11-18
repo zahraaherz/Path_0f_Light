@@ -1216,6 +1216,103 @@ class AppLocalizationsAr extends AppLocalizations {
   String get upgradeToPremium => 'الترقية إلى النسخة المميزة';
 
   @override
+  String get premiumTitle => 'طريق النور المميزة';
+
+  @override
+  String get premiumSubtitle => 'افتح تجربة التعلم الإسلامي الكاملة';
+
+  @override
+  String get premiumFeatures => 'الميزات المميزة';
+
+  @override
+  String get maxEnergy => 'أقصى طاقة';
+
+  @override
+  String get maxEnergyDesc => 'ضاعف قدرتك على التعلم';
+
+  @override
+  String get fasterRefill => 'إعادة ملء أسرع';
+
+  @override
+  String get fasterRefillDesc => 'طاقة في الساعة بدلاً من';
+
+  @override
+  String get adFreeExperience => 'تجربة خالية من الإعلانات';
+
+  @override
+  String get adFreeDesc => 'لا انقطاعات، تعلم نقي';
+
+  @override
+  String get exclusiveBadges => 'شارات حصرية';
+
+  @override
+  String get exclusiveBadgesDesc => 'أظهر حالتك المميزة';
+
+  @override
+  String get prioritySupport => 'دعم ذو أولوية';
+
+  @override
+  String get prioritySupportDesc => 'احصل على المساعدة عندما تحتاجها';
+
+  @override
+  String get premiumActive => 'النسخة المميزة نشطة';
+
+  @override
+  String get thankYouSupport => 'شكراً لدعمك!';
+
+  @override
+  String get chooseYourPlan => 'اختر خطتك';
+
+  @override
+  String get monthlyPremium => 'النسخة المميزة الشهرية';
+
+  @override
+  String get yearlyPremium => 'النسخة المميزة السنوية';
+
+  @override
+  String get lifetimePremium => 'النسخة المميزة مدى الحياة';
+
+  @override
+  String get billedMonthly => 'يتم الدفع شهرياً';
+
+  @override
+  String get billedAnnually => 'يتم الدفع سنوياً';
+
+  @override
+  String get oneTimePayment => 'دفعة لمرة واحدة';
+
+  @override
+  String savePercent(int percent) {
+    return 'وفر $percent%';
+  }
+
+  @override
+  String get bestValue => 'أفضل قيمة';
+
+  @override
+  String get mostPopular => 'الأكثر شعبية';
+
+  @override
+  String get subscribeNow => 'اشترك الآن';
+
+  @override
+  String get subscriptionTerms =>
+      'بالاشتراك، فإنك توافق على شروط الخدمة وسياسة الخصوصية. تتجدد الاشتراكات تلقائياً ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية.';
+
+  @override
+  String get manageSubscription => 'قم بإدارة اشتراكك في إعدادات جهازك.';
+
+  @override
+  String get noProductsAvailable => 'لا توجد منتجات متاحة';
+
+  @override
+  String get checkConnection =>
+      'يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.';
+
+  @override
+  String get errorLoadingProducts => 'خطأ في تحميل المنتجات';
+
+  @override
   String get errorLoadingData => 'خطأ في تحميل البيانات';
 
   @override
@@ -2085,4 +2182,116 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get goHome => 'الذهاب إلى الصفحة الرئيسية';
+
+  @override
+  String get battleArena => 'ساحة المعركة';
+
+  @override
+  String get quickMatch => 'مباراة سريعة';
+
+  @override
+  String get quickMatchDesc => 'خصم عشوائي، ابدأ على الفور';
+
+  @override
+  String get friendChallenge => 'تحدي صديق';
+
+  @override
+  String get friendChallengeDesc => 'تحدي صديق معين';
+
+  @override
+  String get tournament => 'بطولة';
+
+  @override
+  String get tournamentDesc => 'تنافس في البطولة للحصول على جوائز';
+
+  @override
+  String get findingOpponent => 'البحث عن خصم';
+
+  @override
+  String get searchingForOpponent => 'البحث عن خصم...';
+
+  @override
+  String get cancelSearch => 'إلغاء البحث';
+
+  @override
+  String get battleSettings => 'إعدادات المعركة';
+
+  @override
+  String get chooseBattleMode => 'اختر وضع المعركة';
+
+  @override
+  String get pendingChallenges => 'التحديات المعلقة';
+
+  @override
+  String get activeBattles => 'المعارك النشطة';
+
+  @override
+  String get battleHistory => 'تاريخ المعارك';
+
+  @override
+  String get noBattlesYet => 'لا توجد معارك بعد';
+
+  @override
+  String get startBattleToSeeHistory => 'ابدأ معركة لرؤية تاريخك';
+
+  @override
+  String get challengeFriend => 'تحدي صديق';
+
+  @override
+  String get addFriendsToChallenge => 'أضف أصدقاء لتحديهم';
+
+  @override
+  String get noFriends => 'لا يوجد أصدقاء';
+
+  @override
+  String get customizeSettings => 'تخصيص الإعدادات';
+
+  @override
+  String get leaveBattle => 'مغادرة المعركة؟';
+
+  @override
+  String get leaveBattleWarning => 'إذا غادرت، ستخسر هذه المعركة';
+
+  @override
+  String get leave => 'غادر';
+
+  @override
+  String get submitAnswer => 'إرسال الإجابة';
+
+  @override
+  String get victory => 'نصر!';
+
+  @override
+  String get defeat => 'هزيمة';
+
+  @override
+  String get backToHome => 'العودة إلى الصفحة الرئيسية';
+
+  @override
+  String get won => 'فاز';
+
+  @override
+  String get lost => 'خسر';
+
+  @override
+  String get tournaments => 'البطولات';
+
+  @override
+  String get noTournamentsAvailable => 'لا توجد بطولات متاحة';
+
+  @override
+  String get checkBackLater => 'تحقق لاحقًا للبطولات القادمة';
+
+  @override
+  String get joinTournament => 'انضم إلى البطولة';
+
+  @override
+  String get tournamentFull => 'البطولة ممتلئة';
+
+  @override
+  String get viewTournament => 'عرض البطولة';
+
+  @override
+  String get matchmakingTip =>
+      'نصيحة: السرعة مهمة! أجب بسرعة للحصول على نقاط إضافية.';
 }

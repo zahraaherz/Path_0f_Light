@@ -13,6 +13,7 @@ class AppTheme {
   static const Color goldAccent = Color(0xFFC9A961); // Softer gold
   static const Color goldLight = Color(0xFFE5D5A8); // Light gold
   static const Color goldDark = Color(0xFFB8963E); // Dark gold
+  static const Color accentGold = goldAccent; // Alias for goldAccent
 
   // Green - Soft, eye-relaxing sage green inspired by Islamic gardens
   static const Color islamicGreen = Color(0xFF7C9C8E); // Soft sage green
