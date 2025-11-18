@@ -27,26 +27,6 @@ export enum AuthProvider {
   PHONE = "phone",
 }
 
-/**
- * Interface for user profile data
- */
-interface UserProfileData {
-  uid: string;
-  email: string | null;
-  displayName: string | null;
-  photoURL: string | null;
-  phoneNumber: string | null;
-  language: "en" | "ar";
-  emailVerified: boolean;
-  phoneVerified: boolean;
-  provider: string;
-  providers: string[];
-  role: UserRole;
-  createdAt: admin.firestore.Timestamp;
-  lastActive: admin.firestore.Timestamp;
-  accountStatus: "active" | "suspended" | "deleted";
-  profileComplete: boolean;
-}
 
 /**
  * Firebase Authentication Trigger
@@ -61,25 +41,6 @@ export const onUserCreated = functions.auth.user().onCreate(async (user) => {
     // Determine primary provider
     const primaryProvider = user.providerData[0]?.providerId || "password";
     const allProviders = user.providerData.map((p) => p.providerId);
-
-    // Initialize user profile
-    const userProfile: UserProfileData = {
-      uid: user.uid,
-      email: user.email || null,
-      displayName: user.displayName || null,
-      photoURL: user.photoURL || null,
-      phoneNumber: user.phoneNumber || null,
-      language: "en",
-      emailVerified: user.emailVerified,
-      phoneVerified: !!user.phoneNumber,
-      provider: primaryProvider,
-      providers: allProviders,
-      role: UserRole.USER,
-      createdAt: now,
-      lastActive: now,
-      accountStatus: "active",
-      profileComplete: false,
-    };
 
     // Initialize energy system
     const energyData = {
@@ -109,12 +70,10 @@ export const onUserCreated = functions.auth.user().onCreate(async (user) => {
       longestStreak: 0,
       totalPoints: 0,
       categoryProgress: {},
-      difficultyProgress: {
-        basic: {answered: 0, correct: 0},
-        intermediate: {answered: 0, correct: 0},
-        advanced: {answered: 0, correct: 0},
-        expert: {answered: 0, correct: 0},
-      },
+      basic: {answered: 0, correct: 0},
+      intermediate: {answered: 0, correct: 0},
+      advanced: {answered: 0, correct: 0},
+      expert: {answered: 0, correct: 0},
     };
 
     // Initialize daily stats
@@ -149,13 +108,27 @@ export const onUserCreated = functions.auth.user().onCreate(async (user) => {
       preferences: {
         theme: "light",
         fontSize: "medium",
-        autoPlayAudio: false,
+        language: "auto",
       },
     };
 
-    // Create user document
+    // Create user document with flat structure matching Flutter UserProfile model
     await db.collection("users").doc(user.uid).set({
-      profile: userProfile,
+      uid: user.uid,
+      email: user.email || null,
+      displayName: user.displayName || null,
+      photoURL: user.photoURL || null,
+      phoneNumber: user.phoneNumber || null,
+      language: "en",
+      emailVerified: user.emailVerified,
+      phoneVerified: !!user.phoneNumber,
+      provider: primaryProvider,
+      providers: allProviders,
+      role: UserRole.USER,
+      createdAt: now,
+      lastActive: now,
+      accountStatus: "active",
+      profileComplete: false,
       energy: energyData,
       subscription: subscriptionData,
       quizProgress,
@@ -263,14 +236,14 @@ export const completeUserProfile = functions.https.onCall(
 
     try {
       const updateData: any = {
-        "profile.displayName": displayName,
-        "profile.language": language,
-        "profile.lastActive": admin.firestore.Timestamp.now(),
-        "profile.profileComplete": true,
+        displayName: displayName,
+        language: language,
+        lastActive: admin.firestore.Timestamp.now(),
+        profileComplete: true,
       };
 
       if (photoURL) {
-        updateData["profile.photoURL"] = photoURL;
+        updateData.photoURL = photoURL;
       }
 
       // Update Firestore
@@ -328,12 +301,7 @@ export const getUserProfile = functions.https.onCall(
       if (userId === context.auth.uid) {
         return {
           success: true,
-          profile: userData?.profile,
-          energy: userData?.energy,
-          subscription: userData?.subscription,
-          quizProgress: userData?.quizProgress,
-          dailyStats: userData?.dailyStats,
-          settings: userData?.settings,
+          profile: userData,
         };
       }
 
@@ -350,10 +318,10 @@ export const getUserProfile = functions.https.onCall(
       return {
         success: true,
         profile: {
-          uid: userData?.profile?.uid,
-          displayName: userData?.profile?.displayName,
-          photoURL: userData?.profile?.photoURL,
-          role: userData?.profile?.role,
+          uid: userData?.uid,
+          displayName: userData?.displayName,
+          photoURL: userData?.photoURL,
+          role: userData?.role,
         },
         quizProgress: {
           totalQuestionsAnswered:
@@ -390,18 +358,18 @@ export const updateUserProfile = functions.https.onCall(
 
     try {
       const updateData: any = {
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        lastActive: admin.firestore.Timestamp.now(),
       };
 
       // Build update object
       if (displayName !== undefined) {
-        updateData["profile.displayName"] = displayName;
+        updateData.displayName = displayName;
       }
       if (photoURL !== undefined) {
-        updateData["profile.photoURL"] = photoURL;
+        updateData.photoURL = photoURL;
       }
       if (language !== undefined) {
-        updateData["profile.language"] = language;
+        updateData.language = language;
       }
 
       // Update Firestore
@@ -447,7 +415,7 @@ export const updateUserSettings = functions.https.onCall(
 
     try {
       const updateData: any = {
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        lastActive: admin.firestore.Timestamp.now(),
       };
 
       if (notifications) {
@@ -503,8 +471,8 @@ export const deleteUserAccount = functions.https.onCall(
     try {
       // Mark account as deleted in Firestore
       await db.collection("users").doc(userId).update({
-        "profile.accountStatus": "deleted",
-        "profile.deletedAt": admin.firestore.Timestamp.now(),
+        accountStatus: "deleted",
+        deletedAt: admin.firestore.Timestamp.now(),
       });
 
       // Log deletion
@@ -548,7 +516,7 @@ export const updateUserRole = functions.https.onCall(async (data, context) => {
     .collection("users")
     .doc(context.auth.uid)
     .get();
-  const callerRole = callerDoc.data()?.profile?.role;
+  const callerRole = callerDoc.data()?.role;
 
   if (callerRole !== UserRole.ADMIN) {
     throw new functions.https.HttpsError(
@@ -584,8 +552,8 @@ export const updateUserRole = functions.https.onCall(async (data, context) => {
 
     // Update Firestore
     await db.collection("users").doc(userId).update({
-      "profile.role": role,
-      "profile.lastActive": admin.firestore.Timestamp.now(),
+      role: role,
+      lastActive: admin.firestore.Timestamp.now(),
     });
 
     // Log role change
@@ -647,8 +615,8 @@ export const linkSocialProvider = functions.https.onCall(
 
       // Update Firestore
       await db.collection("users").doc(userId).update({
-        "profile.providers": admin.firestore.FieldValue.arrayUnion(provider),
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        providers: admin.firestore.FieldValue.arrayUnion(provider),
+        lastActive: admin.firestore.Timestamp.now(),
       });
 
       // Log provider link
@@ -714,8 +682,8 @@ export const unlinkAuthProvider = functions.https.onCall(
 
       // Update Firestore
       await db.collection("users").doc(userId).update({
-        "profile.providers": admin.firestore.FieldValue.arrayRemove(provider),
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        providers: admin.firestore.FieldValue.arrayRemove(provider),
+        lastActive: admin.firestore.Timestamp.now(),
       });
 
       return {
@@ -750,7 +718,7 @@ export const checkUsernameAvailability = functions.https.onCall(
       // Check if username exists in Firestore
       const snapshot = await db
         .collection("users")
-        .where("profile.displayName", "==", username)
+        .where("displayName", "==", username)
         .limit(1)
         .get();
 
@@ -795,7 +763,7 @@ export const updateLastActive = functions.https.onCall(
       const currentStreak = userData?.dailyStats?.loginStreak || 0;
 
       const updateData: any = {
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        lastActive: admin.firestore.Timestamp.now(),
         "dailyStats.lastLoginDate": today,
       };
 
@@ -913,8 +881,8 @@ export const verifyEmailCode = functions.https.onCall(
 
     try {
       await db.collection("users").doc(userId).update({
-        "profile.emailVerified": true,
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        emailVerified: true,
+        lastActive: admin.firestore.Timestamp.now(),
       });
 
       return {
@@ -988,7 +956,7 @@ export const suspendUser = functions.https.onCall(async (data, context) => {
     .collection("users")
     .doc(context.auth.uid)
     .get();
-  const callerRole = callerDoc.data()?.profile?.role;
+  const callerRole = callerDoc.data()?.role;
 
   if (callerRole !== UserRole.ADMIN) {
     throw new functions.https.HttpsError(
@@ -1012,9 +980,9 @@ export const suspendUser = functions.https.onCall(async (data, context) => {
 
     // Update Firestore
     await db.collection("users").doc(userId).update({
-      "profile.accountStatus": "suspended",
-      "profile.suspendedAt": admin.firestore.Timestamp.now(),
-      "profile.suspensionReason": reason || "No reason provided",
+      accountStatus: "suspended",
+      suspendedAt: admin.firestore.Timestamp.now(),
+      suspensionReason: reason || "No reason provided",
     });
 
     // Log suspension
@@ -1055,7 +1023,7 @@ export const reactivateUser = functions.https.onCall(async (data, context) => {
     .collection("users")
     .doc(context.auth.uid)
     .get();
-  const callerRole = callerDoc.data()?.profile?.role;
+  const callerRole = callerDoc.data()?.role;
 
   if (callerRole !== UserRole.ADMIN) {
     throw new functions.https.HttpsError(
@@ -1079,8 +1047,8 @@ export const reactivateUser = functions.https.onCall(async (data, context) => {
 
     // Update Firestore
     await db.collection("users").doc(userId).update({
-      "profile.accountStatus": "active",
-      "profile.unsuspendedAt": admin.firestore.Timestamp.now(),
+      accountStatus: "active",
+      unsuspendedAt: admin.firestore.Timestamp.now(),
     });
 
     return {
@@ -1144,11 +1112,11 @@ export const getUserStats = functions.https.onCall(async (data, context) => {
       success: true,
       stats: {
         profile: {
-          uid: userData?.profile?.uid,
-          displayName: userData?.profile?.displayName,
-          photoURL: userData?.profile?.photoURL,
-          role: userData?.profile?.role,
-          createdAt: userData?.profile?.createdAt,
+          uid: userData?.uid,
+          displayName: userData?.displayName,
+          photoURL: userData?.photoURL,
+          role: userData?.role,
+          createdAt: userData?.createdAt,
         },
         quiz: {
           totalPoints: quizProgress.totalPoints || 0,
@@ -1219,8 +1187,8 @@ export const updateUserLanguage = functions.https.onCall(
 
     try {
       await db.collection("users").doc(userId).update({
-        "profile.language": language,
-        "profile.lastActive": admin.firestore.Timestamp.now(),
+        language: language,
+        lastActive: admin.firestore.Timestamp.now(),
       });
 
       return {
