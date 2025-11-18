@@ -243,6 +243,7 @@
   "playAudio": "تشغيل الصوت",
   "addToFavorites": "إضافة إلى المفضلة",
   "removeFromFavorites": "إزالة من المفضلة",
+  "tapToViewFull": "اضغط لعرض الكامل",
   "completedTasks": "تم إكمال {completed} من {total}",
   "minutes": "دقيقة",
   "pathOfLight": "طريق النور",

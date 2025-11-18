@@ -285,6 +285,7 @@
   "playAudio": "Play Audio",
   "addToFavorites": "Add to Favorites",
   "removeFromFavorites": "Remove from Favorites",
+  "tapToViewFull": "Tap to view full",
   "completedTasks": "{completed} of {total} completed",
   "@completedTasks": {
     "placeholders": {
