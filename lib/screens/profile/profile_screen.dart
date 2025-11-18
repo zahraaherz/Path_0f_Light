@@ -19,383 +19,421 @@ class ProfileScreen extends ConsumerWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(l10n.profile),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: () => _showSignOutDialog(context, ref),
-          ),
-        ],
-      ),
-      body: userProfileAsync.when(
-        data: (profile) {
-          // Use mock profile if no real data is available
-          final displayProfile = profile ?? MockData.mockUserProfile;
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: r.constrainWidth(
+          child: userProfileAsync.when(
+            data: (profile) {
+              // Use mock profile if no real data is available
+              final displayProfile = profile ?? MockData.mockUserProfile;
 
-          return SingleChildScrollView(
-            child: Column(
-              children: [
-                // Profile Header
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+              return CustomScrollView(
+                slivers: [
+                  // Header with border (matching explore page)
+                  SliverToBoxAdapter(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: AppTheme.primaryTeal.withOpacity(0.2),
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(r.paddingMedium),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              l10n.profile,
+                              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                                    color: AppTheme.primaryTeal,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.logout),
+                              onPressed: () => _showSignOutDialog(context, ref, l10n),
+                              color: AppTheme.textSecondary,
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                  padding: EdgeInsets.all(r.paddingLarge),
-                  child: Column(
-                    children: [
-                      // Profile Photo
-                      Container(
-                        width: 100,
-                        height: 100,
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+                  // Profile Info Section (border-based, no gradient)
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
+                      child: Container(
+                        padding: EdgeInsets.all(r.paddingLarge),
                         decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white, width: 3),
+                          border: Border.all(
+                            color: AppTheme.primaryTeal.withOpacity(0.3),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(r.radiusMedium),
                         ),
-                        child: ClipOval(
-                          child: displayProfile.photoURL != null
-                              ? CachedNetworkImage(
-                                  imageUrl: displayProfile.photoURL!,
-                                  fit: BoxFit.cover,
-                                  placeholder: (_, __) => const CircularProgressIndicator(),
-                                  errorWidget: (_, __, ___) => const Icon(Icons.person, size: 50, color: Colors.white),
-                                )
-                              : Container(
-                                  color: Colors.white.withOpacity(0.2),
-                                  child: const Icon(Icons.person, size: 50, color: Colors.white),
+                        child: Column(
+                          children: [
+                            // Profile Photo
+                            Container(
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: AppTheme.primaryTeal.withOpacity(0.3),
+                                  width: 2,
                                 ),
+                              ),
+                              child: ClipOval(
+                                child: displayProfile.photoURL != null
+                                    ? CachedNetworkImage(
+                                        imageUrl: displayProfile.photoURL!,
+                                        fit: BoxFit.cover,
+                                        placeholder: (_, __) => const CircularProgressIndicator(),
+                                        errorWidget: (_, __, ___) => Icon(
+                                          Icons.person,
+                                          size: 50,
+                                          color: AppTheme.primaryTeal,
+                                        ),
+                                      )
+                                    : Container(
+                                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                                        child: Icon(
+                                          Icons.person,
+                                          size: 50,
+                                          color: AppTheme.primaryTeal,
+                                        ),
+                                      ),
+                              ),
+                            ),
+                            SizedBox(height: r.spaceMedium),
+
+                            // Display Name
+                            Text(
+                              displayProfile.displayName ?? 'No Name',
+                              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                    color: AppTheme.primaryTeal,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            const SizedBox(height: 4),
+
+                            // Email
+                            Text(
+                              displayProfile.email ?? 'No Email',
+                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                    color: AppTheme.textSecondary,
+                                  ),
+                            ),
+                            SizedBox(height: r.spaceSmall),
+
+                            // Role Badge
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: AppTheme.goldAccent.withOpacity(0.1),
+                                border: Border.all(
+                                  color: AppTheme.goldAccent.withOpacity(0.3),
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Text(
+                                displayProfile.role.value.toUpperCase(),
+                                style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                                      color: AppTheme.goldAccent,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      SizedBox(height: r.spaceMedium),
+                    ),
+                  ),
 
-                      // Display Name
-                      Text(
-                        displayProfile.displayName ?? 'No Name',
-                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
+                  const SliverToBoxAdapter(child: SizedBox(height: 24)),
+
+                  // Stats Section (border-based cards)
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: _StatCard(
+                              icon: Icons.bolt,
+                              label: l10n.energy,
+                              value: '${displayProfile.energy.currentEnergy}/${displayProfile.energy.maxEnergy}',
+                              color: AppTheme.goldAccent,
                             ),
-                      ),
-                      const SizedBox(height: 4),
-
-                      // Email
-                      Text(
-                        displayProfile.email ?? 'No Email',
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.white.withOpacity(0.9),
+                          ),
+                          SizedBox(width: r.spaceSmall),
+                          Expanded(
+                            child: _StatCard(
+                              icon: Icons.stars,
+                              label: l10n.points,
+                              value: '${displayProfile.quizProgress.totalPoints}',
+                              color: AppTheme.primaryTeal,
                             ),
+                          ),
+                          SizedBox(width: r.spaceSmall),
+                          Expanded(
+                            child: _StatCard(
+                              icon: Icons.local_fire_department,
+                              label: l10n.streak,
+                              value: '${displayProfile.dailyStats.loginStreak}',
+                              color: AppTheme.error,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(height: r.spaceSmall),
+                    ),
+                  ),
 
-                      // Role Badge
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  const SliverToBoxAdapter(child: SizedBox(height: 24)),
+
+                  // Quiz Progress Section
+                  SliverToBoxAdapter(
+                    child: _SectionContainer(
+                      title: l10n.quizProgress,
+                      icon: Icons.quiz,
+                      children: [
+                        _InfoRow(l10n.totalQuestions, '${displayProfile.quizProgress.totalQuestionsAnswered}'),
+                        _InfoRow(l10n.correctAnswers, '${displayProfile.quizProgress.correctAnswers}'),
+                        _InfoRow(l10n.wrongAnswers, '${displayProfile.quizProgress.wrongAnswers}'),
+                        _InfoRow(
+                          l10n.accuracy,
+                          displayProfile.quizProgress.totalQuestionsAnswered > 0
+                              ? '${((displayProfile.quizProgress.correctAnswers / displayProfile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
+                              : '0%',
+                        ),
+                        _InfoRow(l10n.currentStreak, '${displayProfile.quizProgress.currentStreak}'),
+                        _InfoRow(l10n.longestStreak, '${displayProfile.quizProgress.longestStreak}'),
+                      ],
+                    ),
+                  ),
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+                  // Account Info Section
+                  SliverToBoxAdapter(
+                    child: _SectionContainer(
+                      title: l10n.accountInformation,
+                      icon: Icons.info_outline,
+                      children: [
+                        _InfoRow(l10n.language, displayProfile.language.toUpperCase()),
+                        _InfoRow(l10n.emailVerified, displayProfile.emailVerified ? l10n.yes : l10n.no),
+                        _InfoRow(l10n.phoneVerified, displayProfile.phoneVerified ? l10n.yes : l10n.no),
+                        _InfoRow(l10n.provider, displayProfile.provider),
+                        _InfoRow(l10n.accountStatus, displayProfile.accountStatus.name.toUpperCase()),
+                        _InfoRow(l10n.memberSince, _formatDate(displayProfile.createdAt)),
+                        _InfoRow(l10n.lastActive, _formatDate(displayProfile.lastActive)),
+                      ],
+                    ),
+                  ),
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+                  // Subscription Info Section
+                  SliverToBoxAdapter(
+                    child: _SectionContainer(
+                      title: l10n.subscription,
+                      icon: Icons.workspace_premium,
+                      children: [
+                        _InfoRow(l10n.plan, displayProfile.subscription.plan.toUpperCase()),
+                        _InfoRow(l10n.status, displayProfile.subscription.active ? l10n.active : l10n.inactive),
+                        if (displayProfile.subscription.expiryDate != null)
+                          _InfoRow(l10n.expires, _formatDate(displayProfile.subscription.expiryDate!)),
+                      ],
+                    ),
+                  ),
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 16)),
+
+                  // Settings Section
+                  SliverToBoxAdapter(
+                    child: _SectionContainer(
+                      title: l10n.settings,
+                      icon: Icons.settings,
+                      children: [
+                        _SettingsTile(
+                          icon: Icons.notifications,
+                          title: l10n.notifications,
+                          subtitle: displayProfile.settings.notifications.enabled ? l10n.enabled : l10n.disabled,
+                          onTap: () {},
+                        ),
+                        _SettingsTile(
+                          icon: Icons.privacy_tip,
+                          title: l10n.privacyPolicy,
+                          subtitle: displayProfile.settings.privacy.profileVisible ? l10n.public : l10n.private,
+                          onTap: () {},
+                        ),
+                        _SettingsTile(
+                          icon: Icons.palette,
+                          title: l10n.theme,
+                          subtitle: displayProfile.settings.preferences.theme.toUpperCase(),
+                          onTap: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 32)),
+
+                  // Sign Out Button
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
+                      child: Container(
                         decoration: BoxDecoration(
-                          color: AppTheme.goldAccent,
-                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: AppTheme.error, width: 1.5),
+                          borderRadius: BorderRadius.circular(r.radiusMedium),
                         ),
+                        child: InkWell(
+                          onTap: () => _showSignOutDialog(context, ref, l10n),
+                          borderRadius: BorderRadius.circular(r.radiusMedium),
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.logout, color: AppTheme.error),
+                                SizedBox(width: r.spaceSmall),
+                                Text(
+                                  l10n.signOut,
+                                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                        color: AppTheme.error,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SliverToBoxAdapter(child: SizedBox(height: 32)),
+                ],
+              );
+            },
+            loading: () {
+              return CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: AppTheme.primaryTeal.withOpacity(0.2),
+                            width: 2,
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(r.paddingMedium),
                         child: Text(
-                          displayProfile.role.value.toUpperCase(),
-                          style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                                color: Colors.white,
+                          l10n.profile,
+                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                                color: AppTheme.primaryTeal,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-
-                // Stats Section
-                Padding(
-                  padding: EdgeInsets.all(r.paddingMedium),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: _StatCard(
-                          icon: Icons.bolt,
-                          label: 'Energy',
-                          value: '${displayProfile.energy.currentEnergy}/${displayProfile.energy.maxEnergy}',
-                          color: AppTheme.goldAccent,
-                        ),
-                      ),
-                      SizedBox(width: r.spaceSmall),
-                      Expanded(
-                        child: _StatCard(
-                          icon: Icons.stars,
-                          label: 'Points',
-                          value: '${displayProfile.quizProgress.totalPoints}',
-                          color: AppTheme.primaryTeal,
-                        ),
-                      ),
-                      SizedBox(width: r.spaceSmall),
-                      Expanded(
-                        child: _StatCard(
-                          icon: Icons.local_fire_department,
-                          label: 'Streak',
-                          value: '${displayProfile.dailyStats.loginStreak}',
-                          color: AppTheme.error,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // Quiz Progress
-                _SectionCard(
-                  title: 'Quiz Progress',
-                  icon: Icons.quiz,
-                  children: [
-                    _InfoRow('Total Questions', '${displayProfile.quizProgress.totalQuestionsAnswered}'),
-                    _InfoRow('Correct Answers', '${displayProfile.quizProgress.correctAnswers}'),
-                    _InfoRow('Wrong Answers', '${displayProfile.quizProgress.wrongAnswers}'),
-                    _InfoRow(
-                      'Accuracy',
-                      displayProfile.quizProgress.totalQuestionsAnswered > 0
-                          ? '${((displayProfile.quizProgress.correctAnswers / displayProfile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
-                          : '0%',
-                    ),
-                    _InfoRow('Current Streak', '${displayProfile.quizProgress.currentStreak}'),
-                    _InfoRow('Longest Streak', '${displayProfile.quizProgress.longestStreak}'),
-                  ],
-                ),
-
-                // Account Info
-                _SectionCard(
-                  title: 'Account Information',
-                  icon: Icons.info_outline,
-                  children: [
-                    _InfoRow('Language', displayProfile.language.toUpperCase()),
-                    _InfoRow('Email Verified', displayProfile.emailVerified ? 'Yes' : 'No'),
-                    _InfoRow('Phone Verified', displayProfile.phoneVerified ? 'Yes' : 'No'),
-                    _InfoRow('Provider', displayProfile.provider),
-                    _InfoRow('Account Status', displayProfile.accountStatus.name.toUpperCase()),
-                    _InfoRow('Member Since', _formatDate(displayProfile.createdAt)),
-                    _InfoRow('Last Active', _formatDate(displayProfile.lastActive)),
-                  ],
-                ),
-
-                // Subscription Info
-                _SectionCard(
-                  title: 'Subscription',
-                  icon: Icons.workspace_premium,
-                  children: [
-                    _InfoRow('Plan', displayProfile.subscription.plan.toUpperCase()),
-                    _InfoRow('Status', displayProfile.subscription.active ? 'Active' : 'Inactive'),
-                    if (displayProfile.subscription.expiryDate != null)
-                      _InfoRow('Expires', _formatDate(displayProfile.subscription.expiryDate!)),
-                  ],
-                ),
-
-                // Settings Section
-                _SectionCard(
-                  title: 'Settings',
-                  icon: Icons.settings,
-                  children: [
-                    ListTile(
-                      leading: const Icon(Icons.notifications, color: AppTheme.primaryTeal),
-                      title: const Text('Notifications'),
-                      subtitle: Text(displayProfile.settings.notifications.enabled ? 'Enabled' : 'Disabled'),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to notification settings
-                      },
-                    ),
-                    ListTile(
-                      leading: const Icon(Icons.privacy_tip, color: AppTheme.primaryTeal),
-                      title: const Text('Privacy'),
-                      subtitle: Text(displayProfile.settings.privacy.profileVisible ? 'Public' : 'Private'),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to privacy settings
-                      },
-                    ),
-                    ListTile(
-                      leading: const Icon(Icons.palette, color: AppTheme.primaryTeal),
-                      title: const Text('Theme'),
-                      subtitle: Text(displayProfile.settings.preferences.theme.toUpperCase()),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        // Navigate to theme settings
-                      },
-                    ),
-                  ],
-                ),
-
-                SizedBox(height: r.spaceLarge),
-
-                // Sign Out Button
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      onPressed: () => _showSignOutDialog(context, ref),
-                      icon: const Icon(Icons.logout),
-                      label: Text(l10n.signOut),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: AppTheme.error,
-                        side: const BorderSide(color: AppTheme.error),
-                        padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
+                  const SliverToBoxAdapter(
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.all(32.0),
+                        child: CircularProgressIndicator(),
                       ),
                     ),
                   ),
-                ),
-
-                SizedBox(height: r.spaceLarge),
-              ],
-            ),
-          );
-        },
-        loading: () {
-          // Show mock profile while loading
-          final displayProfile = MockData.mockUserProfile;
-          return SingleChildScrollView(
-            child: Column(
-              children: [
-                // Profile Header
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                  padding: EdgeInsets.all(r.paddingLarge),
-                  child: Column(
-                    children: [
-                      // Profile Photo
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white, width: 3),
-                        ),
-                        child: ClipOval(
-                          child: Container(
-                            color: Colors.white.withOpacity(0.2),
-                            child: const Icon(Icons.person, size: 50, color: Colors.white),
+                ],
+              );
+            },
+            error: (error, stack) {
+              return CustomScrollView(
+                slivers: [
+                  SliverToBoxAdapter(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: AppTheme.primaryTeal.withOpacity(0.2),
+                            width: 2,
                           ),
                         ),
                       ),
-                      SizedBox(height: r.spaceMedium),
-                      Text(
-                        displayProfile.displayName ?? 'Loading...',
-                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-                const Center(child: Padding(
-                  padding: EdgeInsets.all(32.0),
-                  child: CircularProgressIndicator(),
-                )),
-              ],
-            ),
-          );
-        },
-        error: (error, stack) {
-          // Show mock profile on error
-          final displayProfile = MockData.mockUserProfile;
-          return SingleChildScrollView(
-            child: Column(
-              children: [
-                // Profile Header
-                Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [AppTheme.primaryTeal, AppTheme.islamicGreen],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                  padding: EdgeInsets.all(r.paddingLarge),
-                  child: Column(
-                    children: [
-                      // Profile Photo
-                      Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white, width: 3),
-                        ),
-                        child: ClipOval(
-                          child: Container(
-                            color: Colors.white.withOpacity(0.2),
-                            child: const Icon(Icons.person, size: 50, color: Colors.white),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: r.spaceMedium),
-                      Text(
-                        displayProfile.displayName ?? 'Preview Mode',
-                        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        displayProfile.email ?? 'No Email',
-                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                              color: Colors.white.withOpacity(0.9),
-                            ),
-                      ),
-                      SizedBox(height: r.spaceSmall),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(
-                          color: AppTheme.goldAccent,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      child: Padding(
+                        padding: EdgeInsets.all(r.paddingMedium),
                         child: Text(
-                          displayProfile.role.value.toUpperCase(),
-                          style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                                color: Colors.white,
+                          l10n.profile,
+                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                                color: AppTheme.primaryTeal,
                                 fontWeight: FontWeight.bold,
                               ),
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(r.paddingLarge),
-                  child: Column(
-                    children: [
-                      const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
-                      SizedBox(height: r.spaceMedium),
-                      Text('Preview Mode - Mock Data',
-                          style: Theme.of(context).textTheme.titleMedium),
-                      SizedBox(height: r.spaceSmall),
-                      Text('Sign in to view your actual profile',
-                          style: Theme.of(context).textTheme.bodySmall),
-                    ],
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: EdgeInsets.all(r.paddingLarge),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
+                          SizedBox(height: r.spaceMedium),
+                          Text(
+                            l10n.previewMode,
+                            style: Theme.of(context).textTheme.titleMedium,
+                          ),
+                          SizedBox(height: r.spaceSmall),
+                          Text(
+                            l10n.signInToViewProfile,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                          SizedBox(height: r.spaceLarge),
+                          OutlinedButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (_) => const LoginScreen()),
+                              );
+                            },
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(color: AppTheme.primaryTeal, width: 1.5),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: r.paddingLarge,
+                                vertical: r.paddingMedium,
+                              ),
+                            ),
+                            child: Text(l10n.signIn),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-              ],
-            ),
-          );
-        },
+                ],
+              );
+            },
+          ),
+        ),
       ),
     );
   }
 
-  void _showSignOutDialog(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
+  void _showSignOutDialog(BuildContext context, WidgetRef ref, AppLocalizations l10n) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -430,6 +468,7 @@ class ProfileScreen extends ConsumerWidget {
   }
 }
 
+// Border-based Stat Card (matching explore page pattern)
 class _StatCard extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -446,40 +485,44 @@ class _StatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: EdgeInsets.all(r.paddingMedium),
-        child: Column(
-          children: [
-            Icon(icon, color: color, size: 32),
-            SizedBox(height: r.spaceSmall),
-            Text(
-              value,
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: color,
-                  ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              label,
-              style: Theme.of(context).textTheme.bodySmall,
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
+    return Container(
+      padding: EdgeInsets.all(r.paddingMedium),
+      decoration: BoxDecoration(
+        border: Border.all(color: color.withOpacity(0.3), width: 1),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: color, size: r.iconSmall),
+          SizedBox(height: r.spaceSmall),
+          Text(
+            value,
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            label,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: AppTheme.textSecondary,
+                ),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }
 }
 
-class _SectionCard extends StatelessWidget {
+// Border-based Section Container (matching explore page pattern)
+class _SectionContainer extends StatelessWidget {
   final String title;
   final IconData icon;
   final List<Widget> children;
 
-  const _SectionCard({
+  const _SectionContainer({
     required this.title,
     required this.icon,
     required this.children,
@@ -489,9 +532,15 @@ class _SectionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final r = context.responsive;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: Card(
-        elevation: 2,
+      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: AppTheme.primaryTeal.withOpacity(0.3),
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(r.radiusMedium),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -499,7 +548,7 @@ class _SectionCard extends StatelessWidget {
               padding: EdgeInsets.all(r.paddingMedium),
               child: Row(
                 children: [
-                  Icon(icon, color: AppTheme.primaryTeal),
+                  Icon(icon, color: AppTheme.primaryTeal, size: r.iconSmall),
                   SizedBox(width: r.spaceSmall),
                   Text(
                     title,
@@ -510,7 +559,10 @@ class _SectionCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Divider(height: 1),
+            Container(
+              height: 1,
+              color: AppTheme.primaryTeal.withOpacity(0.1),
+            ),
             ...children,
           ],
         ),
@@ -519,6 +571,7 @@ class _SectionCard extends StatelessWidget {
   }
 }
 
+// Info Row
 class _InfoRow extends StatelessWidget {
   final String label;
   final String value;
@@ -529,7 +582,7 @@ class _InfoRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final r = context.responsive;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: 12),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -546,6 +599,59 @@ class _InfoRow extends StatelessWidget {
                 ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+// Settings Tile
+class _SettingsTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final VoidCallback onTap;
+
+  const _SettingsTile({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final r = context.responsive;
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: r.paddingMedium, vertical: 12),
+        child: Row(
+          children: [
+            Icon(icon, color: AppTheme.primaryTeal, size: r.iconSmall),
+            SizedBox(width: r.spaceSmall),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    subtitle,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right, color: AppTheme.textSecondary),
+          ],
+        ),
       ),
     );
   }

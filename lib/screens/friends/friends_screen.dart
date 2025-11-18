@@ -67,7 +67,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                 ),
                 SizedBox(height: r.spaceLarge),
                 Text(
-                  'Sign in to connect with friends',
+                  l10n.signInToConnectFriends,
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
@@ -75,7 +75,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                 ),
                 SizedBox(height: r.spaceSmall),
                 Text(
-                  'Search for friends, send requests, and build your learning community',
+                  l10n.buildYourLearningCommunity,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppTheme.textSecondary,
                       ),
@@ -88,7 +88,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                       MaterialPageRoute(builder: (_) => const LoginScreen()),
                     );
                   },
-                  icon: Icon(Icons.login),
+                  icon: const Icon(Icons.login),
                   label: Text(l10n.signIn),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.primaryTeal,
@@ -119,9 +119,9 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
           tabs: [
-            Tab(text: l10n.friends, icon: Icon(Icons.people)),
-            Tab(text: 'Requests', icon: Icon(Icons.person_add)),
-            Tab(text: 'Search', icon: Icon(Icons.search)),
+            Tab(text: l10n.friends, icon: const Icon(Icons.people)),
+            Tab(text: l10n.requests, icon: const Icon(Icons.person_add)),
+            Tab(text: l10n.search, icon: const Icon(Icons.search)),
           ],
         ),
       ),
@@ -161,14 +161,14 @@ class _FriendsListTab extends ConsumerWidget {
                 ),
                 SizedBox(height: r.spaceMedium),
                 Text(
-                  'No friends yet',
+                  l10n.noFriendsYet,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppTheme.textSecondary,
                       ),
                 ),
                 SizedBox(height: r.spaceSmall),
                 Text(
-                  'Search for users to add as friends',
+                  l10n.searchForUsersToAdd,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppTheme.textSecondary.withValues(alpha: 0.7),
                       ),
@@ -191,7 +191,7 @@ class _FriendsListTab extends ConsumerWidget {
           ),
         );
       },
-      loading: () => Center(
+      loading: () => const Center(
             child: CircularProgressIndicator(color: AppTheme.primaryTeal),
           ),
       error: (error, stack) => Center(
@@ -239,11 +239,13 @@ class _PendingRequestsTab extends ConsumerWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.inbox, size: r.iconLarge * 2, color: Colors.grey[400]),
+                Icon(Icons.inbox, size: r.iconLarge * 2, color: AppTheme.textSecondary.withValues(alpha: 0.5)),
                 SizedBox(height: r.spaceMedium),
                 Text(
-                  'No pending requests',
-                  style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
+                  l10n.noPendingRequests,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        color: AppTheme.textSecondary,
+                      ),
                 ),
               ],
             ),
@@ -259,8 +261,10 @@ class _PendingRequestsTab extends ConsumerWidget {
             children: [
               if (received.isNotEmpty) ...[
                 Text(
-                  'Received Requests',
-                  style: TextStyle(fontSize: r.fontLarge, fontWeight: FontWeight.bold),
+                  l10n.receivedRequests,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
                 SizedBox(height: r.spaceSmall),
                 ...received.map((friend) => _FriendRequestCard(
@@ -271,8 +275,10 @@ class _PendingRequestsTab extends ConsumerWidget {
               ],
               if (sent.isNotEmpty) ...[
                 Text(
-                  'Sent Requests',
-                  style: TextStyle(fontSize: r.fontLarge, fontWeight: FontWeight.bold),
+                  l10n.sentRequests,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
                 SizedBox(height: r.spaceSmall),
                 ...sent.map((friend) => _FriendRequestCard(
@@ -284,14 +290,16 @@ class _PendingRequestsTab extends ConsumerWidget {
           ),
         );
       },
-      loading: () => Center(child: CircularProgressIndicator()),
+      loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, stack) => Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: Colors.red),
+            Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: AppTheme.error),
             SizedBox(height: r.spaceMedium),
-            Text(l10n.failedToLoadRequests, style: TextStyle(color: Colors.grey[600])),
+            Text(l10n.failedToLoadRequests, style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: AppTheme.textSecondary,
+                )),
             SizedBox(height: r.spaceSmall),
             ElevatedButton(
               onPressed: () => ref.invalidate(pendingRequestsProvider),
@@ -337,19 +345,22 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
             controller: _searchController,
             decoration: InputDecoration(
               hintText: l10n.searchByUsernameOrCode,
-              prefixIcon: Icon(Icons.search),
+              prefixIcon: const Icon(Icons.search),
               suffixIcon: _searchController.text.isNotEmpty
                   ? IconButton(
-                      icon: Icon(Icons.clear),
+                      icon: const Icon(Icons.clear),
                       onPressed: () {
                         _searchController.clear();
                         ref.read(friendSearchQueryProvider.notifier).state = '';
                       },
                     )
                   : null,
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(r.radiusMedium)),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(r.radiusMedium),
+                borderSide: BorderSide(color: AppTheme.primaryTeal.withOpacity(0.3)),
+              ),
               filled: true,
-              fillColor: Colors.grey[100],
+              fillColor: AppTheme.primaryTeal.withOpacity(0.05),
             ),
             onChanged: (value) {
               ref.read(friendSearchQueryProvider.notifier).state = value;
@@ -364,16 +375,20 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.search, size: r.iconLarge * 2, color: Colors.grey[400]),
+                      Icon(Icons.search, size: r.iconLarge * 2, color: AppTheme.textSecondary.withValues(alpha: 0.5)),
                       SizedBox(height: r.spaceMedium),
                       Text(
-                        'Search for friends',
-                        style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
+                        l10n.search,
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                              color: AppTheme.textSecondary,
+                            ),
                       ),
                       SizedBox(height: r.spaceSmall),
                       Text(
-                        'Enter a username or user code',
-                        style: TextStyle(fontSize: r.fontSmall, color: Colors.grey[500]),
+                        l10n.enterUsernameOrCode,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: AppTheme.textSecondary.withValues(alpha: 0.7),
+                            ),
                       ),
                     ],
                   ),
@@ -385,11 +400,13 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.search_off, size: r.iconLarge * 2, color: Colors.grey[400]),
+                            Icon(Icons.search_off, size: r.iconLarge * 2, color: AppTheme.textSecondary.withValues(alpha: 0.5)),
                             SizedBox(height: r.spaceMedium),
                             Text(
-                              'No users found',
-                              style: TextStyle(fontSize: r.fontLarge, color: Colors.grey[600]),
+                              l10n.noUsersFound,
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: AppTheme.textSecondary,
+                                  ),
                             ),
                           ],
                         ),
@@ -404,11 +421,13 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
                       },
                     );
                   },
-                  loading: () => Center(child: CircularProgressIndicator()),
+                  loading: () => const Center(child: CircularProgressIndicator()),
                   error: (error, stack) => Center(
                     child: Text(
-                      'Search failed: ${error.toString()}',
-                      style: TextStyle(color: Colors.grey[600]),
+                      '${l10n.error}: ${error.toString()}',
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppTheme.textSecondary,
+                          ),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -419,7 +438,7 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
   }
 }
 
-// Friend Card
+// Border-based Friend Card (matching explore page pattern)
 class _FriendCard extends ConsumerWidget {
   final Friend friend;
 
@@ -429,108 +448,150 @@ class _FriendCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
-    return Card(
+
+    return Container(
       margin: EdgeInsets.only(bottom: r.spaceSmall),
-      child: ListTile(
-        leading: CircleAvatar(
-          radius: r.iconLarge * 0.875,
-          backgroundImage: friend.friendPhotoURL != null
-              ? CachedNetworkImageProvider(friend.friendPhotoURL!)
-              : null,
-          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
-          child: friend.friendPhotoURL == null
-              ? Text(
-                  (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: TextStyle(
-                    color: AppTheme.primaryTeal,
-                    fontWeight: FontWeight.bold,
-                    fontSize: r.fontLarge,
-                  ),
-                )
-              : null,
-        ),
-        title: Text(
-          friend.displayText,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
-        ),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(r.paddingMedium),
+        child: Row(
           children: [
-            if (friend.friendTotalPoints != null) ...[
-              SizedBox(height: r.spaceXSmall),
-              Row(
-                children: [
-                  Icon(Icons.star, size: r.fontSmall, color: Colors.amber),
-                  SizedBox(width: r.spaceXSmall),
-                  Text('${friend.friendTotalPoints} points'),
-                  SizedBox(width: r.spaceSmall),
-                  Icon(Icons.menu_book, size: r.fontSmall, color: Colors.blue),
-                  SizedBox(width: r.spaceXSmall),
-                  Text('${friend.friendBooksRead ?? 0} books'),
-                ],
+            // Avatar
+            Container(
+              width: r.iconLarge * 1.75,
+              height: r.iconLarge * 1.75,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
               ),
-            ],
-          ],
-        ),
-        trailing: PopupMenuButton(
-          itemBuilder: (context) => [
-            PopupMenuItem(
-              value: 'remove',
-              child: Row(
+              child: ClipOval(
+                child: friend.friendPhotoURL != null
+                    ? CachedNetworkImage(
+                        imageUrl: friend.friendPhotoURL!,
+                        fit: BoxFit.cover,
+                        errorWidget: (_, __, ___) => Container(
+                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          child: Center(
+                            child: Text(
+                              (friend.friendUsername ?? 'U')[0].toUpperCase(),
+                              style: TextStyle(
+                                color: AppTheme.primaryTeal,
+                                fontWeight: FontWeight.bold,
+                                fontSize: r.fontLarge,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    : Container(
+                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                        child: Center(
+                          child: Text(
+                            (friend.friendUsername ?? 'U')[0].toUpperCase(),
+                            style: TextStyle(
+                              color: AppTheme.primaryTeal,
+                              fontWeight: FontWeight.bold,
+                              fontSize: r.fontLarge,
+                            ),
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+            SizedBox(width: r.spaceSmall),
+
+            // Info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.person_remove, color: Colors.red),
-                  SizedBox(width: r.spaceSmall),
-                  Text('Remove Friend', style: TextStyle(color: Colors.red)),
+                  Text(
+                    friend.displayText,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  if (friend.friendTotalPoints != null) ...[
+                    SizedBox(height: r.spaceXSmall),
+                    Row(
+                      children: [
+                        Icon(Icons.star, size: r.fontSmall, color: Colors.amber),
+                        SizedBox(width: r.spaceXSmall),
+                        Text('${friend.friendTotalPoints} ${l10n.points.toLowerCase()}'),
+                        SizedBox(width: r.spaceSmall),
+                        Icon(Icons.menu_book, size: r.fontSmall, color: Colors.blue),
+                        SizedBox(width: r.spaceXSmall),
+                        Text('${friend.friendBooksRead ?? 0} ${l10n.books.toLowerCase()}'),
+                      ],
+                    ),
+                  ],
                 ],
               ),
             ),
-            PopupMenuItem(
-              value: 'block',
-              child: Row(
-                children: [
-                  Icon(Icons.block, color: Colors.red),
-                  SizedBox(width: r.spaceSmall),
-                  Text(l10n.blocked, style: TextStyle(color: Colors.red)),
-                ],
-              ),
+
+            // Menu
+            PopupMenuButton(
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  value: 'remove',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.person_remove, color: Colors.red),
+                      SizedBox(width: r.spaceSmall),
+                      Text(l10n.removeFriend, style: const TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                ),
+                PopupMenuItem(
+                  value: 'block',
+                  child: Row(
+                    children: [
+                      const Icon(Icons.block, color: Colors.red),
+                      SizedBox(width: r.spaceSmall),
+                      Text(l10n.blocked, style: const TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                ),
+              ],
+              onSelected: (value) async {
+                if (value == 'remove') {
+                  final removeFriend = ref.read(removeFriendProvider);
+                  final result = await removeFriend(friend.friendId);
+
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(result.message),
+                        backgroundColor: result.success ? AppTheme.success : AppTheme.error,
+                      ),
+                    );
+                  }
+                } else if (value == 'block') {
+                  final blockUser = ref.read(blockUserProvider);
+                  final result = await blockUser(friend.friendId);
+
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(result.message),
+                        backgroundColor: result.success ? AppTheme.success : AppTheme.error,
+                      ),
+                    );
+                  }
+                }
+              },
             ),
           ],
-          onSelected: (value) async {
-            if (value == 'remove') {
-              final removeFriend = ref.read(removeFriendProvider);
-              final result = await removeFriend(friend.friendId);
-
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(result.message),
-                    backgroundColor: result.success ? AppTheme.success : AppTheme.error,
-                  ),
-                );
-              }
-            } else if (value == 'block') {
-              final blockUser = ref.read(blockUserProvider);
-              final result = await blockUser(friend.friendId);
-
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(result.message),
-                    backgroundColor: result.success ? AppTheme.success : AppTheme.error,
-                  ),
-                );
-              }
-            }
-          },
         ),
       ),
     );
   }
 }
 
-// Friend Request Card
+// Border-based Friend Request Card (matching explore page pattern)
 class _FriendRequestCard extends ConsumerWidget {
   final Friend friend;
   final bool isReceived;
@@ -542,40 +603,92 @@ class _FriendRequestCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
-    return Card(
+
+    return Container(
       margin: EdgeInsets.only(bottom: r.spaceSmall),
-      child: ListTile(
-        leading: CircleAvatar(
-          radius: r.iconLarge * 0.875,
-          backgroundImage: friend.friendPhotoURL != null
-              ? CachedNetworkImageProvider(friend.friendPhotoURL!)
-              : null,
-          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
-          child: friend.friendPhotoURL == null
-              ? Text(
-                  (friend.friendUsername ?? 'U')[0].toUpperCase(),
-                  style: TextStyle(
-                    color: AppTheme.primaryTeal,
-                    fontWeight: FontWeight.bold,
-                    fontSize: r.fontLarge,
-                  ),
-                )
-              : null,
-        ),
-        title: Text(
-          friend.displayText,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.bold,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(r.paddingMedium),
+        child: Row(
+          children: [
+            // Avatar
+            Container(
+              width: r.iconLarge * 1.75,
+              height: r.iconLarge * 1.75,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
               ),
-        ),
-        subtitle: Text(isReceived ? 'Wants to be your friend' : 'Request sent'),
-        trailing: isReceived
-            ? Row(
+              child: ClipOval(
+                child: friend.friendPhotoURL != null
+                    ? CachedNetworkImage(
+                        imageUrl: friend.friendPhotoURL!,
+                        fit: BoxFit.cover,
+                        errorWidget: (_, __, ___) => Container(
+                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          child: Center(
+                            child: Text(
+                              (friend.friendUsername ?? 'U')[0].toUpperCase(),
+                              style: TextStyle(
+                                color: AppTheme.primaryTeal,
+                                fontWeight: FontWeight.bold,
+                                fontSize: r.fontLarge,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    : Container(
+                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                        child: Center(
+                          child: Text(
+                            (friend.friendUsername ?? 'U')[0].toUpperCase(),
+                            style: TextStyle(
+                              color: AppTheme.primaryTeal,
+                              fontWeight: FontWeight.bold,
+                              fontSize: r.fontLarge,
+                            ),
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+            SizedBox(width: r.spaceSmall),
+
+            // Info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    friend.displayText,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    isReceived ? l10n.wantsToBeYourFriend : l10n.requestSent,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Actions
+            if (isReceived)
+              Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.check, color: Colors.green),
+                    icon: const Icon(Icons.check, color: Colors.green),
                     onPressed: () async {
                       final accept = ref.read(acceptFriendRequestProvider);
                       final result = await accept(friend.friendId);
@@ -584,15 +697,14 @@ class _FriendRequestCard extends ConsumerWidget {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(result.message),
-                            backgroundColor:
-                                result.success ? Colors.green : Colors.red,
+                            backgroundColor: result.success ? Colors.green : Colors.red,
                           ),
                         );
                       }
                     },
                   ),
                   IconButton(
-                    icon: Icon(Icons.close, color: Colors.red),
+                    icon: const Icon(Icons.close, color: Colors.red),
                     onPressed: () async {
                       final reject = ref.read(rejectFriendRequestProvider);
                       final result = await reject(friend.friendId);
@@ -606,13 +718,16 @@ class _FriendRequestCard extends ConsumerWidget {
                   ),
                 ],
               )
-            : Icon(Icons.schedule, color: Colors.orange),
+            else
+              const Icon(Icons.schedule, color: Colors.orange),
+          ],
+        ),
       ),
     );
   }
 }
 
-// User Search Result Card
+// Border-based User Search Result Card (matching explore page pattern)
 class _UserSearchResultCard extends ConsumerWidget {
   final UserSearchResult user;
 
@@ -620,78 +735,158 @@ class _UserSearchResultCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
-    return Card(
+
+    return Container(
       margin: EdgeInsets.only(bottom: r.spaceSmall),
-      child: ListTile(
-        leading: CircleAvatar(
-          radius: r.iconLarge * 0.875,
-          backgroundImage:
-              user.photoURL != null ? CachedNetworkImageProvider(user.photoURL!) : null,
-          backgroundColor: AppTheme.primaryTeal.withValues(alpha: 0.1),
-          child: user.photoURL == null
-              ? Text(
-                  user.username[0].toUpperCase(),
-                  style: TextStyle(
-                    color: AppTheme.primaryTeal,
-                    fontWeight: FontWeight.bold,
-                    fontSize: r.fontLarge,
-                  ),
-                )
-              : null,
-        ),
-        title: Text(
-          user.displayName ?? user.username,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
-        ),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(r.paddingMedium),
+        child: Row(
           children: [
-            Text('@${user.username}'),
-            if (user.userCode != null) ...[
-              SizedBox(height: 2),
-              Text(
-                'Code: ${user.userCode}',
-                style: TextStyle(fontSize: r.fontSmall, color: Colors.grey[600]),
+            // Avatar
+            Container(
+              width: r.iconLarge * 1.75,
+              height: r.iconLarge * 1.75,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: AppTheme.primaryTeal.withOpacity(0.3), width: 1),
               ),
-            ],
+              child: ClipOval(
+                child: user.photoURL != null
+                    ? CachedNetworkImage(
+                        imageUrl: user.photoURL!,
+                        fit: BoxFit.cover,
+                        errorWidget: (_, __, ___) => Container(
+                          color: AppTheme.primaryTeal.withOpacity(0.1),
+                          child: Center(
+                            child: Text(
+                              user.username[0].toUpperCase(),
+                              style: TextStyle(
+                                color: AppTheme.primaryTeal,
+                                fontWeight: FontWeight.bold,
+                                fontSize: r.fontLarge,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    : Container(
+                        color: AppTheme.primaryTeal.withOpacity(0.1),
+                        child: Center(
+                          child: Text(
+                            user.username[0].toUpperCase(),
+                            style: TextStyle(
+                              color: AppTheme.primaryTeal,
+                              fontWeight: FontWeight.bold,
+                              fontSize: r.fontLarge,
+                            ),
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+            SizedBox(width: r.spaceSmall),
+
+            // Info
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    user.displayName ?? user.username,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    '@${user.username}',
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: AppTheme.textSecondary,
+                        ),
+                  ),
+                  if (user.userCode != null) ...[
+                    const SizedBox(height: 2),
+                    Text(
+                      '${l10n.code}: ${user.userCode}',
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: AppTheme.textSecondary.withValues(alpha: 0.7),
+                          ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+
+            // Action button
+            _buildActionButton(context, ref, l10n, r),
           ],
         ),
-        trailing: _buildActionButton(context, ref),
       ),
     );
   }
 
-  Widget _buildActionButton(BuildContext context, WidgetRef ref) {
-    final l10n = AppLocalizations.of(context)!;
-    final r = context.responsive;
+  Widget _buildActionButton(BuildContext context, WidgetRef ref, AppLocalizations l10n, dynamic r) {
     if (user.isBlocked) {
-      return Chip(
-        label: Text(l10n.blocked, style: TextStyle(fontSize: r.fontSmall)),
-        backgroundColor: Colors.red,
-        labelStyle: TextStyle(color: Colors.white),
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.red.withOpacity(0.1),
+          border: Border.all(color: Colors.red.withOpacity(0.3), width: 1),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          l10n.blocked,
+          style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
       );
     }
 
     if (user.isFriend) {
-      return Chip(
-        label: Text(l10n.friends, style: TextStyle(fontSize: r.fontSmall)),
-        backgroundColor: Colors.green,
-        labelStyle: TextStyle(color: Colors.white),
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.green.withOpacity(0.1),
+          border: Border.all(color: Colors.green.withOpacity(0.3), width: 1),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          l10n.friends,
+          style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
       );
     }
 
     if (user.hasPendingRequest) {
-      return Chip(
-        label: Text(l10n.pending, style: TextStyle(fontSize: r.fontSmall)),
-        backgroundColor: Colors.orange,
-        labelStyle: TextStyle(color: Colors.white),
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: Colors.orange.withOpacity(0.1),
+          border: Border.all(color: Colors.orange.withOpacity(0.3), width: 1),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Text(
+          l10n.pending,
+          style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
       );
     }
 
-    return ElevatedButton(
+    return OutlinedButton(
       onPressed: () async {
         final sendRequest = ref.read(sendFriendRequestProvider);
         final result = await sendRequest(user.uid);
@@ -705,6 +900,10 @@ class _UserSearchResultCard extends ConsumerWidget {
           );
         }
       },
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(color: AppTheme.primaryTeal, width: 1.5),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      ),
       child: Text(l10n.add),
     );
   }
