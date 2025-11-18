@@ -7,6 +7,7 @@ import '../../providers/quiz_providers.dart';
 import '../../providers/energy_providers.dart';
 import '../../widgets/energy_display.dart';
 import 'quiz_question_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 class QuizStartScreen extends ConsumerStatefulWidget {
   const QuizStartScreen({super.key});
@@ -26,11 +27,12 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
     final categoriesAsync = ref.watch(quizCategoriesProvider);
     final energyStatus = ref.watch(energyStatusProvider);
     final quizState = ref.watch(quizSessionProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Start Quiz'),
+        title: Text(l10n.startQuiz),
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
@@ -189,7 +191,7 @@ class _QuizStartScreenState extends ConsumerState<QuizStartScreen> {
                 );
               },
               loading: () => const CircularProgressIndicator(),
-              error: (_, __) => const Text('Failed to load categories'),
+              error: (_, __) => Text(l10n.failedToLoadCategories),
             ),
 
             SizedBox(height: r.spaceLarge),

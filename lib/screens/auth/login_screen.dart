@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
 import '../../providers/guest_access_providers.dart';
+import '../../l10n/app_localizations.dart';
 import 'register_screen.dart';
 import '../home/home_screen.dart';
 
@@ -84,9 +85,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       }
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Failed to continue as guest: $e'),
+            content: Text(l10n.failedToContinueAsGuest(e.toString())),
             backgroundColor: AppTheme.error,
           ),
         );
@@ -102,6 +104,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   void _showForgotPasswordDialog() {
     final emailController = TextEditingController();
+    final l10n = AppLocalizations.of(context)!;
 
     showDialog(
       context: context,
@@ -122,9 +125,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               SizedBox(height: r.spaceMedium),
             TextField(
               controller: emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-                hintText: 'your@email.com',
+              decoration: InputDecoration(
+                labelText: l10n.email,
+                hintText: l10n.emailHint,
               ),
               keyboardType: TextInputType.emailAddress,
             ),
@@ -133,7 +136,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(dialogContext).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -145,7 +148,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 }
               }
             },
-            child: const Text('Send Reset Link'),
+            child: Text(l10n.sendResetLink),
           ),
         ],
       );
@@ -157,6 +160,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   Widget build(BuildContext context) {
     final r = context.responsive;
     final authState = ref.watch(authControllerProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     // Show error snackbar
     ref.listen<AuthState>(authControllerProvider, (previous, next) {
@@ -245,10 +249,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   // Email Field
                   TextFormField(
                     controller: _emailController,
-                    decoration: const InputDecoration(
-                      labelText: 'Email',
-                      hintText: 'your@email.com',
-                      prefixIcon: Icon(Icons.email_outlined),
+                    decoration: InputDecoration(
+                      labelText: l10n.email,
+                      hintText: l10n.emailHint,
+                      prefixIcon: const Icon(Icons.email_outlined),
                     ),
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
@@ -268,8 +272,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   TextFormField(
                     controller: _passwordController,
                     decoration: InputDecoration(
-                      labelText: 'Password',
-                      hintText: '""""""""',
+                      labelText: l10n.password,
+                      hintText: l10n.passwordHint,
                       prefixIcon: const Icon(Icons.lock_outline),
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -304,7 +308,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     alignment: Alignment.centerRight,
                     child: TextButton(
                       onPressed: _showForgotPasswordDialog,
-                      child: const Text('Forgot Password?'),
+                      child: Text(l10n.forgotPassword),
                     ),
                   ),
                   SizedBox(height: r.spaceLarge),
@@ -323,7 +327,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                                 valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                               ),
                             )
-                          : const Text('Sign In'),
+                          : Text(l10n.signIn),
                     ),
                   ),
                   SizedBox(height: r.spaceLarge),
@@ -379,7 +383,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   OutlinedButton.icon(
                     onPressed: authState.isLoading ? null : _handleGuestSignIn,
                     icon: const Icon(Icons.person_outline),
-                    label: const Text('Continue as Guest'),
+                    label: Text(l10n.continueAsGuest),
                     style: OutlinedButton.styleFrom(
                       padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
                       side: BorderSide(
@@ -410,7 +414,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                       TextButton(
                         onPressed: _navigateToRegister,
-                        child: const Text('Sign Up'),
+                        child: Text(l10n.signUp),
                       ),
                     ],
                   ),

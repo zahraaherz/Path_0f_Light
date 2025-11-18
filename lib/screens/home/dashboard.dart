@@ -1,5 +1,6 @@
 // Component 5: Navigation Dashboard Widget
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../utils/responsive.dart';
 
 class NavigationDashboardComponent extends StatelessWidget {
@@ -7,6 +8,7 @@ class NavigationDashboardComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     return Container(
       padding: EdgeInsets.symmetric(vertical: r.spaceSmall),
@@ -23,6 +25,7 @@ class NavigationDashboardComponent extends StatelessWidget {
           _buildNavButton(
             context,
             r,
+            l10n,
             icon: Icons.home,
             label: 'Home',
             isActive: true,
@@ -33,48 +36,52 @@ class NavigationDashboardComponent extends StatelessWidget {
           _buildNavButton(
             context,
             r,
+            l10n,
             icon: Icons.collections_bookmark,
             label: 'Collections',
             isActive: false,
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Collections page coming soon')),
+                SnackBar(content: Text(l10n.collectionsComingSoon)),
               );
             },
           ),
           _buildNavButton(
             context,
             r,
+            l10n,
             icon: Icons.menu_book,
             label: 'Books',
             isActive: false,
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Books page coming soon')),
+                SnackBar(content: Text(l10n.booksComingSoon)),
               );
             },
           ),
           _buildNavButton(
             context,
             r,
+            l10n,
             icon: Icons.history_edu,
             label: 'Sira',
             isActive: false,
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Sira page coming soon')),
+                SnackBar(content: Text(l10n.siraComingSoon)),
               );
             },
           ),
           _buildNavButton(
             context,
             r,
+            l10n,
             icon: Icons.settings,
             label: 'Settings',
             isActive: false,
             onTap: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Settings page coming soon')),
+                SnackBar(content: Text(l10n.settingsComingSoon)),
               );
             },
           ),
@@ -85,7 +92,8 @@ class NavigationDashboardComponent extends StatelessWidget {
 
   Widget _buildNavButton(
       BuildContext context,
-      Responsive r, {
+      Responsive r,
+      AppLocalizations l10n, {
         required IconData icon,
         required String label,
         required bool isActive,

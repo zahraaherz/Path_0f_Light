@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/friends/friend_models.dart';
 import '../../providers/friends_providers.dart';
@@ -35,6 +36,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final authUser = ref.watch(currentAuthUserProvider);
 
@@ -44,7 +46,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
         backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text(
-            'Friends',
+            l10n.friends,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -87,7 +89,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
                     );
                   },
                   icon: Icon(Icons.login),
-                  label: Text('Sign In'),
+                  label: Text(l10n.signIn),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.primaryTeal,
                     padding: EdgeInsets.symmetric(horizontal: r.paddingXLarge, vertical: r.paddingMedium),
@@ -104,7 +106,7 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          'Friends',
+          l10n.friends,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -116,8 +118,8 @@ class _FriendsScreenState extends ConsumerState<FriendsScreen>
           indicatorColor: Colors.white,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white.withValues(alpha: 0.7),
-          tabs: const [
-            Tab(text: 'Friends', icon: Icon(Icons.people)),
+          tabs: [
+            Tab(text: l10n.friends, icon: Icon(Icons.people)),
             Tab(text: 'Requests', icon: Icon(Icons.person_add)),
             Tab(text: 'Search', icon: Icon(Icons.search)),
           ],
@@ -141,6 +143,7 @@ class _FriendsListTab extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final friendsAsync = ref.watch(friendsListProvider);
 
@@ -198,7 +201,7 @@ class _FriendsListTab extends ConsumerWidget {
             Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: AppTheme.error),
             SizedBox(height: r.spaceMedium),
             Text(
-              'Failed to load friends',
+              l10n.failedToLoadFriends,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: AppTheme.textSecondary,
                   ),
@@ -207,7 +210,7 @@ class _FriendsListTab extends ConsumerWidget {
             ElevatedButton(
               onPressed: () => ref.invalidate(friendsListProvider),
               style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primaryTeal),
-              child: Text('Retry'),
+              child: Text(l10n.retry),
             ),
           ],
         ),
@@ -222,6 +225,7 @@ class _PendingRequestsTab extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final requestsAsync = ref.watch(pendingRequestsProvider);
 
@@ -287,11 +291,11 @@ class _PendingRequestsTab extends ConsumerWidget {
           children: [
             Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: Colors.red),
             SizedBox(height: r.spaceMedium),
-            Text('Failed to load requests', style: TextStyle(color: Colors.grey[600])),
+            Text(l10n.failedToLoadRequests, style: TextStyle(color: Colors.grey[600])),
             SizedBox(height: r.spaceSmall),
             ElevatedButton(
               onPressed: () => ref.invalidate(pendingRequestsProvider),
-              child: Text('Retry'),
+              child: Text(l10n.retry),
             ),
           ],
         ),
@@ -319,6 +323,7 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final searchQuery = ref.watch(friendSearchQueryProvider);
     final resultsAsync = ref.watch(friendSearchResultsProvider);
@@ -331,7 +336,7 @@ class _SearchTabState extends ConsumerState<_SearchTab> {
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
-              hintText: 'Search by username or user code...',
+              hintText: l10n.searchByUsernameOrCode,
               prefixIcon: Icon(Icons.search),
               suffixIcon: _searchController.text.isNotEmpty
                   ? IconButton(
@@ -422,6 +427,7 @@ class _FriendCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     return Card(
       margin: EdgeInsets.only(bottom: r.spaceSmall),
@@ -486,7 +492,7 @@ class _FriendCard extends ConsumerWidget {
                 children: [
                   Icon(Icons.block, color: Colors.red),
                   SizedBox(width: r.spaceSmall),
-                  Text('Block', style: TextStyle(color: Colors.red)),
+                  Text(l10n.blocked, style: TextStyle(color: Colors.red)),
                 ],
               ),
             ),
@@ -659,10 +665,11 @@ class _UserSearchResultCard extends ConsumerWidget {
   }
 
   Widget _buildActionButton(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     if (user.isBlocked) {
       return Chip(
-        label: Text('Blocked', style: TextStyle(fontSize: r.fontSmall)),
+        label: Text(l10n.blocked, style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.red,
         labelStyle: TextStyle(color: Colors.white),
       );
@@ -670,7 +677,7 @@ class _UserSearchResultCard extends ConsumerWidget {
 
     if (user.isFriend) {
       return Chip(
-        label: Text('Friends', style: TextStyle(fontSize: r.fontSmall)),
+        label: Text(l10n.friends, style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.green,
         labelStyle: TextStyle(color: Colors.white),
       );
@@ -678,7 +685,7 @@ class _UserSearchResultCard extends ConsumerWidget {
 
     if (user.hasPendingRequest) {
       return Chip(
-        label: Text('Pending', style: TextStyle(fontSize: r.fontSmall)),
+        label: Text(l10n.pending, style: TextStyle(fontSize: r.fontSmall)),
         backgroundColor: Colors.orange,
         labelStyle: TextStyle(color: Colors.white),
       );
@@ -698,7 +705,7 @@ class _UserSearchResultCard extends ConsumerWidget {
           );
         }
       },
-      child: Text('Add'),
+      child: Text(l10n.add),
     );
   }
 }

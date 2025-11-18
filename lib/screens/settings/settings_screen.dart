@@ -6,7 +6,7 @@ import '../../providers/language_providers.dart';
 import '../../providers/theme_providers.dart';
 import '../../providers/auth_controller.dart';
 import '../../providers/calendar_providers.dart';
-import '../../l10n/app_localizations.dart' as app_l10n;
+import '../../l10n/app_localizations.dart';
 
 /// Settings screen with language switcher, theme options, and more
 class SettingsScreen extends ConsumerStatefulWidget {
@@ -28,7 +28,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
-    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
+    final l10n = Localizations.of<AppLocalizations>(context, AppLocalizations)!;
     final currentLanguage = ref.watch(languageProvider);
     final theme = Theme.of(context);
 
@@ -79,7 +79,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.mosque, color: AppTheme.primaryTeal),
                 title: Text(l10n.prayerNotifications),
-                subtitle: Text('Receive notifications for prayer times'),
+                subtitle: Text(l10n.receivePrayerNotifications),
                 value: _prayerNotifications,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -90,7 +90,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.quiz, color: AppTheme.primaryTeal),
                 title: Text(l10n.quizReminders),
-                subtitle: Text('Daily quiz reminders'),
+                subtitle: Text(l10n.dailyQuizReminders),
                 value: _quizReminders,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -101,7 +101,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.local_fire_department, color: AppTheme.primaryTeal),
                 title: Text(l10n.streakReminders),
-                subtitle: Text('Keep your streak going'),
+                subtitle: Text(l10n.keepStreakGoing),
                 value: _streakReminders,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -112,7 +112,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.emoji_events, color: AppTheme.primaryTeal),
                 title: Text(l10n.achievementNotifications),
-                subtitle: Text('New achievements unlocked'),
+                subtitle: Text(l10n.newAchievementsUnlocked),
                 value: _achievementNotifications,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -125,14 +125,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           SizedBox(height: r.spaceLarge),
 
           // Islamic Events Notifications Section
-          _buildSectionHeader('Islamic Events & Celebrations', theme),
+          _buildSectionHeader(l10n.islamicEvents, theme),
           SizedBox(height: r.spaceSmall),
-          _buildEventNotificationsCard(context, r, theme),
+          _buildEventNotificationsCard(context, r, theme, l10n),
 
           SizedBox(height: r.spaceLarge),
 
           // Sound & Vibration Section
-          _buildSectionHeader('Sound & Vibration', theme),
+          _buildSectionHeader(l10n.soundAndVibration, theme),
           SizedBox(height: r.spaceSmall),
           _buildSettingsCard(
             context,
@@ -140,7 +140,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.volume_up, color: AppTheme.primaryTeal),
                 title: Text(l10n.soundEffects),
-                subtitle: Text('Play sound effects in app'),
+                subtitle: Text(l10n.playSoundEffects),
                 value: _soundEffects,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -151,7 +151,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               SwitchListTile(
                 secondary: const Icon(Icons.vibration, color: AppTheme.primaryTeal),
                 title: Text(l10n.vibration),
-                subtitle: Text('Haptic feedback'),
+                subtitle: Text(l10n.hapticFeedback),
                 value: _vibration,
                 activeColor: AppTheme.primaryTeal,
                 onChanged: (value) {
@@ -285,7 +285,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show language selection dialog
   void _showLanguageDialog(BuildContext context) {
-    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
+    final l10n = Localizations.of<AppLocalizations>(context, AppLocalizations)!;
     final currentLanguage = ref.read(languageProvider);
 
     showDialog(
@@ -327,7 +327,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show theme selection dialog
   void _showThemeDialog(BuildContext context) {
-    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
+    final l10n = Localizations.of<AppLocalizations>(context, AppLocalizations)!;
     final currentTheme = ref.read(themeProvider);
 
     showDialog(
@@ -381,7 +381,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   /// Build event notifications card with settings
-  Widget _buildEventNotificationsCard(BuildContext context, Responsive r, ThemeData theme) {
+  Widget _buildEventNotificationsCard(BuildContext context, Responsive r, ThemeData theme, AppLocalizations l10n) {
     final eventNotificationsAsync = ref.watch(eventNotificationsEnabledProvider);
     final daysBeforeAsync = ref.watch(notificationDaysBeforeProvider);
 
@@ -392,8 +392,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         eventNotificationsAsync.when(
           data: (enabled) => SwitchListTile(
             secondary: const Icon(Icons.event, color: AppTheme.primaryTeal),
-            title: const Text('Event Notifications'),
-            subtitle: const Text('Get notified about upcoming Islamic celebrations'),
+            title: Text(l10n.eventNotifications),
+            subtitle: Text(l10n.notifyAboutCelebrations),
             value: enabled,
             activeColor: AppTheme.primaryTeal,
             onChanged: (value) async {
@@ -404,13 +404,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               ref.invalidate(eventNotificationsEnabledProvider);
             },
           ),
-          loading: () => const ListTile(
-            leading: CircularProgressIndicator(),
-            title: Text('Loading...'),
+          loading: () => ListTile(
+            leading: const CircularProgressIndicator(),
+            title: Text(l10n.loading),
           ),
-          error: (_, __) => const ListTile(
-            leading: Icon(Icons.error),
-            title: Text('Error loading settings'),
+          error: (_, __) => ListTile(
+            leading: const Icon(Icons.error),
+            title: Text(l10n.errorLoadingData),
           ),
         ),
         const Divider(),
@@ -419,18 +419,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         daysBeforeAsync.when(
           data: (days) => ListTile(
             leading: const Icon(Icons.notifications_active, color: AppTheme.primaryTeal),
-            title: const Text('Notification Timing'),
-            subtitle: Text('Notify me $days ${days == 1 ? 'day' : 'days'} before event'),
+            title: Text(l10n.notificationTiming),
+            subtitle: Text(l10n.notifyDaysBefore(days, days == 1 ? l10n.day : l10n.days)),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => _showDaysBeforeDialog(context, days),
           ),
-          loading: () => const ListTile(
-            leading: CircularProgressIndicator(),
-            title: Text('Loading...'),
+          loading: () => ListTile(
+            leading: const CircularProgressIndicator(),
+            title: Text(l10n.loading),
           ),
-          error: (_, __) => const ListTile(
-            leading: Icon(Icons.error),
-            title: Text('Error loading settings'),
+          error: (_, __) => ListTile(
+            leading: const Icon(Icons.error),
+            title: Text(l10n.errorLoadingData),
           ),
         ),
         const Divider(),
@@ -438,13 +438,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         // View All Events
         ListTile(
           leading: const Icon(Icons.calendar_month, color: AppTheme.primaryTeal),
-          title: const Text('View All Events'),
-          subtitle: const Text('Browse all Islamic celebrations'),
+          title: Text(l10n.viewAllEvents),
+          subtitle: Text(l10n.browseAllCelebrations),
           trailing: const Icon(Icons.chevron_right),
           onTap: () {
             // Navigate to events calendar screen (to be implemented)
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Full calendar view coming soon!')),
+              SnackBar(content: Text(l10n.calendarViewComingSoon)),
             );
           },
         ),
@@ -454,31 +454,33 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show days before notification dialog
   void _showDaysBeforeDialog(BuildContext context, int currentDays) {
+    final l10n = Localizations.of<AppLocalizations>(context, AppLocalizations)!;
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Notification Timing'),
+        title: Text(l10n.notificationTiming),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Choose when to be notified before an event:'),
+            Text(l10n.chooseNotificationTime),
             const SizedBox(height: 16),
             ...List.generate(8, (index) {
               final days = [0, 1, 2, 3, 5, 7, 14, 30][index];
               String label;
               if (days == 0) {
-                label = 'On the day';
+                label = l10n.onTheDay;
               } else if (days == 1) {
-                label = '1 day before';
+                label = l10n.oneDayBefore;
               } else if (days == 7) {
-                label = '1 week before';
+                label = l10n.oneWeekBefore;
               } else if (days == 14) {
-                label = '2 weeks before';
+                label = l10n.twoWeeksBefore;
               } else if (days == 30) {
-                label = '1 month before';
+                label = l10n.oneMonthBefore;
               } else {
-                label = '$days days before';
+                label = l10n.notifyDaysBefore(days, l10n.days);
               }
 
               return RadioListTile<int>(
@@ -503,7 +505,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
         ],
       ),
@@ -512,13 +514,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   /// Show logout confirmation dialog
   void _showLogoutDialog(BuildContext context) {
-    final l10n = Localizations.of<app_l10n.AppLocalizations>(context, app_l10n.AppLocalizations)!;
+    final l10n = Localizations.of<AppLocalizations>(context, AppLocalizations)!;
 
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: Text(l10n.logout),
-        content: const Text('Are you sure you want to logout?'),
+        content: Text(l10n.confirmLogout),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),

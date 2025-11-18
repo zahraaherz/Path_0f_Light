@@ -7,6 +7,7 @@ import '../../providers/auth_controller.dart';
 import '../../data/mock_data.dart';
 import '../auth/login_screen.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -15,10 +16,11 @@ class ProfileScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final r = context.responsive;
     final userProfileAsync = ref.watch(currentUserProfileProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: Text(l10n.profile),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
@@ -235,7 +237,7 @@ class ProfileScreen extends ConsumerWidget {
                     child: OutlinedButton.icon(
                       onPressed: () => _showSignOutDialog(context, ref),
                       icon: const Icon(Icons.logout),
-                      label: const Text('Sign Out'),
+                      label: Text(l10n.signOut),
                       style: OutlinedButton.styleFrom(
                         foregroundColor: AppTheme.error,
                         side: const BorderSide(color: AppTheme.error),
@@ -393,15 +395,16 @@ class ProfileScreen extends ConsumerWidget {
   }
 
   void _showSignOutDialog(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Sign Out'),
-        content: const Text('Are you sure you want to sign out?'),
+        title: Text(l10n.signOut),
+        content: Text(l10n.confirmSignOut),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () async {
@@ -415,7 +418,7 @@ class ProfileScreen extends ConsumerWidget {
               }
             },
             style: ElevatedButton.styleFrom(backgroundColor: AppTheme.error),
-            child: const Text('Sign Out'),
+            child: Text(l10n.signOut),
           ),
         ],
       ),

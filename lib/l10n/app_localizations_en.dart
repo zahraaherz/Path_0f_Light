@@ -1349,4 +1349,35 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get guidance => 'Guidance';
+
+  @override
+  String get signOut => 'Sign Out';
+
+  @override
+  String get confirmSignOut => 'Are you sure you want to sign out?';
+
+  @override
+  String get noProfileData => 'No profile data';
+
+  @override
+  String get challengeMode => 'Challenge Mode';
+
+  @override
+  String get failedToLoadCategories => 'Failed to load categories';
+
+  @override
+  String get searchFriends => 'Search friends...';
+
+  @override
+  String playerOffline(String name) {
+    return '$name is currently offline';
+  }
+
+  @override
+  String startingChallenge(String name) {
+    return 'Starting challenge with $name...';
+  }
+
+  @override
+  String get challengeCreated => 'Challenge created! Starting quiz...';
 }

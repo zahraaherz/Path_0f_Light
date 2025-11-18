@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/purchase_providers.dart';
 import '../../utils/responsive.dart';
@@ -18,13 +19,14 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final packagesAsync = ref.watch(availablePackagesProvider);
     final hasPremiumAsync = ref.watch(hasPremiumAccessProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Premium'),
+        title: Text(l10n.premium),
         centerTitle: true,
         actions: [
           IconButton(
@@ -40,7 +42,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
           ),
           TextButton(
             onPressed: _restorePurchases,
-            child: const Text('Restore'),
+            child: Text(l10n.restore),
           ),
         ],
       ),
@@ -459,7 +461,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
             SizedBox(height: r.spaceMedium),
             ElevatedButton(
               onPressed: () => ref.invalidate(availablePackagesProvider),
-              child: const Text('Retry'),
+              child: Text(l10n.retry),
             ),
           ],
         ),
@@ -527,8 +529,8 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Purchase successful! Thank you for supporting Path of Light.'),
+        SnackBar(
+          content: Text(l10n.purchaseSuccessful),
           backgroundColor: AppTheme.success,
           duration: Duration(seconds: 3),
         ),
@@ -555,6 +557,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Future<void> _restorePurchases() async {
+    final l10n = AppLocalizations.of(context)!;
     try {
       final controller = ref.read(purchaseControllerProvider);
       await controller.restorePurchases();
@@ -562,8 +565,8 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
       if (!mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Purchases restored successfully!'),
+        SnackBar(
+          content: Text(l10n.purchasesRestored),
           backgroundColor: AppTheme.success,
         ),
       );
@@ -571,7 +574,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Error restoring purchases: ${e.toString()}'),
+          content: Text(l10n.errorRestoringPurchases(e.toString())),
           backgroundColor: AppTheme.error,
         ),
       );

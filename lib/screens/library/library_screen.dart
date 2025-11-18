@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../providers/library_providers.dart';
@@ -30,6 +31,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final booksAsync = ref.watch(publishedBooksProvider);
     final authUser = ref.watch(currentAuthUserProvider);
@@ -62,7 +64,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                   MaterialPageRoute(builder: (_) => const LoginScreen()),
                 );
               },
-              tooltip: 'Sign In',
+              tooltip: l10n.signInTooltip,
             ),
         ],
       ),
@@ -74,7 +76,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
             child: TextField(
               controller: _searchController,
               decoration: InputDecoration(
-                hintText: 'Search books...',
+                hintText: l10n.searchBooks,
                 prefixIcon: Icon(Icons.search, color: AppTheme.primaryTeal),
                 suffixIcon: _searchQuery.isNotEmpty
                     ? IconButton(
@@ -166,7 +168,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                     Icon(Icons.error_outline, size: r.iconLarge * 1.5, color: AppTheme.error),
                     SizedBox(height: r.spaceMedium),
                     Text(
-                      'Failed to load books',
+                      l10n.failedToLoadBooks,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: AppTheme.textSecondary,
                           ),
@@ -179,7 +181,7 @@ class _LibraryScreenState extends ConsumerState<LibraryScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppTheme.primaryTeal,
                       ),
-                      child: Text('Retry'),
+                      child: Text(l10n.retry),
                     ),
                   ],
                 ),

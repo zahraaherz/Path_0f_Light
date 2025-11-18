@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../utils/responsive.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
@@ -9,18 +10,19 @@ class AchievementsScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final userProfileAsync = ref.watch(currentUserProfileProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Achievements'),
+        title: Text(l10n.achievements),
         centerTitle: true,
       ),
       body: userProfileAsync.when(
         data: (profile) {
           if (profile == null) {
-            return const Center(child: Text('No profile data'));
+            return Center(child: Text(l10n.noProfileData));
           }
 
           // Calculate achievements based on user stats
