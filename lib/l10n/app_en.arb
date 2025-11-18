@@ -490,6 +490,46 @@
   "code": "Code",
   "upgradeToPremium": "Upgrade to Premium",
 
+  "@_comment_premium": "===== Premium Subscription =====",
+  "premiumTitle": "Path of Light Premium",
+  "premiumSubtitle": "Unlock the full Islamic learning experience",
+  "premiumFeatures": "Premium Features",
+  "maxEnergy": "Max Energy",
+  "maxEnergyDesc": "Double your learning capacity",
+  "fasterRefill": "Faster Refill",
+  "fasterRefillDesc": "energy per hour instead of",
+  "adFreeExperience": "Ad-Free Experience",
+  "adFreeDesc": "No interruptions, pure learning",
+  "exclusiveBadges": "Exclusive Badges",
+  "exclusiveBadgesDesc": "Show your premium status",
+  "prioritySupport": "Priority Support",
+  "prioritySupportDesc": "Get help when you need it",
+  "premiumActive": "Premium Active",
+  "thankYouSupport": "Thank you for your support!",
+  "chooseYourPlan": "Choose Your Plan",
+  "monthlyPremium": "Monthly Premium",
+  "yearlyPremium": "Yearly Premium",
+  "lifetimePremium": "Lifetime Premium",
+  "billedMonthly": "Billed monthly",
+  "billedAnnually": "Billed annually",
+  "oneTimePayment": "One-time payment",
+  "savePercent": "Save {percent}%",
+  "@savePercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "bestValue": "Best Value",
+  "mostPopular": "Most Popular",
+  "subscribeNow": "Subscribe Now",
+  "subscriptionTerms": "By subscribing, you agree to our Terms of Service and Privacy Policy. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.",
+  "manageSubscription": "Manage your subscription in your device settings.",
+  "noProductsAvailable": "No products available",
+  "checkConnection": "Please check your internet connection and try again.",
+  "errorLoadingProducts": "Error loading products",
+
   "@_comment_errors": "===== Error Messages =====",
   "errorLoadingData": "Error loading data",
   "errorSavingData": "Error saving data",
