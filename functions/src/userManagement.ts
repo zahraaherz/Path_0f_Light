@@ -1,6 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import {ENERGY_CONFIG} from "./energySystem";
+import {sendVerificationEmail, sendPasswordResetEmail as sendResetEmail} from "./emailService";
 
 const db = admin.firestore();
 const auth = admin.auth();
@@ -497,7 +498,7 @@ export const deleteUserAccount = functions.https.onCall(
     }
 
     const userId = context.auth.uid;
-    const {password} = data; // For email/password users
+    // const {password} = data; // For email/password users - currently unused
 
     try {
       // Mark account as deleted in Firestore
@@ -865,14 +866,22 @@ export const sendEmailVerification = functions.https.onCall(
         userRecord.email!
       );
 
-      // TODO: Send email using SendGrid, Mailgun, or similar
-      // For now, return the link (in production, send via email service)
+      // Send email using email service
+      try {
+        await sendVerificationEmail(
+          userRecord.email!,
+          link,
+          userRecord.displayName || undefined
+        );
+      } catch (emailError) {
+        console.error("Failed to send verification email:", emailError);
+        // Don't fail the request if email sending fails
+        // User can request another verification email
+      }
 
       return {
         success: true,
         message: "Verification email sent",
-        // Remove link in production, only send via email
-        link,
       };
     } catch (error) {
       console.error("Error in sendEmailVerification:", error);
@@ -897,7 +906,7 @@ export const verifyEmailCode = functions.https.onCall(
     }
 
     const userId = context.auth.uid;
-    const {code} = data;
+    // const {code} = data; // Currently unused - handled client-side
 
     // This is handled client-side with Firebase Auth
     // But we update our Firestore record
@@ -940,14 +949,18 @@ export const sendPasswordResetEmail = functions.https.onCall(
       // Generate password reset link
       const link = await auth.generatePasswordResetLink(email);
 
-      // TODO: Send email using email service
-      // For now, return the link
+      // Send email using email service
+      try {
+        await sendResetEmail(email, link);
+      } catch (emailError) {
+        console.error("Failed to send password reset email:", emailError);
+        // Don't fail the request if email sending fails
+        // User can request another reset email
+      }
 
       return {
         success: true,
         message: "Password reset email sent",
-        // Remove link in production
-        link,
       };
     } catch (error) {
       console.error("Error in sendPasswordResetEmail:", error);
