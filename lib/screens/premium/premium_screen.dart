@@ -101,37 +101,49 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Widget _buildPremiumHeader(Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: EdgeInsets.all(r.paddingLarge),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [AppTheme.goldAccent, AppTheme.goldLight],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+        color: AppTheme.goldAccent.withOpacity(0.05),
+        border: Border.all(
+          color: AppTheme.goldAccent.withOpacity(0.3),
+          width: 1,
         ),
         borderRadius: BorderRadius.circular(r.radiusMedium),
       ),
       child: Column(
         children: [
-          Icon(
-            Icons.workspace_premium,
-            size: r.iconLarge * 2,
-            color: Colors.white,
+          Container(
+            padding: EdgeInsets.all(r.paddingMedium),
+            decoration: BoxDecoration(
+              color: AppTheme.goldAccent.withOpacity(0.1),
+              border: Border.all(
+                color: AppTheme.goldAccent.withOpacity(0.3),
+                width: 1,
+              ),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.workspace_premium,
+              size: r.iconLarge * 1.5,
+              color: AppTheme.goldAccent,
+            ),
           ),
           SizedBox(height: r.spaceMedium),
           Text(
-            'Path of Light Premium',
+            l10n.premiumTitle,
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: Colors.white,
+                  color: AppTheme.goldAccent,
                   fontWeight: FontWeight.bold,
                 ),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: r.spaceSmall),
           Text(
-            'Unlock the full Islamic learning experience',
+            l10n.premiumSubtitle,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: Colors.white.withValues(alpha: 0.9),
+                  color: AppTheme.textSecondary,
                 ),
             textAlign: TextAlign.center,
           ),
@@ -141,51 +153,57 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Widget _buildFeaturesSection(Responsive r) {
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.all(r.paddingLarge),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Premium Features',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            SizedBox(height: r.spaceMedium),
-            _buildFeatureItem(
-              icon: Icons.bolt,
-              title: '200 Max Energy',
-              subtitle: 'Double your learning capacity',
-              r: r,
-            ),
-            _buildFeatureItem(
-              icon: Icons.speed,
-              title: '2x Faster Refill',
-              subtitle: '10 energy per hour instead of 5',
-              r: r,
-            ),
-            _buildFeatureItem(
-              icon: Icons.block,
-              title: 'Ad-Free Experience',
-              subtitle: 'No interruptions, pure learning',
-              r: r,
-            ),
-            _buildFeatureItem(
-              icon: Icons.stars,
-              title: 'Exclusive Badges',
-              subtitle: 'Show your premium status',
-              r: r,
-            ),
-            _buildFeatureItem(
-              icon: Icons.support,
-              title: 'Priority Support',
-              subtitle: 'Get help when you need it',
-              r: r,
-            ),
-          ],
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: EdgeInsets.all(r.paddingLarge),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: AppTheme.primaryTeal.withOpacity(0.3),
+          width: 1,
         ),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            l10n.premiumFeatures,
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          SizedBox(height: r.spaceMedium),
+          _buildFeatureItem(
+            icon: Icons.bolt,
+            title: '200 ${l10n.maxEnergy}',
+            subtitle: l10n.maxEnergyDesc,
+            r: r,
+          ),
+          _buildFeatureItem(
+            icon: Icons.speed,
+            title: '2x ${l10n.fasterRefill}',
+            subtitle: '10 ${l10n.fasterRefillDesc} 5',
+            r: r,
+          ),
+          _buildFeatureItem(
+            icon: Icons.block,
+            title: l10n.adFreeExperience,
+            subtitle: l10n.adFreeDesc,
+            r: r,
+          ),
+          _buildFeatureItem(
+            icon: Icons.stars,
+            title: l10n.exclusiveBadges,
+            subtitle: l10n.exclusiveBadgesDesc,
+            r: r,
+          ),
+          _buildFeatureItem(
+            icon: Icons.support,
+            title: l10n.prioritySupport,
+            subtitle: l10n.prioritySupportDesc,
+            r: r,
+          ),
+        ],
       ),
     );
   }
@@ -203,10 +221,14 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
           Container(
             padding: EdgeInsets.all(r.paddingSmall),
             decoration: BoxDecoration(
-              color: AppTheme.goldAccent.withValues(alpha: 0.1),
+              color: AppTheme.primaryTeal.withOpacity(0.1),
+              border: Border.all(
+                color: AppTheme.primaryTeal.withOpacity(0.3),
+                width: 1,
+              ),
               borderRadius: BorderRadius.circular(r.radiusSmall),
             ),
-            child: Icon(icon, color: AppTheme.goldAccent),
+            child: Icon(icon, color: AppTheme.primaryTeal),
           ),
           SizedBox(width: r.spaceMedium),
           Expanded(
@@ -234,44 +256,62 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Widget _buildPremiumActiveCard(Responsive r) {
-    return Card(
-      color: AppTheme.success.withValues(alpha: 0.1),
-      child: Padding(
-        padding: EdgeInsets.all(r.paddingLarge),
-        child: Row(
-          children: [
-            Icon(Icons.check_circle, color: AppTheme.success, size: r.iconLarge),
-            SizedBox(width: r.spaceMedium),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Premium Active',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: AppTheme.success,
-                        ),
-                  ),
-                  Text(
-                    'Thank you for your support!',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
-              ),
-            ),
-          ],
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: EdgeInsets.all(r.paddingLarge),
+      decoration: BoxDecoration(
+        color: AppTheme.success.withOpacity(0.05),
+        border: Border.all(
+          color: AppTheme.success.withOpacity(0.3),
+          width: 1,
         ),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Row(
+        children: [
+          Container(
+            padding: EdgeInsets.all(r.paddingSmall),
+            decoration: BoxDecoration(
+              color: AppTheme.success.withOpacity(0.1),
+              border: Border.all(
+                color: AppTheme.success.withOpacity(0.3),
+                width: 1,
+              ),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(Icons.check_circle, color: AppTheme.success, size: r.iconMedium),
+          ),
+          SizedBox(width: r.spaceMedium),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  l10n.premiumActive,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.success,
+                      ),
+                ),
+                Text(
+                  l10n.thankYouSupport,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildProductsList(List<Package> packages, Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Text(
-          'Choose Your Plan',
+          l10n.chooseYourPlan,
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -283,35 +323,38 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Widget _buildPackageCard(Package package, Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     // Determine if this is the recommended plan (annual)
     final isRecommended = package.packageType == PackageType.annual;
 
-    String planName = 'Premium';
+    String planName = l10n.premium;
     String planDuration = '';
     String savingsText = '';
 
     // Determine package details based on type
     if (package.packageType == PackageType.monthly) {
-      planName = 'Monthly Premium';
-      planDuration = 'Billed monthly';
+      planName = l10n.monthlyPremium;
+      planDuration = l10n.billedMonthly;
     } else if (package.packageType == PackageType.annual) {
-      planName = 'Yearly Premium';
-      planDuration = 'Billed annually';
-      savingsText = 'Save 30%';
+      planName = l10n.yearlyPremium;
+      planDuration = l10n.billedAnnually;
+      savingsText = l10n.savePercent(30);
     } else if (package.packageType == PackageType.lifetime) {
-      planName = 'Lifetime Premium';
-      planDuration = 'One-time payment';
-      savingsText = 'Best Value';
+      planName = l10n.lifetimePremium;
+      planDuration = l10n.oneTimePayment;
+      savingsText = l10n.bestValue;
     }
 
-    return Card(
+    return Container(
       margin: EdgeInsets.only(bottom: r.spaceMedium),
-      elevation: isRecommended ? 8 : 2,
-      shape: RoundedRectangleBorder(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: isRecommended
+              ? AppTheme.goldAccent.withOpacity(0.5)
+              : AppTheme.primaryTeal.withOpacity(0.3),
+          width: isRecommended ? 2 : 1,
+        ),
         borderRadius: BorderRadius.circular(r.radiusMedium),
-        side: isRecommended
-            ? BorderSide(color: AppTheme.goldAccent, width: 2)
-            : BorderSide.none,
       ),
       child: InkWell(
         onTap: _isProcessing ? null : () => _purchasePackage(package),
@@ -351,7 +394,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                         package.storeProduct.priceString,
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                               fontWeight: FontWeight.bold,
-                              color: AppTheme.goldAccent,
+                              color: AppTheme.primaryTeal,
                             ),
                       ),
                       if (savingsText.isNotEmpty) ...[
@@ -387,7 +430,11 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: AppTheme.goldAccent.withValues(alpha: 0.1),
+                    color: AppTheme.goldAccent.withOpacity(0.1),
+                    border: Border.all(
+                      color: AppTheme.goldAccent.withOpacity(0.3),
+                      width: 1,
+                    ),
                     borderRadius: BorderRadius.circular(r.radiusSmall),
                   ),
                   child: Row(
@@ -396,7 +443,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                       Icon(Icons.stars, size: r.paddingMedium, color: AppTheme.goldAccent),
                       SizedBox(width: r.spaceXSmall),
                       Text(
-                        'Most Popular',
+                        l10n.mostPopular,
                         style: TextStyle(
                           color: AppTheme.goldAccent,
                           fontSize: r.fontSmall,
@@ -413,7 +460,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                 child: ElevatedButton(
                   onPressed: _isProcessing ? null : () => _purchasePackage(package),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: isRecommended ? AppTheme.goldAccent : null,
+                    backgroundColor: isRecommended ? AppTheme.primaryTeal : null,
                     padding: EdgeInsets.symmetric(vertical: r.paddingMedium),
                   ),
                   child: _isProcessing
@@ -423,7 +470,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
                       : Text(
-                          'Subscribe Now',
+                          l10n.subscribeNow,
                           style: TextStyle(
                             fontSize: r.fontMedium,
                             fontWeight: FontWeight.bold,
@@ -439,68 +486,79 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
   }
 
   Widget _buildNoProductsCard(Responsive r, AppLocalizations l10n) {
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.all(r.paddingLarge),
-        child: Column(
-          children: [
-            Icon(Icons.info_outline, size: r.iconLarge, color: AppTheme.info),
-            SizedBox(height: r.spaceMedium),
-            Text(
-              'No products available',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            SizedBox(height: r.spaceSmall),
-            Text(
-              'Please check your internet connection and try again.',
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppTheme.textSecondary,
-                  ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: r.spaceMedium),
-            ElevatedButton(
-              onPressed: () => ref.invalidate(availablePackagesProvider),
-              child: Text(l10n.retry),
-            ),
-          ],
+    return Container(
+      padding: EdgeInsets.all(r.paddingLarge),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: AppTheme.info.withOpacity(0.3),
+          width: 1,
         ),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Column(
+        children: [
+          Icon(Icons.info_outline, size: r.iconLarge, color: AppTheme.info),
+          SizedBox(height: r.spaceMedium),
+          Text(
+            l10n.noProductsAvailable,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          SizedBox(height: r.spaceSmall),
+          Text(
+            l10n.checkConnection,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: AppTheme.textSecondary,
+                ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: r.spaceMedium),
+          ElevatedButton(
+            onPressed: () => ref.invalidate(availablePackagesProvider),
+            child: Text(l10n.retry),
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildErrorCard(String error, Responsive r) {
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.all(r.paddingLarge),
-        child: Column(
-          children: [
-            Icon(Icons.error_outline, size: r.iconLarge, color: AppTheme.error),
-            SizedBox(height: r.spaceMedium),
-            Text(
-              'Error loading products',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            SizedBox(height: r.spaceSmall),
-            Text(
-              error,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppTheme.textSecondary,
-                  ),
-              textAlign: TextAlign.center,
-            ),
-          ],
+    final l10n = AppLocalizations.of(context)!;
+    return Container(
+      padding: EdgeInsets.all(r.paddingLarge),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: AppTheme.error.withOpacity(0.3),
+          width: 1,
         ),
+        borderRadius: BorderRadius.circular(r.radiusMedium),
+      ),
+      child: Column(
+        children: [
+          Icon(Icons.error_outline, size: r.iconLarge, color: AppTheme.error),
+          SizedBox(height: r.spaceMedium),
+          Text(
+            l10n.errorLoadingProducts,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          SizedBox(height: r.spaceSmall),
+          Text(
+            error,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: AppTheme.textSecondary,
+                ),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }
 
   Widget _buildTermsSection(Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     return Column(
       children: [
         Text(
-          'By subscribing, you agree to our Terms of Service and Privacy Policy. '
-          'Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period.',
+          l10n.subscriptionTerms,
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color: AppTheme.textSecondary,
               ),
@@ -508,7 +566,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
         ),
         SizedBox(height: r.spaceSmall),
         Text(
-          'Manage your subscription in your device settings.',
+          l10n.manageSubscription,
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                 color: AppTheme.textSecondary,
                 fontStyle: FontStyle.italic,
