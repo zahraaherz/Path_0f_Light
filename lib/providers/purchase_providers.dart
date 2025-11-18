@@ -356,6 +356,10 @@ class PurchaseController {
   }
 
   /// Extract numeric price from price string
+  ///
+  /// NOTE: This is for display purposes only. The authoritative price comes from
+  /// RevenueCat webhooks processed by Cloud Functions, which are stored in Firestore.
+  /// Never use frontend-calculated prices for revenue analytics or business logic.
   double _extractPrice(String priceString) {
     // Remove currency symbols and extract number
     final regex = RegExp(r'[\d,.]+');

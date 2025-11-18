@@ -181,7 +181,13 @@ class PurchaseRepository {
     }
   }
 
-  /// Get total revenue (approximate from purchase history)
+  /// Get total revenue (DEPRECATED - Use backend Cloud Function instead)
+  ///
+  /// WARNING: This frontend calculation is insecure and can be manipulated.
+  /// Use the Cloud Function `getTotalRevenue` for secure, authoritative revenue data.
+  ///
+  /// This method is kept for backward compatibility only.
+  @Deprecated('Use Cloud Function getTotalRevenue for secure backend calculation')
   Future<double> getTotalRevenue() async {
     try {
       final snapshot = await _purchaseHistoryCollection
@@ -201,7 +207,14 @@ class PurchaseRepository {
     }
   }
 
-  /// Get user's lifetime value
+  /// Get user's lifetime value (DEPRECATED - Use backend Cloud Function instead)
+  ///
+  /// WARNING: This frontend calculation is insecure and can be manipulated.
+  /// Use the Cloud Function `getUserLifetimeValue` for secure, authoritative LTV data.
+  /// The backend calculates LTV from RevenueCat webhooks, which is the source of truth.
+  ///
+  /// This method is kept for backward compatibility only.
+  @Deprecated('Use Cloud Function getUserLifetimeValue for secure backend calculation')
   Future<double> getUserLifetimeValue(String userId) async {
     try {
       final snapshot = await _purchaseHistoryCollection
