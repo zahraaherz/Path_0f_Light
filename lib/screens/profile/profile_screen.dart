@@ -4,7 +4,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_providers.dart';
 import '../../providers/auth_controller.dart';
-import '../../data/mock_data.dart';
 import '../auth/login_screen.dart';
 import '../premium/premium_screen.dart';
 import '../../utils/responsive.dart';
@@ -25,8 +24,10 @@ class ProfileScreen extends ConsumerWidget {
         child: r.constrainWidth(
           child: userProfileAsync.when(
             data: (profile) {
-              // Use mock profile if no real data is available
-              final displayProfile = profile ?? MockData.mockUserProfile;
+              // Show login prompt if no profile data is available
+              if (profile == null) {
+                return _buildNotLoggedInState(context, r, l10n);
+              }
 
               return CustomScrollView(
                 slivers: [
@@ -93,9 +94,9 @@ class ProfileScreen extends ConsumerWidget {
                                 ),
                               ),
                               child: ClipOval(
-                                child: displayProfile.photoURL != null
+                                child: profile.photoURL != null
                                     ? CachedNetworkImage(
-                                        imageUrl: displayProfile.photoURL!,
+                                        imageUrl: profile.photoURL!,
                                         fit: BoxFit.cover,
                                         placeholder: (_, __) => const CircularProgressIndicator(),
                                         errorWidget: (_, __, ___) => Icon(
@@ -118,7 +119,7 @@ class ProfileScreen extends ConsumerWidget {
 
                             // Display Name
                             Text(
-                              displayProfile.displayName ?? 'No Name',
+                              profile.displayName ?? 'No Name',
                               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                                     color: AppTheme.primaryTeal,
                                     fontWeight: FontWeight.bold,
@@ -128,7 +129,7 @@ class ProfileScreen extends ConsumerWidget {
 
                             // Email
                             Text(
-                              displayProfile.email ?? 'No Email',
+                              profile.email ?? 'No Email',
                               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     color: AppTheme.textSecondary,
                                   ),
@@ -147,7 +148,7 @@ class ProfileScreen extends ConsumerWidget {
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: Text(
-                                displayProfile.role.value.toUpperCase(),
+                                profile.role.value.toUpperCase(),
                                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
                                       color: AppTheme.goldAccent,
                                       fontWeight: FontWeight.bold,
@@ -172,7 +173,7 @@ class ProfileScreen extends ConsumerWidget {
                             child: _StatCard(
                               icon: Icons.bolt,
                               label: l10n.energy,
-                              value: '${displayProfile.energy.currentEnergy}/${displayProfile.energy.maxEnergy}',
+                              value: '${profile.energy.currentEnergy}/${profile.energy.maxEnergy}',
                               color: AppTheme.goldAccent,
                             ),
                           ),
@@ -181,7 +182,7 @@ class ProfileScreen extends ConsumerWidget {
                             child: _StatCard(
                               icon: Icons.stars,
                               label: l10n.points,
-                              value: '${displayProfile.quizProgress.totalPoints}',
+                              value: '${profile.quizProgress.totalPoints}',
                               color: AppTheme.primaryTeal,
                             ),
                           ),
@@ -190,7 +191,7 @@ class ProfileScreen extends ConsumerWidget {
                             child: _StatCard(
                               icon: Icons.local_fire_department,
                               label: l10n.streak,
-                              value: '${displayProfile.dailyStats.loginStreak}',
+                              value: '${profile.dailyStats.loginStreak}',
                               color: AppTheme.error,
                             ),
                           ),
@@ -207,17 +208,17 @@ class ProfileScreen extends ConsumerWidget {
                       title: l10n.quizProgress,
                       icon: Icons.quiz,
                       children: [
-                        _InfoRow(l10n.totalQuestions, '${displayProfile.quizProgress.totalQuestionsAnswered}'),
-                        _InfoRow(l10n.correctAnswers, '${displayProfile.quizProgress.correctAnswers}'),
-                        _InfoRow(l10n.wrongAnswers, '${displayProfile.quizProgress.wrongAnswers}'),
+                        _InfoRow(l10n.totalQuestions, '${profile.quizProgress.totalQuestionsAnswered}'),
+                        _InfoRow(l10n.correctAnswers, '${profile.quizProgress.correctAnswers}'),
+                        _InfoRow(l10n.wrongAnswers, '${profile.quizProgress.wrongAnswers}'),
                         _InfoRow(
                           l10n.accuracy,
-                          displayProfile.quizProgress.totalQuestionsAnswered > 0
-                              ? '${((displayProfile.quizProgress.correctAnswers / displayProfile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
+                          profile.quizProgress.totalQuestionsAnswered > 0
+                              ? '${((profile.quizProgress.correctAnswers / profile.quizProgress.totalQuestionsAnswered) * 100).toStringAsFixed(1)}%'
                               : '0%',
                         ),
-                        _InfoRow(l10n.currentStreak, '${displayProfile.quizProgress.currentStreak}'),
-                        _InfoRow(l10n.longestStreak, '${displayProfile.quizProgress.longestStreak}'),
+                        _InfoRow(l10n.currentStreak, '${profile.quizProgress.currentStreak}'),
+                        _InfoRow(l10n.longestStreak, '${profile.quizProgress.longestStreak}'),
                       ],
                     ),
                   ),
@@ -230,13 +231,13 @@ class ProfileScreen extends ConsumerWidget {
                       title: l10n.accountInformation,
                       icon: Icons.info_outline,
                       children: [
-                        _InfoRow(l10n.language, displayProfile.language.toUpperCase()),
-                        _InfoRow(l10n.emailVerified, displayProfile.emailVerified ? l10n.yes : l10n.no),
-                        _InfoRow(l10n.phoneVerified, displayProfile.phoneVerified ? l10n.yes : l10n.no),
-                        _InfoRow(l10n.provider, displayProfile.provider),
-                        _InfoRow(l10n.accountStatus, displayProfile.accountStatus.name.toUpperCase()),
-                        _InfoRow(l10n.memberSince, _formatDate(displayProfile.createdAt)),
-                        _InfoRow(l10n.lastActive, _formatDate(displayProfile.lastActive)),
+                        _InfoRow(l10n.language, profile.language.toUpperCase()),
+                        _InfoRow(l10n.emailVerified, profile.emailVerified ? l10n.yes : l10n.no),
+                        _InfoRow(l10n.phoneVerified, profile.phoneVerified ? l10n.yes : l10n.no),
+                        _InfoRow(l10n.provider, profile.provider),
+                        _InfoRow(l10n.accountStatus, profile.accountStatus.name.toUpperCase()),
+                        _InfoRow(l10n.memberSince, _formatDate(profile.createdAt)),
+                        _InfoRow(l10n.lastActive, _formatDate(profile.lastActive)),
                       ],
                     ),
                   ),
@@ -249,12 +250,12 @@ class ProfileScreen extends ConsumerWidget {
                       title: l10n.subscription,
                       icon: Icons.workspace_premium,
                       children: [
-                        _InfoRow(l10n.plan, displayProfile.subscription.plan.toUpperCase()),
-                        _InfoRow(l10n.status, displayProfile.subscription.active ? l10n.active : l10n.inactive),
-                        if (displayProfile.subscription.expiryDate != null)
-                          _InfoRow(l10n.expires, _formatDate(displayProfile.subscription.expiryDate!)),
+                        _InfoRow(l10n.plan, profile.subscription.plan.toUpperCase()),
+                        _InfoRow(l10n.status, profile.subscription.active ? l10n.active : l10n.inactive),
+                        if (profile.subscription.expiryDate != null)
+                          _InfoRow(l10n.expires, _formatDate(profile.subscription.expiryDate!)),
                         // Show upgrade button for free users
-                        if (displayProfile.subscription.plan.toLowerCase() == 'free')
+                        if (profile.subscription.plan.toLowerCase() == 'free')
                           Padding(
                             padding: EdgeInsets.all(r.paddingMedium),
                             child: Container(
@@ -318,19 +319,19 @@ class ProfileScreen extends ConsumerWidget {
                         _SettingsTile(
                           icon: Icons.notifications,
                           title: l10n.notifications,
-                          subtitle: displayProfile.settings.notifications.enabled ? l10n.enabled : l10n.disabled,
+                          subtitle: profile.settings.notifications.enabled ? l10n.enabled : l10n.disabled,
                           onTap: () {},
                         ),
                         _SettingsTile(
                           icon: Icons.privacy_tip,
                           title: l10n.privacyPolicy,
-                          subtitle: displayProfile.settings.privacy.profileVisible ? l10n.public : l10n.private,
+                          subtitle: profile.settings.privacy.profileVisible ? l10n.public : l10n.private,
                           onTap: () {},
                         ),
                         _SettingsTile(
                           icon: Icons.palette,
                           title: l10n.theme,
-                          subtitle: displayProfile.settings.preferences.theme.toUpperCase(),
+                          subtitle: profile.settings.preferences.theme.toUpperCase(),
                           onTap: () {},
                         ),
                       ],
@@ -377,107 +378,8 @@ class ProfileScreen extends ConsumerWidget {
                 ],
               );
             },
-            loading: () {
-              return CustomScrollView(
-                slivers: [
-                  SliverToBoxAdapter(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            color: AppTheme.primaryTeal.withOpacity(0.2),
-                            width: 2,
-                          ),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(r.paddingMedium),
-                        child: Text(
-                          l10n.profile,
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                color: AppTheme.primaryTeal,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SliverToBoxAdapter(
-                    child: Center(
-                      child: Padding(
-                        padding: EdgeInsets.all(32.0),
-                        child: CircularProgressIndicator(),
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
-            error: (error, stack) {
-              return CustomScrollView(
-                slivers: [
-                  SliverToBoxAdapter(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          bottom: BorderSide(
-                            color: AppTheme.primaryTeal.withOpacity(0.2),
-                            width: 2,
-                          ),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.all(r.paddingMedium),
-                        child: Text(
-                          l10n.profile,
-                          style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                                color: AppTheme.primaryTeal,
-                                fontWeight: FontWeight.bold,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SliverToBoxAdapter(
-                    child: Padding(
-                      padding: EdgeInsets.all(r.paddingLarge),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.error_outline, size: 48, color: AppTheme.error),
-                          SizedBox(height: r.spaceMedium),
-                          Text(
-                            l10n.previewMode,
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                          SizedBox(height: r.spaceSmall),
-                          Text(
-                            l10n.signInToViewProfile,
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                          SizedBox(height: r.spaceLarge),
-                          OutlinedButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(builder: (_) => const LoginScreen()),
-                              );
-                            },
-                            style: OutlinedButton.styleFrom(
-                              side: BorderSide(color: AppTheme.primaryTeal, width: 1.5),
-                              padding: EdgeInsets.symmetric(
-                                horizontal: r.paddingLarge,
-                                vertical: r.paddingMedium,
-                              ),
-                            ),
-                            child: Text(l10n.signIn),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              );
-            },
+            loading: () => _buildLoadingState(context, r, l10n),
+            error: (error, stack) => _buildNotLoggedInState(context, r, l10n),
           ),
         ),
       ),
@@ -516,6 +418,175 @@ class ProfileScreen extends ConsumerWidget {
 
   String _formatDate(DateTime date) {
     return '${date.day}/${date.month}/${date.year}';
+  }
+
+  /// Build loading state with improved UX
+  Widget _buildLoadingState(BuildContext context, Responsive r, AppLocalizations l10n) {
+    return CustomScrollView(
+      slivers: [
+        // Header
+        SliverToBoxAdapter(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: AppTheme.primaryTeal.withOpacity(0.2),
+                  width: 2,
+                ),
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(r.paddingMedium),
+              child: Text(
+                l10n.profile,
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: AppTheme.primaryTeal,
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+            ),
+          ),
+        ),
+        // Loading indicator with message
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primaryTeal),
+                ),
+                SizedBox(height: r.spaceLarge),
+                Text(
+                  'Loading profile...',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: AppTheme.textSecondary,
+                      ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Build not logged in state with clear call-to-action
+  Widget _buildNotLoggedInState(BuildContext context, Responsive r, AppLocalizations l10n) {
+    return CustomScrollView(
+      slivers: [
+        // Header
+        SliverToBoxAdapter(
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: AppTheme.primaryTeal.withOpacity(0.2),
+                  width: 2,
+                ),
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(r.paddingMedium),
+              child: Text(
+                l10n.profile,
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: AppTheme.primaryTeal,
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+            ),
+          ),
+        ),
+        // Login prompt
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.all(r.paddingLarge),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Icon
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: AppTheme.primaryTeal.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.person_outline,
+                      size: 64,
+                      color: AppTheme.primaryTeal,
+                    ),
+                  ),
+                  SizedBox(height: r.spaceLarge),
+
+                  // Title
+                  Text(
+                    l10n.previewMode,
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          color: AppTheme.primaryTeal,
+                          fontWeight: FontWeight.bold,
+                        ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: r.spaceSmall),
+
+                  // Description
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: r.paddingLarge),
+                    child: Text(
+                      l10n.signInToViewProfile,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppTheme.textSecondary,
+                          ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(height: r.spaceLarge * 1.5),
+
+                  // Sign in button
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const LoginScreen()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppTheme.primaryTeal,
+                      foregroundColor: Colors.white,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: r.paddingLarge * 2,
+                        vertical: r.paddingMedium,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(r.radiusMedium),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Icon(Icons.login, size: 20),
+                        SizedBox(width: r.spaceSmall),
+                        Text(
+                          l10n.signIn,
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
 
