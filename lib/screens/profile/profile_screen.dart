@@ -119,7 +119,7 @@ class ProfileScreen extends ConsumerWidget {
 
                             // Display Name
                             Text(
-                              profile.displayName ?? 'No Name',
+                              profile.displayName ?? l10n.noName,
                               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                                     color: AppTheme.primaryTeal,
                                     fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class ProfileScreen extends ConsumerWidget {
 
                             // Email
                             Text(
-                              profile.email ?? 'No Email',
+                              profile.email ?? l10n.noEmail,
                               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     color: AppTheme.textSecondary,
                                   ),
@@ -459,7 +459,7 @@ class ProfileScreen extends ConsumerWidget {
                 ),
                 SizedBox(height: r.spaceLarge),
                 Text(
-                  'Loading profile...',
+                  l10n.loadingProfile,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: AppTheme.textSecondary,
                       ),

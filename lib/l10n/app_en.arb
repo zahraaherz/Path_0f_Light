@@ -944,6 +944,9 @@
 
   "@_comment_states": "===== States =====",
   "noProfileData": "No profile data",
+  "noName": "No Name",
+  "noEmail": "No Email",
+  "loadingProfile": "Loading profile...",
   "failedToLoadFriends": "Failed to load friends",
   "failedToLoadRequests": "Failed to load requests",
   "failedToLoadCategories": "Failed to load categories",

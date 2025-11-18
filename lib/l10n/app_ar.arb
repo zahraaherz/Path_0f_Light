@@ -747,6 +747,9 @@
 
   "@_comment_states": "===== الحالات =====",
   "noProfileData": "لا توجد بيانات ملف شخصي",
+  "noName": "لا يوجد اسم",
+  "noEmail": "لا يوجد بريد إلكتروني",
+  "loadingProfile": "جاري تحميل الملف الشخصي...",
   "failedToLoadFriends": "فشل تحميل الأصدقاء",
   "failedToLoadRequests": "فشل تحميل الطلبات",
   "failedToLoadCategories": "فشل تحميل الفئات",
