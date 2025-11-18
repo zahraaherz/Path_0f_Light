@@ -386,14 +386,14 @@ class _SetReminderDialogState extends ConsumerState<SetReminderDialog> {
       return;
     }
 
-    final user = ref.read(currentUserProvider).value;
-    if (user == null) return;
+    final userId = ref.read(currentUserIdProvider);
+    if (userId == null) return;
 
     final isEditing = widget.existingReminder != null;
 
     final reminder = Reminder(
       id: isEditing ? widget.existingReminder!.id : '',
-      userId: user.id,
+      userId: userId,
       collectionItemId: widget.item.id,
       title: _titleController.text.trim(),
       message: _messageController.text.trim().isEmpty

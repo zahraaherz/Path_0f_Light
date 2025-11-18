@@ -23,10 +23,13 @@ mixin _$IslamicEvent {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get arabicTitle => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   IslamicEventType get type => throw _privateConstructorUsedError;
   String get hijriDate =>
       throw _privateConstructorUsedError; // e.g., "10 Muharram"
+  int? get hijriMonth =>
+      throw _privateConstructorUsedError; // Month number (1-12)
+  int? get hijriDay => throw _privateConstructorUsedError; // Day number
   String? get gregorianDate =>
       throw _privateConstructorUsedError; // Approximate or calculated
   String? get significance => throw _privateConstructorUsedError;
@@ -55,9 +58,11 @@ abstract class $IslamicEventCopyWith<$Res> {
       {String id,
       String title,
       String arabicTitle,
-      String description,
+      String? description,
       IslamicEventType type,
       String hijriDate,
+      int? hijriMonth,
+      int? hijriDay,
       String? gregorianDate,
       String? significance,
       List<String>? recommendations,
@@ -84,9 +89,11 @@ class _$IslamicEventCopyWithImpl<$Res, $Val extends IslamicEvent>
     Object? id = null,
     Object? title = null,
     Object? arabicTitle = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? type = null,
     Object? hijriDate = null,
+    Object? hijriMonth = freezed,
+    Object? hijriDay = freezed,
     Object? gregorianDate = freezed,
     Object? significance = freezed,
     Object? recommendations = freezed,
@@ -107,10 +114,10 @@ class _$IslamicEventCopyWithImpl<$Res, $Val extends IslamicEvent>
           ? _value.arabicTitle
           : arabicTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -119,6 +126,14 @@ class _$IslamicEventCopyWithImpl<$Res, $Val extends IslamicEvent>
           ? _value.hijriDate
           : hijriDate // ignore: cast_nullable_to_non_nullable
               as String,
+      hijriMonth: freezed == hijriMonth
+          ? _value.hijriMonth
+          : hijriMonth // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hijriDay: freezed == hijriDay
+          ? _value.hijriDay
+          : hijriDay // ignore: cast_nullable_to_non_nullable
+              as int?,
       gregorianDate: freezed == gregorianDate
           ? _value.gregorianDate
           : gregorianDate // ignore: cast_nullable_to_non_nullable
@@ -159,9 +174,11 @@ abstract class _$$IslamicEventImplCopyWith<$Res>
       {String id,
       String title,
       String arabicTitle,
-      String description,
+      String? description,
       IslamicEventType type,
       String hijriDate,
+      int? hijriMonth,
+      int? hijriDay,
       String? gregorianDate,
       String? significance,
       List<String>? recommendations,
@@ -186,9 +203,11 @@ class __$$IslamicEventImplCopyWithImpl<$Res>
     Object? id = null,
     Object? title = null,
     Object? arabicTitle = null,
-    Object? description = null,
+    Object? description = freezed,
     Object? type = null,
     Object? hijriDate = null,
+    Object? hijriMonth = freezed,
+    Object? hijriDay = freezed,
     Object? gregorianDate = freezed,
     Object? significance = freezed,
     Object? recommendations = freezed,
@@ -209,10 +228,10 @@ class __$$IslamicEventImplCopyWithImpl<$Res>
           ? _value.arabicTitle
           : arabicTitle // ignore: cast_nullable_to_non_nullable
               as String,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -221,6 +240,14 @@ class __$$IslamicEventImplCopyWithImpl<$Res>
           ? _value.hijriDate
           : hijriDate // ignore: cast_nullable_to_non_nullable
               as String,
+      hijriMonth: freezed == hijriMonth
+          ? _value.hijriMonth
+          : hijriMonth // ignore: cast_nullable_to_non_nullable
+              as int?,
+      hijriDay: freezed == hijriDay
+          ? _value.hijriDay
+          : hijriDay // ignore: cast_nullable_to_non_nullable
+              as int?,
       gregorianDate: freezed == gregorianDate
           ? _value.gregorianDate
           : gregorianDate // ignore: cast_nullable_to_non_nullable
@@ -256,9 +283,11 @@ class _$IslamicEventImpl implements _IslamicEvent {
       {required this.id,
       required this.title,
       required this.arabicTitle,
-      required this.description,
+      this.description,
       required this.type,
       required this.hijriDate,
+      this.hijriMonth,
+      this.hijriDay,
       this.gregorianDate,
       this.significance,
       final List<String>? recommendations,
@@ -277,12 +306,18 @@ class _$IslamicEventImpl implements _IslamicEvent {
   @override
   final String arabicTitle;
   @override
-  final String description;
+  final String? description;
   @override
   final IslamicEventType type;
   @override
   final String hijriDate;
 // e.g., "10 Muharram"
+  @override
+  final int? hijriMonth;
+// Month number (1-12)
+  @override
+  final int? hijriDay;
+// Day number
   @override
   final String? gregorianDate;
 // Approximate or calculated
@@ -309,7 +344,7 @@ class _$IslamicEventImpl implements _IslamicEvent {
 
   @override
   String toString() {
-    return 'IslamicEvent(id: $id, title: $title, arabicTitle: $arabicTitle, description: $description, type: $type, hijriDate: $hijriDate, gregorianDate: $gregorianDate, significance: $significance, recommendations: $recommendations, imageUrl: $imageUrl, isToday: $isToday, isUpcoming: $isUpcoming)';
+    return 'IslamicEvent(id: $id, title: $title, arabicTitle: $arabicTitle, description: $description, type: $type, hijriDate: $hijriDate, hijriMonth: $hijriMonth, hijriDay: $hijriDay, gregorianDate: $gregorianDate, significance: $significance, recommendations: $recommendations, imageUrl: $imageUrl, isToday: $isToday, isUpcoming: $isUpcoming)';
   }
 
   @override
@@ -326,6 +361,10 @@ class _$IslamicEventImpl implements _IslamicEvent {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.hijriDate, hijriDate) ||
                 other.hijriDate == hijriDate) &&
+            (identical(other.hijriMonth, hijriMonth) ||
+                other.hijriMonth == hijriMonth) &&
+            (identical(other.hijriDay, hijriDay) ||
+                other.hijriDay == hijriDay) &&
             (identical(other.gregorianDate, gregorianDate) ||
                 other.gregorianDate == gregorianDate) &&
             (identical(other.significance, significance) ||
@@ -349,6 +388,8 @@ class _$IslamicEventImpl implements _IslamicEvent {
       description,
       type,
       hijriDate,
+      hijriMonth,
+      hijriDay,
       gregorianDate,
       significance,
       const DeepCollectionEquality().hash(_recommendations),
@@ -377,9 +418,11 @@ abstract class _IslamicEvent implements IslamicEvent {
       {required final String id,
       required final String title,
       required final String arabicTitle,
-      required final String description,
+      final String? description,
       required final IslamicEventType type,
       required final String hijriDate,
+      final int? hijriMonth,
+      final int? hijriDay,
       final String? gregorianDate,
       final String? significance,
       final List<String>? recommendations,
@@ -397,11 +440,15 @@ abstract class _IslamicEvent implements IslamicEvent {
   @override
   String get arabicTitle;
   @override
-  String get description;
+  String? get description;
   @override
   IslamicEventType get type;
   @override
   String get hijriDate; // e.g., "10 Muharram"
+  @override
+  int? get hijriMonth; // Month number (1-12)
+  @override
+  int? get hijriDay; // Day number
   @override
   String? get gregorianDate; // Approximate or calculated
   @override

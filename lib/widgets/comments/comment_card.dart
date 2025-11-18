@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import '../../models/library/comment_models.dart';
 import '../../providers/comments_providers.dart';
 import '../../providers/auth_providers.dart';
@@ -184,7 +184,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
       // For now, show confirmation message
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(l10n.commentReported(selectedReason)),
+          content: Text(l10n.commentReported(selectedReason!)),
           duration: const Duration(seconds: 3),
         ),
       );

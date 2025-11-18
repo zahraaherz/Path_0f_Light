@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:purchases_flutter/purchases_flutter.dart' hide PurchaseType;
 import '../services/revenue_cat_service.dart';
 import '../repositories/purchase_repository.dart';
 import '../models/purchase/purchase_history.dart';
@@ -288,11 +288,11 @@ class PurchaseController {
         type: purchaseType,
         price: _extractPrice(package.storeProduct.priceString),
         currency: package.storeProduct.currencyCode ?? 'USD',
-        purchaseDate: entitlement.latestPurchaseDate ?? DateTime.now(),
+        purchaseDate: _parseDate(entitlement.latestPurchaseDate) ?? DateTime.now(),
         status: PurchaseStatus.active,
         transactionId: entitlement.identifier,
-        originalTransactionId: entitlement.originalPurchaseDate?.toIso8601String(),
-        expirationDate: entitlement.expirationDate,
+        originalTransactionId: entitlement.originalPurchaseDate,
+        expirationDate: _parseDate(entitlement.expirationDate),
         isInTrialPeriod: false,
         store: entitlement.store.name,
         metadata: {
@@ -310,8 +310,8 @@ class PurchaseController {
         isPremium: true,
         currentProductId: entitlement.productIdentifier,
         currentPackageId: package.identifier,
-        subscriptionStartDate: entitlement.latestPurchaseDate,
-        subscriptionExpiryDate: entitlement.expirationDate,
+        subscriptionStartDate: _parseDate(entitlement.latestPurchaseDate),
+        subscriptionExpiryDate: _parseDate(entitlement.expirationDate),
         willRenew: entitlement.willRenew,
         store: entitlement.store.name,
         totalPurchases: 1,
@@ -365,5 +365,19 @@ class PurchaseController {
       return double.tryParse(numStr) ?? 0.0;
     }
     return 0.0;
+  }
+
+  /// Parse date from RevenueCat which can be String or DateTime
+  DateTime? _parseDate(dynamic date) {
+    if (date == null) return null;
+    if (date is DateTime) return date;
+    if (date is String) {
+      try {
+        return DateTime.parse(date);
+      } catch (e) {
+        return null;
+      }
+    }
+    return null;
   }
 }

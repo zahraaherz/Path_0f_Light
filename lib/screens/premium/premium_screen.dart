@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../../l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/purchase_providers.dart';
 import '../../utils/responsive.dart';
@@ -82,7 +82,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
             packagesAsync.when(
               data: (packages) {
                 if (packages.isEmpty) {
-                  return _buildNoProductsCard(r);
+                  return _buildNoProductsCard(r, l10n);
                 }
                 return _buildProductsList(packages, r);
               },
@@ -438,7 +438,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
     );
   }
 
-  Widget _buildNoProductsCard(Responsive r) {
+  Widget _buildNoProductsCard(Responsive r, AppLocalizations l10n) {
     return Card(
       child: Padding(
         padding: EdgeInsets.all(r.paddingLarge),
@@ -528,6 +528,7 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
 
       if (!mounted) return;
 
+      final l10n = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(l10n.purchaseSuccessful),

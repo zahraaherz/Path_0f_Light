@@ -284,7 +284,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get juz => 'Juz';
 
   @override
-  String get verses => 'verses';
+  String get verses => 'Verses';
 
   @override
   String get hadith => 'Hadith';
@@ -679,6 +679,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get removeFromFavorites => 'Remove from Favorites';
 
   @override
+  String get tapToViewFull => 'Tap to view full';
+
+  @override
   String completedTasks(int completed, int total) {
     return '$completed of $total completed';
   }
@@ -705,7 +708,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get recentlyRead => 'Recently Read';
 
   @override
-  String get searchBooks => 'Search Books';
+  String get searchBooks => 'Search books...';
 
   @override
   String get searchInBook => 'Search in Book';
@@ -820,6 +823,93 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get achievementNotifications => 'Achievement Notifications';
+
+  @override
+  String get reminders => 'Reminders';
+
+  @override
+  String get setReminder => 'Set Reminder';
+
+  @override
+  String get editReminder => 'Edit Reminder';
+
+  @override
+  String get deleteReminder => 'Delete Reminder';
+
+  @override
+  String get activeReminders => 'Active Reminders';
+
+  @override
+  String get noActiveReminders => 'No active reminders';
+
+  @override
+  String get reminderTitle => 'Reminder Title';
+
+  @override
+  String get reminderMessage => 'Reminder Message';
+
+  @override
+  String get triggerType => 'Trigger Type';
+
+  @override
+  String get frequency => 'Frequency';
+
+  @override
+  String get specificTime => 'Specific Time';
+
+  @override
+  String get prayerTime => 'Prayer Time';
+
+  @override
+  String get dayOfWeek => 'Day of Week';
+
+  @override
+  String get once => 'Once';
+
+  @override
+  String get daily => 'Daily';
+
+  @override
+  String get weekly => 'Weekly';
+
+  @override
+  String get monthly => 'Monthly';
+
+  @override
+  String get custom => 'Custom';
+
+  @override
+  String get enableSound => 'Enable Sound';
+
+  @override
+  String get enableVibration => 'Enable Vibration';
+
+  @override
+  String get minutesBefore => 'Minutes Before';
+
+  @override
+  String get minutesAfter => 'Minutes After';
+
+  @override
+  String get selectTime => 'Select Time';
+
+  @override
+  String get selectDays => 'Select Days';
+
+  @override
+  String get selectPrayerTime => 'Select Prayer Time';
+
+  @override
+  String get optional => 'Optional';
+
+  @override
+  String get reminderCreated => 'Reminder created successfully';
+
+  @override
+  String get reminderUpdated => 'Reminder updated successfully';
+
+  @override
+  String get reminderDeleted => 'Reminder deleted successfully';
 
   @override
   String get soundEffects => 'Sound Effects';
@@ -1297,7 +1387,47 @@ class AppLocalizationsEn extends AppLocalizations {
   String get dhikr => 'Dhikr';
 
   @override
-  String get custom => 'Custom';
+  String get verse => 'Verse';
+
+  @override
+  String get readQuran => 'Read Quran';
+
+  @override
+  String get page => 'Page';
+
+  @override
+  String get meccan => 'Meccan';
+
+  @override
+  String get medinan => 'Medinan';
+
+  @override
+  String get revelationType => 'Revelation Type';
+
+  @override
+  String verseNumber(int number) {
+    return 'Verse $number';
+  }
+
+  @override
+  String totalVerses(int count) {
+    return '$count verses';
+  }
+
+  @override
+  String readingSurah(String surah) {
+    return 'Reading $surah';
+  }
+
+  @override
+  String get bismillahArRahmanArRahim =>
+      'In the name of Allah, the Most Gracious, the Most Merciful';
+
+  @override
+  String get noVersesFound => 'No verses found';
+
+  @override
+  String get display => 'Display';
 
   @override
   String get morning => 'Morning';
@@ -1324,15 +1454,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get shaban => 'Sha\'ban';
 
   @override
-  String get daily => 'Daily';
-
-  @override
-  String get weekly => 'Weekly';
-
-  @override
-  String get monthly => 'Monthly';
-
-  @override
   String get specialOccasions => 'Special Occasions';
 
   @override
@@ -1351,22 +1472,175 @@ class AppLocalizationsEn extends AppLocalizations {
   String get guidance => 'Guidance';
 
   @override
+  String get emailHint => 'your@email.com';
+
+  @override
+  String get passwordHint => '••••••••';
+
+  @override
+  String get continueButton => 'Continue';
+
+  @override
+  String get sendResetLink => 'Send Reset Link';
+
+  @override
+  String get orSignUpWith => 'OR SIGN UP WITH';
+
+  @override
+  String get agreeToTerms => 'Please agree to the Terms and Conditions';
+
+  @override
+  String failedToLinkAccount(String error) {
+    return 'Failed to link account: $error';
+  }
+
+  @override
+  String failedToContinueAsGuest(String error) {
+    return 'Failed to continue as guest: $error';
+  }
+
+  @override
+  String get allow => 'Allow';
+
+  @override
   String get signOut => 'Sign Out';
+
+  @override
+  String get restore => 'Restore';
+
+  @override
+  String get start => 'Start';
+
+  @override
+  String get add => 'Add';
+
+  @override
+  String get report => 'Report';
+
+  @override
+  String get blocked => 'Blocked';
+
+  @override
+  String get pending => 'Pending';
 
   @override
   String get confirmSignOut => 'Are you sure you want to sign out?';
 
   @override
-  String get noProfileData => 'No profile data';
+  String get confirmLogout => 'Are you sure you want to logout?';
 
   @override
-  String get challengeMode => 'Challenge Mode';
+  String get confirmDeleteBookmark =>
+      'Are you sure you want to delete this bookmark?';
 
   @override
-  String get failedToLoadCategories => 'Failed to load categories';
+  String get confirmDeleteComment =>
+      'Are you sure you want to delete this comment?';
 
   @override
-  String get searchFriends => 'Search friends...';
+  String get confirmEndGame =>
+      'Going to the book will end the current game. Are you sure?';
+
+  @override
+  String get signInRequired => 'Sign in Required';
+
+  @override
+  String get deleteBookmark => 'Delete Bookmark';
+
+  @override
+  String get deleteComment => 'Delete Comment';
+
+  @override
+  String get reportComment => 'Report Comment';
+
+  @override
+  String get reportIssue => 'Report Issue';
+
+  @override
+  String get locationPermission => 'Location Permission';
+
+  @override
+  String get watchAd => 'Watch Ad';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get issueType => 'Issue Type';
+
+  @override
+  String get typoSpellingError => 'Typo/Spelling Error';
+
+  @override
+  String get translationError => 'Translation Error';
+
+  @override
+  String get describeIssue => 'Please describe the issue in detail...';
+
+  @override
+  String get notificationTiming => 'Notification Timing';
+
+  @override
+  String get pleaseDescribeIssue => 'Please describe the issue';
+
+  @override
+  String get bookmarkDeleted => 'Bookmark deleted';
+
+  @override
+  String get bookmarkAdded => 'Bookmark added';
+
+  @override
+  String get commentTooLong => 'Comment cannot exceed 500 characters';
+
+  @override
+  String get commentDeleted => 'Comment deleted';
+
+  @override
+  String get commentUpdated => 'Comment updated';
+
+  @override
+  String commentReported(String reason) {
+    return 'Comment reported for: $reason. Thank you for helping keep our community safe.';
+  }
+
+  @override
+  String get commentEditTimeExpired =>
+      'Comments can only be edited within 5 minutes';
+
+  @override
+  String get calendarViewComingSoon => 'Full calendar view coming soon!';
+
+  @override
+  String get collectionsComingSoon => 'Collections page coming soon';
+
+  @override
+  String get booksComingSoon => 'Books page coming soon';
+
+  @override
+  String get siraComingSoon => 'Sira page coming soon';
+
+  @override
+  String get settingsComingSoon => 'Settings page coming soon';
+
+  @override
+  String get locationPermissionGranted => 'Location permission granted';
+
+  @override
+  String failedToAddBookmark(String error) {
+    return 'Failed to add bookmark: $error';
+  }
+
+  @override
+  String get purchaseSuccessful =>
+      'Purchase successful! Thank you for supporting Path of Light.';
+
+  @override
+  String get purchasesRestored => 'Purchases restored successfully!';
+
+  @override
+  String errorRestoringPurchases(String error) {
+    return 'Error restoring purchases: $error';
+  }
 
   @override
   String playerOffline(String name) {
@@ -1380,4 +1654,286 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get challengeCreated => 'Challenge created! Starting quiz...';
+
+  @override
+  String dailyBonusClaimed(int bonus) {
+    return 'Daily bonus claimed! +$bonus energy';
+  }
+
+  @override
+  String get useBookmarkButton => 'Use bookmark button in app bar';
+
+  @override
+  String get textCopied => 'Text copied to clipboard';
+
+  @override
+  String get searchForText => 'Search for text...';
+
+  @override
+  String get searchFriends => 'Search friends...';
+
+  @override
+  String get searchByUsernameOrCode => 'Search by username or user code...';
+
+  @override
+  String get editYourComment => 'Edit your comment...';
+
+  @override
+  String get streakStatistics => 'Streak Statistics';
+
+  @override
+  String get premium => 'Premium';
+
+  @override
+  String get userComparison => 'User Comparison';
+
+  @override
+  String get challengeMode => 'Challenge Mode';
+
+  @override
+  String get purchaseHistory => 'Purchase History';
+
+  @override
+  String get receivePrayerNotifications =>
+      'Receive notifications for prayer times';
+
+  @override
+  String get dailyQuizReminders => 'Daily quiz reminders';
+
+  @override
+  String get keepStreakGoing => 'Keep your streak going';
+
+  @override
+  String get newAchievementsUnlocked => 'New achievements unlocked';
+
+  @override
+  String get playSoundEffects => 'Play sound effects in app';
+
+  @override
+  String get hapticFeedback => 'Haptic feedback';
+
+  @override
+  String get eventNotifications => 'Event Notifications';
+
+  @override
+  String get notifyAboutCelebrations =>
+      'Get notified about upcoming Islamic celebrations';
+
+  @override
+  String notifyDaysBefore(int days, String daysLabel) {
+    return 'Notify me $days $daysLabel before event';
+  }
+
+  @override
+  String get day => 'day';
+
+  @override
+  String get days => 'days';
+
+  @override
+  String get viewAllEvents => 'View All Events';
+
+  @override
+  String get browseAllCelebrations => 'Browse all Islamic celebrations';
+
+  @override
+  String get enableAutoScroll => 'Enable Auto Scroll';
+
+  @override
+  String get autoScrollWhileReading => 'Automatically scroll while reading';
+
+  @override
+  String get nightMode => 'Night Mode';
+
+  @override
+  String get reduceBrightnessNight => 'Reduce brightness for night reading';
+
+  @override
+  String get pleaseSignInToViewBookmarks => 'Please sign in to view bookmarks';
+
+  @override
+  String get goBack => 'Go Back';
+
+  @override
+  String get quranAndTafsir => 'Quran & Tafsir';
+
+  @override
+  String get duaAndZiyarat => 'Du\'a Kumayl, Ziyarat Ashura';
+
+  @override
+  String get nearbyMosques => 'Nearby Mosques';
+
+  @override
+  String get soundAndVibration => 'Sound & Vibration';
+
+  @override
+  String get chooseNotificationTime => 'Choose notification time';
+
+  @override
+  String get onTheDay => 'On the day';
+
+  @override
+  String get oneDayBefore => '1 day before';
+
+  @override
+  String get oneWeekBefore => '1 week before';
+
+  @override
+  String get twoWeeksBefore => '2 weeks before';
+
+  @override
+  String get oneMonthBefore => '1 month before';
+
+  @override
+  String get reportIssueMenu => 'Report issue';
+
+  @override
+  String get noProfileData => 'No profile data';
+
+  @override
+  String get failedToLoadFriends => 'Failed to load friends';
+
+  @override
+  String get failedToLoadRequests => 'Failed to load requests';
+
+  @override
+  String get failedToLoadCategories => 'Failed to load categories';
+
+  @override
+  String get failedToLoadBooks => 'Failed to load books';
+
+  @override
+  String errorWithDetails(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String failedToLoadBook(String error) {
+    return 'Failed to load book: $error';
+  }
+
+  @override
+  String get failedToLoadComments => 'Failed to load comments';
+
+  @override
+  String get failedToLoadBookmarks => 'Failed to load bookmarks';
+
+  @override
+  String get errorLoadingEnergy => 'Error loading energy';
+
+  @override
+  String get signInTooltip => 'Sign In';
+
+  @override
+  String get pleaseEnterEmail => 'Please enter your email';
+
+  @override
+  String get pleaseEnterValidEmail => 'Please enter a valid email address';
+
+  @override
+  String get pleaseEnterPassword => 'Please enter your password';
+
+  @override
+  String get pleaseConfirmPassword => 'Please confirm your password';
+
+  @override
+  String get passwordMinLength => 'Password must be at least 8 characters';
+
+  @override
+  String get passwordRequiresUppercase =>
+      'Password must contain at least one uppercase letter';
+
+  @override
+  String get passwordRequiresLowercase =>
+      'Password must contain at least one lowercase letter';
+
+  @override
+  String get passwordRequiresNumber =>
+      'Password must contain at least one number';
+
+  @override
+  String get passwordRequiresSpecialChar =>
+      'Password must contain at least one special character';
+
+  @override
+  String get pleaseEnterValidPhone => 'Please enter a valid phone number';
+
+  @override
+  String get phoneLengthInvalid => 'Phone number must be 10-15 digits';
+
+  @override
+  String get pleaseEnterName => 'Please enter your name';
+
+  @override
+  String get nameMinLength => 'Name must be at least 2 characters';
+
+  @override
+  String get nameMaxLength => 'Name must not exceed 50 characters';
+
+  @override
+  String get nameInvalidCharacters => 'Name contains invalid characters';
+
+  @override
+  String get pleaseEnterUsername => 'Please enter a username';
+
+  @override
+  String get usernameLength => 'Username must be 3-20 characters';
+
+  @override
+  String get usernameInvalidCharacters =>
+      'Username can only contain letters, numbers, and underscores';
+
+  @override
+  String get usernameMustStartWithLetter => 'Username must start with a letter';
+
+  @override
+  String get pleaseEnterValidUrl => 'Please enter a valid URL';
+
+  @override
+  String get fieldRequired => 'This field is required';
+
+  @override
+  String get thisFieldIsRequired => 'This field is required';
+
+  @override
+  String get pleaseEnterNumber => 'Please enter a number';
+
+  @override
+  String get pleaseEnterValidNumber => 'Please enter a valid number';
+
+  @override
+  String get numberTooSmall => 'Number is too small';
+
+  @override
+  String get numberTooLarge => 'Number is too large';
+
+  @override
+  String get pleaseEnterAge => 'Please enter your age';
+
+  @override
+  String get pleaseEnterValidAge => 'Please enter a valid age';
+
+  @override
+  String get ageTooYoung => 'You must be at least 13 years old';
+
+  @override
+  String get ageTooOld => 'Please enter a valid age';
+
+  @override
+  String get pleaseEnterText => 'Please enter text';
+
+  @override
+  String get pleaseEnterArabicText => 'Please enter Arabic text';
+
+  @override
+  String get fieldTooShort => 'This field is too short';
+
+  @override
+  String get fieldTooLong => 'This field is too long';
+
+  @override
+  String get errorOccurred => 'An unexpected error occurred';
+
+  @override
+  String get goHome => 'Go to Home';
 }

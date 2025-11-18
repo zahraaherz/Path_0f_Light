@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../l10n/app_localizations.dart';
 
 /// Error Boundary Widget
 /// Catches and handles errors within its subtree to prevent full app crashes
@@ -63,22 +63,7 @@ class _ErrorBoundaryState extends State<ErrorBoundary> {
           _buildDefaultErrorUI(context);
     }
 
-    // Wrap child with error handling
-    return ErrorWidget.builder = (FlutterErrorDetails details) {
-      // In production, show custom error UI
-      if (!const bool.fromEnvironment('dart.vm.product', defaultValue: false)) {
-        // Development mode - show detailed error
-        return ErrorWidget(details.exception);
-      }
-
-      // Production mode - show user-friendly error
-      WidgetsBinding.instance.addPostFrameCallback((_) {
-        _handleError(details.exception, details.stack);
-      });
-
-      return _buildDefaultErrorUI(context);
-    };
-
+    // Return child widget
     return widget.child;
   }
 

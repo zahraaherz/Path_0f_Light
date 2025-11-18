@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:hijri/hijri.dart';
+import 'package:hijri/hijri_calendar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/islamic_events/islamic_event.dart';
 import '../data/shia_hijri_calendar.dart';

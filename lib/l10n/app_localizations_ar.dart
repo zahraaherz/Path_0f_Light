@@ -281,7 +281,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get surahs => 'السور';
 
   @override
-  String get juz => 'الأجزاء';
+  String get juz => 'جزء';
 
   @override
   String get verses => 'آيات';
@@ -678,6 +678,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get removeFromFavorites => 'إزالة من المفضلة';
 
   @override
+  String get tapToViewFull => 'اضغط لعرض الكامل';
+
+  @override
   String completedTasks(int completed, int total) {
     return 'تم إكمال $completed من $total';
   }
@@ -704,7 +707,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get recentlyRead => 'المقروء مؤخراً';
 
   @override
-  String get searchBooks => 'البحث في الكتب';
+  String get searchBooks => 'البحث في الكتب...';
 
   @override
   String get searchInBook => 'البحث في الكتاب';
@@ -819,6 +822,93 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get achievementNotifications => 'إشعارات الإنجازات';
+
+  @override
+  String get reminders => 'التذكيرات';
+
+  @override
+  String get setReminder => 'ضبط تذكير';
+
+  @override
+  String get editReminder => 'تعديل التذكير';
+
+  @override
+  String get deleteReminder => 'حذف التذكير';
+
+  @override
+  String get activeReminders => 'التذكيرات النشطة';
+
+  @override
+  String get noActiveReminders => 'لا توجد تذكيرات نشطة';
+
+  @override
+  String get reminderTitle => 'عنوان التذكير';
+
+  @override
+  String get reminderMessage => 'رسالة التذكير';
+
+  @override
+  String get triggerType => 'نوع التفعيل';
+
+  @override
+  String get frequency => 'التكرار';
+
+  @override
+  String get specificTime => 'وقت محدد';
+
+  @override
+  String get prayerTime => 'وقت الصلاة';
+
+  @override
+  String get dayOfWeek => 'يوم الأسبوع';
+
+  @override
+  String get once => 'مرة واحدة';
+
+  @override
+  String get daily => 'يومياً';
+
+  @override
+  String get weekly => 'أسبوعياً';
+
+  @override
+  String get monthly => 'شهرياً';
+
+  @override
+  String get custom => 'مخصص';
+
+  @override
+  String get enableSound => 'تفعيل الصوت';
+
+  @override
+  String get enableVibration => 'تفعيل الاهتزاز';
+
+  @override
+  String get minutesBefore => 'دقائق قبل';
+
+  @override
+  String get minutesAfter => 'دقائق بعد';
+
+  @override
+  String get selectTime => 'اختر الوقت';
+
+  @override
+  String get selectDays => 'اختر الأيام';
+
+  @override
+  String get selectPrayerTime => 'اختر وقت الصلاة';
+
+  @override
+  String get optional => 'اختياري';
+
+  @override
+  String get reminderCreated => 'تم إنشاء التذكير بنجاح';
+
+  @override
+  String get reminderUpdated => 'تم تحديث التذكير بنجاح';
+
+  @override
+  String get reminderDeleted => 'تم حذف التذكير بنجاح';
 
   @override
   String get soundEffects => 'المؤثرات الصوتية';
@@ -1297,7 +1387,46 @@ class AppLocalizationsAr extends AppLocalizations {
   String get dhikr => 'ذكر';
 
   @override
-  String get custom => 'مخصص';
+  String get verse => 'آية';
+
+  @override
+  String get readQuran => 'اقرأ القرآن';
+
+  @override
+  String get page => 'صفحة';
+
+  @override
+  String get meccan => 'مكية';
+
+  @override
+  String get medinan => 'مدنية';
+
+  @override
+  String get revelationType => 'نوع الوحي';
+
+  @override
+  String verseNumber(int number) {
+    return 'الآية $number';
+  }
+
+  @override
+  String totalVerses(int count) {
+    return '$count آية';
+  }
+
+  @override
+  String readingSurah(String surah) {
+    return 'قراءة $surah';
+  }
+
+  @override
+  String get bismillahArRahmanArRahim => 'بسم الله الرحمن الرحيم';
+
+  @override
+  String get noVersesFound => 'لم يتم العثور على آيات';
+
+  @override
+  String get display => 'العرض';
 
   @override
   String get morning => 'الصباح';
@@ -1324,15 +1453,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String get shaban => 'شعبان';
 
   @override
-  String get daily => 'يومي';
-
-  @override
-  String get weekly => 'أسبوعي';
-
-  @override
-  String get monthly => 'شهري';
-
-  @override
   String get specialOccasions => 'مناسبات خاصة';
 
   @override
@@ -1351,22 +1471,173 @@ class AppLocalizationsAr extends AppLocalizations {
   String get guidance => 'هداية';
 
   @override
+  String get emailHint => 'your@email.com';
+
+  @override
+  String get passwordHint => '••••••••';
+
+  @override
+  String get continueButton => 'متابعة';
+
+  @override
+  String get sendResetLink => 'إرسال رابط إعادة التعيين';
+
+  @override
+  String get orSignUpWith => 'أو سجّل باستخدام';
+
+  @override
+  String get agreeToTerms => 'يرجى الموافقة على الشروط والأحكام';
+
+  @override
+  String failedToLinkAccount(String error) {
+    return 'فشل ربط الحساب: $error';
+  }
+
+  @override
+  String failedToContinueAsGuest(String error) {
+    return 'فشلت المتابعة كضيف: $error';
+  }
+
+  @override
+  String get allow => 'السماح';
+
+  @override
   String get signOut => 'تسجيل الخروج';
+
+  @override
+  String get restore => 'استعادة';
+
+  @override
+  String get start => 'ابدأ';
+
+  @override
+  String get add => 'إضافة';
+
+  @override
+  String get report => 'بلّغ';
+
+  @override
+  String get blocked => 'محظور';
+
+  @override
+  String get pending => 'قيد الانتظار';
 
   @override
   String get confirmSignOut => 'هل أنت متأكد من تسجيل الخروج؟';
 
   @override
-  String get noProfileData => 'لا توجد بيانات ملف شخصي';
+  String get confirmLogout => 'هل أنت متأكد من تسجيل الخروج؟';
 
   @override
-  String get challengeMode => 'وضع التحدي';
+  String get confirmDeleteBookmark =>
+      'هل أنت متأكد من حذف هذه العلامة المرجعية؟';
 
   @override
-  String get failedToLoadCategories => 'فشل تحميل الفئات';
+  String get confirmDeleteComment => 'هل أنت متأكد من حذف هذا التعليق؟';
 
   @override
-  String get searchFriends => 'البحث عن الأصدقاء...';
+  String get confirmEndGame =>
+      'الانتقال إلى الكتاب سينهي اللعبة الحالية. هل أنت متأكد؟';
+
+  @override
+  String get signInRequired => 'تسجيل الدخول مطلوب';
+
+  @override
+  String get deleteBookmark => 'حذف العلامة المرجعية';
+
+  @override
+  String get deleteComment => 'حذف التعليق';
+
+  @override
+  String get reportComment => 'الإبلاغ عن التعليق';
+
+  @override
+  String get reportIssue => 'الإبلاغ عن مشكلة';
+
+  @override
+  String get locationPermission => 'إذن الموقع';
+
+  @override
+  String get watchAd => 'شاهد إعلاناً';
+
+  @override
+  String get confirm => 'تأكيد';
+
+  @override
+  String get issueType => 'نوع المشكلة';
+
+  @override
+  String get typoSpellingError => 'خطأ إملائي / طباعي';
+
+  @override
+  String get translationError => 'خطأ في الترجمة';
+
+  @override
+  String get describeIssue => 'يرجى وصف المشكلة بالتفصيل...';
+
+  @override
+  String get notificationTiming => 'توقيت الإشعارات';
+
+  @override
+  String get pleaseDescribeIssue => 'يرجى وصف المشكلة';
+
+  @override
+  String get bookmarkDeleted => 'تم حذف العلامة المرجعية';
+
+  @override
+  String get bookmarkAdded => 'تمت إضافة العلامة المرجعية';
+
+  @override
+  String get commentTooLong => 'لا يمكن أن يتجاوز التعليق 500 حرف';
+
+  @override
+  String get commentDeleted => 'تم حذف التعليق';
+
+  @override
+  String get commentUpdated => 'تم تحديث التعليق';
+
+  @override
+  String commentReported(String reason) {
+    return 'تم الإبلاغ عن التعليق للسبب: $reason. شكراً لمساعدتنا في الحفاظ على مجتمعنا آمناً.';
+  }
+
+  @override
+  String get commentEditTimeExpired => 'يمكن تعديل التعليقات خلال 5 دقائق فقط';
+
+  @override
+  String get calendarViewComingSoon => 'عرض التقويم الكامل قريباً!';
+
+  @override
+  String get collectionsComingSoon => 'صفحة المجموعات قريباً';
+
+  @override
+  String get booksComingSoon => 'صفحة الكتب قريباً';
+
+  @override
+  String get siraComingSoon => 'صفحة السيرة قريباً';
+
+  @override
+  String get settingsComingSoon => 'صفحة الإعدادات قريباً';
+
+  @override
+  String get locationPermissionGranted => 'تم منح إذن الموقع';
+
+  @override
+  String failedToAddBookmark(String error) {
+    return 'فشل إضافة العلامة المرجعية: $error';
+  }
+
+  @override
+  String get purchaseSuccessful =>
+      'تمت عملية الشراء بنجاح! شكراً لدعمك طريق النور.';
+
+  @override
+  String get purchasesRestored => 'تمت استعادة المشتريات بنجاح!';
+
+  @override
+  String errorRestoringPurchases(String error) {
+    return 'خطأ في استعادة المشتريات: $error';
+  }
 
   @override
   String playerOffline(String name) {
@@ -1380,4 +1651,286 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get challengeCreated => 'تم إنشاء التحدي! بدء الاختبار...';
+
+  @override
+  String dailyBonusClaimed(int bonus) {
+    return 'تم الحصول على المكافأة اليومية! +$bonus طاقة';
+  }
+
+  @override
+  String get useBookmarkButton => 'استخدم زر العلامة المرجعية في شريط التطبيق';
+
+  @override
+  String get textCopied => 'تم نسخ النص إلى الحافظة';
+
+  @override
+  String get searchForText => 'ابحث عن نص...';
+
+  @override
+  String get searchFriends => 'البحث عن الأصدقاء...';
+
+  @override
+  String get searchByUsernameOrCode => 'ابحث باسم المستخدم أو رمز المستخدم...';
+
+  @override
+  String get editYourComment => 'عدّل تعليقك...';
+
+  @override
+  String get streakStatistics => 'إحصائيات السلسلة';
+
+  @override
+  String get premium => 'المميزة';
+
+  @override
+  String get userComparison => 'مقارنة المستخدمين';
+
+  @override
+  String get challengeMode => 'وضع التحدي';
+
+  @override
+  String get purchaseHistory => 'سجل المشتريات';
+
+  @override
+  String get receivePrayerNotifications => 'تلقي إشعارات أوقات الصلاة';
+
+  @override
+  String get dailyQuizReminders => 'تذكيرات الاختبار اليومية';
+
+  @override
+  String get keepStreakGoing => 'حافظ على سلسلتك مستمرة';
+
+  @override
+  String get newAchievementsUnlocked => 'تم فتح إنجازات جديدة';
+
+  @override
+  String get playSoundEffects => 'تشغيل المؤثرات الصوتية في التطبيق';
+
+  @override
+  String get hapticFeedback => 'التغذية الراجعة اللمسية';
+
+  @override
+  String get eventNotifications => 'إشعارات المناسبات';
+
+  @override
+  String get notifyAboutCelebrations =>
+      'احصل على إشعار حول الاحتفالات الإسلامية القادمة';
+
+  @override
+  String notifyDaysBefore(int days, String daysLabel) {
+    return 'أعلمني $days $daysLabel قبل المناسبة';
+  }
+
+  @override
+  String get day => 'يوم';
+
+  @override
+  String get days => 'أيام';
+
+  @override
+  String get viewAllEvents => 'عرض جميع المناسبات';
+
+  @override
+  String get browseAllCelebrations => 'تصفح جميع الاحتفالات الإسلامية';
+
+  @override
+  String get enableAutoScroll => 'تفعيل التمرير التلقائي';
+
+  @override
+  String get autoScrollWhileReading => 'التمرير التلقائي أثناء القراءة';
+
+  @override
+  String get nightMode => 'الوضع الليلي';
+
+  @override
+  String get reduceBrightnessNight => 'تقليل السطوع للقراءة الليلية';
+
+  @override
+  String get pleaseSignInToViewBookmarks =>
+      'يرجى تسجيل الدخول لعرض العلامات المرجعية';
+
+  @override
+  String get goBack => 'رجوع';
+
+  @override
+  String get quranAndTafsir => 'القرآن والتفسير';
+
+  @override
+  String get duaAndZiyarat => 'دعاء كميل، زيارة عاشوراء';
+
+  @override
+  String get nearbyMosques => 'المساجد القريبة';
+
+  @override
+  String get soundAndVibration => 'الصوت والاهتزاز';
+
+  @override
+  String get chooseNotificationTime => 'اختر وقت الإشعار';
+
+  @override
+  String get onTheDay => 'في نفس اليوم';
+
+  @override
+  String get oneDayBefore => 'قبل يوم واحد';
+
+  @override
+  String get oneWeekBefore => 'قبل أسبوع واحد';
+
+  @override
+  String get twoWeeksBefore => 'قبل أسبوعين';
+
+  @override
+  String get oneMonthBefore => 'قبل شهر واحد';
+
+  @override
+  String get reportIssueMenu => 'الإبلاغ عن مشكلة';
+
+  @override
+  String get noProfileData => 'لا توجد بيانات ملف شخصي';
+
+  @override
+  String get failedToLoadFriends => 'فشل تحميل الأصدقاء';
+
+  @override
+  String get failedToLoadRequests => 'فشل تحميل الطلبات';
+
+  @override
+  String get failedToLoadCategories => 'فشل تحميل الفئات';
+
+  @override
+  String get failedToLoadBooks => 'فشل تحميل الكتب';
+
+  @override
+  String errorWithDetails(String error) {
+    return 'خطأ: $error';
+  }
+
+  @override
+  String failedToLoadBook(String error) {
+    return 'فشل تحميل الكتاب: $error';
+  }
+
+  @override
+  String get failedToLoadComments => 'فشل تحميل التعليقات';
+
+  @override
+  String get failedToLoadBookmarks => 'فشل تحميل العلامات المرجعية';
+
+  @override
+  String get errorLoadingEnergy => 'خطأ في تحميل الطاقة';
+
+  @override
+  String get signInTooltip => 'تسجيل الدخول';
+
+  @override
+  String get pleaseEnterEmail => 'الرجاء إدخال بريدك الإلكتروني';
+
+  @override
+  String get pleaseEnterValidEmail => 'الرجاء إدخال عنوان بريد إلكتروني صحيح';
+
+  @override
+  String get pleaseEnterPassword => 'الرجاء إدخال كلمة المرور';
+
+  @override
+  String get pleaseConfirmPassword => 'الرجاء تأكيد كلمة المرور';
+
+  @override
+  String get passwordMinLength => 'يجب أن تكون كلمة المرور 8 أحرف على الأقل';
+
+  @override
+  String get passwordRequiresUppercase =>
+      'يجب أن تحتوي كلمة المرور على حرف كبير واحد على الأقل';
+
+  @override
+  String get passwordRequiresLowercase =>
+      'يجب أن تحتوي كلمة المرور على حرف صغير واحد على الأقل';
+
+  @override
+  String get passwordRequiresNumber =>
+      'يجب أن تحتوي كلمة المرور على رقم واحد على الأقل';
+
+  @override
+  String get passwordRequiresSpecialChar =>
+      'يجب أن تحتوي كلمة المرور على حرف خاص واحد على الأقل';
+
+  @override
+  String get pleaseEnterValidPhone => 'الرجاء إدخال رقم هاتف صحيح';
+
+  @override
+  String get phoneLengthInvalid => 'يجب أن يتكون رقم الهاتف من 10-15 رقمًا';
+
+  @override
+  String get pleaseEnterName => 'الرجاء إدخال اسمك';
+
+  @override
+  String get nameMinLength => 'يجب أن يكون الاسم حرفين على الأقل';
+
+  @override
+  String get nameMaxLength => 'يجب ألا يتجاوز الاسم 50 حرفًا';
+
+  @override
+  String get nameInvalidCharacters => 'الاسم يحتوي على أحرف غير صالحة';
+
+  @override
+  String get pleaseEnterUsername => 'الرجاء إدخال اسم مستخدم';
+
+  @override
+  String get usernameLength => 'يجب أن يكون اسم المستخدم من 3 إلى 20 حرفًا';
+
+  @override
+  String get usernameInvalidCharacters =>
+      'يمكن أن يحتوي اسم المستخدم على أحرف وأرقام وشرطات سفلية فقط';
+
+  @override
+  String get usernameMustStartWithLetter => 'يجب أن يبدأ اسم المستخدم بحرف';
+
+  @override
+  String get pleaseEnterValidUrl => 'الرجاء إدخال رابط صحيح';
+
+  @override
+  String get fieldRequired => 'هذا الحقل مطلوب';
+
+  @override
+  String get thisFieldIsRequired => 'هذا الحقل مطلوب';
+
+  @override
+  String get pleaseEnterNumber => 'الرجاء إدخال رقم';
+
+  @override
+  String get pleaseEnterValidNumber => 'الرجاء إدخال رقم صحيح';
+
+  @override
+  String get numberTooSmall => 'الرقم صغير جدًا';
+
+  @override
+  String get numberTooLarge => 'الرقم كبير جدًا';
+
+  @override
+  String get pleaseEnterAge => 'الرجاء إدخال عمرك';
+
+  @override
+  String get pleaseEnterValidAge => 'الرجاء إدخال عمر صحيح';
+
+  @override
+  String get ageTooYoung => 'يجب أن يكون عمرك 13 عامًا على الأقل';
+
+  @override
+  String get ageTooOld => 'الرجاء إدخال عمر صحيح';
+
+  @override
+  String get pleaseEnterText => 'الرجاء إدخال نص';
+
+  @override
+  String get pleaseEnterArabicText => 'الرجاء إدخال نص عربي';
+
+  @override
+  String get fieldTooShort => 'هذا الحقل قصير جدًا';
+
+  @override
+  String get fieldTooLong => 'هذا الحقل طويل جدًا';
+
+  @override
+  String get errorOccurred => 'حدث خطأ غير متوقع';
+
+  @override
+  String get goHome => 'الذهاب إلى الصفحة الرئيسية';
 }

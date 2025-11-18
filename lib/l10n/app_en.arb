@@ -867,6 +867,15 @@
   "duaAndZiyarat": "Du'a Kumayl, Ziyarat Ashura",
   "nearbyMosques": "Nearby Mosques",
 
+  "@_comment_settings": "===== Settings =====",
+  "soundAndVibration": "Sound & Vibration",
+  "chooseNotificationTime": "Choose notification time",
+  "onTheDay": "On the day",
+  "oneDayBefore": "1 day before",
+  "oneWeekBefore": "1 week before",
+  "twoWeeksBefore": "2 weeks before",
+  "oneMonthBefore": "1 month before",
+
   "@_comment_menu_items": "===== Menu Items =====",
   "reportIssueMenu": "Report issue",
 

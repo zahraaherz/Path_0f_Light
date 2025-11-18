@@ -684,6 +684,15 @@
   "duaAndZiyarat": "دعاء كميل، زيارة عاشوراء",
   "nearbyMosques": "المساجد القريبة",
 
+  "@_comment_settings": "===== الإعدادات =====",
+  "soundAndVibration": "الصوت والاهتزاز",
+  "chooseNotificationTime": "اختر وقت الإشعار",
+  "onTheDay": "في نفس اليوم",
+  "oneDayBefore": "قبل يوم واحد",
+  "oneWeekBefore": "قبل أسبوع واحد",
+  "twoWeeksBefore": "قبل أسبوعين",
+  "oneMonthBefore": "قبل شهر واحد",
+
   "@_comment_menu_items": "===== عناصر القائمة =====",
   "reportIssueMenu": "الإبلاغ عن مشكلة",
 

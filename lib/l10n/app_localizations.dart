@@ -647,7 +647,7 @@ abstract class AppLocalizations {
   /// No description provided for @verses.
   ///
   /// In en, this message translates to:
-  /// **'verses'**
+  /// **'Verses'**
   String get verses;
 
   /// No description provided for @hadith.
@@ -1412,6 +1412,12 @@ abstract class AppLocalizations {
   /// **'Remove from Favorites'**
   String get removeFromFavorites;
 
+  /// No description provided for @tapToViewFull.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to view full'**
+  String get tapToViewFull;
+
   /// No description provided for @completedTasks.
   ///
   /// In en, this message translates to:
@@ -1463,7 +1469,7 @@ abstract class AppLocalizations {
   /// No description provided for @searchBooks.
   ///
   /// In en, this message translates to:
-  /// **'Search Books'**
+  /// **'Search books...'**
   String get searchBooks;
 
   /// No description provided for @searchInBook.
@@ -1693,6 +1699,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Achievement Notifications'**
   String get achievementNotifications;
+
+  /// No description provided for @reminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders'**
+  String get reminders;
+
+  /// No description provided for @setReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Set Reminder'**
+  String get setReminder;
+
+  /// No description provided for @editReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Reminder'**
+  String get editReminder;
+
+  /// No description provided for @deleteReminder.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Reminder'**
+  String get deleteReminder;
+
+  /// No description provided for @activeReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Active Reminders'**
+  String get activeReminders;
+
+  /// No description provided for @noActiveReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'No active reminders'**
+  String get noActiveReminders;
+
+  /// No description provided for @reminderTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder Title'**
+  String get reminderTitle;
+
+  /// No description provided for @reminderMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder Message'**
+  String get reminderMessage;
+
+  /// No description provided for @triggerType.
+  ///
+  /// In en, this message translates to:
+  /// **'Trigger Type'**
+  String get triggerType;
+
+  /// No description provided for @frequency.
+  ///
+  /// In en, this message translates to:
+  /// **'Frequency'**
+  String get frequency;
+
+  /// No description provided for @specificTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Specific Time'**
+  String get specificTime;
+
+  /// No description provided for @prayerTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Prayer Time'**
+  String get prayerTime;
+
+  /// No description provided for @dayOfWeek.
+  ///
+  /// In en, this message translates to:
+  /// **'Day of Week'**
+  String get dayOfWeek;
+
+  /// No description provided for @once.
+  ///
+  /// In en, this message translates to:
+  /// **'Once'**
+  String get once;
+
+  /// No description provided for @daily.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily'**
+  String get daily;
+
+  /// No description provided for @weekly.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly'**
+  String get weekly;
+
+  /// No description provided for @monthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get monthly;
+
+  /// No description provided for @custom.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom'**
+  String get custom;
+
+  /// No description provided for @enableSound.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Sound'**
+  String get enableSound;
+
+  /// No description provided for @enableVibration.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Vibration'**
+  String get enableVibration;
+
+  /// No description provided for @minutesBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'Minutes Before'**
+  String get minutesBefore;
+
+  /// No description provided for @minutesAfter.
+  ///
+  /// In en, this message translates to:
+  /// **'Minutes After'**
+  String get minutesAfter;
+
+  /// No description provided for @selectTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Time'**
+  String get selectTime;
+
+  /// No description provided for @selectDays.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Days'**
+  String get selectDays;
+
+  /// No description provided for @selectPrayerTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Prayer Time'**
+  String get selectPrayerTime;
+
+  /// No description provided for @optional.
+  ///
+  /// In en, this message translates to:
+  /// **'Optional'**
+  String get optional;
+
+  /// No description provided for @reminderCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder created successfully'**
+  String get reminderCreated;
+
+  /// No description provided for @reminderUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder updated successfully'**
+  String get reminderUpdated;
+
+  /// No description provided for @reminderDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminder deleted successfully'**
+  String get reminderDeleted;
 
   /// No description provided for @soundEffects.
   ///
@@ -2618,11 +2798,77 @@ abstract class AppLocalizations {
   /// **'Dhikr'**
   String get dhikr;
 
-  /// No description provided for @custom.
+  /// No description provided for @verse.
   ///
   /// In en, this message translates to:
-  /// **'Custom'**
-  String get custom;
+  /// **'Verse'**
+  String get verse;
+
+  /// No description provided for @readQuran.
+  ///
+  /// In en, this message translates to:
+  /// **'Read Quran'**
+  String get readQuran;
+
+  /// No description provided for @page.
+  ///
+  /// In en, this message translates to:
+  /// **'Page'**
+  String get page;
+
+  /// No description provided for @meccan.
+  ///
+  /// In en, this message translates to:
+  /// **'Meccan'**
+  String get meccan;
+
+  /// No description provided for @medinan.
+  ///
+  /// In en, this message translates to:
+  /// **'Medinan'**
+  String get medinan;
+
+  /// No description provided for @revelationType.
+  ///
+  /// In en, this message translates to:
+  /// **'Revelation Type'**
+  String get revelationType;
+
+  /// No description provided for @verseNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Verse {number}'**
+  String verseNumber(int number);
+
+  /// No description provided for @totalVerses.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} verses'**
+  String totalVerses(int count);
+
+  /// No description provided for @readingSurah.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading {surah}'**
+  String readingSurah(String surah);
+
+  /// No description provided for @bismillahArRahmanArRahim.
+  ///
+  /// In en, this message translates to:
+  /// **'In the name of Allah, the Most Gracious, the Most Merciful'**
+  String get bismillahArRahmanArRahim;
+
+  /// No description provided for @noVersesFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No verses found'**
+  String get noVersesFound;
+
+  /// No description provided for @display.
+  ///
+  /// In en, this message translates to:
+  /// **'Display'**
+  String get display;
 
   /// No description provided for @morning.
   ///
@@ -2672,24 +2918,6 @@ abstract class AppLocalizations {
   /// **'Sha\'ban'**
   String get shaban;
 
-  /// No description provided for @daily.
-  ///
-  /// In en, this message translates to:
-  /// **'Daily'**
-  String get daily;
-
-  /// No description provided for @weekly.
-  ///
-  /// In en, this message translates to:
-  /// **'Weekly'**
-  String get weekly;
-
-  /// No description provided for @monthly.
-  ///
-  /// In en, this message translates to:
-  /// **'Monthly'**
-  String get monthly;
-
   /// No description provided for @specialOccasions.
   ///
   /// In en, this message translates to:
@@ -2726,11 +2954,101 @@ abstract class AppLocalizations {
   /// **'Guidance'**
   String get guidance;
 
+  /// No description provided for @emailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'your@email.com'**
+  String get emailHint;
+
+  /// No description provided for @passwordHint.
+  ///
+  /// In en, this message translates to:
+  /// **'••••••••'**
+  String get passwordHint;
+
+  /// No description provided for @continueButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueButton;
+
+  /// No description provided for @sendResetLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Reset Link'**
+  String get sendResetLink;
+
+  /// No description provided for @orSignUpWith.
+  ///
+  /// In en, this message translates to:
+  /// **'OR SIGN UP WITH'**
+  String get orSignUpWith;
+
+  /// No description provided for @agreeToTerms.
+  ///
+  /// In en, this message translates to:
+  /// **'Please agree to the Terms and Conditions'**
+  String get agreeToTerms;
+
+  /// No description provided for @failedToLinkAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to link account: {error}'**
+  String failedToLinkAccount(String error);
+
+  /// No description provided for @failedToContinueAsGuest.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to continue as guest: {error}'**
+  String failedToContinueAsGuest(String error);
+
+  /// No description provided for @allow.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow'**
+  String get allow;
+
   /// No description provided for @signOut.
   ///
   /// In en, this message translates to:
   /// **'Sign Out'**
   String get signOut;
+
+  /// No description provided for @restore.
+  ///
+  /// In en, this message translates to:
+  /// **'Restore'**
+  String get restore;
+
+  /// No description provided for @start.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get start;
+
+  /// No description provided for @add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// No description provided for @report.
+  ///
+  /// In en, this message translates to:
+  /// **'Report'**
+  String get report;
+
+  /// No description provided for @blocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Blocked'**
+  String get blocked;
+
+  /// No description provided for @pending.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get pending;
 
   /// No description provided for @confirmSignOut.
   ///
@@ -2738,29 +3056,215 @@ abstract class AppLocalizations {
   /// **'Are you sure you want to sign out?'**
   String get confirmSignOut;
 
-  /// No description provided for @noProfileData.
+  /// No description provided for @confirmLogout.
   ///
   /// In en, this message translates to:
-  /// **'No profile data'**
-  String get noProfileData;
+  /// **'Are you sure you want to logout?'**
+  String get confirmLogout;
 
-  /// No description provided for @challengeMode.
+  /// No description provided for @confirmDeleteBookmark.
   ///
   /// In en, this message translates to:
-  /// **'Challenge Mode'**
-  String get challengeMode;
+  /// **'Are you sure you want to delete this bookmark?'**
+  String get confirmDeleteBookmark;
 
-  /// No description provided for @failedToLoadCategories.
+  /// No description provided for @confirmDeleteComment.
   ///
   /// In en, this message translates to:
-  /// **'Failed to load categories'**
-  String get failedToLoadCategories;
+  /// **'Are you sure you want to delete this comment?'**
+  String get confirmDeleteComment;
 
-  /// No description provided for @searchFriends.
+  /// No description provided for @confirmEndGame.
   ///
   /// In en, this message translates to:
-  /// **'Search friends...'**
-  String get searchFriends;
+  /// **'Going to the book will end the current game. Are you sure?'**
+  String get confirmEndGame;
+
+  /// No description provided for @signInRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in Required'**
+  String get signInRequired;
+
+  /// No description provided for @deleteBookmark.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Bookmark'**
+  String get deleteBookmark;
+
+  /// No description provided for @deleteComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Comment'**
+  String get deleteComment;
+
+  /// No description provided for @reportComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Report Comment'**
+  String get reportComment;
+
+  /// No description provided for @reportIssue.
+  ///
+  /// In en, this message translates to:
+  /// **'Report Issue'**
+  String get reportIssue;
+
+  /// No description provided for @locationPermission.
+  ///
+  /// In en, this message translates to:
+  /// **'Location Permission'**
+  String get locationPermission;
+
+  /// No description provided for @watchAd.
+  ///
+  /// In en, this message translates to:
+  /// **'Watch Ad'**
+  String get watchAd;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @issueType.
+  ///
+  /// In en, this message translates to:
+  /// **'Issue Type'**
+  String get issueType;
+
+  /// No description provided for @typoSpellingError.
+  ///
+  /// In en, this message translates to:
+  /// **'Typo/Spelling Error'**
+  String get typoSpellingError;
+
+  /// No description provided for @translationError.
+  ///
+  /// In en, this message translates to:
+  /// **'Translation Error'**
+  String get translationError;
+
+  /// No description provided for @describeIssue.
+  ///
+  /// In en, this message translates to:
+  /// **'Please describe the issue in detail...'**
+  String get describeIssue;
+
+  /// No description provided for @notificationTiming.
+  ///
+  /// In en, this message translates to:
+  /// **'Notification Timing'**
+  String get notificationTiming;
+
+  /// No description provided for @pleaseDescribeIssue.
+  ///
+  /// In en, this message translates to:
+  /// **'Please describe the issue'**
+  String get pleaseDescribeIssue;
+
+  /// No description provided for @bookmarkDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark deleted'**
+  String get bookmarkDeleted;
+
+  /// No description provided for @bookmarkAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'Bookmark added'**
+  String get bookmarkAdded;
+
+  /// No description provided for @commentTooLong.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment cannot exceed 500 characters'**
+  String get commentTooLong;
+
+  /// No description provided for @commentDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment deleted'**
+  String get commentDeleted;
+
+  /// No description provided for @commentUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment updated'**
+  String get commentUpdated;
+
+  /// No description provided for @commentReported.
+  ///
+  /// In en, this message translates to:
+  /// **'Comment reported for: {reason}. Thank you for helping keep our community safe.'**
+  String commentReported(String reason);
+
+  /// No description provided for @commentEditTimeExpired.
+  ///
+  /// In en, this message translates to:
+  /// **'Comments can only be edited within 5 minutes'**
+  String get commentEditTimeExpired;
+
+  /// No description provided for @calendarViewComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Full calendar view coming soon!'**
+  String get calendarViewComingSoon;
+
+  /// No description provided for @collectionsComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Collections page coming soon'**
+  String get collectionsComingSoon;
+
+  /// No description provided for @booksComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Books page coming soon'**
+  String get booksComingSoon;
+
+  /// No description provided for @siraComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Sira page coming soon'**
+  String get siraComingSoon;
+
+  /// No description provided for @settingsComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings page coming soon'**
+  String get settingsComingSoon;
+
+  /// No description provided for @locationPermissionGranted.
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission granted'**
+  String get locationPermissionGranted;
+
+  /// No description provided for @failedToAddBookmark.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to add bookmark: {error}'**
+  String failedToAddBookmark(String error);
+
+  /// No description provided for @purchaseSuccessful.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase successful! Thank you for supporting Path of Light.'**
+  String get purchaseSuccessful;
+
+  /// No description provided for @purchasesRestored.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchases restored successfully!'**
+  String get purchasesRestored;
+
+  /// No description provided for @errorRestoringPurchases.
+  ///
+  /// In en, this message translates to:
+  /// **'Error restoring purchases: {error}'**
+  String errorRestoringPurchases(String error);
 
   /// No description provided for @playerOffline.
   ///
@@ -2779,6 +3283,540 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Challenge created! Starting quiz...'**
   String get challengeCreated;
+
+  /// No description provided for @dailyBonusClaimed.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily bonus claimed! +{bonus} energy'**
+  String dailyBonusClaimed(int bonus);
+
+  /// No description provided for @useBookmarkButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Use bookmark button in app bar'**
+  String get useBookmarkButton;
+
+  /// No description provided for @textCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'Text copied to clipboard'**
+  String get textCopied;
+
+  /// No description provided for @searchForText.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for text...'**
+  String get searchForText;
+
+  /// No description provided for @searchFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Search friends...'**
+  String get searchFriends;
+
+  /// No description provided for @searchByUsernameOrCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Search by username or user code...'**
+  String get searchByUsernameOrCode;
+
+  /// No description provided for @editYourComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit your comment...'**
+  String get editYourComment;
+
+  /// No description provided for @streakStatistics.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak Statistics'**
+  String get streakStatistics;
+
+  /// No description provided for @premium.
+  ///
+  /// In en, this message translates to:
+  /// **'Premium'**
+  String get premium;
+
+  /// No description provided for @userComparison.
+  ///
+  /// In en, this message translates to:
+  /// **'User Comparison'**
+  String get userComparison;
+
+  /// No description provided for @challengeMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge Mode'**
+  String get challengeMode;
+
+  /// No description provided for @purchaseHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase History'**
+  String get purchaseHistory;
+
+  /// No description provided for @receivePrayerNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Receive notifications for prayer times'**
+  String get receivePrayerNotifications;
+
+  /// No description provided for @dailyQuizReminders.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily quiz reminders'**
+  String get dailyQuizReminders;
+
+  /// No description provided for @keepStreakGoing.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your streak going'**
+  String get keepStreakGoing;
+
+  /// No description provided for @newAchievementsUnlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'New achievements unlocked'**
+  String get newAchievementsUnlocked;
+
+  /// No description provided for @playSoundEffects.
+  ///
+  /// In en, this message translates to:
+  /// **'Play sound effects in app'**
+  String get playSoundEffects;
+
+  /// No description provided for @hapticFeedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Haptic feedback'**
+  String get hapticFeedback;
+
+  /// No description provided for @eventNotifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Notifications'**
+  String get eventNotifications;
+
+  /// No description provided for @notifyAboutCelebrations.
+  ///
+  /// In en, this message translates to:
+  /// **'Get notified about upcoming Islamic celebrations'**
+  String get notifyAboutCelebrations;
+
+  /// No description provided for @notifyDaysBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'Notify me {days} {daysLabel} before event'**
+  String notifyDaysBefore(int days, String daysLabel);
+
+  /// No description provided for @day.
+  ///
+  /// In en, this message translates to:
+  /// **'day'**
+  String get day;
+
+  /// No description provided for @days.
+  ///
+  /// In en, this message translates to:
+  /// **'days'**
+  String get days;
+
+  /// No description provided for @viewAllEvents.
+  ///
+  /// In en, this message translates to:
+  /// **'View All Events'**
+  String get viewAllEvents;
+
+  /// No description provided for @browseAllCelebrations.
+  ///
+  /// In en, this message translates to:
+  /// **'Browse all Islamic celebrations'**
+  String get browseAllCelebrations;
+
+  /// No description provided for @enableAutoScroll.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable Auto Scroll'**
+  String get enableAutoScroll;
+
+  /// No description provided for @autoScrollWhileReading.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatically scroll while reading'**
+  String get autoScrollWhileReading;
+
+  /// No description provided for @nightMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Night Mode'**
+  String get nightMode;
+
+  /// No description provided for @reduceBrightnessNight.
+  ///
+  /// In en, this message translates to:
+  /// **'Reduce brightness for night reading'**
+  String get reduceBrightnessNight;
+
+  /// No description provided for @pleaseSignInToViewBookmarks.
+  ///
+  /// In en, this message translates to:
+  /// **'Please sign in to view bookmarks'**
+  String get pleaseSignInToViewBookmarks;
+
+  /// No description provided for @goBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Go Back'**
+  String get goBack;
+
+  /// No description provided for @quranAndTafsir.
+  ///
+  /// In en, this message translates to:
+  /// **'Quran & Tafsir'**
+  String get quranAndTafsir;
+
+  /// No description provided for @duaAndZiyarat.
+  ///
+  /// In en, this message translates to:
+  /// **'Du\'a Kumayl, Ziyarat Ashura'**
+  String get duaAndZiyarat;
+
+  /// No description provided for @nearbyMosques.
+  ///
+  /// In en, this message translates to:
+  /// **'Nearby Mosques'**
+  String get nearbyMosques;
+
+  /// No description provided for @soundAndVibration.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound & Vibration'**
+  String get soundAndVibration;
+
+  /// No description provided for @chooseNotificationTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose notification time'**
+  String get chooseNotificationTime;
+
+  /// No description provided for @onTheDay.
+  ///
+  /// In en, this message translates to:
+  /// **'On the day'**
+  String get onTheDay;
+
+  /// No description provided for @oneDayBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'1 day before'**
+  String get oneDayBefore;
+
+  /// No description provided for @oneWeekBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'1 week before'**
+  String get oneWeekBefore;
+
+  /// No description provided for @twoWeeksBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'2 weeks before'**
+  String get twoWeeksBefore;
+
+  /// No description provided for @oneMonthBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'1 month before'**
+  String get oneMonthBefore;
+
+  /// No description provided for @reportIssueMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Report issue'**
+  String get reportIssueMenu;
+
+  /// No description provided for @noProfileData.
+  ///
+  /// In en, this message translates to:
+  /// **'No profile data'**
+  String get noProfileData;
+
+  /// No description provided for @failedToLoadFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load friends'**
+  String get failedToLoadFriends;
+
+  /// No description provided for @failedToLoadRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load requests'**
+  String get failedToLoadRequests;
+
+  /// No description provided for @failedToLoadCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load categories'**
+  String get failedToLoadCategories;
+
+  /// No description provided for @failedToLoadBooks.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load books'**
+  String get failedToLoadBooks;
+
+  /// No description provided for @errorWithDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {error}'**
+  String errorWithDetails(String error);
+
+  /// No description provided for @failedToLoadBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load book: {error}'**
+  String failedToLoadBook(String error);
+
+  /// No description provided for @failedToLoadComments.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load comments'**
+  String get failedToLoadComments;
+
+  /// No description provided for @failedToLoadBookmarks.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load bookmarks'**
+  String get failedToLoadBookmarks;
+
+  /// No description provided for @errorLoadingEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading energy'**
+  String get errorLoadingEnergy;
+
+  /// No description provided for @signInTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign In'**
+  String get signInTooltip;
+
+  /// No description provided for @pleaseEnterEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your email'**
+  String get pleaseEnterEmail;
+
+  /// No description provided for @pleaseEnterValidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid email address'**
+  String get pleaseEnterValidEmail;
+
+  /// No description provided for @pleaseEnterPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your password'**
+  String get pleaseEnterPassword;
+
+  /// No description provided for @pleaseConfirmPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm your password'**
+  String get pleaseConfirmPassword;
+
+  /// No description provided for @passwordMinLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 8 characters'**
+  String get passwordMinLength;
+
+  /// No description provided for @passwordRequiresUppercase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one uppercase letter'**
+  String get passwordRequiresUppercase;
+
+  /// No description provided for @passwordRequiresLowercase.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one lowercase letter'**
+  String get passwordRequiresLowercase;
+
+  /// No description provided for @passwordRequiresNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one number'**
+  String get passwordRequiresNumber;
+
+  /// No description provided for @passwordRequiresSpecialChar.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one special character'**
+  String get passwordRequiresSpecialChar;
+
+  /// No description provided for @pleaseEnterValidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid phone number'**
+  String get pleaseEnterValidPhone;
+
+  /// No description provided for @phoneLengthInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number must be 10-15 digits'**
+  String get phoneLengthInvalid;
+
+  /// No description provided for @pleaseEnterName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get pleaseEnterName;
+
+  /// No description provided for @nameMinLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must be at least 2 characters'**
+  String get nameMinLength;
+
+  /// No description provided for @nameMaxLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must not exceed 50 characters'**
+  String get nameMaxLength;
+
+  /// No description provided for @nameInvalidCharacters.
+  ///
+  /// In en, this message translates to:
+  /// **'Name contains invalid characters'**
+  String get nameInvalidCharacters;
+
+  /// No description provided for @pleaseEnterUsername.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a username'**
+  String get pleaseEnterUsername;
+
+  /// No description provided for @usernameLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Username must be 3-20 characters'**
+  String get usernameLength;
+
+  /// No description provided for @usernameInvalidCharacters.
+  ///
+  /// In en, this message translates to:
+  /// **'Username can only contain letters, numbers, and underscores'**
+  String get usernameInvalidCharacters;
+
+  /// No description provided for @usernameMustStartWithLetter.
+  ///
+  /// In en, this message translates to:
+  /// **'Username must start with a letter'**
+  String get usernameMustStartWithLetter;
+
+  /// No description provided for @pleaseEnterValidUrl.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid URL'**
+  String get pleaseEnterValidUrl;
+
+  /// No description provided for @fieldRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get fieldRequired;
+
+  /// No description provided for @thisFieldIsRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get thisFieldIsRequired;
+
+  /// No description provided for @pleaseEnterNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a number'**
+  String get pleaseEnterNumber;
+
+  /// No description provided for @pleaseEnterValidNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid number'**
+  String get pleaseEnterValidNumber;
+
+  /// No description provided for @numberTooSmall.
+  ///
+  /// In en, this message translates to:
+  /// **'Number is too small'**
+  String get numberTooSmall;
+
+  /// No description provided for @numberTooLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'Number is too large'**
+  String get numberTooLarge;
+
+  /// No description provided for @pleaseEnterAge.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your age'**
+  String get pleaseEnterAge;
+
+  /// No description provided for @pleaseEnterValidAge.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid age'**
+  String get pleaseEnterValidAge;
+
+  /// No description provided for @ageTooYoung.
+  ///
+  /// In en, this message translates to:
+  /// **'You must be at least 13 years old'**
+  String get ageTooYoung;
+
+  /// No description provided for @ageTooOld.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a valid age'**
+  String get ageTooOld;
+
+  /// No description provided for @pleaseEnterText.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter text'**
+  String get pleaseEnterText;
+
+  /// No description provided for @pleaseEnterArabicText.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter Arabic text'**
+  String get pleaseEnterArabicText;
+
+  /// No description provided for @fieldTooShort.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is too short'**
+  String get fieldTooShort;
+
+  /// No description provided for @fieldTooLong.
+  ///
+  /// In en, this message translates to:
+  /// **'This field is too long'**
+  String get fieldTooLong;
+
+  /// No description provided for @errorOccurred.
+  ///
+  /// In en, this message translates to:
+  /// **'An unexpected error occurred'**
+  String get errorOccurred;
+
+  /// No description provided for @goHome.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Home'**
+  String get goHome;
 }
 
 class _AppLocalizationsDelegate
