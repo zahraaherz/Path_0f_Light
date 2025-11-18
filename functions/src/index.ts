@@ -105,3 +105,15 @@ export {
   deleteChecklistItem,
   cleanupOldChecklists,
 } from "./collectionManagement";
+
+// Export Quran Management Functions (NEW)
+export {
+  getAllSurahs,
+  getSurah,
+  getVersesForSurah,
+  getVerse,
+  searchQuranVerses,
+  importSurahMetadata,
+  importQuranVerses,
+  getQuranStats,
+} from "./quranManagement";

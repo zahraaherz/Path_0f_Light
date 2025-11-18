@@ -455,3 +455,30 @@ export interface FCMToken {
   createdAt: admin.firestore.Timestamp;
   lastUsed: admin.firestore.Timestamp;
 }
+
+// Quran Types
+export type RevelationType = "Meccan" | "Medinan";
+
+export interface Surah {
+  id: string;
+  number: number;
+  name: string;
+  englishName: string;
+  englishNameTranslation: string;
+  revelationType: RevelationType;
+  numberOfAyahs: number;
+}
+
+export interface QuranVerse {
+  id: string;
+  surahNumber: number;
+  verseNumber: number;
+  numberInSurah: number;
+  text: string;
+  translation?: string;
+  transliteration?: string;
+  juz?: number;
+  page?: number;
+  sajda?: boolean;
+  audioUrl?: string;
+}
