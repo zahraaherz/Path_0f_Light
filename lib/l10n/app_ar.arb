@@ -535,6 +535,7 @@
   "private": "خاص",
   "expires": "تنتهي",
   "code": "الرمز",
+  "upgradeToPremium": "الترقية إلى النسخة المميزة",
 
   "@_comment_errors": "===== رسائل الخطأ =====",
   "errorLoadingData": "خطأ في تحميل البيانات",

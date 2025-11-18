@@ -488,6 +488,7 @@
   "private": "Private",
   "expires": "Expires",
   "code": "Code",
+  "upgradeToPremium": "Upgrade to Premium",
 
   "@_comment_errors": "===== Error Messages =====",
   "errorLoadingData": "Error loading data",

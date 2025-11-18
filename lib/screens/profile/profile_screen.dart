@@ -6,6 +6,7 @@ import '../../providers/auth_providers.dart';
 import '../../providers/auth_controller.dart';
 import '../../data/mock_data.dart';
 import '../auth/login_screen.dart';
+import '../premium/premium_screen.dart';
 import '../../utils/responsive.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -252,6 +253,56 @@ class ProfileScreen extends ConsumerWidget {
                         _InfoRow(l10n.status, displayProfile.subscription.active ? l10n.active : l10n.inactive),
                         if (displayProfile.subscription.expiryDate != null)
                           _InfoRow(l10n.expires, _formatDate(displayProfile.subscription.expiryDate!)),
+                        // Show upgrade button for free users
+                        if (displayProfile.subscription.plan.toLowerCase() == 'free')
+                          Padding(
+                            padding: EdgeInsets.all(r.paddingMedium),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [AppTheme.goldAccent, AppTheme.goldAccent.withOpacity(0.7)],
+                                ),
+                                borderRadius: BorderRadius.circular(r.radiusMedium),
+                              ),
+                              child: Material(
+                                color: Colors.transparent,
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => const PremiumScreen(),
+                                      ),
+                                    );
+                                  },
+                                  borderRadius: BorderRadius.circular(r.radiusMedium),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      vertical: r.paddingMedium,
+                                      horizontal: r.paddingLarge,
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        const Icon(
+                                          Icons.workspace_premium,
+                                          color: Colors.white,
+                                          size: 24,
+                                        ),
+                                        SizedBox(width: r.spaceSmall),
+                                        Text(
+                                          l10n.upgradeToPremium,
+                                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
                       ],
                     ),
                   ),
