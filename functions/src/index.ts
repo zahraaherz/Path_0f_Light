@@ -12,16 +12,18 @@ export {
   updateUserProfile,
   updateUserSettings,
   deleteUserAccount,
-  setUserRole,
+  updateUserRole, // Renamed from setUserRole
   linkSocialProvider,
-  unlinkSocialProvider,
+  unlinkAuthProvider, // Renamed from unlinkSocialProvider
   checkUsernameAvailability,
   updateLastActive,
   sendEmailVerification,
   verifyEmailCode,
   sendPasswordResetEmail,
   suspendUser,
-  unsuspendUser,
+  reactivateUser, // Renamed from unsuspendUser
+  getUserStats, // NEW utility function
+  updateUserLanguage, // NEW utility function
 } from "./userManagement";
 
 // Export Energy System Functions (Cost Optimized)
@@ -43,9 +45,10 @@ export {
 export {
   getQuizQuestions,
   submitQuizAnswer,
-  getQuizProgress,
-  endQuizSession,
+  getUserQuizProgress, // Renamed from getQuizProgress
+  completeQuizSession as endQuizSession, // Alias for backward compatibility
   getQuestionSource,
+  getQuizCategories, // NEW utility function
 } from "./quizManagement";
 
 // Export Enhanced Quiz Functions (NEW - Multiple Question Types, Challenges)
@@ -53,7 +56,7 @@ export {
   getQuizQuestions as getEnhancedQuestions,
   submitAnswer,
   createQuizSession,
-  completeQuizSession,
+  completeQuizSession as completeEnhancedQuizSession,
   findRandomMatch,
   createChallenge,
   acceptChallenge,
@@ -86,3 +89,31 @@ export {
   verifyQuestion,
   getQuestionStats,
 } from "./questionsManagement";
+
+// Export Collection Management Functions (NEW)
+export {
+  addCollectionItem,
+  updateCollectionItem,
+  deleteCollectionItem,
+  updateCollectionItemAccess,
+  addHabitTracker,
+  updateHabitProgress,
+  resetDailyHabits,
+  deleteHabitTracker,
+  addChecklistItem,
+  toggleChecklistItem,
+  deleteChecklistItem,
+  cleanupOldChecklists,
+} from "./collectionManagement";
+
+// Export Quran Management Functions (NEW)
+export {
+  getAllSurahs,
+  getSurah,
+  getVersesForSurah,
+  getVerse,
+  searchQuranVerses,
+  importSurahMetadata,
+  importQuranVerses,
+  getQuranStats,
+} from "./quranManagement";
