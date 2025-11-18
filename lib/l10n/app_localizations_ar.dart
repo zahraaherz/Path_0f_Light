@@ -505,6 +505,85 @@ class AppLocalizationsAr extends AppLocalizations {
   String get removePhoto => 'إزالة الصورة';
 
   @override
+  String get quizProgress => 'تقدم الاختبارات';
+
+  @override
+  String get accountInformation => 'معلومات الحساب';
+
+  @override
+  String get emailVerified => 'البريد الإلكتروني موثق';
+
+  @override
+  String get phoneVerified => 'الهاتف موثق';
+
+  @override
+  String get provider => 'المزود';
+
+  @override
+  String get accountStatus => 'حالة الحساب';
+
+  @override
+  String get memberSince => 'عضو منذ';
+
+  @override
+  String get subscription => 'الاشتراك';
+
+  @override
+  String get plan => 'الخطة';
+
+  @override
+  String get status => 'الحالة';
+
+  @override
+  String get previewMode => 'وضع المعاينة - بيانات وهمية';
+
+  @override
+  String get signInToViewProfile => 'سجل الدخول لعرض ملفك الشخصي الفعلي';
+
+  @override
+  String get signInToConnectFriends => 'سجل الدخول للتواصل مع الأصدقاء';
+
+  @override
+  String get buildYourLearningCommunity =>
+      'ابحث عن الأصدقاء وأرسل الطلبات وابنِ مجتمعك التعليمي';
+
+  @override
+  String get requests => 'الطلبات';
+
+  @override
+  String get noFriendsYet => 'لا يوجد أصدقاء بعد';
+
+  @override
+  String get searchForUsersToAdd => 'ابحث عن مستخدمين لإضافتهم كأصدقاء';
+
+  @override
+  String get noPendingRequests => 'لا توجد طلبات معلقة';
+
+  @override
+  String get receivedRequests => 'الطلبات المستلمة';
+
+  @override
+  String get sentRequests => 'الطلبات المرسلة';
+
+  @override
+  String get enterUsernameOrCode => 'أدخل اسم المستخدم أو رمز المستخدم';
+
+  @override
+  String get noUsersFound => 'لم يتم العثور على مستخدمين';
+
+  @override
+  String get books => 'الكتب';
+
+  @override
+  String get removeFriend => 'إزالة صديق';
+
+  @override
+  String get wantsToBeYourFriend => 'يريد أن يكون صديقك';
+
+  @override
+  String get requestSent => 'تم إرسال الطلب';
+
+  @override
   String get allAchievements => 'جميع الإنجازات';
 
   @override
@@ -696,9 +775,6 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get library => 'المكتبة';
-
-  @override
-  String get books => 'الكتب';
 
   @override
   String get bookmarks => 'العلامات المرجعية';
@@ -1062,6 +1138,30 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get comingSoon => 'قريباً';
+
+  @override
+  String get enabled => 'مفعّل';
+
+  @override
+  String get disabled => 'معطّل';
+
+  @override
+  String get active => 'نشط';
+
+  @override
+  String get inactive => 'غير نشط';
+
+  @override
+  String get public => 'عام';
+
+  @override
+  String get private => 'خاص';
+
+  @override
+  String get expires => 'تنتهي';
+
+  @override
+  String get code => 'الرمز';
 
   @override
   String get errorLoadingData => 'خطأ في تحميل البيانات';

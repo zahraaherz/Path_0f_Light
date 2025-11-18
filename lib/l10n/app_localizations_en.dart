@@ -505,6 +505,85 @@ class AppLocalizationsEn extends AppLocalizations {
   String get removePhoto => 'Remove Photo';
 
   @override
+  String get quizProgress => 'Quiz Progress';
+
+  @override
+  String get accountInformation => 'Account Information';
+
+  @override
+  String get emailVerified => 'Email Verified';
+
+  @override
+  String get phoneVerified => 'Phone Verified';
+
+  @override
+  String get provider => 'Provider';
+
+  @override
+  String get accountStatus => 'Account Status';
+
+  @override
+  String get memberSince => 'Member Since';
+
+  @override
+  String get subscription => 'Subscription';
+
+  @override
+  String get plan => 'Plan';
+
+  @override
+  String get status => 'Status';
+
+  @override
+  String get previewMode => 'Preview Mode - Mock Data';
+
+  @override
+  String get signInToViewProfile => 'Sign in to view your actual profile';
+
+  @override
+  String get signInToConnectFriends => 'Sign in to connect with friends';
+
+  @override
+  String get buildYourLearningCommunity =>
+      'Search for friends, send requests, and build your learning community';
+
+  @override
+  String get requests => 'Requests';
+
+  @override
+  String get noFriendsYet => 'No friends yet';
+
+  @override
+  String get searchForUsersToAdd => 'Search for users to add as friends';
+
+  @override
+  String get noPendingRequests => 'No pending requests';
+
+  @override
+  String get receivedRequests => 'Received Requests';
+
+  @override
+  String get sentRequests => 'Sent Requests';
+
+  @override
+  String get enterUsernameOrCode => 'Enter a username or user code';
+
+  @override
+  String get noUsersFound => 'No users found';
+
+  @override
+  String get books => 'Books';
+
+  @override
+  String get removeFriend => 'Remove Friend';
+
+  @override
+  String get wantsToBeYourFriend => 'Wants to be your friend';
+
+  @override
+  String get requestSent => 'Request sent';
+
+  @override
   String get allAchievements => 'All Achievements';
 
   @override
@@ -697,9 +776,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get library => 'Library';
-
-  @override
-  String get books => 'Books';
 
   @override
   String get bookmarks => 'Bookmarks';
@@ -1063,6 +1139,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get comingSoon => 'Coming Soon';
+
+  @override
+  String get enabled => 'Enabled';
+
+  @override
+  String get disabled => 'Disabled';
+
+  @override
+  String get active => 'Active';
+
+  @override
+  String get inactive => 'Inactive';
+
+  @override
+  String get public => 'Public';
+
+  @override
+  String get private => 'Private';
+
+  @override
+  String get expires => 'Expires';
+
+  @override
+  String get code => 'Code';
 
   @override
   String get errorLoadingData => 'Error loading data';

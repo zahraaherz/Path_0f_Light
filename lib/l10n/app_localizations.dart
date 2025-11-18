@@ -1070,6 +1070,162 @@ abstract class AppLocalizations {
   /// **'Remove Photo'**
   String get removePhoto;
 
+  /// No description provided for @quizProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Quiz Progress'**
+  String get quizProgress;
+
+  /// No description provided for @accountInformation.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Information'**
+  String get accountInformation;
+
+  /// No description provided for @emailVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Email Verified'**
+  String get emailVerified;
+
+  /// No description provided for @phoneVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Verified'**
+  String get phoneVerified;
+
+  /// No description provided for @provider.
+  ///
+  /// In en, this message translates to:
+  /// **'Provider'**
+  String get provider;
+
+  /// No description provided for @accountStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Status'**
+  String get accountStatus;
+
+  /// No description provided for @memberSince.
+  ///
+  /// In en, this message translates to:
+  /// **'Member Since'**
+  String get memberSince;
+
+  /// No description provided for @subscription.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscription'**
+  String get subscription;
+
+  /// No description provided for @plan.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan'**
+  String get plan;
+
+  /// No description provided for @status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get status;
+
+  /// No description provided for @previewMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Preview Mode - Mock Data'**
+  String get previewMode;
+
+  /// No description provided for @signInToViewProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to view your actual profile'**
+  String get signInToViewProfile;
+
+  /// No description provided for @signInToConnectFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to connect with friends'**
+  String get signInToConnectFriends;
+
+  /// No description provided for @buildYourLearningCommunity.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for friends, send requests, and build your learning community'**
+  String get buildYourLearningCommunity;
+
+  /// No description provided for @requests.
+  ///
+  /// In en, this message translates to:
+  /// **'Requests'**
+  String get requests;
+
+  /// No description provided for @noFriendsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No friends yet'**
+  String get noFriendsYet;
+
+  /// No description provided for @searchForUsersToAdd.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for users to add as friends'**
+  String get searchForUsersToAdd;
+
+  /// No description provided for @noPendingRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'No pending requests'**
+  String get noPendingRequests;
+
+  /// No description provided for @receivedRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Received Requests'**
+  String get receivedRequests;
+
+  /// No description provided for @sentRequests.
+  ///
+  /// In en, this message translates to:
+  /// **'Sent Requests'**
+  String get sentRequests;
+
+  /// No description provided for @enterUsernameOrCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a username or user code'**
+  String get enterUsernameOrCode;
+
+  /// No description provided for @noUsersFound.
+  ///
+  /// In en, this message translates to:
+  /// **'No users found'**
+  String get noUsersFound;
+
+  /// No description provided for @books.
+  ///
+  /// In en, this message translates to:
+  /// **'Books'**
+  String get books;
+
+  /// No description provided for @removeFriend.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove Friend'**
+  String get removeFriend;
+
+  /// No description provided for @wantsToBeYourFriend.
+  ///
+  /// In en, this message translates to:
+  /// **'Wants to be your friend'**
+  String get wantsToBeYourFriend;
+
+  /// No description provided for @requestSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Request sent'**
+  String get requestSent;
+
   /// No description provided for @allAchievements.
   ///
   /// In en, this message translates to:
@@ -1447,12 +1603,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Library'**
   String get library;
-
-  /// No description provided for @books.
-  ///
-  /// In en, this message translates to:
-  /// **'Books'**
-  String get books;
 
   /// No description provided for @bookmarks.
   ///
@@ -2179,6 +2329,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Coming Soon'**
   String get comingSoon;
+
+  /// No description provided for @enabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Enabled'**
+  String get enabled;
+
+  /// No description provided for @disabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Disabled'**
+  String get disabled;
+
+  /// No description provided for @active.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get active;
+
+  /// No description provided for @inactive.
+  ///
+  /// In en, this message translates to:
+  /// **'Inactive'**
+  String get inactive;
+
+  /// No description provided for @public.
+  ///
+  /// In en, this message translates to:
+  /// **'Public'**
+  String get public;
+
+  /// No description provided for @private.
+  ///
+  /// In en, this message translates to:
+  /// **'Private'**
+  String get private;
+
+  /// No description provided for @expires.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires'**
+  String get expires;
+
+  /// No description provided for @code.
+  ///
+  /// In en, this message translates to:
+  /// **'Code'**
+  String get code;
 
   /// No description provided for @errorLoadingData.
   ///
