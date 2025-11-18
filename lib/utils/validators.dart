@@ -23,9 +23,9 @@ class Validators {
   }
 
   /// Password validation with strength requirements
-  /// Minimum 6 characters (can be customized)
+  /// Minimum 8 characters (can be customized)
   static String? password(String? value, AppLocalizations l10n,
-      {int minLength = 6}) {
+      {int minLength = 8}) {
     if (value == null || value.isEmpty) {
       return l10n.pleaseEnterPassword;
     }

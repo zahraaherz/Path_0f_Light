@@ -6,6 +6,8 @@ import {
   CollectionItemType,
   CollectionCategory,
 } from "./types";
+import {sanitizeString, sanitizeText, sanitizeUrl, sanitizeStringArray} from "./inputValidation";
+import {checkRateLimit, standardRateLimiter} from "./rateLimiter";
 
 const db = admin.firestore();
 
@@ -34,6 +36,9 @@ export const addCollectionItem = functions.https.onCall(
       );
     }
 
+    // Apply rate limiting
+    await checkRateLimit(standardRateLimiter, context);
+
     const userId = context.auth.uid;
     const {
       type,
@@ -57,6 +62,18 @@ export const addCollectionItem = functions.https.onCall(
         "Missing required fields: type, title, arabic_text, category"
       );
     }
+
+    // Sanitize all user inputs
+    const sanitizedTitle = sanitizeString(title, 200);
+    const sanitizedArabicTitle = arabic_title ? sanitizeString(arabic_title, 200) : "";
+    const sanitizedArabicText = sanitizeText(arabic_text, 10000);
+    const sanitizedTranslation = translation ? sanitizeText(translation, 10000) : "";
+    const sanitizedTransliteration = transliteration ? sanitizeText(transliteration, 5000) : "";
+    const sanitizedCategory = sanitizeString(category, 50);
+    const sanitizedSource = source ? sanitizeString(source, 200) : "";
+    const sanitizedNotes = notes ? sanitizeText(notes, 5000) : "";
+    const sanitizedTags = sanitizeStringArray(tags, 20, 50);
+    const sanitizedAudioUrl = audio_url ? sanitizeUrl(audio_url) : "";
 
     try {
       // Check user's collection size limit
@@ -87,20 +104,20 @@ export const addCollectionItem = functions.https.onCall(
 
       const now = admin.firestore.Timestamp.now();
 
-      // Create collection item
+      // Create collection item with sanitized data
       const collectionItemData: Omit<CollectionItem, "id"> = {
         user_id: userId,
         type: type as CollectionItemType,
-        title,
-        arabic_title,
-        arabic_text,
-        translation,
-        transliteration,
-        category: category as CollectionCategory,
-        source,
-        notes,
-        tags,
-        audio_url,
+        title: sanitizedTitle,
+        arabic_title: sanitizedArabicTitle,
+        arabic_text: sanitizedArabicText,
+        translation: sanitizedTranslation,
+        transliteration: sanitizedTransliteration,
+        category: sanitizedCategory as CollectionCategory,
+        source: sanitizedSource,
+        notes: sanitizedNotes,
+        tags: sanitizedTags,
+        audio_url: sanitizedAudioUrl,
         is_favorite,
         sort_order: nextSortOrder,
         created_at: now,

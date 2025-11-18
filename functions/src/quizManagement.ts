@@ -1,6 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import {ENERGY_CONFIG} from "./energySystem";
+import {checkRateLimit, quizRateLimiter, standardRateLimiter} from "./rateLimiter";
 
 const db = admin.firestore();
 
@@ -84,6 +85,9 @@ export const getQuizQuestions = functions.https.onCall(
         "User must be authenticated"
       );
     }
+
+    // Apply rate limiting
+    await checkRateLimit(standardRateLimiter, context);
 
     const userId = context.auth.uid;
     const {
@@ -223,6 +227,9 @@ export const submitQuizAnswer = functions.https.onCall(
         "User must be authenticated"
       );
     }
+
+    // Apply rate limiting for quiz submissions
+    await checkRateLimit(quizRateLimiter, context);
 
     const userId = context.auth.uid;
     const {questionId, answer, sessionId, language = "en"} = data;
