@@ -285,6 +285,7 @@
   "playAudio": "Play Audio",
   "addToFavorites": "Add to Favorites",
   "removeFromFavorites": "Remove from Favorites",
+  "tapToViewFull": "Tap to view full",
   "completedTasks": "{completed} of {total} completed",
   "@completedTasks": {
     "placeholders": {
@@ -348,6 +349,36 @@
   "quizReminders": "Quiz Reminders",
   "streakReminders": "Streak Reminders",
   "achievementNotifications": "Achievement Notifications",
+  "reminders": "Reminders",
+  "setReminder": "Set Reminder",
+  "editReminder": "Edit Reminder",
+  "deleteReminder": "Delete Reminder",
+  "activeReminders": "Active Reminders",
+  "noActiveReminders": "No active reminders",
+  "reminderTitle": "Reminder Title",
+  "reminderMessage": "Reminder Message",
+  "triggerType": "Trigger Type",
+  "frequency": "Frequency",
+  "specificTime": "Specific Time",
+  "prayerTime": "Prayer Time",
+  "dayOfWeek": "Day of Week",
+  "islamicDate": "Islamic Date",
+  "once": "Once",
+  "daily": "Daily",
+  "weekly": "Weekly",
+  "monthly": "Monthly",
+  "custom": "Custom",
+  "enableSound": "Enable Sound",
+  "enableVibration": "Enable Vibration",
+  "minutesBefore": "Minutes Before",
+  "minutesAfter": "Minutes After",
+  "selectTime": "Select Time",
+  "selectDays": "Select Days",
+  "selectPrayerTime": "Select Prayer Time",
+  "optional": "Optional",
+  "reminderCreated": "Reminder created successfully",
+  "reminderUpdated": "Reminder updated successfully",
+  "reminderDeleted": "Reminder deleted successfully",
   "soundEffects": "Sound Effects",
   "vibration": "Vibration",
   "accessibility": "Accessibility",
@@ -564,6 +595,43 @@
   "passage": "Passage",
   "dhikr": "Dhikr",
   "custom": "Custom",
+
+  "@_comment_quran_reading": "===== Quran Reading =====",
+  "verse": "Verse",
+  "verses": "Verses",
+  "readQuran": "Read Quran",
+  "juz": "Juz",
+  "page": "Page",
+  "meccan": "Meccan",
+  "medinan": "Medinan",
+  "revelationType": "Revelation Type",
+  "verseNumber": "Verse {number}",
+  "@verseNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "totalVerses": "{count} verses",
+  "@totalVerses": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readingSurah": "Reading {surah}",
+  "@readingSurah": {
+    "placeholders": {
+      "surah": {
+        "type": "String"
+      }
+    }
+  },
+  "bismillahArRahmanArRahim": "In the name of Allah, the Most Gracious, the Most Merciful",
+  "noVersesFound": "No verses found",
+  "display": "Display",
 
   "@_comment_collection_categories": "===== Collection Categories =====",
   "morning": "Morning",

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import '../../utils/responsive.dart';
+import 'quran_reading_screen.dart';
 
 /// Quran Screen - Browse and Read the Holy Quran
 class QuranScreen extends ConsumerStatefulWidget {
@@ -100,12 +101,12 @@ class _QuranScreenState extends ConsumerState<QuranScreen>
             totalAyahs: _getTotalAyahs(surahNumber),
             revelationType: _getRevelationType(surahNumber),
             onTap: () {
-              // TODO: Create and navigate to Surah reading screen when implemented
-              // For now, show a coming soon message
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('${l10n.comingSoon}: Surah $surahNumber - Reading feature will be available soon'),
-                  duration: const Duration(seconds: 2),
+              // Navigate to Quran reading screen
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => QuranReadingScreen(
+                    surahNumber: surahNumber,
+                  ),
                 ),
               );
             },
