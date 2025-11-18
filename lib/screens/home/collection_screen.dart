@@ -7,6 +7,7 @@ import '../../providers/guest_access_providers.dart';
 import '../../widgets/collection/collection_item_card.dart';
 import '../../widgets/collection/checklist_view_widget.dart';
 import '../../widgets/collection/add_to_collection_dialog.dart';
+import '../../widgets/collection/set_reminder_dialog.dart';
 import '../auth/register_screen.dart';
 import '../../l10n/app_localizations.dart';
 
@@ -603,7 +604,7 @@ class _SearchResultsScreen extends ConsumerWidget {
 }
 
 /// Collection item details screen (placeholder)
-class _CollectionItemDetailsScreen extends StatelessWidget {
+class _CollectionItemDetailsScreen extends ConsumerWidget {
   final CollectionItem item;
 
   const _CollectionItemDetailsScreen({
@@ -612,12 +613,17 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final r = context.responsive;
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         title: Text(item.title),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => _showReminderDialog(context),
+        icon: const Icon(Icons.notifications_active),
+        label: Text(l10n.setReminder),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(r.paddingMedium),
@@ -724,6 +730,13 @@ class _CollectionItemDetailsScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  void _showReminderDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => SetReminderDialog(item: item),
     );
   }
 }
