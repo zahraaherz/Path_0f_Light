@@ -36,7 +36,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Location Permission'),
+        title: Text(l10n.locationPermission),
         content: Text(
           'We need your location to calculate accurate prayer times for your area.',
         ),
@@ -53,11 +53,11 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               if (granted && mounted) {
                 ref.invalidate(todayPrayerTimesProvider);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Location permission granted')),
+                  SnackBar(content: Text(l10n.locationPermissionGranted)),
                 );
               }
             },
-            child: Text('Allow'),
+            child: Text(l10n.allow),
           ),
         ],
       ),
@@ -171,7 +171,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       Divider(height: 1),
                       ListTile(
                         leading: Icon(Icons.library_books, color: AppTheme.primaryTeal),
-                        title: Text('Quran & Tafsir'),
+                        title: Text(l10n.quranAndTafsir),
                         trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -182,7 +182,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       ListTile(
                         leading: Icon(Icons.headphones, color: AppTheme.islamicGreen),
                         title: Text(l10n.audioLibrary),
-                        subtitle: Text('Du\'a Kumayl, Ziyarat Ashura'),
+                        subtitle: Text(l10n.duaAndZiyarat),
                         trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -192,7 +192,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       ),
                       ListTile(
                         leading: Icon(Icons.mosque, color: AppTheme.goldAccent),
-                        title: Text('Nearby Mosques'),
+                        title: Text(l10n.nearbyMosques),
                         trailing: Icon(Icons.chevron_right),
                         onTap: () {
                           ScaffoldMessenger.of(context).showSnackBar(

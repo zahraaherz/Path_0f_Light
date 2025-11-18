@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../models/library/comment_models.dart';
 import '../../providers/comments_providers.dart';
 import '../../providers/auth_providers.dart';
@@ -45,20 +46,21 @@ class _CommentCardState extends ConsumerState<CommentCard> {
   }
 
   Future<void> _deleteComment() async {
+    final l10n = AppLocalizations.of(context)!;
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Delete Comment'),
-        content: const Text('Are you sure you want to delete this comment?'),
+        title: Text(l10n.deleteComment),
+        content: Text(l10n.confirmDeleteComment),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
             style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-            child: const Text('Delete'),
+            child: Text(l10n.delete),
           ),
         ],
       ),
@@ -73,7 +75,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
 
       if (result.success && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Comment deleted')),
+          SnackBar(content: Text(l10n.commentDeleted)),
         );
       }
     }
@@ -81,9 +83,10 @@ class _CommentCardState extends ConsumerState<CommentCard> {
 
   Future<void> _editComment() async {
     if (!widget.comment.canEdit()) {
+      final l10n = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Comments can only be edited within 5 minutes'),
+        SnackBar(
+          content: Text(l10n.commentEditTimeExpired),
         ),
       );
       return;
@@ -108,11 +111,12 @@ class _CommentCardState extends ConsumerState<CommentCard> {
     );
 
     if (mounted) {
+      final l10n = AppLocalizations.of(context)!;
       setState(() => _isEditing = false);
 
       if (result.success) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Comment updated')),
+          SnackBar(content: Text(l10n.commentUpdated)),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -126,6 +130,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
   }
 
   Future<void> _reportComment() async {
+    final l10n = AppLocalizations.of(context)!;
     final reportReasons = [
       'Spam or misleading',
       'Offensive content',
@@ -140,7 +145,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, setState) => AlertDialog(
-          title: const Text('Report Comment'),
+          title: Text(l10n.reportComment),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,14 +165,14 @@ class _CommentCardState extends ConsumerState<CommentCard> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(l10n.cancel),
             ),
             ElevatedButton(
               onPressed: selectedReason == null
                   ? null
                   : () => Navigator.pop(context, true),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-              child: const Text('Report'),
+              child: Text(l10n.report),
             ),
           ],
         ),
@@ -179,7 +184,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
       // For now, show confirmation message
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Comment reported for: $selectedReason. Thank you for helping keep our community safe.'),
+          content: Text(l10n.commentReported(selectedReason)),
           duration: const Duration(seconds: 3),
         ),
       );
@@ -191,6 +196,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
   }
 
   void _showMoreMenu() {
+    final l10n = AppLocalizations.of(context)!;
     final currentUser = ref.read(currentAuthUserProvider);
     final isOwnComment = currentUser != null && widget.comment.isOwnedBy(currentUser.uid);
 
@@ -203,7 +209,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
             if (isOwnComment && widget.comment.canEdit())
               ListTile(
                 leading: const Icon(Icons.edit),
-                title: const Text('Edit'),
+                title: Text(l10n.edit),
                 onTap: () {
                   Navigator.pop(context);
                   _editComment();
@@ -212,7 +218,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
             if (isOwnComment)
               ListTile(
                 leading: const Icon(Icons.delete, color: Colors.red),
-                title: const Text('Delete', style: TextStyle(color: Colors.red)),
+                title: Text(l10n.delete, style: const TextStyle(color: Colors.red)),
                 onTap: () {
                   Navigator.pop(context);
                   _deleteComment();
@@ -221,7 +227,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
             if (!isOwnComment)
               ListTile(
                 leading: const Icon(Icons.flag, color: Colors.orange),
-                title: const Text('Report'),
+                title: Text(l10n.report),
                 onTap: () {
                   Navigator.pop(context);
                   _reportComment();
@@ -235,6 +241,7 @@ class _CommentCardState extends ConsumerState<CommentCard> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final currentUser = ref.watch(currentAuthUserProvider);
     final isLiked = currentUser != null && widget.comment.isLikedBy(currentUser.uid);
     final isOwnComment = currentUser != null && widget.comment.isOwnedBy(currentUser.uid);
@@ -325,9 +332,9 @@ class _CommentCardState extends ConsumerState<CommentCard> {
                         children: [
                           TextField(
                             controller: _editController,
-                            decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: 'Edit your comment...',
+                            decoration: InputDecoration(
+                              border: const OutlineInputBorder(),
+                              hintText: l10n.editYourComment,
                             ),
                             maxLines: 3,
                             maxLength: 500,
@@ -338,12 +345,12 @@ class _CommentCardState extends ConsumerState<CommentCard> {
                             children: [
                               TextButton(
                                 onPressed: _cancelEdit,
-                                child: const Text('Cancel'),
+                                child: Text(l10n.cancel),
                               ),
                               const SizedBox(width: 8),
                               ElevatedButton(
                                 onPressed: _saveEdit,
-                                child: const Text('Save'),
+                                child: Text(l10n.save),
                               ),
                             ],
                           ),

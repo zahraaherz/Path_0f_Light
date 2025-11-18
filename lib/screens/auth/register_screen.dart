@@ -6,6 +6,7 @@ import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
 import '../../providers/guest_access_providers.dart';
 import '../home/home_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({super.key});
@@ -36,10 +37,11 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   Future<void> _handleRegister() async {
     if (!_formKey.currentState!.validate()) return;
 
+    final l10n = AppLocalizations.of(context)!;
     if (!_agreeToTerms) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Please agree to the Terms and Conditions'),
+        SnackBar(
+          content: Text(l10n.agreeToTerms),
           backgroundColor: AppTheme.error,
         ),
       );
@@ -64,7 +66,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Failed to link account: $e'),
+              content: Text(l10n.failedToLinkAccount(e.toString())),
               backgroundColor: AppTheme.error,
             ),
           );
@@ -108,7 +110,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   MaterialPageRoute(builder: (_) => const HomeScreen()),
                 );
               },
-              child: const Text('Continue'),
+              child: Text(l10n.continueButton),
             ),
           ],
         );
@@ -152,6 +154,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final authState = ref.watch(authControllerProvider);
 
@@ -165,7 +168,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create Account'),
+        title: Text(l10n.createAccount),
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: AppTheme.primaryTeal,
@@ -202,25 +205,25 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   SizedBox(height: r.spaceLarge),
                   TextFormField(
                     controller: _nameController,
-                    decoration: const InputDecoration(labelText: 'Full Name', hintText: 'Enter your name', prefixIcon: Icon(Icons.person_outline)),
+                    decoration: InputDecoration(labelText: l10n.fullName, hintText: l10n.enterYourName, prefixIcon: const Icon(Icons.person_outline)),
                     textInputAction: TextInputAction.next,
                     textCapitalization: TextCapitalization.words,
-                    validator: (v) => v == null || v.isEmpty ? 'Please enter your name' : v.length < 2 ? 'Name must be at least 2 characters' : null,
+                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 2 ? 'Name must be at least 2 characters' : null,
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _emailController,
-                    decoration: const InputDecoration(labelText: 'Email', hintText: 'your@email.com', prefixIcon: Icon(Icons.email_outlined)),
+                    decoration: InputDecoration(labelText: l10n.email, hintText: l10n.emailHint, prefixIcon: const Icon(Icons.email_outlined)),
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
-                    validator: (v) => v == null || v.isEmpty ? 'Please enter your email' : !v.contains('@') || !v.contains('.') ? 'Please enter a valid email' : null,
+                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : !v.contains('@') || !v.contains('.') ? l10n.invalidEmail : null,
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _passwordController,
                     decoration: InputDecoration(
-                      labelText: 'Password',
-                      hintText: '••••••••',
+                      labelText: l10n.password,
+                      hintText: l10n.passwordHint,
                       prefixIcon: const Icon(Icons.lock_outline),
                       suffixIcon: IconButton(
                         icon: Icon(_obscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined),
@@ -229,14 +232,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     ),
                     obscureText: _obscurePassword,
                     textInputAction: TextInputAction.next,
-                    validator: (v) => v == null || v.isEmpty ? 'Please enter a password' : v.length < 6 ? 'Password must be at least 6 characters' : null,
+                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 6 ? l10n.passwordTooShort : null,
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
                     controller: _confirmPasswordController,
                     decoration: InputDecoration(
-                      labelText: 'Confirm Password',
-                      hintText: '••••••••',
+                      labelText: l10n.confirmPassword,
+                      hintText: l10n.passwordHint,
                       prefixIcon: const Icon(Icons.lock_outline),
                       suffixIcon: IconButton(
                         icon: Icon(_obscureConfirmPassword ? Icons.visibility_outlined : Icons.visibility_off_outlined),
@@ -246,7 +249,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     obscureText: _obscureConfirmPassword,
                     textInputAction: TextInputAction.done,
                     onFieldSubmitted: (_) => _handleRegister(),
-                    validator: (v) => v == null || v.isEmpty ? 'Please confirm your password' : v != _passwordController.text ? 'Passwords do not match' : null,
+                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v != _passwordController.text ? l10n.passwordsDoNotMatch : null,
                   ),
                   SizedBox(height: r.spaceMedium),
                   Row(
@@ -261,12 +264,12 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                               style: Theme.of(context).textTheme.bodySmall,
                               children: [
                                 TextSpan(
-                                  text: 'Terms and Conditions',
+                                  text: l10n.termsOfService,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),
                                 ),
                                 const TextSpan(text: ' and '),
                                 TextSpan(
-                                  text: 'Privacy Policy',
+                                  text: l10n.privacyPolicy,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),
                                 ),
                               ],
@@ -283,14 +286,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       onPressed: authState.isLoading ? null : _handleRegister,
                       child: authState.isLoading
                           ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Colors.white)))
-                          : const Text('Create Account'),
+                          : Text(l10n.createAccount),
                     ),
                   ),
                   SizedBox(height: r.spaceLarge),
                   Row(
                     children: [
                       const Expanded(child: Divider()),
-                      Padding(padding: EdgeInsets.symmetric(horizontal: r.paddingMedium), child: Text('OR SIGN UP WITH', style: Theme.of(context).textTheme.bodySmall)),
+                      Padding(padding: EdgeInsets.symmetric(horizontal: r.paddingMedium), child: Text(l10n.orSignUpWith, style: Theme.of(context).textTheme.bodySmall)),
                       const Expanded(child: Divider()),
                     ],
                   ),
@@ -307,8 +310,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Already have an account? ', style: Theme.of(context).textTheme.bodyMedium),
-                      TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Sign In')),
+                      Text(l10n.alreadyHaveAccount, style: Theme.of(context).textTheme.bodyMedium),
+                      const SizedBox(width: 4),
+                      TextButton(onPressed: () => Navigator.of(context).pop(), child: Text(l10n.signIn)),
                     ],
                   ),
                 ],

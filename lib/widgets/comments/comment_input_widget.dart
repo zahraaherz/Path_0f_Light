@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../providers/comments_providers.dart';
 
 class CommentInputWidget extends ConsumerStatefulWidget {
@@ -43,8 +44,9 @@ class _CommentInputWidgetState extends ConsumerState<CommentInputWidget> {
     }
 
     if (_controller.text.length > 500) {
+      final l10n = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Comment cannot exceed 500 characters')),
+        SnackBar(content: Text(l10n.commentTooLong)),
       );
       return;
     }

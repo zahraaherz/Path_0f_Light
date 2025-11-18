@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:async';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/energy/energy_config.dart';
 import '../../providers/energy_providers.dart';
@@ -34,12 +35,13 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     final r = context.responsive;
     final energyStatus = ref.watch(energyStatusProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Energy'),
+        title: Text(l10n.energy),
         centerTitle: true,
         actions: [
           IconButton(
@@ -107,7 +109,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
               // Watch Ad
               _buildRefillOption(
                 icon: Icons.play_circle_outline,
-                title: 'Watch Ad',
+                title: l10n.watchAd,
                 subtitle: '+${EnergyConfig.adRewardEnergy} energy • ${EnergyConfig.adCooldownMinutes} min cooldown • ${EnergyConfig.maxAdsPerDay}/day max',
                 value: status.isPremium ? 'Premium' : 'Watch',
                 color: status.isPremium ? AppTheme.textSecondary : AppTheme.warning,
@@ -403,24 +405,26 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
   }
 
   Future<void> _claimDailyBonus() async {
+    final l10n = AppLocalizations.of(context)!;
     // Daily bonus is automatically claimed when getEnergyStatus is called
     // Just refresh to trigger it
     ref.invalidate(energyStatusProvider);
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Daily bonus claimed! +${EnergyConfig.dailyLoginBonus} energy'),
+        content: Text(l10n.dailyBonusClaimed(EnergyConfig.dailyLoginBonus)),
         backgroundColor: AppTheme.success,
       ),
     );
   }
 
   Future<void> _watchAd() async {
+    final l10n = AppLocalizations.of(context)!;
     // Show dialog explaining ad integration needed
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Watch Ad'),
+        title: Text(l10n.watchAd),
         content: const Text(
           'Ad integration is not yet implemented. '
           'In production, this would show a rewarded ad from '
@@ -429,7 +433,7 @@ class _EnergyRefillScreenState extends ConsumerState<EnergyRefillScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () async {

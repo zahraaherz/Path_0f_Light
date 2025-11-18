@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../models/library/book.dart';
 import '../../models/library/paragraph.dart';
 import '../../models/library/reading_models.dart' as models;
@@ -55,6 +56,7 @@ class _ParagraphWidgetState extends ConsumerState<ParagraphWidget> {
   }
 
   void _showContextMenu(BuildContext context, LongPressStartDetails details) {
+    final l10n = AppLocalizations.of(context)!;
     final overlay = Overlay.of(context).context.findRenderObject() as RenderBox;
     final position = RelativeRect.fromRect(
       Rect.fromPoints(
@@ -69,50 +71,50 @@ class _ParagraphWidgetState extends ConsumerState<ParagraphWidget> {
       position: position,
       items: [
         PopupMenuItem(
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.comment),
-              SizedBox(width: 8),
+              const Icon(Icons.comment),
+              const SizedBox(width: 8),
               Text('Comment on this'),
             ],
           ),
           onTap: () => _showComments(),
         ),
         PopupMenuItem(
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.bookmark_add),
-              SizedBox(width: 8),
+              const Icon(Icons.bookmark_add),
+              const SizedBox(width: 8),
               Text('Bookmark here'),
             ],
           ),
           onTap: () => _addBookmark(),
         ),
         PopupMenuItem(
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.report),
-              SizedBox(width: 8),
-              Text('Report issue'),
+              const Icon(Icons.report),
+              const SizedBox(width: 8),
+              Text(l10n.reportIssueMenu),
             ],
           ),
           onTap: () => _reportIssue(),
         ),
         PopupMenuItem(
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.copy),
-              SizedBox(width: 8),
+              const Icon(Icons.copy),
+              const SizedBox(width: 8),
               Text('Copy text'),
             ],
           ),
           onTap: () => _copyText(),
         ),
         PopupMenuItem(
-          child: const Row(
+          child: Row(
             children: [
-              Icon(Icons.share),
-              SizedBox(width: 8),
+              const Icon(Icons.share),
+              const SizedBox(width: 8),
               Text('Share'),
             ],
           ),
@@ -139,10 +141,11 @@ class _ParagraphWidgetState extends ConsumerState<ParagraphWidget> {
 
   void _addBookmark() {
     // This will be handled by parent
+    final l10n = AppLocalizations.of(context)!;
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Use bookmark button in app bar'),
-        duration: Duration(seconds: 2),
+      SnackBar(
+        content: Text(l10n.useBookmarkButton),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -160,11 +163,12 @@ class _ParagraphWidgetState extends ConsumerState<ParagraphWidget> {
   }
 
   void _copyText() {
+    final l10n = AppLocalizations.of(context)!;
     Clipboard.setData(ClipboardData(text: widget.paragraph.content.textAr));
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Text copied to clipboard'),
-        duration: Duration(seconds: 2),
+      SnackBar(
+        content: Text(l10n.textCopied),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -335,18 +339,21 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
   String _selectedIssueType = 'typo';
   bool _isSubmitting = false;
 
-  final List<Map<String, String>> _issueTypes = [
-    {'value': 'typo', 'label': 'Typo/Spelling Error'},
-    {'value': 'wrong_content', 'label': 'Wrong Content'},
-    {'value': 'formatting', 'label': 'Formatting Issue'},
-    {'value': 'translation', 'label': 'Translation Error'},
-    {'value': 'other', 'label': 'Other'},
-  ];
+  List<Map<String, String>> _getIssueTypes(AppLocalizations l10n) {
+    return [
+      {'value': 'typo', 'label': l10n.typoSpellingError},
+      {'value': 'wrong_content', 'label': 'Wrong Content'},
+      {'value': 'formatting', 'label': 'Formatting Issue'},
+      {'value': 'translation', 'label': l10n.translationError},
+      {'value': 'other', 'label': 'Other'},
+    ];
+  }
 
   Future<void> _submitReport() async {
+    final l10n = AppLocalizations.of(context)!;
     if (_descriptionController.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please describe the issue')),
+        SnackBar(content: Text(l10n.pleaseDescribeIssue)),
       );
       return;
     }
@@ -378,8 +385,11 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final issueTypes = _getIssueTypes(l10n);
+
     return AlertDialog(
-      title: const Text('Report Issue'),
+      title: Text(l10n.reportIssue),
       content: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -389,11 +399,11 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
             const SizedBox(height: 12),
             DropdownButtonFormField<String>(
               value: _selectedIssueType,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Issue Type',
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                labelText: l10n.issueType,
               ),
-              items: _issueTypes.map((type) {
+              items: issueTypes.map((type) {
                 return DropdownMenuItem(
                   value: type['value'],
                   child: Text(type['label']!),
@@ -408,10 +418,10 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
             const SizedBox(height: 16),
             TextField(
               controller: _descriptionController,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
                 labelText: 'Description',
-                hintText: 'Please describe the issue in detail...',
+                hintText: l10n.describeIssue,
               ),
               maxLines: 4,
               maxLength: 500,
@@ -422,7 +432,7 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
       actions: [
         TextButton(
           onPressed: _isSubmitting ? null : () => Navigator.pop(context),
-          child: const Text('Cancel'),
+          child: Text(l10n.cancel),
         ),
         ElevatedButton(
           onPressed: _isSubmitting ? null : _submitReport,
@@ -432,7 +442,7 @@ class _ReportParagraphDialogState extends ConsumerState<ReportParagraphDialog> {
                   height: 20,
                   child: CircularProgressIndicator(strokeWidth: 2),
                 )
-              : const Text('Submit'),
+              : Text(l10n.submit),
         ),
       ],
     );

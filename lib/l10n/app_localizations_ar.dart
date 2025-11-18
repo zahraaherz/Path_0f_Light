@@ -1349,4 +1349,35 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get guidance => 'هداية';
+
+  @override
+  String get signOut => 'تسجيل الخروج';
+
+  @override
+  String get confirmSignOut => 'هل أنت متأكد من تسجيل الخروج؟';
+
+  @override
+  String get noProfileData => 'لا توجد بيانات ملف شخصي';
+
+  @override
+  String get challengeMode => 'وضع التحدي';
+
+  @override
+  String get failedToLoadCategories => 'فشل تحميل الفئات';
+
+  @override
+  String get searchFriends => 'البحث عن الأصدقاء...';
+
+  @override
+  String playerOffline(String name) {
+    return '$name غير متصل حالياً';
+  }
+
+  @override
+  String startingChallenge(String name) {
+    return 'بدء التحدي مع $name...';
+  }
+
+  @override
+  String get challengeCreated => 'تم إنشاء التحدي! بدء الاختبار...';
 }

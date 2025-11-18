@@ -2725,6 +2725,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Guidance'**
   String get guidance;
+
+  /// No description provided for @signOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign Out'**
+  String get signOut;
+
+  /// No description provided for @confirmSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to sign out?'**
+  String get confirmSignOut;
+
+  /// No description provided for @noProfileData.
+  ///
+  /// In en, this message translates to:
+  /// **'No profile data'**
+  String get noProfileData;
+
+  /// No description provided for @challengeMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge Mode'**
+  String get challengeMode;
+
+  /// No description provided for @failedToLoadCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load categories'**
+  String get failedToLoadCategories;
+
+  /// No description provided for @searchFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Search friends...'**
+  String get searchFriends;
+
+  /// No description provided for @playerOffline.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} is currently offline'**
+  String playerOffline(String name);
+
+  /// No description provided for @startingChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Starting challenge with {name}...'**
+  String startingChallenge(String name);
+
+  /// No description provided for @challengeCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge created! Starting quiz...'**
+  String get challengeCreated;
 }
 
 class _AppLocalizationsDelegate

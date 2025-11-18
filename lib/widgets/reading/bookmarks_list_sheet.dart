@@ -2,6 +2,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../models/library/reading_models.dart';
 import '../../providers/reading_providers.dart';
 import '../../providers/auth_providers.dart';
@@ -18,6 +19,7 @@ class BookmarksListSheet extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final authUser = ref.watch(currentAuthUserProvider);
 
     if (authUser == null) {
@@ -27,8 +29,8 @@ class BookmarksListSheet extends ConsumerWidget {
           color: Colors.white,
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
-        child: const Center(
-          child: Text('Please sign in to view bookmarks'),
+        child: Center(
+          child: Text(l10n.pleaseSignInToViewBookmarks),
         ),
       );
     }
@@ -94,7 +96,7 @@ class BookmarksListSheet extends ConsumerWidget {
                         const Icon(Icons.error_outline, size: 48, color: Colors.red),
                         const SizedBox(height: 16),
                         Text(
-                          'Failed to load bookmarks',
+                          l10n.failedToLoadBookmarks,
                           style: TextStyle(color: Colors.grey[600]),
                         ),
                       ],
@@ -167,21 +169,21 @@ class BookmarksListSheet extends ConsumerWidget {
                         return await showDialog<bool>(
                           context: context,
                           builder: (context) => AlertDialog(
-                            title: const Text('Delete Bookmark'),
-                            content: const Text(
-                              'Are you sure you want to delete this bookmark?',
+                            title: Text(l10n.deleteBookmark),
+                            content: Text(
+                              l10n.confirmDeleteBookmark,
                             ),
                             actions: [
                               TextButton(
                                 onPressed: () => Navigator.pop(context, false),
-                                child: const Text('Cancel'),
+                                child: Text(l10n.cancel),
                               ),
                               ElevatedButton(
                                 onPressed: () => Navigator.pop(context, true),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.red,
                                 ),
-                                child: const Text('Delete'),
+                                child: Text(l10n.delete),
                               ),
                             ],
                           ),
@@ -193,7 +195,7 @@ class BookmarksListSheet extends ConsumerWidget {
 
                         if (context.mounted) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Bookmark deleted')),
+                            SnackBar(content: Text(l10n.bookmarkDeleted)),
                           );
                         }
                       },

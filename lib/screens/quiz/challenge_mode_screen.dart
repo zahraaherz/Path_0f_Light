@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/enhanced_quiz_providers.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class ChallengeModeScreen extends ConsumerStatefulWidget {
   const ChallengeModeScreen({super.key});
@@ -112,10 +113,11 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
   @override
   Widget build(BuildContext context) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: AppTheme.backgroundLight,
       appBar: AppBar(
-        title: const Text('Challenge Mode'),
+        title: Text(l10n.challengeMode),
         backgroundColor: AppTheme.primaryTeal,
         elevation: 0,
         bottom: TabBar(
@@ -256,6 +258,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
   Widget _buildFriendsTab() {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final filteredFriends = _friends.where((friend) {
       if (searchQuery.isEmpty) return true;
       return friend['name'].toLowerCase().contains(searchQuery.toLowerCase()) ||
@@ -271,7 +274,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
             controller: _searchController,
             onChanged: (value) => setState(() => searchQuery = value),
             decoration: InputDecoration(
-              hintText: 'Search friends...',
+              hintText: l10n.searchFriends,
               prefixIcon: Icon(Icons.search),
               suffixIcon: searchQuery.isNotEmpty
                   ? IconButton(
@@ -679,10 +682,11 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
   void _challengePlayer(Map<String, dynamic> player) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     if (player['status'] != 'online') {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('${player['name']} is currently offline'),
+          content: Text(l10n.playerOffline(player['name'])),
           backgroundColor: AppTheme.error,
           behavior: SnackBarBehavior.floating,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusSmall)),
@@ -696,6 +700,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
   void _showMatchFoundDialog(Map<String, dynamic> player) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -754,7 +759,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                         ),
                         padding: EdgeInsets.symmetric(vertical: r.paddingSmall),
                       ),
-                      child: Text('Cancel'),
+                      child: Text(l10n.cancel),
                     ),
                   ),
                   SizedBox(width: r.spaceSmall),
@@ -771,7 +776,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
                         ),
                         padding: EdgeInsets.symmetric(vertical: r.paddingSmall),
                       ),
-                      child: Text('Start'),
+                      child: Text(l10n.start),
                     ),
                   ),
                 ],
@@ -785,9 +790,10 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
 
   void _startChallenge(Map<String, dynamic> player) async {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('Starting challenge with ${player['name']}...'),
+        content: Text(l10n.startingChallenge(player['name'])),
         backgroundColor: AppTheme.success,
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(r.radiusSmall)),
@@ -806,7 +812,7 @@ class _ChallengeModeScreenState extends ConsumerState<ChallengeModeScreen> with 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Challenge created! Starting quiz...'),
+          content: Text(l10n.challengeCreated),
           backgroundColor: AppTheme.info,
           behavior: SnackBarBehavior.floating,
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../models/library/reading_models.dart';
 import '../../providers/reading_providers.dart';
 
@@ -223,8 +224,8 @@ class ReadingSettingsSheet extends ConsumerWidget {
                   child: Column(
                     children: [
                       SwitchListTile(
-                        title: const Text('Enable Auto Scroll'),
-                        subtitle: const Text('Automatically scroll while reading'),
+                        title: Text(AppLocalizations.of(context)!.enableAutoScroll),
+                        subtitle: Text(AppLocalizations.of(context)!.autoScrollWhileReading),
                         value: preferences.autoScroll,
                         onChanged: (value) => notifier.setAutoScroll(value),
                         contentPadding: EdgeInsets.zero,
@@ -260,8 +261,8 @@ class ReadingSettingsSheet extends ConsumerWidget {
                 _SettingSection(
                   title: 'Display',
                   child: SwitchListTile(
-                    title: const Text('Night Mode'),
-                    subtitle: const Text('Reduce brightness for night reading'),
+                    title: Text(AppLocalizations.of(context)!.nightMode),
+                    subtitle: Text(AppLocalizations.of(context)!.reduceBrightnessNight),
                     value: preferences.enableNightMode,
                     onChanged: (value) => notifier.toggleNightMode(),
                     contentPadding: EdgeInsets.zero,

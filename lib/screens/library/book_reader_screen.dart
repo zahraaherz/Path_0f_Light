@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../config/theme/app_theme.dart';
 import '../../models/library/book.dart';
 import '../../models/library/paragraph.dart';
@@ -191,19 +192,21 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
       );
 
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Bookmark added'),
+          SnackBar(
+            content: Text(l10n.bookmarkAdded),
             backgroundColor: AppTheme.success,
-            duration: Duration(seconds: 2),
+            duration: const Duration(seconds: 2),
           ),
         );
       }
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Failed to add bookmark: $e'),
+            content: Text(l10n.failedToAddBookmark(e.toString())),
             backgroundColor: AppTheme.error,
           ),
         );
@@ -212,15 +215,16 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
   }
 
   void _showLoginPrompt(String message) {
+    final l10n = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Sign in Required'),
+        title: Text(l10n.signInRequired),
         content: Text(message),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(l10n.cancel),
           ),
           ElevatedButton(
             onPressed: () {
@@ -230,7 +234,7 @@ class _BookReaderScreenState extends ConsumerState<BookReaderScreen> {
               );
             },
             style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primaryTeal),
-            child: const Text('Sign In'),
+            child: Text(l10n.signIn),
           ),
         ],
       ),
