@@ -245,6 +245,32 @@ class AuthRepository {
     }
   }
 
+  /// Check if current user's email is verified
+  bool get isEmailVerified => currentUser?.emailVerified ?? false;
+
+  /// Reload current user to update email verification status
+  Future<void> reloadUser() async {
+    try {
+      await currentUser?.reload();
+    } on FirebaseAuthException catch (e) {
+      throw _handleFirebaseAuthException(e);
+    } catch (e) {
+      throw AuthException(
+          'Failed to reload user: ${e.toString()}', 'unknown');
+    }
+  }
+
+  /// Require email verification for certain operations
+  /// Throws AuthException if email is not verified
+  void requireEmailVerification() {
+    if (!isEmailVerified) {
+      throw AuthException(
+        'Please verify your email address before continuing. Check your inbox for the verification link.',
+        'email-not-verified',
+      );
+    }
+  }
+
   /// Send password reset email
   Future<void> sendPasswordResetEmail(String email) async {
     try {

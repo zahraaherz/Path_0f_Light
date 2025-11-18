@@ -1,5 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import {checkRateLimit, strictRateLimiter} from "./rateLimiter";
+import {sanitizeString, sanitizeText, sanitizeUrl, sanitizeNumber, sanitizeStringArray} from "./inputValidation";
 
 const db = admin.firestore();
 
@@ -9,33 +11,19 @@ const db = admin.firestore();
  */
 
 /**
- * Helper function to check if user has admin role
+ * Helper function to check if user has admin role using custom claims
+ * This is more secure than checking Firestore as custom claims are verified by Firebase Auth
  */
-async function isAdmin(userId: string): Promise<boolean> {
-  try {
-    const userDoc = await db.collection("users").doc(userId).get();
-    if (!userDoc.exists) return false;
-    const userData = userDoc.data();
-    return userData?.role === "admin";
-  } catch (error) {
-    console.error("Error checking admin role:", error);
-    return false;
-  }
+function isAdmin(context: functions.https.CallableContext): boolean {
+  return context.auth?.token?.role === "admin";
 }
 
 /**
- * Helper function to check if user has scholar or admin role
+ * Helper function to check if user has scholar or admin role using custom claims
  */
-async function isScholarOrAdmin(userId: string): Promise<boolean> {
-  try {
-    const userDoc = await db.collection("users").doc(userId).get();
-    if (!userDoc.exists) return false;
-    const userData = userDoc.data();
-    return userData?.role === "admin" || userData?.role === "scholar";
-  } catch (error) {
-    console.error("Error checking scholar/admin role:", error);
-    return false;
-  }
+function isScholarOrAdmin(context: functions.https.CallableContext): boolean {
+  const role = context.auth?.token?.role;
+  return role === "admin" || role === "scholar";
 }
 
 /**
@@ -155,9 +143,11 @@ export const insertBook = functions.https.onCall(async (data, context) => {
     );
   }
 
-  // Check admin role
-  const hasAdminRole = await isAdmin(context.auth.uid);
-  if (!hasAdminRole) {
+  // Apply rate limiting for admin operations
+  await checkRateLimit(strictRateLimiter, context);
+
+  // Check admin role using custom claims
+  if (!isAdmin(context)) {
     throw new functions.https.HttpsError(
       "permission-denied",
       "Only admins can insert books"
@@ -182,17 +172,26 @@ export const insertBook = functions.https.onCall(async (data, context) => {
     );
   }
 
+  // Sanitize inputs
+  const sanitizedTitleAr = sanitizeString(title_ar, 500);
+  const sanitizedTitleEn = sanitizeString(title_en, 500);
+  const sanitizedAuthorAr = sanitizeString(author_ar, 200);
+  const sanitizedAuthorEn = sanitizeString(author_en, 200);
+  const sanitizedLanguage = sanitizeString(language, 10);
+  const sanitizedPdfUrl = pdf_url ? sanitizeUrl(pdf_url) : null;
+  const sanitizedVersion = sanitizeString(version, 20);
+
   try {
     const now = admin.firestore.Timestamp.now();
 
     const bookData: BookData = {
-      title_ar,
-      title_en,
-      author_ar,
-      author_en,
-      language,
-      pdf_url: pdf_url || null,
-      version,
+      title_ar: sanitizedTitleAr,
+      title_en: sanitizedTitleEn,
+      author_ar: sanitizedAuthorAr,
+      author_en: sanitizedAuthorEn,
+      language: sanitizedLanguage,
+      pdf_url: sanitizedPdfUrl,
+      version: sanitizedVersion,
       content_status: "draft",
       total_sections: 0,
       total_paragraphs: 0,
@@ -229,9 +228,8 @@ export const insertSection = functions.https.onCall(async (data, context) => {
     );
   }
 
-  // Check admin role
-  const hasAdminRole = await isAdmin(context.auth.uid);
-  if (!hasAdminRole) {
+  // Check admin role using custom claims
+  if (!isAdmin(context)) {
     throw new functions.https.HttpsError(
       "permission-denied",
       "Only admins can insert sections"
@@ -548,8 +546,8 @@ export const insertQuestion = functions.https.onCall(async (data, context) => {
   }
 
   // Check scholar or admin role
-  const hasRole = await isScholarOrAdmin(context.auth.uid);
-  if (!hasRole) {
+  // Check scholar or admin role using custom claims
+  if (!isScholarOrAdmin(context)) {
     throw new functions.https.HttpsError(
       "permission-denied",
       "Only scholars and admins can insert questions"
@@ -767,8 +765,8 @@ export const verifyContent = functions.https.onCall(async (data, context) => {
   }
 
   // Check scholar or admin role
-  const hasRole = await isScholarOrAdmin(context.auth.uid);
-  if (!hasRole) {
+  // Check scholar or admin role using custom claims
+  if (!isScholarOrAdmin(context)) {
     throw new functions.https.HttpsError(
       "permission-denied",
       "Only scholars and admins can verify content"
@@ -830,9 +828,8 @@ export const publishBook = functions.https.onCall(async (data, context) => {
     );
   }
 
-  // Check admin role
-  const hasAdminRole = await isAdmin(context.auth.uid);
-  if (!hasAdminRole) {
+  // Check admin role using custom claims
+  if (!isAdmin(context)) {
     throw new functions.https.HttpsError(
       "permission-denied",
       "Only admins can publish books"

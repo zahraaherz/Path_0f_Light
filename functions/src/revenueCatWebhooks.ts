@@ -1,5 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
+import * as crypto from 'crypto';
 
 /**
  * RevenueCat Webhook Handler
@@ -13,6 +14,10 @@ import * as admin from 'firebase-admin';
  *
  * Configure this webhook URL in your RevenueCat dashboard:
  * https://YOUR_PROJECT_ID.cloudfunctions.net/revenueCatWebhook
+ *
+ * IMPORTANT: Set the webhook authorization header in RevenueCat dashboard
+ * and store the secret in Firebase config:
+ * firebase functions:config:set revenuecat.webhook_secret="YOUR_SECRET_KEY"
  */
 
 interface RevenueCatWebhookEvent {
@@ -35,10 +40,57 @@ interface RevenueCatWebhookEvent {
   api_version: string;
 }
 
+/**
+ * Verify webhook signature to ensure request is from RevenueCat
+ */
+function verifyWebhookSignature(
+  body: string,
+  signature: string | undefined,
+  secret: string
+): boolean {
+  if (!signature) {
+    return false;
+  }
+
+  try {
+    // RevenueCat uses HMAC SHA256 for webhook signatures
+    const hmac = crypto.createHmac('sha256', secret);
+    hmac.update(body);
+    const expectedSignature = hmac.digest('hex');
+
+    // Use timing-safe comparison to prevent timing attacks
+    return crypto.timingSafeEqual(
+      Buffer.from(signature),
+      Buffer.from(expectedSignature)
+    );
+  } catch (error) {
+    console.error('Error verifying webhook signature:', error);
+    return false;
+  }
+}
+
 export const revenueCatWebhook = functions.https.onRequest(async (req, res) => {
   // Verify it's a POST request
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed');
+    return;
+  }
+
+  // Verify webhook signature for security
+  const webhookSecret = functions.config().revenuecat?.webhook_secret;
+
+  if (!webhookSecret) {
+    console.error('RevenueCat webhook secret not configured');
+    res.status(500).send('Server configuration error');
+    return;
+  }
+
+  const signature = req.headers['x-revenuecat-signature'] as string | undefined;
+  const rawBody = JSON.stringify(req.body);
+
+  if (!verifyWebhookSignature(rawBody, signature, webhookSecret)) {
+    console.error('Invalid webhook signature');
+    res.status(401).send('Unauthorized - Invalid signature');
     return;
   }
 
