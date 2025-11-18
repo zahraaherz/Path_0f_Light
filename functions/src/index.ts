@@ -41,6 +41,16 @@ export {
   revenueCatWebhook,
 } from "./revenueCatWebhooks";
 
+// Export Revenue Analytics Functions (NEW - Backend-calculated revenue)
+export {
+  getTotalRevenue,
+  getUserLifetimeValue,
+  getRevenueMetrics,
+  getTopRevenueUsers,
+  getRevenueByPeriod,
+  recalculateUserLTV,
+} from "./revenueAnalytics";
+
 // Export Quiz Management Functions (UPDATED for Energy System)
 export {
   getQuizQuestions,
