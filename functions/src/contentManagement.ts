@@ -9,6 +9,36 @@ const db = admin.firestore();
  */
 
 /**
+ * Helper function to check if user has admin role
+ */
+async function isAdmin(userId: string): Promise<boolean> {
+  try {
+    const userDoc = await db.collection("users").doc(userId).get();
+    if (!userDoc.exists) return false;
+    const userData = userDoc.data();
+    return userData?.role === "admin";
+  } catch (error) {
+    console.error("Error checking admin role:", error);
+    return false;
+  }
+}
+
+/**
+ * Helper function to check if user has scholar or admin role
+ */
+async function isScholarOrAdmin(userId: string): Promise<boolean> {
+  try {
+    const userDoc = await db.collection("users").doc(userId).get();
+    if (!userDoc.exists) return false;
+    const userData = userDoc.data();
+    return userData?.role === "admin" || userData?.role === "scholar";
+  } catch (error) {
+    console.error("Error checking scholar/admin role:", error);
+    return false;
+  }
+}
+
+/**
  * Interface for book data
  */
 interface BookData {
@@ -125,13 +155,14 @@ export const insertBook = functions.https.onCall(async (data, context) => {
     );
   }
 
-  // TODO: Add admin role check
-  // if (!context.auth.token.admin) {
-  //   throw new functions.https.HttpsError(
-  //     "permission-denied",
-  //     "Only admins can insert books"
-  //   );
-  // }
+  // Check admin role
+  const hasAdminRole = await isAdmin(context.auth.uid);
+  if (!hasAdminRole) {
+    throw new functions.https.HttpsError(
+      "permission-denied",
+      "Only admins can insert books"
+    );
+  }
 
   const {
     title_ar,
@@ -195,6 +226,15 @@ export const insertSection = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError(
       "unauthenticated",
       "User must be authenticated"
+    );
+  }
+
+  // Check admin role
+  const hasAdminRole = await isAdmin(context.auth.uid);
+  if (!hasAdminRole) {
+    throw new functions.https.HttpsError(
+      "permission-denied",
+      "Only admins can insert sections"
     );
   }
 
@@ -273,6 +313,15 @@ export const insertParagraph = functions.https.onCall(
       throw new functions.https.HttpsError(
         "unauthenticated",
         "User must be authenticated"
+      );
+    }
+
+    // Check admin role
+    const hasAdminRole = await isAdmin(context.auth.uid);
+    if (!hasAdminRole) {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only admins can insert paragraphs"
       );
     }
 
@@ -395,6 +444,15 @@ export const bulkInsertParagraphs = functions.https.onCall(
       );
     }
 
+    // Check admin role
+    const hasAdminRole = await isAdmin(context.auth.uid);
+    if (!hasAdminRole) {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only admins can bulk insert paragraphs"
+      );
+    }
+
     const {book_id, section_id, paragraphs} = data;
 
     if (!book_id || !section_id || !paragraphs || !Array.isArray(paragraphs)) {
@@ -486,6 +544,15 @@ export const insertQuestion = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError(
       "unauthenticated",
       "User must be authenticated"
+    );
+  }
+
+  // Check scholar or admin role
+  const hasRole = await isScholarOrAdmin(context.auth.uid);
+  if (!hasRole) {
+    throw new functions.https.HttpsError(
+      "permission-denied",
+      "Only scholars and admins can insert questions"
     );
   }
 
@@ -615,6 +682,15 @@ export const bulkInsertQuestions = functions.https.onCall(
       );
     }
 
+    // Check scholar or admin role
+    const hasRole = await isScholarOrAdmin(context.auth.uid);
+    if (!hasRole) {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only scholars and admins can bulk insert questions"
+      );
+    }
+
     const {questions} = data;
 
     if (!questions || !Array.isArray(questions)) {
@@ -690,7 +766,14 @@ export const verifyContent = functions.https.onCall(async (data, context) => {
     );
   }
 
-  // TODO: Add scholar/admin role check
+  // Check scholar or admin role
+  const hasRole = await isScholarOrAdmin(context.auth.uid);
+  if (!hasRole) {
+    throw new functions.https.HttpsError(
+      "permission-denied",
+      "Only scholars and admins can verify content"
+    );
+  }
 
   const {contentType, contentId} = data;
 
@@ -744,6 +827,15 @@ export const publishBook = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError(
       "unauthenticated",
       "User must be authenticated"
+    );
+  }
+
+  // Check admin role
+  const hasAdminRole = await isAdmin(context.auth.uid);
+  if (!hasAdminRole) {
+    throw new functions.https.HttpsError(
+      "permission-denied",
+      "Only admins can publish books"
     );
   }
 

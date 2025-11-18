@@ -4,6 +4,21 @@ import * as admin from "firebase-admin";
 const db = admin.firestore();
 
 /**
+ * Helper function to check if user has scholar or admin role
+ */
+async function isScholarOrAdmin(userId: string): Promise<boolean> {
+  try {
+    const userDoc = await db.collection("users").doc(userId).get();
+    if (!userDoc.exists) return false;
+    const userData = userDoc.data();
+    return userData?.role === "admin" || userData?.role === "scholar";
+  } catch (error) {
+    console.error("Error checking scholar/admin role:", error);
+    return false;
+  }
+}
+
+/**
  * Interface for Question data
  */
 interface QuestionData {
@@ -49,13 +64,14 @@ export const insertQuestionWithId = functions.https.onCall(
       );
     }
 
-    // TODO: Add admin role check
-    // if (!context.auth.token.admin) {
-    //   throw new functions.https.HttpsError(
-    //     "permission-denied",
-    //     "Only admins can insert questions"
-    //   );
-    // }
+    // Check scholar or admin role
+    const hasRole = await isScholarOrAdmin(context.auth.uid);
+    if (!hasRole) {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only scholars and admins can insert questions"
+      );
+    }
 
     try {
       const questionRef = db.collection("questions").doc(data.id);
@@ -106,6 +122,15 @@ export const bulkInsertQuestionsFromJSON = functions.https.onCall(
       throw new functions.https.HttpsError(
         "unauthenticated",
         "User must be authenticated"
+      );
+    }
+
+    // Check scholar or admin role
+    const hasRole = await isScholarOrAdmin(context.auth.uid);
+    if (!hasRole) {
+      throw new functions.https.HttpsError(
+        "permission-denied",
+        "Only scholars and admins can bulk insert questions"
       );
     }
 
