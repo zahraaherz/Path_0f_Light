@@ -398,7 +398,7 @@ export const submitQuizAnswer = functions.https.onCall(
 /**
  * HTTP function to get user's quiz progress and statistics
  */
-export const getQuizProgress = functions.https.onCall(
+export const getUserQuizProgress = functions.https.onCall(
   async (data, context) => {
     if (!context.auth) {
       throw new functions.https.HttpsError(
@@ -457,7 +457,7 @@ export const getQuizProgress = functions.https.onCall(
         accuracy: accuracy.toFixed(2),
       };
     } catch (error) {
-      console.error("Error in getQuizProgress:", error);
+      console.error("Error in getUserQuizProgress:", error);
       throw new functions.https.HttpsError(
         "internal",
         "Failed to get quiz progress"
@@ -467,10 +467,10 @@ export const getQuizProgress = functions.https.onCall(
 );
 
 /**
- * HTTP function to end a quiz session and get summary
+ * HTTP function to complete a quiz session and get summary
  * Awards completion bonus energy
  */
-export const endQuizSession = functions.https.onCall(async (data, context) => {
+export const completeQuizSession = functions.https.onCall(async (data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(
       "unauthenticated",
@@ -631,6 +631,59 @@ export const getQuestionSource = functions.https.onCall(
       throw new functions.https.HttpsError(
         "internal",
         "Failed to get question source"
+      );
+    }
+  }
+);
+
+/**
+ * HTTP function to get all available quiz categories
+ * Returns unique categories from questions collection
+ */
+export const getQuizCategories = functions.https.onCall(
+  async (data, context) => {
+    if (!context.auth) {
+      throw new functions.https.HttpsError(
+        "unauthenticated",
+        "User must be authenticated"
+      );
+    }
+
+    try {
+      // Get all verified questions
+      const questionsSnapshot = await db
+        .collection("questions")
+        .where("verified", "==", true)
+        .get();
+
+      if (questionsSnapshot.empty) {
+        return {
+          success: true,
+          categories: [],
+        };
+      }
+
+      // Extract unique categories
+      const categoriesSet = new Set<string>();
+      questionsSnapshot.docs.forEach((doc) => {
+        const category = doc.data().category;
+        if (category) {
+          categoriesSet.add(category);
+        }
+      });
+
+      const categories = Array.from(categoriesSet).sort();
+
+      return {
+        success: true,
+        categories,
+        total: categories.length,
+      };
+    } catch (error) {
+      console.error("Error in getQuizCategories:", error);
+      throw new functions.https.HttpsError(
+        "internal",
+        "Failed to get quiz categories"
       );
     }
   }

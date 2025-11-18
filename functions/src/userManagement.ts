@@ -531,10 +531,10 @@ export const deleteUserAccount = functions.https.onCall(
 );
 
 /**
- * HTTP function to set custom user claims (admin, scholar, etc.)
+ * HTTP function to update custom user claims (admin, scholar, etc.)
  * Only callable by admins
  */
-export const setUserRole = functions.https.onCall(async (data, context) => {
+export const updateUserRole = functions.https.onCall(async (data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(
       "unauthenticated",
@@ -673,9 +673,9 @@ export const linkSocialProvider = functions.https.onCall(
 );
 
 /**
- * HTTP function to unlink social provider
+ * HTTP function to unlink auth provider
  */
-export const unlinkSocialProvider = functions.https.onCall(
+export const unlinkAuthProvider = functions.https.onCall(
   async (data, context) => {
     if (!context.auth) {
       throw new functions.https.HttpsError(
@@ -1027,9 +1027,9 @@ export const suspendUser = functions.https.onCall(async (data, context) => {
 });
 
 /**
- * HTTP function to unsuspend user account (admin only)
+ * HTTP function to reactivate user account (admin only)
  */
-export const unsuspendUser = functions.https.onCall(async (data, context) => {
+export const reactivateUser = functions.https.onCall(async (data, context) => {
   if (!context.auth) {
     throw new functions.https.HttpsError(
       "unauthenticated",
@@ -1047,7 +1047,7 @@ export const unsuspendUser = functions.https.onCall(async (data, context) => {
   if (callerRole !== UserRole.ADMIN) {
     throw new functions.https.HttpsError(
       "permission-denied",
-      "Only admins can unsuspend users"
+      "Only admins can reactivate users"
     );
   }
 
@@ -1082,3 +1082,145 @@ export const unsuspendUser = functions.https.onCall(async (data, context) => {
     );
   }
 });
+
+/**
+ * HTTP function to get comprehensive user statistics
+ */
+export const getUserStats = functions.https.onCall(async (data, context) => {
+  if (!context.auth) {
+    throw new functions.https.HttpsError(
+      "unauthenticated",
+      "User must be authenticated"
+    );
+  }
+
+  const {userId} = data;
+  const targetUserId = userId || context.auth.uid;
+
+  try {
+    const userDoc = await db.collection("users").doc(targetUserId).get();
+
+    if (!userDoc.exists) {
+      throw new functions.https.HttpsError("not-found", "User not found");
+    }
+
+    const userData = userDoc.data();
+
+    // If requesting another user's stats, check privacy settings
+    if (targetUserId !== context.auth.uid) {
+      const privacySettings = userData?.settings?.privacy;
+      if (privacySettings?.profileVisible === false) {
+        throw new functions.https.HttpsError(
+          "permission-denied",
+          "User profile is private"
+        );
+      }
+    }
+
+    const quizProgress = userData?.quizProgress || {};
+    const dailyStats = userData?.dailyStats || {};
+    const energy = userData?.energy || {};
+
+    // Calculate additional stats
+    const accuracy =
+      quizProgress.totalQuestionsAnswered > 0 ?
+        (quizProgress.correctAnswers / quizProgress.totalQuestionsAnswered) * 100 :
+        0;
+
+    return {
+      success: true,
+      stats: {
+        profile: {
+          uid: userData?.profile?.uid,
+          displayName: userData?.profile?.displayName,
+          photoURL: userData?.profile?.photoURL,
+          role: userData?.profile?.role,
+          createdAt: userData?.profile?.createdAt,
+        },
+        quiz: {
+          totalPoints: quizProgress.totalPoints || 0,
+          totalQuestionsAnswered: quizProgress.totalQuestionsAnswered || 0,
+          correctAnswers: quizProgress.correctAnswers || 0,
+          wrongAnswers: quizProgress.wrongAnswers || 0,
+          accuracy: accuracy.toFixed(2),
+          currentStreak: quizProgress.currentStreak || 0,
+          longestStreak: quizProgress.longestStreak || 0,
+          categoryProgress: quizProgress.categoryProgress || {},
+          difficultyProgress: quizProgress.difficultyProgress || {},
+        },
+        dailyActivity: {
+          loginStreak: dailyStats.loginStreak || 0,
+          longestLoginStreak: dailyStats.longestLoginStreak || 0,
+          totalLoginDays: dailyStats.totalLoginDays || 0,
+          lastLoginDate: dailyStats.lastLoginDate,
+        },
+        energy: {
+          currentEnergy: energy.currentEnergy || 0,
+          maxEnergy: energy.maxEnergy || 100,
+          totalEnergyUsed: energy.totalEnergyUsed || 0,
+          totalEnergyEarned: energy.totalEnergyEarned || 0,
+        },
+        subscription: {
+          plan: userData?.subscription?.plan || "free",
+          active: userData?.subscription?.active || false,
+        },
+      },
+    };
+  } catch (error: any) {
+    console.error("Error in getUserStats:", error);
+    throw new functions.https.HttpsError(
+      "internal",
+      error.message || "Failed to get user stats"
+    );
+  }
+});
+
+/**
+ * HTTP function to update user language preference
+ */
+export const updateUserLanguage = functions.https.onCall(
+  async (data, context) => {
+    if (!context.auth) {
+      throw new functions.https.HttpsError(
+        "unauthenticated",
+        "User must be authenticated"
+      );
+    }
+
+    const userId = context.auth.uid;
+    const {language} = data;
+
+    if (!language) {
+      throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Language is required"
+      );
+    }
+
+    if (!["en", "ar"].includes(language)) {
+      throw new functions.https.HttpsError(
+        "invalid-argument",
+        "Invalid language. Supported: en, ar"
+      );
+    }
+
+    try {
+      await db.collection("users").doc(userId).update({
+        "profile.language": language,
+        "profile.lastActive": admin.firestore.Timestamp.now(),
+      });
+
+      return {
+        success: true,
+        language,
+        message: "Language preference updated successfully",
+      };
+    } catch (error: any) {
+      console.error("Error in updateUserLanguage:", error);
+      throw new functions.https.HttpsError(
+        "internal",
+        error.message || "Failed to update language"
+      );
+    }
+  }
+);
