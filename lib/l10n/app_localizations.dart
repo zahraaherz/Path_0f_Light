@@ -944,6 +944,96 @@ abstract class AppLocalizations {
   /// **'No leaderboard data available'**
   String get noLeaderboardData;
 
+  /// No description provided for @competeFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Compete with friends and climb the ranks'**
+  String get competeFriends;
+
+  /// No description provided for @noLeadersYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No leaders yet'**
+  String get noLeadersYet;
+
+  /// No description provided for @startQuizToCompete.
+  ///
+  /// In en, this message translates to:
+  /// **'Start taking quizzes to compete on the leaderboard'**
+  String get startQuizToCompete;
+
+  /// No description provided for @failedLoadLeaderboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load leaderboard'**
+  String get failedLoadLeaderboard;
+
+  /// No description provided for @unranked.
+  ///
+  /// In en, this message translates to:
+  /// **'Unranked'**
+  String get unranked;
+
+  /// No description provided for @inviteFriends.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite Friends'**
+  String get inviteFriends;
+
+  /// No description provided for @inviteFriendsGetEnergy.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite friends and earn bonus energy for each friend who joins!'**
+  String get inviteFriendsGetEnergy;
+
+  /// No description provided for @energyPerInvite.
+  ///
+  /// In en, this message translates to:
+  /// **'+20 energy per successful invite'**
+  String get energyPerInvite;
+
+  /// No description provided for @buildLearningCommunity.
+  ///
+  /// In en, this message translates to:
+  /// **'Build your learning community'**
+  String get buildLearningCommunity;
+
+  /// No description provided for @shareInviteLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Invite Link'**
+  String get shareInviteLink;
+
+  /// No description provided for @shareInviteDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Share your invite code with friends and family'**
+  String get shareInviteDesc;
+
+  /// No description provided for @joinPathOfLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Join me on Path of Light!'**
+  String get joinPathOfLight;
+
+  /// No description provided for @inviteMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Join me on Path of Light - A journey through Islamic knowledge! Use my invite code to get started: {link}'**
+  String inviteMessage(String link);
+
+  /// No description provided for @copiedToClipboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied to clipboard'**
+  String get copiedToClipboard;
+
+  /// No description provided for @questions.
+  ///
+  /// In en, this message translates to:
+  /// **'Questions'**
+  String get questions;
+
   /// No description provided for @editProfile.
   ///
   /// In en, this message translates to:
@@ -2377,6 +2467,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Code'**
   String get code;
+
+  /// No description provided for @upgradeToPremium.
+  ///
+  /// In en, this message translates to:
+  /// **'Upgrade to Premium'**
+  String get upgradeToPremium;
 
   /// No description provided for @errorLoadingData.
   ///

@@ -442,6 +442,56 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noLeaderboardData => 'No leaderboard data available';
 
   @override
+  String get competeFriends => 'Compete with friends and climb the ranks';
+
+  @override
+  String get noLeadersYet => 'No leaders yet';
+
+  @override
+  String get startQuizToCompete =>
+      'Start taking quizzes to compete on the leaderboard';
+
+  @override
+  String get failedLoadLeaderboard => 'Failed to load leaderboard';
+
+  @override
+  String get unranked => 'Unranked';
+
+  @override
+  String get inviteFriends => 'Invite Friends';
+
+  @override
+  String get inviteFriendsGetEnergy =>
+      'Invite friends and earn bonus energy for each friend who joins!';
+
+  @override
+  String get energyPerInvite => '+20 energy per successful invite';
+
+  @override
+  String get buildLearningCommunity => 'Build your learning community';
+
+  @override
+  String get shareInviteLink => 'Share Invite Link';
+
+  @override
+  String get shareInviteDesc =>
+      'Share your invite code with friends and family';
+
+  @override
+  String get joinPathOfLight => 'Join me on Path of Light!';
+
+  @override
+  String inviteMessage(String link) {
+    return 'Join me on Path of Light - A journey through Islamic knowledge! Use my invite code to get started: $link';
+  }
+
+  @override
+  String get copiedToClipboard => 'Copied to clipboard';
+
+  @override
+  String get questions => 'Questions';
+
+  @override
   String get editProfile => 'Edit Profile';
 
   @override
@@ -1163,6 +1213,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get code => 'Code';
+
+  @override
+  String get upgradeToPremium => 'Upgrade to Premium';
 
   @override
   String get errorLoadingData => 'Error loading data';

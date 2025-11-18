@@ -442,6 +442,55 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noLeaderboardData => 'لا توجد بيانات لوحة المتصدرين';
 
   @override
+  String get competeFriends => 'تنافس مع الأصدقاء واصعد في الترتيب';
+
+  @override
+  String get noLeadersYet => 'لا يوجد متصدرون بعد';
+
+  @override
+  String get startQuizToCompete =>
+      'ابدأ بالاختبارات للتنافس على لوحة المتصدرين';
+
+  @override
+  String get failedLoadLeaderboard => 'فشل تحميل لوحة المتصدرين';
+
+  @override
+  String get unranked => 'غير مرتب';
+
+  @override
+  String get inviteFriends => 'دعوة الأصدقاء';
+
+  @override
+  String get inviteFriendsGetEnergy =>
+      'ادعُ أصدقاءك واحصل على طاقة إضافية عن كل صديق ينضم!';
+
+  @override
+  String get energyPerInvite => '+20 طاقة لكل دعوة ناجحة';
+
+  @override
+  String get buildLearningCommunity => 'ابنِ مجتمعك التعليمي';
+
+  @override
+  String get shareInviteLink => 'شارك رابط الدعوة';
+
+  @override
+  String get shareInviteDesc => 'شارك رمز الدعوة الخاص بك مع الأصدقاء والعائلة';
+
+  @override
+  String get joinPathOfLight => 'انضم إلي على طريق النور!';
+
+  @override
+  String inviteMessage(String link) {
+    return 'انضم إلي على طريق النور - رحلة عبر المعرفة الإسلامية! استخدم رمز الدعوة الخاص بي للبدء: $link';
+  }
+
+  @override
+  String get copiedToClipboard => 'تم النسخ إلى الحافظة';
+
+  @override
+  String get questions => 'الأسئلة';
+
+  @override
   String get editProfile => 'تعديل الملف الشخصي';
 
   @override
@@ -1162,6 +1211,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get code => 'الرمز';
+
+  @override
+  String get upgradeToPremium => 'الترقية إلى النسخة المميزة';
 
   @override
   String get errorLoadingData => 'خطأ في تحميل البيانات';
