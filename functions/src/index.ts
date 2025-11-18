@@ -127,3 +127,18 @@ export {
   importQuranVerses,
   getQuranStats,
 } from "./quranManagement";
+
+// Export Battle Management Functions (NEW - Multiplayer Quiz Battles & Tournaments)
+export {
+  joinMatchmaking,
+  leaveMatchmaking,
+  sendBattleChallenge,
+  acceptBattleChallenge,
+  rejectBattleChallenge,
+  markBattleReady,
+  submitBattleAnswer,
+  completeBattle,
+  leaveBattle,
+  registerForTournament,
+  unregisterFromTournament,
+} from "./battleManagement";
