@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../repositories/battle_repository.dart';
 import '../models/battle/battle_models.dart';
+import '../models/quiz/quiz_models.dart';
 
 // ==================== REPOSITORY PROVIDER ====================
 
@@ -34,6 +35,17 @@ final pendingInvitationsProvider = StreamProvider<List<BattleInvitation>>((ref) 
 final battleProvider = StreamProvider.family<Battle, String>((ref, battleId) {
   final repository = ref.watch(battleRepositoryProvider);
   return repository.watchBattle(battleId);
+});
+
+// ==================== BATTLE QUESTIONS PROVIDER ====================
+
+/// Fetches questions for a specific battle
+/// Uses the battle's questionIds to fetch the actual question data
+final battleQuestionsProvider = FutureProvider.family<List<QuizQuestion>, String>((ref, battleId) async {
+  final repository = ref.watch(battleRepositoryProvider);
+  final battleAsync = await ref.watch(battleProvider(battleId).future);
+
+  return repository.getBattleQuestions(battleAsync.questionIds);
 });
 
 // ==================== BATTLE HISTORY PROVIDER ====================

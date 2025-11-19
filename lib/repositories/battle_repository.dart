@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/battle/battle_models.dart';
+import '../models/quiz/quiz_models.dart';
 
 /// Exception class for battle repository errors
 class BattleRepositoryException implements Exception {
@@ -280,6 +281,68 @@ class BattleRepository {
       throw BattleRepositoryException(
         'Failed to leave battle: ${e.toString()}',
         'leave-battle-failed',
+      );
+    }
+  }
+
+  /// Get battle questions by IDs
+  /// Fetches the actual question data for questions in a battle
+  Future<List<QuizQuestion>> getBattleQuestions(List<String> questionIds) async {
+    try {
+      if (questionIds.isEmpty) {
+        return [];
+      }
+
+      // Firestore 'whereIn' has a limit of 10 items, so we need to batch if more
+      final List<QuizQuestion> allQuestions = [];
+
+      // Process in batches of 10
+      for (int i = 0; i < questionIds.length; i += 10) {
+        final batch = questionIds.skip(i).take(10).toList();
+
+        final snapshot = await _firestore
+            .collection('questions')
+            .where(FieldPath.documentId, whereIn: batch)
+            .get();
+
+        final questions = snapshot.docs.map((doc) {
+          final data = doc.data();
+          return QuizQuestion(
+            id: doc.id,
+            category: data['category'] as String? ?? 'general',
+            difficulty: data['difficulty'] as String? ?? 'basic',
+            question: data['questionEn'] as String? ?? data['question'] as String? ?? '',
+            options: Map<String, String>.from(
+              (data['options'] as Map?)?.map((key, value) {
+                if (value is Map) {
+                  // Handle new format with text_en/text_ar
+                  return MapEntry(key.toString(), value['text_en']?.toString() ?? '');
+                }
+                // Handle simple string format
+                return MapEntry(key.toString(), value.toString());
+              }) ?? {},
+            ),
+            points: data['points'] as int? ?? 10,
+            masoomTags: (data['masoomTags'] as List?)?.cast<String>() ?? [],
+            topicTags: (data['topicTags'] as List?)?.cast<String>() ?? [],
+            bookSource: data['bookSource'] as String?,
+          );
+        }).toList();
+
+        allQuestions.addAll(questions);
+      }
+
+      // Maintain the original order of questionIds
+      final questionMap = {for (var q in allQuestions) q.id: q};
+      return questionIds
+          .map((id) => questionMap[id])
+          .where((q) => q != null)
+          .cast<QuizQuestion>()
+          .toList();
+    } catch (e) {
+      throw BattleRepositoryException(
+        'Failed to get battle questions: ${e.toString()}',
+        'get-battle-questions-failed',
       );
     }
   }
