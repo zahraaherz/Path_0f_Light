@@ -1056,5 +1056,160 @@
   "joinTournament": "Join Tournament",
   "tournamentFull": "Tournament Full",
   "viewTournament": "View Tournament",
-  "matchmakingTip": "Tip: Speed matters! Answer quickly for bonus points."
+  "matchmakingTip": "Tip: Speed matters! Answer quickly for bonus points.",
+
+  "@_comment_purchase": "===== Purchase & Subscription =====",
+  "renewsOn": "Renews On",
+  "expiresOn": "Expires On",
+  "totalPurchases": "Total Purchases",
+  "lifetimeValue": "Lifetime Value",
+  "package": "Package",
+  "transaction": "Transaction",
+  "cancelled": "Cancelled",
+  "reason": "Reason",
+  "noPurchaseHistory": "No Purchase History",
+  "purchaseHistoryWillAppearHere": "Your purchase history will appear here",
+  "purchaseFailed": "Purchase failed. Please try again.",
+  "purchaseCancelled": "Purchase was cancelled.",
+
+  "@_comment_streak_extended": "===== Streak Extended =====",
+  "keepYourStreakAlive": "Keep Your Streak Alive!",
+  "consistencyIsTheKey": "Consistency is the key to knowledge",
+  "currentStreaks": "Current Streaks",
+  "bestRecords": "Best Records",
+  "longestLoginStreak": "Longest Login Streak",
+  "longestQuizStreak": "Longest Quiz Streak",
+  "answer": "answer",
+  "answers": "answers",
+  "streakTips": "Streak Tips",
+  "streakTip1": "Set a daily reminder to maintain your login streak",
+  "streakTip2": "Answer at least one question daily to build your quiz streak",
+  "streakTip3": "Reach milestones to earn special achievements",
+  "streakTip4": "Consistency leads to better learning and retention",
+
+  "@_comment_library_errors": "===== Library Errors =====",
+  "bookNotFound": "Book not found",
+  "noContentAvailable": "No content available for this book yet",
+  "loadingBook": "Loading Book...",
+  "openingBook": "Opening Book...",
+  "loadingBookInfo": "Loading book information",
+  "loadingContent": "Loading content",
+  "preparingReader": "Preparing reader",
+  "unableToLoadBook": "Unable to Load Book",
+  "unknownError": "An unknown error occurred",
+
+  "@_comment_battle_extended": "===== Battle Extended =====",
+  "yourBattleStats": "Your Battle Stats",
+  "battles": "Battles",
+  "wins": "Wins",
+  "winRate": "Win Rate",
+  "challengedYouByUser": "{userName} challenged you!",
+  "@challengedYouByUser": {
+    "placeholders": {
+      "userName": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeDetails": "{count} questions • {difficulty} difficulty",
+  "@challengeDetails": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "difficulty": {
+        "type": "String"
+      }
+    }
+  },
+  "challengeAccepted": "Challenge accepted!",
+  "challengeRejected": "Challenge rejected",
+  "battleVersus": "Battle vs {opponentName}",
+  "@battleVersus": {
+    "placeholders": {
+      "opponentName": {
+        "type": "String"
+      }
+    }
+  },
+  "waiting": "Waiting...",
+  "navigatingToBattle": "Navigating to battle...",
+  "energyCost": "{cost} Energy",
+  "@energyCost": {
+    "placeholders": {
+      "cost": {
+        "type": "int"
+      }
+    }
+  },
+  "howToPlay": "How to Play",
+  "battleStep1Title": "Choose a battle mode",
+  "battleStep1Desc": "Quick match, friend challenge, or tournament",
+  "battleStep2Title": "Answer questions",
+  "battleStep2Desc": "Race against your opponent to answer correctly",
+  "battleStep3Title": "Earn points",
+  "battleStep3Desc": "Higher difficulty = more points. Build streaks for bonuses!",
+  "battleStep4Title": "Win the battle",
+  "battleStep4Desc": "Highest score wins. Draw if tied!",
+  "leaveBattleWarningFallback": "If you leave, you will lose this battle.",
+  "invalidQuestionIndex": "Invalid question index",
+  "questionNumber": "Question {current}/{total}",
+  "@questionNumber": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "versus": "VS",
+  "pointsShort": "{points} pts",
+  "@pointsShort": {
+    "placeholders": {
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "secondsShort": "{seconds} s",
+  "@secondsShort": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+
+  "@_comment_auth_additional": "===== Auth Additional =====",
+  "signInToContinueJourney": "Sign in to continue your journey",
+  "orContinueWith": "OR CONTINUE WITH",
+  "guestInfoText": "Try the app without an account. Create one anytime to save your data permanently.",
+  "resetPassword": "Reset Password",
+  "resetPasswordInstructions": "Enter your email address to receive a password reset link.",
+  "google": "Google",
+  "apple": "Apple",
+  "facebook": "Facebook",
+  "accountLinked": "Account Linked!",
+  "accountCreated": "Account Created!",
+  "guestDataLinked": "Your guest data has been linked to your new account. You can now sign in on any device!",
+  "accountCreatedMessage": "Your account has been created successfully. Please check your email to verify your account.",
+  "joinPathOfLight": "Join Path of Light",
+  "createAccountSubtitle": "Create an account to start your learning journey",
+  "iAgreeToThe": "I agree to the ",
+  "and": " and ",
+
+  "@_comment_widgets": "===== Widgets =====",
+  "lowEnergyRefillNeeded": "Low energy - Refill needed",
+  "battleArenaDescription": "Challenge friends or battle opponents in real-time quiz matches!",
+  "errorMessage": "Error: {error}",
+  "@errorMessage": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "store": "Store"
 }
