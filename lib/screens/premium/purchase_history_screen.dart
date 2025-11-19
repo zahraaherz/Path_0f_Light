@@ -5,6 +5,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/purchase/purchase_history.dart';
 import '../../providers/purchase_providers.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class PurchaseHistoryScreen extends ConsumerWidget {
   const PurchaseHistoryScreen({super.key});
