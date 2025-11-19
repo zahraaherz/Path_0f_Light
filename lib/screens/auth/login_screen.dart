@@ -110,16 +110,17 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       context: context,
       builder: (dialogContext) {
         final r = dialogContext.responsive;
+        final dialogL10n = AppLocalizations.of(dialogContext)!;
         return AlertDialog(
           title: Text(
-            'Reset Password',
+            dialogL10n.resetPassword,
             style: Theme.of(dialogContext).textTheme.titleLarge,
           ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Enter your email address to receive a password reset link.',
+                dialogL10n.resetPasswordInstructions,
                 style: Theme.of(dialogContext).textTheme.bodyMedium,
               ),
               SizedBox(height: r.spaceMedium),
@@ -218,7 +219,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           ),
                           SizedBox(height: r.spaceSmall),
                           Text(
-                            'Path of Light',
+                            l10n.pathOfLight,
                             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -232,13 +233,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   // Welcome Text
                   Text(
-                    'Welcome Back',
+                    l10n.welcomeBack,
                     style: Theme.of(context).textTheme.headlineSmall,
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: r.spaceSmall),
                   Text(
-                    'Sign in to continue your journey',
+                    l10n.signInToContinueJourney,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppTheme.textSecondary,
                         ),
@@ -258,10 +259,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     textInputAction: TextInputAction.next,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
+                        return l10n.pleaseEnterEmail;
                       }
                       if (!value.contains('@')) {
-                        return 'Please enter a valid email';
+                        return l10n.pleaseEnterValidEmail;
                       }
                       return null;
                     },
@@ -293,10 +294,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     onFieldSubmitted: (_) => _handleEmailSignIn(),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
+                        return l10n.pleaseEnterPassword;
                       }
                       if (value.length < 6) {
-                        return 'Password must be at least 6 characters';
+                        return l10n.passwordMinLength;
                       }
                       return null;
                     },
@@ -339,7 +340,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                         child: Text(
-                          'OR CONTINUE WITH',
+                          l10n.orContinueWith,
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -356,7 +357,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       _SocialSignInButton(
                         onPressed: authState.isLoading ? null : _handleGoogleSignIn,
                         icon: Icons.g_mobiledata,
-                        label: 'Google',
+                        label: l10n.google,
                         color: const Color(0xFFDB4437),
                       ),
 
@@ -364,7 +365,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       _SocialSignInButton(
                         onPressed: authState.isLoading ? null : _handleAppleSignIn,
                         icon: Icons.apple,
-                        label: 'Apple',
+                        label: l10n.apple,
                         color: Colors.black,
                       ),
 
@@ -372,7 +373,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       _SocialSignInButton(
                         onPressed: authState.isLoading ? null : _handleFacebookSignIn,
                         icon: Icons.facebook,
-                        label: 'Facebook',
+                        label: l10n.facebook,
                         color: const Color(0xFF1877F2),
                       ),
                     ],
@@ -396,7 +397,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   // Guest Info Text
                   Text(
-                    'Try the app without an account. Create one anytime to save your data permanently.',
+                    l10n.guestInfoText,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppTheme.textSecondary,
                         ),
@@ -409,7 +410,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account? ",
+                        l10n.dontHaveAccount,
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       TextButton(

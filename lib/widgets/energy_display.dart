@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme/app_theme.dart';
 import '../providers/energy_providers.dart';
 import '../screens/energy/energy_refill_screen.dart';
+import '../l10n/app_localizations.dart';
 
 /// Energy display widget showing current energy with tap to refill
 class EnergyDisplay extends ConsumerWidget {
@@ -19,6 +20,7 @@ class EnergyDisplay extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final energyStatus = ref.watch(energyStatusProvider);
 
     return energyStatus.when(
@@ -64,7 +66,7 @@ class EnergyDisplay extends ConsumerWidget {
                   ),
                   if (showLabel)
                     Text(
-                      'Energy',
+                      l10n.energy,
                       style: TextStyle(
                         fontSize: fontSize * 0.7,
                         color: AppTheme.textSecondary,
@@ -142,6 +144,7 @@ class EnergyBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final l10n = AppLocalizations.of(context)!;
     final energyStatus = ref.watch(energyStatusProvider);
 
     return energyStatus.when(
@@ -201,7 +204,7 @@ class EnergyBar extends ConsumerWidget {
                   ),
                   const SizedBox(width: 4),
                   Text(
-                    'Low energy - Refill needed',
+                    l10n.lowEnergyRefillNeeded,
                     style: TextStyle(
                       fontSize: 12,
                       color: AppTheme.error,
@@ -235,7 +238,7 @@ class EnergyBar extends ConsumerWidget {
         ),
         alignment: Alignment.center,
         child: Text(
-          'Error loading energy',
+          l10n.errorLoadingEnergy,
           style: TextStyle(
             fontSize: height * 0.5,
             color: AppTheme.error,
