@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utils/responsive.dart';
+import '../../utils/validators.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../config/theme/app_theme.dart';
@@ -94,13 +95,13 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
               children: [
                 Icon(Icons.check_circle, color: AppTheme.success, size: 32),
                 SizedBox(width: r.spaceSmall),
-                Text(isGuest ? 'Account Linked!' : 'Account Created!'),
+                Text(isGuest ? l10n.accountLinked : l10n.accountCreated),
               ],
             ),
           content: Text(
             isGuest
-              ? 'Your guest data has been linked to your new account. You can now sign in on any device!'
-              : 'Your account has been created successfully. Please check your email to verify your account.',
+              ? l10n.accountLinkedMessage
+              : l10n.accountCreatedMessage,
           ),
           actions: [
             ElevatedButton(
@@ -197,9 +198,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     ),
                   ),
                   SizedBox(height: r.spaceLarge),
-                  Text('Join Path of Light', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
+                  Text(l10n.joinPathOfLight, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
                   SizedBox(height: r.spaceSmall),
-                  Text('Create an account to start your learning journey',
+                  Text(l10n.createAccountToStart,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppTheme.textSecondary),
                       textAlign: TextAlign.center),
                   SizedBox(height: r.spaceLarge),
@@ -208,7 +209,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     decoration: InputDecoration(labelText: l10n.fullName, hintText: l10n.enterYourName, prefixIcon: const Icon(Icons.person_outline)),
                     textInputAction: TextInputAction.next,
                     textCapitalization: TextCapitalization.words,
-                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 2 ? 'Name must be at least 2 characters' : null,
+                    validator: (v) => Validators.displayName(v, l10n),
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
@@ -216,7 +217,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     decoration: InputDecoration(labelText: l10n.email, hintText: l10n.emailHint, prefixIcon: const Icon(Icons.email_outlined)),
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
-                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : !v.contains('@') || !v.contains('.') ? l10n.invalidEmail : null,
+                    validator: (v) => Validators.email(v, l10n),
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
@@ -232,7 +233,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     ),
                     obscureText: _obscurePassword,
                     textInputAction: TextInputAction.next,
-                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 6 ? l10n.passwordTooShort : null,
+                    validator: (v) => Validators.password(v, l10n),
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
@@ -249,7 +250,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     obscureText: _obscureConfirmPassword,
                     textInputAction: TextInputAction.done,
                     onFieldSubmitted: (_) => _handleRegister(),
-                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v != _passwordController.text ? l10n.passwordsDoNotMatch : null,
+                    validator: (v) => Validators.confirmPassword(v, _passwordController.text, l10n),
                   ),
                   SizedBox(height: r.spaceMedium),
                   Row(
@@ -260,14 +261,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                           onTap: () => setState(() => _agreeToTerms = !_agreeToTerms),
                           child: Text.rich(
                             TextSpan(
-                              text: 'I agree to the ',
+                              text: l10n.iAgreeToThe,
                               style: Theme.of(context).textTheme.bodySmall,
                               children: [
                                 TextSpan(
                                   text: l10n.termsOfService,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),
                                 ),
-                                const TextSpan(text: ' and '),
+                                TextSpan(text: l10n.and),
                                 TextSpan(
                                   text: l10n.privacyPolicy,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),

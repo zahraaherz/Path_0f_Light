@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utils/responsive.dart';
+import '../../utils/validators.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../config/theme/app_theme.dart';
 import '../../providers/auth_controller.dart';
@@ -112,14 +113,14 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         final r = dialogContext.responsive;
         return AlertDialog(
           title: Text(
-            'Reset Password',
+            l10n.resetPassword,
             style: Theme.of(dialogContext).textTheme.titleLarge,
           ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Enter your email address to receive a password reset link.',
+                l10n.resetPasswordInstruction,
                 style: Theme.of(dialogContext).textTheme.bodyMedium,
               ),
               SizedBox(height: r.spaceMedium),
@@ -232,13 +233,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   // Welcome Text
                   Text(
-                    'Welcome Back',
+                    l10n.welcomeBack,
                     style: Theme.of(context).textTheme.headlineSmall,
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: r.spaceSmall),
                   Text(
-                    'Sign in to continue your journey',
+                    l10n.signInToContinue,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppTheme.textSecondary,
                         ),
@@ -256,15 +257,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     ),
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      }
-                      if (!value.contains('@')) {
-                        return 'Please enter a valid email';
-                      }
-                      return null;
-                    },
+                    validator: (value) => Validators.email(value, l10n),
                   ),
                   SizedBox(height: r.spaceMedium),
 
@@ -291,15 +284,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     obscureText: _obscurePassword,
                     textInputAction: TextInputAction.done,
                     onFieldSubmitted: (_) => _handleEmailSignIn(),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
-                      }
-                      if (value.length < 6) {
-                        return 'Password must be at least 6 characters';
-                      }
-                      return null;
-                    },
+                    validator: (value) => Validators.password(value, l10n),
                   ),
                   SizedBox(height: r.spaceSmall),
 
@@ -339,7 +324,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: r.paddingMedium),
                         child: Text(
-                          'OR CONTINUE WITH',
+                          l10n.orContinueWith,
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -396,7 +381,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                   // Guest Info Text
                   Text(
-                    'Try the app without an account. Create one anytime to save your data permanently.',
+                    l10n.guestInfoText,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppTheme.textSecondary,
                         ),
@@ -409,7 +394,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account? ",
+                        l10n.dontHaveAccount,
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       TextButton(
