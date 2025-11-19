@@ -4,6 +4,7 @@ import '../../config/theme/app_theme.dart';
 import '../../providers/streak_providers.dart';
 import '../../widgets/streak_display.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class StreakDetailsScreen extends ConsumerWidget {
   const StreakDetailsScreen({super.key});
@@ -11,13 +12,14 @@ class StreakDetailsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final loginStreak = ref.watch(currentLoginStreakProvider);
     final longestLoginStreak = ref.watch(longestLoginStreakProvider);
     final quizStreak = ref.watch(currentQuizStreakProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Streak Statistics'),
+        title: Text(l10n.streakStatistics),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -43,7 +45,7 @@ class StreakDetailsScreen extends ConsumerWidget {
                   ),
                   SizedBox(height: r.spaceMedium),
                   Text(
-                    'Keep Your Streak Alive!',
+                    l10n.keepYourStreakAlive,
                     style: TextStyle(
                       fontSize: r.fontLarge * 1.2,
                       fontWeight: FontWeight.bold,
@@ -53,7 +55,7 @@ class StreakDetailsScreen extends ConsumerWidget {
                   ),
                   SizedBox(height: r.spaceSmall),
                   Text(
-                    'Consistency is the key to knowledge',
+                    l10n.consistencyIsTheKey,
                     style: TextStyle(
                       fontSize: r.fontMedium,
                       color: Colors.white.withOpacity(0.9),
@@ -73,7 +75,7 @@ class StreakDetailsScreen extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Current Streaks',
+                    l10n.currentStreaks,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -95,7 +97,7 @@ class StreakDetailsScreen extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Best Records',
+                    l10n.bestRecords,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
@@ -107,9 +109,9 @@ class StreakDetailsScreen extends ConsumerWidget {
                         child: _RecordCard(
                           icon: Icons.calendar_today,
                           color: AppTheme.islamicGreen,
-                          label: 'Longest Login Streak',
+                          label: l10n.longestLoginStreak,
                           value: '$longestLoginStreak',
-                          subtitle: longestLoginStreak == 1 ? 'day' : 'days',
+                          subtitle: longestLoginStreak == 1 ? l10n.day : l10n.days,
                         ),
                       ),
                       const SizedBox(width: 12),
@@ -117,9 +119,9 @@ class StreakDetailsScreen extends ConsumerWidget {
                         child: _RecordCard(
                           icon: Icons.local_fire_department,
                           color: AppTheme.error,
-                          label: 'Longest Quiz Streak',
+                          label: l10n.longestQuizStreak,
                           value: '${quizStreak.longestStreak}',
-                          subtitle: quizStreak.longestStreak == 1 ? 'answer' : 'answers',
+                          subtitle: quizStreak.longestStreak == 1 ? l10n.answer : l10n.answers,
                         ),
                       ),
                     ],
@@ -156,12 +158,12 @@ class StreakDetailsScreen extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        children: const [
-                          Icon(Icons.lightbulb, color: AppTheme.info, size: 28),
-                          SizedBox(width: 12),
+                        children: [
+                          const Icon(Icons.lightbulb, color: AppTheme.info, size: 28),
+                          const SizedBox(width: 12),
                           Text(
-                            'Streak Tips',
-                            style: TextStyle(
+                            l10n.streakTips,
+                            style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
                               color: AppTheme.info,
@@ -172,22 +174,22 @@ class StreakDetailsScreen extends ConsumerWidget {
                       const SizedBox(height: 16),
                       _TipItem(
                         icon: Icons.schedule,
-                        text: 'Set a daily reminder to maintain your login streak',
+                        text: l10n.streakTip1,
                       ),
                       const SizedBox(height: 12),
                       _TipItem(
                         icon: Icons.quiz,
-                        text: 'Answer at least one question daily to build your quiz streak',
+                        text: l10n.streakTip2,
                       ),
                       const SizedBox(height: 12),
                       _TipItem(
                         icon: Icons.emoji_events,
-                        text: 'Reach milestones to earn special achievements',
+                        text: l10n.streakTip3,
                       ),
                       const SizedBox(height: 12),
                       _TipItem(
                         icon: Icons.favorite,
-                        text: 'Consistency leads to better learning and retention',
+                        text: l10n.streakTip4,
                       ),
                     ],
                   ),
