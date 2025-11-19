@@ -2,17 +2,16 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import '../config/env_config.dart';
 
 /// Service for handling in-app purchases with RevenueCat
+///
+/// API keys are configured in lib/config/env_config.dart
+/// See env_config.example.dart for setup instructions
 class RevenueCatService {
   static final RevenueCatService _instance = RevenueCatService._internal();
   factory RevenueCatService() => _instance;
   RevenueCatService._internal();
-
-  // RevenueCat API Keys (Get these from RevenueCat dashboard)
-  // TODO: Replace with your actual API keys
-  static const String _appleApiKey = 'appl_YOUR_APPLE_API_KEY';
-  static const String _googleApiKey = 'goog_YOUR_GOOGLE_API_KEY';
 
   // Package/Entitlement identifiers (configure in RevenueCat dashboard)
   static const String premiumEntitlementId = 'premium';
@@ -92,13 +91,14 @@ class RevenueCatService {
   }
 
   /// Get the appropriate API key based on platform
+  /// API keys are loaded from EnvConfig (lib/config/env_config.dart)
   String _getApiKey() {
     if (defaultTargetPlatform == TargetPlatform.iOS) {
-      return _appleApiKey;
+      return EnvConfig.revenueCatIosApiKey;
     } else if (defaultTargetPlatform == TargetPlatform.android) {
-      return _googleApiKey;
+      return EnvConfig.revenueCatAndroidApiKey;
     } else {
-      throw UnsupportedError('Platform not supported');
+      throw UnsupportedError('Platform not supported for RevenueCat');
     }
   }
 

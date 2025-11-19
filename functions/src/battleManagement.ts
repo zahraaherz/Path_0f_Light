@@ -552,6 +552,14 @@ export const markBattleReady = functions.https.onCall(
 
 /**
  * Submit answer in battle
+ *
+ * SECURITY & ANTI-CHEAT MEASURES:
+ * - Server-side answer validation (client never knows correct answer)
+ * - Participant verification (only battle players can submit)
+ * - Question validation (question must be in battle's questionIds)
+ * - Duplicate answer prevention (can't answer same question twice)
+ * - Battle status validation (must be in_progress)
+ * - Rate limiting (handled by rate limiter middleware)
  */
 export const submitBattleAnswer = functions.https.onCall(
   async (
@@ -569,6 +577,14 @@ export const submitBattleAnswer = functions.https.onCall(
     const {battleId, questionId, answer} = data;
 
     try {
+      // Validate input
+      if (!battleId || !questionId || !answer) {
+        throw new functions.https.HttpsError(
+          "invalid-argument",
+          "Missing required fields"
+        );
+      }
+
       // Get battle
       const battleRef = db.collection("battles").doc(battleId);
       const battleDoc = await battleRef.get();
@@ -579,7 +595,9 @@ export const submitBattleAnswer = functions.https.onCall(
 
       const battleData = battleDoc.data();
 
-      // Verify participant
+      // ==================== ANTI-CHEAT CHECKS ====================
+
+      // 1. Verify participant
       const isPlayer1 = battleData?.player1?.userId === userId;
       const isPlayer2 = battleData?.player2?.userId === userId;
 
@@ -590,7 +608,39 @@ export const submitBattleAnswer = functions.https.onCall(
         );
       }
 
-      // Get question
+      // 2. Validate battle status
+      if (battleData?.status !== "in_progress") {
+        throw new functions.https.HttpsError(
+          "failed-precondition",
+          "Battle is not in progress"
+        );
+      }
+
+      // 3. Validate question is part of this battle
+      const questionIds = battleData?.questionIds || [];
+      if (!questionIds.includes(questionId)) {
+        throw new functions.https.HttpsError(
+          "invalid-argument",
+          "Question is not part of this battle"
+        );
+      }
+
+      const playerField = isPlayer1 ? "player1" : "player2";
+      const currentPlayer = battleData?.[playerField];
+
+      // 4. Prevent duplicate answers (check if question already answered)
+      // This prevents exploiting the system by answering the same question multiple times
+      const lastAnswer = currentPlayer?.lastAnswer;
+      if (lastAnswer?.questionId === questionId) {
+        throw new functions.https.HttpsError(
+          "already-exists",
+          "Question already answered"
+        );
+      }
+
+      // ==================== ANSWER VALIDATION (SERVER-SIDE) ====================
+
+      // Get question from database
       const questionDoc = await db.collection("questions").doc(questionId).get();
 
       if (!questionDoc.exists) {
@@ -601,12 +651,15 @@ export const submitBattleAnswer = functions.https.onCall(
       }
 
       const questionData = questionDoc.data();
+
+      // SERVER-SIDE VALIDATION: Check if answer is correct
+      // The client never knows the correct answer, preventing manipulation
       const isCorrect = questionData?.correctAnswer === answer;
 
-      // Calculate points
+      // ==================== POINTS CALCULATION ====================
+
+      // Calculate points with streak bonus
       const basePoints = questionData?.points || 10;
-      const playerField = isPlayer1 ? "player1" : "player2";
-      const currentPlayer = battleData?.[playerField];
       const currentStreak = isCorrect ? (currentPlayer.currentStreak || 0) + 1 : 0;
       const streakBonus = Math.min(currentStreak * 0.1, 1.0); // Max 100% bonus
       const pointsEarned = isCorrect ?

@@ -4,6 +4,7 @@ import 'dart:async';
 import '../../config/theme/app_theme.dart';
 import '../../utils/responsive.dart';
 import '../../models/battle/battle_models.dart';
+import '../../models/quiz/quiz_models.dart';
 import '../../providers/battle_providers.dart';
 import '../../l10n/app_localizations.dart';
 import 'battle_results_screen.dart';
@@ -126,6 +127,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
     final r = context.responsive;
     final l10n = AppLocalizations.of(context)!;
     final battleAsync = ref.watch(battleProvider(widget.battleId));
+    final questionsAsync = ref.watch(battleQuestionsProvider(widget.battleId));
 
     return WillPopScope(
       onWillPop: () async {
@@ -161,7 +163,55 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: battleAsync.when(
-          data: (battle) => _buildBattleContent(context, r, l10n, battle),
+          data: (battle) {
+            return questionsAsync.when(
+              data: (questions) {
+                if (questions.isEmpty) {
+                  return Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.error_outline, size: 64, color: Colors.orange),
+                        const SizedBox(height: 16),
+                        const Text('No questions available for this battle'),
+                        const SizedBox(height: 16),
+                        ElevatedButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Go Back'),
+                        ),
+                      ],
+                    ),
+                  );
+                }
+                return _buildBattleContent(context, r, l10n, battle, questions);
+              },
+              loading: () => const Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircularProgressIndicator(),
+                    SizedBox(height: 16),
+                    Text('Loading questions...'),
+                  ],
+                ),
+              ),
+              error: (error, stack) => Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.error_outline, size: 64, color: Colors.red),
+                    const SizedBox(height: 16),
+                    Text('Failed to load questions: ${error.toString()}'),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text('Go Back'),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (error, stack) => Center(
             child: Column(
@@ -188,10 +238,16 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
     Responsive r,
     AppLocalizations l10n,
     Battle battle,
+    List<QuizQuestion> questions,
   ) {
-    // For now, we'll use mock question data since we need to fetch from Firestore
-    // In production, you'd fetch the actual questions based on battle.questionIds
-    final mockQuestion = _getMockQuestion(_currentQuestionIndex, battle);
+    // Validate question index
+    if (_currentQuestionIndex >= questions.length) {
+      return const Center(
+        child: Text('Invalid question index'),
+      );
+    }
+
+    final currentQuestion = questions[_currentQuestionIndex];
 
     return SafeArea(
       child: Column(
@@ -235,7 +291,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                       borderRadius: BorderRadius.circular(r.radiusMedium),
                     ),
                     child: Text(
-                      mockQuestion['question'] as String,
+                      currentQuestion.question,
                       style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
@@ -246,8 +302,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                   SizedBox(height: r.spaceLarge),
 
                   // Answer options
-                  ...(mockQuestion['options'] as Map<String, String>)
-                      .entries
+                  ...currentQuestion.options.entries
                       .map((entry) => _buildAnswerOption(
                             context,
                             r,
@@ -504,34 +559,5 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
         ),
       ),
     );
-  }
-
-  // Mock question data - in production, fetch from Firestore
-  Map<String, dynamic> _getMockQuestion(int index, Battle battle) {
-    final questions = [
-      {
-        'question': 'What is the name of the first Imam?',
-        'options': {
-          'A': 'Imam Ali (AS)',
-          'B': 'Imam Hassan (AS)',
-          'C': 'Imam Hussain (AS)',
-          'D': 'Imam Sajjad (AS)',
-        },
-        'correct': 'A',
-      },
-      {
-        'question': 'In which year did the event of Karbala occur?',
-        'options': {
-          'A': '61 AH',
-          'B': '40 AH',
-          'C': '11 AH',
-          'D': '63 AH',
-        },
-        'correct': 'A',
-      },
-      // Add more questions as needed
-    ];
-
-    return questions[index % questions.length];
   }
 }

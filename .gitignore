@@ -47,6 +47,15 @@ lib/firebase_options.dart
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Environment configuration (keep .example files)
+lib/config/env_config.dart
+
 # Node modules for PDF extraction scripts
 node_modules/
 package-lock.json
