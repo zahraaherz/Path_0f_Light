@@ -130,10 +130,9 @@ class BattleLobbyScreen extends ConsumerWidget {
             _buildBattleModeCard(
               context: context,
               r: r,
-              title: l10n.quickMatch ?? 'Quick Match',
-              titleAr: 'مباراة سريعة',
-              description:
-                  l10n.quickMatchDesc ?? 'Random opponent, start immediately',
+              l10n: l10n,
+              title: l10n.quickMatch,
+              description: l10n.quickMatchDesc,
               icon: Icons.flash_on,
               color: AppTheme.primaryTeal,
               energyCost: 5,
@@ -153,10 +152,9 @@ class BattleLobbyScreen extends ConsumerWidget {
             _buildBattleModeCard(
               context: context,
               r: r,
-              title: l10n.friendChallenge ?? 'Friend Challenge',
-              titleAr: 'تحدي صديق',
-              description:
-                  l10n.friendChallengeDesc ?? 'Challenge a specific friend',
+              l10n: l10n,
+              title: l10n.friendChallenge,
+              description: l10n.friendChallengeDesc,
               icon: Icons.people,
               color: AppTheme.islamicGreen,
               energyCost: 5,
@@ -176,10 +174,9 @@ class BattleLobbyScreen extends ConsumerWidget {
             _buildBattleModeCard(
               context: context,
               r: r,
-              title: l10n.tournament ?? 'Tournament',
-              titleAr: 'بطولة',
-              description:
-                  l10n.tournamentDesc ?? 'Compete in brackets for prizes',
+              l10n: l10n,
+              title: l10n.tournament,
+              description: l10n.tournamentDesc,
               icon: Icons.emoji_events,
               color: AppTheme.accentGold,
               energyCost: 10,
@@ -205,6 +202,7 @@ class BattleLobbyScreen extends ConsumerWidget {
   }
 
   Widget _buildStatsCard(BuildContext context, Responsive r, BattleStats stats) {
+    final l10n = AppLocalizations.of(context)!;
     final winRate = stats.totalBattles > 0
         ? (stats.wins / stats.totalBattles * 100).toStringAsFixed(1)
         : '0.0';
@@ -235,7 +233,7 @@ class BattleLobbyScreen extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Your Battle Stats',
+                l10n.yourBattleStats,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -270,10 +268,10 @@ class BattleLobbyScreen extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              _buildStatItem(context, r, 'Battles', '${stats.totalBattles}'),
-              _buildStatItem(context, r, 'Wins', '${stats.wins}'),
-              _buildStatItem(context, r, 'Win Rate', '$winRate%'),
-              _buildStatItem(context, r, 'Streak', '${stats.winStreak}'),
+              _buildStatItem(context, r, l10n.battles, '${stats.totalBattles}'),
+              _buildStatItem(context, r, l10n.wins, '${stats.wins}'),
+              _buildStatItem(context, r, l10n.winRate, '$winRate%'),
+              _buildStatItem(context, r, l10n.streak, '${stats.winStreak}'),
             ],
           ),
         ],
@@ -305,6 +303,7 @@ class BattleLobbyScreen extends ConsumerWidget {
 
   Widget _buildInvitationCard(BuildContext context, Responsive r,
       WidgetRef ref, BattleInvitation invitation) {
+    final l10n = AppLocalizations.of(context)!;
     return Card(
       margin: EdgeInsets.only(bottom: r.spaceMedium),
       child: ListTile(
@@ -317,11 +316,11 @@ class BattleLobbyScreen extends ConsumerWidget {
               : null,
         ),
         title: Text(
-          '${invitation.fromUserName} challenged you!',
+          l10n.challengedYouByUser(userName: invitation.fromUserName),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
-          '${invitation.config.questionCount} questions • ${invitation.config.difficulty ?? "Mixed"} difficulty',
+          l10n.challengeDetails(count: invitation.config.questionCount, difficulty: invitation.config.difficulty ?? l10n.all),
         ),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
@@ -336,13 +335,13 @@ class BattleLobbyScreen extends ConsumerWidget {
                   if (context.mounted) {
                     // Navigate to battle
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Challenge accepted!')),
+                      SnackBar(content: Text(l10n.challengeAccepted)),
                     );
                   }
                 } catch (e) {
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Error: ${e.toString()}')),
+                      SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
                     );
                   }
                 }
@@ -357,13 +356,13 @@ class BattleLobbyScreen extends ConsumerWidget {
                       .rejectBattleChallenge(invitation.id);
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Challenge rejected')),
+                      SnackBar(content: Text(l10n.challengeRejected)),
                     );
                   }
                 } catch (e) {
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Error: ${e.toString()}')),
+                      SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
                     );
                   }
                 }
@@ -377,12 +376,13 @@ class BattleLobbyScreen extends ConsumerWidget {
 
   Widget _buildActiveBattleCard(
       BuildContext context, Responsive r, Battle battle) {
+    final l10n = AppLocalizations.of(context)!;
     return Card(
       margin: EdgeInsets.only(bottom: r.spaceMedium),
       child: ListTile(
         leading: const Icon(Icons.sports_esports, color: AppTheme.primaryTeal),
         title: Text(
-          'Battle vs ${battle.player2?.displayName ?? "Waiting..."}',
+          l10n.battleVersus(opponentName: battle.player2?.displayName ?? l10n.waiting),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
@@ -392,7 +392,7 @@ class BattleLobbyScreen extends ConsumerWidget {
         onTap: () {
           // Navigate to battle
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Navigating to battle...')),
+            SnackBar(content: Text(l10n.navigatingToBattle)),
           );
         },
       ),
@@ -402,8 +402,8 @@ class BattleLobbyScreen extends ConsumerWidget {
   Widget _buildBattleModeCard({
     required BuildContext context,
     required Responsive r,
+    required AppLocalizations l10n,
     required String title,
-    required String titleAr,
     required String description,
     required IconData icon,
     required Color color,
@@ -459,12 +459,6 @@ class BattleLobbyScreen extends ConsumerWidget {
                       ],
                     ],
                   ),
-                  Text(
-                    titleAr,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: AppTheme.textSecondary,
-                        ),
-                  ),
                   SizedBox(height: r.spaceSmall),
                   Text(
                     description,
@@ -478,7 +472,7 @@ class BattleLobbyScreen extends ConsumerWidget {
                       Icon(Icons.bolt, color: color, size: 16),
                       SizedBox(width: r.spaceSmall),
                       Text(
-                        '$energyCost Energy',
+                        l10n.energyCost(cost: energyCost),
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: color,
                               fontWeight: FontWeight.bold,
@@ -497,6 +491,7 @@ class BattleLobbyScreen extends ConsumerWidget {
   }
 
   Widget _buildHowToPlayCard(BuildContext context, Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       padding: EdgeInsets.all(r.paddingLarge),
       decoration: BoxDecoration(
@@ -514,7 +509,7 @@ class BattleLobbyScreen extends ConsumerWidget {
               Icon(Icons.help_outline, color: AppTheme.islamicGreen),
               SizedBox(width: r.spaceSmall),
               Text(
-                'How to Play',
+                l10n.howToPlay,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                       color: AppTheme.islamicGreen,
@@ -527,29 +522,29 @@ class BattleLobbyScreen extends ConsumerWidget {
             context,
             r,
             '1',
-            'Choose a battle mode',
-            'Quick match, friend challenge, or tournament',
+            l10n.battleStep1Title,
+            l10n.battleStep1Desc,
           ),
           _buildHowToPlayItem(
             context,
             r,
             '2',
-            'Answer questions',
-            'Race against your opponent to answer correctly',
+            l10n.battleStep2Title,
+            l10n.battleStep2Desc,
           ),
           _buildHowToPlayItem(
             context,
             r,
             '3',
-            'Earn points',
-            'Higher difficulty = more points. Build streaks for bonuses!',
+            l10n.battleStep3Title,
+            l10n.battleStep3Desc,
           ),
           _buildHowToPlayItem(
             context,
             r,
             '4',
-            'Win the battle',
-            'Highest score wins. Draw if tied!',
+            l10n.battleStep4Title,
+            l10n.battleStep4Desc,
           ),
         ],
       ),

@@ -596,10 +596,11 @@ class _PremiumScreenState extends ConsumerState<PremiumScreen> {
       );
     } catch (e) {
       if (!mounted) return;
+      final l10n = AppLocalizations.of(context)!;
 
-      String errorMessage = 'Purchase failed. Please try again.';
+      String errorMessage = l10n.purchaseFailed;
       if (e.toString().contains('cancelled')) {
-        errorMessage = 'Purchase was cancelled.';
+        errorMessage = l10n.purchaseCancelled;
       }
 
       ScaffoldMessenger.of(context).showSnackBar(

@@ -112,8 +112,9 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
       }
     } catch (e) {
       if (mounted) {
+        final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error: ${e.toString()}')),
+          SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
         );
         setState(() {
           _isSubmitting = false;
@@ -135,20 +136,17 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
         final shouldLeave = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text(l10n.leaveBattle ?? 'Leave Battle?'),
-            content: Text(
-              l10n.leaveBattleWarning ??
-                  'If you leave, you will lose this battle.',
-            ),
+            title: Text(l10n.leaveBattle),
+            content: Text(l10n.leaveBattleWarning ?? l10n.leaveBattleWarningFallback),
             actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context, false),
-                child: Text(l10n.cancel ?? 'Cancel'),
+                child: Text(l10n.cancel),
               ),
               TextButton(
                 onPressed: () => Navigator.pop(context, true),
                 style: TextButton.styleFrom(foregroundColor: Colors.red),
-                child: Text(l10n.leave ?? 'Leave'),
+                child: Text(l10n.leave),
               ),
             ],
           ),
@@ -173,11 +171,11 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                       children: [
                         const Icon(Icons.error_outline, size: 64, color: Colors.orange),
                         const SizedBox(height: 16),
-                        const Text('No questions available for this battle'),
+                        Text(l10n.noQuestionsAvailable),
                         const SizedBox(height: 16),
                         ElevatedButton(
                           onPressed: () => Navigator.pop(context),
-                          child: const Text('Go Back'),
+                          child: Text(l10n.goBack),
                         ),
                       ],
                     ),
@@ -185,13 +183,13 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                 }
                 return _buildBattleContent(context, r, l10n, battle, questions);
               },
-              loading: () => const Center(
+              loading: () => Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircularProgressIndicator(),
-                    SizedBox(height: 16),
-                    Text('Loading questions...'),
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 16),
+                    Text(l10n.loadingQuestions),
                   ],
                 ),
               ),
@@ -201,11 +199,11 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                   children: [
                     const Icon(Icons.error_outline, size: 64, color: Colors.red),
                     const SizedBox(height: 16),
-                    Text('Failed to load questions: ${error.toString()}'),
+                    Text(l10n.failedToLoadQuestions ?? l10n.errorMessage(error: error.toString())),
                     const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () => Navigator.pop(context),
-                      child: const Text('Go Back'),
+                      child: Text(l10n.goBack),
                     ),
                   ],
                 ),
@@ -219,11 +217,11 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
               children: [
                 const Icon(Icons.error_outline, size: 64, color: Colors.red),
                 const SizedBox(height: 16),
-                Text('Error: ${error.toString()}'),
+                Text(l10n.errorMessage(error: error.toString())),
                 const SizedBox(height: 16),
                 ElevatedButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text('Go Back'),
+                  child: Text(l10n.goBack),
                 ),
               ],
             ),
@@ -242,8 +240,8 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
   ) {
     // Validate question index
     if (_currentQuestionIndex >= questions.length) {
-      return const Center(
-        child: Text('Invalid question index'),
+      return Center(
+        child: Text(l10n.invalidQuestionIndex),
       );
     }
 
@@ -270,7 +268,10 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                 children: [
                   // Question number
                   Text(
-                    'Question ${_currentQuestionIndex + 1}/${battle.config.questionCount}',
+                    l10n.questionNumber(
+                      current: _currentQuestionIndex + 1,
+                      total: battle.config.questionCount,
+                    ),
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppTheme.textSecondary,
                           fontWeight: FontWeight.bold,
@@ -329,7 +330,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                     child: _isSubmitting
                         ? const CircularProgressIndicator(color: Colors.white)
                         : Text(
-                            l10n.submitAnswer ?? 'Submit Answer',
+                            l10n.submitAnswer,
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -347,8 +348,9 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
 
   Widget _buildBattleHeader(
       BuildContext context, Responsive r, Battle battle) {
+    final l10n = AppLocalizations.of(context)!;
     final currentUser = battle.player1; // Simplified, should check actual user
-    final opponent = battle.player2 ?? BattlePlayer(userId: '', displayName: 'Waiting...');
+    final opponent = battle.player2 ?? BattlePlayer(userId: '', displayName: l10n.waiting);
 
     return Container(
       padding: EdgeInsets.all(r.paddingMedium),
@@ -383,9 +385,9 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
               color: AppTheme.primaryTeal,
               borderRadius: BorderRadius.circular(r.radiusSmall),
             ),
-            child: const Text(
-              'VS',
-              style: TextStyle(
+            child: Text(
+              l10n.versus,
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -414,6 +416,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
     String? photoUrl,
     bool isCurrentUser,
   ) {
+    final l10n = AppLocalizations.of(context)!;
     return Column(
       children: [
         CircleAvatar(
@@ -431,7 +434,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
           overflow: TextOverflow.ellipsis,
         ),
         Text(
-          '$score pts',
+          l10n.pointsShort(points: score),
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppTheme.primaryTeal,
                 fontWeight: FontWeight.bold,
@@ -458,6 +461,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
   }
 
   Widget _buildTimer(BuildContext context, Responsive r) {
+    final l10n = AppLocalizations.of(context)!;
     final percentage = _remainingSeconds / 30;
     final color = _remainingSeconds > 10
         ? AppTheme.primaryTeal
@@ -482,7 +486,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
           Icon(Icons.timer, color: color, size: 20),
           SizedBox(width: r.spaceSmall),
           Text(
-            '$_remainingSeconds s',
+            l10n.secondsShort(seconds: _remainingSeconds),
             style: TextStyle(
               color: color,
               fontWeight: FontWeight.bold,

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import '../../config/theme/app_theme.dart';
 import '../../screens/battle/battle_lobby_screen.dart';
+import '../../l10n/app_localizations.dart';
 
 class BattleArenaCard extends StatelessWidget {
   const BattleArenaCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Card(
       elevation: 4,
       margin: const EdgeInsets.all(16),
@@ -60,22 +62,15 @@ class BattleArenaCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Battle Arena',
+                      l10n.battleArena,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: AppTheme.primaryTeal,
                           ),
                     ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'ساحة المعركة',
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                            color: AppTheme.textSecondary,
-                          ),
-                    ),
                     const SizedBox(height: 8),
                     Text(
-                      'Challenge friends or battle opponents in real-time quiz matches!',
+                      l10n.battleArenaDescription,
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppTheme.textSecondary,
                           ),

@@ -5,6 +5,7 @@ import '../../config/theme/app_theme.dart';
 import '../../models/purchase/purchase_history.dart';
 import '../../providers/purchase_providers.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 class PurchaseHistoryScreen extends ConsumerWidget {
   const PurchaseHistoryScreen({super.key});
@@ -12,12 +13,13 @@ class PurchaseHistoryScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final r = context.responsive;
+    final l10n = AppLocalizations.of(context)!;
     final purchaseHistory = ref.watch(purchaseHistoryProvider);
     final subscription = ref.watch(userSubscriptionProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Purchase History'),
+        title: Text(l10n.purchaseHistory),
         centerTitle: true,
       ),
       body: Column(
@@ -26,7 +28,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
           subscription.when(
             data: (sub) {
               if (sub != null && sub.isPremium) {
-                return _buildSubscriptionStatusCard(sub, r, context);
+                return _buildSubscriptionStatusCard(sub, r, context, l10n);
               }
               return const SizedBox.shrink();
             },
@@ -39,13 +41,13 @@ class PurchaseHistoryScreen extends ConsumerWidget {
             child: purchaseHistory.when(
               data: (purchases) {
                 if (purchases.isEmpty) {
-                  return _buildEmptyState(r, context);
+                  return _buildEmptyState(r, context, l10n);
                 }
-                return _buildPurchaseList(purchases, r, context);
+                return _buildPurchaseList(purchases, r, context, l10n);
               },
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => Center(
-                child: Text('Error: $error'),
+                child: Text(l10n.errorMessage(error: error.toString())),
               ),
             ),
           ),
@@ -58,6 +60,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
     UserSubscription subscription,
     Responsive r,
     BuildContext context,
+    AppLocalizations l10n,
   ) {
     return Container(
       margin: EdgeInsets.all(r.paddingMedium),
@@ -86,7 +89,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Premium Active',
+                      l10n.premiumActive,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -108,27 +111,27 @@ class PurchaseHistoryScreen extends ConsumerWidget {
           Divider(color: Colors.white.withValues(alpha: 0.3)),
           SizedBox(height: r.spaceMedium),
           _buildInfoRow(
-            'Member Since',
+            l10n.memberSince,
             _formatDate(subscription.subscriptionStartDate),
             r,
             context,
           ),
           if (subscription.subscriptionExpiryDate != null)
             _buildInfoRow(
-              subscription.willRenew == true ? 'Renews On' : 'Expires On',
+              subscription.willRenew == true ? l10n.renewsOn : l10n.expiresOn,
               _formatDate(subscription.subscriptionExpiryDate),
               r,
               context,
             ),
           _buildInfoRow(
-            'Total Purchases',
+            l10n.totalPurchases,
             '${subscription.totalPurchases ?? 0}',
             r,
             context,
           ),
           if (subscription.lifetimeValue != null)
             _buildInfoRow(
-              'Lifetime Value',
+              l10n.lifetimeValue,
               '\$${subscription.lifetimeValue!.toStringAsFixed(2)}',
               r,
               context,
@@ -171,13 +174,14 @@ class PurchaseHistoryScreen extends ConsumerWidget {
     List<PurchaseHistory> purchases,
     Responsive r,
     BuildContext context,
+    AppLocalizations l10n,
   ) {
     return ListView.builder(
       padding: EdgeInsets.all(r.paddingMedium),
       itemCount: purchases.length,
       itemBuilder: (context, index) {
         final purchase = purchases[index];
-        return _buildPurchaseCard(purchase, r, context);
+        return _buildPurchaseCard(purchase, r, context, l10n);
       },
     );
   }
@@ -186,6 +190,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
     PurchaseHistory purchase,
     Responsive r,
     BuildContext context,
+    AppLocalizations l10n,
   ) {
     final statusColor = _getStatusColor(purchase.status);
     final statusIcon = _getStatusIcon(purchase.status);
@@ -254,34 +259,34 @@ class PurchaseHistoryScreen extends ConsumerWidget {
             padding: EdgeInsets.all(r.paddingMedium),
             child: Column(
               children: [
-                _buildDetailRow('Package', purchase.packageId, r, context),
-                _buildDetailRow('Type', purchase.type.name, r, context),
+                _buildDetailRow(l10n.package, purchase.packageId, r, context),
+                _buildDetailRow(l10n.type, purchase.type.name, r, context),
                 if (purchase.transactionId != null)
                   _buildDetailRow(
-                    'Transaction',
+                    l10n.transaction,
                     purchase.transactionId!,
                     r,
                     context,
                   ),
                 if (purchase.expirationDate != null)
                   _buildDetailRow(
-                    'Expires',
+                    l10n.expires,
                     _formatDate(purchase.expirationDate),
                     r,
                     context,
                   ),
                 if (purchase.store != null)
-                  _buildDetailRow('Store', purchase.store!, r, context),
+                  _buildDetailRow(l10n.store, purchase.store!, r, context),
                 if (purchase.cancellationDate != null) ...[
                   _buildDetailRow(
-                    'Cancelled',
+                    l10n.cancelled,
                     _formatDate(purchase.cancellationDate),
                     r,
                     context,
                   ),
                   if (purchase.cancellationReason != null)
                     _buildDetailRow(
-                      'Reason',
+                      l10n.reason,
                       purchase.cancellationReason!,
                       r,
                       context,
@@ -326,7 +331,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildEmptyState(Responsive r, BuildContext context) {
+  Widget _buildEmptyState(Responsive r, BuildContext context, AppLocalizations l10n) {
     return Center(
       child: Padding(
         padding: EdgeInsets.all(r.paddingLarge),
@@ -340,14 +345,14 @@ class PurchaseHistoryScreen extends ConsumerWidget {
             ),
             SizedBox(height: r.spaceMedium),
             Text(
-              'No Purchase History',
+              l10n.noPurchaseHistory,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
             ),
             SizedBox(height: r.spaceSmall),
             Text(
-              'Your purchase history will appear here',
+              l10n.purchaseHistoryWillAppearHere,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: AppTheme.textSecondary,
                   ),

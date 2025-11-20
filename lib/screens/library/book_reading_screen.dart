@@ -6,6 +6,7 @@ import '../../models/library/paragraph.dart';
 import '../../repositories/library_repository.dart';
 import 'book_reader_screen.dart';
 import '../../utils/responsive.dart';
+import '../../l10n/app_localizations.dart';
 
 /// Screen for loading book content and navigating to the reader
 class BookReadingScreen extends ConsumerStatefulWidget {
@@ -51,7 +52,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
       if (book == null) {
         setState(() {
           _isLoading = false;
-          _errorMessage = 'Book not found';
+          _errorMessage = AppLocalizations.of(context)!.bookNotFound;
         });
         return;
       }
@@ -62,7 +63,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
       if (paragraphs.isEmpty) {
         setState(() {
           _isLoading = false;
-          _errorMessage = 'No content available for this book yet';
+          _errorMessage = AppLocalizations.of(context)!.noContentAvailable;
         });
         return;
       }
@@ -88,7 +89,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
     } catch (e) {
       setState(() {
         _isLoading = false;
-        _errorMessage = 'Failed to load book: ${e.toString()}';
+        _errorMessage = '${AppLocalizations.of(context)!.failedToLoadBook}: ${e.toString()}';
       });
     }
   }
@@ -98,7 +99,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
     final r = context.responsive;
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.bookTitle ?? 'Loading Book...'),
+        title: Text(widget.bookTitle ?? AppLocalizations.of(context)!.loadingBook),
         backgroundColor: AppTheme.primaryTeal,
         iconTheme: const IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
@@ -158,7 +159,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
 
           // Loading text
           Text(
-            'Opening Book...',
+            AppLocalizations.of(context)!.openingBook,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppTheme.primaryTeal,
@@ -182,19 +183,19 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
               children: [
                 _buildLoadingStep(
                   r,
-                  'Loading book information',
+                  AppLocalizations.of(context)!.loadingBookInfo,
                   _book != null,
                 ),
                 SizedBox(height: r.paddingSmall),
                 _buildLoadingStep(
                   r,
-                  'Loading content',
+                  AppLocalizations.of(context)!.loadingContent,
                   _paragraphs != null,
                 ),
                 SizedBox(height: r.paddingSmall),
                 _buildLoadingStep(
                   r,
-                  'Preparing reader',
+                  AppLocalizations.of(context)!.preparingReader,
                   false,
                 ),
               ],
@@ -252,7 +253,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
 
             // Error title
             Text(
-              'Unable to Load Book',
+              AppLocalizations.of(context)!.unableToLoadBook,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: AppTheme.error,
@@ -262,7 +263,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
 
             // Error message
             Text(
-              _errorMessage ?? 'An unknown error occurred',
+              _errorMessage ?? AppLocalizations.of(context)!.unknownError,
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: AppTheme.textSecondary,
                   ),
@@ -277,7 +278,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                 OutlinedButton.icon(
                   onPressed: () => Navigator.of(context).pop(),
                   icon: const Icon(Icons.arrow_back),
-                  label: const Text('Go Back'),
+                  label: Text(AppLocalizations.of(context)!.goBack),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppTheme.primaryTeal,
                     side: const BorderSide(color: AppTheme.primaryTeal),
@@ -287,7 +288,7 @@ class _BookReadingScreenState extends ConsumerState<BookReadingScreen> {
                 ElevatedButton.icon(
                   onPressed: _loadBookContent,
                   icon: const Icon(Icons.refresh),
-                  label: const Text('Retry'),
+                  label: Text(AppLocalizations.of(context)!.retry),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppTheme.primaryTeal,
                     foregroundColor: Colors.white,

@@ -89,18 +89,19 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
         barrierDismissible: false,
         builder: (dialogContext) {
           final r = dialogContext.responsive;
+          final dialogL10n = AppLocalizations.of(dialogContext)!;
           return AlertDialog(
             title: Row(
               children: [
                 Icon(Icons.check_circle, color: AppTheme.success, size: 32),
                 SizedBox(width: r.spaceSmall),
-                Text(isGuest ? 'Account Linked!' : 'Account Created!'),
+                Text(isGuest ? dialogL10n.accountLinked : dialogL10n.accountCreated),
               ],
             ),
           content: Text(
             isGuest
-              ? 'Your guest data has been linked to your new account. You can now sign in on any device!'
-              : 'Your account has been created successfully. Please check your email to verify your account.',
+              ? dialogL10n.guestDataLinked
+              : dialogL10n.accountCreatedMessage,
           ),
           actions: [
             ElevatedButton(
@@ -197,9 +198,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     ),
                   ),
                   SizedBox(height: r.spaceLarge),
-                  Text('Join Path of Light', style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
+                  Text(l10n.joinPathOfLight, style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center),
                   SizedBox(height: r.spaceSmall),
-                  Text('Create an account to start your learning journey',
+                  Text(l10n.createAccountSubtitle,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppTheme.textSecondary),
                       textAlign: TextAlign.center),
                   SizedBox(height: r.spaceLarge),
@@ -208,7 +209,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                     decoration: InputDecoration(labelText: l10n.fullName, hintText: l10n.enterYourName, prefixIcon: const Icon(Icons.person_outline)),
                     textInputAction: TextInputAction.next,
                     textCapitalization: TextCapitalization.words,
-                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 2 ? 'Name must be at least 2 characters' : null,
+                    validator: (v) => v == null || v.isEmpty ? l10n.requiredField : v.length < 2 ? l10n.nameMinLength : null,
                   ),
                   SizedBox(height: r.spaceMedium),
                   TextFormField(
@@ -260,14 +261,14 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                           onTap: () => setState(() => _agreeToTerms = !_agreeToTerms),
                           child: Text.rich(
                             TextSpan(
-                              text: 'I agree to the ',
+                              text: l10n.iAgreeToThe,
                               style: Theme.of(context).textTheme.bodySmall,
                               children: [
                                 TextSpan(
                                   text: l10n.termsOfService,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),
                                 ),
-                                const TextSpan(text: ' and '),
+                                TextSpan(text: l10n.and),
                                 TextSpan(
                                   text: l10n.privacyPolicy,
                                   style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.primaryTeal, fontWeight: FontWeight.w600, decoration: TextDecoration.underline),
@@ -301,9 +302,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleGoogleSignIn, icon: Icons.g_mobiledata, label: 'Google', color: const Color(0xFFDB4437)),
-                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleAppleSignIn, icon: Icons.apple, label: 'Apple', color: Colors.black),
-                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleFacebookSignIn, icon: Icons.facebook, label: 'Facebook', color: const Color(0xFF1877F2)),
+                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleGoogleSignIn, icon: Icons.g_mobiledata, label: l10n.google, color: const Color(0xFFDB4437)),
+                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleAppleSignIn, icon: Icons.apple, label: l10n.apple, color: Colors.black),
+                      _SocialSignInButton(onPressed: authState.isLoading ? null : _handleFacebookSignIn, icon: Icons.facebook, label: l10n.facebook, color: const Color(0xFF1877F2)),
                     ],
                   ),
                   SizedBox(height: r.spaceLarge),
