@@ -886,6 +886,7 @@
   "preparingReader": "جاري تحضير القارئ",
   "unableToLoadBook": "تعذر تحميل الكتاب",
   "unknownError": "حدث خطأ غير معروف",
+  "failedToLoadQuestions": "فشل تحميل الأسئلة",
 
   "@_comment_battle_extended": "===== المعارك الموسعة =====",
   "yourBattleStats": "إحصائيات معاركك",

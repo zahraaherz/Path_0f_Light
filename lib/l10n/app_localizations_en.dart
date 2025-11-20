@@ -478,7 +478,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Share your invite code with friends and family';
 
   @override
-  String get joinPathOfLight => 'Join me on Path of Light!';
+  String get joinPathOfLight => 'Join Path of Light';
 
   @override
   String inviteMessage(String link) {
@@ -2042,6 +2042,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noProfileData => 'No profile data';
 
   @override
+  String get noName => 'No Name';
+
+  @override
+  String get noEmail => 'No Email';
+
+  @override
+  String get loadingProfile => 'Loading profile...';
+
+  @override
   String get failedToLoadFriends => 'Failed to load friends';
 
   @override
@@ -2299,4 +2308,274 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get matchmakingTip =>
       'Tip: Speed matters! Answer quickly for bonus points.';
+
+  @override
+  String get renewsOn => 'Renews On';
+
+  @override
+  String get expiresOn => 'Expires On';
+
+  @override
+  String get totalPurchases => 'Total Purchases';
+
+  @override
+  String get lifetimeValue => 'Lifetime Value';
+
+  @override
+  String get package => 'Package';
+
+  @override
+  String get transaction => 'Transaction';
+
+  @override
+  String get cancelled => 'Cancelled';
+
+  @override
+  String get reason => 'Reason';
+
+  @override
+  String get noPurchaseHistory => 'No Purchase History';
+
+  @override
+  String get purchaseHistoryWillAppearHere =>
+      'Your purchase history will appear here';
+
+  @override
+  String get purchaseFailed => 'Purchase failed. Please try again.';
+
+  @override
+  String get purchaseCancelled => 'Purchase was cancelled.';
+
+  @override
+  String get keepYourStreakAlive => 'Keep Your Streak Alive!';
+
+  @override
+  String get consistencyIsTheKey => 'Consistency is the key to knowledge';
+
+  @override
+  String get currentStreaks => 'Current Streaks';
+
+  @override
+  String get bestRecords => 'Best Records';
+
+  @override
+  String get longestLoginStreak => 'Longest Login Streak';
+
+  @override
+  String get longestQuizStreak => 'Longest Quiz Streak';
+
+  @override
+  String get answer => 'answer';
+
+  @override
+  String get answers => 'answers';
+
+  @override
+  String get streakTips => 'Streak Tips';
+
+  @override
+  String get streakTip1 => 'Set a daily reminder to maintain your login streak';
+
+  @override
+  String get streakTip2 =>
+      'Answer at least one question daily to build your quiz streak';
+
+  @override
+  String get streakTip3 => 'Reach milestones to earn special achievements';
+
+  @override
+  String get streakTip4 => 'Consistency leads to better learning and retention';
+
+  @override
+  String get bookNotFound => 'Book not found';
+
+  @override
+  String get noContentAvailable => 'No content available for this book yet';
+
+  @override
+  String get loadingBook => 'Loading Book...';
+
+  @override
+  String get openingBook => 'Opening Book...';
+
+  @override
+  String get loadingBookInfo => 'Loading book information';
+
+  @override
+  String get loadingContent => 'Loading content';
+
+  @override
+  String get preparingReader => 'Preparing reader';
+
+  @override
+  String get unableToLoadBook => 'Unable to Load Book';
+
+  @override
+  String get unknownError => 'An unknown error occurred';
+
+  @override
+  String get failedToLoadQuestions => 'Failed to load questions';
+
+  @override
+  String get yourBattleStats => 'Your Battle Stats';
+
+  @override
+  String get battles => 'Battles';
+
+  @override
+  String get wins => 'Wins';
+
+  @override
+  String get winRate => 'Win Rate';
+
+  @override
+  String challengedYouByUser(String userName) {
+    return '$userName challenged you!';
+  }
+
+  @override
+  String challengeDetails(int count, String difficulty) {
+    return '$count questions • $difficulty difficulty';
+  }
+
+  @override
+  String get challengeAccepted => 'Challenge accepted!';
+
+  @override
+  String get challengeRejected => 'Challenge rejected';
+
+  @override
+  String battleVersus(String opponentName) {
+    return 'Battle vs $opponentName';
+  }
+
+  @override
+  String get waiting => 'Waiting...';
+
+  @override
+  String get navigatingToBattle => 'Navigating to battle...';
+
+  @override
+  String energyCost(int cost) {
+    return '$cost Energy';
+  }
+
+  @override
+  String get howToPlay => 'How to Play';
+
+  @override
+  String get battleStep1Title => 'Choose a battle mode';
+
+  @override
+  String get battleStep1Desc => 'Quick match, friend challenge, or tournament';
+
+  @override
+  String get battleStep2Title => 'Answer questions';
+
+  @override
+  String get battleStep2Desc =>
+      'Race against your opponent to answer correctly';
+
+  @override
+  String get battleStep3Title => 'Earn points';
+
+  @override
+  String get battleStep3Desc =>
+      'Higher difficulty = more points. Build streaks for bonuses!';
+
+  @override
+  String get battleStep4Title => 'Win the battle';
+
+  @override
+  String get battleStep4Desc => 'Highest score wins. Draw if tied!';
+
+  @override
+  String get leaveBattleWarningFallback =>
+      'If you leave, you will lose this battle.';
+
+  @override
+  String get invalidQuestionIndex => 'Invalid question index';
+
+  @override
+  String questionNumber(int current, int total) {
+    return 'Question $current/$total';
+  }
+
+  @override
+  String get versus => 'VS';
+
+  @override
+  String pointsShort(int points) {
+    return '$points pts';
+  }
+
+  @override
+  String secondsShort(int seconds) {
+    return '$seconds s';
+  }
+
+  @override
+  String get signInToContinueJourney => 'Sign in to continue your journey';
+
+  @override
+  String get orContinueWith => 'OR CONTINUE WITH';
+
+  @override
+  String get guestInfoText =>
+      'Try the app without an account. Create one anytime to save your data permanently.';
+
+  @override
+  String get resetPassword => 'Reset Password';
+
+  @override
+  String get resetPasswordInstructions =>
+      'Enter your email address to receive a password reset link.';
+
+  @override
+  String get google => 'Google';
+
+  @override
+  String get apple => 'Apple';
+
+  @override
+  String get facebook => 'Facebook';
+
+  @override
+  String get accountLinked => 'Account Linked!';
+
+  @override
+  String get accountCreated => 'Account Created!';
+
+  @override
+  String get guestDataLinked =>
+      'Your guest data has been linked to your new account. You can now sign in on any device!';
+
+  @override
+  String get accountCreatedMessage =>
+      'Your account has been created successfully. Please check your email to verify your account.';
+
+  @override
+  String get createAccountSubtitle =>
+      'Create an account to start your learning journey';
+
+  @override
+  String get iAgreeToThe => 'I agree to the ';
+
+  @override
+  String get and => ' and ';
+
+  @override
+  String get lowEnergyRefillNeeded => 'Low energy - Refill needed';
+
+  @override
+  String get battleArenaDescription =>
+      'Challenge friends or battle opponents in real-time quiz matches!';
+
+  @override
+  String errorMessage(String error) {
+    return 'Error: $error';
+  }
+
+  @override
+  String get store => 'Store';
 }

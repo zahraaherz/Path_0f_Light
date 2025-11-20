@@ -1097,6 +1097,7 @@
   "preparingReader": "Preparing reader",
   "unableToLoadBook": "Unable to Load Book",
   "unknownError": "An unknown error occurred",
+  "failedToLoadQuestions": "Failed to load questions",
 
   "@_comment_battle_extended": "===== Battle Extended =====",
   "yourBattleStats": "Your Battle Stats",

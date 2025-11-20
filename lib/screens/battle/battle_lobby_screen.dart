@@ -316,11 +316,11 @@ class BattleLobbyScreen extends ConsumerWidget {
               : null,
         ),
         title: Text(
-          l10n.challengedYouByUser(userName: invitation.fromUserName),
+          l10n.challengedYouByUser(invitation.fromUserName),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
-          l10n.challengeDetails(count: invitation.config.questionCount, difficulty: invitation.config.difficulty ?? l10n.all),
+          l10n.challengeDetails(invitation.config.questionCount, invitation.config.difficulty ?? l10n.all),
         ),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
@@ -341,7 +341,7 @@ class BattleLobbyScreen extends ConsumerWidget {
                 } catch (e) {
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
+                      SnackBar(content: Text(l10n.errorMessage(e.toString()))),
                     );
                   }
                 }
@@ -362,7 +362,7 @@ class BattleLobbyScreen extends ConsumerWidget {
                 } catch (e) {
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
+                      SnackBar(content: Text(l10n.errorMessage(e.toString()))),
                     );
                   }
                 }
@@ -382,7 +382,7 @@ class BattleLobbyScreen extends ConsumerWidget {
       child: ListTile(
         leading: const Icon(Icons.sports_esports, color: AppTheme.primaryTeal),
         title: Text(
-          l10n.battleVersus(opponentName: battle.player2?.displayName ?? l10n.waiting),
+          l10n.battleVersus(battle.player2?.displayName ?? l10n.waiting),
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
@@ -472,7 +472,7 @@ class BattleLobbyScreen extends ConsumerWidget {
                       Icon(Icons.bolt, color: color, size: 16),
                       SizedBox(width: r.spaceSmall),
                       Text(
-                        l10n.energyCost(cost: energyCost),
+                        l10n.energyCost(energyCost),
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                               color: color,
                               fontWeight: FontWeight.bold,

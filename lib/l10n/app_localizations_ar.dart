@@ -477,7 +477,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get shareInviteDesc => 'شارك رمز الدعوة الخاص بك مع الأصدقاء والعائلة';
 
   @override
-  String get joinPathOfLight => 'انضم إلي على طريق النور!';
+  String get joinPathOfLight => 'انضم إلى طريق النور';
 
   @override
   String inviteMessage(String link) {
@@ -2037,6 +2037,15 @@ class AppLocalizationsAr extends AppLocalizations {
   String get noProfileData => 'لا توجد بيانات ملف شخصي';
 
   @override
+  String get noName => 'لا يوجد اسم';
+
+  @override
+  String get noEmail => 'لا يوجد بريد إلكتروني';
+
+  @override
+  String get loadingProfile => 'جاري تحميل الملف الشخصي...';
+
+  @override
   String get failedToLoadFriends => 'فشل تحميل الأصدقاء';
 
   @override
@@ -2294,4 +2303,271 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get matchmakingTip =>
       'نصيحة: السرعة مهمة! أجب بسرعة للحصول على نقاط إضافية.';
+
+  @override
+  String get renewsOn => 'يتجدد في';
+
+  @override
+  String get expiresOn => 'ينتهي في';
+
+  @override
+  String get totalPurchases => 'إجمالي المشتريات';
+
+  @override
+  String get lifetimeValue => 'القيمة الإجمالية';
+
+  @override
+  String get package => 'الحزمة';
+
+  @override
+  String get transaction => 'المعاملة';
+
+  @override
+  String get cancelled => 'ملغي';
+
+  @override
+  String get reason => 'السبب';
+
+  @override
+  String get noPurchaseHistory => 'لا يوجد سجل مشتريات';
+
+  @override
+  String get purchaseHistoryWillAppearHere => 'سيظهر سجل مشترياتك هنا';
+
+  @override
+  String get purchaseFailed => 'فشلت عملية الشراء. يرجى المحاولة مرة أخرى.';
+
+  @override
+  String get purchaseCancelled => 'تم إلغاء عملية الشراء.';
+
+  @override
+  String get keepYourStreakAlive => 'حافظ على سلسلتك مستمرة!';
+
+  @override
+  String get consistencyIsTheKey => 'الاستمرارية هي مفتاح المعرفة';
+
+  @override
+  String get currentStreaks => 'السلاسل الحالية';
+
+  @override
+  String get bestRecords => 'أفضل الأرقام القياسية';
+
+  @override
+  String get longestLoginStreak => 'أطول سلسلة تسجيل دخول';
+
+  @override
+  String get longestQuizStreak => 'أطول سلسلة اختبارات';
+
+  @override
+  String get answer => 'إجابة';
+
+  @override
+  String get answers => 'إجابات';
+
+  @override
+  String get streakTips => 'نصائح السلسلة';
+
+  @override
+  String get streakTip1 => 'اضبط تذكيراً يومياً للحفاظ على سلسلة تسجيل الدخول';
+
+  @override
+  String get streakTip2 =>
+      'أجب على سؤال واحد على الأقل يومياً لبناء سلسلة الاختبارات';
+
+  @override
+  String get streakTip3 => 'حقق الإنجازات للحصول على جوائز خاصة';
+
+  @override
+  String get streakTip4 => 'الاستمرارية تؤدي إلى تعلم أفضل واحتفاظ بالمعلومات';
+
+  @override
+  String get bookNotFound => 'الكتاب غير موجود';
+
+  @override
+  String get noContentAvailable => 'لا يوجد محتوى متاح لهذا الكتاب بعد';
+
+  @override
+  String get loadingBook => 'جاري تحميل الكتاب...';
+
+  @override
+  String get openingBook => 'جاري فتح الكتاب...';
+
+  @override
+  String get loadingBookInfo => 'جاري تحميل معلومات الكتاب';
+
+  @override
+  String get loadingContent => 'جاري تحميل المحتوى';
+
+  @override
+  String get preparingReader => 'جاري تحضير القارئ';
+
+  @override
+  String get unableToLoadBook => 'تعذر تحميل الكتاب';
+
+  @override
+  String get unknownError => 'حدث خطأ غير معروف';
+
+  @override
+  String get failedToLoadQuestions => 'فشل تحميل الأسئلة';
+
+  @override
+  String get yourBattleStats => 'إحصائيات معاركك';
+
+  @override
+  String get battles => 'المعارك';
+
+  @override
+  String get wins => 'الانتصارات';
+
+  @override
+  String get winRate => 'نسبة الفوز';
+
+  @override
+  String challengedYouByUser(String userName) {
+    return '$userName تحداك!';
+  }
+
+  @override
+  String challengeDetails(int count, String difficulty) {
+    return '$count أسئلة • صعوبة $difficulty';
+  }
+
+  @override
+  String get challengeAccepted => 'تم قبول التحدي!';
+
+  @override
+  String get challengeRejected => 'تم رفض التحدي';
+
+  @override
+  String battleVersus(String opponentName) {
+    return 'معركة ضد $opponentName';
+  }
+
+  @override
+  String get waiting => 'في الانتظار...';
+
+  @override
+  String get navigatingToBattle => 'الانتقال إلى المعركة...';
+
+  @override
+  String energyCost(int cost) {
+    return '$cost طاقة';
+  }
+
+  @override
+  String get howToPlay => 'كيفية اللعب';
+
+  @override
+  String get battleStep1Title => 'اختر وضع المعركة';
+
+  @override
+  String get battleStep1Desc => 'مباراة سريعة أو تحدي صديق أو بطولة';
+
+  @override
+  String get battleStep2Title => 'أجب على الأسئلة';
+
+  @override
+  String get battleStep2Desc => 'تسابق مع خصمك للإجابة بشكل صحيح';
+
+  @override
+  String get battleStep3Title => 'اكسب النقاط';
+
+  @override
+  String get battleStep3Desc =>
+      'صعوبة أعلى = نقاط أكثر. ابنِ سلاسل للحصول على مكافآت!';
+
+  @override
+  String get battleStep4Title => 'اربح المعركة';
+
+  @override
+  String get battleStep4Desc =>
+      'الفائز صاحب أعلى نتيجة. تعادل في حالة التساوي!';
+
+  @override
+  String get leaveBattleWarningFallback => 'إذا غادرت، ستخسر هذه المعركة.';
+
+  @override
+  String get invalidQuestionIndex => 'رقم السؤال غير صالح';
+
+  @override
+  String questionNumber(int current, int total) {
+    return 'السؤال $current من $total';
+  }
+
+  @override
+  String get versus => 'ضد';
+
+  @override
+  String pointsShort(int points) {
+    return '$points نقطة';
+  }
+
+  @override
+  String secondsShort(int seconds) {
+    return '$seconds ث';
+  }
+
+  @override
+  String get signInToContinueJourney => 'سجل الدخول لمواصلة رحلتك';
+
+  @override
+  String get orContinueWith => 'أو تابع باستخدام';
+
+  @override
+  String get guestInfoText =>
+      'جرّب التطبيق بدون حساب. يمكنك إنشاء حساب في أي وقت لحفظ بياناتك بشكل دائم.';
+
+  @override
+  String get resetPassword => 'إعادة تعيين كلمة المرور';
+
+  @override
+  String get resetPasswordInstructions =>
+      'أدخل عنوان بريدك الإلكتروني لتلقي رابط إعادة تعيين كلمة المرور.';
+
+  @override
+  String get google => 'جوجل';
+
+  @override
+  String get apple => 'آبل';
+
+  @override
+  String get facebook => 'فيسبوك';
+
+  @override
+  String get accountLinked => 'تم ربط الحساب!';
+
+  @override
+  String get accountCreated => 'تم إنشاء الحساب!';
+
+  @override
+  String get guestDataLinked =>
+      'تم ربط بيانات الضيف بحسابك الجديد. يمكنك الآن تسجيل الدخول من أي جهاز!';
+
+  @override
+  String get accountCreatedMessage =>
+      'تم إنشاء حسابك بنجاح. يرجى التحقق من بريدك الإلكتروني للتحقق من حسابك.';
+
+  @override
+  String get createAccountSubtitle => 'أنشئ حساباً لبدء رحلتك التعليمية';
+
+  @override
+  String get iAgreeToThe => 'أوافق على ';
+
+  @override
+  String get and => ' و ';
+
+  @override
+  String get lowEnergyRefillNeeded => 'طاقة منخفضة - يلزم إعادة الملء';
+
+  @override
+  String get battleArenaDescription =>
+      'تحدى الأصدقاء أو واجه الخصوم في مباريات اختبارات مباشرة!';
+
+  @override
+  String errorMessage(String error) {
+    return 'خطأ: $error';
+  }
+
+  @override
+  String get store => 'المتجر';
 }

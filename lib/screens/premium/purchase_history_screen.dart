@@ -47,7 +47,7 @@ class PurchaseHistoryScreen extends ConsumerWidget {
               },
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (error, stack) => Center(
-                child: Text(l10n.errorMessage(error: error.toString())),
+                child: Text(l10n.errorMessage(error.toString())),
               ),
             ),
           ),

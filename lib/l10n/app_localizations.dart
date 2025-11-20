@@ -1013,7 +1013,7 @@ abstract class AppLocalizations {
   /// No description provided for @joinPathOfLight.
   ///
   /// In en, this message translates to:
-  /// **'Join me on Path of Light!'**
+  /// **'Join Path of Light'**
   String get joinPathOfLight;
 
   /// No description provided for @inviteMessage.
@@ -4022,6 +4022,24 @@ abstract class AppLocalizations {
   /// **'No profile data'**
   String get noProfileData;
 
+  /// No description provided for @noName.
+  ///
+  /// In en, this message translates to:
+  /// **'No Name'**
+  String get noName;
+
+  /// No description provided for @noEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'No Email'**
+  String get noEmail;
+
+  /// No description provided for @loadingProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading profile...'**
+  String get loadingProfile;
+
   /// No description provided for @failedToLoadFriends.
   ///
   /// In en, this message translates to:
@@ -4519,6 +4537,492 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Tip: Speed matters! Answer quickly for bonus points.'**
   String get matchmakingTip;
+
+  /// No description provided for @renewsOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Renews On'**
+  String get renewsOn;
+
+  /// No description provided for @expiresOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires On'**
+  String get expiresOn;
+
+  /// No description provided for @totalPurchases.
+  ///
+  /// In en, this message translates to:
+  /// **'Total Purchases'**
+  String get totalPurchases;
+
+  /// No description provided for @lifetimeValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Lifetime Value'**
+  String get lifetimeValue;
+
+  /// No description provided for @package.
+  ///
+  /// In en, this message translates to:
+  /// **'Package'**
+  String get package;
+
+  /// No description provided for @transaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction'**
+  String get transaction;
+
+  /// No description provided for @cancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get cancelled;
+
+  /// No description provided for @reason.
+  ///
+  /// In en, this message translates to:
+  /// **'Reason'**
+  String get reason;
+
+  /// No description provided for @noPurchaseHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'No Purchase History'**
+  String get noPurchaseHistory;
+
+  /// No description provided for @purchaseHistoryWillAppearHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Your purchase history will appear here'**
+  String get purchaseHistoryWillAppearHere;
+
+  /// No description provided for @purchaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase failed. Please try again.'**
+  String get purchaseFailed;
+
+  /// No description provided for @purchaseCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase was cancelled.'**
+  String get purchaseCancelled;
+
+  /// No description provided for @keepYourStreakAlive.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep Your Streak Alive!'**
+  String get keepYourStreakAlive;
+
+  /// No description provided for @consistencyIsTheKey.
+  ///
+  /// In en, this message translates to:
+  /// **'Consistency is the key to knowledge'**
+  String get consistencyIsTheKey;
+
+  /// No description provided for @currentStreaks.
+  ///
+  /// In en, this message translates to:
+  /// **'Current Streaks'**
+  String get currentStreaks;
+
+  /// No description provided for @bestRecords.
+  ///
+  /// In en, this message translates to:
+  /// **'Best Records'**
+  String get bestRecords;
+
+  /// No description provided for @longestLoginStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Longest Login Streak'**
+  String get longestLoginStreak;
+
+  /// No description provided for @longestQuizStreak.
+  ///
+  /// In en, this message translates to:
+  /// **'Longest Quiz Streak'**
+  String get longestQuizStreak;
+
+  /// No description provided for @answer.
+  ///
+  /// In en, this message translates to:
+  /// **'answer'**
+  String get answer;
+
+  /// No description provided for @answers.
+  ///
+  /// In en, this message translates to:
+  /// **'answers'**
+  String get answers;
+
+  /// No description provided for @streakTips.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak Tips'**
+  String get streakTips;
+
+  /// No description provided for @streakTip1.
+  ///
+  /// In en, this message translates to:
+  /// **'Set a daily reminder to maintain your login streak'**
+  String get streakTip1;
+
+  /// No description provided for @streakTip2.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer at least one question daily to build your quiz streak'**
+  String get streakTip2;
+
+  /// No description provided for @streakTip3.
+  ///
+  /// In en, this message translates to:
+  /// **'Reach milestones to earn special achievements'**
+  String get streakTip3;
+
+  /// No description provided for @streakTip4.
+  ///
+  /// In en, this message translates to:
+  /// **'Consistency leads to better learning and retention'**
+  String get streakTip4;
+
+  /// No description provided for @bookNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Book not found'**
+  String get bookNotFound;
+
+  /// No description provided for @noContentAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'No content available for this book yet'**
+  String get noContentAvailable;
+
+  /// No description provided for @loadingBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading Book...'**
+  String get loadingBook;
+
+  /// No description provided for @openingBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Opening Book...'**
+  String get openingBook;
+
+  /// No description provided for @loadingBookInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading book information'**
+  String get loadingBookInfo;
+
+  /// No description provided for @loadingContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading content'**
+  String get loadingContent;
+
+  /// No description provided for @preparingReader.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing reader'**
+  String get preparingReader;
+
+  /// No description provided for @unableToLoadBook.
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to Load Book'**
+  String get unableToLoadBook;
+
+  /// No description provided for @unknownError.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred'**
+  String get unknownError;
+
+  /// No description provided for @failedToLoadQuestions.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load questions'**
+  String get failedToLoadQuestions;
+
+  /// No description provided for @yourBattleStats.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Battle Stats'**
+  String get yourBattleStats;
+
+  /// No description provided for @battles.
+  ///
+  /// In en, this message translates to:
+  /// **'Battles'**
+  String get battles;
+
+  /// No description provided for @wins.
+  ///
+  /// In en, this message translates to:
+  /// **'Wins'**
+  String get wins;
+
+  /// No description provided for @winRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Win Rate'**
+  String get winRate;
+
+  /// No description provided for @challengedYouByUser.
+  ///
+  /// In en, this message translates to:
+  /// **'{userName} challenged you!'**
+  String challengedYouByUser(String userName);
+
+  /// No description provided for @challengeDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} questions • {difficulty} difficulty'**
+  String challengeDetails(int count, String difficulty);
+
+  /// No description provided for @challengeAccepted.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge accepted!'**
+  String get challengeAccepted;
+
+  /// No description provided for @challengeRejected.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge rejected'**
+  String get challengeRejected;
+
+  /// No description provided for @battleVersus.
+  ///
+  /// In en, this message translates to:
+  /// **'Battle vs {opponentName}'**
+  String battleVersus(String opponentName);
+
+  /// No description provided for @waiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Waiting...'**
+  String get waiting;
+
+  /// No description provided for @navigatingToBattle.
+  ///
+  /// In en, this message translates to:
+  /// **'Navigating to battle...'**
+  String get navigatingToBattle;
+
+  /// No description provided for @energyCost.
+  ///
+  /// In en, this message translates to:
+  /// **'{cost} Energy'**
+  String energyCost(int cost);
+
+  /// No description provided for @howToPlay.
+  ///
+  /// In en, this message translates to:
+  /// **'How to Play'**
+  String get howToPlay;
+
+  /// No description provided for @battleStep1Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a battle mode'**
+  String get battleStep1Title;
+
+  /// No description provided for @battleStep1Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick match, friend challenge, or tournament'**
+  String get battleStep1Desc;
+
+  /// No description provided for @battleStep2Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Answer questions'**
+  String get battleStep2Title;
+
+  /// No description provided for @battleStep2Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Race against your opponent to answer correctly'**
+  String get battleStep2Desc;
+
+  /// No description provided for @battleStep3Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Earn points'**
+  String get battleStep3Title;
+
+  /// No description provided for @battleStep3Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Higher difficulty = more points. Build streaks for bonuses!'**
+  String get battleStep3Desc;
+
+  /// No description provided for @battleStep4Title.
+  ///
+  /// In en, this message translates to:
+  /// **'Win the battle'**
+  String get battleStep4Title;
+
+  /// No description provided for @battleStep4Desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Highest score wins. Draw if tied!'**
+  String get battleStep4Desc;
+
+  /// No description provided for @leaveBattleWarningFallback.
+  ///
+  /// In en, this message translates to:
+  /// **'If you leave, you will lose this battle.'**
+  String get leaveBattleWarningFallback;
+
+  /// No description provided for @invalidQuestionIndex.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid question index'**
+  String get invalidQuestionIndex;
+
+  /// No description provided for @questionNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Question {current}/{total}'**
+  String questionNumber(int current, int total);
+
+  /// No description provided for @versus.
+  ///
+  /// In en, this message translates to:
+  /// **'VS'**
+  String get versus;
+
+  /// No description provided for @pointsShort.
+  ///
+  /// In en, this message translates to:
+  /// **'{points} pts'**
+  String pointsShort(int points);
+
+  /// No description provided for @secondsShort.
+  ///
+  /// In en, this message translates to:
+  /// **'{seconds} s'**
+  String secondsShort(int seconds);
+
+  /// No description provided for @signInToContinueJourney.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in to continue your journey'**
+  String get signInToContinueJourney;
+
+  /// No description provided for @orContinueWith.
+  ///
+  /// In en, this message translates to:
+  /// **'OR CONTINUE WITH'**
+  String get orContinueWith;
+
+  /// No description provided for @guestInfoText.
+  ///
+  /// In en, this message translates to:
+  /// **'Try the app without an account. Create one anytime to save your data permanently.'**
+  String get guestInfoText;
+
+  /// No description provided for @resetPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Password'**
+  String get resetPassword;
+
+  /// No description provided for @resetPasswordInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email address to receive a password reset link.'**
+  String get resetPasswordInstructions;
+
+  /// No description provided for @google.
+  ///
+  /// In en, this message translates to:
+  /// **'Google'**
+  String get google;
+
+  /// No description provided for @apple.
+  ///
+  /// In en, this message translates to:
+  /// **'Apple'**
+  String get apple;
+
+  /// No description provided for @facebook.
+  ///
+  /// In en, this message translates to:
+  /// **'Facebook'**
+  String get facebook;
+
+  /// No description provided for @accountLinked.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Linked!'**
+  String get accountLinked;
+
+  /// No description provided for @accountCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Created!'**
+  String get accountCreated;
+
+  /// No description provided for @guestDataLinked.
+  ///
+  /// In en, this message translates to:
+  /// **'Your guest data has been linked to your new account. You can now sign in on any device!'**
+  String get guestDataLinked;
+
+  /// No description provided for @accountCreatedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your account has been created successfully. Please check your email to verify your account.'**
+  String get accountCreatedMessage;
+
+  /// No description provided for @createAccountSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account to start your learning journey'**
+  String get createAccountSubtitle;
+
+  /// No description provided for @iAgreeToThe.
+  ///
+  /// In en, this message translates to:
+  /// **'I agree to the '**
+  String get iAgreeToThe;
+
+  /// No description provided for @and.
+  ///
+  /// In en, this message translates to:
+  /// **' and '**
+  String get and;
+
+  /// No description provided for @lowEnergyRefillNeeded.
+  ///
+  /// In en, this message translates to:
+  /// **'Low energy - Refill needed'**
+  String get lowEnergyRefillNeeded;
+
+  /// No description provided for @battleArenaDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge friends or battle opponents in real-time quiz matches!'**
+  String get battleArenaDescription;
+
+  /// No description provided for @errorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Error: {error}'**
+  String errorMessage(String error);
+
+  /// No description provided for @store.
+  ///
+  /// In en, this message translates to:
+  /// **'Store'**
+  String get store;
 }
 
 class _AppLocalizationsDelegate

@@ -114,7 +114,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
       if (mounted) {
         final l10n = AppLocalizations.of(context)!;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(l10n.errorMessage(error: e.toString()))),
+          SnackBar(content: Text(l10n.errorMessage(e.toString()))),
         );
         setState(() {
           _isSubmitting = false;
@@ -199,7 +199,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                   children: [
                     const Icon(Icons.error_outline, size: 64, color: Colors.red),
                     const SizedBox(height: 16),
-                    Text(l10n.failedToLoadQuestions ?? l10n.errorMessage(error: error.toString())),
+                    Text(l10n.failedToLoadQuestions ?? l10n.errorMessage(error.toString())),
                     const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () => Navigator.pop(context),
@@ -217,7 +217,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
               children: [
                 const Icon(Icons.error_outline, size: 64, color: Colors.red),
                 const SizedBox(height: 16),
-                Text(l10n.errorMessage(error: error.toString())),
+                Text(l10n.errorMessage(error.toString())),
                 const SizedBox(height: 16),
                 ElevatedButton(
                   onPressed: () => Navigator.pop(context),
@@ -269,8 +269,8 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
                   // Question number
                   Text(
                     l10n.questionNumber(
-                      current: _currentQuestionIndex + 1,
-                      total: battle.config.questionCount,
+                      _currentQuestionIndex + 1,
+                      battle.config.questionCount,
                     ),
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                           color: AppTheme.textSecondary,
@@ -434,7 +434,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
           overflow: TextOverflow.ellipsis,
         ),
         Text(
-          l10n.pointsShort(points: score),
+          l10n.pointsShort(score),
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppTheme.primaryTeal,
                 fontWeight: FontWeight.bold,
@@ -486,7 +486,7 @@ class _LiveBattleScreenState extends ConsumerState<LiveBattleScreen> {
           Icon(Icons.timer, color: color, size: 20),
           SizedBox(width: r.spaceSmall),
           Text(
-            l10n.secondsShort(seconds: _remainingSeconds),
+            l10n.secondsShort(_remainingSeconds),
             style: TextStyle(
               color: color,
               fontWeight: FontWeight.bold,
