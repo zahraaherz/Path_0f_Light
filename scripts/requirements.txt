@@ -1,0 +1,16 @@
+# OCR Processing Dependencies
+
+# Firebase Admin SDK
+firebase-admin>=6.2.0
+
+# PaddleOCR - Best open-source OCR for Arabic
+paddleocr>=2.7.0
+paddlepaddle>=2.5.0  # CPU version
+
+# If you have GPU (optional - much faster):
+# paddlepaddle-gpu>=2.5.0
+
+# Utilities
+tqdm>=4.65.0  # Progress bars
+requests>=2.31.0  # HTTP requests
+Pillow>=10.0.0  # Image processing
