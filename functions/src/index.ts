@@ -142,3 +142,9 @@ export {
   registerForTournament,
   unregisterFromTournament,
 } from "./battleManagement";
+
+// Export Book Image Processing Functions (NEW - Extract & store page images)
+export {
+  processBookWithImages,
+  processBookImagesManually,
+} from "./bookImageProcessing";
